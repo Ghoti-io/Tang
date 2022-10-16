@@ -35,7 +35,19 @@ $(APP_DIR)/$(TARGET): $(LIBOBJECTS)
 # Commands
 ####################################################################
 
-.PHONY: all clean cloc docs
+.PHONY: all clean cloc docs docs-pdf watch
+
+watch: ## Watch the file directory for changes
+	@while true; do \
+					make all; \
+					echo "\033[0;32m"; \
+					echo "#########################"; \
+					echo "# Waiting for changes.. #"; \
+					echo "#########################"; \
+					echo "\033[0m"; \
+					inotifywait -qr -e modify -e create -e delete -e move src include bison flex --exclude '/\.'; \
+					done
+
 
 clean: ## Remove all contents of the build directories.
 	-@rm -rvf $(OBJ_DIR)/*
@@ -45,9 +57,12 @@ clean: ## Remove all contents of the build directories.
 docs: ## Generate the documentation in the ./docs subdirectory
 	doxygen
 
+docs-pdf: docs ## Generate the documentation as a pdf, in ./docs/latex/refman.pdf
+	cd ./docs/latex/ && make
+
 cloc: ## Count the lines of code used in the project
 	cloc src include flex bison test Makefile
 
 help: ## Display this help
-	@grep -E '^[ a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "%-30s %s\n", $$1, $$2}'
+	@grep -E '^[ a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "%-15s %s\n", $$1, $$2}'
 
