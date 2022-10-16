@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.10.15)  15 OCT 2022 22:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.10.15)  16 OCT 2022 01:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -864,9 +864,15 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 8.99994pt on input line 169.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 6.29996pt on input line 169.
- [1] [2
+ [1]
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 169.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 16
+9.
 
-]
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+) [2]
 Package hyperref Info: Option `pageanchor' set `true' on input line 171.
 
 Chapter 1.
@@ -894,69 +900,213 @@ File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 4.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 4.
 
+[1
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 17.
- [1
 
 ]) [2]
 Chapter 2.
-(./annotated.tex) [3
+(./hierarchy.tex) [3
 
 ] [4
 
 ]
 Chapter 3.
-(./classTang_1_1TangBase.tex
+(./annotated.tex) [5] [6
+
+]
+Chapter 4.
+(./files.tex
+
+LaTeX Warning: Reference `ast_8hpp' on page 7 undefined on input line 4.
+
+
+LaTeX Warning: Reference `error_8hpp' on page 7 undefined on input line 5.
+
+
+LaTeX Warning: Reference `tangBase_8hpp' on page 7 undefined on input line 6.
+
+
+LaTeX Warning: Reference `tangScanner_8hpp' on page 7 undefined on input line 7
+.
+
+) [7] [8
+
+]
+Chapter 5.
+(./classTang_1_1AstNode.tex <./classTang_1_1AstNode__inherit__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classTang_1_1AstNode__inherit__graph.pdf): PDF
+ inclusion: multiple pdfs with page group included in a single page
+>
+<classTang_1_1AstNode__inherit__graph.pdf, id=316, 201.75375pt x 156.585pt>
+File: classTang_1_1AstNode__inherit__graph.pdf Graphic file (type pdf)
+<use classTang_1_1AstNode__inherit__graph.pdf>
+Package pdftex.def Info: classTang_1_1AstNode__inherit__graph.pdf  used on inpu
+t line 18.
+(pdftex.def)             Requested size: 201.0pt x 156.00162pt.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 12.
+(Font)              scaled to size 10.79993pt on input line 21.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 16.
+(Font)              scaled to size 8.09995pt on input line 26.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 16.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 26.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 16.
+(Font)              scaled to size 8.09995pt on input line 26.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 30.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 37.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.99994pt on input line 30.
+(Font)              scaled to size 8.99994pt on input line 37.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 44.
+ [9]) (./classTang_1_1AstNodeInteger.tex <./classTang_1_1AstNodeInteger__inheri
+t__graph.pdf>
+<classTang_1_1AstNodeInteger__inherit__graph.pdf, id=341, 201.75375pt x 156.585
+pt>
+File: classTang_1_1AstNodeInteger__inherit__graph.pdf Graphic file (type pdf)
+<use classTang_1_1AstNodeInteger__inherit__graph.pdf>
+Package pdftex.def Info: classTang_1_1AstNodeInteger__inherit__graph.pdf  used 
+on input line 18.
+(pdftex.def)             Requested size: 201.0pt x 156.00162pt.
+ <./classTang_1_1AstNodeInteger__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeInteger__coll__graph.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+>
+<classTang_1_1AstNodeInteger__coll__graph.pdf, id=349, 201.75375pt x 156.585pt>
+
+File: classTang_1_1AstNodeInteger__coll__graph.pdf Graphic file (type pdf)
+<use classTang_1_1AstNodeInteger__coll__graph.pdf>
+Package pdftex.def Info: classTang_1_1AstNodeInteger__coll__graph.pdf  used on 
+input line 27.
+(pdftex.def)             Requested size: 201.0pt x 156.00162pt.
+ [10]) (./classTang_1_1Error.tex [11] <./classTang_1_1Error__coll__graph.pdf>
+<classTang_1_1Error__coll__graph.pdf, id=381, 228.855pt x 381.425pt>
+File: classTang_1_1Error__coll__graph.pdf Graphic file (type pdf)
+<use classTang_1_1Error__coll__graph.pdf>
+Package pdftex.def Info: classTang_1_1Error__coll__graph.pdf  used on input lin
+e 18.
+(pdftex.def)             Requested size: 228.0pt x 380.0156pt.
+
+[12]) (./classTang_1_1location.tex <./classTang_1_1location__coll__graph.pdf>
+<classTang_1_1location__coll__graph.pdf, id=418, 184.69pt x 314.17375pt>
+File: classTang_1_1location__coll__graph.pdf Graphic file (type pdf)
+<use classTang_1_1location__coll__graph.pdf>
+Package pdftex.def Info: classTang_1_1location__coll__graph.pdf  used on input 
+line 18.
+(pdftex.def)             Requested size: 184.0pt x 313.00325pt.
+
+[13] [14]) (./classTang_1_1position.tex <./classTang_1_1position__coll__graph.p
+df>
+<classTang_1_1position__coll__graph.pdf, id=487, 184.69pt x 235.88126pt>
+File: classTang_1_1position__coll__graph.pdf Graphic file (type pdf)
+<use classTang_1_1position__coll__graph.pdf>
+Package pdftex.def Info: classTang_1_1position__coll__graph.pdf  used on input 
+line 18.
+(pdftex.def)             Requested size: 184.0pt x 235.00246pt.
+ [15]) (./classTang_1_1TangBase.tex
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 30.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 6.29996pt on input line 30.
-) [5] [6
+ [16]) (./classTang_1_1TangScanner.tex <./classTang_1_1TangScanner__inherit__gr
+aph.pdf
 
-] (./refman.ind [7
+pdfTeX warning: pdflatex (file ./classTang_1_1TangScanner__inherit__graph.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+>
+<classTang_1_1TangScanner__inherit__graph.pdf, id=552, 189.70876pt x 156.585pt>
+
+File: classTang_1_1TangScanner__inherit__graph.pdf Graphic file (type pdf)
+<use classTang_1_1TangScanner__inherit__graph.pdf>
+Package pdftex.def Info: classTang_1_1TangScanner__inherit__graph.pdf  used on 
+input line 18.
+(pdftex.def)             Requested size: 189.0pt x 156.004pt.
+ <./classTang_1_1TangScanner__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classTang_1_1TangScanner__coll__graph.pdf): PD
+F inclusion: multiple pdfs with page group included in a single page
+>
+<classTang_1_1TangScanner__coll__graph.pdf, id=560, 189.70876pt x 156.585pt>
+File: classTang_1_1TangScanner__coll__graph.pdf Graphic file (type pdf)
+<use classTang_1_1TangScanner__coll__graph.pdf>
+Package pdftex.def Info: classTang_1_1TangScanner__coll__graph.pdf  used on inp
+ut line 27.
+(pdftex.def)             Requested size: 189.0pt x 156.004pt.
+ [17]
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 36.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 49.
+ [18]
+Underfull \hbox (badness 10000) detected at line 79
+[][][]
+ []
+
+) [19] [20
+
+]
+Chapter 6.
+(./location_8hh.tex <./location_8hh__incl.pdf
+
+pdfTeX warning: pdflatex (file ./location_8hh__incl.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+>
+<location_8hh__incl.pdf, id=600, 230.8625pt x 156.585pt>
+File: location_8hh__incl.pdf Graphic file (type pdf)
+<use location_8hh__incl.pdf>
+Package pdftex.def Info: location_8hh__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 230.0pt x 156.00162pt.
+ <./location_8hh__dep__incl.pdf
+
+pdfTeX warning: pdflatex (file ./location_8hh__dep__incl.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+>
+<location_8hh__dep__incl.pdf, id=608, 289.08pt x 156.585pt>
+File: location_8hh__dep__incl.pdf Graphic file (type pdf)
+<use location_8hh__dep__incl.pdf>
+Package pdftex.def Info: location_8hh__dep__incl.pdf  used on input line 21.
+(pdftex.def)             Requested size: 288.0pt x 156.00879pt.
+ [21]
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 7.19995pt on input line 85.
+ [22]) [23] [24
+
+] (./refman.ind [25
 
 
 
 ]) (./refman.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 7E2F269DCC1359A3BDCF428E7C0CFBB5;1950.
+(rerunfilecheck)             Checksum: 0583A12834F5A6AE76D5F786E2058348;8738.
  ) 
 Here is how much of TeX's memory you used:
- 17215 strings out of 480247
- 274855 string characters out of 5896150
- 574626 words of memory out of 5000000
- 34817 multiletter control sequences out of 15000+600000
- 520825 words of font info for 78 fonts, out of 8000000 for 9000
+ 17625 strings out of 480247
+ 286788 string characters out of 5896150
+ 586398 words of memory out of 5000000
+ 35060 multiletter control sequences out of 15000+600000
+ 532351 words of font info for 103 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 99i,15n,117p,341b,538s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,16n,117p,471b,633s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/he
-lvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr
-8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (11 pages, 70746 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/cour
+ier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
+w/helvetic/uhvro8a.pfb>
+Output written on refman.pdf (29 pages, 219320 bytes).
 PDF statistics:
- 170 PDF objects out of 1000 (max. 8388607)
- 143 compressed objects within 2 object streams
- 31 named destinations out of 1000 (max. 500000)
- 97 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 789 PDF objects out of 1000 (max. 8388607)
+ 686 compressed objects within 7 object streams
+ 162 named destinations out of 1000 (max. 500000)
+ 403 words of extra memory for PDF output out of 10000 (max. 10000000)
 

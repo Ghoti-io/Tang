@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['tangbase_3',['TangBase',['../classTang_1_1TangBase.html#a95c5e022c98a7ced53b12632a8d3a08b',1,'Tang::TangBase']]]
+  ['astnode_36',['AstNode',['../classTang_1_1AstNode.html#a17cadf7ca51469e42bf405925af27e9e',1,'Tang::AstNode']]],
+  ['astnodeinteger_37',['AstNodeInteger',['../classTang_1_1AstNodeInteger.html#adf60f30feb3ebb630e9396f5f2cd1b58',1,'Tang::AstNodeInteger']]]
 ];

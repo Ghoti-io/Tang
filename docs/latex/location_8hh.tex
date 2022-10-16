@@ -1,0 +1,117 @@
+\hypertarget{location_8hh}{}\doxysection{build/generated/location.hh File Reference}
+\label{location_8hh}\index{build/generated/location.hh@{build/generated/location.hh}}
+
+
+Define the Tang \+::location class.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for location.\+hh\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{location_8hh__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{location_8hh__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classTang_1_1position}{Tang\+::position}}
+\begin{DoxyCompactList}\small\item\em A point in a source file. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}
+\begin{DoxyCompactList}\small\item\em Two points in a source file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{location_8hh_a5a6c82f7ce4ad9cc8c6c08b7a2de5b84}\label{location_8hh_a5a6c82f7ce4ad9cc8c6c08b7a2de5b84}} 
+\#define {\bfseries YY\+\_\+\+NULLPTR}~((void$\ast$)0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{location_8hh_a8ff08788df7eb2ef71a45fe4a762bde0}\label{location_8hh_a8ff08788df7eb2ef71a45fe4a762bde0}} 
+position \& \mbox{\hyperlink{location_8hh_a8ff08788df7eb2ef71a45fe4a762bde0}{Tang\+::operator+=}} (position \&res, position\+::counter\+\_\+type width)
+\begin{DoxyCompactList}\small\item\em Add {\itshape width} columns, in place. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{location_8hh_a27224bbafbc2a556749c9c5c1a2bdcde}\label{location_8hh_a27224bbafbc2a556749c9c5c1a2bdcde}} 
+position \mbox{\hyperlink{location_8hh_a27224bbafbc2a556749c9c5c1a2bdcde}{Tang\+::operator+}} (position res, position\+::counter\+\_\+type width)
+\begin{DoxyCompactList}\small\item\em Add {\itshape width} columns. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{location_8hh_a445f4e8c8370226140c3aae3e8fe0d9e}\label{location_8hh_a445f4e8c8370226140c3aae3e8fe0d9e}} 
+position \& \mbox{\hyperlink{location_8hh_a445f4e8c8370226140c3aae3e8fe0d9e}{Tang\+::operator-\/=}} (position \&res, position\+::counter\+\_\+type width)
+\begin{DoxyCompactList}\small\item\em Subtract {\itshape width} columns, in place. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{location_8hh_a0ef9d87b981cb067f3ddebdbae7f49c0}\label{location_8hh_a0ef9d87b981cb067f3ddebdbae7f49c0}} 
+position \mbox{\hyperlink{location_8hh_a0ef9d87b981cb067f3ddebdbae7f49c0}{Tang\+::operator-\/}} (position res, position\+::counter\+\_\+type width)
+\begin{DoxyCompactList}\small\item\em Subtract {\itshape width} columns. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename YYChar $>$ }\\std\+::basic\+\_\+ostream$<$ YYChar $>$ \& \mbox{\hyperlink{location_8hh_a9dc174644081f1d525c4abe6307fe52a}{Tang\+::operator$<$$<$}} (std\+::basic\+\_\+ostream$<$ YYChar $>$ \&ostr, const position \&pos)
+\begin{DoxyCompactList}\small\item\em Intercept output stream redirection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{location_8hh_a92c07c9c2e75796ec2dcf36aaa50cb70}\label{location_8hh_a92c07c9c2e75796ec2dcf36aaa50cb70}} 
+location \& \mbox{\hyperlink{location_8hh_a92c07c9c2e75796ec2dcf36aaa50cb70}{Tang\+::operator+=}} (location \&res, const location \&end)
+\begin{DoxyCompactList}\small\item\em Join two locations, in place. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{location_8hh_adaa5ccf051933a24b9f8eb8e165bc03b}\label{location_8hh_adaa5ccf051933a24b9f8eb8e165bc03b}} 
+location \mbox{\hyperlink{location_8hh_adaa5ccf051933a24b9f8eb8e165bc03b}{Tang\+::operator+}} (location res, const location \&end)
+\begin{DoxyCompactList}\small\item\em Join two locations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{location_8hh_adb364ab01931188d4bef2fb360672fcd}\label{location_8hh_adb364ab01931188d4bef2fb360672fcd}} 
+location \& \mbox{\hyperlink{location_8hh_adb364ab01931188d4bef2fb360672fcd}{Tang\+::operator+=}} (location \&res, location\+::counter\+\_\+type width)
+\begin{DoxyCompactList}\small\item\em Add {\itshape width} columns to the end position, in place. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{location_8hh_afdb9a2ac32af9d824cdcbadb990f19c3}\label{location_8hh_afdb9a2ac32af9d824cdcbadb990f19c3}} 
+location \mbox{\hyperlink{location_8hh_afdb9a2ac32af9d824cdcbadb990f19c3}{Tang\+::operator+}} (location res, location\+::counter\+\_\+type width)
+\begin{DoxyCompactList}\small\item\em Add {\itshape width} columns to the end position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{location_8hh_aa1084cc76a5118131dbcc2bbef29d2b6}\label{location_8hh_aa1084cc76a5118131dbcc2bbef29d2b6}} 
+location \& \mbox{\hyperlink{location_8hh_aa1084cc76a5118131dbcc2bbef29d2b6}{Tang\+::operator-\/=}} (location \&res, location\+::counter\+\_\+type width)
+\begin{DoxyCompactList}\small\item\em Subtract {\itshape width} columns to the end position, in place. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{location_8hh_acdbaf2700360597cc85e667ca1064df1}\label{location_8hh_acdbaf2700360597cc85e667ca1064df1}} 
+location \mbox{\hyperlink{location_8hh_acdbaf2700360597cc85e667ca1064df1}{Tang\+::operator-\/}} (location res, location\+::counter\+\_\+type width)
+\begin{DoxyCompactList}\small\item\em Subtract {\itshape width} columns to the end position. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename YYChar $>$ }\\std\+::basic\+\_\+ostream$<$ YYChar $>$ \& \mbox{\hyperlink{location_8hh_a626f93ab956878407a4d699ff16c4fc8}{Tang\+::operator$<$$<$}} (std\+::basic\+\_\+ostream$<$ YYChar $>$ \&ostr, const location \&loc)
+\begin{DoxyCompactList}\small\item\em Intercept output stream redirection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Define the Tang \+::location class. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{location_8hh_a626f93ab956878407a4d699ff16c4fc8}\label{location_8hh_a626f93ab956878407a4d699ff16c4fc8}} 
+\index{location.hh@{location.hh}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!location.hh@{location.hh}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename YYChar $>$ \\
+std\+::basic\+\_\+ostream$<$YYChar$>$\& Tang\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::basic\+\_\+ostream$<$ YYChar $>$ \&}]{ostr,  }\item[{const \mbox{\hyperlink{classTang_1_1location}{location}} \&}]{loc }\end{DoxyParamCaption})}
+
+
+
+Intercept output stream redirection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ostr} & the destination output stream \\
+\hline
+{\em loc} & a reference to the location to redirect\\
+\hline
+\end{DoxyParams}
+Avoid duplicate information. \mbox{\Hypertarget{location_8hh_a9dc174644081f1d525c4abe6307fe52a}\label{location_8hh_a9dc174644081f1d525c4abe6307fe52a}} 
+\index{location.hh@{location.hh}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!location.hh@{location.hh}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename YYChar $>$ \\
+std\+::basic\+\_\+ostream$<$YYChar$>$\& Tang\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::basic\+\_\+ostream$<$ YYChar $>$ \&}]{ostr,  }\item[{const \mbox{\hyperlink{classTang_1_1position}{position}} \&}]{pos }\end{DoxyParamCaption})}
+
+
+
+Intercept output stream redirection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ostr} & the destination output stream \\
+\hline
+{\em pos} & a reference to the position to redirect \\
+\hline
+\end{DoxyParams}

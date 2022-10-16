@@ -1,0 +1,62 @@
+\hypertarget{classTang_1_1AstNode}{}\doxysection{Tang\+::Ast\+Node Class Reference}
+\label{classTang_1_1AstNode}\index{Tang::AstNode@{Tang::AstNode}}
+
+
+Base class for representing nodes of an Abstract Syntax Tree (AST).  
+
+
+
+
+{\ttfamily \#include $<$ast.\+hpp$>$}
+
+
+
+Inheritance diagram for Tang\+::Ast\+Node\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{classTang_1_1AstNode__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1AstNode_aafc1fa74c89d45e4a07841a3d90b5925}\label{classTang_1_1AstNode_aafc1fa74c89d45e4a07841a3d90b5925}} 
+virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNode_aafc1fa74c89d45e4a07841a3d90b5925}{inspect}} ()
+\begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTang_1_1AstNode_a17cadf7ca51469e42bf405925af27e9e}{Ast\+Node}} (\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} loc)
+\begin{DoxyCompactList}\small\item\em The generic constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for representing nodes of an Abstract Syntax Tree (AST). 
+
+There will be {\itshape many} derived classes, each one conveying the syntactic meaning of the code that it represents. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNode_a17cadf7ca51469e42bf405925af27e9e}\label{classTang_1_1AstNode_a17cadf7ca51469e42bf405925af27e9e}} 
+\index{Tang::AstNode@{Tang::AstNode}!AstNode@{AstNode}}
+\index{AstNode@{AstNode}!Tang::AstNode@{Tang::AstNode}}
+\doxysubsubsection{\texorpdfstring{AstNode()}{AstNode()}}
+{\footnotesize\ttfamily Tang\+::\+Ast\+Node\+::\+Ast\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{loc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+The generic constructor. 
+
+It should never be called on its own.
+
+
+\begin{DoxyParams}{Parameters}
+{\em loc} & The location associated with this node. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/ast.\+hpp\item 
+src/ast.\+cpp\end{DoxyCompactItemize}
