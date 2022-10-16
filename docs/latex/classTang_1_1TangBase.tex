@@ -19,6 +19,17 @@ The base class for the Tang programming language.
 \doxysubsection{Detailed Description}
 The base class for the Tang programming language. 
 
+This class is the fundamental starting point to compile and execute a Tang program. It may be considered in three parts\+:
+
+
+\begin{DoxyEnumerate}
+\item It acts as an extendable interface through which additional \char`\"{}library\char`\"{} functions can be added to the language.
+
+It is intentionally designed that each instance of \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+Base}} will have its own library functions.
+\item It provides methods to compile scripts and templates, resulting in a Program object.
+\item The Program object may then be executed, providing instance-\/specific context information ({\itshape i.\+e.}, state). 
+\end{DoxyEnumerate}
+
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classTang_1_1TangBase_a95c5e022c98a7ced53b12632a8d3a08b}\label{classTang_1_1TangBase_a95c5e022c98a7ced53b12632a8d3a08b}} 
 \index{Tang::TangBase@{Tang::TangBase}!TangBase@{TangBase}}

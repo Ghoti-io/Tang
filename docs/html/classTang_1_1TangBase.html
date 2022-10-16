@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Tang: A Template Language: Tang::TangBase Class Reference</title>
+<title>Tang: Tang::TangBase Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Tang: A Template Language
+   <div id="projectname">Tang
    &#160;<span id="projectnumber">0.1</span>
    </div>
    <div id="projectbrief">A C++ library for the Tang scripting language, for generating HTML markup.</div>
@@ -104,6 +104,14 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The base class for the Tang programming language. </p>
+<p>This class is the fundamental starting point to compile and execute a Tang program. It may be considered in three parts:</p>
+<ol type="1">
+<li><p class="startli">It acts as an extendable interface through which additional "library" functions can be added to the language.</p>
+<p class="startli">It is intentionally designed that each instance of <a class="el" href="classTang_1_1TangBase.html">TangBase</a> will have its own library functions.</p>
+</li>
+<li>It provides methods to compile scripts and templates, resulting in a Program object.</li>
+<li>The Program object may then be executed, providing instance-specific context information (<em>i.e.</em>, state). </li>
+</ol>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a95c5e022c98a7ced53b12632a8d3a08b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a95c5e022c98a7ced53b12632a8d3a08b">&#9670;&nbsp;</a></span>TangBase()</h2>

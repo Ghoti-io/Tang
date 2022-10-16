@@ -24,7 +24,12 @@
 */
 var NAVTREE =
 [
-  [ "Tang: A Template Language", "index.html", [
+  [ "Tang", "index.html", [
+    [ "Tang: A Template Language", "index.html", [
+      [ "Quick Description", "index.html#A", null ],
+      [ "Features", "index.html#Features", null ],
+      [ "License", "index.html#License", null ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
