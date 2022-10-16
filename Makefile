@@ -6,19 +6,65 @@ OBJ_DIR := $(BUILD)/objects
 GEN_DIR := $(BUILD)/generated
 APP_DIR := $(BUILD)/apps
 TARGET := libtang.so
-INCLUDE := -I include/
-LIBOBJECTS := $(OBJ_DIR)/tangBase.o
+INCLUDE := -I include/ -I $(GEN_DIR)/
+LIBOBJECTS := $(OBJ_DIR)/ast.o $(OBJ_DIR)/error.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o
+
+
+
 TANGLIBRARY := -L $(APP_DIR) -Wl,-R -Wl,.$(APP_DIR) -l:libtang.so
 
 
 all: $(APP_DIR)/$(TARGET) ## Build the shared library
 
 ####################################################################
+# Bison-Generated Files
+####################################################################
+$(GEN_DIR)/tangParser.hpp: bison/tangParser.y
+	@echo "\n### Generating Bison TangParser ###"
+	@mkdir -p $(@D)
+	bison -v -o $(GEN_DIR)/tangParser.cpp -d $<
+
+####################################################################
+# Flex-Generated Files
+####################################################################
+$(GEN_DIR)/tangScanner.cpp: flex/tangScanner.l
+	@echo "\n### Generating Flex TangScanner ###"
+	@mkdir -p $(@D)
+	flex -o $@ $<
+
+####################################################################
+# Special Rule 
+####################################################################
+$(GEN_DIR)/tangScanner.hpp: $(GEN_DIR)/tangScanner.cpp
+
+$(GEN_DIR)/location.hh: $(GEN_DIR)/tangParser.hpp
+
+####################################################################
 # Object Files
 ####################################################################
 
+$(OBJ_DIR)/ast.o: src/ast.cpp $(GEN_DIR)/location.hh
+	@echo "\n### Compiling ast.o ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
+
+$(OBJ_DIR)/error.o: src/error.cpp $(GEN_DIR)/location.hh
+	@echo "\n### Compiling error.o ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
+
 $(OBJ_DIR)/tangBase.o: src/tangBase.cpp include/tangBase.hpp
 	@echo "\n### Compiling tangBase.o ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
+
+$(OBJ_DIR)/tangParser.o: $(GEN_DIR)/tangParser.cpp include/tangScanner.hpp
+	@echo "\n### Compiling tangScanner.o ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
+
+$(OBJ_DIR)/tangScanner.o: $(GEN_DIR)/tangScanner.cpp
+	@echo "\n### Compiling tangScanner.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
