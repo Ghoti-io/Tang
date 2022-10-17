@@ -1,3 +1,6 @@
+#ifndef TANG_AST_HPP
+#define TANG_AST_HPP
+
 #include <string>
 #include "location.hh"
 
@@ -21,7 +24,7 @@ namespace Tang {
     /**
      * Return a string that describes the contents of the node.
      */
-    virtual std::string inspect(); 
+    virtual std::string dump(std::string indent = "") const;
 
   private:
     /**
@@ -46,7 +49,7 @@ namespace Tang {
      */
     AstNodeInteger(int64_t number, Tang::location loc) : AstNode(loc), val{number} {}
 
-    virtual std::string inspect() override;
+    virtual std::string dump(std::string indent = "") const override;
 
   private:
     /**
@@ -55,4 +58,6 @@ namespace Tang {
     int64_t val;
   };
 }
+
+#endif // TANG_AST_HPP
 

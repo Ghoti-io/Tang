@@ -4,11 +4,11 @@
 using namespace std;
 using namespace Tang;
 
-string AstNode::inspect() {
-  return "";
+string AstNode::dump(string indent) const {
+  return indent + "\n";
 }
 
-string AstNodeInteger::inspect() {
-  return to_string(this->val);
+string AstNodeInteger::dump(string indent) const {
+  return indent + "Integer: " + to_string(this->val) + "\n";
 }
 

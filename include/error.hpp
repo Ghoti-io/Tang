@@ -1,3 +1,5 @@
+#ifndef TANG_ERROR_HPP
+#define TANG_ERROR_HPP
 
 #include <string>
 #include "location.hh"
@@ -33,4 +35,6 @@ namespace Tang {
     Tang::location location;
   };
 }
+
+#endif // TANG_ERROR_HPP
 

@@ -2,6 +2,11 @@
 #include "tangBase.hpp"
 
 using namespace std;
+using namespace Tang;
 
-Tang::TangBase::TangBase() {};
+TangBase::TangBase() {};
+
+Program TangBase::compileScript(string script) {
+  return Program{script, Program::CodeType::Script};
+}
 

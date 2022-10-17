@@ -1,3 +1,6 @@
+#include <string>
+#include "program.hpp"
+
 /**
  * \mainpage Tang: A Template Language
  *
@@ -50,6 +53,7 @@ namespace Tang {
      * The constructor.  Isn't it glorious.
      */
     TangBase();
+    Program compileScript(std::string script);
   };
 }
 

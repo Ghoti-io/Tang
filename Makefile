@@ -7,11 +7,11 @@ GEN_DIR := $(BUILD)/generated
 APP_DIR := $(BUILD)/apps
 TARGET := libtang.so
 INCLUDE := -I include/ -I $(GEN_DIR)/
-LIBOBJECTS := $(OBJ_DIR)/ast.o $(OBJ_DIR)/error.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o
+LIBOBJECTS := $(OBJ_DIR)/ast.o $(OBJ_DIR)/error.o $(OBJ_DIR)/program.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o
 
 
 
-TANGLIBRARY := -L $(APP_DIR) -Wl,-R -Wl,.$(APP_DIR) -l:libtang.so
+TANGLIBRARY := -L $(APP_DIR) -Wl,-R -Wl,$(APP_DIR) -l:libtang.so
 
 
 all: $(APP_DIR)/$(TARGET) ## Build the shared library
@@ -53,13 +53,18 @@ $(OBJ_DIR)/error.o: src/error.cpp $(GEN_DIR)/location.hh
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
+$(OBJ_DIR)/program.o: src/program.cpp
+	@echo "\n### Compiling program.o ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
+
 $(OBJ_DIR)/tangBase.o: src/tangBase.cpp include/tangBase.hpp
 	@echo "\n### Compiling tangBase.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
 $(OBJ_DIR)/tangParser.o: $(GEN_DIR)/tangParser.cpp include/tangScanner.hpp
-	@echo "\n### Compiling tangScanner.o ###"
+	@echo "\n### Compiling tangParser.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
@@ -78,12 +83,21 @@ $(APP_DIR)/$(TARGET): $(LIBOBJECTS)
 	$(CXX) $(CXXFLAGS) -shared -o $@ $^ $(LDFLAGS)
 
 ####################################################################
+# Unit Tests
+####################################################################
+
+$(APP_DIR)/test: test/test.cpp $(APP_DIR)/$(TARGET)
+	@echo "\n### Compiling Tang Test ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ $< $(LDFLAGS) $(TANGLIBRARY)
+
+####################################################################
 # Commands
 ####################################################################
 
-.PHONY: all clean cloc docs docs-pdf watch
+.PHONY: all clean cloc docs docs-pdf test watch watch-test
 
-watch: ## Watch the file directory for changes
+watch: ## Watch the file directory for changes and compile the target
 	@while true; do \
 					make all; \
 					echo "\033[0;32m"; \
@@ -91,9 +105,22 @@ watch: ## Watch the file directory for changes
 					echo "# Waiting for changes.. #"; \
 					echo "#########################"; \
 					echo "\033[0m"; \
-					inotifywait -qr -e modify -e create -e delete -e move src include bison flex --exclude '/\.'; \
+					inotifywait -qr -e modify -e create -e delete -e move src include bison flex test Makefile --exclude '/\.'; \
 					done
 
+watch-test: ## Watch the file directory for changes and run the unit tests
+	@while true; do \
+					make test; \
+					echo "\033[0;32m"; \
+					echo "#########################"; \
+					echo "# Waiting for changes.. #"; \
+					echo "#########################"; \
+					echo "\033[0m"; \
+					inotifywait -qr -e modify -e create -e delete -e move src include bison flex test Makefile --exclude '/\.'; \
+					done
+
+test: $(APP_DIR)/test ## Make and run the Unit tests
+	$(APP_DIR)/test
 
 clean: ## Remove all contents of the build directories.
 	-@rm -rvf $(OBJ_DIR)/*
