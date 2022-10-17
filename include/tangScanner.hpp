@@ -1,5 +1,10 @@
-#ifndef TANGSCANNER_HPP
-#define TANGSCANNER_HPP
+/**
+ * @file
+ * Defines the Tang::TangScanner used to tokenize a Tang script.
+ */
+
+#ifndef TANG_TANGSCANNER_HPP
+#define TANG_TANGSCANNER_HPP
 
 // The FlexLexer.h header file is intended to be able to be included multiple
 // times, once for each unique lexer class created.  As such, we need to include
@@ -68,5 +73,5 @@ namespace Tang {
   };
 }
 
-#endif // TANGSCANNER_HPP
+#endif // TANG_TANGSCANNER_HPP
 

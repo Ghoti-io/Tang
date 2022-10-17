@@ -1,3 +1,11 @@
+/**
+ * @file
+ * Defines the Tang::TangBase class used to interact with Tang.
+ */
+
+#ifndef TANG_TANGBASE_HPP
+#define TANG_TANGBASE_HPP
+
 #include <string>
 #include "program.hpp"
 
@@ -53,7 +61,16 @@ namespace Tang {
      * The constructor.  Isn't it glorious.
      */
     TangBase();
+
+    /**
+     * Compile the provided source code as a script and return a Program.
+     *
+     * @param script The Tang script to be compiled.
+     * @return The Program object representing the compiled script.
+     */
     Program compileScript(std::string script);
   };
 }
+
+#endif // TANG_TANGBASE_HPP
 

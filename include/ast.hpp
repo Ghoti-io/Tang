@@ -1,3 +1,8 @@
+/**
+ * @file
+ * Define the Tang::AstNode and its associated/derivative classes.
+ */
+
 #ifndef TANG_AST_HPP
 #define TANG_AST_HPP
 

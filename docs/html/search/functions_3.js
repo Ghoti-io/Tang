@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['get_5fnext_5ftoken_40',['get_next_token',['../classTang_1_1TangScanner.html#a0109128f5ed60f03bf6ff76b6ce25b1d',1,'Tang::TangScanner']]]
+  ['error_63',['Error',['../classTang_1_1Error.html#a596b19b49c8474afc01803a4a6dfb5b0',1,'Tang::Error::Error()'],['../classTang_1_1Error.html#a1e2eecd3e4f8e648d22bc932e3ac2995',1,'Tang::Error::Error(std::string message, Tang::location location)']]],
+  ['execute_64',['execute',['../classTang_1_1Program.html#a47a0f135b7bbd852f91ecfbdee0be8af',1,'Tang::Program']]]
 ];

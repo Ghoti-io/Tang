@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['initialize_41',['initialize',['../classTang_1_1position.html#aca1fc66eaf0186b602d3c9cccc54bd91',1,'Tang::position::initialize()'],['../classTang_1_1location.html#a0efc475ae2a3271a7fbdc97ee4d393a0',1,'Tang::location::initialize()']]],
-  ['inspect_42',['inspect',['../classTang_1_1AstNode.html#aafc1fa74c89d45e4a07841a3d90b5925',1,'Tang::AstNode::inspect()'],['../classTang_1_1AstNodeInteger.html#acb109326d79facfe46f7c85799c93e5f',1,'Tang::AstNodeInteger::inspect()']]]
+  ['get_5fnext_5ftoken_65',['get_next_token',['../classTang_1_1TangScanner.html#a0109128f5ed60f03bf6ff76b6ce25b1d',1,'Tang::TangScanner']]],
+  ['getast_66',['getAst',['../classTang_1_1Program.html#aac8e74d455141d5024910e7d1c030ede',1,'Tang::Program']]],
+  ['getcode_67',['getCode',['../classTang_1_1Program.html#a75aff78d6b94472f4d8f93e6f79cfbe0',1,'Tang::Program']]]
 ];

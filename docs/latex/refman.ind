@@ -7,7 +7,14 @@
 
   \indexspace
 
-  \item {build/generated/location.hh}, \hyperpage{21}
+  \item {build/generated/location.hh}, \hyperpage{23}
+
+  \indexspace
+
+  \item {CodeType}
+    \subitem {Tang::Program}, \hyperpage{18}
+  \item {compileScript}
+    \subitem {Tang::TangBase}, \hyperpage{20}
 
   \indexspace
 
@@ -17,17 +24,40 @@
   \indexspace
 
   \item {get\_next\_token}
-    \subitem {Tang::TangScanner}, \hyperpage{19}
+    \subitem {Tang::TangScanner}, \hyperpage{22}
+  \item {getAst}
+    \subitem {Tang::Program}, \hyperpage{18}
+  \item {getCode}
+    \subitem {Tang::Program}, \hyperpage{18}
+
+  \indexspace
+
+  \item {include/ast.hpp}, \hyperpage{26}
+  \item {include/error.hpp}, \hyperpage{27}
+  \item {include/program.hpp}, \hyperpage{29}
+  \item {include/tang.hpp}, \hyperpage{30}
+  \item {include/tangBase.hpp}, \hyperpage{31}
+  \item {include/tangScanner.hpp}, \hyperpage{32}
 
   \indexspace
 
   \item {location.hh}
-    \subitem {operator$<$$<$}, \hyperpage{22, 23}
+    \subitem {operator$<$$<$}, \hyperpage{25}
 
   \indexspace
 
   \item {operator$<$$<$}
-    \subitem {location.hh}, \hyperpage{22, 23}
+    \subitem {location.hh}, \hyperpage{25}
+
+  \indexspace
+
+  \item {Program}
+    \subitem {Tang::Program}, \hyperpage{18}
+
+  \indexspace
+
+  \item {Script}
+    \subitem {Tang::Program}, \hyperpage{18}
 
   \indexspace
 
@@ -39,14 +69,24 @@
     \subitem {Error}, \hyperpage{13}
   \item {Tang::location}, \hyperpage{13}
   \item {Tang::position}, \hyperpage{15}
-  \item {Tang::TangBase}, \hyperpage{16}
-    \subitem {TangBase}, \hyperpage{17}
-  \item {Tang::TangScanner}, \hyperpage{17}
-    \subitem {get\_next\_token}, \hyperpage{19}
-    \subitem {TangScanner}, \hyperpage{18}
+  \item {Tang::Program}, \hyperpage{16}
+    \subitem {CodeType}, \hyperpage{18}
+    \subitem {getAst}, \hyperpage{18}
+    \subitem {getCode}, \hyperpage{18}
+    \subitem {Program}, \hyperpage{18}
+    \subitem {Script}, \hyperpage{18}
+    \subitem {Template}, \hyperpage{18}
+  \item {Tang::TangBase}, \hyperpage{19}
+    \subitem {compileScript}, \hyperpage{20}
+    \subitem {TangBase}, \hyperpage{19}
+  \item {Tang::TangScanner}, \hyperpage{20}
+    \subitem {get\_next\_token}, \hyperpage{22}
+    \subitem {TangScanner}, \hyperpage{21}
   \item {TangBase}
-    \subitem {Tang::TangBase}, \hyperpage{17}
+    \subitem {Tang::TangBase}, \hyperpage{19}
   \item {TangScanner}
-    \subitem {Tang::TangScanner}, \hyperpage{18}
+    \subitem {Tang::TangScanner}, \hyperpage{21}
+  \item {Template}
+    \subitem {Tang::Program}, \hyperpage{18}
 
 \end{theindex}

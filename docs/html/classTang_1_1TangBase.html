@@ -98,9 +98,12 @@ $(document).ready(function(){initNavTree('classTang_1_1TangBase.html',''); initR
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a95c5e022c98a7ced53b12632a8d3a08b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1TangBase.html#a95c5e022c98a7ced53b12632a8d3a08b">TangBase</a> ()</td></tr>
-<tr class="memdesc:a95c5e022c98a7ced53b12632a8d3a08b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="classTang_1_1TangBase.html#a95c5e022c98a7ced53b12632a8d3a08b">More...</a><br /></td></tr>
-<tr class="separator:a95c5e022c98a7ced53b12632a8d3a08b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aa1668d0232e39e60d01fbce2419ef4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1TangBase.html#a6aa1668d0232e39e60d01fbce2419ef4">TangBase</a> ()</td></tr>
+<tr class="memdesc:a6aa1668d0232e39e60d01fbce2419ef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="classTang_1_1TangBase.html#a6aa1668d0232e39e60d01fbce2419ef4">More...</a><br /></td></tr>
+<tr class="separator:a6aa1668d0232e39e60d01fbce2419ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c1ad8653a52f5a90fee20c385be7540"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTang_1_1Program.html">Program</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1TangBase.html#a3c1ad8653a52f5a90fee20c385be7540">compileScript</a> (std::string script)</td></tr>
+<tr class="memdesc:a3c1ad8653a52f5a90fee20c385be7540"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile the provided source code as a script and return a <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Program</a>.  <a href="classTang_1_1TangBase.html#a3c1ad8653a52f5a90fee20c385be7540">More...</a><br /></td></tr>
+<tr class="separator:a3c1ad8653a52f5a90fee20c385be7540"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The base class for the Tang programming language. </p>
@@ -109,18 +112,18 @@ Public Member Functions</h2></td></tr>
 <li><p class="startli">It acts as an extendable interface through which additional "library" functions can be added to the language.</p>
 <p class="startli">It is intentionally designed that each instance of <a class="el" href="classTang_1_1TangBase.html">TangBase</a> will have its own library functions.</p>
 </li>
-<li>It provides methods to compile scripts and templates, resulting in a Program object.</li>
-<li>The Program object may then be executed, providing instance-specific context information (<em>i.e.</em>, state). </li>
+<li>It provides methods to compile scripts and templates, resulting in a <a class="el" href="classTang_1_1Program.html">Program</a> object.</li>
+<li>The <a class="el" href="classTang_1_1Program.html">Program</a> object may then be executed, providing instance-specific context information (<em>i.e.</em>, state). </li>
 </ol>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a95c5e022c98a7ced53b12632a8d3a08b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95c5e022c98a7ced53b12632a8d3a08b">&#9670;&nbsp;</a></span>TangBase()</h2>
+<a id="a6aa1668d0232e39e60d01fbce2419ef4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aa1668d0232e39e60d01fbce2419ef4">&#9670;&nbsp;</a></span>TangBase()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Tang::TangBase::TangBase </td>
+          <td class="memname">TangBase::TangBase </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -130,6 +133,34 @@ Public Member Functions</h2></td></tr>
 
 <p>The constructor. </p>
 <p>Isn't it glorious. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3c1ad8653a52f5a90fee20c385be7540"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c1ad8653a52f5a90fee20c385be7540">&#9670;&nbsp;</a></span>compileScript()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTang_1_1Program.html">Program</a> TangBase::compileScript </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>script</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compile the provided source code as a script and return a <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Program</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">script</td><td>The Tang script to be compiled. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Program</a> object representing the compiled script. </dd></dl>
 
 </div>
 </div>

@@ -12,8 +12,10 @@ The base class for the Tang programming language.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTang_1_1TangBase_a95c5e022c98a7ced53b12632a8d3a08b}{Tang\+Base}} ()
-\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{classTang_1_1TangBase_a6aa1668d0232e39e60d01fbce2419ef4}{Tang\+Base}} ()
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTang_1_1Program}{Program}} \mbox{\hyperlink{classTang_1_1TangBase_a3c1ad8653a52f5a90fee20c385be7540}{compile\+Script}} (std\+::string script)
+\begin{DoxyCompactList}\small\item\em Compile the provided source code as a script and return a \mbox{\hyperlink{classTang_1_1Program}{Program}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -26,16 +28,16 @@ This class is the fundamental starting point to compile and execute a Tang progr
 \item It acts as an extendable interface through which additional \char`\"{}library\char`\"{} functions can be added to the language.
 
 It is intentionally designed that each instance of \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+Base}} will have its own library functions.
-\item It provides methods to compile scripts and templates, resulting in a Program object.
-\item The Program object may then be executed, providing instance-\/specific context information ({\itshape i.\+e.}, state). 
+\item It provides methods to compile scripts and templates, resulting in a \mbox{\hyperlink{classTang_1_1Program}{Program}} object.
+\item The \mbox{\hyperlink{classTang_1_1Program}{Program}} object may then be executed, providing instance-\/specific context information ({\itshape i.\+e.}, state). 
 \end{DoxyEnumerate}
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classTang_1_1TangBase_a95c5e022c98a7ced53b12632a8d3a08b}\label{classTang_1_1TangBase_a95c5e022c98a7ced53b12632a8d3a08b}} 
+\mbox{\Hypertarget{classTang_1_1TangBase_a6aa1668d0232e39e60d01fbce2419ef4}\label{classTang_1_1TangBase_a6aa1668d0232e39e60d01fbce2419ef4}} 
 \index{Tang::TangBase@{Tang::TangBase}!TangBase@{TangBase}}
 \index{TangBase@{TangBase}!Tang::TangBase@{Tang::TangBase}}
 \doxysubsubsection{\texorpdfstring{TangBase()}{TangBase()}}
-{\footnotesize\ttfamily Tang\+::\+Tang\+Base\+::\+Tang\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Tang\+Base\+::\+Tang\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -43,7 +45,28 @@ The constructor.
 
 Isn\textquotesingle{}t it glorious. 
 
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1TangBase_a3c1ad8653a52f5a90fee20c385be7540}\label{classTang_1_1TangBase_a3c1ad8653a52f5a90fee20c385be7540}} 
+\index{Tang::TangBase@{Tang::TangBase}!compileScript@{compileScript}}
+\index{compileScript@{compileScript}!Tang::TangBase@{Tang::TangBase}}
+\doxysubsubsection{\texorpdfstring{compileScript()}{compileScript()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1Program}{Program}} Tang\+Base\+::compile\+Script (\begin{DoxyParamCaption}\item[{std\+::string}]{script }\end{DoxyParamCaption})}
+
+
+
+Compile the provided source code as a script and return a \mbox{\hyperlink{classTang_1_1Program}{Program}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em script} & The Tang script to be compiled. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{classTang_1_1Program}{Program}} object representing the compiled script. 
+\end{DoxyReturn}
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/tang\+Base.\+hpp\item 
+include/\mbox{\hyperlink{tangBase_8hpp}{tang\+Base.\+hpp}}\item 
 src/tang\+Base.\+cpp\end{DoxyCompactItemize}

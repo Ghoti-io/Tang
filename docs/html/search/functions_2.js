@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['error_39',['Error',['../classTang_1_1Error.html#a596b19b49c8474afc01803a4a6dfb5b0',1,'Tang::Error::Error()'],['../classTang_1_1Error.html#a1e2eecd3e4f8e648d22bc932e3ac2995',1,'Tang::Error::Error(std::string message, Tang::location location)']]]
+  ['dump_62',['dump',['../classTang_1_1AstNode.html#a9884742e4b32db78c0257d0b0904d05f',1,'Tang::AstNode::dump()'],['../classTang_1_1AstNodeInteger.html#aab0cecb61eaed70471685dd0f7a76a43',1,'Tang::AstNodeInteger::dump()']]]
 ];

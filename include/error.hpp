@@ -1,3 +1,8 @@
+/**
+ * @file
+ * Define the Tang::Error class used to describe syntax and runtime errors.
+ */
+
 #ifndef TANG_ERROR_HPP
 #define TANG_ERROR_HPP
 
