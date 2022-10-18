@@ -8,10 +8,18 @@
 
 #include <string>
 #include <optional>
+#include <vector>
 #include "ast.hpp"
 #include "error.hpp"
 
 namespace Tang {
+  class AstNode;
+
+  /**
+   * Contains the Opcodes of a compiled program.
+   */
+  using Bytecode = std::vector<uint64_t>;
+
   /**
    * Represents a compiled script or template that may be executed.
    */
@@ -51,6 +59,13 @@ namespace Tang {
     std::optional<const AstNode *> getAst() const;
 
     /**
+     * Get the Opcodes of the compiled program, formatted like Assembly.
+     *
+     * @return A string containing the Opcode representation.
+     */
+    std::string dumpBytecode() const;
+
+    /**
      * Execute the program.
      */
     void execute();
@@ -60,9 +75,21 @@ namespace Tang {
      */
     std::string out;
 
+    /**
+     * Add a uint64_t to the Bytecode.
+     *
+     * @param op The value to add to the Bytecode
+     */
+    void addBytecode(uint64_t);
+
   private:
     /**
-     * Compile the code.
+     * Parse the code into an AST.
+     */
+    void parse();
+
+    /**
+     * Compile the AST into Bytecode.
      */
     void compile();
 
@@ -86,6 +113,11 @@ namespace Tang {
      * runtime errors.
      */
     Error * error;
+
+    /**
+     * The Bytecode of the compiled program.
+     */
+    Bytecode bytecode;
   };
 }
 

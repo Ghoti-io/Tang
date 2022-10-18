@@ -8,8 +8,11 @@
 
 #include <string>
 #include "location.hh"
+#include "program.hpp"
 
 namespace Tang {
+  class Program;
+
   /**
    * Base class for representing nodes of an Abstract Syntax Tree (AST).
    *
@@ -31,6 +34,11 @@ namespace Tang {
      */
     virtual std::string dump(std::string indent = "") const;
 
+    /**
+     * Compile the ast of the provided Tang::Program.
+     */
+    virtual void compile(Tang::Program & program) const;
+
   private:
     /**
      * The location associated with this node.
@@ -50,11 +58,13 @@ namespace Tang {
      * The constructor.
      *
      * @param number The number to represent.
+     * @param loc The location associated with the expression.
      * @location The location associated with this node.
      */
     AstNodeInteger(int64_t number, Tang::location loc) : AstNode(loc), val{number} {}
 
     virtual std::string dump(std::string indent = "") const override;
+    virtual void compile(Tang::Program & program) const override;
 
   private:
     /**

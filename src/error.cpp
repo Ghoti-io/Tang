@@ -1,3 +1,6 @@
+/**
+ * @file
+ */
 
 #include "error.hpp"
 
