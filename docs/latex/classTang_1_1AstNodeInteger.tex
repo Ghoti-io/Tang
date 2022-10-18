@@ -34,7 +34,10 @@ Collaboration diagram for Tang\+::Ast\+Node\+Integer\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTang_1_1AstNodeInteger_aab0cecb61eaed70471685dd0f7a76a43}\label{classTang_1_1AstNodeInteger_aab0cecb61eaed70471685dd0f7a76a43}} 
 virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeInteger_aab0cecb61eaed70471685dd0f7a76a43}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
-\begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeInteger_a9191a01a987682db46530469a0b45048}\label{classTang_1_1AstNodeInteger_a9191a01a987682db46530469a0b45048}} 
+virtual void \mbox{\hyperlink{classTang_1_1AstNodeInteger_a9191a01a987682db46530469a0b45048}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const override
+\begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -55,7 +58,9 @@ The constructor.
 
 
 \begin{DoxyParams}{Parameters}
-{\em number} & The number to represent. @location The location associated with this node. \\
+{\em number} & The number to represent. \\
+\hline
+{\em loc} & The location associated with the expression. @location The location associated with this node. \\
 \hline
 \end{DoxyParams}
 
@@ -63,4 +68,4 @@ The constructor.
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 include/\mbox{\hyperlink{ast_8hpp}{ast.\+hpp}}\item 
-src/ast.\+cpp\end{DoxyCompactItemize}
+src/\mbox{\hyperlink{ast_8cpp}{ast.\+cpp}}\end{DoxyCompactItemize}

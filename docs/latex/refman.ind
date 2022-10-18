@@ -1,5 +1,7 @@
 \begin{theindex}
 
+  \item {addBytecode}
+    \subitem {Tang::Program}, \hyperpage{18}
   \item {AstNode}
     \subitem {Tang::AstNode}, \hyperpage{10}
   \item {AstNodeInteger}
@@ -7,7 +9,7 @@
 
   \indexspace
 
-  \item {build/generated/location.hh}, \hyperpage{23}
+  \item {build/generated/location.hh}, \hyperpage{25}
 
   \indexspace
 
@@ -15,6 +17,13 @@
     \subitem {Tang::Program}, \hyperpage{18}
   \item {compileScript}
     \subitem {Tang::TangBase}, \hyperpage{20}
+
+  \indexspace
+
+  \item {dumpBytecode}
+    \subitem {Tang::Program}, \hyperpage{19}
+  \item {DUMPPROGRAMCHECK}
+    \subitem {program.cpp}, \hyperpage{38}
 
   \indexspace
 
@@ -26,38 +35,58 @@
   \item {get\_next\_token}
     \subitem {Tang::TangScanner}, \hyperpage{22}
   \item {getAst}
-    \subitem {Tang::Program}, \hyperpage{18}
+    \subitem {Tang::Program}, \hyperpage{19}
   \item {getCode}
-    \subitem {Tang::Program}, \hyperpage{18}
+    \subitem {Tang::Program}, \hyperpage{19}
 
   \indexspace
 
-  \item {include/ast.hpp}, \hyperpage{26}
-  \item {include/error.hpp}, \hyperpage{27}
-  \item {include/program.hpp}, \hyperpage{29}
-  \item {include/tang.hpp}, \hyperpage{30}
-  \item {include/tangBase.hpp}, \hyperpage{31}
-  \item {include/tangScanner.hpp}, \hyperpage{32}
+  \item {include/ast.hpp}, \hyperpage{27}
+  \item {include/error.hpp}, \hyperpage{29}
+  \item {include/macros.hpp}, \hyperpage{30}
+  \item {include/opcode.hpp}, \hyperpage{31}
+  \item {include/program.hpp}, \hyperpage{32}
+  \item {include/tang.hpp}, \hyperpage{33}
+  \item {include/tangBase.hpp}, \hyperpage{34}
+  \item {include/tangScanner.hpp}, \hyperpage{35}
 
   \indexspace
 
   \item {location.hh}
-    \subitem {operator$<$$<$}, \hyperpage{25}
+    \subitem {operator$<$$<$}, \hyperpage{26, 27}
 
   \indexspace
 
+  \item {macros.hpp}
+    \subitem {TANG\_UNUSED}, \hyperpage{30}
+
+  \indexspace
+
+  \item {OP\_INTEGER}
+    \subitem {opcode.hpp}, \hyperpage{31}
+  \item {Opcode}
+    \subitem {opcode.hpp}, \hyperpage{31}
+  \item {opcode.hpp}
+    \subitem {OP\_INTEGER}, \hyperpage{31}
+    \subitem {Opcode}, \hyperpage{31}
   \item {operator$<$$<$}
-    \subitem {location.hh}, \hyperpage{25}
+    \subitem {location.hh}, \hyperpage{26, 27}
 
   \indexspace
 
   \item {Program}
     \subitem {Tang::Program}, \hyperpage{18}
+  \item {program.cpp}
+    \subitem {DUMPPROGRAMCHECK}, \hyperpage{38}
 
   \indexspace
 
   \item {Script}
     \subitem {Tang::Program}, \hyperpage{18}
+  \item {src/ast.cpp}, \hyperpage{36}
+  \item {src/error.cpp}, \hyperpage{37}
+  \item {src/program.cpp}, \hyperpage{37}
+  \item {src/tangBase.cpp}, \hyperpage{38}
 
   \indexspace
 
@@ -70,22 +99,26 @@
   \item {Tang::location}, \hyperpage{13}
   \item {Tang::position}, \hyperpage{15}
   \item {Tang::Program}, \hyperpage{16}
+    \subitem {addBytecode}, \hyperpage{18}
     \subitem {CodeType}, \hyperpage{18}
-    \subitem {getAst}, \hyperpage{18}
-    \subitem {getCode}, \hyperpage{18}
+    \subitem {dumpBytecode}, \hyperpage{19}
+    \subitem {getAst}, \hyperpage{19}
+    \subitem {getCode}, \hyperpage{19}
     \subitem {Program}, \hyperpage{18}
     \subitem {Script}, \hyperpage{18}
     \subitem {Template}, \hyperpage{18}
-  \item {Tang::TangBase}, \hyperpage{19}
+  \item {Tang::TangBase}, \hyperpage{20}
     \subitem {compileScript}, \hyperpage{20}
-    \subitem {TangBase}, \hyperpage{19}
-  \item {Tang::TangScanner}, \hyperpage{20}
+    \subitem {TangBase}, \hyperpage{20}
+  \item {Tang::TangScanner}, \hyperpage{21}
     \subitem {get\_next\_token}, \hyperpage{22}
-    \subitem {TangScanner}, \hyperpage{21}
+    \subitem {TangScanner}, \hyperpage{22}
+  \item {TANG\_UNUSED}
+    \subitem {macros.hpp}, \hyperpage{30}
   \item {TangBase}
-    \subitem {Tang::TangBase}, \hyperpage{19}
+    \subitem {Tang::TangBase}, \hyperpage{20}
   \item {TangScanner}
-    \subitem {Tang::TangScanner}, \hyperpage{21}
+    \subitem {Tang::TangScanner}, \hyperpage{22}
   \item {Template}
     \subitem {Tang::Program}, \hyperpage{18}
 

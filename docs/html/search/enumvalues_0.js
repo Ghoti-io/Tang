@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['script_92',['Script',['../classTang_1_1Program.html#ad99e214562094e21f38b6a453163041ba38b647d35ef85ffa1affec5c7fcb7ac1',1,'Tang::Program']]]
+  ['op_5finteger_117',['OP_INTEGER',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acf7ee2c27ec79d7ab6d0b00d6aa8780a',1,'Tang']]]
 ];

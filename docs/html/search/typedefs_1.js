@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['filename_5ftype_90',['filename_type',['../classTang_1_1position.html#a9c3f42ec08b9e7fa934115023f2ea836',1,'Tang::position::filename_type()'],['../classTang_1_1location.html#a5c532d9595acbf5262f1a0f52ad28e5d',1,'Tang::location::filename_type()']]]
+  ['counter_5ftype_113',['counter_type',['../classTang_1_1position.html#a78079a9e830db129e0dba4c054f3a732',1,'Tang::position::counter_type()'],['../classTang_1_1location.html#adc60f3bef78ccbdd0d95e86a0b24555a',1,'Tang::location::counter_type()']]]
 ];

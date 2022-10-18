@@ -123,6 +123,10 @@ Public Member Functions</h2></td></tr>
 virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeInteger.html#aab0cecb61eaed70471685dd0f7a76a43">dump</a> (std::string indent=&quot;&quot;) const override</td></tr>
 <tr class="memdesc:aab0cecb61eaed70471685dd0f7a76a43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string that describes the contents of the node. <br /></td></tr>
 <tr class="separator:aab0cecb61eaed70471685dd0f7a76a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9191a01a987682db46530469a0b45048"><td class="memItemLeft" align="right" valign="top"><a id="a9191a01a987682db46530469a0b45048"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeInteger.html#a9191a01a987682db46530469a0b45048">compile</a> (<a class="el" href="classTang_1_1Program.html">Tang::Program</a> &amp;program) const override</td></tr>
+<tr class="memdesc:a9191a01a987682db46530469a0b45048"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile the ast of the provided <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a>. <br /></td></tr>
+<tr class="separator:a9191a01a987682db46530469a0b45048"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that represents an integer literal. </p>
@@ -165,7 +169,8 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <p>The constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">number</td><td>The number to represent. @location The location associated with this node. </td></tr>
+    <tr><td class="paramname">number</td><td>The number to represent. </td></tr>
+    <tr><td class="paramname">loc</td><td>The location associated with the expression. @location The location associated with this node. </td></tr>
   </table>
   </dd>
 </dl>
@@ -174,7 +179,7 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="ast_8hpp_source.html">ast.hpp</a></li>
-<li>src/ast.cpp</li>
+<li>src/<a class="el" href="ast_8cpp.html">ast.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

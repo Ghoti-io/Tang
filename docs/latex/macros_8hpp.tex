@@ -1,0 +1,44 @@
+\hypertarget{macros_8hpp}{}\doxysection{include/macros.hpp File Reference}
+\label{macros_8hpp}\index{include/macros.hpp@{include/macros.hpp}}
+
+
+Contains generic macros.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{macros_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{macros_8hpp_a3b422a315500c6bf86432e412962fa66}{TANG\+\_\+\+UNUSED}}(x)~x
+\begin{DoxyCompactList}\small\item\em Instruct the compiler that a function argument will not be used so that it does not generate an error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains generic macros. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{macros_8hpp_a3b422a315500c6bf86432e412962fa66}\label{macros_8hpp_a3b422a315500c6bf86432e412962fa66}} 
+\index{macros.hpp@{macros.hpp}!TANG\_UNUSED@{TANG\_UNUSED}}
+\index{TANG\_UNUSED@{TANG\_UNUSED}!macros.hpp@{macros.hpp}}
+\doxysubsubsection{\texorpdfstring{TANG\_UNUSED}{TANG\_UNUSED}}
+{\footnotesize\ttfamily \#define TANG\+\_\+\+UNUSED(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~x}
+
+
+
+Instruct the compiler that a function argument will not be used so that it does not generate an error. 
+
+When defining a funcion, use the \mbox{\hyperlink{macros_8hpp_a3b422a315500c6bf86432e412962fa66}{TANG\+\_\+\+UNUSED()}} macro around any argument which is {\itshape not} used in the function, in order to squash any compiler warnings. e.\+g., void foo(int TANG\+\_\+\+UNUSED(a)) \{\}
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The argument to be ignored. \\
+\hline
+\end{DoxyParams}

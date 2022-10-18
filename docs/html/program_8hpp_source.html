@@ -93,55 +93,71 @@ $(document).ready(function(){initNavTree('program_8hpp_source.html',''); initRes
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;optional&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ast_8hpp.html">ast.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="error_8hpp.html">error.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>Tang {</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classTang_1_1Program.html">   18</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classTang_1_1Program.html">Program</a> {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041b">   23</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041b">CodeType</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041ba38b647d35ef85ffa1affec5c7fcb7ac1">   24</a></span>&#160;      <a class="code" href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041ba38b647d35ef85ffa1affec5c7fcb7ac1">Script</a>,  </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      <a class="code" href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041bacfade8685b2abd2b062a2367158ce2f3">Template</a> </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041bacfade8685b2abd2b062a2367158ce2f3">   26</a></span>&#160;    };</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classTang_1_1Program.html#a8877034c19de16ce57b04e8ba53cd132">Program</a>(std::string code, <a class="code" href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041b">CodeType</a> codeType);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ast_8hpp.html">ast.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="error_8hpp.html">error.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>Tang {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keyword">class </span>AstNode;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="program_8hpp.html#ab900d54b19c52378faf3ce1d9f9e6d19">   21</a></span>&#160;  <span class="keyword">using</span> <a class="code" href="program_8hpp.html#ab900d54b19c52378faf3ce1d9f9e6d19">Bytecode</a> = std::vector&lt;uint64_t&gt;;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classTang_1_1Program.html">   26</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classTang_1_1Program.html">Program</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041b">   31</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041b">CodeType</a> {</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041ba38b647d35ef85ffa1affec5c7fcb7ac1">   32</a></span>&#160;      <a class="code" href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041ba38b647d35ef85ffa1affec5c7fcb7ac1">Script</a>,  </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      <a class="code" href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041bacfade8685b2abd2b062a2367158ce2f3">Template</a> </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041bacfade8685b2abd2b062a2367158ce2f3">   34</a></span>&#160;    };</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    std::string <a class="code" href="classTang_1_1Program.html#a75aff78d6b94472f4d8f93e6f79cfbe0">getCode</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    std::optional&lt;const AstNode *&gt; <a class="code" href="classTang_1_1Program.html#aac8e74d455141d5024910e7d1c030ede">getAst</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTang_1_1Program.html#a47a0f135b7bbd852f91ecfbdee0be8af">execute</a>();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classTang_1_1Program.html#a81bee7c0545c053eee44d4381295e193">   61</a></span>&#160;    std::string <a class="code" href="classTang_1_1Program.html#a81bee7c0545c053eee44d4381295e193">out</a>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> compile();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    std::string code;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041b">CodeType</a> codeType;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classTang_1_1AstNode.html">AstNode</a> * ast;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="classTang_1_1Error.html">Error</a> * error;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  };</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// TANG_PROGRAM_HPP</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classTang_1_1Program.html#a8877034c19de16ce57b04e8ba53cd132">Program</a>(std::string code, <a class="code" href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041b">CodeType</a> codeType);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    std::string <a class="code" href="classTang_1_1Program.html#a75aff78d6b94472f4d8f93e6f79cfbe0">getCode</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    std::optional&lt;const AstNode *&gt; <a class="code" href="classTang_1_1Program.html#aac8e74d455141d5024910e7d1c030ede">getAst</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    std::string <a class="code" href="classTang_1_1Program.html#aee5e79c40fac68e875c0d043f8fc2bc1">dumpBytecode</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTang_1_1Program.html#aeb4c3d659a07cd588042c766168920d9">execute</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classTang_1_1Program.html#a81bee7c0545c053eee44d4381295e193">   76</a></span>&#160;    std::string <a class="code" href="classTang_1_1Program.html#a81bee7c0545c053eee44d4381295e193">out</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTang_1_1Program.html#a4254d779b88df527ae5b21c4f331b2a6">addBytecode</a>(uint64_t);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> parse();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> compile();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    std::string code;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041b">CodeType</a> codeType;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="classTang_1_1AstNode.html">AstNode</a> * ast;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="classTang_1_1Error.html">Error</a> * error;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="program_8hpp.html#ab900d54b19c52378faf3ce1d9f9e6d19">Bytecode</a> bytecode;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  };</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// TANG_PROGRAM_HPP</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
 <div class="ttc" id="aast_8hpp_html"><div class="ttname"><a href="ast_8hpp.html">ast.hpp</a></div><div class="ttdoc">Define the Tang::AstNode and its associated/derivative classes.</div></div>
-<div class="ttc" id="aclassTang_1_1AstNode_html"><div class="ttname"><a href="classTang_1_1AstNode.html">Tang::AstNode</a></div><div class="ttdoc">Base class for representing nodes of an Abstract Syntax Tree (AST).</div><div class="ttdef"><b>Definition:</b> ast.hpp:19</div></div>
+<div class="ttc" id="aclassTang_1_1AstNode_html"><div class="ttname"><a href="classTang_1_1AstNode.html">Tang::AstNode</a></div><div class="ttdoc">Base class for representing nodes of an Abstract Syntax Tree (AST).</div><div class="ttdef"><b>Definition:</b> ast.hpp:22</div></div>
 <div class="ttc" id="aclassTang_1_1Error_html"><div class="ttname"><a href="classTang_1_1Error.html">Tang::Error</a></div><div class="ttdoc">The Error class is used to report any error of the system, whether a syntax (parsing) error or a runt...</div><div class="ttdef"><b>Definition:</b> error.hpp:17</div></div>
-<div class="ttc" id="aclassTang_1_1Program_html"><div class="ttname"><a href="classTang_1_1Program.html">Tang::Program</a></div><div class="ttdoc">Represents a compiled script or template that may be executed.</div><div class="ttdef"><b>Definition:</b> program.hpp:18</div></div>
-<div class="ttc" id="aclassTang_1_1Program_html_a47a0f135b7bbd852f91ecfbdee0be8af"><div class="ttname"><a href="classTang_1_1Program.html#a47a0f135b7bbd852f91ecfbdee0be8af">Tang::Program::execute</a></div><div class="ttdeci">void execute()</div><div class="ttdoc">Execute the program.</div><div class="ttdef"><b>Definition:</b> program.cpp:13</div></div>
-<div class="ttc" id="aclassTang_1_1Program_html_a75aff78d6b94472f4d8f93e6f79cfbe0"><div class="ttname"><a href="classTang_1_1Program.html#a75aff78d6b94472f4d8f93e6f79cfbe0">Tang::Program::getCode</a></div><div class="ttdeci">std::string getCode() const</div><div class="ttdoc">Get the code that was provided when the Program was created.</div><div class="ttdef"><b>Definition:</b> program.cpp:22</div></div>
-<div class="ttc" id="aclassTang_1_1Program_html_a81bee7c0545c053eee44d4381295e193"><div class="ttname"><a href="classTang_1_1Program.html#a81bee7c0545c053eee44d4381295e193">Tang::Program::out</a></div><div class="ttdeci">std::string out</div><div class="ttdoc">The output of the program, resulting from the program execution.</div><div class="ttdef"><b>Definition:</b> program.hpp:61</div></div>
-<div class="ttc" id="aclassTang_1_1Program_html_a8877034c19de16ce57b04e8ba53cd132"><div class="ttname"><a href="classTang_1_1Program.html#a8877034c19de16ce57b04e8ba53cd132">Tang::Program::Program</a></div><div class="ttdeci">Program(std::string code, CodeType codeType)</div><div class="ttdoc">Create a compiled program using the provided code.</div><div class="ttdef"><b>Definition:</b> program.cpp:9</div></div>
-<div class="ttc" id="aclassTang_1_1Program_html_aac8e74d455141d5024910e7d1c030ede"><div class="ttname"><a href="classTang_1_1Program.html#aac8e74d455141d5024910e7d1c030ede">Tang::Program::getAst</a></div><div class="ttdeci">std::optional&lt; const AstNode * &gt; getAst() const</div><div class="ttdoc">Get the AST that was generated by the parser.</div><div class="ttdef"><b>Definition:</b> program.cpp:26</div></div>
-<div class="ttc" id="aclassTang_1_1Program_html_ad99e214562094e21f38b6a453163041b"><div class="ttname"><a href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041b">Tang::Program::CodeType</a></div><div class="ttdeci">CodeType</div><div class="ttdoc">Indicate the type of code that was supplied to the Program.</div><div class="ttdef"><b>Definition:</b> program.hpp:23</div></div>
-<div class="ttc" id="aclassTang_1_1Program_html_ad99e214562094e21f38b6a453163041ba38b647d35ef85ffa1affec5c7fcb7ac1"><div class="ttname"><a href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041ba38b647d35ef85ffa1affec5c7fcb7ac1">Tang::Program::Script</a></div><div class="ttdeci">@ Script</div><div class="ttdoc">The code is pure Tang script, without any templating.</div><div class="ttdef"><b>Definition:</b> program.hpp:24</div></div>
-<div class="ttc" id="aclassTang_1_1Program_html_ad99e214562094e21f38b6a453163041bacfade8685b2abd2b062a2367158ce2f3"><div class="ttname"><a href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041bacfade8685b2abd2b062a2367158ce2f3">Tang::Program::Template</a></div><div class="ttdeci">@ Template</div><div class="ttdoc">The code is a template.</div><div class="ttdef"><b>Definition:</b> program.hpp:25</div></div>
+<div class="ttc" id="aclassTang_1_1Program_html"><div class="ttname"><a href="classTang_1_1Program.html">Tang::Program</a></div><div class="ttdoc">Represents a compiled script or template that may be executed.</div><div class="ttdef"><b>Definition:</b> program.hpp:26</div></div>
+<div class="ttc" id="aclassTang_1_1Program_html_a4254d779b88df527ae5b21c4f331b2a6"><div class="ttname"><a href="classTang_1_1Program.html#a4254d779b88df527ae5b21c4f331b2a6">Tang::Program::addBytecode</a></div><div class="ttdeci">void addBytecode(uint64_t)</div><div class="ttdoc">Add a uint64_t to the Bytecode.</div><div class="ttdef"><b>Definition:</b> program.cpp:59</div></div>
+<div class="ttc" id="aclassTang_1_1Program_html_a75aff78d6b94472f4d8f93e6f79cfbe0"><div class="ttname"><a href="classTang_1_1Program.html#a75aff78d6b94472f4d8f93e6f79cfbe0">Tang::Program::getCode</a></div><div class="ttdeci">std::string getCode() const</div><div class="ttdoc">Get the code that was provided when the Program was created.</div><div class="ttdef"><b>Definition:</b> program.cpp:48</div></div>
+<div class="ttc" id="aclassTang_1_1Program_html_a81bee7c0545c053eee44d4381295e193"><div class="ttname"><a href="classTang_1_1Program.html#a81bee7c0545c053eee44d4381295e193">Tang::Program::out</a></div><div class="ttdeci">std::string out</div><div class="ttdoc">The output of the program, resulting from the program execution.</div><div class="ttdef"><b>Definition:</b> program.hpp:76</div></div>
+<div class="ttc" id="aclassTang_1_1Program_html_a8877034c19de16ce57b04e8ba53cd132"><div class="ttname"><a href="classTang_1_1Program.html#a8877034c19de16ce57b04e8ba53cd132">Tang::Program::Program</a></div><div class="ttdeci">Program(std::string code, CodeType codeType)</div><div class="ttdoc">Create a compiled program using the provided code.</div><div class="ttdef"><b>Definition:</b> program.cpp:28</div></div>
+<div class="ttc" id="aclassTang_1_1Program_html_aac8e74d455141d5024910e7d1c030ede"><div class="ttname"><a href="classTang_1_1Program.html#aac8e74d455141d5024910e7d1c030ede">Tang::Program::getAst</a></div><div class="ttdeci">std::optional&lt; const AstNode * &gt; getAst() const</div><div class="ttdoc">Get the AST that was generated by the parser.</div><div class="ttdef"><b>Definition:</b> program.cpp:52</div></div>
+<div class="ttc" id="aclassTang_1_1Program_html_ad99e214562094e21f38b6a453163041b"><div class="ttname"><a href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041b">Tang::Program::CodeType</a></div><div class="ttdeci">CodeType</div><div class="ttdoc">Indicate the type of code that was supplied to the Program.</div><div class="ttdef"><b>Definition:</b> program.hpp:31</div></div>
+<div class="ttc" id="aclassTang_1_1Program_html_ad99e214562094e21f38b6a453163041ba38b647d35ef85ffa1affec5c7fcb7ac1"><div class="ttname"><a href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041ba38b647d35ef85ffa1affec5c7fcb7ac1">Tang::Program::Script</a></div><div class="ttdeci">@ Script</div><div class="ttdoc">The code is pure Tang script, without any templating.</div><div class="ttdef"><b>Definition:</b> program.hpp:32</div></div>
+<div class="ttc" id="aclassTang_1_1Program_html_ad99e214562094e21f38b6a453163041bacfade8685b2abd2b062a2367158ce2f3"><div class="ttname"><a href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041bacfade8685b2abd2b062a2367158ce2f3">Tang::Program::Template</a></div><div class="ttdeci">@ Template</div><div class="ttdoc">The code is a template.</div><div class="ttdef"><b>Definition:</b> program.hpp:33</div></div>
+<div class="ttc" id="aclassTang_1_1Program_html_aeb4c3d659a07cd588042c766168920d9"><div class="ttname"><a href="classTang_1_1Program.html#aeb4c3d659a07cd588042c766168920d9">Tang::Program::execute</a></div><div class="ttdeci">void execute()</div><div class="ttdoc">Execute the program.</div><div class="ttdef"><b>Definition:</b> program.cpp:35</div></div>
+<div class="ttc" id="aclassTang_1_1Program_html_aee5e79c40fac68e875c0d043f8fc2bc1"><div class="ttname"><a href="classTang_1_1Program.html#aee5e79c40fac68e875c0d043f8fc2bc1">Tang::Program::dumpBytecode</a></div><div class="ttdeci">std::string dumpBytecode() const</div><div class="ttdoc">Get the Opcodes of the compiled program, formatted like Assembly.</div><div class="ttdef"><b>Definition:</b> program.cpp:63</div></div>
 <div class="ttc" id="aerror_8hpp_html"><div class="ttname"><a href="error_8hpp.html">error.hpp</a></div><div class="ttdoc">Define the Tang::Error class used to describe syntax and runtime errors.</div></div>
+<div class="ttc" id="aprogram_8hpp_html_ab900d54b19c52378faf3ce1d9f9e6d19"><div class="ttname"><a href="program_8hpp.html#ab900d54b19c52378faf3ce1d9f9e6d19">Tang::Bytecode</a></div><div class="ttdeci">std::vector&lt; uint64_t &gt; Bytecode</div><div class="ttdoc">Contains the Opcodes of a compiled program.</div><div class="ttdef"><b>Definition:</b> program.hpp:21</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
