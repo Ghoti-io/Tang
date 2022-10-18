@@ -15,6 +15,7 @@ int main() {
   }
 
   cout << program.out << endl;
+  cout << program.dumpBytecode() << endl;
 
   return 0;
 }
