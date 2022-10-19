@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['position_61',['position',['../classTang_1_1position.html',1,'Tang']]],
-  ['program_62',['Program',['../classTang_1_1Program.html',1,'Tang']]]
+  ['location_72',['location',['../classTang_1_1location.html',1,'Tang']]]
 ];

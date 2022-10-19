@@ -4,6 +4,10 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
       [ "AstNode", "classTang_1_1AstNode.html", "classTang_1_1AstNode" ],
       [ "AstNodeInteger", "classTang_1_1AstNodeInteger.html", "classTang_1_1AstNodeInteger" ]
     ] ],
+    [ "computedExpression.hpp", "computedExpression_8hpp.html", [
+      [ "ComputedExpression", "classTang_1_1ComputedExpression.html", "classTang_1_1ComputedExpression" ],
+      [ "ComputedExpressionInteger", "classTang_1_1ComputedExpressionInteger.html", "classTang_1_1ComputedExpressionInteger" ]
+    ] ],
     [ "error.hpp", "error_8hpp.html", [
       [ "Error", "classTang_1_1Error.html", "classTang_1_1Error" ]
     ] ],
