@@ -8,7 +8,7 @@ int main() {
     3
   )");
 
-  //program.execute();
+  program.execute();
   auto ast = program.getAst();
   if (ast) {
     cout << (*ast)->dump();
@@ -16,6 +16,13 @@ int main() {
 
   cout << program.out << endl;
   cout << program.dumpBytecode() << endl;
+
+  if (program.getResult()) {
+    cout << (*program.getResult())->dump() << endl;
+  }
+  else {
+    cout << "No result!" << endl;
+  }
 
   return 0;
 }

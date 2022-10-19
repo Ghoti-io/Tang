@@ -5,7 +5,7 @@
 
 namespace Tang {
   enum class Opcode {
-    OP_INTEGER,  ///< Push an integer onto the stack
+    INTEGER,  ///< Push an integer onto the stack
   };
 }
 

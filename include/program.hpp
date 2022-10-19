@@ -11,6 +11,7 @@
 #include <vector>
 #include "ast.hpp"
 #include "error.hpp"
+#include "computedExpression.hpp"
 
 namespace Tang {
   class AstNode;
@@ -42,6 +43,31 @@ namespace Tang {
     Program(std::string code, CodeType codeType);
 
     /**
+     * The Program Destructor.
+     */
+    ~Program();
+
+    /**
+     * The Copy Constructor.
+     */
+    Program(const Program & program);
+
+    /**
+     * The Copy Assignment operator.
+     */
+    Program & operator=(const Program & program);
+
+    /**
+     * The Move Constructor.
+     */
+    Program(Program && program);
+
+    /**
+     * The Move Assignment operator.
+     */
+    Program & operator=(Program && program);
+
+    /**
      * Get the code that was provided when the Program was created.
      *
      * @return The source code from which the Program was created.
@@ -66,9 +92,11 @@ namespace Tang {
     std::string dumpBytecode() const;
 
     /**
-     * Execute the program.
+     * Get the result of the Program execution, if it exists.
+     *
+     * @return The result of the Program execution, if it exists.
      */
-    void execute();
+    std::optional<const ComputedExpression *> getResult() const;
 
     /**
      * The output of the program, resulting from the program execution.
@@ -78,9 +106,16 @@ namespace Tang {
     /**
      * Add a uint64_t to the Bytecode.
      *
-     * @param op The value to add to the Bytecode
+     * @param op The value to add to the Bytecode.
      */
     void addBytecode(uint64_t);
+
+    /**
+     * Execute the program's Bytecode, and return the current Program object.
+     *
+     * @return The current Program object.
+     */
+    Program & execute();
 
   private:
     /**
@@ -118,6 +153,11 @@ namespace Tang {
      * The Bytecode of the compiled program.
      */
     Bytecode bytecode;
+
+    /**
+     * The result of the Program execution.
+     */
+    std::optional<ComputedExpression *> result;
   };
 }
 

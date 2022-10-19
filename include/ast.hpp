@@ -30,6 +30,11 @@ namespace Tang {
 
   public:
     /**
+     * The object destructor.
+     */
+    virtual ~AstNode();
+
+    /**
      * Return a string that describes the contents of the node.
      */
     virtual std::string dump(std::string indent = "") const;

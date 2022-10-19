@@ -7,7 +7,7 @@ GEN_DIR := $(BUILD)/generated
 APP_DIR := $(BUILD)/apps
 TARGET := libtang.so
 INCLUDE := -I include/ -I $(GEN_DIR)/
-LIBOBJECTS := $(OBJ_DIR)/ast.o $(OBJ_DIR)/error.o $(OBJ_DIR)/program.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o
+LIBOBJECTS := $(OBJ_DIR)/ast.o $(OBJ_DIR)/computedExpression.o $(OBJ_DIR)/error.o $(OBJ_DIR)/program.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o
 
 
 
@@ -45,6 +45,11 @@ $(GEN_DIR)/location.hh: $(GEN_DIR)/tangParser.hpp
 
 $(OBJ_DIR)/ast.o: src/ast.cpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling ast.o ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
+
+$(OBJ_DIR)/computedExpression.o: src/computedExpression.cpp
+	@echo "\n### Compiling computedExpression.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 

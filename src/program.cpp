@@ -25,14 +25,43 @@ using namespace Tang;
   if (this->bytecode.size() < (pc + (x))) \
     return out.str() + "Error: Opcode truncated\n"
 
-Tang::Program::Program(string code, Program::CodeType codeType) : code{code}, codeType{codeType}, ast{nullptr}, error{nullptr} {
+/**
+ * Verify the size of the Bytecode vector so that it may be safely accessed.
+ *
+ * @param x The number of additional vector entries that should exist.
+ */
+#define EXECUTEPROGRAMCHECK(x) \
+  if (this->bytecode.size() < (pc + (x))) { \
+    /* TODO push an error on to the stack! */ \
+    pc = this->bytecode.size(); \
+    break; \
+  }
+
+Program::Program(string code, Program::CodeType codeType) : code{code}, codeType{codeType}, ast{nullptr}, error{nullptr} {
   this->parse();
   if (this->ast) {
     this->compile();
   }
 }
 
-void Program::execute() {}
+Program::~Program() {
+  if (this->ast) {
+    delete this->ast;
+  }
+  if (this->result) {
+    delete *this->result;
+  }
+}
+
+Program::Program(const Program & program) {
+  this->code = program.code;
+  this->codeType = program.codeType;
+  this->ast = new AstNode(*program.ast);
+  this->error = new Error(*program.error);
+  if (program.result) {
+    //this->result = new ComputedExpression(*program.result);
+  }
+}
 
 void Program::parse() {
   stringstream ss{this->code};
@@ -56,6 +85,10 @@ optional<const AstNode *> Program::getAst() const {
   return nullopt;
 }
 
+optional<const ComputedExpression *> Program::getResult() const {
+  return this->result;
+}
+
 void Program::addBytecode(uint64_t op) {
   this->bytecode.push_back(op);
 }
@@ -71,9 +104,9 @@ string Program::dumpBytecode() const {
       << setw(opcodeWidth) << setfill(' ') << left;
 
     switch((Opcode)this->bytecode[pc]) {
-      case Opcode::OP_INTEGER: {
+      case Opcode::INTEGER: {
         DUMPPROGRAMCHECK(1);
-        out << "OP_INTEGER" << this->bytecode[pc + 1];
+        out << "INTEGER" << this->bytecode[pc + 1];
         pc += 2;
         break;
       }
@@ -82,5 +115,40 @@ string Program::dumpBytecode() const {
     out << endl;
   }
   return out.str();
+}
+
+Program& Program::execute() {
+  size_t pc{0};
+  //size_t fp{0};
+  vector<ComputedExpression *> stack;
+
+  while (pc < this->bytecode.size()) {
+    switch ((Opcode)this->bytecode[pc]) {
+      case Opcode::INTEGER: {
+        EXECUTEPROGRAMCHECK(1);
+        stack.push_back(new ComputedExpressionInteger(this->bytecode[pc + 1]));
+        pc += 2;
+        break;
+      }
+      default: {}
+    }
+  }
+
+  // Verify that there is at least one value on the stack.  If not, set a
+  // runtime error.
+  if (!stack.size()) {
+    // TODO Set a runtime error!
+    return *this;
+  }
+
+  // Empty the stack, but save the top of the stack.
+  this->result = stack.back();
+  stack.pop_back();
+  while (stack.size()) {
+    delete stack.back();
+    stack.pop_back();
+  }
+
+  return *this;
 }
 

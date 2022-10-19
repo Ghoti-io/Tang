@@ -11,6 +11,8 @@
 using namespace std;
 using namespace Tang;
 
+AstNode::~AstNode() {}
+
 string AstNode::dump(string indent) const {
   return indent + "\n";
 }
@@ -23,7 +25,7 @@ string AstNodeInteger::dump(string indent) const {
 }
 
 void AstNodeInteger::compile(Tang::Program & program) const {
-  program.addBytecode((uint64_t)Opcode::OP_INTEGER);
+  program.addBytecode((uint64_t)Opcode::INTEGER);
   program.addBytecode(bit_cast<uint64_t>(this->val));
 }
 
