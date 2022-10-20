@@ -28,6 +28,11 @@ namespace Tang {
      */
     AstNode(Tang::location loc) : location {loc} {}
 
+    /**
+     * The location associated with this node.
+     */
+    Tang::location location;
+
   public:
     /**
      * The object destructor.
@@ -44,11 +49,13 @@ namespace Tang {
      */
     virtual void compile(Tang::Program & program) const;
 
-  private:
     /**
-     * The location associated with this node.
+     * Provide a copy of the AstNode (recursively, if appropriate).
+     *
+     * @return A pointer to a new AstNode that is a copy of the current
+     *   AstNode.
      */
-    Tang::location location;
+    virtual AstNode * makeCopy() const;
   };
 
   /**
@@ -70,6 +77,7 @@ namespace Tang {
 
     virtual std::string dump(std::string indent = "") const override;
     virtual void compile(Tang::Program & program) const override;
+    virtual AstNode * makeCopy() const override;
 
   private:
     /**

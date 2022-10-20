@@ -45,6 +45,9 @@ Program::Program(string code, Program::CodeType codeType) : code{code}, codeType
 }
 
 Program::~Program() {
+  if (this->error) {
+    delete this->error;
+  }
   if (this->ast) {
     delete this->ast;
   }
@@ -56,11 +59,61 @@ Program::~Program() {
 Program::Program(const Program & program) {
   this->code = program.code;
   this->codeType = program.codeType;
-  this->ast = new AstNode(*program.ast);
+  this->ast = program.ast->makeCopy();
   this->error = new Error(*program.error);
   if (program.result) {
-    //this->result = new ComputedExpression(*program.result);
+    this->result = (*program.result)->makeCopy();
   }
+}
+
+Program::Program(Program && program) {
+  swap(this->code, program.code);
+  swap(this->codeType, program.codeType);
+  swap(this->ast, program.ast);
+  swap(this->error, program.error);
+  swap(this->result, program.result);
+}
+
+Program & Program::operator=(const Program & program) {
+  this->code = program.code;
+  this->codeType = program.codeType;
+
+  // `ast` is a pointer, so cleanup before replacing.
+  if (this->ast) {
+    delete this->ast;
+    this->ast = nullptr;
+  }
+  if (program.ast) {
+    this->ast = program.ast->makeCopy();
+  }
+
+  // `error` is a pointer, so cleanup before replacing.
+  if (this->error) {
+    delete this->error;
+    this->error = nullptr;
+  }
+  if (program.error) {
+    this->error = new Error(*program.error);
+  }
+
+  // `result` is an optional pointer, so cleanup before replacing.
+  if (this->result) {
+    delete *this->result;
+    this->result = nullopt;
+  }
+  if (program.result) {
+    this->result = (*program.result)->makeCopy();
+  }
+  return *this;
+}
+
+Program & Program::operator=(Program && program) {
+  swap(this->code, program.code);
+  swap(this->codeType, program.codeType);
+  swap(this->ast, program.ast);
+  swap(this->error, program.error);
+  swap(this->result, program.result);
+  return *this;
 }
 
 void Program::parse() {

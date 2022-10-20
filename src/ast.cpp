@@ -20,6 +20,10 @@ string AstNode::dump(string indent) const {
 void AstNode::compile(Tang::Program & TANG_UNUSED(program)) const {
 }
 
+AstNode * AstNode::makeCopy() const {
+  return new AstNode(this->location);
+}
+
 string AstNodeInteger::dump(string indent) const {
   return indent + "Integer: " + to_string(this->val) + "\n";
 }
@@ -27,5 +31,9 @@ string AstNodeInteger::dump(string indent) const {
 void AstNodeInteger::compile(Tang::Program & program) const {
   program.addBytecode((uint64_t)Opcode::INTEGER);
   program.addBytecode(bit_cast<uint64_t>(this->val));
+}
+
+AstNode * AstNodeInteger::makeCopy() const {
+  return new AstNodeInteger(this->val, this->location);
 }
 

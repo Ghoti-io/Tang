@@ -25,6 +25,13 @@ namespace Tang {
      * @returns A string representation of the computed expression.
      */
     virtual std::string dump() const;
+
+    /**
+     * Make a copy of the ComputedExpression (recursively, if appropriate).
+     *
+     * @return A pointer to the new ComputedExpression.
+     */
+    virtual ComputedExpression * makeCopy() const;
   };
 
   /**
@@ -40,6 +47,7 @@ namespace Tang {
     ComputedExpressionInteger(int64_t val);
 
     virtual std::string dump() const override;
+    ComputedExpression * makeCopy() const override;
 
   private:
     /**
