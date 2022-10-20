@@ -18,6 +18,16 @@ Inheritance diagram for Tang\+::Ast\+Node\+:\nopagebreak
 \includegraphics[width=201pt]{classTang_1_1AstNode__inherit__graph}
 \end{center}
 \end{figure}
+
+
+Collaboration diagram for Tang\+::Ast\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classTang_1_1AstNode__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -29,12 +39,20 @@ virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNode_a9884742e4b32db78c02
 \begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTang_1_1AstNode_a390f8887c418f972d75e968f1274b2cb}\label{classTang_1_1AstNode_a390f8887c418f972d75e968f1274b2cb}} 
 virtual void \mbox{\hyperlink{classTang_1_1AstNode_a390f8887c418f972d75e968f1274b2cb}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const
-\begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$ \mbox{\hyperlink{classTang_1_1AstNode_addcb807e895088616f1ec51c61a85c00}{make\+Copy}} () const
+\begin{DoxyCompactList}\small\item\em Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classTang_1_1AstNode_a17cadf7ca51469e42bf405925af27e9e}{Ast\+Node}} (\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} loc)
 \begin{DoxyCompactList}\small\item\em The generic constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}\label{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}} 
+\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}{location}}
+\begin{DoxyCompactList}\small\item\em The location associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -60,6 +78,26 @@ It should never be called on its own.
 {\em loc} & The location associated with this node. \\
 \hline
 \end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNode_addcb807e895088616f1ec51c61a85c00}\label{classTang_1_1AstNode_addcb807e895088616f1ec51c61a85c00}} 
+\index{Tang::AstNode@{Tang::AstNode}!makeCopy@{makeCopy}}
+\index{makeCopy@{makeCopy}!Tang::AstNode@{Tang::AstNode}}
+\doxysubsubsection{\texorpdfstring{makeCopy()}{makeCopy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$ Ast\+Node\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). 
+
+\begin{DoxyReturn}{Returns}
+A pointer to a new \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that is a copy of the current \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}}. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1AstNodeInteger_aa08b8d130711349199d3a1263d44913a}{Tang\+::\+Ast\+Node\+Integer}}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

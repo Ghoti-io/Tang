@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['tangbase_119',['TangBase',['../classTang_1_1TangBase.html#a6aa1668d0232e39e60d01fbce2419ef4',1,'Tang::TangBase']]],
-  ['tangscanner_120',['TangScanner',['../classTang_1_1TangScanner.html#a138cb48b8162798aa40a44f9af26a7d7',1,'Tang::TangScanner']]]
+  ['step_120',['step',['../classTang_1_1location.html#a70b844bdcf7d6113ac3d6b074b976246',1,'Tang::location']]]
 ];

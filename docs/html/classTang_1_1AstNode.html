@@ -86,6 +86,7 @@ $(document).ready(function(){initNavTree('classTang_1_1AstNode.html',''); initRe
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classTang_1_1AstNode-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tang::AstNode Class Reference</div>  </div>
@@ -105,6 +106,18 @@ Inheritance diagram for Tang::AstNode:</div>
 <area shape="rect" href="classTang_1_1AstNodeInteger.html" title="An AstNode that represents an integer literal." alt="" coords="5,80,167,107"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Tang::AstNode:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTang_1_1AstNode__coll__graph.png" border="0" usemap="#aTang_1_1AstNode_coll__map" alt="Collaboration graph"/></div>
+<map name="aTang_1_1AstNode_coll__map" id="aTang_1_1AstNode_coll__map">
+<area shape="rect" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="17,379,132,405"/>
+<area shape="rect" href="classTang_1_1location.html" title="Two points in a source file." alt="" coords="19,289,131,316"/>
+<area shape="rect" href="classTang_1_1position.html" title="A point in a source file." alt="" coords="19,185,131,212"/>
+<area shape="rect" title=" " alt="" coords="31,96,118,123"/>
+<area shape="rect" title=" " alt="" coords="5,5,144,47"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -120,12 +133,22 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a390f8887c418f972d75e968f1274b2cb">compile</a> (<a class="el" href="classTang_1_1Program.html">Tang::Program</a> &amp;program) const</td></tr>
 <tr class="memdesc:a390f8887c418f972d75e968f1274b2cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile the ast of the provided <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a>. <br /></td></tr>
 <tr class="separator:a390f8887c418f972d75e968f1274b2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addcb807e895088616f1ec51c61a85c00"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1AstNode.html">AstNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#addcb807e895088616f1ec51c61a85c00">makeCopy</a> () const</td></tr>
+<tr class="memdesc:addcb807e895088616f1ec51c61a85c00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide a copy of the <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> (recursively, if appropriate).  <a href="classTang_1_1AstNode.html#addcb807e895088616f1ec51c61a85c00">More...</a><br /></td></tr>
+<tr class="separator:addcb807e895088616f1ec51c61a85c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a17cadf7ca51469e42bf405925af27e9e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a17cadf7ca51469e42bf405925af27e9e">AstNode</a> (<a class="el" href="classTang_1_1location.html">Tang::location</a> loc)</td></tr>
 <tr class="memdesc:a17cadf7ca51469e42bf405925af27e9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The generic constructor.  <a href="classTang_1_1AstNode.html#a17cadf7ca51469e42bf405925af27e9e">More...</a><br /></td></tr>
 <tr class="separator:a17cadf7ca51469e42bf405925af27e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="memItemLeft" align="right" valign="top"><a id="a41e8328d5a342163a5aabcc4cb8f1b5e"></a>
+<a class="el" href="classTang_1_1location.html">Tang::location</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a41e8328d5a342163a5aabcc4cb8f1b5e">location</a></td></tr>
+<tr class="memdesc:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The location associated with this node. <br /></td></tr>
+<tr class="separator:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for representing nodes of an Abstract Syntax Tree (AST). </p>
@@ -163,6 +186,37 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="addcb807e895088616f1ec51c61a85c00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addcb807e895088616f1ec51c61a85c00">&#9670;&nbsp;</a></span>makeCopy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTang_1_1AstNode.html">AstNode</a> * AstNode::makeCopy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Provide a copy of the <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> (recursively, if appropriate). </p>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a new <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that is a copy of the current <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a>. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classTang_1_1AstNodeInteger.html#aa08b8d130711349199d3a1263d44913a">Tang::AstNodeInteger</a>.</p>
 
 </div>
 </div>

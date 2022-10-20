@@ -114,6 +114,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:ab5df8f689f9fe515a2299d8cef332f4c"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpression.html#ab5df8f689f9fe515a2299d8cef332f4c">dump</a> () const</td></tr>
 <tr class="memdesc:ab5df8f689f9fe515a2299d8cef332f4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output the contents of the <a class="el" href="classTang_1_1ComputedExpression.html" title="Represents the result of a computation that has been executed.">ComputedExpression</a> as a string.  <a href="classTang_1_1ComputedExpression.html#ab5df8f689f9fe515a2299d8cef332f4c">More...</a><br /></td></tr>
 <tr class="separator:ab5df8f689f9fe515a2299d8cef332f4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf7820ae7313878aa37573cce35eb613"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1ComputedExpression.html">ComputedExpression</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpression.html#abf7820ae7313878aa37573cce35eb613">makeCopy</a> () const</td></tr>
+<tr class="memdesc:abf7820ae7313878aa37573cce35eb613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of the <a class="el" href="classTang_1_1ComputedExpression.html" title="Represents the result of a computation that has been executed.">ComputedExpression</a> (recursively, if appropriate).  <a href="classTang_1_1ComputedExpression.html#abf7820ae7313878aa37573cce35eb613">More...</a><br /></td></tr>
+<tr class="separator:abf7820ae7313878aa37573cce35eb613"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents the result of a computation that has been executed. </p>
@@ -145,6 +148,36 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <dl class="section return"><dt>Returns</dt><dd>A string representation of the computed expression. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classTang_1_1ComputedExpressionInteger.html#a02e4a8bba8b37bf02e5ec3fd1e25f094">Tang::ComputedExpressionInteger</a>.</p>
+
+</div>
+</div>
+<a id="abf7820ae7313878aa37573cce35eb613"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf7820ae7313878aa37573cce35eb613">&#9670;&nbsp;</a></span>makeCopy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTang_1_1ComputedExpression.html">ComputedExpression</a> * ComputedExpression::makeCopy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Make a copy of the <a class="el" href="classTang_1_1ComputedExpression.html" title="Represents the result of a computation that has been executed.">ComputedExpression</a> (recursively, if appropriate). </p>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the new <a class="el" href="classTang_1_1ComputedExpression.html" title="Represents the result of a computation that has been executed.">ComputedExpression</a>. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classTang_1_1ComputedExpressionInteger.html#a1e1eb2070905763c0e81d1f06a3463d8">Tang::ComputedExpressionInteger</a>.</p>
 
 </div>
 </div>
