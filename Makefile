@@ -91,7 +91,7 @@ $(APP_DIR)/$(TARGET): $(LIBOBJECTS)
 # Unit Tests
 ####################################################################
 
-$(APP_DIR)/test: test/test.cpp $(APP_DIR)/$(TARGET)
+$(APP_DIR)/test: test/test.cpp include/singletonObjectPool.hpp $(APP_DIR)/$(TARGET)
 	@echo "\n### Compiling Tang Test ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ $< $(LDFLAGS) $(TANGLIBRARY)
