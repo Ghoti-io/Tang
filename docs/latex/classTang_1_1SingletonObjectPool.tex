@@ -1,0 +1,69 @@
+\hypertarget{classTang_1_1SingletonObjectPool}{}\doxysection{Tang\+::Singleton\+Object\+Pool$<$ T $>$ Class Template Reference}
+\label{classTang_1_1SingletonObjectPool}\index{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+T $\ast$ \mbox{\hyperlink{classTang_1_1SingletonObjectPool_a1dac888021447a848de8f8b002c8fd23}{get}} ()
+\begin{DoxyCompactList}\small\item\em Request an uninitialized memory location from the pool for an object T. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTang_1_1SingletonObjectPool_ae03f03120231023e4ce7af518fc1bc19}{recycle}} (T $\ast$obj)
+\begin{DoxyCompactList}\small\item\em Recycle a memory location for an object T. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1SingletonObjectPool_aa08b02817cfe13aa257959963db1bbf7}\label{classTang_1_1SingletonObjectPool_aa08b02817cfe13aa257959963db1bbf7}} 
+\mbox{\hyperlink{classTang_1_1SingletonObjectPool_aa08b02817cfe13aa257959963db1bbf7}{$\sim$\+Singleton\+Object\+Pool}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classTang_1_1SingletonObjectPool}{Singleton\+Object\+Pool}}$<$ T $>$ \& \mbox{\hyperlink{classTang_1_1SingletonObjectPool_aaca7a22f2f2012d73d121241c227ab79}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Get the singleton instance of the object pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1SingletonObjectPool_a1dac888021447a848de8f8b002c8fd23}\label{classTang_1_1SingletonObjectPool_a1dac888021447a848de8f8b002c8fd23}} 
+\index{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}!get@{get}}
+\index{get@{get}!Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ \mbox{\hyperlink{classTang_1_1SingletonObjectPool}{Tang\+::\+Singleton\+Object\+Pool}}$<$ T $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Request an uninitialized memory location from the pool for an object T. 
+
+\begin{DoxyReturn}{Returns}
+An uninitialized memory location for an object T. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1SingletonObjectPool_aaca7a22f2f2012d73d121241c227ab79}\label{classTang_1_1SingletonObjectPool_aaca7a22f2f2012d73d121241c227ab79}} 
+\index{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \mbox{\hyperlink{classTang_1_1SingletonObjectPool}{Singleton\+Object\+Pool}}$<$T$>$\& \mbox{\hyperlink{classTang_1_1SingletonObjectPool}{Tang\+::\+Singleton\+Object\+Pool}}$<$ T $>$\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the singleton instance of the object pool. 
+
+\begin{DoxyReturn}{Returns}
+The singleton instance of the object pool. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1SingletonObjectPool_ae03f03120231023e4ce7af518fc1bc19}\label{classTang_1_1SingletonObjectPool_ae03f03120231023e4ce7af518fc1bc19}} 
+\index{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}!recycle@{recycle}}
+\index{recycle@{recycle}!Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{recycle()}{recycle()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classTang_1_1SingletonObjectPool}{Tang\+::\+Singleton\+Object\+Pool}}$<$ T $>$\+::recycle (\begin{DoxyParamCaption}\item[{T $\ast$}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Recycle a memory location for an object T. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The memory location to recycle. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{singletonObjectPool_8hpp}{singleton\+Object\+Pool.\+hpp}}\end{DoxyCompactItemize}

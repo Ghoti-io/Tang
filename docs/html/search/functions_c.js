@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['_7eastnode_123',['~AstNode',['../classTang_1_1AstNode.html#aeb0797e0870237b6adb6398fc81ebe6b',1,'Tang::AstNode']]],
-  ['_7ecomputedexpression_124',['~ComputedExpression',['../classTang_1_1ComputedExpression.html#a50c2cde30b438e1e0de251c33af8a764',1,'Tang::ComputedExpression']]],
-  ['_7eprogram_125',['~Program',['../classTang_1_1Program.html#a986aef1c50e1d338a3315a47ba6df549',1,'Tang::Program']]]
+  ['tangbase_133',['TangBase',['../classTang_1_1TangBase.html#a6aa1668d0232e39e60d01fbce2419ef4',1,'Tang::TangBase']]],
+  ['tangscanner_134',['TangScanner',['../classTang_1_1TangScanner.html#a138cb48b8162798aa40a44f9af26a7d7',1,'Tang::TangScanner']]]
 ];

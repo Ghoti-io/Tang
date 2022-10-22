@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['tangbase_76',['TangBase',['../classTang_1_1TangBase.html',1,'Tang']]],
-  ['tangscanner_77',['TangScanner',['../classTang_1_1TangScanner.html',1,'Tang']]]
+  ['singletonobjectpool_83',['SingletonObjectPool',['../classTang_1_1SingletonObjectPool.html',1,'Tang']]]
 ];
