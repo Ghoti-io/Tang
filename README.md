@@ -112,7 +112,7 @@ The following instructions were written for Ubuntu 22.04.
 ### Install packages
 First, the necessary packages must be installed.
 ```
-sudo apt install g++ make bison flex build-essential pkgconf libgtest-dev
+sudo apt install g++ make bison flex build-essential pkgconf libgtest-dev googletest
 ```
 
 Additional packages must be installed in order to create documentation and
