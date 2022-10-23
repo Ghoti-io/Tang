@@ -101,6 +101,11 @@ $(APP_DIR)/testSingletonObjectPool: test/testSingletonObjectPool.cpp include/sin
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ $< $(LDFLAGS) $(TESTFLAGS) $(TANGLIBRARY)
 
+$(APP_DIR)/testGarbageCollected: test/testGarbageCollected.cpp include/garbageCollected.hpp include/singletonObjectPool.hpp $(APP_DIR)/$(TARGET)
+	@echo "\n### Compiling GarbageCollected Test ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ $< $(LDFLAGS) $(TESTFLAGS) $(TANGLIBRARY)
+
 ####################################################################
 # Commands
 ####################################################################
@@ -129,19 +134,25 @@ watch-test: ## Watch the file directory for changes and run the unit tests
 					inotifywait -qr -e modify -e create -e delete -e move src include bison flex test Makefile --exclude '/\.'; \
 					done
 
-test: $(APP_DIR)/test $(APP_DIR)/testSingletonObjectPool ## Make and run the Unit tests
+test: $(APP_DIR)/test $(APP_DIR)/testSingletonObjectPool $(APP_DIR)/testGarbageCollected ## Make and run the Unit tests
 	@echo "\033[0;32m"
 	@echo "############################"
 	@echo "### Running normal tests ###"
 	@echo "############################"
 	@echo "\033[0m"
-	$(APP_DIR)/test
+	$(APP_DIR)/test --gtest_brief=1
 	@echo "\033[0;32m"
 	@echo "#########################################"
 	@echo "### Running SingletonObjectPool Tests ###"
 	@echo "#########################################"
 	@echo "\033[0m"
-	$(APP_DIR)/testSingletonObjectPool
+	$(APP_DIR)/testSingletonObjectPool --gtest_brief=1
+	@echo "\033[0;32m"
+	@echo "#########################################"
+	@echo "### Running GarbageCollected Tests ###"
+	@echo "#########################################"
+	@echo "\033[0m"
+	$(APP_DIR)/testGarbageCollected --gtest_brief=1
 
 clean: ## Remove all contents of the build directories.
 	-@rm -rvf $(OBJ_DIR)/*
