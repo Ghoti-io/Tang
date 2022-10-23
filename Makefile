@@ -1,5 +1,5 @@
 CXX := g++
-CXXFLAGS := -pedantic-errors -Wall -Wextra -Werror -Wno-error=unused-function -std=c++20 -O0
+CXXFLAGS := -pedantic-errors -Wall -Wextra -Werror -Wno-error=unused-function -std=c++20 -Og
 LDFLAGS := -L /usr/lib -lstdc++ -lm
 BUILD := ./build
 OBJ_DIR := $(BUILD)/objects
@@ -8,7 +8,7 @@ APP_DIR := $(BUILD)/apps
 TARGET := libtang.so
 INCLUDE := -I include/ -I $(GEN_DIR)/
 LIBOBJECTS := $(OBJ_DIR)/ast.o $(OBJ_DIR)/computedExpression.o $(OBJ_DIR)/error.o $(OBJ_DIR)/program.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o
-
+TESTFLAGS := `pkg-config --libs --cflags gtest`
 
 
 TANGLIBRARY := -L $(APP_DIR) -Wl,-R -Wl,$(APP_DIR) -l:libtang.so
@@ -94,7 +94,12 @@ $(APP_DIR)/$(TARGET): $(LIBOBJECTS)
 $(APP_DIR)/test: test/test.cpp include/singletonObjectPool.hpp $(APP_DIR)/$(TARGET)
 	@echo "\n### Compiling Tang Test ###"
 	@mkdir -p $(@D)
-	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ $< $(LDFLAGS) $(TANGLIBRARY)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ $< $(LDFLAGS) $(TESTFLAGS) $(TANGLIBRARY)
+
+$(APP_DIR)/testSingletonObjectPool: test/testSingletonObjectPool.cpp include/singletonObjectPool.hpp $(APP_DIR)/$(TARGET)
+	@echo "\n### Compiling SingletonObjectPool Test ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ $< $(LDFLAGS) $(TESTFLAGS) $(TANGLIBRARY)
 
 ####################################################################
 # Commands
@@ -124,8 +129,19 @@ watch-test: ## Watch the file directory for changes and run the unit tests
 					inotifywait -qr -e modify -e create -e delete -e move src include bison flex test Makefile --exclude '/\.'; \
 					done
 
-test: $(APP_DIR)/test ## Make and run the Unit tests
+test: $(APP_DIR)/test $(APP_DIR)/testSingletonObjectPool ## Make and run the Unit tests
+	@echo "\033[0;32m"
+	@echo "############################"
+	@echo "### Running normal tests ###"
+	@echo "############################"
+	@echo "\033[0m"
 	$(APP_DIR)/test
+	@echo "\033[0;32m"
+	@echo "#########################################"
+	@echo "### Running SingletonObjectPool Tests ###"
+	@echo "#########################################"
+	@echo "\033[0m"
+	$(APP_DIR)/testSingletonObjectPool
 
 clean: ## Remove all contents of the build directories.
 	-@rm -rvf $(OBJ_DIR)/*
