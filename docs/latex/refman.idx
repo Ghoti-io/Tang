@@ -23,73 +23,92 @@
 \indexentry{Tang::Error@{Tang::Error}|hyperpage}{18}
 \indexentry{Tang::Error@{Tang::Error}!Error@{Error}|hyperpage}{20}
 \indexentry{Error@{Error}!Tang::Error@{Tang::Error}|hyperpage}{20}
-\indexentry{Tang::location@{Tang::location}|hyperpage}{20}
-\indexentry{Tang::position@{Tang::position}|hyperpage}{22}
-\indexentry{Tang::Program@{Tang::Program}|hyperpage}{23}
-\indexentry{Tang::Program@{Tang::Program}!CodeType@{CodeType}|hyperpage}{25}
-\indexentry{CodeType@{CodeType}!Tang::Program@{Tang::Program}|hyperpage}{25}
-\indexentry{Script@{Script}!Tang::Program@{Tang::Program}|hyperpage}{25}
-\indexentry{Tang::Program@{Tang::Program}!Script@{Script}|hyperpage}{25}
-\indexentry{Template@{Template}!Tang::Program@{Tang::Program}|hyperpage}{25}
-\indexentry{Tang::Program@{Tang::Program}!Template@{Template}|hyperpage}{25}
-\indexentry{Tang::Program@{Tang::Program}!Program@{Program}|hyperpage}{25}
-\indexentry{Program@{Program}!Tang::Program@{Tang::Program}|hyperpage}{25}
-\indexentry{Tang::Program@{Tang::Program}!addBytecode@{addBytecode}|hyperpage}{25}
-\indexentry{addBytecode@{addBytecode}!Tang::Program@{Tang::Program}|hyperpage}{25}
-\indexentry{Tang::Program@{Tang::Program}!dumpBytecode@{dumpBytecode}|hyperpage}{26}
-\indexentry{dumpBytecode@{dumpBytecode}!Tang::Program@{Tang::Program}|hyperpage}{26}
-\indexentry{Tang::Program@{Tang::Program}!execute@{execute}|hyperpage}{26}
-\indexentry{execute@{execute}!Tang::Program@{Tang::Program}|hyperpage}{26}
-\indexentry{Tang::Program@{Tang::Program}!getAst@{getAst}|hyperpage}{26}
-\indexentry{getAst@{getAst}!Tang::Program@{Tang::Program}|hyperpage}{26}
-\indexentry{Tang::Program@{Tang::Program}!getCode@{getCode}|hyperpage}{26}
-\indexentry{getCode@{getCode}!Tang::Program@{Tang::Program}|hyperpage}{26}
-\indexentry{Tang::Program@{Tang::Program}!getResult@{getResult}|hyperpage}{27}
-\indexentry{getResult@{getResult}!Tang::Program@{Tang::Program}|hyperpage}{27}
-\indexentry{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}|hyperpage}{27}
-\indexentry{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}!get@{get}|hyperpage}{27}
-\indexentry{get@{get}!Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}|hyperpage}{27}
-\indexentry{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}!getInstance@{getInstance}|hyperpage}{28}
-\indexentry{getInstance@{getInstance}!Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}|hyperpage}{28}
-\indexentry{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}!recycle@{recycle}|hyperpage}{28}
-\indexentry{recycle@{recycle}!Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}|hyperpage}{28}
-\indexentry{Tang::TangBase@{Tang::TangBase}|hyperpage}{28}
-\indexentry{Tang::TangBase@{Tang::TangBase}!TangBase@{TangBase}|hyperpage}{29}
-\indexentry{TangBase@{TangBase}!Tang::TangBase@{Tang::TangBase}|hyperpage}{29}
-\indexentry{Tang::TangBase@{Tang::TangBase}!compileScript@{compileScript}|hyperpage}{29}
-\indexentry{compileScript@{compileScript}!Tang::TangBase@{Tang::TangBase}|hyperpage}{29}
-\indexentry{Tang::TangScanner@{Tang::TangScanner}|hyperpage}{30}
-\indexentry{Tang::TangScanner@{Tang::TangScanner}!TangScanner@{TangScanner}|hyperpage}{31}
-\indexentry{TangScanner@{TangScanner}!Tang::TangScanner@{Tang::TangScanner}|hyperpage}{31}
-\indexentry{Tang::TangScanner@{Tang::TangScanner}!get\_next\_token@{get\_next\_token}|hyperpage}{31}
-\indexentry{get\_next\_token@{get\_next\_token}!Tang::TangScanner@{Tang::TangScanner}|hyperpage}{31}
-\indexentry{build/generated/location.hh@{build/generated/location.hh}|hyperpage}{33}
-\indexentry{location.hh@{location.hh}!operator$<$$<$@{operator$<$$<$}|hyperpage}{34}
-\indexentry{operator$<$$<$@{operator$<$$<$}!location.hh@{location.hh}|hyperpage}{34}
-\indexentry{location.hh@{location.hh}!operator$<$$<$@{operator$<$$<$}|hyperpage}{35}
-\indexentry{operator$<$$<$@{operator$<$$<$}!location.hh@{location.hh}|hyperpage}{35}
-\indexentry{include/ast.hpp@{include/ast.hpp}|hyperpage}{35}
-\indexentry{include/computedExpression.hpp@{include/computedExpression.hpp}|hyperpage}{37}
-\indexentry{include/error.hpp@{include/error.hpp}|hyperpage}{37}
-\indexentry{include/macros.hpp@{include/macros.hpp}|hyperpage}{39}
-\indexentry{macros.hpp@{macros.hpp}!TANG\_UNUSED@{TANG\_UNUSED}|hyperpage}{39}
-\indexentry{TANG\_UNUSED@{TANG\_UNUSED}!macros.hpp@{macros.hpp}|hyperpage}{39}
-\indexentry{include/opcode.hpp@{include/opcode.hpp}|hyperpage}{40}
-\indexentry{opcode.hpp@{opcode.hpp}!Opcode@{Opcode}|hyperpage}{40}
-\indexentry{Opcode@{Opcode}!opcode.hpp@{opcode.hpp}|hyperpage}{40}
-\indexentry{INTEGER@{INTEGER}!opcode.hpp@{opcode.hpp}|hyperpage}{40}
-\indexentry{opcode.hpp@{opcode.hpp}!INTEGER@{INTEGER}|hyperpage}{40}
-\indexentry{include/program.hpp@{include/program.hpp}|hyperpage}{40}
-\indexentry{include/singletonObjectPool.hpp@{include/singletonObjectPool.hpp}|hyperpage}{42}
-\indexentry{include/tang.hpp@{include/tang.hpp}|hyperpage}{42}
-\indexentry{include/tangBase.hpp@{include/tangBase.hpp}|hyperpage}{43}
-\indexentry{include/tangScanner.hpp@{include/tangScanner.hpp}|hyperpage}{44}
-\indexentry{src/ast.cpp@{src/ast.cpp}|hyperpage}{45}
-\indexentry{src/computedExpression.cpp@{src/computedExpression.cpp}|hyperpage}{46}
-\indexentry{src/error.cpp@{src/error.cpp}|hyperpage}{47}
-\indexentry{src/program.cpp@{src/program.cpp}|hyperpage}{47}
-\indexentry{program.cpp@{program.cpp}!DUMPPROGRAMCHECK@{DUMPPROGRAMCHECK}|hyperpage}{48}
-\indexentry{DUMPPROGRAMCHECK@{DUMPPROGRAMCHECK}!program.cpp@{program.cpp}|hyperpage}{48}
-\indexentry{program.cpp@{program.cpp}!EXECUTEPROGRAMCHECK@{EXECUTEPROGRAMCHECK}|hyperpage}{48}
-\indexentry{EXECUTEPROGRAMCHECK@{EXECUTEPROGRAMCHECK}!program.cpp@{program.cpp}|hyperpage}{48}
-\indexentry{src/tangBase.cpp@{src/tangBase.cpp}|hyperpage}{49}
+\indexentry{Tang::GarbageCollected$<$ T $>$@{Tang::GarbageCollected$<$ T $>$}|hyperpage}{20}
+\indexentry{Tang::GarbageCollected$<$ T $>$@{Tang::GarbageCollected$<$ T $>$}!GarbageCollected@{GarbageCollected}|hyperpage}{21}
+\indexentry{GarbageCollected@{GarbageCollected}!Tang::GarbageCollected$<$ T $>$@{Tang::GarbageCollected$<$ T $>$}|hyperpage}{21}
+\indexentry{Tang::GarbageCollected$<$ T $>$@{Tang::GarbageCollected$<$ T $>$}!GarbageCollected@{GarbageCollected}|hyperpage}{21}
+\indexentry{GarbageCollected@{GarbageCollected}!Tang::GarbageCollected$<$ T $>$@{Tang::GarbageCollected$<$ T $>$}|hyperpage}{21}
+\indexentry{Tang::GarbageCollected$<$ T $>$@{Tang::GarbageCollected$<$ T $>$}!GarbageCollected@{GarbageCollected}|hyperpage}{22}
+\indexentry{GarbageCollected@{GarbageCollected}!Tang::GarbageCollected$<$ T $>$@{Tang::GarbageCollected$<$ T $>$}|hyperpage}{22}
+\indexentry{Tang::GarbageCollected$<$ T $>$@{Tang::GarbageCollected$<$ T $>$}!````~GarbageCollected@{$\sim$GarbageCollected}|hyperpage}{22}
+\indexentry{````~GarbageCollected@{$\sim$GarbageCollected}!Tang::GarbageCollected$<$ T $>$@{Tang::GarbageCollected$<$ T $>$}|hyperpage}{22}
+\indexentry{Tang::GarbageCollected$<$ T $>$@{Tang::GarbageCollected$<$ T $>$}!operator$\ast$@{operator$\ast$}|hyperpage}{23}
+\indexentry{operator$\ast$@{operator$\ast$}!Tang::GarbageCollected$<$ T $>$@{Tang::GarbageCollected$<$ T $>$}|hyperpage}{23}
+\indexentry{Tang::GarbageCollected$<$ T $>$@{Tang::GarbageCollected$<$ T $>$}!operator-\/$>$@{operator-\/$>$}|hyperpage}{23}
+\indexentry{operator-\/$>$@{operator-\/$>$}!Tang::GarbageCollected$<$ T $>$@{Tang::GarbageCollected$<$ T $>$}|hyperpage}{23}
+\indexentry{Tang::GarbageCollected$<$ T $>$@{Tang::GarbageCollected$<$ T $>$}!operator=@{operator=}|hyperpage}{23}
+\indexentry{operator=@{operator=}!Tang::GarbageCollected$<$ T $>$@{Tang::GarbageCollected$<$ T $>$}|hyperpage}{23}
+\indexentry{Tang::GarbageCollected$<$ T $>$@{Tang::GarbageCollected$<$ T $>$}!operator=@{operator=}|hyperpage}{24}
+\indexentry{operator=@{operator=}!Tang::GarbageCollected$<$ T $>$@{Tang::GarbageCollected$<$ T $>$}|hyperpage}{24}
+\indexentry{Tang::location@{Tang::location}|hyperpage}{24}
+\indexentry{Tang::position@{Tang::position}|hyperpage}{26}
+\indexentry{Tang::Program@{Tang::Program}|hyperpage}{27}
+\indexentry{Tang::Program@{Tang::Program}!CodeType@{CodeType}|hyperpage}{29}
+\indexentry{CodeType@{CodeType}!Tang::Program@{Tang::Program}|hyperpage}{29}
+\indexentry{Script@{Script}!Tang::Program@{Tang::Program}|hyperpage}{29}
+\indexentry{Tang::Program@{Tang::Program}!Script@{Script}|hyperpage}{29}
+\indexentry{Template@{Template}!Tang::Program@{Tang::Program}|hyperpage}{29}
+\indexentry{Tang::Program@{Tang::Program}!Template@{Template}|hyperpage}{29}
+\indexentry{Tang::Program@{Tang::Program}!Program@{Program}|hyperpage}{29}
+\indexentry{Program@{Program}!Tang::Program@{Tang::Program}|hyperpage}{29}
+\indexentry{Tang::Program@{Tang::Program}!addBytecode@{addBytecode}|hyperpage}{29}
+\indexentry{addBytecode@{addBytecode}!Tang::Program@{Tang::Program}|hyperpage}{29}
+\indexentry{Tang::Program@{Tang::Program}!dumpBytecode@{dumpBytecode}|hyperpage}{30}
+\indexentry{dumpBytecode@{dumpBytecode}!Tang::Program@{Tang::Program}|hyperpage}{30}
+\indexentry{Tang::Program@{Tang::Program}!execute@{execute}|hyperpage}{30}
+\indexentry{execute@{execute}!Tang::Program@{Tang::Program}|hyperpage}{30}
+\indexentry{Tang::Program@{Tang::Program}!getAst@{getAst}|hyperpage}{30}
+\indexentry{getAst@{getAst}!Tang::Program@{Tang::Program}|hyperpage}{30}
+\indexentry{Tang::Program@{Tang::Program}!getCode@{getCode}|hyperpage}{30}
+\indexentry{getCode@{getCode}!Tang::Program@{Tang::Program}|hyperpage}{30}
+\indexentry{Tang::Program@{Tang::Program}!getResult@{getResult}|hyperpage}{31}
+\indexentry{getResult@{getResult}!Tang::Program@{Tang::Program}|hyperpage}{31}
+\indexentry{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}|hyperpage}{31}
+\indexentry{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}!get@{get}|hyperpage}{31}
+\indexentry{get@{get}!Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}|hyperpage}{31}
+\indexentry{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}!getInstance@{getInstance}|hyperpage}{32}
+\indexentry{getInstance@{getInstance}!Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}|hyperpage}{32}
+\indexentry{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}!recycle@{recycle}|hyperpage}{32}
+\indexentry{recycle@{recycle}!Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}|hyperpage}{32}
+\indexentry{Tang::TangBase@{Tang::TangBase}|hyperpage}{32}
+\indexentry{Tang::TangBase@{Tang::TangBase}!TangBase@{TangBase}|hyperpage}{33}
+\indexentry{TangBase@{TangBase}!Tang::TangBase@{Tang::TangBase}|hyperpage}{33}
+\indexentry{Tang::TangBase@{Tang::TangBase}!compileScript@{compileScript}|hyperpage}{33}
+\indexentry{compileScript@{compileScript}!Tang::TangBase@{Tang::TangBase}|hyperpage}{33}
+\indexentry{Tang::TangScanner@{Tang::TangScanner}|hyperpage}{34}
+\indexentry{Tang::TangScanner@{Tang::TangScanner}!TangScanner@{TangScanner}|hyperpage}{35}
+\indexentry{TangScanner@{TangScanner}!Tang::TangScanner@{Tang::TangScanner}|hyperpage}{35}
+\indexentry{Tang::TangScanner@{Tang::TangScanner}!get\_next\_token@{get\_next\_token}|hyperpage}{35}
+\indexentry{get\_next\_token@{get\_next\_token}!Tang::TangScanner@{Tang::TangScanner}|hyperpage}{35}
+\indexentry{build/generated/location.hh@{build/generated/location.hh}|hyperpage}{37}
+\indexentry{location.hh@{location.hh}!operator$<$$<$@{operator$<$$<$}|hyperpage}{38}
+\indexentry{operator$<$$<$@{operator$<$$<$}!location.hh@{location.hh}|hyperpage}{38}
+\indexentry{location.hh@{location.hh}!operator$<$$<$@{operator$<$$<$}|hyperpage}{39}
+\indexentry{operator$<$$<$@{operator$<$$<$}!location.hh@{location.hh}|hyperpage}{39}
+\indexentry{include/ast.hpp@{include/ast.hpp}|hyperpage}{39}
+\indexentry{include/computedExpression.hpp@{include/computedExpression.hpp}|hyperpage}{41}
+\indexentry{include/error.hpp@{include/error.hpp}|hyperpage}{41}
+\indexentry{include/garbageCollected.hpp@{include/garbageCollected.hpp}|hyperpage}{43}
+\indexentry{include/macros.hpp@{include/macros.hpp}|hyperpage}{43}
+\indexentry{macros.hpp@{macros.hpp}!TANG\_UNUSED@{TANG\_UNUSED}|hyperpage}{44}
+\indexentry{TANG\_UNUSED@{TANG\_UNUSED}!macros.hpp@{macros.hpp}|hyperpage}{44}
+\indexentry{include/opcode.hpp@{include/opcode.hpp}|hyperpage}{44}
+\indexentry{opcode.hpp@{opcode.hpp}!Opcode@{Opcode}|hyperpage}{45}
+\indexentry{Opcode@{Opcode}!opcode.hpp@{opcode.hpp}|hyperpage}{45}
+\indexentry{INTEGER@{INTEGER}!opcode.hpp@{opcode.hpp}|hyperpage}{45}
+\indexentry{opcode.hpp@{opcode.hpp}!INTEGER@{INTEGER}|hyperpage}{45}
+\indexentry{include/program.hpp@{include/program.hpp}|hyperpage}{45}
+\indexentry{include/singletonObjectPool.hpp@{include/singletonObjectPool.hpp}|hyperpage}{46}
+\indexentry{include/tang.hpp@{include/tang.hpp}|hyperpage}{47}
+\indexentry{include/tangBase.hpp@{include/tangBase.hpp}|hyperpage}{48}
+\indexentry{include/tangScanner.hpp@{include/tangScanner.hpp}|hyperpage}{49}
+\indexentry{src/ast.cpp@{src/ast.cpp}|hyperpage}{50}
+\indexentry{src/computedExpression.cpp@{src/computedExpression.cpp}|hyperpage}{51}
+\indexentry{src/error.cpp@{src/error.cpp}|hyperpage}{51}
+\indexentry{src/program.cpp@{src/program.cpp}|hyperpage}{52}
+\indexentry{program.cpp@{program.cpp}!DUMPPROGRAMCHECK@{DUMPPROGRAMCHECK}|hyperpage}{52}
+\indexentry{DUMPPROGRAMCHECK@{DUMPPROGRAMCHECK}!program.cpp@{program.cpp}|hyperpage}{52}
+\indexentry{program.cpp@{program.cpp}!EXECUTEPROGRAMCHECK@{EXECUTEPROGRAMCHECK}|hyperpage}{53}
+\indexentry{EXECUTEPROGRAMCHECK@{EXECUTEPROGRAMCHECK}!program.cpp@{program.cpp}|hyperpage}{53}
+\indexentry{src/tangBase.cpp@{src/tangBase.cpp}|hyperpage}{53}
+\indexentry{test/testSingletonObjectPool.cpp@{test/testSingletonObjectPool.cpp}|hyperpage}{54}

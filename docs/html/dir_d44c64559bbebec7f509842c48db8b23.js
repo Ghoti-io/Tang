@@ -11,6 +11,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "error.hpp", "error_8hpp.html", [
       [ "Error", "classTang_1_1Error.html", "classTang_1_1Error" ]
     ] ],
+    [ "garbageCollected.hpp", "garbageCollected_8hpp.html", [
+      [ "GarbageCollected", "classTang_1_1GarbageCollected.html", "classTang_1_1GarbageCollected" ]
+    ] ],
     [ "macros.hpp", "macros_8hpp.html", "macros_8hpp" ],
     [ "opcode.hpp", "opcode_8hpp.html", "opcode_8hpp" ],
     [ "program.hpp", "program_8hpp.html", "program_8hpp" ],

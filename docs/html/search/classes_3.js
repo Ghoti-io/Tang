@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['location_80',['location',['../classTang_1_1location.html',1,'Tang']]]
+  ['garbagecollected_86',['GarbageCollected',['../classTang_1_1GarbageCollected.html',1,'Tang']]]
 ];

@@ -6,6 +6,7 @@ var annotated_dup =
       [ "ComputedExpression", "classTang_1_1ComputedExpression.html", "classTang_1_1ComputedExpression" ],
       [ "ComputedExpressionInteger", "classTang_1_1ComputedExpressionInteger.html", "classTang_1_1ComputedExpressionInteger" ],
       [ "Error", "classTang_1_1Error.html", "classTang_1_1Error" ],
+      [ "GarbageCollected", "classTang_1_1GarbageCollected.html", "classTang_1_1GarbageCollected" ],
       [ "Program", "classTang_1_1Program.html", "classTang_1_1Program" ],
       [ "SingletonObjectPool", "classTang_1_1SingletonObjectPool.html", "classTang_1_1SingletonObjectPool" ],
       [ "TangBase", "classTang_1_1TangBase.html", "classTang_1_1TangBase" ],
