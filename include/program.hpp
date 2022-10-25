@@ -12,6 +12,7 @@
 #include "ast.hpp"
 #include "error.hpp"
 #include "computedExpression.hpp"
+#include "garbageCollected.hpp"
 
 namespace Tang {
   class AstNode;
@@ -96,7 +97,7 @@ namespace Tang {
      *
      * @return The result of the Program execution, if it exists.
      */
-    std::optional<const ComputedExpression *> getResult() const;
+    std::optional<const GarbageCollected> getResult() const;
 
     /**
      * The output of the program, resulting from the program execution.
@@ -157,7 +158,7 @@ namespace Tang {
     /**
      * The result of the Program execution.
      */
-    std::optional<ComputedExpression *> result;
+    std::optional<GarbageCollected> result;
   };
 }
 

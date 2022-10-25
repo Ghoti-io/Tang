@@ -17,6 +17,10 @@ ComputedExpression * ComputedExpression::makeCopy() const {
   return new ComputedExpression();
 }
 
+bool ComputedExpression::is_equal([[maybe_unused]] const int & val) const {
+  return false;
+}
+
 ComputedExpressionInteger::ComputedExpressionInteger(int64_t val) : val{val} {}
 
 string ComputedExpressionInteger::dump() const {
@@ -25,5 +29,9 @@ string ComputedExpressionInteger::dump() const {
 
 ComputedExpression * ComputedExpressionInteger::makeCopy() const {
   return new ComputedExpressionInteger(this->val);
+}
+
+bool ComputedExpressionInteger::is_equal(const int & val) const {
+  return val == this->val;
 }
 

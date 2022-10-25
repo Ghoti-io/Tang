@@ -56,9 +56,6 @@ namespace Tang {
      * @param The other GarbageCollected object to move.
      */
     GarbageCollected(GarbageCollected && other) {
-      // Remove references from the current object.
-      this->~GarbageCollected();
-
       // Move the other item's attributes.
       this->ref = other.ref;
       this->count = other.count;
@@ -134,6 +131,27 @@ namespace Tang {
       return *this->ref;
     }
 
+    /**
+     * Compare the GarbageCollected tracked object with a supplied value.
+     *
+     * @param val The value to compare the tracked object against.
+     * @return True if they are equal, false otherwise.
+     */
+    bool operator==(auto & val) const {
+      return this->ref && this->ref->is_equal(val);
+    }
+
+    /**
+     * Add friendly output.
+     *
+     * @param out The output stream.
+     * @param gc The GarbageCollected value.
+     * @return The output stream.
+     */
+    friend std::ostream & operator<<(std::ostream & out, const GarbageCollected & gc) {
+      return out << (gc.ref ? gc.ref->dump() : "");
+    }
+
   private:
     /**
      * Constructs a garbage-collected object of the specified type.  It is
@@ -143,7 +161,7 @@ namespace Tang {
      * @param variable The arguments to pass to the constructor of the
      *   specified type.
      */
-    GarbageCollected() : count{0}, ref{nullptr} {}
+    GarbageCollected() : count{nullptr}, ref{nullptr}, recycle{} {}
 
     /**
      * The count of references to the tracked object.

@@ -32,6 +32,15 @@ namespace Tang {
      * @return A pointer to the new ComputedExpression.
      */
     virtual ComputedExpression * makeCopy() const;
+
+    /**
+     * Check whether or not the computed expression is equal to another value.
+     *
+     * @param val The value to compare against.
+     * @return True if equal, false if not.
+     */
+    virtual bool is_equal(const int & val) const;
+
   };
 
   /**
@@ -48,6 +57,7 @@ namespace Tang {
 
     virtual std::string dump() const override;
     ComputedExpression * makeCopy() const override;
+    virtual bool is_equal(const int & val) const override;
 
   private:
     /**

@@ -51,9 +51,6 @@ Program::~Program() {
   if (this->ast) {
     delete this->ast;
   }
-  if (this->result) {
-    delete *this->result;
-  }
 }
 
 Program::Program(const Program & program) {
@@ -61,9 +58,7 @@ Program::Program(const Program & program) {
   this->codeType = program.codeType;
   this->ast = program.ast->makeCopy();
   this->error = new Error(*program.error);
-  if (program.result) {
-    this->result = (*program.result)->makeCopy();
-  }
+  this->result = program.result;
 }
 
 Program::Program(Program && program) {
@@ -96,14 +91,7 @@ Program & Program::operator=(const Program & program) {
     this->error = new Error(*program.error);
   }
 
-  // `result` is an optional pointer, so cleanup before replacing.
-  if (this->result) {
-    delete *this->result;
-    this->result = nullopt;
-  }
-  if (program.result) {
-    this->result = (*program.result)->makeCopy();
-  }
+  this->result = program.result;
   return *this;
 }
 
@@ -138,7 +126,7 @@ optional<const AstNode *> Program::getAst() const {
   return nullopt;
 }
 
-optional<const ComputedExpression *> Program::getResult() const {
+optional<const GarbageCollected> Program::getResult() const {
   return this->result;
 }
 
@@ -173,13 +161,13 @@ string Program::dumpBytecode() const {
 Program& Program::execute() {
   size_t pc{0};
   //size_t fp{0};
-  vector<ComputedExpression *> stack;
+  vector<GarbageCollected> stack;
 
   while (pc < this->bytecode.size()) {
     switch ((Opcode)this->bytecode[pc]) {
       case Opcode::INTEGER: {
         EXECUTEPROGRAMCHECK(1);
-        stack.push_back(new ComputedExpressionInteger(this->bytecode[pc + 1]));
+        stack.push_back(GarbageCollected::make<ComputedExpressionInteger>((int64_t)this->bytecode[pc + 1]));
         pc += 2;
         break;
       }
@@ -196,11 +184,7 @@ Program& Program::execute() {
 
   // Empty the stack, but save the top of the stack.
   this->result = stack.back();
-  stack.pop_back();
-  while (stack.size()) {
-    delete stack.back();
-    stack.pop_back();
-  }
+  stack.clear();
 
   return *this;
 }
