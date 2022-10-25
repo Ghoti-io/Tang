@@ -1,12 +1,12 @@
 \begin{theindex}
 
   \item {$\sim$GarbageCollected}
-    \subitem {Tang::GarbageCollected$<$ T $>$}, \hyperpage{22}
+    \subitem {Tang::GarbageCollected}, \hyperpage{22}
 
   \indexspace
 
   \item {addBytecode}
-    \subitem {Tang::Program}, \hyperpage{29}
+    \subitem {Tang::Program}, \hyperpage{31}
   \item {AstNode}
     \subitem {Tang::AstNode}, \hyperpage{11}
   \item {AstNodeInteger}
@@ -14,122 +14,130 @@
 
   \indexspace
 
-  \item {build/generated/location.hh}, \hyperpage{37}
+  \item {build/generated/location.hh}, \hyperpage{39}
 
   \indexspace
 
   \item {CodeType}
-    \subitem {Tang::Program}, \hyperpage{29}
+    \subitem {Tang::Program}, \hyperpage{30}
   \item {compileScript}
-    \subitem {Tang::TangBase}, \hyperpage{33}
+    \subitem {Tang::TangBase}, \hyperpage{35}
   \item {ComputedExpressionInteger}
-    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{17}
+    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{18}
 
   \indexspace
 
   \item {dump}
     \subitem {Tang::ComputedExpression}, \hyperpage{15}
-    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{17}
+    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{18}
   \item {dumpBytecode}
-    \subitem {Tang::Program}, \hyperpage{30}
+    \subitem {Tang::Program}, \hyperpage{31}
   \item {DUMPPROGRAMCHECK}
-    \subitem {program.cpp}, \hyperpage{52}
+    \subitem {program.cpp}, \hyperpage{54}
 
   \indexspace
 
   \item {Error}
-    \subitem {Tang::Error}, \hyperpage{20}
+    \subitem {Tang::Error}, \hyperpage{21}
   \item {execute}
-    \subitem {Tang::Program}, \hyperpage{30}
+    \subitem {Tang::Program}, \hyperpage{32}
   \item {EXECUTEPROGRAMCHECK}
-    \subitem {program.cpp}, \hyperpage{53}
+    \subitem {program.cpp}, \hyperpage{55}
 
   \indexspace
 
   \item {GarbageCollected}
-    \subitem {Tang::GarbageCollected$<$ T $>$}, \hyperpage{21, 22}
+    \subitem {Tang::GarbageCollected}, \hyperpage{22}
   \item {get}
-    \subitem {Tang::SingletonObjectPool$<$ T $>$}, \hyperpage{31}
+    \subitem {Tang::SingletonObjectPool$<$ T $>$}, \hyperpage{33}
   \item {get\_next\_token}
-    \subitem {Tang::TangScanner}, \hyperpage{35}
+    \subitem {Tang::TangScanner}, \hyperpage{37}
   \item {getAst}
-    \subitem {Tang::Program}, \hyperpage{30}
+    \subitem {Tang::Program}, \hyperpage{32}
   \item {getCode}
-    \subitem {Tang::Program}, \hyperpage{30}
+    \subitem {Tang::Program}, \hyperpage{32}
   \item {getInstance}
-    \subitem {Tang::SingletonObjectPool$<$ T $>$}, \hyperpage{32}
+    \subitem {Tang::SingletonObjectPool$<$ T $>$}, \hyperpage{33}
   \item {getResult}
-    \subitem {Tang::Program}, \hyperpage{31}
+    \subitem {Tang::Program}, \hyperpage{32}
 
   \indexspace
 
-  \item {include/ast.hpp}, \hyperpage{39}
-  \item {include/computedExpression.hpp}, \hyperpage{41}
-  \item {include/error.hpp}, \hyperpage{41}
-  \item {include/garbageCollected.hpp}, \hyperpage{43}
-  \item {include/macros.hpp}, \hyperpage{43}
-  \item {include/opcode.hpp}, \hyperpage{44}
-  \item {include/program.hpp}, \hyperpage{45}
-  \item {include/singletonObjectPool.hpp}, \hyperpage{46}
-  \item {include/tang.hpp}, \hyperpage{47}
-  \item {include/tangBase.hpp}, \hyperpage{48}
-  \item {include/tangScanner.hpp}, \hyperpage{49}
+  \item {include/ast.hpp}, \hyperpage{41}
+  \item {include/computedExpression.hpp}, \hyperpage{43}
+  \item {include/error.hpp}, \hyperpage{44}
+  \item {include/garbageCollected.hpp}, \hyperpage{45}
+  \item {include/macros.hpp}, \hyperpage{45}
+  \item {include/opcode.hpp}, \hyperpage{46}
+  \item {include/program.hpp}, \hyperpage{47}
+  \item {include/singletonObjectPool.hpp}, \hyperpage{49}
+  \item {include/tang.hpp}, \hyperpage{50}
+  \item {include/tangBase.hpp}, \hyperpage{50}
+  \item {include/tangScanner.hpp}, \hyperpage{51}
   \item {INTEGER}
-    \subitem {opcode.hpp}, \hyperpage{45}
+    \subitem {opcode.hpp}, \hyperpage{47}
+  \item {is\_equal}
+    \subitem {Tang::ComputedExpression}, \hyperpage{15}
+    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{18}
 
   \indexspace
 
   \item {location.hh}
-    \subitem {operator$<$$<$}, \hyperpage{38, 39}
+    \subitem {operator$<$$<$}, \hyperpage{40, 41}
 
   \indexspace
 
   \item {macros.hpp}
-    \subitem {TANG\_UNUSED}, \hyperpage{44}
+    \subitem {TANG\_UNUSED}, \hyperpage{46}
+  \item {make}
+    \subitem {Tang::GarbageCollected}, \hyperpage{23}
   \item {makeCopy}
     \subitem {Tang::AstNode}, \hyperpage{11}
     \subitem {Tang::AstNodeInteger}, \hyperpage{14}
-    \subitem {Tang::ComputedExpression}, \hyperpage{15}
-    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{17}
+    \subitem {Tang::ComputedExpression}, \hyperpage{16}
+    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{19}
 
   \indexspace
 
   \item {Opcode}
-    \subitem {opcode.hpp}, \hyperpage{45}
+    \subitem {opcode.hpp}, \hyperpage{47}
   \item {opcode.hpp}
-    \subitem {INTEGER}, \hyperpage{45}
-    \subitem {Opcode}, \hyperpage{45}
+    \subitem {INTEGER}, \hyperpage{47}
+    \subitem {Opcode}, \hyperpage{47}
   \item {operator$<$$<$}
-    \subitem {location.hh}, \hyperpage{38, 39}
+    \subitem {location.hh}, \hyperpage{40, 41}
+    \subitem {Tang::GarbageCollected}, \hyperpage{25}
   \item {operator$\ast$}
-    \subitem {Tang::GarbageCollected$<$ T $>$}, \hyperpage{23}
+    \subitem {Tang::GarbageCollected}, \hyperpage{23}
   \item {operator-\/$>$}
-    \subitem {Tang::GarbageCollected$<$ T $>$}, \hyperpage{23}
+    \subitem {Tang::GarbageCollected}, \hyperpage{23}
   \item {operator=}
-    \subitem {Tang::GarbageCollected$<$ T $>$}, \hyperpage{23, 24}
+    \subitem {Tang::GarbageCollected}, \hyperpage{24}
+  \item {operator==}
+    \subitem {Tang::GarbageCollected}, \hyperpage{25}
 
   \indexspace
 
   \item {Program}
-    \subitem {Tang::Program}, \hyperpage{29}
+    \subitem {Tang::Program}, \hyperpage{31}
   \item {program.cpp}
-    \subitem {DUMPPROGRAMCHECK}, \hyperpage{52}
-    \subitem {EXECUTEPROGRAMCHECK}, \hyperpage{53}
+    \subitem {DUMPPROGRAMCHECK}, \hyperpage{54}
+    \subitem {EXECUTEPROGRAMCHECK}, \hyperpage{55}
 
   \indexspace
 
   \item {recycle}
-    \subitem {Tang::SingletonObjectPool$<$ T $>$}, \hyperpage{32}
+    \subitem {Tang::SingletonObjectPool$<$ T $>$}, \hyperpage{34}
 
   \indexspace
 
   \item {Script}
-    \subitem {Tang::Program}, \hyperpage{29}
-  \item {src/ast.cpp}, \hyperpage{50}
-  \item {src/computedExpression.cpp}, \hyperpage{51}
-  \item {src/error.cpp}, \hyperpage{51}
-  \item {src/program.cpp}, \hyperpage{52}
-  \item {src/tangBase.cpp}, \hyperpage{53}
+    \subitem {Tang::Program}, \hyperpage{31}
+  \item {src/ast.cpp}, \hyperpage{52}
+  \item {src/computedExpression.cpp}, \hyperpage{53}
+  \item {src/error.cpp}, \hyperpage{53}
+  \item {src/program.cpp}, \hyperpage{54}
+  \item {src/tangBase.cpp}, \hyperpage{55}
 
   \indexspace
 
@@ -141,50 +149,55 @@
     \subitem {makeCopy}, \hyperpage{14}
   \item {Tang::ComputedExpression}, \hyperpage{15}
     \subitem {dump}, \hyperpage{15}
-    \subitem {makeCopy}, \hyperpage{15}
+    \subitem {is\_equal}, \hyperpage{15}
+    \subitem {makeCopy}, \hyperpage{16}
   \item {Tang::ComputedExpressionInteger}, \hyperpage{16}
-    \subitem {ComputedExpressionInteger}, \hyperpage{17}
-    \subitem {dump}, \hyperpage{17}
-    \subitem {makeCopy}, \hyperpage{17}
-  \item {Tang::Error}, \hyperpage{18}
-    \subitem {Error}, \hyperpage{20}
-  \item {Tang::GarbageCollected$<$ T $>$}, \hyperpage{20}
+    \subitem {ComputedExpressionInteger}, \hyperpage{18}
+    \subitem {dump}, \hyperpage{18}
+    \subitem {is\_equal}, \hyperpage{18}
+    \subitem {makeCopy}, \hyperpage{19}
+  \item {Tang::Error}, \hyperpage{19}
+    \subitem {Error}, \hyperpage{21}
+  \item {Tang::GarbageCollected}, \hyperpage{21}
     \subitem {$\sim$GarbageCollected}, \hyperpage{22}
-    \subitem {GarbageCollected}, \hyperpage{21, 22}
+    \subitem {GarbageCollected}, \hyperpage{22}
+    \subitem {make}, \hyperpage{23}
+    \subitem {operator$<$$<$}, \hyperpage{25}
     \subitem {operator$\ast$}, \hyperpage{23}
     \subitem {operator-\/$>$}, \hyperpage{23}
-    \subitem {operator=}, \hyperpage{23, 24}
-  \item {Tang::location}, \hyperpage{24}
-  \item {Tang::position}, \hyperpage{26}
-  \item {Tang::Program}, \hyperpage{27}
-    \subitem {addBytecode}, \hyperpage{29}
-    \subitem {CodeType}, \hyperpage{29}
-    \subitem {dumpBytecode}, \hyperpage{30}
-    \subitem {execute}, \hyperpage{30}
-    \subitem {getAst}, \hyperpage{30}
-    \subitem {getCode}, \hyperpage{30}
-    \subitem {getResult}, \hyperpage{31}
-    \subitem {Program}, \hyperpage{29}
-    \subitem {Script}, \hyperpage{29}
-    \subitem {Template}, \hyperpage{29}
-  \item {Tang::SingletonObjectPool$<$ T $>$}, \hyperpage{31}
-    \subitem {get}, \hyperpage{31}
-    \subitem {getInstance}, \hyperpage{32}
-    \subitem {recycle}, \hyperpage{32}
-  \item {Tang::TangBase}, \hyperpage{32}
-    \subitem {compileScript}, \hyperpage{33}
-    \subitem {TangBase}, \hyperpage{33}
-  \item {Tang::TangScanner}, \hyperpage{34}
-    \subitem {get\_next\_token}, \hyperpage{35}
-    \subitem {TangScanner}, \hyperpage{35}
+    \subitem {operator=}, \hyperpage{24}
+    \subitem {operator==}, \hyperpage{25}
+  \item {Tang::location}, \hyperpage{26}
+  \item {Tang::position}, \hyperpage{27}
+  \item {Tang::Program}, \hyperpage{29}
+    \subitem {addBytecode}, \hyperpage{31}
+    \subitem {CodeType}, \hyperpage{30}
+    \subitem {dumpBytecode}, \hyperpage{31}
+    \subitem {execute}, \hyperpage{32}
+    \subitem {getAst}, \hyperpage{32}
+    \subitem {getCode}, \hyperpage{32}
+    \subitem {getResult}, \hyperpage{32}
+    \subitem {Program}, \hyperpage{31}
+    \subitem {Script}, \hyperpage{31}
+    \subitem {Template}, \hyperpage{31}
+  \item {Tang::SingletonObjectPool$<$ T $>$}, \hyperpage{33}
+    \subitem {get}, \hyperpage{33}
+    \subitem {getInstance}, \hyperpage{33}
+    \subitem {recycle}, \hyperpage{34}
+  \item {Tang::TangBase}, \hyperpage{34}
+    \subitem {compileScript}, \hyperpage{35}
+    \subitem {TangBase}, \hyperpage{35}
+  \item {Tang::TangScanner}, \hyperpage{36}
+    \subitem {get\_next\_token}, \hyperpage{37}
+    \subitem {TangScanner}, \hyperpage{37}
   \item {TANG\_UNUSED}
-    \subitem {macros.hpp}, \hyperpage{44}
+    \subitem {macros.hpp}, \hyperpage{46}
   \item {TangBase}
-    \subitem {Tang::TangBase}, \hyperpage{33}
+    \subitem {Tang::TangBase}, \hyperpage{35}
   \item {TangScanner}
-    \subitem {Tang::TangScanner}, \hyperpage{35}
+    \subitem {Tang::TangScanner}, \hyperpage{37}
   \item {Template}
-    \subitem {Tang::Program}, \hyperpage{29}
-  \item {test/testSingletonObjectPool.cpp}, \hyperpage{54}
+    \subitem {Tang::Program}, \hyperpage{31}
+  \item {test/testSingletonObjectPool.cpp}, \hyperpage{55}
 
 \end{theindex}

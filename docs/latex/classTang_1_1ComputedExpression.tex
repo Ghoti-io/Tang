@@ -27,7 +27,9 @@ virtual \mbox{\hyperlink{classTang_1_1ComputedExpression_a50c2cde30b438e1e0de251
 virtual std\+::string \mbox{\hyperlink{classTang_1_1ComputedExpression_ab5df8f689f9fe515a2299d8cef332f4c}{dump}} () const
 \begin{DoxyCompactList}\small\item\em Output the contents of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} as a string. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} $\ast$ \mbox{\hyperlink{classTang_1_1ComputedExpression_abf7820ae7313878aa37573cce35eb613}{make\+Copy}} () const
-\begin{DoxyCompactList}\small\item\em Make a copy of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} (recursively, if appropriate). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Make a copy of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} (recursively, if appropriate). \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_aa8852c3d1bc1ed810c7f10e09b813f93}{is\+\_\+equal}} (const int \&val) const
+\begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -50,6 +52,28 @@ A string representation of the computed expression.
 
 
 Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a02e4a8bba8b37bf02e5ec3fd1e25f094}{Tang\+::\+Computed\+Expression\+Integer}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_aa8852c3d1bc1ed810c7f10e09b813f93}\label{classTang_1_1ComputedExpression_aa8852c3d1bc1ed810c7f10e09b813f93}} 
+\index{Tang::ComputedExpression@{Tang::ComputedExpression}!is\_equal@{is\_equal}}
+\index{is\_equal@{is\_equal}!Tang::ComputedExpression@{Tang::ComputedExpression}}
+\doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}}
+{\footnotesize\ttfamily bool Computed\+Expression\+::is\+\_\+equal (\begin{DoxyParamCaption}\item[{const int \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check whether or not the computed expression is equal to another value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if equal, false if not. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ab297128beba3aa851658eda17c00331b}{Tang\+::\+Computed\+Expression\+Integer}}.
 
 \mbox{\Hypertarget{classTang_1_1ComputedExpression_abf7820ae7313878aa37573cce35eb613}\label{classTang_1_1ComputedExpression_abf7820ae7313878aa37573cce35eb613}} 
 \index{Tang::ComputedExpression@{Tang::ComputedExpression}!makeCopy@{makeCopy}}

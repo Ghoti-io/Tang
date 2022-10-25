@@ -8,8 +8,9 @@ var indexSectionsWithContent =
   5: "bcf",
   6: "co",
   7: "ist",
-  8: "degt",
-  9: "t"
+  8: "o",
+  9: "degt",
+  10: "t"
 };
 
 var indexSectionNames =
@@ -22,8 +23,9 @@ var indexSectionNames =
   5: "typedefs",
   6: "enums",
   7: "enumvalues",
-  8: "defines",
-  9: "pages"
+  8: "related",
+  9: "defines",
+  10: "pages"
 };
 
 var indexSectionLabels =
@@ -36,7 +38,8 @@ var indexSectionLabels =
   5: "Typedefs",
   6: "Enumerations",
   7: "Enumerator",
-  8: "Macros",
-  9: "Pages"
+  8: "Friends",
+  9: "Macros",
+  10: "Pages"
 };
 

@@ -1,11 +1,12 @@
 var classTang_1_1GarbageCollected =
 [
-    [ "GarbageCollected", "classTang_1_1GarbageCollected.html#a56a9d57fcac39b422e0c5cc9d76bf36e", null ],
-    [ "GarbageCollected", "classTang_1_1GarbageCollected.html#a24bea20611bffccd569397c7f8c2b1ad", null ],
-    [ "GarbageCollected", "classTang_1_1GarbageCollected.html#a2ee02f61b6b75a1d2e0e054c9fda0099", null ],
-    [ "~GarbageCollected", "classTang_1_1GarbageCollected.html#a806995044d8e270f3edea60f9cbeebc9", null ],
-    [ "operator*", "classTang_1_1GarbageCollected.html#a37ca67b96fcbff99be134041bc5dce2f", null ],
-    [ "operator->", "classTang_1_1GarbageCollected.html#a558b787bc4cb6d9978e0711db9aa8186", null ],
-    [ "operator=", "classTang_1_1GarbageCollected.html#a70364261136962983b175616b4412a72", null ],
-    [ "operator=", "classTang_1_1GarbageCollected.html#a0f9f75367ee0af549415c16a7f427ade", null ]
+    [ "GarbageCollected", "classTang_1_1GarbageCollected.html#abd846da9657c5dd62841918b27167c66", null ],
+    [ "GarbageCollected", "classTang_1_1GarbageCollected.html#af7c251e58e9179e1ca4a3f9b876561be", null ],
+    [ "~GarbageCollected", "classTang_1_1GarbageCollected.html#a353748f997d200432d22c0ba93ebde6e", null ],
+    [ "operator*", "classTang_1_1GarbageCollected.html#aff040291d71e55358cf0656c9876d3c8", null ],
+    [ "operator->", "classTang_1_1GarbageCollected.html#ae9f5eb28dec34650dd8f74f0dc4f2e3c", null ],
+    [ "operator=", "classTang_1_1GarbageCollected.html#ae3c11ed5cee365f7cb47aac9d4094482", null ],
+    [ "operator=", "classTang_1_1GarbageCollected.html#a6354db39b643c1828754ff1fe8856b1a", null ],
+    [ "operator==", "classTang_1_1GarbageCollected.html#abb155bcef49b9e2fe006098fff175ee8", null ],
+    [ "operator<<", "classTang_1_1GarbageCollected.html#a523aa4de91b9bd0fef2a585dbb4e4e55", null ]
 ];
