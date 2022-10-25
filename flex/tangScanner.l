@@ -104,6 +104,10 @@ using namespace std;
     int64_t number = strtoll(yytext, 0, 10);
     return Tang::TangParser::make_INTEGER(number, Tang::location(location));
   }
+  -?(([0-9]+\.[0-9]*)|(\.[0-9]+)) {
+    long double number = strtold(yytext, 0);
+    return Tang::TangParser::make_FLOAT(number, Tang::location(location));
+  }
   . {}
   \n {}
   <<EOF>> {

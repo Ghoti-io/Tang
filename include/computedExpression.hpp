@@ -41,6 +41,14 @@ namespace Tang {
      */
     virtual bool is_equal(const int & val) const;
 
+    /**
+     * Check whether or not the computed expression is equal to another value.
+     *
+     * @param val The value to compare against.
+     * @return True if equal, false if not.
+     */
+    virtual bool is_equal(const double & val) const;
+
   };
 
   /**
@@ -58,12 +66,37 @@ namespace Tang {
     virtual std::string dump() const override;
     ComputedExpression * makeCopy() const override;
     virtual bool is_equal(const int & val) const override;
+    virtual bool is_equal(const double & val) const override;
 
   private:
     /**
      * The integer value.
      */
     int64_t val;
+  };
+
+  /**
+   * Represents a Float that is the result of a computation.
+   */
+  class ComputedExpressionFloat: public ComputedExpression {
+  public:
+    /**
+     * Construct a Float result.
+     *
+     * @param val The float value.
+     */
+    ComputedExpressionFloat(double val);
+
+    virtual std::string dump() const override;
+    ComputedExpression * makeCopy() const override;
+    virtual bool is_equal(const int & val) const override;
+    virtual bool is_equal(const double & val) const override;
+
+  private:
+    /**
+     * The float value.
+     */
+    double val;
   };
 }
 

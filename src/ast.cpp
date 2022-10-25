@@ -37,3 +37,16 @@ AstNode * AstNodeInteger::makeCopy() const {
   return new AstNodeInteger(this->val, this->location);
 }
 
+string AstNodeFloat::dump(string indent) const {
+  return indent + "Float: " + to_string(this->val) + "\n";
+}
+
+void AstNodeFloat::compile(Tang::Program & program) const {
+  program.addBytecode((uint64_t)Opcode::FLOAT);
+  program.addBytecode(bit_cast<uint64_t>(this->val));
+}
+
+AstNode * AstNodeFloat::makeCopy() const {
+  return new AstNodeFloat(this->val, this->location);
+}
+

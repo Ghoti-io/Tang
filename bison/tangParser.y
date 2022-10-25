@@ -76,6 +76,7 @@
 // https://www.gnu.org/software/bison/manual/bison.html#index-_0025token
 %token EOF 0 "end of code"
 %token < int64_t > INTEGER "integer"
+%token < long double > FLOAT "float"
 
 // Any %type declarations of non-terminals.
 // https://www.gnu.org/software/bison/manual/bison.html#index-_0025type
@@ -148,6 +149,10 @@ expression
   : INTEGER
     {
       $$ = new Tang::AstNodeInteger($1, @1);
+    }
+  | FLOAT
+    {
+      $$ = new Tang::AstNodeFloat($1, @1);
     }
   ;
 

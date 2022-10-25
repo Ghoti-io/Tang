@@ -5,6 +5,7 @@
 #include <sstream>
 #include <iomanip>
 #include <cmath>
+#include <bit>
 #include "program.hpp"
 #include "tangScanner.hpp"
 #include "tangParser.hpp"
@@ -151,6 +152,12 @@ string Program::dumpBytecode() const {
         pc += 2;
         break;
       }
+      case Opcode::FLOAT: {
+        DUMPPROGRAMCHECK(1);
+        out << "FLOAT" << bit_cast<double>(this->bytecode[pc + 1]);
+        pc += 2;
+        break;
+      }
       default: {}
     }
     out << endl;
@@ -168,6 +175,12 @@ Program& Program::execute() {
       case Opcode::INTEGER: {
         EXECUTEPROGRAMCHECK(1);
         stack.push_back(GarbageCollected::make<ComputedExpressionInteger>((int64_t)this->bytecode[pc + 1]));
+        pc += 2;
+        break;
+      }
+      case Opcode::FLOAT: {
+        EXECUTEPROGRAMCHECK(1);
+        stack.push_back(GarbageCollected::make<ComputedExpressionFloat>(bit_cast<double>(this->bytecode[pc + 1])));
         pc += 2;
         break;
       }
