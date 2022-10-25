@@ -5,7 +5,9 @@
 #ifndef TANG_GARBAGECOLLECTED_HPP
 #define TANG_GARBAGECOLLECTED_HPP
 
+#include <functional>
 #include "singletonObjectPool.hpp"
+#include "computedExpression.hpp"
 
 namespace Tang {
   /**
@@ -15,20 +17,25 @@ namespace Tang {
    * Uses the \ref SingletonObjectPool to created and recycle object memory.
    * The container is not thread-safe.
    */
-  template <class T>
   class GarbageCollected {
   public:
     /**
-     * Constructs a garbage-collected object of the specified type.
+     * Creates a garbage-collected object of the specified type.
      *
      * @param variable The arguments to pass to the constructor of the
      *   specified type.
+     * @return A GarbageCollected object.
      */
-    template<typename... Args>
-    GarbageCollected(Args... args) {
+    template<class T, typename... Args>
+    static GarbageCollected make(Args... args) {
+      GarbageCollected gc{};
       auto temp = SingletonObjectPool<T>::getInstance().get();
-      this->ref = new(temp) T{args...};
-      this->count = new size_t{1};
+      gc.ref = new(temp) T{args...};
+      gc.count = new size_t{1};
+      gc.recycle = [temp](){
+        SingletonObjectPool<T>::getInstance().recycle(temp);
+      };
+      return gc;
     }
 
     /**
@@ -40,6 +47,7 @@ namespace Tang {
       this->count = other.count;
       ++*this->count;
       this->ref = other.ref;
+      this->recycle = other.recycle;
     }
 
     /**
@@ -55,6 +63,7 @@ namespace Tang {
       this->ref = other.ref;
       this->count = other.count;
       ++*this->count;
+      this->recycle = std::move(other.recycle);
     }
 
     /**
@@ -70,6 +79,7 @@ namespace Tang {
       this->ref = other.ref;
       this->count = other.count;
       ++*this->count;
+      this->recycle = other.recycle;
 
       return *this;
     }
@@ -87,6 +97,7 @@ namespace Tang {
       this->ref = other.ref;
       this->count = other.count;
       ++*this->count;
+      this->recycle = std::move(other.recycle);
 
       return *this;
     }
@@ -97,7 +108,7 @@ namespace Tang {
     ~GarbageCollected() {
       if (--*this->count == 0) {
         if (this->ref) {
-          SingletonObjectPool<T>::getInstance().recycle(this->ref);
+          this->recycle();
         }
         if (this->count) {
           delete this->count;
@@ -110,7 +121,7 @@ namespace Tang {
      *
      * @return A pointer to the tracked object.
      */
-    T* operator->() const {
+    ComputedExpression* operator->() const {
       return this->ref;
     }
 
@@ -119,11 +130,21 @@ namespace Tang {
      *
      * @return A reference to the tracked object.
      */
-    T& operator*() const {
+    ComputedExpression& operator*() const {
       return *this->ref;
     }
 
   private:
+    /**
+     * Constructs a garbage-collected object of the specified type.  It is
+     * private so that a GarbageCollected object can only be created using the
+     * \ref GarbageCollected::make() function.
+     *
+     * @param variable The arguments to pass to the constructor of the
+     *   specified type.
+     */
+    GarbageCollected() : count{0}, ref{nullptr} {}
+
     /**
      * The count of references to the tracked object.
      */
@@ -132,7 +153,12 @@ namespace Tang {
     /**
      * A reference to the tracked object.
      */
-    T* ref;
+    ComputedExpression* ref;
+
+    /**
+     * A cleanup function to recycle the object.
+     */
+    std::function<void(void)> recycle;
   };
 }
 
