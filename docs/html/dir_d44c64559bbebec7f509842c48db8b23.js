@@ -2,11 +2,13 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
 [
     [ "ast.hpp", "ast_8hpp.html", [
       [ "AstNode", "classTang_1_1AstNode.html", "classTang_1_1AstNode" ],
-      [ "AstNodeInteger", "classTang_1_1AstNodeInteger.html", "classTang_1_1AstNodeInteger" ]
+      [ "AstNodeInteger", "classTang_1_1AstNodeInteger.html", "classTang_1_1AstNodeInteger" ],
+      [ "AstNodeFloat", "classTang_1_1AstNodeFloat.html", "classTang_1_1AstNodeFloat" ]
     ] ],
     [ "computedExpression.hpp", "computedExpression_8hpp.html", [
       [ "ComputedExpression", "classTang_1_1ComputedExpression.html", "classTang_1_1ComputedExpression" ],
-      [ "ComputedExpressionInteger", "classTang_1_1ComputedExpressionInteger.html", "classTang_1_1ComputedExpressionInteger" ]
+      [ "ComputedExpressionInteger", "classTang_1_1ComputedExpressionInteger.html", "classTang_1_1ComputedExpressionInteger" ],
+      [ "ComputedExpressionFloat", "classTang_1_1ComputedExpressionFloat.html", "classTang_1_1ComputedExpressionFloat" ]
     ] ],
     [ "error.hpp", "error_8hpp.html", [
       [ "Error", "classTang_1_1Error.html", "classTang_1_1Error" ]

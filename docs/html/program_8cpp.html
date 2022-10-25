@@ -92,6 +92,7 @@ $(document).ready(function(){initNavTree('program_8cpp.html',''); initResizable(
 <div class="textblock"><code>#include &lt;sstream&gt;</code><br />
 <code>#include &lt;iomanip&gt;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;bit&gt;</code><br />
 <code>#include &quot;<a class="el" href="program_8hpp_source.html">program.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="tangScanner_8hpp_source.html">tangScanner.hpp</a>&quot;</code><br />
 <code>#include &quot;tangParser.hpp&quot;</code><br />
@@ -101,28 +102,29 @@ Include dependency graph for program.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="program_8cpp__incl.png" border="0" usemap="#asrc_2program_8cpp" alt=""/></div>
 <map name="asrc_2program_8cpp" id="asrc_2program_8cpp">
-<area shape="rect" title=" " alt="" coords="299,5,425,32"/>
-<area shape="rect" title=" " alt="" coords="25,80,99,107"/>
-<area shape="rect" title=" " alt="" coords="123,80,198,107"/>
-<area shape="rect" title=" " alt="" coords="223,80,285,107"/>
-<area shape="rect" href="program_8hpp.html" title="Define the Tang::Program class used to compile and execute source code." alt="" coords="309,80,415,107"/>
-<area shape="rect" href="tangScanner_8hpp.html" title="Defines the Tang::TangScanner used to tokenize a Tang script." alt="" coords="635,80,766,107"/>
-<area shape="rect" title=" " alt="" coords="859,155,977,181"/>
-<area shape="rect" href="opcode_8hpp.html" title="Declare the Opcodes used in the Bytecode representation of a program." alt="" coords="841,80,939,107"/>
-<area shape="rect" title=" " alt="" coords="178,304,237,331"/>
-<area shape="rect" title=" " alt="" coords="589,155,663,181"/>
-<area shape="rect" title=" " alt="" coords="5,155,68,181"/>
-<area shape="rect" href="ast_8hpp.html" title="Define the Tang::AstNode and its associated/derivative classes." alt="" coords="149,155,220,181"/>
-<area shape="rect" href="error_8hpp.html" title="Define the Tang::Error class used to describe syntax and runtime errors." alt="" coords="245,155,325,181"/>
-<area shape="rect" href="computedExpression_8hpp.html" title=" " alt="" coords="365,229,551,256"/>
-<area shape="rect" href="garbageCollected_8hpp.html" title=" " alt="" coords="400,155,564,181"/>
-<area shape="rect" href="location_8hh.html" title="Define the Tang ::location class." alt="" coords="245,229,340,256"/>
-<area shape="rect" title=" " alt="" coords="661,304,741,331"/>
-<area shape="rect" title=" " alt="" coords="425,304,491,331"/>
-<area shape="rect" title=" " alt="" coords="576,229,663,256"/>
-<area shape="rect" href="singletonObjectPool_8hpp.html" title=" " alt="" coords="739,229,919,256"/>
-<area shape="rect" title=" " alt="" coords="797,304,861,331"/>
-<area shape="rect" title=" " alt="" coords="738,155,834,181"/>
+<area shape="rect" title=" " alt="" coords="294,5,421,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,80,107"/>
+<area shape="rect" title=" " alt="" coords="104,80,179,107"/>
+<area shape="rect" title=" " alt="" coords="203,80,266,107"/>
+<area shape="rect" title=" " alt="" coords="290,80,329,107"/>
+<area shape="rect" href="program_8hpp.html" title="Define the Tang::Program class used to compile and execute source code." alt="" coords="353,80,458,107"/>
+<area shape="rect" href="tangScanner_8hpp.html" title="Defines the Tang::TangScanner used to tokenize a Tang script." alt="" coords="679,80,809,107"/>
+<area shape="rect" title=" " alt="" coords="902,155,1021,181"/>
+<area shape="rect" href="opcode_8hpp.html" title="Declare the Opcodes used in the Bytecode representation of a program." alt="" coords="885,80,982,107"/>
+<area shape="rect" title=" " alt="" coords="221,304,280,331"/>
+<area shape="rect" title=" " alt="" coords="632,155,707,181"/>
+<area shape="rect" title=" " alt="" coords="49,155,111,181"/>
+<area shape="rect" href="ast_8hpp.html" title="Define the Tang::AstNode and its associated/derivative classes." alt="" coords="193,155,263,181"/>
+<area shape="rect" href="error_8hpp.html" title="Define the Tang::Error class used to describe syntax and runtime errors." alt="" coords="288,155,368,181"/>
+<area shape="rect" href="computedExpression_8hpp.html" title=" " alt="" coords="408,229,595,256"/>
+<area shape="rect" href="garbageCollected_8hpp.html" title=" " alt="" coords="443,155,607,181"/>
+<area shape="rect" href="location_8hh.html" title="Define the Tang ::location class." alt="" coords="289,229,383,256"/>
+<area shape="rect" title=" " alt="" coords="704,304,784,331"/>
+<area shape="rect" title=" " alt="" coords="468,304,535,331"/>
+<area shape="rect" title=" " alt="" coords="619,229,706,256"/>
+<area shape="rect" href="singletonObjectPool_8hpp.html" title=" " alt="" coords="782,229,962,256"/>
+<area shape="rect" title=" " alt="" coords="840,304,904,331"/>
+<area shape="rect" title=" " alt="" coords="781,155,877,181"/>
 </map>
 </div>
 </div><table class="memberdecls">

@@ -1,9 +1,11 @@
 var hierarchy =
 [
     [ "Tang::AstNode", "classTang_1_1AstNode.html", [
+      [ "Tang::AstNodeFloat", "classTang_1_1AstNodeFloat.html", null ],
       [ "Tang::AstNodeInteger", "classTang_1_1AstNodeInteger.html", null ]
     ] ],
     [ "Tang::ComputedExpression", "classTang_1_1ComputedExpression.html", [
+      [ "Tang::ComputedExpressionFloat", "classTang_1_1ComputedExpressionFloat.html", null ],
       [ "Tang::ComputedExpressionInteger", "classTang_1_1ComputedExpressionInteger.html", null ]
     ] ],
     [ "Tang::Error", "classTang_1_1Error.html", null ],

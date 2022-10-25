@@ -1,0 +1,101 @@
+\hypertarget{classTang_1_1AstNodeFloat}{}\doxysection{Tang\+::Ast\+Node\+Float Class Reference}
+\label{classTang_1_1AstNodeFloat}\index{Tang::AstNodeFloat@{Tang::AstNodeFloat}}
+
+
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents an float literal.  
+
+
+
+
+{\ttfamily \#include $<$ast.\+hpp$>$}
+
+
+
+Inheritance diagram for Tang\+::Ast\+Node\+Float\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{classTang_1_1AstNodeFloat__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tang\+::Ast\+Node\+Float\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{classTang_1_1AstNodeFloat__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTang_1_1AstNodeFloat_a8a2796acfc946fe6403eae67c1708f3b}{Ast\+Node\+Float}} (double number, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} loc)
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeFloat_a8305f0f49aa635b9f9035a175e162511}\label{classTang_1_1AstNodeFloat_a8305f0f49aa635b9f9035a175e162511}} 
+virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeFloat_a8305f0f49aa635b9f9035a175e162511}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
+\begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeFloat_a5c13853df1e7d853525871349866fe49}\label{classTang_1_1AstNodeFloat_a5c13853df1e7d853525871349866fe49}} 
+virtual void \mbox{\hyperlink{classTang_1_1AstNodeFloat_a5c13853df1e7d853525871349866fe49}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const override
+\begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$ \mbox{\hyperlink{classTang_1_1AstNodeFloat_ab0f61b3898f955e805da649831b675de}{make\+Copy}} () const override
+\begin{DoxyCompactList}\small\item\em Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}\label{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}} 
+\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}{location}}
+\begin{DoxyCompactList}\small\item\em The location associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents an float literal. 
+
+Integers are represented by the {\ttfamily long double} type, and so are limited in range by that of the underlying type. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeFloat_a8a2796acfc946fe6403eae67c1708f3b}\label{classTang_1_1AstNodeFloat_a8a2796acfc946fe6403eae67c1708f3b}} 
+\index{Tang::AstNodeFloat@{Tang::AstNodeFloat}!AstNodeFloat@{AstNodeFloat}}
+\index{AstNodeFloat@{AstNodeFloat}!Tang::AstNodeFloat@{Tang::AstNodeFloat}}
+\doxysubsubsection{\texorpdfstring{AstNodeFloat()}{AstNodeFloat()}}
+{\footnotesize\ttfamily Tang\+::\+Ast\+Node\+Float\+::\+Ast\+Node\+Float (\begin{DoxyParamCaption}\item[{double}]{number,  }\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{loc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & The number to represent. \\
+\hline
+{\em loc} & The location associated with the expression. @location The location associated with this node. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeFloat_ab0f61b3898f955e805da649831b675de}\label{classTang_1_1AstNodeFloat_ab0f61b3898f955e805da649831b675de}} 
+\index{Tang::AstNodeFloat@{Tang::AstNodeFloat}!makeCopy@{makeCopy}}
+\index{makeCopy@{makeCopy}!Tang::AstNodeFloat@{Tang::AstNodeFloat}}
+\doxysubsubsection{\texorpdfstring{makeCopy()}{makeCopy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$ Ast\+Node\+Float\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). 
+
+\begin{DoxyReturn}{Returns}
+A pointer to a new \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that is a copy of the current \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_addcb807e895088616f1ec51c61a85c00}{Tang\+::\+Ast\+Node}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{ast_8hpp}{ast.\+hpp}}\item 
+src/\mbox{\hyperlink{ast_8cpp}{ast.\+cpp}}\end{DoxyCompactItemize}
