@@ -38,6 +38,18 @@ using namespace Tang;
     break; \
   }
 
+/**
+ * Verify the size of the stack vector so that it may be safely accessed.
+ *
+ * @param x The number of entries that should exist in the stack.
+ */
+#define STACKCHECK(x) \
+  if (stack.size() < (fp + (x))) { \
+    /* TODO push an error on to the stack! */ \
+    pc = this->bytecode.size(); \
+    break; \
+  }
+
 Program::Program(string code, Program::CodeType codeType) : code{code}, codeType{codeType}, ast{nullptr}, error{nullptr} {
   this->parse();
   if (this->ast) {
@@ -158,6 +170,11 @@ string Program::dumpBytecode() const {
         pc += 2;
         break;
       }
+      case Opcode::ADD: {
+        out << "ADD";
+        ++pc;
+        break;
+      }
       default: {}
     }
     out << endl;
@@ -167,7 +184,7 @@ string Program::dumpBytecode() const {
 
 Program& Program::execute() {
   size_t pc{0};
-  //size_t fp{0};
+  size_t fp{0};
   vector<GarbageCollected> stack;
 
   while (pc < this->bytecode.size()) {
@@ -182,6 +199,16 @@ Program& Program::execute() {
         EXECUTEPROGRAMCHECK(1);
         stack.push_back(GarbageCollected::make<ComputedExpressionFloat>(bit_cast<double>(this->bytecode[pc + 1])));
         pc += 2;
+        break;
+      }
+      case Opcode::ADD: {
+        STACKCHECK(2);
+        auto rhs = stack.back();
+        stack.pop_back();
+        auto lhs = stack.back();
+        stack.pop_back();
+        stack.push_back(rhs + lhs);
+        ++pc;
         break;
       }
       default: {}

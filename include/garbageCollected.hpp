@@ -2,6 +2,10 @@
  * @file
  */
 
+namespace Tang {
+  class GarbageCollected;
+}
+
 #ifndef TANG_GARBAGECOLLECTED_HPP
 #define TANG_GARBAGECOLLECTED_HPP
 
@@ -137,9 +141,15 @@ namespace Tang {
      * @param val The value to compare the tracked object against.
      * @return True if they are equal, false otherwise.
      */
-    bool operator==(auto & val) const {
-      return this->ref && this->ref->is_equal(val);
-    }
+    bool operator==(const int & val) const;
+
+    /**
+     * Compare the GarbageCollected tracked object with a supplied value.
+     *
+     * @param val The value to compare the tracked object against.
+     * @return True if they are equal, false otherwise.
+     */
+    bool operator==(const double & val) const;
 
     /**
      * Add friendly output.
@@ -148,11 +158,11 @@ namespace Tang {
      * @param gc The GarbageCollected value.
      * @return The output stream.
      */
-    friend std::ostream & operator<<(std::ostream & out, const GarbageCollected & gc) {
-      return out << (gc.ref ? gc.ref->dump() : "");
-    }
+    friend std::ostream & operator<<(std::ostream & out, const GarbageCollected & gc);
 
-  private:
+    GarbageCollected operator+(const GarbageCollected & lhs) const;
+
+  protected:
     /**
      * Constructs a garbage-collected object of the specified type.  It is
      * private so that a GarbageCollected object can only be created using the

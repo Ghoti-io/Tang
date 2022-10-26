@@ -108,6 +108,9 @@ using namespace std;
     long double number = strtold(yytext, 0);
     return Tang::TangParser::make_FLOAT(number, Tang::location(location));
   }
+  \+ {
+    return Tang::TangParser::make_PLUS(Tang::location(location));
+  }
   . {}
   \n {}
   <<EOF>> {

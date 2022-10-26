@@ -25,6 +25,11 @@ bool ComputedExpression::is_equal([[maybe_unused]] const double & val) const {
   return false;
 }
 
+GarbageCollected ComputedExpression::__add([[maybe_unused]] const GarbageCollected & rhs) const {
+  // TODO Return an error.
+  return GarbageCollected::make<ComputedExpressionInteger>(0);
+}
+
 ComputedExpressionInteger::ComputedExpressionInteger(int64_t val) : val{val} {}
 
 string ComputedExpressionInteger::dump() const {
@@ -43,6 +48,22 @@ bool ComputedExpressionInteger::is_equal(const double & val) const {
   return val == (double)this->val;
 }
 
+GarbageCollected ComputedExpressionInteger::__add(const GarbageCollected & rhs) const {
+  if (typeid(*rhs) == typeid(ComputedExpressionInteger)) {
+    auto & rhsConv = static_cast<ComputedExpressionInteger&>(*rhs);
+    return GarbageCollected::make<ComputedExpressionInteger>(
+        this->val + rhsConv.val);
+  }
+  if (typeid(*rhs) == typeid(ComputedExpressionFloat)) {
+    auto & rhsConv = static_cast<ComputedExpressionFloat&>(*rhs);
+    return GarbageCollected::make<ComputedExpressionFloat>(
+        this->val + rhsConv.val);
+  }
+
+  // TODO Return an error.
+  return GarbageCollected::make<ComputedExpressionInteger>(0);
+}
+
 ComputedExpressionFloat::ComputedExpressionFloat(double val) : val{val} {}
 
 string ComputedExpressionFloat::dump() const {
@@ -59,5 +80,21 @@ bool ComputedExpressionFloat::is_equal(const int & val) const {
 
 bool ComputedExpressionFloat::is_equal(const double & val) const {
   return val == this->val;
+}
+
+GarbageCollected ComputedExpressionFloat::__add([[maybe_unused]] const GarbageCollected & rhs) const {
+  if (typeid(*rhs) == typeid(ComputedExpressionFloat)) {
+    auto & rhsConv = static_cast<ComputedExpressionFloat&>(*rhs);
+    return GarbageCollected::make<ComputedExpressionFloat>(
+        this->val + rhsConv.val);
+  }
+  if (typeid(*rhs) == typeid(ComputedExpressionInteger)) {
+    auto & rhsConv = static_cast<ComputedExpressionInteger&>(*rhs);
+    return GarbageCollected::make<ComputedExpressionFloat>(
+        this->val + rhsConv.val);
+  }
+
+  // TODO Return an error.
+  return GarbageCollected::make<ComputedExpressionInteger>(0);
 }
 

@@ -77,6 +77,7 @@
 %token EOF 0 "end of code"
 %token < int64_t > INTEGER "integer"
 %token < long double > FLOAT "float"
+%token PLUS "+"
 
 // Any %type declarations of non-terminals.
 // https://www.gnu.org/software/bison/manual/bison.html#index-_0025type
@@ -89,7 +90,7 @@
 // Notice that the order is reversed from:
 // https://en.cppreference.com/w/cpp/language/operator_precedence
 // Here, rules are in order of lowest to highest precedence.
-
+%left "+"
 
 // Code sections.
 // https://www.gnu.org/software/bison/manual/bison.html#g_t_0025code-Summary
@@ -153,6 +154,10 @@ expression
   | FLOAT
     {
       $$ = new Tang::AstNodeFloat($1, @1);
+    }
+  | expression "+" expression
+    {
+      $$ = new Tang::AstNodeAdd($1, $3, @2);
     }
   ;
 
