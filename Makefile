@@ -7,7 +7,7 @@ GEN_DIR := $(BUILD)/generated
 APP_DIR := $(BUILD)/apps
 TARGET := libtang.so
 INCLUDE := -I include/ -I $(GEN_DIR)/
-LIBOBJECTS := $(OBJ_DIR)/ast.o $(OBJ_DIR)/computedExpression.o $(OBJ_DIR)/error.o $(OBJ_DIR)/program.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o
+LIBOBJECTS := $(OBJ_DIR)/ast.o $(OBJ_DIR)/computedExpression.o $(OBJ_DIR)/error.o $(OBJ_DIR)/garbageCollected.o $(OBJ_DIR)/program.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o
 TESTFLAGS := `pkg-config --libs --cflags gtest`
 
 
@@ -43,18 +43,23 @@ $(GEN_DIR)/location.hh: $(GEN_DIR)/tangParser.hpp
 # Object Files
 ####################################################################
 
-$(OBJ_DIR)/ast.o: src/ast.cpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/ast.o: src/ast.cpp include/ast.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling ast.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/computedExpression.o: src/computedExpression.cpp
+$(OBJ_DIR)/computedExpression.o: src/computedExpression.cpp include/computedExpression.hpp
 	@echo "\n### Compiling computedExpression.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/error.o: src/error.cpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/error.o: src/error.cpp include/error.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling error.o ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
+
+$(OBJ_DIR)/garbageCollected.o: src/garbageCollected.cpp include/garbageCollected.hpp
+	@echo "\n### Compiling garbageCollected.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
