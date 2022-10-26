@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['columns_123',['columns',['../classTang_1_1position.html#a9d285a3cba87f36f9a5f48a6233743d1',1,'Tang::position::columns()'],['../classTang_1_1location.html#a2c4d0e27c0987b883ca31121f1024d09',1,'Tang::location::columns()']]],
-  ['compile_124',['compile',['../classTang_1_1AstNode.html#a390f8887c418f972d75e968f1274b2cb',1,'Tang::AstNode::compile()'],['../classTang_1_1AstNodeInteger.html#a9191a01a987682db46530469a0b45048',1,'Tang::AstNodeInteger::compile()'],['../classTang_1_1AstNodeFloat.html#a5c13853df1e7d853525871349866fe49',1,'Tang::AstNodeFloat::compile()']]],
-  ['compilescript_125',['compileScript',['../classTang_1_1TangBase.html#a3c1ad8653a52f5a90fee20c385be7540',1,'Tang::TangBase']]],
-  ['computedexpressionfloat_126',['ComputedExpressionFloat',['../classTang_1_1ComputedExpressionFloat.html#a8058fe0ef6eae17923f424671aeef35d',1,'Tang::ComputedExpressionFloat']]],
-  ['computedexpressioninteger_127',['ComputedExpressionInteger',['../classTang_1_1ComputedExpressionInteger.html#a0abaab0f37a735125e0fe6b440ace14d',1,'Tang::ComputedExpressionInteger']]]
+  ['addbytecode_127',['addBytecode',['../classTang_1_1Program.html#a4254d779b88df527ae5b21c4f331b2a6',1,'Tang::Program']]],
+  ['astnode_128',['AstNode',['../classTang_1_1AstNode.html#a17cadf7ca51469e42bf405925af27e9e',1,'Tang::AstNode']]],
+  ['astnodeadd_129',['AstNodeAdd',['../classTang_1_1AstNodeAdd.html#a51ecc057c355da911e44d7972f0c27c9',1,'Tang::AstNodeAdd']]],
+  ['astnodefloat_130',['AstNodeFloat',['../classTang_1_1AstNodeFloat.html#a8a2796acfc946fe6403eae67c1708f3b',1,'Tang::AstNodeFloat']]],
+  ['astnodeinteger_131',['AstNodeInteger',['../classTang_1_1AstNodeInteger.html#adf60f30feb3ebb630e9396f5f2cd1b58',1,'Tang::AstNodeInteger']]]
 ];

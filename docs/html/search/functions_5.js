@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['initialize_139',['initialize',['../classTang_1_1position.html#aca1fc66eaf0186b602d3c9cccc54bd91',1,'Tang::position::initialize()'],['../classTang_1_1location.html#a0efc475ae2a3271a7fbdc97ee4d393a0',1,'Tang::location::initialize()']]],
-  ['is_5fequal_140',['is_equal',['../classTang_1_1ComputedExpression.html#a4b61cc4d447993bfc96dc37bfd552cef',1,'Tang::ComputedExpression::is_equal(const int &amp;val) const'],['../classTang_1_1ComputedExpression.html#aa81900aeb157fdb024f1bb0f316b4006',1,'Tang::ComputedExpression::is_equal(const double &amp;val) const'],['../classTang_1_1ComputedExpressionInteger.html#ab297128beba3aa851658eda17c00331b',1,'Tang::ComputedExpressionInteger::is_equal(const int &amp;val) const override'],['../classTang_1_1ComputedExpressionInteger.html#acd871176aea0d4c04bd03fbbeaee6482',1,'Tang::ComputedExpressionInteger::is_equal(const double &amp;val) const override'],['../classTang_1_1ComputedExpressionFloat.html#a921bc45b51873d475c2624272104f1eb',1,'Tang::ComputedExpressionFloat::is_equal(const int &amp;val) const override'],['../classTang_1_1ComputedExpressionFloat.html#ab0d52e07e4bc34a81872d1f1da49adeb',1,'Tang::ComputedExpressionFloat::is_equal(const double &amp;val) const override']]]
+  ['garbagecollected_141',['GarbageCollected',['../classTang_1_1GarbageCollected.html#abd846da9657c5dd62841918b27167c66',1,'Tang::GarbageCollected::GarbageCollected(const GarbageCollected &amp;other)'],['../classTang_1_1GarbageCollected.html#af7c251e58e9179e1ca4a3f9b876561be',1,'Tang::GarbageCollected::GarbageCollected(GarbageCollected &amp;&amp;other)'],['../classTang_1_1GarbageCollected.html#acf1adf6fd3b931035afb90b72f97a54e',1,'Tang::GarbageCollected::GarbageCollected()']]],
+  ['get_142',['get',['../classTang_1_1SingletonObjectPool.html#a1dac888021447a848de8f8b002c8fd23',1,'Tang::SingletonObjectPool']]],
+  ['get_5fnext_5ftoken_143',['get_next_token',['../classTang_1_1TangScanner.html#a0109128f5ed60f03bf6ff76b6ce25b1d',1,'Tang::TangScanner']]],
+  ['getast_144',['getAst',['../classTang_1_1Program.html#aac8e74d455141d5024910e7d1c030ede',1,'Tang::Program']]],
+  ['getcode_145',['getCode',['../classTang_1_1Program.html#a75aff78d6b94472f4d8f93e6f79cfbe0',1,'Tang::Program']]],
+  ['getinstance_146',['getInstance',['../classTang_1_1SingletonObjectPool.html#aaca7a22f2f2012d73d121241c227ab79',1,'Tang::SingletonObjectPool']]],
+  ['getresult_147',['getResult',['../classTang_1_1Program.html#a84b2e5e25f57eea224d1c04f1f3741eb',1,'Tang::Program']]]
 ];

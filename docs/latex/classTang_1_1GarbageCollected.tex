@@ -9,6 +9,16 @@ A container that acts as a resource-\/counting garbage collector for the specifi
 
 {\ttfamily \#include $<$garbage\+Collected.\+hpp$>$}
 
+
+
+Collaboration diagram for Tang\+::Garbage\+Collected\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classTang_1_1GarbageCollected__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -26,13 +36,35 @@ A container that acts as a resource-\/counting garbage collector for the specifi
 \begin{DoxyCompactList}\small\item\em Access the tracked object as a pointer. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} \& \mbox{\hyperlink{classTang_1_1GarbageCollected_aff040291d71e55358cf0656c9876d3c8}{operator$\ast$}} () const
 \begin{DoxyCompactList}\small\item\em Access the tracked object. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classTang_1_1GarbageCollected_abb155bcef49b9e2fe006098fff175ee8}{operator==}} (auto \&val) const
-\begin{DoxyCompactList}\small\item\em Compare the \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} tracked object with a supplied value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{classTang_1_1GarbageCollected_a53b7c1a0acbfdcc97fedc0d345239924}{operator==}} (const int \&val) const
+\begin{DoxyCompactList}\small\item\em Compare the \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} tracked object with a supplied value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTang_1_1GarbageCollected_a263e467195dd443b0ad1ef72753d3bee}{operator==}} (const double \&val) const
+\begin{DoxyCompactList}\small\item\em Compare the \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} tracked object with a supplied value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1GarbageCollected_aaf84219cbabb0b38b8870aa7839ef16a}\label{classTang_1_1GarbageCollected_aaf84219cbabb0b38b8870aa7839ef16a}} 
+\mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} {\bfseries operator+} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&lhs) const
+\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$class T , typename... Args$>$ }\\static \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1GarbageCollected_acb3de1421025af18d948dfae7dad5fb0}{make}} (Args... args)
 \begin{DoxyCompactList}\small\item\em Creates a garbage-\/collected object of the specified type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTang_1_1GarbageCollected_acf1adf6fd3b931035afb90b72f97a54e}{Garbage\+Collected}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a garbage-\/collected object of the specified type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1GarbageCollected_a6367e5cd1ab84c4a0d4f48530ba4065a}\label{classTang_1_1GarbageCollected_a6367e5cd1ab84c4a0d4f48530ba4065a}} 
+size\+\_\+t $\ast$ \mbox{\hyperlink{classTang_1_1GarbageCollected_a6367e5cd1ab84c4a0d4f48530ba4065a}{count}}
+\begin{DoxyCompactList}\small\item\em The count of references to the tracked object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1GarbageCollected_af9e17340a7d652cc0af584edf442a132}\label{classTang_1_1GarbageCollected_af9e17340a7d652cc0af584edf442a132}} 
+\mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} $\ast$ \mbox{\hyperlink{classTang_1_1GarbageCollected_af9e17340a7d652cc0af584edf442a132}{ref}}
+\begin{DoxyCompactList}\small\item\em A reference to the tracked object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1GarbageCollected_aedb9cabafac92d1ddb26610feaf36224}\label{classTang_1_1GarbageCollected_aedb9cabafac92d1ddb26610feaf36224}} 
+std\+::function$<$ void(void)$>$ \mbox{\hyperlink{classTang_1_1GarbageCollected_aedb9cabafac92d1ddb26610feaf36224}{recycle}}
+\begin{DoxyCompactList}\small\item\em A cleanup function to recycle the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -49,7 +81,7 @@ Uses the \mbox{\hyperlink{classTang_1_1SingletonObjectPool}{Singleton\+Object\+P
 \mbox{\Hypertarget{classTang_1_1GarbageCollected_abd846da9657c5dd62841918b27167c66}\label{classTang_1_1GarbageCollected_abd846da9657c5dd62841918b27167c66}} 
 \index{Tang::GarbageCollected@{Tang::GarbageCollected}!GarbageCollected@{GarbageCollected}}
 \index{GarbageCollected@{GarbageCollected}!Tang::GarbageCollected@{Tang::GarbageCollected}}
-\doxysubsubsection{\texorpdfstring{GarbageCollected()}{GarbageCollected()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{GarbageCollected()}{GarbageCollected()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily Tang\+::\+Garbage\+Collected\+::\+Garbage\+Collected (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -64,7 +96,7 @@ Copy Constructor.
 \mbox{\Hypertarget{classTang_1_1GarbageCollected_af7c251e58e9179e1ca4a3f9b876561be}\label{classTang_1_1GarbageCollected_af7c251e58e9179e1ca4a3f9b876561be}} 
 \index{Tang::GarbageCollected@{Tang::GarbageCollected}!GarbageCollected@{GarbageCollected}}
 \index{GarbageCollected@{GarbageCollected}!Tang::GarbageCollected@{Tang::GarbageCollected}}
-\doxysubsubsection{\texorpdfstring{GarbageCollected()}{GarbageCollected()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{GarbageCollected()}{GarbageCollected()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily Tang\+::\+Garbage\+Collected\+::\+Garbage\+Collected (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -86,7 +118,24 @@ Move Constructor.
 
 Destructor. 
 
-Clean up the tracked object, if appropriate. 
+Clean up the tracked object, if appropriate. \mbox{\Hypertarget{classTang_1_1GarbageCollected_acf1adf6fd3b931035afb90b72f97a54e}\label{classTang_1_1GarbageCollected_acf1adf6fd3b931035afb90b72f97a54e}} 
+\index{Tang::GarbageCollected@{Tang::GarbageCollected}!GarbageCollected@{GarbageCollected}}
+\index{GarbageCollected@{GarbageCollected}!Tang::GarbageCollected@{Tang::GarbageCollected}}
+\doxysubsubsection{\texorpdfstring{GarbageCollected()}{GarbageCollected()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Tang\+::\+Garbage\+Collected\+::\+Garbage\+Collected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Constructs a garbage-\/collected object of the specified type. 
+
+It is private so that a \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} object can only be created using the \mbox{\hyperlink{classTang_1_1GarbageCollected_acb3de1421025af18d948dfae7dad5fb0}{Garbage\+Collected\+::make()}} function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em variable} & The arguments to pass to the constructor of the specified type. \\
+\hline
+\end{DoxyParams}
+
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classTang_1_1GarbageCollected_acb3de1421025af18d948dfae7dad5fb0}\label{classTang_1_1GarbageCollected_acb3de1421025af18d948dfae7dad5fb0}} 
@@ -185,11 +234,11 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classTang_1_1GarbageCollected_a6354db39b643c1828754ff1fe8856b1a_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classTang_1_1GarbageCollected_abb155bcef49b9e2fe006098fff175ee8}\label{classTang_1_1GarbageCollected_abb155bcef49b9e2fe006098fff175ee8}} 
+\mbox{\Hypertarget{classTang_1_1GarbageCollected_a263e467195dd443b0ad1ef72753d3bee}\label{classTang_1_1GarbageCollected_a263e467195dd443b0ad1ef72753d3bee}} 
 \index{Tang::GarbageCollected@{Tang::GarbageCollected}!operator==@{operator==}}
 \index{operator==@{operator==}!Tang::GarbageCollected@{Tang::GarbageCollected}}
-\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
-{\footnotesize\ttfamily bool Tang\+::\+Garbage\+Collected\+::operator== (\begin{DoxyParamCaption}\item[{auto \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Garbage\+Collected\+::operator== (\begin{DoxyParamCaption}\item[{const double \&}]{val }\end{DoxyParamCaption}) const}
 
 
 
@@ -203,14 +252,24 @@ Compare the \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}}
 \begin{DoxyReturn}{Returns}
 True if they are equal, false otherwise. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classTang_1_1GarbageCollected_abb155bcef49b9e2fe006098fff175ee8_cgraph}
-\end{center}
-\end{figure}
+\mbox{\Hypertarget{classTang_1_1GarbageCollected_a53b7c1a0acbfdcc97fedc0d345239924}\label{classTang_1_1GarbageCollected_a53b7c1a0acbfdcc97fedc0d345239924}} 
+\index{Tang::GarbageCollected@{Tang::GarbageCollected}!operator==@{operator==}}
+\index{operator==@{operator==}!Tang::GarbageCollected@{Tang::GarbageCollected}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Garbage\+Collected\+::operator== (\begin{DoxyParamCaption}\item[{const int \&}]{val }\end{DoxyParamCaption}) const}
+
+
+
+Compare the \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} tracked object with a supplied value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to compare the tracked object against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if they are equal, false otherwise. 
+\end{DoxyReturn}
 
 
 \doxysubsection{Friends And Related Function Documentation}
@@ -236,6 +295,7 @@ The output stream.
 \end{DoxyReturn}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/\mbox{\hyperlink{garbageCollected_8hpp}{garbage\+Collected.\+hpp}}\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{garbageCollected_8hpp}{garbage\+Collected.\+hpp}}\item 
+src/garbage\+Collected.\+cpp\end{DoxyCompactItemize}

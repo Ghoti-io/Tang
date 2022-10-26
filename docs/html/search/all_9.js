@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['macros_2ehpp_47',['macros.hpp',['../macros_8hpp.html',1,'']]],
-  ['make_48',['make',['../classTang_1_1GarbageCollected.html#acb3de1421025af18d948dfae7dad5fb0',1,'Tang::GarbageCollected']]],
-  ['makecopy_49',['makeCopy',['../classTang_1_1AstNode.html#addcb807e895088616f1ec51c61a85c00',1,'Tang::AstNode::makeCopy()'],['../classTang_1_1AstNodeInteger.html#aa08b8d130711349199d3a1263d44913a',1,'Tang::AstNodeInteger::makeCopy()'],['../classTang_1_1AstNodeFloat.html#ab0f61b3898f955e805da649831b675de',1,'Tang::AstNodeFloat::makeCopy()'],['../classTang_1_1ComputedExpression.html#abf7820ae7313878aa37573cce35eb613',1,'Tang::ComputedExpression::makeCopy()'],['../classTang_1_1ComputedExpressionInteger.html#a1e1eb2070905763c0e81d1f06a3463d8',1,'Tang::ComputedExpressionInteger::makeCopy()'],['../classTang_1_1ComputedExpressionFloat.html#a67536e513f07f9324eb9af476df5a704',1,'Tang::ComputedExpressionFloat::makeCopy()']]],
-  ['message_50',['message',['../classTang_1_1Error.html#a03780cc93b440ae9964399989af02573',1,'Tang::Error']]]
+  ['line_47',['line',['../classTang_1_1position.html#a34c49c59465f6d5b40d26cd244942254',1,'Tang::position']]],
+  ['lines_48',['lines',['../classTang_1_1position.html#a43d03bb35be00003637cc6a7e508f4b2',1,'Tang::position::lines()'],['../classTang_1_1location.html#a793624bed8ce01f875a329547d7872f4',1,'Tang::location::lines()']]],
+  ['location_49',['location',['../classTang_1_1AstNode.html#a41e8328d5a342163a5aabcc4cb8f1b5e',1,'Tang::AstNode::location()'],['../classTang_1_1Error.html#a39386694098329e9cae1238b08412352',1,'Tang::Error::location()'],['../classTang_1_1location.html#aff8ce61807f30433ae309d68f15fd781',1,'Tang::location::location(const position &amp;b, const position &amp;e)'],['../classTang_1_1location.html#a298dda09e3632f8bf02033c64d21110b',1,'Tang::location::location(const position &amp;p=position())'],['../classTang_1_1location.html#aa281cc810060676842307e9efa456f83',1,'Tang::location::location(filename_type *f, counter_type l=1, counter_type c=1)'],['../classTang_1_1location.html',1,'Tang::location']]],
+  ['location_2ehh_50',['location.hh',['../location_8hh.html',1,'']]]
 ];

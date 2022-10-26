@@ -22,7 +22,9 @@ Include dependency graph for program.\+cpp\+:
 \#define \mbox{\hyperlink{program_8cpp_ad2842e810a7f95f018888a1da1d03d52}{DUMPPROGRAMCHECK}}(x)
 \begin{DoxyCompactList}\small\item\em Verify the size of the Bytecode vector so that it may be safely accessed. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{program_8cpp_a9ded9c6308c1d34a5872db3199e9c973}{EXECUTEPROGRAMCHECK}}(x)
-\begin{DoxyCompactList}\small\item\em Verify the size of the Bytecode vector so that it may be safely accessed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Verify the size of the Bytecode vector so that it may be safely accessed. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{program_8cpp_a80c4bdcb0e9c9c0eebdb1488ad68aa38}{STACKCHECK}}(x)
+\begin{DoxyCompactList}\small\item\em Verify the size of the stack vector so that it may be safely accessed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -71,5 +73,29 @@ Verify the size of the Bytecode vector so that it may be safely accessed.
 
 \begin{DoxyParams}{Parameters}
 {\em x} & The number of additional vector entries that should exist. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{program_8cpp_a80c4bdcb0e9c9c0eebdb1488ad68aa38}\label{program_8cpp_a80c4bdcb0e9c9c0eebdb1488ad68aa38}} 
+\index{program.cpp@{program.cpp}!STACKCHECK@{STACKCHECK}}
+\index{STACKCHECK@{STACKCHECK}!program.cpp@{program.cpp}}
+\doxysubsubsection{\texorpdfstring{STACKCHECK}{STACKCHECK}}
+{\footnotesize\ttfamily \#define STACKCHECK(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (stack.size() < (fp + (x))) \{ \(\backslash\)}
+\DoxyCodeLine{    \textcolor{comment}{/* TODO push an error on to the stack! */} \(\backslash\)}
+\DoxyCodeLine{    pc = this-\/>bytecode.size(); \(\backslash\)}
+\DoxyCodeLine{    break; \(\backslash\)}
+\DoxyCodeLine{  \}}
+
+\end{DoxyCode}
+
+
+Verify the size of the stack vector so that it may be safely accessed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The number of entries that should exist in the stack. \\
 \hline
 \end{DoxyParams}

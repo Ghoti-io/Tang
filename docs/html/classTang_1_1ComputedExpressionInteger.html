@@ -85,6 +85,7 @@ $(document).ready(function(){initNavTree('classTang_1_1ComputedExpressionInteger
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classTang_1_1ComputedExpressionInteger-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tang::ComputedExpressionInteger Class Reference</div>  </div>
@@ -131,6 +132,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acd871176aea0d4c04bd03fbbeaee6482"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionInteger.html#acd871176aea0d4c04bd03fbbeaee6482">is_equal</a> (const double &amp;val) const override</td></tr>
 <tr class="memdesc:acd871176aea0d4c04bd03fbbeaee6482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether or not the computed expression is equal to another value.  <a href="classTang_1_1ComputedExpressionInteger.html#acd871176aea0d4c04bd03fbbeaee6482">More...</a><br /></td></tr>
 <tr class="separator:acd871176aea0d4c04bd03fbbeaee6482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9c7c7ad34978c127b92ad7a24cbb717"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionInteger.html#ab9c7c7ad34978c127b92ad7a24cbb717">__add</a> (const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;rhs) const override</td></tr>
+<tr class="memdesc:ab9c7c7ad34978c127b92ad7a24cbb717"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the result of adding this value and the supplied value.  <a href="classTang_1_1ComputedExpressionInteger.html#ab9c7c7ad34978c127b92ad7a24cbb717">More...</a><br /></td></tr>
+<tr class="separator:ab9c7c7ad34978c127b92ad7a24cbb717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a70c09fb5e8df4b7f242567bd7d085785"><td class="memItemLeft" align="right" valign="top"><a id="a70c09fb5e8df4b7f242567bd7d085785"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>ComputedExpressionFloat</b></td></tr>
+<tr class="separator:a70c09fb5e8df4b7f242567bd7d085785"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents an Integer that is the result of a computation. </p>
@@ -162,6 +172,43 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab9c7c7ad34978c127b92ad7a24cbb717"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9c7c7ad34978c127b92ad7a24cbb717">&#9670;&nbsp;</a></span>__add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> ComputedExpressionInteger::__add </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute the result of adding this value and the supplied value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>The <a class="el" href="classTang_1_1GarbageCollected.html" title="A container that acts as a resource-counting garbage collector for the specified type.">GarbageCollected</a> value to add to this. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result of the operation. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#a7265dda9f1e6db478f0c1cd9c3e37aa9">Tang::ComputedExpression</a>.</p>
+
+</div>
+</div>
 <a id="a02e4a8bba8b37bf02e5ec3fd1e25f094"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a02e4a8bba8b37bf02e5ec3fd1e25f094">&#9670;&nbsp;</a></span>dump()</h2>
 

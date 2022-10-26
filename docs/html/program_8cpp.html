@@ -102,29 +102,29 @@ Include dependency graph for program.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="program_8cpp__incl.png" border="0" usemap="#asrc_2program_8cpp" alt=""/></div>
 <map name="asrc_2program_8cpp" id="asrc_2program_8cpp">
-<area shape="rect" title=" " alt="" coords="294,5,421,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,80,107"/>
-<area shape="rect" title=" " alt="" coords="104,80,179,107"/>
-<area shape="rect" title=" " alt="" coords="203,80,266,107"/>
-<area shape="rect" title=" " alt="" coords="290,80,329,107"/>
-<area shape="rect" href="program_8hpp.html" title="Define the Tang::Program class used to compile and execute source code." alt="" coords="353,80,458,107"/>
-<area shape="rect" href="tangScanner_8hpp.html" title="Defines the Tang::TangScanner used to tokenize a Tang script." alt="" coords="679,80,809,107"/>
-<area shape="rect" title=" " alt="" coords="902,155,1021,181"/>
-<area shape="rect" href="opcode_8hpp.html" title="Declare the Opcodes used in the Bytecode representation of a program." alt="" coords="885,80,982,107"/>
-<area shape="rect" title=" " alt="" coords="221,304,280,331"/>
-<area shape="rect" title=" " alt="" coords="632,155,707,181"/>
-<area shape="rect" title=" " alt="" coords="49,155,111,181"/>
-<area shape="rect" href="ast_8hpp.html" title="Define the Tang::AstNode and its associated/derivative classes." alt="" coords="193,155,263,181"/>
-<area shape="rect" href="error_8hpp.html" title="Define the Tang::Error class used to describe syntax and runtime errors." alt="" coords="288,155,368,181"/>
-<area shape="rect" href="computedExpression_8hpp.html" title=" " alt="" coords="408,229,595,256"/>
-<area shape="rect" href="garbageCollected_8hpp.html" title=" " alt="" coords="443,155,607,181"/>
-<area shape="rect" href="location_8hh.html" title="Define the Tang ::location class." alt="" coords="289,229,383,256"/>
-<area shape="rect" title=" " alt="" coords="704,304,784,331"/>
-<area shape="rect" title=" " alt="" coords="468,304,535,331"/>
-<area shape="rect" title=" " alt="" coords="619,229,706,256"/>
-<area shape="rect" href="singletonObjectPool_8hpp.html" title=" " alt="" coords="782,229,962,256"/>
-<area shape="rect" title=" " alt="" coords="840,304,904,331"/>
-<area shape="rect" title=" " alt="" coords="781,155,877,181"/>
+<area shape="rect" title=" " alt="" coords="433,5,560,32"/>
+<area shape="rect" title=" " alt="" coords="145,80,219,107"/>
+<area shape="rect" title=" " alt="" coords="243,80,318,107"/>
+<area shape="rect" title=" " alt="" coords="343,80,405,107"/>
+<area shape="rect" title=" " alt="" coords="429,80,468,107"/>
+<area shape="rect" href="program_8hpp.html" title="Define the Tang::Program class used to compile and execute source code." alt="" coords="492,80,597,107"/>
+<area shape="rect" href="tangScanner_8hpp.html" title="Defines the Tang::TangScanner used to tokenize a Tang script." alt="" coords="651,80,782,107"/>
+<area shape="rect" title=" " alt="" coords="875,155,993,181"/>
+<area shape="rect" href="opcode_8hpp.html" title="Declare the Opcodes used in the Bytecode representation of a program." alt="" coords="857,80,955,107"/>
+<area shape="rect" title=" " alt="" coords="389,304,447,331"/>
+<area shape="rect" title=" " alt="" coords="605,155,679,181"/>
+<area shape="rect" title=" " alt="" coords="5,155,68,181"/>
+<area shape="rect" href="ast_8hpp.html" title="Define the Tang::AstNode and its associated/derivative classes." alt="" coords="509,155,580,181"/>
+<area shape="rect" href="error_8hpp.html" title="Define the Tang::Error class used to describe syntax and runtime errors." alt="" coords="405,155,485,181"/>
+<area shape="rect" href="computedExpression_8hpp.html" title=" " alt="" coords="143,155,330,181"/>
+<area shape="rect" href="garbageCollected_8hpp.html" title=" " alt="" coords="24,229,188,256"/>
+<area shape="rect" href="location_8hh.html" title="Define the Tang ::location class." alt="" coords="507,229,601,256"/>
+<area shape="rect" title=" " alt="" coords="514,379,594,405"/>
+<area shape="rect" title=" " alt="" coords="213,229,279,256"/>
+<area shape="rect" title=" " alt="" coords="220,304,307,331"/>
+<area shape="rect" href="singletonObjectPool_8hpp.html" title=" " alt="" coords="16,304,196,331"/>
+<area shape="rect" title=" " alt="" coords="74,379,138,405"/>
+<area shape="rect" title=" " alt="" coords="754,155,850,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -136,6 +136,9 @@ Macros</h2></td></tr>
 <tr class="memitem:a9ded9c6308c1d34a5872db3199e9c973"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cpp.html#a9ded9c6308c1d34a5872db3199e9c973">EXECUTEPROGRAMCHECK</a>(x)</td></tr>
 <tr class="memdesc:a9ded9c6308c1d34a5872db3199e9c973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify the size of the Bytecode vector so that it may be safely accessed.  <a href="program_8cpp.html#a9ded9c6308c1d34a5872db3199e9c973">More...</a><br /></td></tr>
 <tr class="separator:a9ded9c6308c1d34a5872db3199e9c973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80c4bdcb0e9c9c0eebdb1488ad68aa38"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38">STACKCHECK</a>(x)</td></tr>
+<tr class="memdesc:a80c4bdcb0e9c9c0eebdb1488ad68aa38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify the size of the stack vector so that it may be safely accessed.  <a href="program_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38">More...</a><br /></td></tr>
+<tr class="separator:a80c4bdcb0e9c9c0eebdb1488ad68aa38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ad2842e810a7f95f018888a1da1d03d52"></a>
@@ -192,6 +195,37 @@ Macros</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>The number of additional vector entries that should exist. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a80c4bdcb0e9c9c0eebdb1488ad68aa38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80c4bdcb0e9c9c0eebdb1488ad68aa38">&#9670;&nbsp;</a></span>STACKCHECK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STACKCHECK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (stack.size() &lt; (fp + (x))) { \</div>
+<div class="line">    <span class="comment">/* TODO push an error on to the stack! */</span> \</div>
+<div class="line">    pc = this-&gt;bytecode.size(); \</div>
+<div class="line">    break; \</div>
+<div class="line">  }</div>
+</div><!-- fragment -->
+<p>Verify the size of the stack vector so that it may be safely accessed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The number of entries that should exist in the stack. </td></tr>
   </table>
   </dd>
 </dl>

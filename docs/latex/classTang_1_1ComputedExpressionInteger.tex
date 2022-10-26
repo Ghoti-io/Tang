@@ -39,7 +39,15 @@ virtual std\+::string \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a0
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ab297128beba3aa851658eda17c00331b}{is\+\_\+equal}} (const int \&val) const override
 \begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_acd871176aea0d4c04bd03fbbeaee6482}{is\+\_\+equal}} (const double \&val) const override
-\begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ab9c7c7ad34978c127b92ad7a24cbb717}{\+\_\+\+\_\+add}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const override
+\begin{DoxyCompactList}\small\item\em Compute the result of adding this value and the supplied value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a70c09fb5e8df4b7f242567bd7d085785}\label{classTang_1_1ComputedExpressionInteger_a70c09fb5e8df4b7f242567bd7d085785}} 
+class {\bfseries Computed\+Expression\+Float}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -64,6 +72,28 @@ Construct an Integer result.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_ab9c7c7ad34978c127b92ad7a24cbb717}\label{classTang_1_1ComputedExpressionInteger_ab9c7c7ad34978c127b92ad7a24cbb717}} 
+\index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_add@{\_\_add}}
+\index{\_\_add@{\_\_add}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
+\doxysubsubsection{\texorpdfstring{\_\_add()}{\_\_add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Integer\+::\+\_\+\+\_\+add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compute the result of adding this value and the supplied value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value to add to this. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a7265dda9f1e6db478f0c1cd9c3e37aa9}{Tang\+::\+Computed\+Expression}}.
+
 \mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a02e4a8bba8b37bf02e5ec3fd1e25f094}\label{classTang_1_1ComputedExpressionInteger_a02e4a8bba8b37bf02e5ec3fd1e25f094}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!dump@{dump}}
 \index{dump@{dump}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}

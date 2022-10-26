@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['addbytecode_119',['addBytecode',['../classTang_1_1Program.html#a4254d779b88df527ae5b21c4f331b2a6',1,'Tang::Program']]],
-  ['astnode_120',['AstNode',['../classTang_1_1AstNode.html#a17cadf7ca51469e42bf405925af27e9e',1,'Tang::AstNode']]],
-  ['astnodefloat_121',['AstNodeFloat',['../classTang_1_1AstNodeFloat.html#a8a2796acfc946fe6403eae67c1708f3b',1,'Tang::AstNodeFloat']]],
-  ['astnodeinteger_122',['AstNodeInteger',['../classTang_1_1AstNodeInteger.html#adf60f30feb3ebb630e9396f5f2cd1b58',1,'Tang::AstNodeInteger']]]
+  ['_5f_5fadd_126',['__add',['../classTang_1_1ComputedExpression.html#a7265dda9f1e6db478f0c1cd9c3e37aa9',1,'Tang::ComputedExpression::__add()'],['../classTang_1_1ComputedExpressionInteger.html#ab9c7c7ad34978c127b92ad7a24cbb717',1,'Tang::ComputedExpressionInteger::__add()'],['../classTang_1_1ComputedExpressionFloat.html#a024d709f222a059b2c70c7e84aec6ec4',1,'Tang::ComputedExpressionFloat::__add()']]]
 ];

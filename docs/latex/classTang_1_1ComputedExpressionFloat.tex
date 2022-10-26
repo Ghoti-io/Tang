@@ -11,8 +11,7 @@ Represents a Float that is the result of a computation.
 
 
 
-Inheritance diagram for Tang\+::Computed\+Expression\+Float\+:
-\nopagebreak
+Inheritance diagram for Tang\+::Computed\+Expression\+Float\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for Tang\+::Computed\+Expression\+Float\+:
 \end{figure}
 
 
-Collaboration diagram for Tang\+::Computed\+Expression\+Float\+:
-\nopagebreak
+Collaboration diagram for Tang\+::Computed\+Expression\+Float\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -41,7 +39,15 @@ virtual std\+::string \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a327
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a921bc45b51873d475c2624272104f1eb}{is\+\_\+equal}} (const int \&val) const override
 \begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_ab0d52e07e4bc34a81872d1f1da49adeb}{is\+\_\+equal}} (const double \&val) const override
-\begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a024d709f222a059b2c70c7e84aec6ec4}{\+\_\+\+\_\+add}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const override
+\begin{DoxyCompactList}\small\item\em Compute the result of adding this value and the supplied value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionFloat_a704b4c1b116ecb8978093c2d335fde0e}\label{classTang_1_1ComputedExpressionFloat_a704b4c1b116ecb8978093c2d335fde0e}} 
+class {\bfseries Computed\+Expression\+Integer}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -66,6 +72,28 @@ Construct a Float result.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionFloat_a024d709f222a059b2c70c7e84aec6ec4}\label{classTang_1_1ComputedExpressionFloat_a024d709f222a059b2c70c7e84aec6ec4}} 
+\index{Tang::ComputedExpressionFloat@{Tang::ComputedExpressionFloat}!\_\_add@{\_\_add}}
+\index{\_\_add@{\_\_add}!Tang::ComputedExpressionFloat@{Tang::ComputedExpressionFloat}}
+\doxysubsubsection{\texorpdfstring{\_\_add()}{\_\_add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Float\+::\+\_\+\+\_\+add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compute the result of adding this value and the supplied value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value to add to this. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a7265dda9f1e6db478f0c1cd9c3e37aa9}{Tang\+::\+Computed\+Expression}}.
+
 \mbox{\Hypertarget{classTang_1_1ComputedExpressionFloat_a327db49914ba138b70c2403ebf609635}\label{classTang_1_1ComputedExpressionFloat_a327db49914ba138b70c2403ebf609635}} 
 \index{Tang::ComputedExpressionFloat@{Tang::ComputedExpressionFloat}!dump@{dump}}
 \index{dump@{dump}!Tang::ComputedExpressionFloat@{Tang::ComputedExpressionFloat}}
@@ -144,8 +172,7 @@ A pointer to the new \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\
 
 Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_abf7820ae7313878aa37573cce35eb613}{Tang\+::\+Computed\+Expression}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

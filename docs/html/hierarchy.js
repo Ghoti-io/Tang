@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "Tang::AstNode", "classTang_1_1AstNode.html", [
+      [ "Tang::AstNodeAdd", "classTang_1_1AstNodeAdd.html", null ],
       [ "Tang::AstNodeFloat", "classTang_1_1AstNodeFloat.html", null ],
       [ "Tang::AstNodeInteger", "classTang_1_1AstNodeInteger.html", null ]
     ] ],
