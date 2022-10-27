@@ -8,8 +8,9 @@
 #define TANG_HPP
 
 #include "tangBase.hpp"
-#include "ast.hpp"
+#include "astNode.hpp"
 #include "error.hpp"
+#include "garbageCollected.hpp"
 #include "program.hpp"
 
 #endif // TANG_HPP

@@ -5,7 +5,7 @@
 #ifndef TANG_ASTNODEADD_HPP
 #define TANG_ASTNODEADD_HPP
 
-#include "ast.hpp"
+#include "astNode.hpp"
 
 namespace Tang {
   /**

@@ -3,8 +3,8 @@
  * Define the Tang::AstNode and its associated/derivative classes.
  */
 
-#ifndef TANG_AST_HPP
-#define TANG_AST_HPP
+#ifndef TANG_ASTNODE_HPP
+#define TANG_ASTNODE_HPP
 
 #include <string>
 #include "location.hh"
@@ -59,5 +59,5 @@ namespace Tang {
   };
 }
 
-#endif // TANG_AST_HPP
+#endif // TANG_ASTNODE_HPP
 

@@ -3,7 +3,7 @@
  */
 
 #include <iostream>
-#include "ast.hpp"
+#include "astNode.hpp"
 
 using namespace std;
 using namespace Tang;

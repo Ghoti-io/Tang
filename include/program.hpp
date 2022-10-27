@@ -9,7 +9,7 @@
 #include <string>
 #include <optional>
 #include <vector>
-#include "ast.hpp"
+#include "astNode.hpp"
 #include "error.hpp"
 #include "computedExpression.hpp"
 #include "garbageCollected.hpp"

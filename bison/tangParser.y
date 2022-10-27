@@ -97,7 +97,7 @@
 // `requires` will be included in the .hpp file.
 %code requires {
 #include <stdint.h>
-#include "ast.hpp"
+#include "astNode.hpp"
 #include "error.hpp"
 namespace Tang {
   class TangScanner;
@@ -109,6 +109,9 @@ namespace Tang {
 #include "tangScanner.hpp"
 #include "tangParser.hpp"
 #include "location.hh"
+#include "astNodeAdd.hpp"
+#include "astNodeFloat.hpp"
+#include "astNodeInteger.hpp"
 
 // We must provide the yylex() function.
 // yylex() arguments are defined in the bison .y file.
