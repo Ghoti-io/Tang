@@ -1,15 +1,28 @@
 var dir_d44c64559bbebec7f509842c48db8b23 =
 [
     [ "ast.hpp", "ast_8hpp.html", [
-      [ "AstNode", "classTang_1_1AstNode.html", "classTang_1_1AstNode" ],
-      [ "AstNodeInteger", "classTang_1_1AstNodeInteger.html", "classTang_1_1AstNodeInteger" ],
-      [ "AstNodeFloat", "classTang_1_1AstNodeFloat.html", "classTang_1_1AstNodeFloat" ],
+      [ "AstNode", "classTang_1_1AstNode.html", "classTang_1_1AstNode" ]
+    ] ],
+    [ "astNodeAdd.hpp", "astNodeAdd_8hpp.html", [
       [ "AstNodeAdd", "classTang_1_1AstNodeAdd.html", "classTang_1_1AstNodeAdd" ]
     ] ],
+    [ "astNodeFloat.hpp", "astNodeFloat_8hpp.html", [
+      [ "AstNodeFloat", "classTang_1_1AstNodeFloat.html", "classTang_1_1AstNodeFloat" ]
+    ] ],
+    [ "astNodeInteger.hpp", "astNodeInteger_8hpp.html", [
+      [ "AstNodeInteger", "classTang_1_1AstNodeInteger.html", "classTang_1_1AstNodeInteger" ]
+    ] ],
     [ "computedExpression.hpp", "computedExpression_8hpp.html", [
-      [ "ComputedExpression", "classTang_1_1ComputedExpression.html", "classTang_1_1ComputedExpression" ],
-      [ "ComputedExpressionInteger", "classTang_1_1ComputedExpressionInteger.html", "classTang_1_1ComputedExpressionInteger" ],
+      [ "ComputedExpression", "classTang_1_1ComputedExpression.html", "classTang_1_1ComputedExpression" ]
+    ] ],
+    [ "computedExpressionError.hpp", "computedExpressionError_8hpp.html", [
+      [ "ComputedExpressionError", "classTang_1_1ComputedExpressionError.html", "classTang_1_1ComputedExpressionError" ]
+    ] ],
+    [ "computedExpressionFloat.hpp", "computedExpressionFloat_8hpp.html", [
       [ "ComputedExpressionFloat", "classTang_1_1ComputedExpressionFloat.html", "classTang_1_1ComputedExpressionFloat" ]
+    ] ],
+    [ "computedExpressionInteger.hpp", "computedExpressionInteger_8hpp.html", [
+      [ "ComputedExpressionInteger", "classTang_1_1ComputedExpressionInteger.html", "classTang_1_1ComputedExpressionInteger" ]
     ] ],
     [ "error.hpp", "error_8hpp.html", [
       [ "Error", "classTang_1_1Error.html", "classTang_1_1Error" ]

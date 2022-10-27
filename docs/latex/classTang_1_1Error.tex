@@ -24,6 +24,8 @@ Collaboration diagram for Tang\+::Error\+:\nopagebreak
 \mbox{\Hypertarget{classTang_1_1Error_a596b19b49c8474afc01803a4a6dfb5b0}\label{classTang_1_1Error_a596b19b49c8474afc01803a4a6dfb5b0}} 
 \mbox{\hyperlink{classTang_1_1Error_a596b19b49c8474afc01803a4a6dfb5b0}{Error}} ()
 \begin{DoxyCompactList}\small\item\em Creates an empty error message. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTang_1_1Error_a6f28a4aa3ffc45ec560dd966f73c185d}{Error}} (std\+::string \mbox{\hyperlink{classTang_1_1Error_a03780cc93b440ae9964399989af02573}{message}})
+\begin{DoxyCompactList}\small\item\em Creates an error message using the supplied error string and location. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTang_1_1Error_a1e2eecd3e4f8e648d22bc932e3ac2995}{Error}} (std\+::string \mbox{\hyperlink{classTang_1_1Error_a03780cc93b440ae9964399989af02573}{message}}, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
 \begin{DoxyCompactList}\small\item\em Creates an error message using the supplied error string and location. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
@@ -41,10 +43,25 @@ std\+::string \mbox{\hyperlink{classTang_1_1Error_a03780cc93b440ae9964399989af02
 The \mbox{\hyperlink{classTang_1_1Error}{Error}} class is used to report any error of the system, whether a syntax (parsing) error or a runtime (execution) error. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTang_1_1Error_a6f28a4aa3ffc45ec560dd966f73c185d}\label{classTang_1_1Error_a6f28a4aa3ffc45ec560dd966f73c185d}} 
+\index{Tang::Error@{Tang::Error}!Error@{Error}}
+\index{Error@{Error}!Tang::Error@{Tang::Error}}
+\doxysubsubsection{\texorpdfstring{Error()}{Error()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tang\+::\+Error\+::\+Error (\begin{DoxyParamCaption}\item[{std\+::string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates an error message using the supplied error string and location. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The error message as a string. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classTang_1_1Error_a1e2eecd3e4f8e648d22bc932e3ac2995}\label{classTang_1_1Error_a1e2eecd3e4f8e648d22bc932e3ac2995}} 
 \index{Tang::Error@{Tang::Error}!Error@{Error}}
 \index{Error@{Error}!Tang::Error@{Tang::Error}}
-\doxysubsubsection{\texorpdfstring{Error()}{Error()}}
+\doxysubsubsection{\texorpdfstring{Error()}{Error()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily Tang\+::\+Error\+::\+Error (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{location }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 

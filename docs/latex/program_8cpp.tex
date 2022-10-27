@@ -8,6 +8,9 @@
 {\ttfamily \#include \char`\"{}tang\+Scanner.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}tang\+Parser.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}opcode.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}computed\+Expression\+Error.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}computed\+Expression\+Integer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}computed\+Expression\+Float.\+hpp\char`\"{}}\newline
 Include dependency graph for program.\+cpp\+:
 \nopagebreak
 \begin{figure}[H]
@@ -60,7 +63,7 @@ If the vector is not large enough, an error message is appended to the output st
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{  \textcolor{keywordflow}{if} (this-\/>bytecode.size() < (pc + (x))) \{ \(\backslash\)}
-\DoxyCodeLine{    \textcolor{comment}{/* TODO push an error on to the stack! */} \(\backslash\)}
+\DoxyCodeLine{    stack.push\_back(GarbageCollected::make<ComputedExpressionError>(\mbox{\hyperlink{classTang_1_1Error}{Error}}\{\textcolor{stringliteral}{"{}Opcode instruction truncated."{}}\})); \(\backslash\)}
 \DoxyCodeLine{    pc = this-\/>bytecode.size(); \(\backslash\)}
 \DoxyCodeLine{    break; \(\backslash\)}
 \DoxyCodeLine{  \}}
@@ -84,7 +87,7 @@ Verify the size of the Bytecode vector so that it may be safely accessed.
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{  \textcolor{keywordflow}{if} (stack.size() < (fp + (x))) \{ \(\backslash\)}
-\DoxyCodeLine{    \textcolor{comment}{/* TODO push an error on to the stack! */} \(\backslash\)}
+\DoxyCodeLine{    stack.push\_back(GarbageCollected::make<ComputedExpressionError>(\mbox{\hyperlink{classTang_1_1Error}{Error}}\{\textcolor{stringliteral}{"{}Insufficient stack depth."{}}\})); \(\backslash\)}
 \DoxyCodeLine{    pc = this-\/>bytecode.size(); \(\backslash\)}
 \DoxyCodeLine{    break; \(\backslash\)}
 \DoxyCodeLine{  \}}
