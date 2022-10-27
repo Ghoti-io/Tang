@@ -85,7 +85,7 @@
 
   \indexspace
 
-  \item {include/ast.hpp}, \hyperpage{57}
+  \item {include/astNode.hpp}, \hyperpage{57}
   \item {include/astNodeAdd.hpp}, \hyperpage{58}
   \item {include/astNodeFloat.hpp}, \hyperpage{59}
   \item {include/astNodeInteger.hpp}, \hyperpage{60}
@@ -170,7 +170,7 @@
 
   \item {Script}
     \subitem {Tang::Program}, \hyperpage{47}
-  \item {src/ast.cpp}, \hyperpage{73}
+  \item {src/astNode.cpp}, \hyperpage{73}
   \item {src/astNodeAdd.cpp}, \hyperpage{73}
   \item {src/astNodeFloat.cpp}, \hyperpage{74}
   \item {src/astNodeInteger.cpp}, \hyperpage{74}

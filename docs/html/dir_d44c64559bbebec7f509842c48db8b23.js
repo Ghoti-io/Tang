@@ -1,6 +1,6 @@
 var dir_d44c64559bbebec7f509842c48db8b23 =
 [
-    [ "ast.hpp", "ast_8hpp.html", [
+    [ "astNode.hpp", "astNode_8hpp.html", [
       [ "AstNode", "classTang_1_1AstNode.html", "classTang_1_1AstNode" ]
     ] ],
     [ "astNodeAdd.hpp", "astNodeAdd_8hpp.html", [
