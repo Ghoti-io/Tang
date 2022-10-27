@@ -5,7 +5,7 @@ using namespace Tang;
 
 namespace Tang {
   std::ostream & operator<<(std::ostream & out, const GarbageCollected & gc) {
-    return out << gc->dump();
+    return out << (gc.ref ? gc.ref->dump() : "");
   }
 }
 
