@@ -7,7 +7,7 @@ GEN_DIR := $(BUILD)/generated
 APP_DIR := $(BUILD)/apps
 TARGET := libtang.so
 INCLUDE := -I include/ -I $(GEN_DIR)/
-LIBOBJECTS := $(OBJ_DIR)/ast.o $(OBJ_DIR)/computedExpression.o $(OBJ_DIR)/error.o $(OBJ_DIR)/garbageCollected.o $(OBJ_DIR)/program.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o
+LIBOBJECTS := $(OBJ_DIR)/ast.o $(OBJ_DIR)/computedExpression.o $(OBJ_DIR)/computedExpressionError.o $(OBJ_DIR)/error.o $(OBJ_DIR)/garbageCollected.o $(OBJ_DIR)/program.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o
 TESTFLAGS := `pkg-config --libs --cflags gtest`
 
 
@@ -50,6 +50,11 @@ $(OBJ_DIR)/ast.o: src/ast.cpp include/ast.hpp include/macros.hpp include/opcode.
 
 $(OBJ_DIR)/computedExpression.o: src/computedExpression.cpp include/computedExpression.hpp
 	@echo "\n### Compiling computedExpression.o ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
+
+$(OBJ_DIR)/computedExpressionError.o: src/computedExpressionError.cpp include/computedExpressionError.hpp include/computedExpression.hpp include/error.hpp
+	@echo "\n### Compiling computedExpressionError.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 

@@ -10,6 +10,7 @@
 #include "tangScanner.hpp"
 #include "tangParser.hpp"
 #include "opcode.hpp"
+#include "computedExpressionError.hpp"
 
 using namespace std;
 using namespace Tang;
@@ -33,7 +34,7 @@ using namespace Tang;
  */
 #define EXECUTEPROGRAMCHECK(x) \
   if (this->bytecode.size() < (pc + (x))) { \
-    /* TODO push an error on to the stack! */ \
+    stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Opcode instruction truncated."})); \
     pc = this->bytecode.size(); \
     break; \
   }
@@ -45,7 +46,7 @@ using namespace Tang;
  */
 #define STACKCHECK(x) \
   if (stack.size() < (fp + (x))) { \
-    /* TODO push an error on to the stack! */ \
+    stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Insufficient stack depth."})); \
     pc = this->bytecode.size(); \
     break; \
   }
@@ -218,8 +219,7 @@ Program& Program::execute() {
   // Verify that there is at least one value on the stack.  If not, set a
   // runtime error.
   if (!stack.size()) {
-    // TODO Set a runtime error!
-    return *this;
+    stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Stack is empty."}));
   }
 
   // Empty the stack, but save the top of the stack.

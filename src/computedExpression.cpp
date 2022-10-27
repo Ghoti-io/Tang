@@ -3,6 +3,7 @@
  */
 
 #include "computedExpression.hpp"
+#include "computedExpressionError.hpp"
 
 using namespace std;
 using namespace Tang;
@@ -26,8 +27,7 @@ bool ComputedExpression::is_equal([[maybe_unused]] const double & val) const {
 }
 
 GarbageCollected ComputedExpression::__add([[maybe_unused]] const GarbageCollected & rhs) const {
-  // TODO Return an error.
-  return GarbageCollected::make<ComputedExpressionInteger>(0);
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to add these values."});
 }
 
 ComputedExpressionInteger::ComputedExpressionInteger(int64_t val) : val{val} {}
@@ -60,8 +60,7 @@ GarbageCollected ComputedExpressionInteger::__add(const GarbageCollected & rhs) 
         this->val + rhsConv.val);
   }
 
-  // TODO Return an error.
-  return GarbageCollected::make<ComputedExpressionInteger>(0);
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to add these values."});
 }
 
 ComputedExpressionFloat::ComputedExpressionFloat(double val) : val{val} {}
@@ -94,7 +93,6 @@ GarbageCollected ComputedExpressionFloat::__add([[maybe_unused]] const GarbageCo
         this->val + rhsConv.val);
   }
 
-  // TODO Return an error.
-  return GarbageCollected::make<ComputedExpressionInteger>(0);
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to add these values."});
 }
 

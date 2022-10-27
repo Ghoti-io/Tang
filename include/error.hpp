@@ -25,6 +25,13 @@ namespace Tang {
      * Creates an error message using the supplied error string and location.
      *
      * @param message The error message as a string.
+     */
+    Error(std::string message) : message{message} {}
+
+    /**
+     * Creates an error message using the supplied error string and location.
+     *
+     * @param message The error message as a string.
      * @param location The location of the error.
      */
     Error(std::string message, Tang::location location) : message{message}, location{location} {}
