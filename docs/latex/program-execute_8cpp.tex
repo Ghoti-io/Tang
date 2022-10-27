@@ -1,0 +1,74 @@
+\hypertarget{program-execute_8cpp}{}\doxysection{src/program-\/execute.cpp File Reference}
+\label{program-execute_8cpp}\index{src/program-\/execute.cpp@{src/program-\/execute.cpp}}
+{\ttfamily \#include $<$bit$>$}\newline
+{\ttfamily \#include \char`\"{}program.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opcode.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}computed\+Expression\+Error.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}computed\+Expression\+Integer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}computed\+Expression\+Float.\+hpp\char`\"{}}\newline
+Include dependency graph for program-\/execute.cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{program-execute_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{program-execute_8cpp_a9ded9c6308c1d34a5872db3199e9c973}{EXECUTEPROGRAMCHECK}}(x)
+\begin{DoxyCompactList}\small\item\em Verify the size of the Bytecode vector so that it may be safely accessed. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{program-execute_8cpp_a80c4bdcb0e9c9c0eebdb1488ad68aa38}{STACKCHECK}}(x)
+\begin{DoxyCompactList}\small\item\em Verify the size of the stack vector so that it may be safely accessed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{program-execute_8cpp_a9ded9c6308c1d34a5872db3199e9c973}\label{program-execute_8cpp_a9ded9c6308c1d34a5872db3199e9c973}} 
+\index{program-\/execute.cpp@{program-\/execute.cpp}!EXECUTEPROGRAMCHECK@{EXECUTEPROGRAMCHECK}}
+\index{EXECUTEPROGRAMCHECK@{EXECUTEPROGRAMCHECK}!program-\/execute.cpp@{program-\/execute.cpp}}
+\doxysubsubsection{\texorpdfstring{EXECUTEPROGRAMCHECK}{EXECUTEPROGRAMCHECK}}
+{\footnotesize\ttfamily \#define EXECUTEPROGRAMCHECK(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (this-\/>bytecode.size() < (pc + (x))) \{ \(\backslash\)}
+\DoxyCodeLine{    stack.push\_back(GarbageCollected::make<ComputedExpressionError>(\mbox{\hyperlink{classTang_1_1Error}{Error}}\{\textcolor{stringliteral}{"{}Opcode instruction truncated."{}}\})); \(\backslash\)}
+\DoxyCodeLine{    pc = this-\/>bytecode.size(); \(\backslash\)}
+\DoxyCodeLine{    break; \(\backslash\)}
+\DoxyCodeLine{  \}}
+
+\end{DoxyCode}
+
+
+Verify the size of the Bytecode vector so that it may be safely accessed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The number of additional vector entries that should exist. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{program-execute_8cpp_a80c4bdcb0e9c9c0eebdb1488ad68aa38}\label{program-execute_8cpp_a80c4bdcb0e9c9c0eebdb1488ad68aa38}} 
+\index{program-\/execute.cpp@{program-\/execute.cpp}!STACKCHECK@{STACKCHECK}}
+\index{STACKCHECK@{STACKCHECK}!program-\/execute.cpp@{program-\/execute.cpp}}
+\doxysubsubsection{\texorpdfstring{STACKCHECK}{STACKCHECK}}
+{\footnotesize\ttfamily \#define STACKCHECK(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (stack.size() < (fp + (x))) \{ \(\backslash\)}
+\DoxyCodeLine{    stack.push\_back(GarbageCollected::make<ComputedExpressionError>(\mbox{\hyperlink{classTang_1_1Error}{Error}}\{\textcolor{stringliteral}{"{}Insufficient stack depth."{}}\})); \(\backslash\)}
+\DoxyCodeLine{    pc = this-\/>bytecode.size(); \(\backslash\)}
+\DoxyCodeLine{    break; \(\backslash\)}
+\DoxyCodeLine{  \}}
+
+\end{DoxyCode}
+
+
+Verify the size of the stack vector so that it may be safely accessed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The number of entries that should exist in the stack. \\
+\hline
+\end{DoxyParams}

@@ -50,7 +50,7 @@
   \item {dumpBytecode}
     \subitem {Tang::Program}, \hyperpage{48}
   \item {DUMPPROGRAMCHECK}
-    \subitem {program.cpp}, \hyperpage{79}
+    \subitem {program-\/dumpBytecode.cpp}, \hyperpage{79}
 
   \indexspace
 
@@ -59,7 +59,7 @@
   \item {execute}
     \subitem {Tang::Program}, \hyperpage{48}
   \item {EXECUTEPROGRAMCHECK}
-    \subitem {program.cpp}, \hyperpage{79}
+    \subitem {program-\/execute.cpp}, \hyperpage{80}
 
   \indexspace
 
@@ -156,9 +156,10 @@
 
   \item {Program}
     \subitem {Tang::Program}, \hyperpage{47}
-  \item {program.cpp}
+  \item {program-\/dumpBytecode.cpp}
     \subitem {DUMPPROGRAMCHECK}, \hyperpage{79}
-    \subitem {EXECUTEPROGRAMCHECK}, \hyperpage{79}
+  \item {program-\/execute.cpp}
+    \subitem {EXECUTEPROGRAMCHECK}, \hyperpage{80}
     \subitem {STACKCHECK}, \hyperpage{80}
 
   \indexspace
@@ -179,10 +180,12 @@
   \item {src/computedExpressionFloat.cpp}, \hyperpage{76}
   \item {src/computedExpressionInteger.cpp}, \hyperpage{77}
   \item {src/error.cpp}, \hyperpage{78}
-  \item {src/program.cpp}, \hyperpage{78}
-  \item {src/tangBase.cpp}, \hyperpage{80}
+  \item {src/program-\/dumpBytecode.cpp}, \hyperpage{78}
+  \item {src/program-\/execute.cpp}, \hyperpage{79}
+  \item {src/program.cpp}, \hyperpage{81}
+  \item {src/tangBase.cpp}, \hyperpage{81}
   \item {STACKCHECK}
-    \subitem {program.cpp}, \hyperpage{80}
+    \subitem {program-\/execute.cpp}, \hyperpage{80}
 
   \indexspace
 
@@ -263,6 +266,6 @@
     \subitem {Tang::TangScanner}, \hyperpage{53}
   \item {Template}
     \subitem {Tang::Program}, \hyperpage{47}
-  \item {test/testSingletonObjectPool.cpp}, \hyperpage{80}
+  \item {test/testSingletonObjectPool.cpp}, \hyperpage{82}
 
 \end{theindex}

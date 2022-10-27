@@ -1,0 +1,47 @@
+\hypertarget{program-dumpBytecode_8cpp}{}\doxysection{src/program-\/dump\+Bytecode.cpp File Reference}
+\label{program-dumpBytecode_8cpp}\index{src/program-\/dumpBytecode.cpp@{src/program-\/dumpBytecode.cpp}}
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$bit$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include \char`\"{}program.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opcode.\+hpp\char`\"{}}\newline
+Include dependency graph for program-\/dump\+Bytecode.cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{program-dumpBytecode_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{program-dumpBytecode_8cpp_ad2842e810a7f95f018888a1da1d03d52}{DUMPPROGRAMCHECK}}(x)
+\begin{DoxyCompactList}\small\item\em Verify the size of the Bytecode vector so that it may be safely accessed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{program-dumpBytecode_8cpp_ad2842e810a7f95f018888a1da1d03d52}\label{program-dumpBytecode_8cpp_ad2842e810a7f95f018888a1da1d03d52}} 
+\index{program-\/dumpBytecode.cpp@{program-\/dumpBytecode.cpp}!DUMPPROGRAMCHECK@{DUMPPROGRAMCHECK}}
+\index{DUMPPROGRAMCHECK@{DUMPPROGRAMCHECK}!program-\/dumpBytecode.cpp@{program-\/dumpBytecode.cpp}}
+\doxysubsubsection{\texorpdfstring{DUMPPROGRAMCHECK}{DUMPPROGRAMCHECK}}
+{\footnotesize\ttfamily \#define DUMPPROGRAMCHECK(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (this-\/>bytecode.size() < (pc + (x))) \(\backslash\)}
+\DoxyCodeLine{    return out.str() + \textcolor{stringliteral}{"{}Error: Opcode truncated\(\backslash\)n"{}}}
+
+\end{DoxyCode}
+
+
+Verify the size of the Bytecode vector so that it may be safely accessed. 
+
+If the vector is not large enough, an error message is appended to the output string and no further opcodes are printed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The number of additional vector entries that should exist. \\
+\hline
+\end{DoxyParams}
