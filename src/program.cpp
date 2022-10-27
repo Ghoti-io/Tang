@@ -11,6 +11,8 @@
 #include "tangParser.hpp"
 #include "opcode.hpp"
 #include "computedExpressionError.hpp"
+#include "computedExpressionInteger.hpp"
+#include "computedExpressionFloat.hpp"
 
 using namespace std;
 using namespace Tang;

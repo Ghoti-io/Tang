@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
 #include "garbageCollected.hpp"
 #include "computedExpression.hpp"
+#include "computedExpressionInteger.hpp"
 
 using namespace std;
 using namespace Tang;

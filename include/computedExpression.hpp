@@ -64,60 +64,6 @@ namespace Tang {
        */
       virtual GarbageCollected __add(const GarbageCollected & rhs) const;
   };
-
-  /**
-   * Represents an Integer that is the result of a computation.
-   */
-  class ComputedExpressionInteger : public ComputedExpression {
-    public:
-      /**
-       * Construct an Integer result.
-       *
-       * @param val The integer value.
-       */
-      ComputedExpressionInteger(int64_t val);
-
-      virtual std::string dump() const override;
-      ComputedExpression * makeCopy() const override;
-      virtual bool is_equal(const int & val) const override;
-      virtual bool is_equal(const double & val) const override;
-      virtual GarbageCollected __add(const GarbageCollected & rhs) const override;
-
-      friend class ComputedExpressionFloat;
-
-    private:
-      /**
-       * The integer value.
-       */
-      int64_t val;
-  };
-
-  /**
-   * Represents a Float that is the result of a computation.
-   */
-  class ComputedExpressionFloat: public ComputedExpression {
-    public:
-      /**
-       * Construct a Float result.
-       *
-       * @param val The float value.
-       */
-      ComputedExpressionFloat(double val);
-
-      virtual std::string dump() const override;
-      ComputedExpression * makeCopy() const override;
-      virtual bool is_equal(const int & val) const override;
-      virtual bool is_equal(const double & val) const override;
-      virtual GarbageCollected __add(const GarbageCollected & rhs) const override;
-
-      friend class ComputedExpressionInteger;
-
-    private:
-      /**
-       * The float value.
-       */
-      double val;
-  };
 }
 
 #endif // TANG_COMPUTEDEXPRESSION_HPP
