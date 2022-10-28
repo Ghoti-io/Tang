@@ -11,7 +11,8 @@ A container that acts as a resource-\/counting garbage collector for the specifi
 
 
 
-Collaboration diagram for Tang\+::Garbage\+Collected\+:\nopagebreak
+Collaboration diagram for Tang\+::Garbage\+Collected\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -40,7 +41,11 @@ bool \mbox{\hyperlink{classTang_1_1GarbageCollected_a53b7c1a0acbfdcc97fedc0d3452
 bool \mbox{\hyperlink{classTang_1_1GarbageCollected_a263e467195dd443b0ad1ef72753d3bee}{operator==}} (const double \&val) const
 \begin{DoxyCompactList}\small\item\em Compare the \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} tracked object with a supplied value. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1GarbageCollected_aecc3c9f3d355fe43e5bf3db6a7cccb2d}{operator+}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const
-\begin{DoxyCompactList}\small\item\em Perform an addition between two \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Perform an addition between two \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1GarbageCollected_ab07b787947ec0f4451b14bf631d489a5}{operator-\/}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Perform a subtraction between two \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1GarbageCollected_a67e99aa13b932a0894e6bb5301417e69}{operator-\/}} () const
+\begin{DoxyCompactList}\small\item\em Perform a negation on the \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -155,7 +160,8 @@ Creates a garbage-\/collected object of the specified type.
 \begin{DoxyReturn}{Returns}
 A \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} object. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -193,11 +199,59 @@ Perform an addition between two \mbox{\hyperlink{classTang_1_1GarbageCollected}{
 \begin{DoxyReturn}{Returns}
 The result of the operation. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classTang_1_1GarbageCollected_aecc3c9f3d355fe43e5bf3db6a7cccb2d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTang_1_1GarbageCollected_a67e99aa13b932a0894e6bb5301417e69}\label{classTang_1_1GarbageCollected_a67e99aa13b932a0894e6bb5301417e69}} 
+\index{Tang::GarbageCollected@{Tang::GarbageCollected}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Tang::GarbageCollected@{Tang::GarbageCollected}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Garbage\+Collected\+::operator-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Perform a negation on the \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value. 
+
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTang_1_1GarbageCollected_a67e99aa13b932a0894e6bb5301417e69_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTang_1_1GarbageCollected_ab07b787947ec0f4451b14bf631d489a5}\label{classTang_1_1GarbageCollected_ab07b787947ec0f4451b14bf631d489a5}} 
+\index{Tang::GarbageCollected@{Tang::GarbageCollected}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Tang::GarbageCollected@{Tang::GarbageCollected}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Garbage\+Collected\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Perform a subtraction between two \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The right hand side operand. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTang_1_1GarbageCollected_ab07b787947ec0f4451b14bf631d489a5_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classTang_1_1GarbageCollected_ae9f5eb28dec34650dd8f74f0dc4f2e3c}\label{classTang_1_1GarbageCollected_ae9f5eb28dec34650dd8f74f0dc4f2e3c}} 
@@ -228,7 +282,8 @@ Copy Assignment.
 {\em The} & other \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} object. \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -250,7 +305,8 @@ Move Assignment.
 {\em The} & other \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} object. \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

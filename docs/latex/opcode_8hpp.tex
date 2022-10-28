@@ -5,7 +5,8 @@
 Declare the Opcodes used in the Bytecode representation of a program.  
 
 
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,9 +16,13 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum class \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04}{Tang\+::\+Opcode}} \{ \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a5d5cd46919fa987731fb2edefe0f2a0c}{INTEGER}}
+enum class \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04}{Tang\+::\+Opcode}} \{ \newline
+\mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a5d5cd46919fa987731fb2edefe0f2a0c}{INTEGER}}
 , \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04ae738c26bf4ce1037fa81b039a915cbf6}{FLOAT}}
 , \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a9eeb52badb613229884838847294b90d}{ADD}}
+, \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a23ebcc4776b613af25dfbe7c8ce4813e}{SUBTRACT}}
+, \newline
+\mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a50546bf973283065b6ccf09faf7a580a}{NEGATIVE}}
  \}
 \end{DoxyCompactItemize}
 
@@ -45,6 +50,14 @@ FLOAT&Push a floating point number onto the stack. \\
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{ADD@{ADD}!opcode.hpp@{opcode.hpp}}\index{opcode.hpp@{opcode.hpp}!ADD@{ADD}}}\mbox{\Hypertarget{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a9eeb52badb613229884838847294b90d}\label{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a9eeb52badb613229884838847294b90d}} 
 ADD&Pop rhs, pop lhs, push lhs + rhs. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SUBTRACT@{SUBTRACT}!opcode.hpp@{opcode.hpp}}\index{opcode.hpp@{opcode.hpp}!SUBTRACT@{SUBTRACT}}}\mbox{\Hypertarget{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a23ebcc4776b613af25dfbe7c8ce4813e}\label{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a23ebcc4776b613af25dfbe7c8ce4813e}} 
+SUBTRACT&Pop rhs, pop lhs, push lhs -\/ rhs. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NEGATIVE@{NEGATIVE}!opcode.hpp@{opcode.hpp}}\index{opcode.hpp@{opcode.hpp}!NEGATIVE@{NEGATIVE}}}\mbox{\Hypertarget{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a50546bf973283065b6ccf09faf7a580a}\label{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a50546bf973283065b6ccf09faf7a580a}} 
+NEGATIVE&Pop val, push negative val. \\
 \hline
 
 \end{DoxyEnumFields}

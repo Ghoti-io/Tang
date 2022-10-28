@@ -134,6 +134,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7265dda9f1e6db478f0c1cd9c3e37aa9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpression.html#a7265dda9f1e6db478f0c1cd9c3e37aa9">__add</a> (const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;rhs) const</td></tr>
 <tr class="memdesc:a7265dda9f1e6db478f0c1cd9c3e37aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the result of adding this value and the supplied value.  <a href="classTang_1_1ComputedExpression.html#a7265dda9f1e6db478f0c1cd9c3e37aa9">More...</a><br /></td></tr>
 <tr class="separator:a7265dda9f1e6db478f0c1cd9c3e37aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0d79debcd475a5063e574c10f1715ff"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpression.html#ab0d79debcd475a5063e574c10f1715ff">__subtract</a> (const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:ab0d79debcd475a5063e574c10f1715ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the result of subtracting this value and the supplied value.  <a href="classTang_1_1ComputedExpression.html#ab0d79debcd475a5063e574c10f1715ff">More...</a><br /></td></tr>
+<tr class="separator:ab0d79debcd475a5063e574c10f1715ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e779d014cbb877f078d61a2ff91603d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpression.html#a8e779d014cbb877f078d61a2ff91603d">__negative</a> () const</td></tr>
+<tr class="memdesc:a8e779d014cbb877f078d61a2ff91603d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the result of negating this value.  <a href="classTang_1_1ComputedExpression.html#a8e779d014cbb877f078d61a2ff91603d">More...</a><br /></td></tr>
+<tr class="separator:a8e779d014cbb877f078d61a2ff91603d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a Runtime <a class="el" href="classTang_1_1Error.html" title="The Error class is used to report any error of the system, whether a syntax (parsing) error or a runt...">Error</a>. </p>
@@ -199,6 +205,73 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The result of the operation. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classTang_1_1ComputedExpressionInteger.html#ab9c7c7ad34978c127b92ad7a24cbb717">Tang::ComputedExpressionInteger</a>, and <a class="el" href="classTang_1_1ComputedExpressionFloat.html#a024d709f222a059b2c70c7e84aec6ec4">Tang::ComputedExpressionFloat</a>.</p>
+
+</div>
+</div>
+<a id="a8e779d014cbb877f078d61a2ff91603d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e779d014cbb877f078d61a2ff91603d">&#9670;&nbsp;</a></span>__negative()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> ComputedExpression::__negative </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute the result of negating this value. </p>
+<dl class="section return"><dt>Returns</dt><dd>The result of the operation. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classTang_1_1ComputedExpressionInteger.html#a50d5a488b02defd3c526696c5661800b">Tang::ComputedExpressionInteger</a>, and <a class="el" href="classTang_1_1ComputedExpressionFloat.html#a203faa00cd83e6746084287b0e2ac778">Tang::ComputedExpressionFloat</a>.</p>
+
+</div>
+</div>
+<a id="ab0d79debcd475a5063e574c10f1715ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0d79debcd475a5063e574c10f1715ff">&#9670;&nbsp;</a></span>__subtract()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> ComputedExpression::__subtract </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute the result of subtracting this value and the supplied value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>The <a class="el" href="classTang_1_1GarbageCollected.html" title="A container that acts as a resource-counting garbage collector for the specified type.">GarbageCollected</a> value to subtract from this. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result of the operation. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classTang_1_1ComputedExpressionInteger.html#a8a792a5911f9d90a4ff4e8ba99f5a657">Tang::ComputedExpressionInteger</a>, and <a class="el" href="classTang_1_1ComputedExpressionFloat.html#aa6e605b26eb90dbd2002be8215f754cf">Tang::ComputedExpressionFloat</a>.</p>
 
 </div>
 </div>

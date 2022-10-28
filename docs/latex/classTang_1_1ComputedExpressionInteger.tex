@@ -11,7 +11,8 @@ Represents an Integer that is the result of a computation.
 
 
 
-Inheritance diagram for Tang\+::Computed\+Expression\+Integer\+:\nopagebreak
+Inheritance diagram for Tang\+::Computed\+Expression\+Integer\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,7 +21,8 @@ Inheritance diagram for Tang\+::Computed\+Expression\+Integer\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Tang\+::Computed\+Expression\+Integer\+:\nopagebreak
+Collaboration diagram for Tang\+::Computed\+Expression\+Integer\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -41,7 +43,11 @@ virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ab297128beb
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_acd871176aea0d4c04bd03fbbeaee6482}{is\+\_\+equal}} (const double \&val) const override
 \begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ab9c7c7ad34978c127b92ad7a24cbb717}{\+\_\+\+\_\+add}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const override
-\begin{DoxyCompactList}\small\item\em Compute the result of adding this value and the supplied value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Compute the result of adding this value and the supplied value. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a8a792a5911f9d90a4ff4e8ba99f5a657}{\+\_\+\+\_\+subtract}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const override
+\begin{DoxyCompactList}\small\item\em Compute the result of subtracting this value and the supplied value. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a50d5a488b02defd3c526696c5661800b}{\+\_\+\+\_\+negative}} () const override
+\begin{DoxyCompactList}\small\item\em Compute the result of negating this value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -93,6 +99,45 @@ The result of the operation.
 
 
 Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a7265dda9f1e6db478f0c1cd9c3e37aa9}{Tang\+::\+Computed\+Expression}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a50d5a488b02defd3c526696c5661800b}\label{classTang_1_1ComputedExpressionInteger_a50d5a488b02defd3c526696c5661800b}} 
+\index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_negative@{\_\_negative}}
+\index{\_\_negative@{\_\_negative}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
+\doxysubsubsection{\texorpdfstring{\_\_negative()}{\_\_negative()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Integer\+::\+\_\+\+\_\+negative (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compute the result of negating this value. 
+
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a8e779d014cbb877f078d61a2ff91603d}{Tang\+::\+Computed\+Expression}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a8a792a5911f9d90a4ff4e8ba99f5a657}\label{classTang_1_1ComputedExpressionInteger_a8a792a5911f9d90a4ff4e8ba99f5a657}} 
+\index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_subtract@{\_\_subtract}}
+\index{\_\_subtract@{\_\_subtract}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
+\doxysubsubsection{\texorpdfstring{\_\_subtract()}{\_\_subtract()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Integer\+::\+\_\+\+\_\+subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compute the result of subtracting this value and the supplied value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value to subtract from this. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_ab0d79debcd475a5063e574c10f1715ff}{Tang\+::\+Computed\+Expression}}.
 
 \mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a02e4a8bba8b37bf02e5ec3fd1e25f094}\label{classTang_1_1ComputedExpressionInteger_a02e4a8bba8b37bf02e5ec3fd1e25f094}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!dump@{dump}}
@@ -172,7 +217,8 @@ A pointer to the new \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\
 
 Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_abf7820ae7313878aa37573cce35eb613}{Tang\+::\+Computed\+Expression}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

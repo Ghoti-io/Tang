@@ -2,6 +2,8 @@ var classTang_1_1ComputedExpressionFloat =
 [
     [ "ComputedExpressionFloat", "classTang_1_1ComputedExpressionFloat.html#a8058fe0ef6eae17923f424671aeef35d", null ],
     [ "__add", "classTang_1_1ComputedExpressionFloat.html#a024d709f222a059b2c70c7e84aec6ec4", null ],
+    [ "__negative", "classTang_1_1ComputedExpressionFloat.html#a203faa00cd83e6746084287b0e2ac778", null ],
+    [ "__subtract", "classTang_1_1ComputedExpressionFloat.html#aa6e605b26eb90dbd2002be8215f754cf", null ],
     [ "dump", "classTang_1_1ComputedExpressionFloat.html#a327db49914ba138b70c2403ebf609635", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionFloat.html#ab0d52e07e4bc34a81872d1f1da49adeb", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionFloat.html#a921bc45b51873d475c2624272104f1eb", null ],

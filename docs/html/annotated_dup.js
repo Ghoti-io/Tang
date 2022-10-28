@@ -5,6 +5,8 @@ var annotated_dup =
       [ "AstNodeAdd", "classTang_1_1AstNodeAdd.html", "classTang_1_1AstNodeAdd" ],
       [ "AstNodeFloat", "classTang_1_1AstNodeFloat.html", "classTang_1_1AstNodeFloat" ],
       [ "AstNodeInteger", "classTang_1_1AstNodeInteger.html", "classTang_1_1AstNodeInteger" ],
+      [ "AstNodeNegative", "classTang_1_1AstNodeNegative.html", "classTang_1_1AstNodeNegative" ],
+      [ "AstNodeSubtract", "classTang_1_1AstNodeSubtract.html", "classTang_1_1AstNodeSubtract" ],
       [ "ComputedExpression", "classTang_1_1ComputedExpression.html", "classTang_1_1ComputedExpression" ],
       [ "ComputedExpressionError", "classTang_1_1ComputedExpressionError.html", "classTang_1_1ComputedExpressionError" ],
       [ "ComputedExpressionFloat", "classTang_1_1ComputedExpressionFloat.html", "classTang_1_1ComputedExpressionFloat" ],

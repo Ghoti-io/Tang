@@ -3,7 +3,9 @@ var hierarchy =
     [ "Tang::AstNode", "classTang_1_1AstNode.html", [
       [ "Tang::AstNodeAdd", "classTang_1_1AstNodeAdd.html", null ],
       [ "Tang::AstNodeFloat", "classTang_1_1AstNodeFloat.html", null ],
-      [ "Tang::AstNodeInteger", "classTang_1_1AstNodeInteger.html", null ]
+      [ "Tang::AstNodeInteger", "classTang_1_1AstNodeInteger.html", null ],
+      [ "Tang::AstNodeNegative", "classTang_1_1AstNodeNegative.html", null ],
+      [ "Tang::AstNodeSubtract", "classTang_1_1AstNodeSubtract.html", null ]
     ] ],
     [ "Tang::ComputedExpression", "classTang_1_1ComputedExpression.html", [
       [ "Tang::ComputedExpressionError", "classTang_1_1ComputedExpressionError.html", null ],

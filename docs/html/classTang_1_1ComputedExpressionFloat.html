@@ -135,6 +135,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a024d709f222a059b2c70c7e84aec6ec4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionFloat.html#a024d709f222a059b2c70c7e84aec6ec4">__add</a> (const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;rhs) const override</td></tr>
 <tr class="memdesc:a024d709f222a059b2c70c7e84aec6ec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the result of adding this value and the supplied value.  <a href="classTang_1_1ComputedExpressionFloat.html#a024d709f222a059b2c70c7e84aec6ec4">More...</a><br /></td></tr>
 <tr class="separator:a024d709f222a059b2c70c7e84aec6ec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6e605b26eb90dbd2002be8215f754cf"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionFloat.html#aa6e605b26eb90dbd2002be8215f754cf">__subtract</a> (const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;rhs) const override</td></tr>
+<tr class="memdesc:aa6e605b26eb90dbd2002be8215f754cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the result of subtracting this value and the supplied value.  <a href="classTang_1_1ComputedExpressionFloat.html#aa6e605b26eb90dbd2002be8215f754cf">More...</a><br /></td></tr>
+<tr class="separator:aa6e605b26eb90dbd2002be8215f754cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a203faa00cd83e6746084287b0e2ac778"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionFloat.html#a203faa00cd83e6746084287b0e2ac778">__negative</a> () const override</td></tr>
+<tr class="memdesc:a203faa00cd83e6746084287b0e2ac778"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the result of negating this value.  <a href="classTang_1_1ComputedExpressionFloat.html#a203faa00cd83e6746084287b0e2ac778">More...</a><br /></td></tr>
+<tr class="separator:a203faa00cd83e6746084287b0e2ac778"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -206,6 +212,73 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>ComputedExpressionIn
 <dl class="section return"><dt>Returns</dt><dd>The result of the operation. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#a7265dda9f1e6db478f0c1cd9c3e37aa9">Tang::ComputedExpression</a>.</p>
+
+</div>
+</div>
+<a id="a203faa00cd83e6746084287b0e2ac778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a203faa00cd83e6746084287b0e2ac778">&#9670;&nbsp;</a></span>__negative()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> ComputedExpressionFloat::__negative </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute the result of negating this value. </p>
+<dl class="section return"><dt>Returns</dt><dd>The result of the operation. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#a8e779d014cbb877f078d61a2ff91603d">Tang::ComputedExpression</a>.</p>
+
+</div>
+</div>
+<a id="aa6e605b26eb90dbd2002be8215f754cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6e605b26eb90dbd2002be8215f754cf">&#9670;&nbsp;</a></span>__subtract()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> ComputedExpressionFloat::__subtract </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute the result of subtracting this value and the supplied value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>The <a class="el" href="classTang_1_1GarbageCollected.html" title="A container that acts as a resource-counting garbage collector for the specified type.">GarbageCollected</a> value to subtract from this. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result of the operation. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#ab0d79debcd475a5063e574c10f1715ff">Tang::ComputedExpression</a>.</p>
 
 </div>
 </div>

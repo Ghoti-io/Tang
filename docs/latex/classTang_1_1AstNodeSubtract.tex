@@ -1,0 +1,101 @@
+\hypertarget{classTang_1_1AstNodeSubtract}{}\doxysection{Tang\+::Ast\+Node\+Subtract Class Reference}
+\label{classTang_1_1AstNodeSubtract}\index{Tang::AstNodeSubtract@{Tang::AstNodeSubtract}}
+
+
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a \char`\"{}-\/\char`\"{} expression.  
+
+
+
+
+{\ttfamily \#include $<$ast\+Node\+Subtract.\+hpp$>$}
+
+
+
+Inheritance diagram for Tang\+::Ast\+Node\+Subtract\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classTang_1_1AstNodeSubtract__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tang\+::Ast\+Node\+Subtract\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classTang_1_1AstNodeSubtract__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTang_1_1AstNodeSubtract_a55912c086696de3bc81101fc0eaea9ff}{Ast\+Node\+Subtract}} (\mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$lhs, \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$rhs, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} loc)
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeSubtract_a897f1f2fe2d9489cec9998ecf123fc57}\label{classTang_1_1AstNodeSubtract_a897f1f2fe2d9489cec9998ecf123fc57}} 
+virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeSubtract_a897f1f2fe2d9489cec9998ecf123fc57}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
+\begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeSubtract_a0fd48d8a73cdc354dc147a5c68a37a08}\label{classTang_1_1AstNodeSubtract_a0fd48d8a73cdc354dc147a5c68a37a08}} 
+virtual void \mbox{\hyperlink{classTang_1_1AstNodeSubtract_a0fd48d8a73cdc354dc147a5c68a37a08}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const override
+\begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$ \mbox{\hyperlink{classTang_1_1AstNodeSubtract_a7947aca1fd0458617e495e6f278f925f}{make\+Copy}} () const override
+\begin{DoxyCompactList}\small\item\em Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}\label{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}} 
+\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}{location}}
+\begin{DoxyCompactList}\small\item\em The location associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a \char`\"{}-\/\char`\"{} expression. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeSubtract_a55912c086696de3bc81101fc0eaea9ff}\label{classTang_1_1AstNodeSubtract_a55912c086696de3bc81101fc0eaea9ff}} 
+\index{Tang::AstNodeSubtract@{Tang::AstNodeSubtract}!AstNodeSubtract@{AstNodeSubtract}}
+\index{AstNodeSubtract@{AstNodeSubtract}!Tang::AstNodeSubtract@{Tang::AstNodeSubtract}}
+\doxysubsubsection{\texorpdfstring{AstNodeSubtract()}{AstNodeSubtract()}}
+{\footnotesize\ttfamily Tang\+::\+Ast\+Node\+Subtract\+::\+Ast\+Node\+Subtract (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$}]{lhs,  }\item[{\mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$}]{rhs,  }\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{loc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & The left hand side expression. \\
+\hline
+{\em rhs} & The right hand side expression. \\
+\hline
+{\em loc} & The location associated with the expression. @location The location associated with this node. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeSubtract_a7947aca1fd0458617e495e6f278f925f}\label{classTang_1_1AstNodeSubtract_a7947aca1fd0458617e495e6f278f925f}} 
+\index{Tang::AstNodeSubtract@{Tang::AstNodeSubtract}!makeCopy@{makeCopy}}
+\index{makeCopy@{makeCopy}!Tang::AstNodeSubtract@{Tang::AstNodeSubtract}}
+\doxysubsubsection{\texorpdfstring{makeCopy()}{makeCopy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$ Ast\+Node\+Subtract\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). 
+
+\begin{DoxyReturn}{Returns}
+A pointer to a new \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that is a copy of the current \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_addcb807e895088616f1ec51c61a85c00}{Tang\+::\+Ast\+Node}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{astNodeSubtract_8hpp}{ast\+Node\+Subtract.\+hpp}}\item 
+src/\mbox{\hyperlink{astNodeSubtract_8cpp}{ast\+Node\+Subtract.\+cpp}}\end{DoxyCompactItemize}

@@ -12,6 +12,12 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "astNodeInteger.hpp", "astNodeInteger_8hpp.html", [
       [ "AstNodeInteger", "classTang_1_1AstNodeInteger.html", "classTang_1_1AstNodeInteger" ]
     ] ],
+    [ "astNodeNegative.hpp", "astNodeNegative_8hpp.html", [
+      [ "AstNodeNegative", "classTang_1_1AstNodeNegative.html", "classTang_1_1AstNodeNegative" ]
+    ] ],
+    [ "astNodeSubtract.hpp", "astNodeSubtract_8hpp.html", [
+      [ "AstNodeSubtract", "classTang_1_1AstNodeSubtract.html", "classTang_1_1AstNodeSubtract" ]
+    ] ],
     [ "computedExpression.hpp", "computedExpression_8hpp.html", [
       [ "ComputedExpression", "classTang_1_1ComputedExpression.html", "classTang_1_1ComputedExpression" ]
     ] ],

@@ -1,0 +1,99 @@
+\hypertarget{classTang_1_1AstNodeNegative}{}\doxysection{Tang\+::Ast\+Node\+Negative Class Reference}
+\label{classTang_1_1AstNodeNegative}\index{Tang::AstNodeNegative@{Tang::AstNodeNegative}}
+
+
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a unary negation.  
+
+
+
+
+{\ttfamily \#include $<$ast\+Node\+Negative.\+hpp$>$}
+
+
+
+Inheritance diagram for Tang\+::Ast\+Node\+Negative\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classTang_1_1AstNodeNegative__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tang\+::Ast\+Node\+Negative\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classTang_1_1AstNodeNegative__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTang_1_1AstNodeNegative_a8d08f6522e0eb6ff8450c26d9f747f2a}{Ast\+Node\+Negative}} (\mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$operand, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} loc)
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeNegative_a6aae32f4f6e94a3f576f9f1c0c7f808b}\label{classTang_1_1AstNodeNegative_a6aae32f4f6e94a3f576f9f1c0c7f808b}} 
+virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeNegative_a6aae32f4f6e94a3f576f9f1c0c7f808b}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
+\begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeNegative_acaf4a374f63240151e0c4ceb99004de8}\label{classTang_1_1AstNodeNegative_acaf4a374f63240151e0c4ceb99004de8}} 
+virtual void \mbox{\hyperlink{classTang_1_1AstNodeNegative_acaf4a374f63240151e0c4ceb99004de8}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const override
+\begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$ \mbox{\hyperlink{classTang_1_1AstNodeNegative_afe08d6852107d5e9f8c3f7a2639dde06}{make\+Copy}} () const override
+\begin{DoxyCompactList}\small\item\em Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}\label{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}} 
+\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}{location}}
+\begin{DoxyCompactList}\small\item\em The location associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a unary negation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeNegative_a8d08f6522e0eb6ff8450c26d9f747f2a}\label{classTang_1_1AstNodeNegative_a8d08f6522e0eb6ff8450c26d9f747f2a}} 
+\index{Tang::AstNodeNegative@{Tang::AstNodeNegative}!AstNodeNegative@{AstNodeNegative}}
+\index{AstNodeNegative@{AstNodeNegative}!Tang::AstNodeNegative@{Tang::AstNodeNegative}}
+\doxysubsubsection{\texorpdfstring{AstNodeNegative()}{AstNodeNegative()}}
+{\footnotesize\ttfamily Tang\+::\+Ast\+Node\+Negative\+::\+Ast\+Node\+Negative (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$}]{operand,  }\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{loc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em operand} & The expression to negate. \\
+\hline
+{\em loc} & The location associated with the expression. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeNegative_afe08d6852107d5e9f8c3f7a2639dde06}\label{classTang_1_1AstNodeNegative_afe08d6852107d5e9f8c3f7a2639dde06}} 
+\index{Tang::AstNodeNegative@{Tang::AstNodeNegative}!makeCopy@{makeCopy}}
+\index{makeCopy@{makeCopy}!Tang::AstNodeNegative@{Tang::AstNodeNegative}}
+\doxysubsubsection{\texorpdfstring{makeCopy()}{makeCopy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$ Ast\+Node\+Negative\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). 
+
+\begin{DoxyReturn}{Returns}
+A pointer to a new \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that is a copy of the current \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_addcb807e895088616f1ec51c61a85c00}{Tang\+::\+Ast\+Node}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{astNodeNegative_8hpp}{ast\+Node\+Negative.\+hpp}}\item 
+src/\mbox{\hyperlink{astNodeNegative_8cpp}{ast\+Node\+Negative.\+cpp}}\end{DoxyCompactItemize}
