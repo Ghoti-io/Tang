@@ -160,7 +160,13 @@ namespace Tang {
      */
     friend std::ostream & operator<<(std::ostream & out, const GarbageCollected & gc);
 
-    GarbageCollected operator+(const GarbageCollected & lhs) const;
+    /**
+     * Perform an addition between two GarbageCollected values.
+     *
+     * @param rhs The right hand side operand.
+     * @return The result of the operation.
+     */
+    GarbageCollected operator+(const GarbageCollected & rhs) const;
 
   protected:
     /**

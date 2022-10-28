@@ -5,7 +5,7 @@ var classTang_1_1GarbageCollected =
     [ "~GarbageCollected", "classTang_1_1GarbageCollected.html#a353748f997d200432d22c0ba93ebde6e", null ],
     [ "GarbageCollected", "classTang_1_1GarbageCollected.html#acf1adf6fd3b931035afb90b72f97a54e", null ],
     [ "operator*", "classTang_1_1GarbageCollected.html#aff040291d71e55358cf0656c9876d3c8", null ],
-    [ "operator+", "classTang_1_1GarbageCollected.html#aaf84219cbabb0b38b8870aa7839ef16a", null ],
+    [ "operator+", "classTang_1_1GarbageCollected.html#aecc3c9f3d355fe43e5bf3db6a7cccb2d", null ],
     [ "operator->", "classTang_1_1GarbageCollected.html#ae9f5eb28dec34650dd8f74f0dc4f2e3c", null ],
     [ "operator=", "classTang_1_1GarbageCollected.html#ae3c11ed5cee365f7cb47aac9d4094482", null ],
     [ "operator=", "classTang_1_1GarbageCollected.html#a6354db39b643c1828754ff1fe8856b1a", null ],
