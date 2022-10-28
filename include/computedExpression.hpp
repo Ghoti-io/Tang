@@ -63,6 +63,21 @@ namespace Tang {
        * @return The result of the operation.
        */
       virtual GarbageCollected __add(const GarbageCollected & rhs) const;
+
+      /**
+       * Compute the result of subtracting this value and the supplied value.
+       *
+       * @param rhs The GarbageCollected value to subtract from this.
+       * @return The result of the operation.
+       */
+      virtual GarbageCollected __subtract(const GarbageCollected & rhs) const;
+
+      /**
+       * Compute the result of negating this value.
+       *
+       * @return The result of the operation.
+       */
+      virtual GarbageCollected __negative() const;
   };
 }
 

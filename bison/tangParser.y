@@ -78,6 +78,7 @@
 %token < int64_t > INTEGER "integer"
 %token < long double > FLOAT "float"
 %token PLUS "+"
+%token MINUS "-"
 
 // Any %type declarations of non-terminals.
 // https://www.gnu.org/software/bison/manual/bison.html#index-_0025type
@@ -90,7 +91,8 @@
 // Notice that the order is reversed from:
 // https://en.cppreference.com/w/cpp/language/operator_precedence
 // Here, rules are in order of lowest to highest precedence.
-%left "+"
+%left "+" "-"
+%right UMINUS
 
 // Code sections.
 // https://www.gnu.org/software/bison/manual/bison.html#g_t_0025code-Summary
@@ -110,8 +112,10 @@ namespace Tang {
 #include "tangParser.hpp"
 #include "location.hh"
 #include "astNodeAdd.hpp"
+#include "astNodeSubtract.hpp"
 #include "astNodeFloat.hpp"
 #include "astNodeInteger.hpp"
+#include "astNodeNegative.hpp"
 
 // We must provide the yylex() function.
 // yylex() arguments are defined in the bison .y file.
@@ -161,6 +165,14 @@ expression
   | expression "+" expression
     {
       $$ = new Tang::AstNodeAdd($1, $3, @2);
+    }
+  | expression "-" expression
+    {
+      $$ = new Tang::AstNodeSubtract($1, $3, @2);
+    }
+  | "-" expression %prec UMINUS
+    {
+      $$ = new Tang::AstNodeNegative($2, @1);
     }
   ;
 

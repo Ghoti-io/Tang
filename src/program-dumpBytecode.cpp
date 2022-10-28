@@ -52,6 +52,16 @@ string Program::dumpBytecode() const {
         ++pc;
         break;
       }
+      case Opcode::SUBTRACT: {
+        out << "SUBTRACT";
+        ++pc;
+        break;
+      }
+      case Opcode::NEGATIVE: {
+        out << "NEGATIVE";
+        ++pc;
+        break;
+      }
       default: {}
     }
     out << endl;

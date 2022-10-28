@@ -30,3 +30,11 @@ GarbageCollected ComputedExpression::__add([[maybe_unused]] const GarbageCollect
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to add these values."});
 }
 
+GarbageCollected ComputedExpression::__subtract([[maybe_unused]] const GarbageCollected & rhs) const {
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to subtract these values."});
+}
+
+GarbageCollected ComputedExpression::__negative() const {
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to negate this value."});
+}
+

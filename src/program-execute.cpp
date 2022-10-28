@@ -61,11 +61,34 @@ Program& Program::execute() {
         stack.pop_back();
         auto lhs = stack.back();
         stack.pop_back();
-        stack.push_back(rhs + lhs);
+        stack.push_back(lhs + rhs);
         ++pc;
         break;
       }
-      default: {}
+      case Opcode::SUBTRACT: {
+        STACKCHECK(2);
+        auto rhs = stack.back();
+        stack.pop_back();
+        auto lhs = stack.back();
+        stack.pop_back();
+        stack.push_back(lhs - rhs);
+        ++pc;
+        break;
+      }
+      case Opcode::NEGATIVE: {
+        STACKCHECK(1);
+        auto operand = stack.back();
+        stack.pop_back();
+        stack.push_back(-operand);
+        ++pc;
+        break;
+      }
+      default: {
+        // We should never reach this.
+        stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Unrecognized Opcode."}));
+        pc = stack.size();
+        break;
+      }
     }
   }
 

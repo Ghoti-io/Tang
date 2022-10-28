@@ -8,6 +8,8 @@ namespace Tang {
     INTEGER,  ///< Push an integer onto the stack
     FLOAT,    ///< Push a floating point number onto the stack
     ADD,      ///< Pop rhs, pop lhs, push lhs + rhs
+    SUBTRACT, ///< Pop rhs, pop lhs, push lhs - rhs
+    NEGATIVE, ///< Pop val, push negative val
   };
 }
 

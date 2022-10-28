@@ -100,16 +100,19 @@ using namespace std;
   // (Note: there is no code yet, this is just a placeholder)
 
 <INITIAL,SCRIPT>{
-  -?[0-9]+ {
+  [0-9]+ {
     int64_t number = strtoll(yytext, 0, 10);
     return Tang::TangParser::make_INTEGER(number, Tang::location(location));
   }
-  -?(([0-9]+\.[0-9]*)|(\.[0-9]+)) {
+  ([0-9]+\.[0-9]*)|(\.[0-9]+) {
     long double number = strtold(yytext, 0);
     return Tang::TangParser::make_FLOAT(number, Tang::location(location));
   }
   \+ {
     return Tang::TangParser::make_PLUS(Tang::location(location));
+  }
+  \- {
+    return Tang::TangParser::make_MINUS(Tang::location(location));
   }
   . {}
   \n {}

@@ -42,3 +42,22 @@ GarbageCollected ComputedExpressionFloat::__add(const GarbageCollected & rhs) co
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to add these values."});
 }
 
+GarbageCollected ComputedExpressionFloat::__subtract(const GarbageCollected & rhs) const {
+  if (typeid(*rhs) == typeid(ComputedExpressionFloat)) {
+    auto & rhsConv = static_cast<ComputedExpressionFloat&>(*rhs);
+    return GarbageCollected::make<ComputedExpressionFloat>(
+        this->val - rhsConv.val);
+  }
+  if (typeid(*rhs) == typeid(ComputedExpressionInteger)) {
+    auto & rhsConv = static_cast<ComputedExpressionInteger&>(*rhs);
+    return GarbageCollected::make<ComputedExpressionFloat>(
+        this->val - rhsConv.val);
+  }
+
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to subtract these values."});
+}
+
+GarbageCollected ComputedExpressionFloat::__negative() const {
+  return GarbageCollected::make<ComputedExpressionFloat>(-this->val);
+}
+

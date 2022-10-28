@@ -168,6 +168,21 @@ namespace Tang {
      */
     GarbageCollected operator+(const GarbageCollected & rhs) const;
 
+    /**
+     * Perform a subtraction between two GarbageCollected values.
+     *
+     * @param rhs The right hand side operand.
+     * @return The result of the operation.
+     */
+    GarbageCollected operator-(const GarbageCollected & rhs) const;
+
+    /**
+     * Perform a negation on the  GarbageCollected value.
+     *
+     * @return The result of the operation.
+     */
+    GarbageCollected operator-() const;
+
   protected:
     /**
      * Constructs a garbage-collected object of the specified type.  It is
