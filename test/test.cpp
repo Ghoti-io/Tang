@@ -179,6 +179,17 @@ TEST(Expression, UnaryMinus) {
   EXPECT_EQ(*p7.execute().getResult(), -9);
 }
 
+TEST(Expression, Parentheses) {
+  auto p1 = TangBase().compileScript("(3-5)-1");
+  EXPECT_EQ(*p1.execute().getResult(), -3);
+  auto p2 = TangBase().compileScript("3-(5-1)");
+  EXPECT_EQ(*p2.execute().getResult(), -1);
+  auto p3 = TangBase().compileScript("((-(3.)))-(5.)");
+  EXPECT_EQ(*p3.execute().getResult(), -8);
+  auto p4 = TangBase().compileScript("(((((-3)))))");
+  EXPECT_EQ(*p4.execute().getResult(), -3);
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

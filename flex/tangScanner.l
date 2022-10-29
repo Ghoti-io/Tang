@@ -123,6 +123,12 @@ using namespace std;
   \% {
     return Tang::TangParser::make_MODULO(Tang::location(location));
   }
+  \( {
+    return Tang::TangParser::make_LPAREN(Tang::location(location));
+  }
+  \) {
+    return Tang::TangParser::make_RPAREN(Tang::location(location));
+  }
   . {}
   \n {}
   <<EOF>> {

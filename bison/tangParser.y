@@ -82,6 +82,8 @@
 %token MULTIPLY "*"
 %token DIVIDE "/"
 %token MODULO "%"
+%token LPAREN "("
+%token RPAREN ")"
 
 // Any %type declarations of non-terminals.
 // https://www.gnu.org/software/bison/manual/bison.html#index-_0025type
@@ -192,6 +194,10 @@ expression
   | "-" expression %prec UMINUS
     {
       $$ = new Tang::AstNodeNegative($2, @1);
+    }
+  | "(" expression ")"
+    {
+      $$ = $2;
     }
   ;
 
