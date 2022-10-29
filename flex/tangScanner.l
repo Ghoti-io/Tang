@@ -114,6 +114,15 @@ using namespace std;
   \- {
     return Tang::TangParser::make_MINUS(Tang::location(location));
   }
+  \* {
+    return Tang::TangParser::make_MULTIPLY(Tang::location(location));
+  }
+  \/ {
+    return Tang::TangParser::make_DIVIDE(Tang::location(location));
+  }
+  \% {
+    return Tang::TangParser::make_MODULO(Tang::location(location));
+  }
   . {}
   \n {}
   <<EOF>> {

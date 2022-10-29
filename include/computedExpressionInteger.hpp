@@ -26,6 +26,9 @@ namespace Tang {
       virtual bool is_equal(const double & val) const override;
       virtual GarbageCollected __add(const GarbageCollected & rhs) const override;
       virtual GarbageCollected __subtract(const GarbageCollected & rhs) const override;
+      virtual GarbageCollected __multiply(const GarbageCollected & rhs) const override;
+      virtual GarbageCollected __divide(const GarbageCollected & rhs) const override;
+      virtual GarbageCollected __modulo(const GarbageCollected & rhs) const override;
       virtual GarbageCollected __negative() const override;
 
       friend class ComputedExpressionFloat;

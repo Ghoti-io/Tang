@@ -57,6 +57,21 @@ string Program::dumpBytecode() const {
         ++pc;
         break;
       }
+      case Opcode::MULTIPLY: {
+        out << "MULTIPLY";
+        ++pc;
+        break;
+      }
+      case Opcode::DIVIDE: {
+        out << "DIVIDE";
+        ++pc;
+        break;
+      }
+      case Opcode::MODULO: {
+        out << "MODULO";
+        ++pc;
+        break;
+      }
       case Opcode::NEGATIVE: {
         out << "NEGATIVE";
         ++pc;

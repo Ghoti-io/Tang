@@ -23,6 +23,7 @@ namespace Tang {
 
       virtual std::string dump() const override;
       ComputedExpression * makeCopy() const override;
+      virtual bool is_equal(const Error & val) const override;
 
     private:
       /**

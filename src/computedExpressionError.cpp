@@ -17,3 +17,7 @@ ComputedExpression * ComputedExpressionError::makeCopy() const {
   return new ComputedExpressionError(*this);
 }
 
+bool ComputedExpressionError::is_equal(const Error & val) const {
+  return this->error.message == val.message;
+}
+

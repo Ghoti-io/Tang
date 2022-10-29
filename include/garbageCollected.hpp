@@ -12,6 +12,7 @@ namespace Tang {
 #include <functional>
 #include "singletonObjectPool.hpp"
 #include "computedExpression.hpp"
+#include "error.hpp"
 
 namespace Tang {
   /**
@@ -152,6 +153,14 @@ namespace Tang {
     bool operator==(const double & val) const;
 
     /**
+     * Compare the GarbageCollected tracked object with a supplied value.
+     *
+     * @param val The value to compare the tracked object against.
+     * @return True if they are equal, false otherwise.
+     */
+    bool operator==(const Error & val) const;
+
+    /**
      * Add friendly output.
      *
      * @param out The output stream.
@@ -175,6 +184,30 @@ namespace Tang {
      * @return The result of the operation.
      */
     GarbageCollected operator-(const GarbageCollected & rhs) const;
+
+    /**
+     * Perform a multiplication between two GarbageCollected values.
+     *
+     * @param rhs The right hand side operand.
+     * @return The result of the operation.
+     */
+    GarbageCollected operator*(const GarbageCollected & rhs) const;
+
+    /**
+     * Perform a division between two GarbageCollected values.
+     *
+     * @param rhs The right hand side operand.
+     * @return The result of the operation.
+     */
+    GarbageCollected operator/(const GarbageCollected & rhs) const;
+
+    /**
+     * Perform a modulo between two GarbageCollected values.
+     *
+     * @param rhs The right hand side operand.
+     * @return The result of the operation.
+     */
+    GarbageCollected operator%(const GarbageCollected & rhs) const;
 
     /**
      * Perform a negation on the  GarbageCollected value.

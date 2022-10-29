@@ -75,6 +75,36 @@ Program& Program::execute() {
         ++pc;
         break;
       }
+      case Opcode::MULTIPLY: {
+        STACKCHECK(2);
+        auto rhs = stack.back();
+        stack.pop_back();
+        auto lhs = stack.back();
+        stack.pop_back();
+        stack.push_back(lhs * rhs);
+        ++pc;
+        break;
+      }
+      case Opcode::DIVIDE: {
+        STACKCHECK(2);
+        auto rhs = stack.back();
+        stack.pop_back();
+        auto lhs = stack.back();
+        stack.pop_back();
+        stack.push_back(lhs / rhs);
+        ++pc;
+        break;
+      }
+      case Opcode::MODULO: {
+        STACKCHECK(2);
+        auto rhs = stack.back();
+        stack.pop_back();
+        auto lhs = stack.back();
+        stack.pop_back();
+        stack.push_back(lhs % rhs);
+        ++pc;
+        break;
+      }
       case Opcode::NEGATIVE: {
         STACKCHECK(1);
         auto operand = stack.back();

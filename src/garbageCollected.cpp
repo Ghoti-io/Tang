@@ -17,6 +17,10 @@ bool GarbageCollected::operator==(const double & val) const {
   return this->ref && this->ref->is_equal(val);
 }
 
+bool GarbageCollected::operator==(const Error & val) const {
+  return this->ref && this->ref->is_equal(val);
+}
+
 GarbageCollected GarbageCollected::operator+(const GarbageCollected & rhs) const {
   auto result = this->ref->__add(rhs);
   return result;
@@ -31,4 +35,20 @@ GarbageCollected GarbageCollected::operator-() const {
   auto result = this->ref->__negative();
   return result;
 }
+
+GarbageCollected GarbageCollected::operator*(const GarbageCollected & rhs) const {
+  auto result = this->ref->__multiply(rhs);
+  return result;
+}
+
+GarbageCollected GarbageCollected::operator/(const GarbageCollected & rhs) const {
+  auto result = this->ref->__divide(rhs);
+  return result;
+}
+
+GarbageCollected GarbageCollected::operator%(const GarbageCollected & rhs) const {
+  auto result = this->ref->__modulo(rhs);
+  return result;
+}
+
 

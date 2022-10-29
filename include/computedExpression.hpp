@@ -14,6 +14,7 @@ namespace Tang {
 #include <cstdint>
 #include <string>
 #include "garbageCollected.hpp"
+#include "error.hpp"
 
 namespace Tang {
   /**
@@ -57,6 +58,14 @@ namespace Tang {
       virtual bool is_equal(const double & val) const;
 
       /**
+       * Check whether or not the computed expression is equal to another value.
+       *
+       * @param val The value to compare against.
+       * @return True if equal, false if not.
+       */
+      virtual bool is_equal(const Error & val) const;
+
+      /**
        * Compute the result of adding this value and the supplied value.
        *
        * @param rhs The GarbageCollected value to add to this.
@@ -71,6 +80,30 @@ namespace Tang {
        * @return The result of the operation.
        */
       virtual GarbageCollected __subtract(const GarbageCollected & rhs) const;
+
+      /**
+       * Compute the result of multiplying this value and the supplied value.
+       *
+       * @param rhs The GarbageCollected value to multiply to this.
+       * @return The result of the operation.
+       */
+      virtual GarbageCollected __multiply(const GarbageCollected & rhs) const;
+
+      /**
+       * Compute the result of dividing this value and the supplied value.
+       *
+       * @param rhs The GarbageCollected value to divide this by.
+       * @return The result of the operation.
+       */
+      virtual GarbageCollected __divide(const GarbageCollected & rhs) const;
+
+      /**
+       * Compute the result of moduloing this value and the supplied value.
+       *
+       * @param rhs The GarbageCollected value to modulo this by.
+       * @return The result of the operation.
+       */
+      virtual GarbageCollected __modulo(const GarbageCollected & rhs) const;
 
       /**
        * Compute the result of negating this value.

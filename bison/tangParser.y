@@ -79,6 +79,9 @@
 %token < long double > FLOAT "float"
 %token PLUS "+"
 %token MINUS "-"
+%token MULTIPLY "*"
+%token DIVIDE "/"
+%token MODULO "%"
 
 // Any %type declarations of non-terminals.
 // https://www.gnu.org/software/bison/manual/bison.html#index-_0025type
@@ -92,6 +95,7 @@
 // https://en.cppreference.com/w/cpp/language/operator_precedence
 // Here, rules are in order of lowest to highest precedence.
 %left "+" "-"
+%left "*" "/" "%"
 %right UMINUS
 
 // Code sections.
@@ -113,6 +117,9 @@ namespace Tang {
 #include "location.hh"
 #include "astNodeAdd.hpp"
 #include "astNodeSubtract.hpp"
+#include "astNodeMultiply.hpp"
+#include "astNodeDivide.hpp"
+#include "astNodeModulo.hpp"
 #include "astNodeFloat.hpp"
 #include "astNodeInteger.hpp"
 #include "astNodeNegative.hpp"
@@ -169,6 +176,18 @@ expression
   | expression "-" expression
     {
       $$ = new Tang::AstNodeSubtract($1, $3, @2);
+    }
+  | expression "*" expression
+    {
+      $$ = new Tang::AstNodeMultiply($1, $3, @2);
+    }
+  | expression "/" expression
+    {
+      $$ = new Tang::AstNodeDivide($1, $3, @2);
+    }
+  | expression "%" expression
+    {
+      $$ = new Tang::AstNodeModulo($1, $3, @2);
     }
   | "-" expression %prec UMINUS
     {

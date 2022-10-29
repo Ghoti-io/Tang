@@ -7,6 +7,7 @@
 #define TANG_ERROR_HPP
 
 #include <string>
+#include <ostream>
 #include "location.hh"
 
 namespace Tang {
@@ -45,6 +46,15 @@ namespace Tang {
      * The location of the error
      */
     Tang::location location;
+
+    /**
+     * Add friendly output.
+     *
+     * @param out The output stream.
+     * @param error The Error object.
+     * @return The output stream.
+     */
+    friend std::ostream & operator<<(std::ostream & out, const Error & error);
   };
 }
 
