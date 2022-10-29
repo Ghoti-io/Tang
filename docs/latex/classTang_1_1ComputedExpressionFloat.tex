@@ -50,6 +50,10 @@ virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mb
 \begin{DoxyCompactList}\small\item\em Compute the result of dividing this value and the supplied value. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a203faa00cd83e6746084287b0e2ac778}{\+\_\+\+\_\+negative}} () const override
 \begin{DoxyCompactList}\small\item\em Compute the result of negating this value. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_aa08d3e8e26ab701d0e9b33cd201c8aaf}{\+\_\+\+\_\+integer}} () const override
+\begin{DoxyCompactList}\small\item\em Perform a type cast to integer. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a891a448c4b19eb52499f4be7d02b663a}{\+\_\+\+\_\+float}} () const override
+\begin{DoxyCompactList}\small\item\em Perform a type cast to float. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a5ce6d4bc0128f6aadf72c2f63a70275a}{is\+\_\+equal}} (const \mbox{\hyperlink{classTang_1_1Error}{Error}} \&val) const
 \begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_ab545455bd51f215ac139db456b829f66}{\+\_\+\+\_\+modulo}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const
@@ -127,6 +131,40 @@ The result of the operation.
 
 
 Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_abb35e0328da2a96128de725ff1402192}{Tang\+::\+Computed\+Expression}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionFloat_a891a448c4b19eb52499f4be7d02b663a}\label{classTang_1_1ComputedExpressionFloat_a891a448c4b19eb52499f4be7d02b663a}} 
+\index{Tang::ComputedExpressionFloat@{Tang::ComputedExpressionFloat}!\_\_float@{\_\_float}}
+\index{\_\_float@{\_\_float}!Tang::ComputedExpressionFloat@{Tang::ComputedExpressionFloat}}
+\doxysubsubsection{\texorpdfstring{\_\_float()}{\_\_float()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Float\+::\+\_\+\+\_\+float (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Perform a type cast to float. 
+
+\begin{DoxyReturn}{Returns}
+The result of the the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_aa91f27a9f03b9a7fb9aa5a79efc3039f}{Tang\+::\+Computed\+Expression}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionFloat_aa08d3e8e26ab701d0e9b33cd201c8aaf}\label{classTang_1_1ComputedExpressionFloat_aa08d3e8e26ab701d0e9b33cd201c8aaf}} 
+\index{Tang::ComputedExpressionFloat@{Tang::ComputedExpressionFloat}!\_\_integer@{\_\_integer}}
+\index{\_\_integer@{\_\_integer}!Tang::ComputedExpressionFloat@{Tang::ComputedExpressionFloat}}
+\doxysubsubsection{\texorpdfstring{\_\_integer()}{\_\_integer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Float\+::\+\_\+\+\_\+integer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Perform a type cast to integer. 
+
+\begin{DoxyReturn}{Returns}
+The result of the the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_aa9bebad41df630a98cec2565b0aeda89}{Tang\+::\+Computed\+Expression}}.
 
 \mbox{\Hypertarget{classTang_1_1ComputedExpression_ab545455bd51f215ac139db456b829f66}\label{classTang_1_1ComputedExpression_ab545455bd51f215ac139db456b829f66}} 
 \index{Tang::ComputedExpressionFloat@{Tang::ComputedExpressionFloat}!\_\_modulo@{\_\_modulo}}

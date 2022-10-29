@@ -53,7 +53,11 @@ virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mb
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_ab545455bd51f215ac139db456b829f66}{\+\_\+\+\_\+modulo}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const
 \begin{DoxyCompactList}\small\item\em Compute the result of moduloing this value and the supplied value. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_a8e779d014cbb877f078d61a2ff91603d}{\+\_\+\+\_\+negative}} () const
-\begin{DoxyCompactList}\small\item\em Compute the result of negating this value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Compute the result of negating this value. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_aa9bebad41df630a98cec2565b0aeda89}{\+\_\+\+\_\+integer}} () const
+\begin{DoxyCompactList}\small\item\em Perform a type cast to integer. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_aa91f27a9f03b9a7fb9aa5a79efc3039f}{\+\_\+\+\_\+float}} () const
+\begin{DoxyCompactList}\small\item\em Perform a type cast to float. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -121,6 +125,40 @@ The result of the operation.
 
 
 Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_aeca0b7af9ecd1c64f0e72afb7bbd4ff7}{Tang\+::\+Computed\+Expression\+Integer}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_af6bebf05fe3c59c46b4e7471317a3511}{Tang\+::\+Computed\+Expression\+Float}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_aa91f27a9f03b9a7fb9aa5a79efc3039f}\label{classTang_1_1ComputedExpression_aa91f27a9f03b9a7fb9aa5a79efc3039f}} 
+\index{Tang::ComputedExpressionError@{Tang::ComputedExpressionError}!\_\_float@{\_\_float}}
+\index{\_\_float@{\_\_float}!Tang::ComputedExpressionError@{Tang::ComputedExpressionError}}
+\doxysubsubsection{\texorpdfstring{\_\_float()}{\_\_float()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+float (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Perform a type cast to float. 
+
+\begin{DoxyReturn}{Returns}
+The result of the the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a4bbe91963e21fd8319b94a7b43a1e26e}{Tang\+::\+Computed\+Expression\+Integer}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a891a448c4b19eb52499f4be7d02b663a}{Tang\+::\+Computed\+Expression\+Float}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_aa9bebad41df630a98cec2565b0aeda89}\label{classTang_1_1ComputedExpression_aa9bebad41df630a98cec2565b0aeda89}} 
+\index{Tang::ComputedExpressionError@{Tang::ComputedExpressionError}!\_\_integer@{\_\_integer}}
+\index{\_\_integer@{\_\_integer}!Tang::ComputedExpressionError@{Tang::ComputedExpressionError}}
+\doxysubsubsection{\texorpdfstring{\_\_integer()}{\_\_integer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+integer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Perform a type cast to integer. 
+
+\begin{DoxyReturn}{Returns}
+The result of the the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ac8f2123e3efec72df3dc6d62b74c78b6}{Tang\+::\+Computed\+Expression\+Integer}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_aa08d3e8e26ab701d0e9b33cd201c8aaf}{Tang\+::\+Computed\+Expression\+Float}}.
 
 \mbox{\Hypertarget{classTang_1_1ComputedExpression_ab545455bd51f215ac139db456b829f66}\label{classTang_1_1ComputedExpression_ab545455bd51f215ac139db456b829f66}} 
 \index{Tang::ComputedExpressionError@{Tang::ComputedExpressionError}!\_\_modulo@{\_\_modulo}}

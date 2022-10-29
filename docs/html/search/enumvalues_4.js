@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['modulo_281',['MODULO',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a928ab45d616dde447dbbbd0270db87ad',1,'Tang']]],
-  ['multiply_282',['MULTIPLY',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a080aaf8d817ada96fca7096b7b55bd30',1,'Tang']]]
+  ['integer_302',['INTEGER',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a5d5cd46919fa987731fb2edefe0f2a0c',1,'Tang']]]
 ];

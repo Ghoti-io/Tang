@@ -3,6 +3,8 @@ var classTang_1_1ComputedExpressionInteger =
     [ "ComputedExpressionInteger", "classTang_1_1ComputedExpressionInteger.html#a0abaab0f37a735125e0fe6b440ace14d", null ],
     [ "__add", "classTang_1_1ComputedExpressionInteger.html#ab9c7c7ad34978c127b92ad7a24cbb717", null ],
     [ "__divide", "classTang_1_1ComputedExpressionInteger.html#aeca0b7af9ecd1c64f0e72afb7bbd4ff7", null ],
+    [ "__float", "classTang_1_1ComputedExpressionInteger.html#a4bbe91963e21fd8319b94a7b43a1e26e", null ],
+    [ "__integer", "classTang_1_1ComputedExpressionInteger.html#ac8f2123e3efec72df3dc6d62b74c78b6", null ],
     [ "__modulo", "classTang_1_1ComputedExpressionInteger.html#a959280a4da43a81276ef8ab658eb9015", null ],
     [ "__multiply", "classTang_1_1ComputedExpressionInteger.html#aadb7393ed0df73e42f2311377bb445d6", null ],
     [ "__negative", "classTang_1_1ComputedExpressionInteger.html#a50d5a488b02defd3c526696c5661800b", null ],

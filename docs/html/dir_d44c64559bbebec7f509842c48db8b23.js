@@ -6,6 +6,12 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "astNodeAdd.hpp", "astNodeAdd_8hpp.html", [
       [ "AstNodeAdd", "classTang_1_1AstNodeAdd.html", "classTang_1_1AstNodeAdd" ]
     ] ],
+    [ "astNodeCastFloat.hpp", "astNodeCastFloat_8hpp.html", [
+      [ "AstNodeCastFloat", "classTang_1_1AstNodeCastFloat.html", "classTang_1_1AstNodeCastFloat" ]
+    ] ],
+    [ "astNodeCastInteger.hpp", "astNodeCastInteger_8hpp.html", [
+      [ "AstNodeCastInteger", "classTang_1_1AstNodeCastInteger.html", "classTang_1_1AstNodeCastInteger" ]
+    ] ],
     [ "astNodeDivide.hpp", "astNodeDivide_8hpp.html", [
       [ "AstNodeDivide", "classTang_1_1AstNodeDivide.html", "classTang_1_1AstNodeDivide" ]
     ] ],

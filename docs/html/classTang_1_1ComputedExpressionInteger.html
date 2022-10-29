@@ -150,6 +150,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a50d5a488b02defd3c526696c5661800b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionInteger.html#a50d5a488b02defd3c526696c5661800b">__negative</a> () const override</td></tr>
 <tr class="memdesc:a50d5a488b02defd3c526696c5661800b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the result of negating this value.  <a href="classTang_1_1ComputedExpressionInteger.html#a50d5a488b02defd3c526696c5661800b">More...</a><br /></td></tr>
 <tr class="separator:a50d5a488b02defd3c526696c5661800b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8f2123e3efec72df3dc6d62b74c78b6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionInteger.html#ac8f2123e3efec72df3dc6d62b74c78b6">__integer</a> () const override</td></tr>
+<tr class="memdesc:ac8f2123e3efec72df3dc6d62b74c78b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a type cast to integer.  <a href="classTang_1_1ComputedExpressionInteger.html#ac8f2123e3efec72df3dc6d62b74c78b6">More...</a><br /></td></tr>
+<tr class="separator:ac8f2123e3efec72df3dc6d62b74c78b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bbe91963e21fd8319b94a7b43a1e26e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionInteger.html#a4bbe91963e21fd8319b94a7b43a1e26e">__float</a> () const override</td></tr>
+<tr class="memdesc:a4bbe91963e21fd8319b94a7b43a1e26e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a type cast to float.  <a href="classTang_1_1ComputedExpressionInteger.html#a4bbe91963e21fd8319b94a7b43a1e26e">More...</a><br /></td></tr>
+<tr class="separator:a4bbe91963e21fd8319b94a7b43a1e26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ce6d4bc0128f6aadf72c2f63a70275a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpression.html#a5ce6d4bc0128f6aadf72c2f63a70275a">is_equal</a> (const <a class="el" href="classTang_1_1Error.html">Error</a> &amp;val) const</td></tr>
 <tr class="memdesc:a5ce6d4bc0128f6aadf72c2f63a70275a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether or not the computed expression is equal to another value.  <a href="classTang_1_1ComputedExpression.html#a5ce6d4bc0128f6aadf72c2f63a70275a">More...</a><br /></td></tr>
 <tr class="separator:a5ce6d4bc0128f6aadf72c2f63a70275a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -261,6 +267,66 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>ComputedExpressionFl
 <dl class="section return"><dt>Returns</dt><dd>The result of the operation. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#abb35e0328da2a96128de725ff1402192">Tang::ComputedExpression</a>.</p>
+
+</div>
+</div>
+<a id="a4bbe91963e21fd8319b94a7b43a1e26e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bbe91963e21fd8319b94a7b43a1e26e">&#9670;&nbsp;</a></span>__float()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> ComputedExpressionInteger::__float </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Perform a type cast to float. </p>
+<dl class="section return"><dt>Returns</dt><dd>The result of the the operation. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#aa91f27a9f03b9a7fb9aa5a79efc3039f">Tang::ComputedExpression</a>.</p>
+
+</div>
+</div>
+<a id="ac8f2123e3efec72df3dc6d62b74c78b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8f2123e3efec72df3dc6d62b74c78b6">&#9670;&nbsp;</a></span>__integer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> ComputedExpressionInteger::__integer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Perform a type cast to integer. </p>
+<dl class="section return"><dt>Returns</dt><dd>The result of the the operation. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#aa9bebad41df630a98cec2565b0aeda89">Tang::ComputedExpression</a>.</p>
 
 </div>
 </div>

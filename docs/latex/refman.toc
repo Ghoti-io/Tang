@@ -11,252 +11,276 @@
 \contentsline {section}{\numberline {4.1}File List}{7}{section.4.1}%
 \contentsline {chapter}{\numberline {5}Class Documentation}{9}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node Class Reference}{9}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{11}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Constructor \& Destructor Documentation}{11}{subsection.5.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.2.1}AstNode()}{11}{subsubsection.5.1.2.1}%
-\contentsline {subsection}{\numberline {5.1.3}Member Function Documentation}{11}{subsection.5.1.3}%
-\contentsline {subsubsection}{\numberline {5.1.3.1}makeCopy()}{11}{subsubsection.5.1.3.1}%
-\contentsline {section}{\numberline {5.2}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Add Class Reference}{12}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Detailed Description}{14}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Constructor \& Destructor Documentation}{14}{subsection.5.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.2.1}AstNodeAdd()}{14}{subsubsection.5.2.2.1}%
-\contentsline {subsection}{\numberline {5.2.3}Member Function Documentation}{14}{subsection.5.2.3}%
-\contentsline {subsubsection}{\numberline {5.2.3.1}makeCopy()}{14}{subsubsection.5.2.3.1}%
-\contentsline {section}{\numberline {5.3}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Divide Class Reference}{15}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Detailed Description}{17}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Constructor \& Destructor Documentation}{17}{subsection.5.3.2}%
-\contentsline {subsubsection}{\numberline {5.3.2.1}AstNodeDivide()}{17}{subsubsection.5.3.2.1}%
-\contentsline {subsection}{\numberline {5.3.3}Member Function Documentation}{17}{subsection.5.3.3}%
-\contentsline {subsubsection}{\numberline {5.3.3.1}makeCopy()}{17}{subsubsection.5.3.3.1}%
-\contentsline {section}{\numberline {5.4}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Float Class Reference}{18}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Detailed Description}{20}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Constructor \& Destructor Documentation}{20}{subsection.5.4.2}%
-\contentsline {subsubsection}{\numberline {5.4.2.1}AstNodeFloat()}{20}{subsubsection.5.4.2.1}%
-\contentsline {subsection}{\numberline {5.4.3}Member Function Documentation}{20}{subsection.5.4.3}%
-\contentsline {subsubsection}{\numberline {5.4.3.1}makeCopy()}{20}{subsubsection.5.4.3.1}%
-\contentsline {section}{\numberline {5.5}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Integer Class Reference}{21}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Detailed Description}{23}{subsection.5.5.1}%
-\contentsline {subsection}{\numberline {5.5.2}Constructor \& Destructor Documentation}{23}{subsection.5.5.2}%
-\contentsline {subsubsection}{\numberline {5.5.2.1}AstNodeInteger()}{23}{subsubsection.5.5.2.1}%
-\contentsline {subsection}{\numberline {5.5.3}Member Function Documentation}{23}{subsection.5.5.3}%
-\contentsline {subsubsection}{\numberline {5.5.3.1}makeCopy()}{23}{subsubsection.5.5.3.1}%
-\contentsline {section}{\numberline {5.6}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Modulo Class Reference}{24}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}Detailed Description}{26}{subsection.5.6.1}%
-\contentsline {subsection}{\numberline {5.6.2}Constructor \& Destructor Documentation}{26}{subsection.5.6.2}%
-\contentsline {subsubsection}{\numberline {5.6.2.1}AstNodeModulo()}{26}{subsubsection.5.6.2.1}%
-\contentsline {subsection}{\numberline {5.6.3}Member Function Documentation}{26}{subsection.5.6.3}%
-\contentsline {subsubsection}{\numberline {5.6.3.1}makeCopy()}{26}{subsubsection.5.6.3.1}%
-\contentsline {section}{\numberline {5.7}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Multiply Class Reference}{27}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}Detailed Description}{29}{subsection.5.7.1}%
-\contentsline {subsection}{\numberline {5.7.2}Constructor \& Destructor Documentation}{29}{subsection.5.7.2}%
-\contentsline {subsubsection}{\numberline {5.7.2.1}AstNodeMultiply()}{29}{subsubsection.5.7.2.1}%
-\contentsline {subsection}{\numberline {5.7.3}Member Function Documentation}{29}{subsection.5.7.3}%
-\contentsline {subsubsection}{\numberline {5.7.3.1}makeCopy()}{29}{subsubsection.5.7.3.1}%
-\contentsline {section}{\numberline {5.8}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Negative Class Reference}{30}{section.5.8}%
-\contentsline {subsection}{\numberline {5.8.1}Detailed Description}{32}{subsection.5.8.1}%
-\contentsline {subsection}{\numberline {5.8.2}Constructor \& Destructor Documentation}{32}{subsection.5.8.2}%
-\contentsline {subsubsection}{\numberline {5.8.2.1}AstNodeNegative()}{32}{subsubsection.5.8.2.1}%
-\contentsline {subsection}{\numberline {5.8.3}Member Function Documentation}{32}{subsection.5.8.3}%
-\contentsline {subsubsection}{\numberline {5.8.3.1}makeCopy()}{32}{subsubsection.5.8.3.1}%
-\contentsline {section}{\numberline {5.9}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Subtract Class Reference}{33}{section.5.9}%
-\contentsline {subsection}{\numberline {5.9.1}Detailed Description}{35}{subsection.5.9.1}%
-\contentsline {subsection}{\numberline {5.9.2}Constructor \& Destructor Documentation}{35}{subsection.5.9.2}%
-\contentsline {subsubsection}{\numberline {5.9.2.1}AstNodeSubtract()}{35}{subsubsection.5.9.2.1}%
-\contentsline {subsection}{\numberline {5.9.3}Member Function Documentation}{35}{subsection.5.9.3}%
-\contentsline {subsubsection}{\numberline {5.9.3.1}makeCopy()}{35}{subsubsection.5.9.3.1}%
-\contentsline {section}{\numberline {5.10}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression Class Reference}{36}{section.5.10}%
-\contentsline {subsection}{\numberline {5.10.1}Detailed Description}{37}{subsection.5.10.1}%
-\contentsline {subsection}{\numberline {5.10.2}Member Function Documentation}{37}{subsection.5.10.2}%
-\contentsline {subsubsection}{\numberline {5.10.2.1}\_\_add()}{37}{subsubsection.5.10.2.1}%
-\contentsline {subsubsection}{\numberline {5.10.2.2}\_\_divide()}{37}{subsubsection.5.10.2.2}%
-\contentsline {subsubsection}{\numberline {5.10.2.3}\_\_modulo()}{38}{subsubsection.5.10.2.3}%
-\contentsline {subsubsection}{\numberline {5.10.2.4}\_\_multiply()}{38}{subsubsection.5.10.2.4}%
-\contentsline {subsubsection}{\numberline {5.10.2.5}\_\_negative()}{38}{subsubsection.5.10.2.5}%
-\contentsline {subsubsection}{\numberline {5.10.2.6}\_\_subtract()}{39}{subsubsection.5.10.2.6}%
-\contentsline {subsubsection}{\numberline {5.10.2.7}dump()}{39}{subsubsection.5.10.2.7}%
-\contentsline {subsubsection}{\numberline {5.10.2.8}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{39}{subsubsection.5.10.2.8}%
-\contentsline {subsubsection}{\numberline {5.10.2.9}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{40}{subsubsection.5.10.2.9}%
-\contentsline {subsubsection}{\numberline {5.10.2.10}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{40}{subsubsection.5.10.2.10}%
-\contentsline {subsubsection}{\numberline {5.10.2.11}makeCopy()}{40}{subsubsection.5.10.2.11}%
-\contentsline {section}{\numberline {5.11}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Error Class Reference}{41}{section.5.11}%
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{12}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Constructor \& Destructor Documentation}{12}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}AstNode()}{12}{subsubsection.5.1.2.1}%
+\contentsline {subsection}{\numberline {5.1.3}Member Function Documentation}{12}{subsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.3.1}makeCopy()}{12}{subsubsection.5.1.3.1}%
+\contentsline {section}{\numberline {5.2}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Add Class Reference}{13}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Detailed Description}{15}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Constructor \& Destructor Documentation}{15}{subsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}AstNodeAdd()}{15}{subsubsection.5.2.2.1}%
+\contentsline {subsection}{\numberline {5.2.3}Member Function Documentation}{15}{subsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.3.1}makeCopy()}{15}{subsubsection.5.2.3.1}%
+\contentsline {section}{\numberline {5.3}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Float Class Reference}{16}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Detailed Description}{18}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Constructor \& Destructor Documentation}{18}{subsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.1}AstNodeCastFloat()}{18}{subsubsection.5.3.2.1}%
+\contentsline {subsection}{\numberline {5.3.3}Member Function Documentation}{18}{subsection.5.3.3}%
+\contentsline {subsubsection}{\numberline {5.3.3.1}makeCopy()}{18}{subsubsection.5.3.3.1}%
+\contentsline {section}{\numberline {5.4}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Integer Class Reference}{19}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Detailed Description}{21}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Constructor \& Destructor Documentation}{21}{subsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.1}AstNodeCastInteger()}{21}{subsubsection.5.4.2.1}%
+\contentsline {subsection}{\numberline {5.4.3}Member Function Documentation}{21}{subsection.5.4.3}%
+\contentsline {subsubsection}{\numberline {5.4.3.1}makeCopy()}{21}{subsubsection.5.4.3.1}%
+\contentsline {section}{\numberline {5.5}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Divide Class Reference}{22}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Detailed Description}{24}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Constructor \& Destructor Documentation}{24}{subsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.2.1}AstNodeDivide()}{24}{subsubsection.5.5.2.1}%
+\contentsline {subsection}{\numberline {5.5.3}Member Function Documentation}{24}{subsection.5.5.3}%
+\contentsline {subsubsection}{\numberline {5.5.3.1}makeCopy()}{24}{subsubsection.5.5.3.1}%
+\contentsline {section}{\numberline {5.6}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Float Class Reference}{25}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Detailed Description}{27}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Constructor \& Destructor Documentation}{27}{subsection.5.6.2}%
+\contentsline {subsubsection}{\numberline {5.6.2.1}AstNodeFloat()}{27}{subsubsection.5.6.2.1}%
+\contentsline {subsection}{\numberline {5.6.3}Member Function Documentation}{27}{subsection.5.6.3}%
+\contentsline {subsubsection}{\numberline {5.6.3.1}makeCopy()}{27}{subsubsection.5.6.3.1}%
+\contentsline {section}{\numberline {5.7}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Integer Class Reference}{28}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Detailed Description}{30}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Constructor \& Destructor Documentation}{30}{subsection.5.7.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.1}AstNodeInteger()}{30}{subsubsection.5.7.2.1}%
+\contentsline {subsection}{\numberline {5.7.3}Member Function Documentation}{30}{subsection.5.7.3}%
+\contentsline {subsubsection}{\numberline {5.7.3.1}makeCopy()}{30}{subsubsection.5.7.3.1}%
+\contentsline {section}{\numberline {5.8}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Modulo Class Reference}{31}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Detailed Description}{33}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2}Constructor \& Destructor Documentation}{33}{subsection.5.8.2}%
+\contentsline {subsubsection}{\numberline {5.8.2.1}AstNodeModulo()}{33}{subsubsection.5.8.2.1}%
+\contentsline {subsection}{\numberline {5.8.3}Member Function Documentation}{33}{subsection.5.8.3}%
+\contentsline {subsubsection}{\numberline {5.8.3.1}makeCopy()}{33}{subsubsection.5.8.3.1}%
+\contentsline {section}{\numberline {5.9}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Multiply Class Reference}{34}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Detailed Description}{36}{subsection.5.9.1}%
+\contentsline {subsection}{\numberline {5.9.2}Constructor \& Destructor Documentation}{36}{subsection.5.9.2}%
+\contentsline {subsubsection}{\numberline {5.9.2.1}AstNodeMultiply()}{36}{subsubsection.5.9.2.1}%
+\contentsline {subsection}{\numberline {5.9.3}Member Function Documentation}{36}{subsection.5.9.3}%
+\contentsline {subsubsection}{\numberline {5.9.3.1}makeCopy()}{36}{subsubsection.5.9.3.1}%
+\contentsline {section}{\numberline {5.10}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Negative Class Reference}{37}{section.5.10}%
+\contentsline {subsection}{\numberline {5.10.1}Detailed Description}{39}{subsection.5.10.1}%
+\contentsline {subsection}{\numberline {5.10.2}Constructor \& Destructor Documentation}{39}{subsection.5.10.2}%
+\contentsline {subsubsection}{\numberline {5.10.2.1}AstNodeNegative()}{39}{subsubsection.5.10.2.1}%
+\contentsline {subsection}{\numberline {5.10.3}Member Function Documentation}{39}{subsection.5.10.3}%
+\contentsline {subsubsection}{\numberline {5.10.3.1}makeCopy()}{39}{subsubsection.5.10.3.1}%
+\contentsline {section}{\numberline {5.11}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Subtract Class Reference}{40}{section.5.11}%
 \contentsline {subsection}{\numberline {5.11.1}Detailed Description}{42}{subsection.5.11.1}%
 \contentsline {subsection}{\numberline {5.11.2}Constructor \& Destructor Documentation}{42}{subsection.5.11.2}%
-\contentsline {subsubsection}{\numberline {5.11.2.1}ComputedExpressionError()}{42}{subsubsection.5.11.2.1}%
+\contentsline {subsubsection}{\numberline {5.11.2.1}AstNodeSubtract()}{42}{subsubsection.5.11.2.1}%
 \contentsline {subsection}{\numberline {5.11.3}Member Function Documentation}{42}{subsection.5.11.3}%
-\contentsline {subsubsection}{\numberline {5.11.3.1}\_\_add()}{42}{subsubsection.5.11.3.1}%
-\contentsline {subsubsection}{\numberline {5.11.3.2}\_\_divide()}{43}{subsubsection.5.11.3.2}%
-\contentsline {subsubsection}{\numberline {5.11.3.3}\_\_modulo()}{43}{subsubsection.5.11.3.3}%
-\contentsline {subsubsection}{\numberline {5.11.3.4}\_\_multiply()}{44}{subsubsection.5.11.3.4}%
-\contentsline {subsubsection}{\numberline {5.11.3.5}\_\_negative()}{44}{subsubsection.5.11.3.5}%
-\contentsline {subsubsection}{\numberline {5.11.3.6}\_\_subtract()}{44}{subsubsection.5.11.3.6}%
-\contentsline {subsubsection}{\numberline {5.11.3.7}dump()}{45}{subsubsection.5.11.3.7}%
-\contentsline {subsubsection}{\numberline {5.11.3.8}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{45}{subsubsection.5.11.3.8}%
-\contentsline {subsubsection}{\numberline {5.11.3.9}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{45}{subsubsection.5.11.3.9}%
-\contentsline {subsubsection}{\numberline {5.11.3.10}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{46}{subsubsection.5.11.3.10}%
-\contentsline {subsubsection}{\numberline {5.11.3.11}makeCopy()}{46}{subsubsection.5.11.3.11}%
-\contentsline {section}{\numberline {5.12}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Float Class Reference}{47}{section.5.12}%
-\contentsline {subsection}{\numberline {5.12.1}Detailed Description}{48}{subsection.5.12.1}%
-\contentsline {subsection}{\numberline {5.12.2}Constructor \& Destructor Documentation}{48}{subsection.5.12.2}%
-\contentsline {subsubsection}{\numberline {5.12.2.1}ComputedExpressionFloat()}{48}{subsubsection.5.12.2.1}%
-\contentsline {subsection}{\numberline {5.12.3}Member Function Documentation}{48}{subsection.5.12.3}%
-\contentsline {subsubsection}{\numberline {5.12.3.1}\_\_add()}{48}{subsubsection.5.12.3.1}%
-\contentsline {subsubsection}{\numberline {5.12.3.2}\_\_divide()}{49}{subsubsection.5.12.3.2}%
-\contentsline {subsubsection}{\numberline {5.12.3.3}\_\_modulo()}{49}{subsubsection.5.12.3.3}%
-\contentsline {subsubsection}{\numberline {5.12.3.4}\_\_multiply()}{50}{subsubsection.5.12.3.4}%
-\contentsline {subsubsection}{\numberline {5.12.3.5}\_\_negative()}{50}{subsubsection.5.12.3.5}%
-\contentsline {subsubsection}{\numberline {5.12.3.6}\_\_subtract()}{50}{subsubsection.5.12.3.6}%
-\contentsline {subsubsection}{\numberline {5.12.3.7}dump()}{51}{subsubsection.5.12.3.7}%
-\contentsline {subsubsection}{\numberline {5.12.3.8}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{51}{subsubsection.5.12.3.8}%
-\contentsline {subsubsection}{\numberline {5.12.3.9}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{51}{subsubsection.5.12.3.9}%
-\contentsline {subsubsection}{\numberline {5.12.3.10}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{52}{subsubsection.5.12.3.10}%
-\contentsline {subsubsection}{\numberline {5.12.3.11}makeCopy()}{52}{subsubsection.5.12.3.11}%
-\contentsline {section}{\numberline {5.13}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Integer Class Reference}{53}{section.5.13}%
-\contentsline {subsection}{\numberline {5.13.1}Detailed Description}{54}{subsection.5.13.1}%
-\contentsline {subsection}{\numberline {5.13.2}Constructor \& Destructor Documentation}{54}{subsection.5.13.2}%
-\contentsline {subsubsection}{\numberline {5.13.2.1}ComputedExpressionInteger()}{54}{subsubsection.5.13.2.1}%
-\contentsline {subsection}{\numberline {5.13.3}Member Function Documentation}{54}{subsection.5.13.3}%
-\contentsline {subsubsection}{\numberline {5.13.3.1}\_\_add()}{55}{subsubsection.5.13.3.1}%
-\contentsline {subsubsection}{\numberline {5.13.3.2}\_\_divide()}{55}{subsubsection.5.13.3.2}%
-\contentsline {subsubsection}{\numberline {5.13.3.3}\_\_modulo()}{55}{subsubsection.5.13.3.3}%
-\contentsline {subsubsection}{\numberline {5.13.3.4}\_\_multiply()}{56}{subsubsection.5.13.3.4}%
-\contentsline {subsubsection}{\numberline {5.13.3.5}\_\_negative()}{56}{subsubsection.5.13.3.5}%
-\contentsline {subsubsection}{\numberline {5.13.3.6}\_\_subtract()}{56}{subsubsection.5.13.3.6}%
-\contentsline {subsubsection}{\numberline {5.13.3.7}dump()}{57}{subsubsection.5.13.3.7}%
-\contentsline {subsubsection}{\numberline {5.13.3.8}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{57}{subsubsection.5.13.3.8}%
-\contentsline {subsubsection}{\numberline {5.13.3.9}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{57}{subsubsection.5.13.3.9}%
-\contentsline {subsubsection}{\numberline {5.13.3.10}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{58}{subsubsection.5.13.3.10}%
-\contentsline {subsubsection}{\numberline {5.13.3.11}makeCopy()}{58}{subsubsection.5.13.3.11}%
-\contentsline {section}{\numberline {5.14}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Error Class Reference}{59}{section.5.14}%
-\contentsline {subsection}{\numberline {5.14.1}Detailed Description}{60}{subsection.5.14.1}%
-\contentsline {subsection}{\numberline {5.14.2}Constructor \& Destructor Documentation}{60}{subsection.5.14.2}%
-\contentsline {subsubsection}{\numberline {5.14.2.1}Error()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{60}{subsubsection.5.14.2.1}%
-\contentsline {subsubsection}{\numberline {5.14.2.2}Error()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{60}{subsubsection.5.14.2.2}%
-\contentsline {subsection}{\numberline {5.14.3}Friends And Related Function Documentation}{61}{subsection.5.14.3}%
-\contentsline {subsubsection}{\numberline {5.14.3.1}operator$<$$<$}{61}{subsubsection.5.14.3.1}%
-\contentsline {section}{\numberline {5.15}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Garbage\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Collected Class Reference}{61}{section.5.15}%
+\contentsline {subsubsection}{\numberline {5.11.3.1}makeCopy()}{42}{subsubsection.5.11.3.1}%
+\contentsline {section}{\numberline {5.12}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression Class Reference}{43}{section.5.12}%
+\contentsline {subsection}{\numberline {5.12.1}Detailed Description}{44}{subsection.5.12.1}%
+\contentsline {subsection}{\numberline {5.12.2}Member Function Documentation}{44}{subsection.5.12.2}%
+\contentsline {subsubsection}{\numberline {5.12.2.1}\_\_add()}{44}{subsubsection.5.12.2.1}%
+\contentsline {subsubsection}{\numberline {5.12.2.2}\_\_divide()}{44}{subsubsection.5.12.2.2}%
+\contentsline {subsubsection}{\numberline {5.12.2.3}\_\_float()}{45}{subsubsection.5.12.2.3}%
+\contentsline {subsubsection}{\numberline {5.12.2.4}\_\_integer()}{45}{subsubsection.5.12.2.4}%
+\contentsline {subsubsection}{\numberline {5.12.2.5}\_\_modulo()}{45}{subsubsection.5.12.2.5}%
+\contentsline {subsubsection}{\numberline {5.12.2.6}\_\_multiply()}{46}{subsubsection.5.12.2.6}%
+\contentsline {subsubsection}{\numberline {5.12.2.7}\_\_negative()}{46}{subsubsection.5.12.2.7}%
+\contentsline {subsubsection}{\numberline {5.12.2.8}\_\_subtract()}{46}{subsubsection.5.12.2.8}%
+\contentsline {subsubsection}{\numberline {5.12.2.9}dump()}{47}{subsubsection.5.12.2.9}%
+\contentsline {subsubsection}{\numberline {5.12.2.10}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{47}{subsubsection.5.12.2.10}%
+\contentsline {subsubsection}{\numberline {5.12.2.11}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{47}{subsubsection.5.12.2.11}%
+\contentsline {subsubsection}{\numberline {5.12.2.12}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{48}{subsubsection.5.12.2.12}%
+\contentsline {subsubsection}{\numberline {5.12.2.13}makeCopy()}{48}{subsubsection.5.12.2.13}%
+\contentsline {section}{\numberline {5.13}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Error Class Reference}{48}{section.5.13}%
+\contentsline {subsection}{\numberline {5.13.1}Detailed Description}{50}{subsection.5.13.1}%
+\contentsline {subsection}{\numberline {5.13.2}Constructor \& Destructor Documentation}{50}{subsection.5.13.2}%
+\contentsline {subsubsection}{\numberline {5.13.2.1}ComputedExpressionError()}{50}{subsubsection.5.13.2.1}%
+\contentsline {subsection}{\numberline {5.13.3}Member Function Documentation}{50}{subsection.5.13.3}%
+\contentsline {subsubsection}{\numberline {5.13.3.1}\_\_add()}{50}{subsubsection.5.13.3.1}%
+\contentsline {subsubsection}{\numberline {5.13.3.2}\_\_divide()}{51}{subsubsection.5.13.3.2}%
+\contentsline {subsubsection}{\numberline {5.13.3.3}\_\_float()}{51}{subsubsection.5.13.3.3}%
+\contentsline {subsubsection}{\numberline {5.13.3.4}\_\_integer()}{52}{subsubsection.5.13.3.4}%
+\contentsline {subsubsection}{\numberline {5.13.3.5}\_\_modulo()}{52}{subsubsection.5.13.3.5}%
+\contentsline {subsubsection}{\numberline {5.13.3.6}\_\_multiply()}{52}{subsubsection.5.13.3.6}%
+\contentsline {subsubsection}{\numberline {5.13.3.7}\_\_negative()}{53}{subsubsection.5.13.3.7}%
+\contentsline {subsubsection}{\numberline {5.13.3.8}\_\_subtract()}{53}{subsubsection.5.13.3.8}%
+\contentsline {subsubsection}{\numberline {5.13.3.9}dump()}{53}{subsubsection.5.13.3.9}%
+\contentsline {subsubsection}{\numberline {5.13.3.10}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{53}{subsubsection.5.13.3.10}%
+\contentsline {subsubsection}{\numberline {5.13.3.11}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{54}{subsubsection.5.13.3.11}%
+\contentsline {subsubsection}{\numberline {5.13.3.12}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{54}{subsubsection.5.13.3.12}%
+\contentsline {subsubsection}{\numberline {5.13.3.13}makeCopy()}{55}{subsubsection.5.13.3.13}%
+\contentsline {section}{\numberline {5.14}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Float Class Reference}{55}{section.5.14}%
+\contentsline {subsection}{\numberline {5.14.1}Detailed Description}{57}{subsection.5.14.1}%
+\contentsline {subsection}{\numberline {5.14.2}Constructor \& Destructor Documentation}{57}{subsection.5.14.2}%
+\contentsline {subsubsection}{\numberline {5.14.2.1}ComputedExpressionFloat()}{57}{subsubsection.5.14.2.1}%
+\contentsline {subsection}{\numberline {5.14.3}Member Function Documentation}{57}{subsection.5.14.3}%
+\contentsline {subsubsection}{\numberline {5.14.3.1}\_\_add()}{57}{subsubsection.5.14.3.1}%
+\contentsline {subsubsection}{\numberline {5.14.3.2}\_\_divide()}{57}{subsubsection.5.14.3.2}%
+\contentsline {subsubsection}{\numberline {5.14.3.3}\_\_float()}{58}{subsubsection.5.14.3.3}%
+\contentsline {subsubsection}{\numberline {5.14.3.4}\_\_integer()}{58}{subsubsection.5.14.3.4}%
+\contentsline {subsubsection}{\numberline {5.14.3.5}\_\_modulo()}{58}{subsubsection.5.14.3.5}%
+\contentsline {subsubsection}{\numberline {5.14.3.6}\_\_multiply()}{59}{subsubsection.5.14.3.6}%
+\contentsline {subsubsection}{\numberline {5.14.3.7}\_\_negative()}{59}{subsubsection.5.14.3.7}%
+\contentsline {subsubsection}{\numberline {5.14.3.8}\_\_subtract()}{59}{subsubsection.5.14.3.8}%
+\contentsline {subsubsection}{\numberline {5.14.3.9}dump()}{60}{subsubsection.5.14.3.9}%
+\contentsline {subsubsection}{\numberline {5.14.3.10}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{60}{subsubsection.5.14.3.10}%
+\contentsline {subsubsection}{\numberline {5.14.3.11}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{60}{subsubsection.5.14.3.11}%
+\contentsline {subsubsection}{\numberline {5.14.3.12}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{61}{subsubsection.5.14.3.12}%
+\contentsline {subsubsection}{\numberline {5.14.3.13}makeCopy()}{61}{subsubsection.5.14.3.13}%
+\contentsline {section}{\numberline {5.15}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Integer Class Reference}{62}{section.5.15}%
 \contentsline {subsection}{\numberline {5.15.1}Detailed Description}{63}{subsection.5.15.1}%
 \contentsline {subsection}{\numberline {5.15.2}Constructor \& Destructor Documentation}{63}{subsection.5.15.2}%
-\contentsline {subsubsection}{\numberline {5.15.2.1}GarbageCollected()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{63}{subsubsection.5.15.2.1}%
-\contentsline {subsubsection}{\numberline {5.15.2.2}GarbageCollected()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{63}{subsubsection.5.15.2.2}%
-\contentsline {subsubsection}{\numberline {5.15.2.3}$\sim $GarbageCollected()}{64}{subsubsection.5.15.2.3}%
-\contentsline {subsubsection}{\numberline {5.15.2.4}GarbageCollected()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{64}{subsubsection.5.15.2.4}%
+\contentsline {subsubsection}{\numberline {5.15.2.1}ComputedExpressionInteger()}{63}{subsubsection.5.15.2.1}%
 \contentsline {subsection}{\numberline {5.15.3}Member Function Documentation}{64}{subsection.5.15.3}%
-\contentsline {subsubsection}{\numberline {5.15.3.1}make()}{64}{subsubsection.5.15.3.1}%
-\contentsline {subsubsection}{\numberline {5.15.3.2}operator\%()}{65}{subsubsection.5.15.3.2}%
-\contentsline {subsubsection}{\numberline {5.15.3.3}operator$\ast $()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{65}{subsubsection.5.15.3.3}%
-\contentsline {subsubsection}{\numberline {5.15.3.4}operator$\ast $()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{66}{subsubsection.5.15.3.4}%
-\contentsline {subsubsection}{\numberline {5.15.3.5}operator+()}{66}{subsubsection.5.15.3.5}%
-\contentsline {subsubsection}{\numberline {5.15.3.6}operator-\/()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{67}{subsubsection.5.15.3.6}%
-\contentsline {subsubsection}{\numberline {5.15.3.7}operator-\/()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{67}{subsubsection.5.15.3.7}%
-\contentsline {subsubsection}{\numberline {5.15.3.8}operator-\/$>$()}{68}{subsubsection.5.15.3.8}%
-\contentsline {subsubsection}{\numberline {5.15.3.9}operator/()}{68}{subsubsection.5.15.3.9}%
-\contentsline {subsubsection}{\numberline {5.15.3.10}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{69}{subsubsection.5.15.3.10}%
-\contentsline {subsubsection}{\numberline {5.15.3.11}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{69}{subsubsection.5.15.3.11}%
-\contentsline {subsubsection}{\numberline {5.15.3.12}operator==()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{70}{subsubsection.5.15.3.12}%
-\contentsline {subsubsection}{\numberline {5.15.3.13}operator==()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{70}{subsubsection.5.15.3.13}%
-\contentsline {subsubsection}{\numberline {5.15.3.14}operator==()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{71}{subsubsection.5.15.3.14}%
-\contentsline {subsection}{\numberline {5.15.4}Friends And Related Function Documentation}{71}{subsection.5.15.4}%
-\contentsline {subsubsection}{\numberline {5.15.4.1}operator$<$$<$}{71}{subsubsection.5.15.4.1}%
-\contentsline {section}{\numberline {5.16}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::location Class Reference}{71}{section.5.16}%
-\contentsline {subsection}{\numberline {5.16.1}Detailed Description}{73}{subsection.5.16.1}%
-\contentsline {section}{\numberline {5.17}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::position Class Reference}{73}{section.5.17}%
-\contentsline {subsection}{\numberline {5.17.1}Detailed Description}{74}{subsection.5.17.1}%
-\contentsline {section}{\numberline {5.18}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Program Class Reference}{74}{section.5.18}%
-\contentsline {subsection}{\numberline {5.18.1}Detailed Description}{76}{subsection.5.18.1}%
-\contentsline {subsection}{\numberline {5.18.2}Member Enumeration Documentation}{76}{subsection.5.18.2}%
-\contentsline {subsubsection}{\numberline {5.18.2.1}CodeType}{76}{subsubsection.5.18.2.1}%
-\contentsline {subsection}{\numberline {5.18.3}Constructor \& Destructor Documentation}{76}{subsection.5.18.3}%
-\contentsline {subsubsection}{\numberline {5.18.3.1}Program()}{76}{subsubsection.5.18.3.1}%
-\contentsline {subsection}{\numberline {5.18.4}Member Function Documentation}{76}{subsection.5.18.4}%
-\contentsline {subsubsection}{\numberline {5.18.4.1}addBytecode()}{77}{subsubsection.5.18.4.1}%
-\contentsline {subsubsection}{\numberline {5.18.4.2}dumpBytecode()}{77}{subsubsection.5.18.4.2}%
-\contentsline {subsubsection}{\numberline {5.18.4.3}execute()}{77}{subsubsection.5.18.4.3}%
-\contentsline {subsubsection}{\numberline {5.18.4.4}getAst()}{77}{subsubsection.5.18.4.4}%
-\contentsline {subsubsection}{\numberline {5.18.4.5}getCode()}{78}{subsubsection.5.18.4.5}%
-\contentsline {subsubsection}{\numberline {5.18.4.6}getResult()}{78}{subsubsection.5.18.4.6}%
-\contentsline {section}{\numberline {5.19}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Singleton\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pool$<$ T $>$ Class Template Reference}{78}{section.5.19}%
-\contentsline {subsection}{\numberline {5.19.1}Member Function Documentation}{78}{subsection.5.19.1}%
-\contentsline {subsubsection}{\numberline {5.19.1.1}get()}{79}{subsubsection.5.19.1.1}%
-\contentsline {subsubsection}{\numberline {5.19.1.2}getInstance()}{79}{subsubsection.5.19.1.2}%
-\contentsline {subsubsection}{\numberline {5.19.1.3}recycle()}{79}{subsubsection.5.19.1.3}%
-\contentsline {section}{\numberline {5.20}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Class Reference}{79}{section.5.20}%
-\contentsline {subsection}{\numberline {5.20.1}Detailed Description}{80}{subsection.5.20.1}%
-\contentsline {subsection}{\numberline {5.20.2}Constructor \& Destructor Documentation}{80}{subsection.5.20.2}%
-\contentsline {subsubsection}{\numberline {5.20.2.1}TangBase()}{80}{subsubsection.5.20.2.1}%
-\contentsline {subsection}{\numberline {5.20.3}Member Function Documentation}{80}{subsection.5.20.3}%
-\contentsline {subsubsection}{\numberline {5.20.3.1}compileScript()}{80}{subsubsection.5.20.3.1}%
-\contentsline {section}{\numberline {5.21}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scanner Class Reference}{81}{section.5.21}%
-\contentsline {subsection}{\numberline {5.21.1}Detailed Description}{82}{subsection.5.21.1}%
-\contentsline {subsection}{\numberline {5.21.2}Constructor \& Destructor Documentation}{82}{subsection.5.21.2}%
-\contentsline {subsubsection}{\numberline {5.21.2.1}TangScanner()}{82}{subsubsection.5.21.2.1}%
-\contentsline {subsection}{\numberline {5.21.3}Member Function Documentation}{82}{subsection.5.21.3}%
-\contentsline {subsubsection}{\numberline {5.21.3.1}get\_next\_token()}{82}{subsubsection.5.21.3.1}%
-\contentsline {chapter}{\numberline {6}File Documentation}{83}{chapter.6}%
-\contentsline {section}{\numberline {6.1}build/generated/location.hh File Reference}{83}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{84}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Function Documentation}{84}{subsection.6.1.2}%
-\contentsline {subsubsection}{\numberline {6.1.2.1}operator$<$$<$()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{84}{subsubsection.6.1.2.1}%
-\contentsline {subsubsection}{\numberline {6.1.2.2}operator$<$$<$()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{85}{subsubsection.6.1.2.2}%
-\contentsline {section}{\numberline {6.2}include/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node.hpp File Reference}{85}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{86}{subsection.6.2.1}%
-\contentsline {section}{\numberline {6.3}include/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Add.hpp File Reference}{86}{section.6.3}%
-\contentsline {section}{\numberline {6.4}include/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Divide.hpp File Reference}{87}{section.6.4}%
-\contentsline {section}{\numberline {6.5}include/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Float.hpp File Reference}{88}{section.6.5}%
-\contentsline {section}{\numberline {6.6}include/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Integer.hpp File Reference}{89}{section.6.6}%
-\contentsline {section}{\numberline {6.7}include/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Modulo.hpp File Reference}{90}{section.6.7}%
-\contentsline {section}{\numberline {6.8}include/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Multiply.hpp File Reference}{91}{section.6.8}%
-\contentsline {section}{\numberline {6.9}include/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Negative.hpp File Reference}{92}{section.6.9}%
-\contentsline {section}{\numberline {6.10}include/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Subtract.hpp File Reference}{93}{section.6.10}%
-\contentsline {section}{\numberline {6.11}include/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression.hpp File Reference}{94}{section.6.11}%
-\contentsline {section}{\numberline {6.12}include/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Error.hpp File Reference}{95}{section.6.12}%
-\contentsline {section}{\numberline {6.13}include/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Float.hpp File Reference}{96}{section.6.13}%
-\contentsline {section}{\numberline {6.14}include/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Integer.hpp File Reference}{97}{section.6.14}%
-\contentsline {section}{\numberline {6.15}include/error.hpp File Reference}{97}{section.6.15}%
-\contentsline {subsection}{\numberline {6.15.1}Detailed Description}{98}{subsection.6.15.1}%
-\contentsline {section}{\numberline {6.16}include/garbage\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Collected.hpp File Reference}{98}{section.6.16}%
-\contentsline {section}{\numberline {6.17}include/macros.hpp File Reference}{99}{section.6.17}%
-\contentsline {subsection}{\numberline {6.17.1}Detailed Description}{99}{subsection.6.17.1}%
-\contentsline {subsection}{\numberline {6.17.2}Macro Definition Documentation}{100}{subsection.6.17.2}%
-\contentsline {subsubsection}{\numberline {6.17.2.1}TANG\_UNUSED}{100}{subsubsection.6.17.2.1}%
-\contentsline {section}{\numberline {6.18}include/opcode.hpp File Reference}{100}{section.6.18}%
-\contentsline {subsection}{\numberline {6.18.1}Detailed Description}{100}{subsection.6.18.1}%
-\contentsline {subsection}{\numberline {6.18.2}Enumeration Type Documentation}{100}{subsection.6.18.2}%
-\contentsline {subsubsection}{\numberline {6.18.2.1}Opcode}{100}{subsubsection.6.18.2.1}%
-\contentsline {section}{\numberline {6.19}include/program.hpp File Reference}{101}{section.6.19}%
-\contentsline {subsection}{\numberline {6.19.1}Detailed Description}{102}{subsection.6.19.1}%
-\contentsline {section}{\numberline {6.20}include/singleton\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pool.hpp File Reference}{102}{section.6.20}%
-\contentsline {section}{\numberline {6.21}include/tang.hpp File Reference}{103}{section.6.21}%
-\contentsline {subsection}{\numberline {6.21.1}Detailed Description}{104}{subsection.6.21.1}%
-\contentsline {section}{\numberline {6.22}include/tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base.hpp File Reference}{104}{section.6.22}%
-\contentsline {subsection}{\numberline {6.22.1}Detailed Description}{105}{subsection.6.22.1}%
-\contentsline {section}{\numberline {6.23}include/tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scanner.hpp File Reference}{105}{section.6.23}%
-\contentsline {subsection}{\numberline {6.23.1}Detailed Description}{106}{subsection.6.23.1}%
-\contentsline {section}{\numberline {6.24}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node.cpp File Reference}{106}{section.6.24}%
-\contentsline {section}{\numberline {6.25}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Add.cpp File Reference}{107}{section.6.25}%
-\contentsline {section}{\numberline {6.26}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Divide.cpp File Reference}{107}{section.6.26}%
-\contentsline {section}{\numberline {6.27}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Float.cpp File Reference}{108}{section.6.27}%
-\contentsline {section}{\numberline {6.28}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Integer.cpp File Reference}{109}{section.6.28}%
-\contentsline {section}{\numberline {6.29}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Modulo.cpp File Reference}{110}{section.6.29}%
-\contentsline {section}{\numberline {6.30}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Multiply.cpp File Reference}{111}{section.6.30}%
-\contentsline {section}{\numberline {6.31}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Negative.cpp File Reference}{112}{section.6.31}%
-\contentsline {section}{\numberline {6.32}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Subtract.cpp File Reference}{113}{section.6.32}%
-\contentsline {section}{\numberline {6.33}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression.cpp File Reference}{114}{section.6.33}%
-\contentsline {section}{\numberline {6.34}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Error.cpp File Reference}{115}{section.6.34}%
-\contentsline {section}{\numberline {6.35}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Float.cpp File Reference}{115}{section.6.35}%
-\contentsline {section}{\numberline {6.36}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Integer.cpp File Reference}{116}{section.6.36}%
-\contentsline {section}{\numberline {6.37}src/error.cpp File Reference}{117}{section.6.37}%
-\contentsline {subsection}{\numberline {6.37.1}Function Documentation}{117}{subsection.6.37.1}%
-\contentsline {subsubsection}{\numberline {6.37.1.1}operator$<$$<$()}{117}{subsubsection.6.37.1.1}%
-\contentsline {section}{\numberline {6.38}src/program-\/dump\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bytecode.cpp File Reference}{118}{section.6.38}%
-\contentsline {subsection}{\numberline {6.38.1}Macro Definition Documentation}{118}{subsection.6.38.1}%
-\contentsline {subsubsection}{\numberline {6.38.1.1}DUMPPROGRAMCHECK}{118}{subsubsection.6.38.1.1}%
-\contentsline {section}{\numberline {6.39}src/program-\/execute.cpp File Reference}{119}{section.6.39}%
-\contentsline {subsection}{\numberline {6.39.1}Macro Definition Documentation}{119}{subsection.6.39.1}%
-\contentsline {subsubsection}{\numberline {6.39.1.1}EXECUTEPROGRAMCHECK}{119}{subsubsection.6.39.1.1}%
-\contentsline {subsubsection}{\numberline {6.39.1.2}STACKCHECK}{120}{subsubsection.6.39.1.2}%
-\contentsline {section}{\numberline {6.40}src/program.cpp File Reference}{120}{section.6.40}%
-\contentsline {section}{\numberline {6.41}src/tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base.cpp File Reference}{121}{section.6.41}%
-\contentsline {section}{\numberline {6.42}test/test.cpp File Reference}{121}{section.6.42}%
-\contentsline {subsection}{\numberline {6.42.1}Detailed Description}{122}{subsection.6.42.1}%
-\contentsline {section}{\numberline {6.43}test/test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Singleton\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pool.cpp File Reference}{122}{section.6.43}%
-\contentsline {chapter}{Index}{123}{section*.186}%
+\contentsline {subsubsection}{\numberline {5.15.3.1}\_\_add()}{64}{subsubsection.5.15.3.1}%
+\contentsline {subsubsection}{\numberline {5.15.3.2}\_\_divide()}{64}{subsubsection.5.15.3.2}%
+\contentsline {subsubsection}{\numberline {5.15.3.3}\_\_float()}{64}{subsubsection.5.15.3.3}%
+\contentsline {subsubsection}{\numberline {5.15.3.4}\_\_integer()}{65}{subsubsection.5.15.3.4}%
+\contentsline {subsubsection}{\numberline {5.15.3.5}\_\_modulo()}{65}{subsubsection.5.15.3.5}%
+\contentsline {subsubsection}{\numberline {5.15.3.6}\_\_multiply()}{65}{subsubsection.5.15.3.6}%
+\contentsline {subsubsection}{\numberline {5.15.3.7}\_\_negative()}{66}{subsubsection.5.15.3.7}%
+\contentsline {subsubsection}{\numberline {5.15.3.8}\_\_subtract()}{66}{subsubsection.5.15.3.8}%
+\contentsline {subsubsection}{\numberline {5.15.3.9}dump()}{66}{subsubsection.5.15.3.9}%
+\contentsline {subsubsection}{\numberline {5.15.3.10}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{67}{subsubsection.5.15.3.10}%
+\contentsline {subsubsection}{\numberline {5.15.3.11}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{67}{subsubsection.5.15.3.11}%
+\contentsline {subsubsection}{\numberline {5.15.3.12}is\_equal()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{67}{subsubsection.5.15.3.12}%
+\contentsline {subsubsection}{\numberline {5.15.3.13}makeCopy()}{68}{subsubsection.5.15.3.13}%
+\contentsline {section}{\numberline {5.16}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Error Class Reference}{69}{section.5.16}%
+\contentsline {subsection}{\numberline {5.16.1}Detailed Description}{70}{subsection.5.16.1}%
+\contentsline {subsection}{\numberline {5.16.2}Constructor \& Destructor Documentation}{70}{subsection.5.16.2}%
+\contentsline {subsubsection}{\numberline {5.16.2.1}Error()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{70}{subsubsection.5.16.2.1}%
+\contentsline {subsubsection}{\numberline {5.16.2.2}Error()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{70}{subsubsection.5.16.2.2}%
+\contentsline {subsection}{\numberline {5.16.3}Friends And Related Function Documentation}{70}{subsection.5.16.3}%
+\contentsline {subsubsection}{\numberline {5.16.3.1}operator$<$$<$}{71}{subsubsection.5.16.3.1}%
+\contentsline {section}{\numberline {5.17}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Garbage\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Collected Class Reference}{71}{section.5.17}%
+\contentsline {subsection}{\numberline {5.17.1}Detailed Description}{73}{subsection.5.17.1}%
+\contentsline {subsection}{\numberline {5.17.2}Constructor \& Destructor Documentation}{73}{subsection.5.17.2}%
+\contentsline {subsubsection}{\numberline {5.17.2.1}GarbageCollected()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{73}{subsubsection.5.17.2.1}%
+\contentsline {subsubsection}{\numberline {5.17.2.2}GarbageCollected()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{73}{subsubsection.5.17.2.2}%
+\contentsline {subsubsection}{\numberline {5.17.2.3}$\sim $GarbageCollected()}{74}{subsubsection.5.17.2.3}%
+\contentsline {subsubsection}{\numberline {5.17.2.4}GarbageCollected()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{74}{subsubsection.5.17.2.4}%
+\contentsline {subsection}{\numberline {5.17.3}Member Function Documentation}{74}{subsection.5.17.3}%
+\contentsline {subsubsection}{\numberline {5.17.3.1}make()}{74}{subsubsection.5.17.3.1}%
+\contentsline {subsubsection}{\numberline {5.17.3.2}operator\%()}{75}{subsubsection.5.17.3.2}%
+\contentsline {subsubsection}{\numberline {5.17.3.3}operator$\ast $()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{75}{subsubsection.5.17.3.3}%
+\contentsline {subsubsection}{\numberline {5.17.3.4}operator$\ast $()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{76}{subsubsection.5.17.3.4}%
+\contentsline {subsubsection}{\numberline {5.17.3.5}operator+()}{76}{subsubsection.5.17.3.5}%
+\contentsline {subsubsection}{\numberline {5.17.3.6}operator-\/()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{77}{subsubsection.5.17.3.6}%
+\contentsline {subsubsection}{\numberline {5.17.3.7}operator-\/()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{77}{subsubsection.5.17.3.7}%
+\contentsline {subsubsection}{\numberline {5.17.3.8}operator-\/$>$()}{78}{subsubsection.5.17.3.8}%
+\contentsline {subsubsection}{\numberline {5.17.3.9}operator/()}{78}{subsubsection.5.17.3.9}%
+\contentsline {subsubsection}{\numberline {5.17.3.10}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{79}{subsubsection.5.17.3.10}%
+\contentsline {subsubsection}{\numberline {5.17.3.11}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{79}{subsubsection.5.17.3.11}%
+\contentsline {subsubsection}{\numberline {5.17.3.12}operator==()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{80}{subsubsection.5.17.3.12}%
+\contentsline {subsubsection}{\numberline {5.17.3.13}operator==()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{80}{subsubsection.5.17.3.13}%
+\contentsline {subsubsection}{\numberline {5.17.3.14}operator==()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{81}{subsubsection.5.17.3.14}%
+\contentsline {subsection}{\numberline {5.17.4}Friends And Related Function Documentation}{81}{subsection.5.17.4}%
+\contentsline {subsubsection}{\numberline {5.17.4.1}operator$<$$<$}{81}{subsubsection.5.17.4.1}%
+\contentsline {section}{\numberline {5.18}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::location Class Reference}{81}{section.5.18}%
+\contentsline {subsection}{\numberline {5.18.1}Detailed Description}{83}{subsection.5.18.1}%
+\contentsline {section}{\numberline {5.19}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::position Class Reference}{83}{section.5.19}%
+\contentsline {subsection}{\numberline {5.19.1}Detailed Description}{84}{subsection.5.19.1}%
+\contentsline {section}{\numberline {5.20}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Program Class Reference}{84}{section.5.20}%
+\contentsline {subsection}{\numberline {5.20.1}Detailed Description}{86}{subsection.5.20.1}%
+\contentsline {subsection}{\numberline {5.20.2}Member Enumeration Documentation}{86}{subsection.5.20.2}%
+\contentsline {subsubsection}{\numberline {5.20.2.1}CodeType}{86}{subsubsection.5.20.2.1}%
+\contentsline {subsection}{\numberline {5.20.3}Constructor \& Destructor Documentation}{86}{subsection.5.20.3}%
+\contentsline {subsubsection}{\numberline {5.20.3.1}Program()}{86}{subsubsection.5.20.3.1}%
+\contentsline {subsection}{\numberline {5.20.4}Member Function Documentation}{86}{subsection.5.20.4}%
+\contentsline {subsubsection}{\numberline {5.20.4.1}addBytecode()}{87}{subsubsection.5.20.4.1}%
+\contentsline {subsubsection}{\numberline {5.20.4.2}dumpBytecode()}{87}{subsubsection.5.20.4.2}%
+\contentsline {subsubsection}{\numberline {5.20.4.3}execute()}{87}{subsubsection.5.20.4.3}%
+\contentsline {subsubsection}{\numberline {5.20.4.4}getAst()}{87}{subsubsection.5.20.4.4}%
+\contentsline {subsubsection}{\numberline {5.20.4.5}getCode()}{88}{subsubsection.5.20.4.5}%
+\contentsline {subsubsection}{\numberline {5.20.4.6}getResult()}{88}{subsubsection.5.20.4.6}%
+\contentsline {section}{\numberline {5.21}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Singleton\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pool$<$ T $>$ Class Template Reference}{88}{section.5.21}%
+\contentsline {subsection}{\numberline {5.21.1}Member Function Documentation}{88}{subsection.5.21.1}%
+\contentsline {subsubsection}{\numberline {5.21.1.1}get()}{89}{subsubsection.5.21.1.1}%
+\contentsline {subsubsection}{\numberline {5.21.1.2}getInstance()}{89}{subsubsection.5.21.1.2}%
+\contentsline {subsubsection}{\numberline {5.21.1.3}recycle()}{89}{subsubsection.5.21.1.3}%
+\contentsline {section}{\numberline {5.22}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Class Reference}{89}{section.5.22}%
+\contentsline {subsection}{\numberline {5.22.1}Detailed Description}{90}{subsection.5.22.1}%
+\contentsline {subsection}{\numberline {5.22.2}Constructor \& Destructor Documentation}{90}{subsection.5.22.2}%
+\contentsline {subsubsection}{\numberline {5.22.2.1}TangBase()}{90}{subsubsection.5.22.2.1}%
+\contentsline {subsection}{\numberline {5.22.3}Member Function Documentation}{90}{subsection.5.22.3}%
+\contentsline {subsubsection}{\numberline {5.22.3.1}compileScript()}{90}{subsubsection.5.22.3.1}%
+\contentsline {section}{\numberline {5.23}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scanner Class Reference}{91}{section.5.23}%
+\contentsline {subsection}{\numberline {5.23.1}Detailed Description}{92}{subsection.5.23.1}%
+\contentsline {subsection}{\numberline {5.23.2}Constructor \& Destructor Documentation}{92}{subsection.5.23.2}%
+\contentsline {subsubsection}{\numberline {5.23.2.1}TangScanner()}{92}{subsubsection.5.23.2.1}%
+\contentsline {subsection}{\numberline {5.23.3}Member Function Documentation}{92}{subsection.5.23.3}%
+\contentsline {subsubsection}{\numberline {5.23.3.1}get\_next\_token()}{92}{subsubsection.5.23.3.1}%
+\contentsline {chapter}{\numberline {6}File Documentation}{93}{chapter.6}%
+\contentsline {section}{\numberline {6.1}build/generated/location.hh File Reference}{93}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{94}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Function Documentation}{94}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}operator$<$$<$()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{94}{subsubsection.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}operator$<$$<$()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{95}{subsubsection.6.1.2.2}%
+\contentsline {section}{\numberline {6.2}include/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node.hpp File Reference}{95}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{96}{subsection.6.2.1}%
+\contentsline {section}{\numberline {6.3}include/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Add.hpp File Reference}{96}{section.6.3}%
+\contentsline {section}{\numberline {6.4}include/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Float.hpp File Reference}{97}{section.6.4}%
+\contentsline {section}{\numberline {6.5}include/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Integer.hpp File Reference}{98}{section.6.5}%
+\contentsline {section}{\numberline {6.6}include/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Divide.hpp File Reference}{99}{section.6.6}%
+\contentsline {section}{\numberline {6.7}include/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Float.hpp File Reference}{100}{section.6.7}%
+\contentsline {section}{\numberline {6.8}include/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Integer.hpp File Reference}{101}{section.6.8}%
+\contentsline {section}{\numberline {6.9}include/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Modulo.hpp File Reference}{102}{section.6.9}%
+\contentsline {section}{\numberline {6.10}include/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Multiply.hpp File Reference}{103}{section.6.10}%
+\contentsline {section}{\numberline {6.11}include/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Negative.hpp File Reference}{104}{section.6.11}%
+\contentsline {section}{\numberline {6.12}include/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Subtract.hpp File Reference}{105}{section.6.12}%
+\contentsline {section}{\numberline {6.13}include/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression.hpp File Reference}{106}{section.6.13}%
+\contentsline {section}{\numberline {6.14}include/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Error.hpp File Reference}{107}{section.6.14}%
+\contentsline {section}{\numberline {6.15}include/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Float.hpp File Reference}{108}{section.6.15}%
+\contentsline {section}{\numberline {6.16}include/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Integer.hpp File Reference}{109}{section.6.16}%
+\contentsline {section}{\numberline {6.17}include/error.hpp File Reference}{109}{section.6.17}%
+\contentsline {subsection}{\numberline {6.17.1}Detailed Description}{110}{subsection.6.17.1}%
+\contentsline {section}{\numberline {6.18}include/garbage\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Collected.hpp File Reference}{110}{section.6.18}%
+\contentsline {section}{\numberline {6.19}include/macros.hpp File Reference}{111}{section.6.19}%
+\contentsline {subsection}{\numberline {6.19.1}Detailed Description}{111}{subsection.6.19.1}%
+\contentsline {subsection}{\numberline {6.19.2}Macro Definition Documentation}{112}{subsection.6.19.2}%
+\contentsline {subsubsection}{\numberline {6.19.2.1}TANG\_UNUSED}{112}{subsubsection.6.19.2.1}%
+\contentsline {section}{\numberline {6.20}include/opcode.hpp File Reference}{112}{section.6.20}%
+\contentsline {subsection}{\numberline {6.20.1}Detailed Description}{112}{subsection.6.20.1}%
+\contentsline {subsection}{\numberline {6.20.2}Enumeration Type Documentation}{112}{subsection.6.20.2}%
+\contentsline {subsubsection}{\numberline {6.20.2.1}Opcode}{112}{subsubsection.6.20.2.1}%
+\contentsline {section}{\numberline {6.21}include/program.hpp File Reference}{113}{section.6.21}%
+\contentsline {subsection}{\numberline {6.21.1}Detailed Description}{114}{subsection.6.21.1}%
+\contentsline {section}{\numberline {6.22}include/singleton\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pool.hpp File Reference}{114}{section.6.22}%
+\contentsline {section}{\numberline {6.23}include/tang.hpp File Reference}{115}{section.6.23}%
+\contentsline {subsection}{\numberline {6.23.1}Detailed Description}{116}{subsection.6.23.1}%
+\contentsline {section}{\numberline {6.24}include/tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base.hpp File Reference}{116}{section.6.24}%
+\contentsline {subsection}{\numberline {6.24.1}Detailed Description}{117}{subsection.6.24.1}%
+\contentsline {section}{\numberline {6.25}include/tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scanner.hpp File Reference}{117}{section.6.25}%
+\contentsline {subsection}{\numberline {6.25.1}Detailed Description}{118}{subsection.6.25.1}%
+\contentsline {section}{\numberline {6.26}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node.cpp File Reference}{118}{section.6.26}%
+\contentsline {section}{\numberline {6.27}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Add.cpp File Reference}{119}{section.6.27}%
+\contentsline {section}{\numberline {6.28}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Float.cpp File Reference}{119}{section.6.28}%
+\contentsline {section}{\numberline {6.29}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Integer.cpp File Reference}{120}{section.6.29}%
+\contentsline {section}{\numberline {6.30}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Divide.cpp File Reference}{121}{section.6.30}%
+\contentsline {section}{\numberline {6.31}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Float.cpp File Reference}{122}{section.6.31}%
+\contentsline {section}{\numberline {6.32}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Integer.cpp File Reference}{123}{section.6.32}%
+\contentsline {section}{\numberline {6.33}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Modulo.cpp File Reference}{124}{section.6.33}%
+\contentsline {section}{\numberline {6.34}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Multiply.cpp File Reference}{125}{section.6.34}%
+\contentsline {section}{\numberline {6.35}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Negative.cpp File Reference}{126}{section.6.35}%
+\contentsline {section}{\numberline {6.36}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Subtract.cpp File Reference}{127}{section.6.36}%
+\contentsline {section}{\numberline {6.37}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression.cpp File Reference}{128}{section.6.37}%
+\contentsline {section}{\numberline {6.38}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Error.cpp File Reference}{129}{section.6.38}%
+\contentsline {section}{\numberline {6.39}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Float.cpp File Reference}{129}{section.6.39}%
+\contentsline {section}{\numberline {6.40}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Integer.cpp File Reference}{130}{section.6.40}%
+\contentsline {section}{\numberline {6.41}src/error.cpp File Reference}{131}{section.6.41}%
+\contentsline {subsection}{\numberline {6.41.1}Function Documentation}{131}{subsection.6.41.1}%
+\contentsline {subsubsection}{\numberline {6.41.1.1}operator$<$$<$()}{131}{subsubsection.6.41.1.1}%
+\contentsline {section}{\numberline {6.42}src/program-\/dump\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bytecode.cpp File Reference}{132}{section.6.42}%
+\contentsline {subsection}{\numberline {6.42.1}Macro Definition Documentation}{132}{subsection.6.42.1}%
+\contentsline {subsubsection}{\numberline {6.42.1.1}DUMPPROGRAMCHECK}{132}{subsubsection.6.42.1.1}%
+\contentsline {section}{\numberline {6.43}src/program-\/execute.cpp File Reference}{133}{section.6.43}%
+\contentsline {subsection}{\numberline {6.43.1}Macro Definition Documentation}{133}{subsection.6.43.1}%
+\contentsline {subsubsection}{\numberline {6.43.1.1}EXECUTEPROGRAMCHECK}{133}{subsubsection.6.43.1.1}%
+\contentsline {subsubsection}{\numberline {6.43.1.2}STACKCHECK}{134}{subsubsection.6.43.1.2}%
+\contentsline {section}{\numberline {6.44}src/program.cpp File Reference}{134}{section.6.44}%
+\contentsline {section}{\numberline {6.45}src/tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base.cpp File Reference}{135}{section.6.45}%
+\contentsline {section}{\numberline {6.46}test/test.cpp File Reference}{135}{section.6.46}%
+\contentsline {subsection}{\numberline {6.46.1}Detailed Description}{136}{subsection.6.46.1}%
+\contentsline {section}{\numberline {6.47}test/test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Singleton\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pool.cpp File Reference}{136}{section.6.47}%
+\contentsline {chapter}{Index}{137}{section*.202}%
