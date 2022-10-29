@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['script_245',['Script',['../classTang_1_1Program.html#ad99e214562094e21f38b6a453163041ba38b647d35ef85ffa1affec5c7fcb7ac1',1,'Tang::Program']]],
-  ['subtract_246',['SUBTRACT',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a23ebcc4776b613af25dfbe7c8ce4813e',1,'Tang']]]
+  ['modulo_281',['MODULO',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a928ab45d616dde447dbbbd0270db87ad',1,'Tang']]],
+  ['multiply_282',['MULTIPLY',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a080aaf8d817ada96fca7096b7b55bd30',1,'Tang']]]
 ];

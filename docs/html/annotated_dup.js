@@ -3,8 +3,11 @@ var annotated_dup =
     [ "Tang", null, [
       [ "AstNode", "classTang_1_1AstNode.html", "classTang_1_1AstNode" ],
       [ "AstNodeAdd", "classTang_1_1AstNodeAdd.html", "classTang_1_1AstNodeAdd" ],
+      [ "AstNodeDivide", "classTang_1_1AstNodeDivide.html", "classTang_1_1AstNodeDivide" ],
       [ "AstNodeFloat", "classTang_1_1AstNodeFloat.html", "classTang_1_1AstNodeFloat" ],
       [ "AstNodeInteger", "classTang_1_1AstNodeInteger.html", "classTang_1_1AstNodeInteger" ],
+      [ "AstNodeModulo", "classTang_1_1AstNodeModulo.html", "classTang_1_1AstNodeModulo" ],
+      [ "AstNodeMultiply", "classTang_1_1AstNodeMultiply.html", "classTang_1_1AstNodeMultiply" ],
       [ "AstNodeNegative", "classTang_1_1AstNodeNegative.html", "classTang_1_1AstNodeNegative" ],
       [ "AstNodeSubtract", "classTang_1_1AstNodeSubtract.html", "classTang_1_1AstNodeSubtract" ],
       [ "ComputedExpression", "classTang_1_1ComputedExpression.html", "classTang_1_1ComputedExpression" ],

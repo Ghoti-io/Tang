@@ -93,16 +93,18 @@ $(document).ready(function(){initNavTree('error_8hpp.html',''); initResizable();
 <p>Define the <a class="el" href="classTang_1_1Error.html" title="The Error class is used to report any error of the system, whether a syntax (parsing) error or a runt...">Tang::Error</a> class used to describe syntax and runtime errors.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;ostream&gt;</code><br />
 <code>#include &quot;<a class="el" href="location_8hh_source.html">location.hh</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for error.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="error_8hpp__incl.png" border="0" usemap="#ainclude_2error_8hpp" alt=""/></div>
 <map name="ainclude_2error_8hpp" id="ainclude_2error_8hpp">
-<area shape="rect" title="Define the Tang::Error class used to describe syntax and runtime errors." alt="" coords="12,5,143,32"/>
-<area shape="rect" title=" " alt="" coords="5,155,64,181"/>
-<area shape="rect" href="location_8hh.html" title="Define the Tang ::location class." alt="" coords="73,80,167,107"/>
-<area shape="rect" title=" " alt="" coords="88,155,168,181"/>
+<area shape="rect" title="Define the Tang::Error class used to describe syntax and runtime errors." alt="" coords="5,5,136,32"/>
+<area shape="rect" title=" " alt="" coords="12,155,71,181"/>
+<area shape="rect" title=" " alt="" coords="33,80,109,107"/>
+<area shape="rect" href="location_8hh.html" title="Define the Tang ::location class." alt="" coords="133,80,227,107"/>
+<area shape="rect" title=" " alt="" coords="140,155,220,181"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -110,32 +112,43 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="error_8hpp__dep__incl.png" border="0" usemap="#ainclude_2error_8hppdep" alt=""/></div>
 <map name="ainclude_2error_8hppdep" id="ainclude_2error_8hppdep">
-<area shape="rect" title="Define the Tang::Error class used to describe syntax and runtime errors." alt="" coords="1844,5,1975,32"/>
-<area shape="rect" href="computedExpressionError_8hpp.html" title=" " alt="" coords="794,80,1003,121"/>
-<area shape="rect" href="program_8hpp.html" title="Define the Tang::Program class used to compile and execute source code." alt="" coords="1655,87,1811,114"/>
-<area shape="rect" href="tang_8hpp.html" title="Header file supplied for use by 3rd party code so that they can easily include all necessary headers." alt="" coords="2020,244,2151,271"/>
-<area shape="rect" href="error_8cpp.html" title=" " alt="" coords="2123,87,2226,114"/>
-<area shape="rect" href="computedExpression_8cpp.html" title=" " alt="" coords="283,169,491,196"/>
-<area shape="rect" href="computedExpressionError_8cpp.html" title=" " alt="" coords="515,169,754,196"/>
-<area shape="rect" href="computedExpressionFloat_8cpp.html" title=" " alt="" coords="778,169,1019,196"/>
-<area shape="rect" href="computedExpressionInteger_8cpp.html" title=" " alt="" coords="5,169,259,196"/>
-<area shape="rect" href="program-execute_8cpp.html" title=" " alt="" coords="1194,169,1377,196"/>
-<area shape="rect" href="program_8cpp.html" title=" " alt="" coords="1043,169,1170,196"/>
-<area shape="rect" href="astNode_8hpp.html" title="Define the Tang::AstNode and its associated/derivative classes." alt="" coords="1656,169,1811,196"/>
-<area shape="rect" href="tangBase_8hpp.html" title="Defines the Tang::TangBase class used to interact with Tang." alt="" coords="1885,169,2048,196"/>
-<area shape="rect" href="program-dumpBytecode_8cpp.html" title=" " alt="" coords="1401,169,1631,196"/>
-<area shape="rect" href="astNodeAdd_8hpp.html" title=" " alt="" coords="1603,244,1783,271"/>
-<area shape="rect" href="astNodeFloat_8hpp.html" title=" " alt="" coords="1807,244,1995,271"/>
-<area shape="rect" href="astNodeInteger_8hpp.html" title=" " alt="" coords="756,244,956,271"/>
-<area shape="rect" href="astNodeNegative_8hpp.html" title=" " alt="" coords="981,244,1195,271"/>
-<area shape="rect" href="astNodeSubtract_8hpp.html" title=" " alt="" coords="1219,244,1429,271"/>
-<area shape="rect" href="astNode_8cpp.html" title=" " alt="" coords="1453,244,1579,271"/>
-<area shape="rect" href="astNodeAdd_8cpp.html" title=" " alt="" coords="1618,319,1769,345"/>
-<area shape="rect" href="astNodeFloat_8cpp.html" title=" " alt="" coords="1822,319,1981,345"/>
-<area shape="rect" href="astNodeInteger_8cpp.html" title=" " alt="" coords="771,319,941,345"/>
-<area shape="rect" href="astNodeNegative_8cpp.html" title=" " alt="" coords="995,319,1181,345"/>
-<area shape="rect" href="astNodeSubtract_8cpp.html" title=" " alt="" coords="1234,319,1414,345"/>
-<area shape="rect" href="tangBase_8cpp.html" title=" " alt="" coords="2175,244,2308,271"/>
+<area shape="rect" title="Define the Tang::Error class used to describe syntax and runtime errors." alt="" coords="1625,5,1755,32"/>
+<area shape="rect" href="computedExpression_8hpp.html" title=" " alt="" coords="1278,80,1515,107"/>
+<area shape="rect" href="computedExpressionError_8hpp.html" title=" " alt="" coords="719,155,928,196"/>
+<area shape="rect" href="garbageCollected_8hpp.html" title=" " alt="" coords="1475,162,1689,189"/>
+<area shape="rect" href="program_8hpp.html" title="Define the Tang::Program class used to compile and execute source code." alt="" coords="1504,244,1660,271"/>
+<area shape="rect" href="tang_8hpp.html" title="Header file supplied for use by 3rd party code so that they can easily include all necessary headers." alt="" coords="1950,393,2081,420"/>
+<area shape="rect" href="error_8cpp.html" title=" " alt="" coords="2104,80,2207,107"/>
+<area shape="rect" href="computedExpression_8cpp.html" title=" " alt="" coords="261,244,469,271"/>
+<area shape="rect" href="computedExpressionFloat_8hpp.html" title=" " alt="" coords="956,155,1165,196"/>
+<area shape="rect" href="computedExpressionInteger_8hpp.html" title=" " alt="" coords="1189,155,1399,196"/>
+<area shape="rect" href="computedExpressionError_8cpp.html" title=" " alt="" coords="493,244,732,271"/>
+<area shape="rect" href="computedExpressionFloat_8cpp.html" title=" " alt="" coords="859,244,1100,271"/>
+<area shape="rect" href="computedExpressionInteger_8cpp.html" title=" " alt="" coords="1125,244,1378,271"/>
+<area shape="rect" href="program-execute_8cpp.html" title=" " alt="" coords="972,319,1155,345"/>
+<area shape="rect" href="program_8cpp.html" title=" " alt="" coords="1179,319,1305,345"/>
+<area shape="rect" href="astNode_8hpp.html" title="Define the Tang::AstNode and its associated/derivative classes." alt="" coords="1330,319,1485,345"/>
+<area shape="rect" href="tangBase_8hpp.html" title="Defines the Tang::TangBase class used to interact with Tang." alt="" coords="1559,319,1722,345"/>
+<area shape="rect" href="program-dumpBytecode_8cpp.html" title=" " alt="" coords="1747,319,1977,345"/>
+<area shape="rect" href="astNodeAdd_8hpp.html" title=" " alt="" coords="5,393,185,420"/>
+<area shape="rect" href="astNodeDivide_8hpp.html" title=" " alt="" coords="210,393,407,420"/>
+<area shape="rect" href="astNodeFloat_8hpp.html" title=" " alt="" coords="432,393,620,420"/>
+<area shape="rect" href="astNodeInteger_8hpp.html" title=" " alt="" coords="645,393,845,420"/>
+<area shape="rect" href="astNodeModulo_8hpp.html" title=" " alt="" coords="869,393,1071,420"/>
+<area shape="rect" href="astNodeMultiply_8hpp.html" title=" " alt="" coords="1096,393,1303,420"/>
+<area shape="rect" href="astNodeNegative_8hpp.html" title=" " alt="" coords="1327,393,1541,420"/>
+<area shape="rect" href="astNodeSubtract_8hpp.html" title=" " alt="" coords="1565,393,1775,420"/>
+<area shape="rect" href="astNode_8cpp.html" title=" " alt="" coords="1799,393,1925,420"/>
+<area shape="rect" href="astNodeAdd_8cpp.html" title=" " alt="" coords="20,468,171,495"/>
+<area shape="rect" href="astNodeDivide_8cpp.html" title=" " alt="" coords="225,468,393,495"/>
+<area shape="rect" href="astNodeFloat_8cpp.html" title=" " alt="" coords="447,468,605,495"/>
+<area shape="rect" href="astNodeInteger_8cpp.html" title=" " alt="" coords="659,468,830,495"/>
+<area shape="rect" href="astNodeModulo_8cpp.html" title=" " alt="" coords="883,468,1057,495"/>
+<area shape="rect" href="astNodeMultiply_8cpp.html" title=" " alt="" coords="1111,468,1288,495"/>
+<area shape="rect" href="astNodeNegative_8cpp.html" title=" " alt="" coords="1341,468,1527,495"/>
+<area shape="rect" href="astNodeSubtract_8cpp.html" title=" " alt="" coords="1580,468,1760,495"/>
+<area shape="rect" href="test_8cpp.html" title="Test the general language behaviors." alt="" coords="1964,468,2067,495"/>
+<area shape="rect" href="tangBase_8cpp.html" title=" " alt="" coords="2105,393,2238,420"/>
 </map>
 </div>
 </div>

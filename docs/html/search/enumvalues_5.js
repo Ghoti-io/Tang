@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['template_247',['Template',['../classTang_1_1Program.html#ad99e214562094e21f38b6a453163041bacfade8685b2abd2b062a2367158ce2f3',1,'Tang::Program']]]
+  ['negative_283',['NEGATIVE',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a50546bf973283065b6ccf09faf7a580a',1,'Tang']]]
 ];

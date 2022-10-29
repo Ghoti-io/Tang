@@ -1,0 +1,101 @@
+\hypertarget{classTang_1_1AstNodeMultiply}{}\doxysection{Tang\+::Ast\+Node\+Multiply Class Reference}
+\label{classTang_1_1AstNodeMultiply}\index{Tang::AstNodeMultiply@{Tang::AstNodeMultiply}}
+
+
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a \char`\"{}$\ast$\char`\"{} expression.  
+
+
+
+
+{\ttfamily \#include $<$ast\+Node\+Multiply.\+hpp$>$}
+
+
+
+Inheritance diagram for Tang\+::Ast\+Node\+Multiply\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{classTang_1_1AstNodeMultiply__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tang\+::Ast\+Node\+Multiply\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{classTang_1_1AstNodeMultiply__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTang_1_1AstNodeMultiply_a10afe40205a41dbcdc87eb091f0c8ed3}{Ast\+Node\+Multiply}} (\mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$lhs, \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$rhs, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} loc)
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeMultiply_a8090e2eb334998ae3e87ae07a9838d79}\label{classTang_1_1AstNodeMultiply_a8090e2eb334998ae3e87ae07a9838d79}} 
+virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeMultiply_a8090e2eb334998ae3e87ae07a9838d79}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
+\begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeMultiply_a3f7262f98b473a6ddc16ab6467e8afc5}\label{classTang_1_1AstNodeMultiply_a3f7262f98b473a6ddc16ab6467e8afc5}} 
+virtual void \mbox{\hyperlink{classTang_1_1AstNodeMultiply_a3f7262f98b473a6ddc16ab6467e8afc5}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const override
+\begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$ \mbox{\hyperlink{classTang_1_1AstNodeMultiply_a9b8bedd8d1e013c51c946f63c2d5b5cc}{make\+Copy}} () const override
+\begin{DoxyCompactList}\small\item\em Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}\label{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}} 
+\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}{location}}
+\begin{DoxyCompactList}\small\item\em The location associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a \char`\"{}$\ast$\char`\"{} expression. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeMultiply_a10afe40205a41dbcdc87eb091f0c8ed3}\label{classTang_1_1AstNodeMultiply_a10afe40205a41dbcdc87eb091f0c8ed3}} 
+\index{Tang::AstNodeMultiply@{Tang::AstNodeMultiply}!AstNodeMultiply@{AstNodeMultiply}}
+\index{AstNodeMultiply@{AstNodeMultiply}!Tang::AstNodeMultiply@{Tang::AstNodeMultiply}}
+\doxysubsubsection{\texorpdfstring{AstNodeMultiply()}{AstNodeMultiply()}}
+{\footnotesize\ttfamily Tang\+::\+Ast\+Node\+Multiply\+::\+Ast\+Node\+Multiply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$}]{lhs,  }\item[{\mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$}]{rhs,  }\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{loc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & The left hand side expression. \\
+\hline
+{\em rhs} & The right hand side expression. \\
+\hline
+{\em loc} & The location associated with the expression. @location The location associated with this node. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeMultiply_a9b8bedd8d1e013c51c946f63c2d5b5cc}\label{classTang_1_1AstNodeMultiply_a9b8bedd8d1e013c51c946f63c2d5b5cc}} 
+\index{Tang::AstNodeMultiply@{Tang::AstNodeMultiply}!makeCopy@{makeCopy}}
+\index{makeCopy@{makeCopy}!Tang::AstNodeMultiply@{Tang::AstNodeMultiply}}
+\doxysubsubsection{\texorpdfstring{makeCopy()}{makeCopy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$ Ast\+Node\+Multiply\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). 
+
+\begin{DoxyReturn}{Returns}
+A pointer to a new \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that is a copy of the current \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_addcb807e895088616f1ec51c61a85c00}{Tang\+::\+Ast\+Node}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{astNodeMultiply_8hpp}{ast\+Node\+Multiply.\+hpp}}\item 
+src/\mbox{\hyperlink{astNodeMultiply_8cpp}{ast\+Node\+Multiply.\+cpp}}\end{DoxyCompactItemize}

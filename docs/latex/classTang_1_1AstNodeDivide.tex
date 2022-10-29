@@ -1,0 +1,101 @@
+\hypertarget{classTang_1_1AstNodeDivide}{}\doxysection{Tang\+::Ast\+Node\+Divide Class Reference}
+\label{classTang_1_1AstNodeDivide}\index{Tang::AstNodeDivide@{Tang::AstNodeDivide}}
+
+
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a \char`\"{}/\char`\"{} expression.  
+
+
+
+
+{\ttfamily \#include $<$ast\+Node\+Divide.\+hpp$>$}
+
+
+
+Inheritance diagram for Tang\+::Ast\+Node\+Divide\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classTang_1_1AstNodeDivide__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tang\+::Ast\+Node\+Divide\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classTang_1_1AstNodeDivide__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTang_1_1AstNodeDivide_a08597b891a73c0f7825d87d18d9903b7}{Ast\+Node\+Divide}} (\mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$lhs, \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$rhs, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} loc)
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeDivide_acaaaae5c85ca9c4ea6a689cf500c95b1}\label{classTang_1_1AstNodeDivide_acaaaae5c85ca9c4ea6a689cf500c95b1}} 
+virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeDivide_acaaaae5c85ca9c4ea6a689cf500c95b1}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
+\begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeDivide_a1c4e4ce8caeb805ef317c402d4d20707}\label{classTang_1_1AstNodeDivide_a1c4e4ce8caeb805ef317c402d4d20707}} 
+virtual void \mbox{\hyperlink{classTang_1_1AstNodeDivide_a1c4e4ce8caeb805ef317c402d4d20707}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const override
+\begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$ \mbox{\hyperlink{classTang_1_1AstNodeDivide_a67e49d25840f5944563d27809ee96869}{make\+Copy}} () const override
+\begin{DoxyCompactList}\small\item\em Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}\label{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}} 
+\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}{location}}
+\begin{DoxyCompactList}\small\item\em The location associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a \char`\"{}/\char`\"{} expression. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeDivide_a08597b891a73c0f7825d87d18d9903b7}\label{classTang_1_1AstNodeDivide_a08597b891a73c0f7825d87d18d9903b7}} 
+\index{Tang::AstNodeDivide@{Tang::AstNodeDivide}!AstNodeDivide@{AstNodeDivide}}
+\index{AstNodeDivide@{AstNodeDivide}!Tang::AstNodeDivide@{Tang::AstNodeDivide}}
+\doxysubsubsection{\texorpdfstring{AstNodeDivide()}{AstNodeDivide()}}
+{\footnotesize\ttfamily Tang\+::\+Ast\+Node\+Divide\+::\+Ast\+Node\+Divide (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$}]{lhs,  }\item[{\mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$}]{rhs,  }\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{loc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & The left hand side expression. \\
+\hline
+{\em rhs} & The right hand side expression. \\
+\hline
+{\em loc} & The location associated with the expression. @location The location associated with this node. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeDivide_a67e49d25840f5944563d27809ee96869}\label{classTang_1_1AstNodeDivide_a67e49d25840f5944563d27809ee96869}} 
+\index{Tang::AstNodeDivide@{Tang::AstNodeDivide}!makeCopy@{makeCopy}}
+\index{makeCopy@{makeCopy}!Tang::AstNodeDivide@{Tang::AstNodeDivide}}
+\doxysubsubsection{\texorpdfstring{makeCopy()}{makeCopy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$ Ast\+Node\+Divide\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). 
+
+\begin{DoxyReturn}{Returns}
+A pointer to a new \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that is a copy of the current \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_addcb807e895088616f1ec51c61a85c00}{Tang\+::\+Ast\+Node}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{astNodeDivide_8hpp}{ast\+Node\+Divide.\+hpp}}\item 
+src/\mbox{\hyperlink{astNodeDivide_8cpp}{ast\+Node\+Divide.\+cpp}}\end{DoxyCompactItemize}

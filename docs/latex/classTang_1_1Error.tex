@@ -11,8 +11,7 @@ The \mbox{\hyperlink{classTang_1_1Error}{Error}} class is used to report any err
 
 
 
-Collaboration diagram for Tang\+::Error\+:
-\nopagebreak
+Collaboration diagram for Tang\+::Error\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -38,6 +37,11 @@ std\+::string \mbox{\hyperlink{classTang_1_1Error_a03780cc93b440ae9964399989af02
 \mbox{\Hypertarget{classTang_1_1Error_a39386694098329e9cae1238b08412352}\label{classTang_1_1Error_a39386694098329e9cae1238b08412352}} 
 \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1Error_a39386694098329e9cae1238b08412352}{location}}
 \begin{DoxyCompactList}\small\item\em The location of the error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classTang_1_1Error_a4c559b79caaa1231eb7cdf4a238f1e5a}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{classTang_1_1Error}{Error}} \&error)
+\begin{DoxyCompactList}\small\item\em Add friendly output. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -76,6 +80,29 @@ Creates an error message using the supplied error string and location.
 {\em location} & The location of the error. \\
 \hline
 \end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classTang_1_1Error_a4c559b79caaa1231eb7cdf4a238f1e5a}\label{classTang_1_1Error_a4c559b79caaa1231eb7cdf4a238f1e5a}} 
+\index{Tang::Error@{Tang::Error}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Tang::Error@{Tang::Error}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{classTang_1_1Error}{Error}} \&}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Add friendly output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & The output stream. \\
+\hline
+{\em error} & The \mbox{\hyperlink{classTang_1_1Error}{Error}} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The output stream. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

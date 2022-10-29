@@ -91,6 +91,20 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 , <a class="el" href="classTang_1_1ComputedExpressionFloat.html#a024d709f222a059b2c70c7e84aec6ec4">Tang::ComputedExpressionFloat</a>
 , <a class="el" href="classTang_1_1ComputedExpressionInteger.html#ab9c7c7ad34978c127b92ad7a24cbb717">Tang::ComputedExpressionInteger</a>
 </li>
+<li>__divide()
+: <a class="el" href="classTang_1_1ComputedExpression.html#abb35e0328da2a96128de725ff1402192">Tang::ComputedExpression</a>
+, <a class="el" href="classTang_1_1ComputedExpressionFloat.html#af6bebf05fe3c59c46b4e7471317a3511">Tang::ComputedExpressionFloat</a>
+, <a class="el" href="classTang_1_1ComputedExpressionInteger.html#aeca0b7af9ecd1c64f0e72afb7bbd4ff7">Tang::ComputedExpressionInteger</a>
+</li>
+<li>__modulo()
+: <a class="el" href="classTang_1_1ComputedExpression.html#ab545455bd51f215ac139db456b829f66">Tang::ComputedExpression</a>
+, <a class="el" href="classTang_1_1ComputedExpressionInteger.html#a959280a4da43a81276ef8ab658eb9015">Tang::ComputedExpressionInteger</a>
+</li>
+<li>__multiply()
+: <a class="el" href="classTang_1_1ComputedExpression.html#a39df4abc066123ec2d634e921be40d21">Tang::ComputedExpression</a>
+, <a class="el" href="classTang_1_1ComputedExpressionFloat.html#af041a3a4e933ebe4e043cddd29e0f56b">Tang::ComputedExpressionFloat</a>
+, <a class="el" href="classTang_1_1ComputedExpressionInteger.html#aadb7393ed0df73e42f2311377bb445d6">Tang::ComputedExpressionInteger</a>
+</li>
 <li>__negative()
 : <a class="el" href="classTang_1_1ComputedExpression.html#a8e779d014cbb877f078d61a2ff91603d">Tang::ComputedExpression</a>
 , <a class="el" href="classTang_1_1ComputedExpressionFloat.html#a203faa00cd83e6746084287b0e2ac778">Tang::ComputedExpressionFloat</a>
@@ -114,11 +128,20 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>AstNodeAdd()
 : <a class="el" href="classTang_1_1AstNodeAdd.html#a51ecc057c355da911e44d7972f0c27c9">Tang::AstNodeAdd</a>
 </li>
+<li>AstNodeDivide()
+: <a class="el" href="classTang_1_1AstNodeDivide.html#a08597b891a73c0f7825d87d18d9903b7">Tang::AstNodeDivide</a>
+</li>
 <li>AstNodeFloat()
 : <a class="el" href="classTang_1_1AstNodeFloat.html#a8a2796acfc946fe6403eae67c1708f3b">Tang::AstNodeFloat</a>
 </li>
 <li>AstNodeInteger()
 : <a class="el" href="classTang_1_1AstNodeInteger.html#adf60f30feb3ebb630e9396f5f2cd1b58">Tang::AstNodeInteger</a>
+</li>
+<li>AstNodeModulo()
+: <a class="el" href="classTang_1_1AstNodeModulo.html#a13824c26f13be8bb93e15c17e5fc8cd0">Tang::AstNodeModulo</a>
+</li>
+<li>AstNodeMultiply()
+: <a class="el" href="classTang_1_1AstNodeMultiply.html#a10afe40205a41dbcdc87eb091f0c8ed3">Tang::AstNodeMultiply</a>
 </li>
 <li>AstNodeNegative()
 : <a class="el" href="classTang_1_1AstNodeNegative.html#a8d08f6522e0eb6ff8450c26d9f747f2a">Tang::AstNodeNegative</a>
@@ -150,8 +173,11 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>compile()
 : <a class="el" href="classTang_1_1AstNode.html#a390f8887c418f972d75e968f1274b2cb">Tang::AstNode</a>
 , <a class="el" href="classTang_1_1AstNodeAdd.html#adce682c79a052435234c24d2ad25b1f6">Tang::AstNodeAdd</a>
+, <a class="el" href="classTang_1_1AstNodeDivide.html#a1c4e4ce8caeb805ef317c402d4d20707">Tang::AstNodeDivide</a>
 , <a class="el" href="classTang_1_1AstNodeFloat.html#a5c13853df1e7d853525871349866fe49">Tang::AstNodeFloat</a>
 , <a class="el" href="classTang_1_1AstNodeInteger.html#a9191a01a987682db46530469a0b45048">Tang::AstNodeInteger</a>
+, <a class="el" href="classTang_1_1AstNodeModulo.html#a7d6c9fe367373db0109551e08a855288">Tang::AstNodeModulo</a>
+, <a class="el" href="classTang_1_1AstNodeMultiply.html#a3f7262f98b473a6ddc16ab6467e8afc5">Tang::AstNodeMultiply</a>
 , <a class="el" href="classTang_1_1AstNodeNegative.html#acaf4a374f63240151e0c4ceb99004de8">Tang::AstNodeNegative</a>
 , <a class="el" href="classTang_1_1AstNodeSubtract.html#a0fd48d8a73cdc354dc147a5c68a37a08">Tang::AstNodeSubtract</a>
 </li>
@@ -181,8 +207,11 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>dump()
 : <a class="el" href="classTang_1_1AstNode.html#a9884742e4b32db78c0257d0b0904d05f">Tang::AstNode</a>
 , <a class="el" href="classTang_1_1AstNodeAdd.html#a8239a4c7e992e696e93fd3212c5de36e">Tang::AstNodeAdd</a>
+, <a class="el" href="classTang_1_1AstNodeDivide.html#acaaaae5c85ca9c4ea6a689cf500c95b1">Tang::AstNodeDivide</a>
 , <a class="el" href="classTang_1_1AstNodeFloat.html#a8305f0f49aa635b9f9035a175e162511">Tang::AstNodeFloat</a>
 , <a class="el" href="classTang_1_1AstNodeInteger.html#aab0cecb61eaed70471685dd0f7a76a43">Tang::AstNodeInteger</a>
+, <a class="el" href="classTang_1_1AstNodeModulo.html#a3f31bb580bc2e9da4ade8b53c116498e">Tang::AstNodeModulo</a>
+, <a class="el" href="classTang_1_1AstNodeMultiply.html#a8090e2eb334998ae3e87ae07a9838d79">Tang::AstNodeMultiply</a>
 , <a class="el" href="classTang_1_1AstNodeNegative.html#a6aae32f4f6e94a3f576f9f1c0c7f808b">Tang::AstNodeNegative</a>
 , <a class="el" href="classTang_1_1AstNodeSubtract.html#a897f1f2fe2d9489cec9998ecf123fc57">Tang::AstNodeSubtract</a>
 , <a class="el" href="classTang_1_1ComputedExpression.html#ab5df8f689f9fe515a2299d8cef332f4c">Tang::ComputedExpression</a>
@@ -252,6 +281,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 </li>
 <li>is_equal()
 : <a class="el" href="classTang_1_1ComputedExpression.html#a4b61cc4d447993bfc96dc37bfd552cef">Tang::ComputedExpression</a>
+, <a class="el" href="classTang_1_1ComputedExpressionError.html#a77f179435a44603e537357af7b828005">Tang::ComputedExpressionError</a>
 , <a class="el" href="classTang_1_1ComputedExpressionFloat.html#a921bc45b51873d475c2624272104f1eb">Tang::ComputedExpressionFloat</a>
 , <a class="el" href="classTang_1_1ComputedExpressionInteger.html#ab297128beba3aa851658eda17c00331b">Tang::ComputedExpressionInteger</a>
 </li>
@@ -281,8 +311,11 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>makeCopy()
 : <a class="el" href="classTang_1_1AstNode.html#addcb807e895088616f1ec51c61a85c00">Tang::AstNode</a>
 , <a class="el" href="classTang_1_1AstNodeAdd.html#ab310ae8a2bed99ca0cfbddbb88343196">Tang::AstNodeAdd</a>
+, <a class="el" href="classTang_1_1AstNodeDivide.html#a67e49d25840f5944563d27809ee96869">Tang::AstNodeDivide</a>
 , <a class="el" href="classTang_1_1AstNodeFloat.html#ab0f61b3898f955e805da649831b675de">Tang::AstNodeFloat</a>
 , <a class="el" href="classTang_1_1AstNodeInteger.html#aa08b8d130711349199d3a1263d44913a">Tang::AstNodeInteger</a>
+, <a class="el" href="classTang_1_1AstNodeModulo.html#a8383bcfca6723325eaaf469bf5c73b13">Tang::AstNodeModulo</a>
+, <a class="el" href="classTang_1_1AstNodeMultiply.html#a9b8bedd8d1e013c51c946f63c2d5b5cc">Tang::AstNodeMultiply</a>
 , <a class="el" href="classTang_1_1AstNodeNegative.html#afe08d6852107d5e9f8c3f7a2639dde06">Tang::AstNodeNegative</a>
 , <a class="el" href="classTang_1_1AstNodeSubtract.html#a7947aca1fd0458617e495e6f278f925f">Tang::AstNodeSubtract</a>
 , <a class="el" href="classTang_1_1ComputedExpression.html#abf7820ae7313878aa37573cce35eb613">Tang::ComputedExpression</a>
@@ -297,6 +330,9 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 
 <h3><a id="index_o"></a>- o -</h3><ul>
+<li>operator%()
+: <a class="el" href="classTang_1_1GarbageCollected.html#a4acf35c0dd46b2c14b4bccb7152fe918">Tang::GarbageCollected</a>
+</li>
 <li>operator*()
 : <a class="el" href="classTang_1_1GarbageCollected.html#aff040291d71e55358cf0656c9876d3c8">Tang::GarbageCollected</a>
 </li>
@@ -309,8 +345,12 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>operator-&gt;()
 : <a class="el" href="classTang_1_1GarbageCollected.html#ae9f5eb28dec34650dd8f74f0dc4f2e3c">Tang::GarbageCollected</a>
 </li>
+<li>operator/()
+: <a class="el" href="classTang_1_1GarbageCollected.html#ae058b709868baa462d2140a95a300a36">Tang::GarbageCollected</a>
+</li>
 <li>operator&lt;&lt;
-: <a class="el" href="classTang_1_1GarbageCollected.html#a523aa4de91b9bd0fef2a585dbb4e4e55">Tang::GarbageCollected</a>
+: <a class="el" href="classTang_1_1Error.html#a4c559b79caaa1231eb7cdf4a238f1e5a">Tang::Error</a>
+, <a class="el" href="classTang_1_1GarbageCollected.html#a523aa4de91b9bd0fef2a585dbb4e4e55">Tang::GarbageCollected</a>
 </li>
 <li>operator=()
 : <a class="el" href="classTang_1_1GarbageCollected.html#ae3c11ed5cee365f7cb47aac9d4094482">Tang::GarbageCollected</a>

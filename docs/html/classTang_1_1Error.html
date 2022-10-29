@@ -86,6 +86,7 @@ $(document).ready(function(){initNavTree('classTang_1_1Error.html',''); initResi
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classTang_1_1Error-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tang::Error Class Reference</div>  </div>
@@ -132,6 +133,12 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <a class="el" href="classTang_1_1location.html">Tang::location</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Error.html#a39386694098329e9cae1238b08412352">location</a></td></tr>
 <tr class="memdesc:a39386694098329e9cae1238b08412352"><td class="mdescLeft">&#160;</td><td class="mdescRight">The location of the error. <br /></td></tr>
 <tr class="separator:a39386694098329e9cae1238b08412352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a4c559b79caaa1231eb7cdf4a238f1e5a"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Error.html#a4c559b79caaa1231eb7cdf4a238f1e5a">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classTang_1_1Error.html">Error</a> &amp;error)</td></tr>
+<tr class="memdesc:a4c559b79caaa1231eb7cdf4a238f1e5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add friendly output.  <a href="classTang_1_1Error.html#a4c559b79caaa1231eb7cdf4a238f1e5a">More...</a><br /></td></tr>
+<tr class="separator:a4c559b79caaa1231eb7cdf4a238f1e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classTang_1_1Error.html" title="The Error class is used to report any error of the system, whether a syntax (parsing) error or a runt...">Error</a> class is used to report any error of the system, whether a syntax (parsing) error or a runtime (execution) error. </p>
@@ -212,6 +219,53 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a4c559b79caaa1231eb7cdf4a238f1e5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c559b79caaa1231eb7cdf4a238f1e5a">&#9670;&nbsp;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classTang_1_1Error.html">Error</a> &amp;&#160;</td>
+          <td class="paramname"><em>error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add friendly output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>The output stream. </td></tr>
+    <tr><td class="paramname">error</td><td>The <a class="el" href="classTang_1_1Error.html" title="The Error class is used to report any error of the system, whether a syntax (parsing) error or a runt...">Error</a> object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The output stream. </dd></dl>
 
 </div>
 </div>

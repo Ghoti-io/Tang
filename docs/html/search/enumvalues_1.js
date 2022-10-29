@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['float_242',['FLOAT',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ae738c26bf4ce1037fa81b039a915cbf6',1,'Tang']]]
+  ['divide_278',['DIVIDE',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a210c66d794cec40488f3f8f634d6c33b',1,'Tang']]]
 ];
