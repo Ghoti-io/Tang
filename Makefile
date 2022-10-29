@@ -1,5 +1,5 @@
 CXX := g++
-CXXFLAGS := -pedantic-errors -Wall -Wextra -Werror -Wno-error=unused-function -std=c++20 -Og
+CXXFLAGS := -pedantic-errors -Wall -Wextra -Werror -Wno-error=unused-function -std=c++20 -Og -g
 LDFLAGS := -L /usr/lib -lstdc++ -lm
 BUILD := ./build
 OBJ_DIR := $(BUILD)/objects
@@ -7,7 +7,7 @@ GEN_DIR := $(BUILD)/generated
 APP_DIR := $(BUILD)/apps
 TARGET := libtang.so
 INCLUDE := -I include/ -I $(GEN_DIR)/
-LIBOBJECTS := $(OBJ_DIR)/astNode.o $(OBJ_DIR)/astNodeAdd.o $(OBJ_DIR)/astNodeDivide.o $(OBJ_DIR)/astNodeFloat.o $(OBJ_DIR)/astNodeInteger.o $(OBJ_DIR)/astNodeModulo.o $(OBJ_DIR)/astNodeMultiply.o $(OBJ_DIR)/astNodeNegative.o $(OBJ_DIR)/astNodeSubtract.o $(OBJ_DIR)/computedExpression.o $(OBJ_DIR)/computedExpressionFloat.o $(OBJ_DIR)/computedExpressionInteger.o  $(OBJ_DIR)/computedExpressionError.o $(OBJ_DIR)/error.o $(OBJ_DIR)/garbageCollected.o $(OBJ_DIR)/program.o $(OBJ_DIR)/program-dumpBytecode.o  $(OBJ_DIR)/program-execute.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o
+LIBOBJECTS := $(OBJ_DIR)/astNode.o $(OBJ_DIR)/astNodeAdd.o $(OBJ_DIR)/astNodeCastFloat.o $(OBJ_DIR)/astNodeCastInteger.o $(OBJ_DIR)/astNodeDivide.o $(OBJ_DIR)/astNodeFloat.o $(OBJ_DIR)/astNodeInteger.o $(OBJ_DIR)/astNodeModulo.o $(OBJ_DIR)/astNodeMultiply.o $(OBJ_DIR)/astNodeNegative.o $(OBJ_DIR)/astNodeSubtract.o $(OBJ_DIR)/computedExpression.o $(OBJ_DIR)/computedExpressionFloat.o $(OBJ_DIR)/computedExpressionInteger.o  $(OBJ_DIR)/computedExpressionError.o $(OBJ_DIR)/error.o $(OBJ_DIR)/garbageCollected.o $(OBJ_DIR)/program.o $(OBJ_DIR)/program-dumpBytecode.o  $(OBJ_DIR)/program-execute.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o
 TESTFLAGS := `pkg-config --libs --cflags gtest`
 
 
@@ -85,6 +85,16 @@ $(OBJ_DIR)/astNodeInteger.o: src/astNodeInteger.cpp include/astNodeInteger.hpp i
 
 $(OBJ_DIR)/astNodeNegative.o: src/astNodeNegative.cpp include/astNodeNegative.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling astNodeNegative.o ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
+
+$(OBJ_DIR)/astNodeCastFloat.o: src/astNodeCastFloat.cpp include/astNodeCastFloat.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+	@echo "\n### Compiling astNodeCastFloat.o ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
+
+$(OBJ_DIR)/astNodeCastInteger.o: src/astNodeCastInteger.cpp include/astNodeCastInteger.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+	@echo "\n### Compiling astNodeCastInteger.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 

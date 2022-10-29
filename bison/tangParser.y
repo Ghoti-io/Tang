@@ -75,8 +75,8 @@
 // Declare tokens (as opposed to the old, %union approach.
 // https://www.gnu.org/software/bison/manual/bison.html#index-_0025token
 %token EOF 0 "end of code"
-%token < int64_t > INTEGER "integer"
-%token < long double > FLOAT "float"
+%token < int64_t > INTEGER "integer literal"
+%token < long double > FLOAT "float literal"
 %token PLUS "+"
 %token MINUS "-"
 %token MULTIPLY "*"
@@ -84,6 +84,9 @@
 %token MODULO "%"
 %token LPAREN "("
 %token RPAREN ")"
+%token AS "as"
+%token CASTINT "int"
+%token CASTFLOAT "float"
 
 // Any %type declarations of non-terminals.
 // https://www.gnu.org/software/bison/manual/bison.html#index-_0025type
@@ -98,7 +101,7 @@
 // Here, rules are in order of lowest to highest precedence.
 %left "+" "-"
 %left "*" "/" "%"
-%right UMINUS
+%right UMINUS AS
 
 // Code sections.
 // https://www.gnu.org/software/bison/manual/bison.html#g_t_0025code-Summary
@@ -125,6 +128,8 @@ namespace Tang {
 #include "astNodeFloat.hpp"
 #include "astNodeInteger.hpp"
 #include "astNodeNegative.hpp"
+#include "astNodeCastInteger.hpp"
+#include "astNodeCastFloat.hpp"
 
 // We must provide the yylex() function.
 // yylex() arguments are defined in the bison .y file.
@@ -198,6 +203,14 @@ expression
   | "(" expression ")"
     {
       $$ = $2;
+    }
+  | expression "as" "int"
+    {
+      $$ = new Tang::AstNodeCastInteger($1, @2);
+    }
+  | expression "as" "float"
+    {
+      $$ = new Tang::AstNodeCastFloat($1, @2);
     }
   ;
 

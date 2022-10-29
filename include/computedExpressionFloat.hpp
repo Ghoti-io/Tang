@@ -29,6 +29,8 @@ namespace Tang {
       virtual GarbageCollected __multiply(const GarbageCollected & rhs) const override;
       virtual GarbageCollected __divide(const GarbageCollected & rhs) const override;
       virtual GarbageCollected __negative() const override;
+      virtual GarbageCollected __integer() const override;
+      virtual GarbageCollected __float() const override;
 
       friend class ComputedExpressionInteger;
 

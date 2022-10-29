@@ -113,6 +113,22 @@ Program& Program::execute() {
         ++pc;
         break;
       }
+      case Opcode::CASTINTEGER: {
+        STACKCHECK(1);
+        auto operand = stack.back();
+        stack.pop_back();
+        stack.push_back(operand->__integer());
+        ++pc;
+        break;
+      }
+      case Opcode::CASTFLOAT: {
+        STACKCHECK(1);
+        auto operand = stack.back();
+        stack.pop_back();
+        stack.push_back(operand->__float());
+        ++pc;
+        break;
+      }
       default: {
         // We should never reach this.
         stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Unrecognized Opcode."}));

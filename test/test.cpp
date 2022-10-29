@@ -190,6 +190,23 @@ TEST(Expression, Parentheses) {
   EXPECT_EQ(*p4.execute().getResult(), -3);
 }
 
+TEST(Expression, TypeCast) {
+  auto p1 = TangBase().compileScript("3.5 as int");
+  EXPECT_EQ(*p1.execute().getResult(), 3);
+  auto p2 = TangBase().compileScript("7.5 as int / 2");
+  EXPECT_EQ(*p2.execute().getResult(), 3);
+  auto p3 = TangBase().compileScript("3 as float / 5");
+  EXPECT_EQ(*p3.execute().getResult(), .6);
+  auto p4 = TangBase().compileScript("7 / 5 as float");
+  EXPECT_EQ(*p4.execute().getResult(), 1.4);
+  auto p5 = TangBase().compileScript("(7 / 5) as float");
+  EXPECT_EQ(*p5.execute().getResult(), 1);
+  auto p6 = TangBase().compileScript("7 as int");
+  EXPECT_EQ(*p6.execute().getResult(), 7);
+  auto p7 = TangBase().compileScript("7.5 as float");
+  EXPECT_EQ(*p7.execute().getResult(), 7.5);
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

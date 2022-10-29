@@ -129,6 +129,15 @@ using namespace std;
   \) {
     return Tang::TangParser::make_RPAREN(Tang::location(location));
   }
+  as {
+    return Tang::TangParser::make_AS(Tang::location(location));
+  }
+  int {
+    return Tang::TangParser::make_CASTINT(Tang::location(location));
+  }
+  float {
+    return Tang::TangParser::make_CASTFLOAT(Tang::location(location));
+  }
   . {}
   \n {}
   <<EOF>> {

@@ -77,6 +77,16 @@ string Program::dumpBytecode() const {
         ++pc;
         break;
       }
+      case Opcode::CASTINTEGER: {
+        out << "CASTINTEGER";
+        ++pc;
+        break;
+      }
+      case Opcode::CASTFLOAT: {
+        out << "CASTFLOAT";
+        ++pc;
+        break;
+      }
       default: {}
     }
     out << endl;

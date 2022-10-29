@@ -13,6 +13,8 @@ namespace Tang {
     DIVIDE,   ///< Pop rhs, pop lhs, push lhs / rhs
     MODULO,   ///< Pop rhs, pop lhs, push lhs % rhs
     NEGATIVE, ///< Pop val, push negative val
+    CASTINTEGER, ///< Pop a val, typecast to int, push
+    CASTFLOAT,   ///< Pop a val, typecast to float, push
   };
 }
 

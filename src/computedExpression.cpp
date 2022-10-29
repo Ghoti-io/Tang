@@ -54,3 +54,11 @@ GarbageCollected ComputedExpression::__negative() const {
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to negate this value."});
 }
 
+GarbageCollected ComputedExpression::__integer() const {
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to cast this value to an integer."});
+}
+
+GarbageCollected ComputedExpression::__float() const {
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to cast this value to a float."});
+}
+

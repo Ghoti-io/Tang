@@ -109,4 +109,11 @@ GarbageCollected ComputedExpressionInteger::__negative() const {
   return GarbageCollected::make<ComputedExpressionInteger>(-this->val);
 }
 
+GarbageCollected ComputedExpressionInteger::__integer() const {
+  return GarbageCollected::make<ComputedExpressionInteger>(this->val);
+}
+
+GarbageCollected ComputedExpressionInteger::__float() const {
+  return GarbageCollected::make<ComputedExpressionFloat>((double)this->val);
+}
 

@@ -97,3 +97,11 @@ GarbageCollected ComputedExpressionFloat::__negative() const {
   return GarbageCollected::make<ComputedExpressionFloat>(-this->val);
 }
 
+GarbageCollected ComputedExpressionFloat::__integer() const {
+  return GarbageCollected::make<ComputedExpressionInteger>((int64_t)this->val);
+}
+
+GarbageCollected ComputedExpressionFloat::__float() const {
+  return GarbageCollected::make<ComputedExpressionFloat>(this->val);
+}
+

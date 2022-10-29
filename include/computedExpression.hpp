@@ -111,6 +111,20 @@ namespace Tang {
        * @return The result of the operation.
        */
       virtual GarbageCollected __negative() const;
+
+      /**
+       * Perform a type cast to integer.
+       *
+       * @return The result of the the operation.
+       */
+      virtual GarbageCollected __integer() const;
+
+      /**
+       * Perform a type cast to float.
+       *
+       * @return The result of the the operation.
+       */
+      virtual GarbageCollected __float() const;
   };
 }
 
