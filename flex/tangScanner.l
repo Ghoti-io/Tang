@@ -100,6 +100,21 @@ using namespace std;
   // (Note: there is no code yet, this is just a placeholder)
 
 <INITIAL,SCRIPT>{
+  int {
+    return Tang::TangParser::make_CASTINT(Tang::location(location));
+  }
+  float {
+    return Tang::TangParser::make_CASTFLOAT(Tang::location(location));
+  }
+  bool {
+    return Tang::TangParser::make_CASTBOOLEAN(Tang::location(location));
+  }
+  true {
+    return Tang::TangParser::make_BOOLEAN(true, Tang::location(location));
+  }
+  false {
+    return Tang::TangParser::make_BOOLEAN(false, Tang::location(location));
+  }
   [0-9]+ {
     int64_t number = strtoll(yytext, 0, 10);
     return Tang::TangParser::make_INTEGER(number, Tang::location(location));
@@ -131,12 +146,6 @@ using namespace std;
   }
   as {
     return Tang::TangParser::make_AS(Tang::location(location));
-  }
-  int {
-    return Tang::TangParser::make_CASTINT(Tang::location(location));
-  }
-  float {
-    return Tang::TangParser::make_CASTFLOAT(Tang::location(location));
   }
   . {}
   \n {}

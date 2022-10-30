@@ -9,6 +9,7 @@
 #include "computedExpressionError.hpp"
 #include "computedExpressionInteger.hpp"
 #include "computedExpressionFloat.hpp"
+#include "computedExpressionBoolean.hpp"
 
 using namespace std;
 using namespace Tang;
@@ -53,6 +54,12 @@ Program& Program::execute() {
       case Opcode::FLOAT: {
         EXECUTEPROGRAMCHECK(1);
         stack.push_back(GarbageCollected::make<ComputedExpressionFloat>(bit_cast<double>(this->bytecode[pc + 1])));
+        pc += 2;
+        break;
+      }
+      case Opcode::BOOLEAN: {
+        EXECUTEPROGRAMCHECK(1);
+        stack.push_back(GarbageCollected::make<ComputedExpressionBoolean>(this->bytecode[pc + 1] ? true : false));
         pc += 2;
         break;
       }
@@ -127,6 +134,14 @@ Program& Program::execute() {
         auto operand = stack.back();
         stack.pop_back();
         stack.push_back(operand->__float());
+        ++pc;
+        break;
+      }
+      case Opcode::CASTBOOLEAN: {
+        STACKCHECK(1);
+        auto operand = stack.back();
+        stack.pop_back();
+        stack.push_back(operand->__boolean());
         ++pc;
         break;
       }

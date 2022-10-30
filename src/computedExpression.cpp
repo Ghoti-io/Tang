@@ -27,6 +27,10 @@ bool ComputedExpression::is_equal([[maybe_unused]] const double & val) const {
   return false;
 }
 
+bool ComputedExpression::is_equal([[maybe_unused]] const bool & val) const {
+  return false;
+}
+
 bool ComputedExpression::is_equal([[maybe_unused]] const Error & val) const {
   return false;
 }
@@ -61,5 +65,9 @@ GarbageCollected ComputedExpression::__integer() const {
 
 GarbageCollected ComputedExpression::__float() const {
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to cast this value to a float."});
+}
+
+GarbageCollected ComputedExpression::__boolean() const {
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to cast this value to a boolean."});
 }
 

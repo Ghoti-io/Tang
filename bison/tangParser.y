@@ -77,6 +77,7 @@
 %token EOF 0 "end of code"
 %token < int64_t > INTEGER "integer literal"
 %token < long double > FLOAT "float literal"
+%token < bool > BOOLEAN "boolean literal"
 %token PLUS "+"
 %token MINUS "-"
 %token MULTIPLY "*"
@@ -87,6 +88,7 @@
 %token AS "as"
 %token CASTINT "int"
 %token CASTFLOAT "float"
+%token CASTBOOLEAN "boolean"
 
 // Any %type declarations of non-terminals.
 // https://www.gnu.org/software/bison/manual/bison.html#index-_0025type
@@ -127,9 +129,11 @@ namespace Tang {
 #include "astNodeModulo.hpp"
 #include "astNodeFloat.hpp"
 #include "astNodeInteger.hpp"
+#include "astNodeBoolean.hpp"
 #include "astNodeNegative.hpp"
 #include "astNodeCastInteger.hpp"
 #include "astNodeCastFloat.hpp"
+#include "astNodeCastBoolean.hpp"
 
 // We must provide the yylex() function.
 // yylex() arguments are defined in the bison .y file.
@@ -176,6 +180,9 @@ expression
     {
       $$ = new Tang::AstNodeFloat($1, @1);
     }
+  | BOOLEAN {
+      $$ = new Tang::AstNodeBoolean($1, @1);
+    }
   | expression "+" expression
     {
       $$ = new Tang::AstNodeAdd($1, $3, @2);
@@ -211,6 +218,10 @@ expression
   | expression "as" "float"
     {
       $$ = new Tang::AstNodeCastFloat($1, @2);
+    }
+  | expression "as" "boolean"
+    {
+      $$ = new Tang::AstNodeCastBoolean($1, @2);
     }
   ;
 

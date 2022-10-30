@@ -205,6 +205,37 @@ TEST(Expression, TypeCast) {
   EXPECT_EQ(*p6.execute().getResult(), 7);
   auto p7 = TangBase().compileScript("7.5 as float");
   EXPECT_EQ(*p7.execute().getResult(), 7.5);
+  auto p8 = TangBase().compileScript("0 as bool");
+  EXPECT_EQ(*p8.execute().getResult(), false);
+  auto p9 = TangBase().compileScript("1 as bool");
+  EXPECT_EQ(*p9.execute().getResult(), true);
+  auto p10 = TangBase().compileScript("0. as bool");
+  EXPECT_EQ(*p10.execute().getResult(), false);
+  auto p11 = TangBase().compileScript("1. as bool");
+  EXPECT_EQ(*p11.execute().getResult(), true);
+  auto p12 = TangBase().compileScript(".5 as int as bool");
+  EXPECT_EQ(*p12.execute().getResult(), false);
+  auto p13 = TangBase().compileScript("1.5 as int as bool");
+  EXPECT_EQ(*p13.execute().getResult(), true);
+  auto p14 = TangBase().compileScript("true as int");
+  EXPECT_EQ(*p14.execute().getResult(), 1);
+  auto p15 = TangBase().compileScript("false as int");
+  EXPECT_EQ(*p15.execute().getResult(), 0);
+  auto p16 = TangBase().compileScript("true as float");
+  EXPECT_EQ(*p16.execute().getResult(), 1.);
+  auto p17 = TangBase().compileScript("false as float");
+  EXPECT_EQ(*p17.execute().getResult(), 0.);
+  auto p18 = TangBase().compileScript("true as bool");
+  EXPECT_EQ(*p18.execute().getResult(), true);
+  auto p19 = TangBase().compileScript("false as bool");
+  EXPECT_EQ(*p19.execute().getResult(), false);
+}
+
+TEST(Expression, Boolean) {
+  auto p1 = TangBase().compileScript("true");
+  EXPECT_EQ(*p1.execute().getResult(), true);
+  auto p2 = TangBase().compileScript("false");
+  EXPECT_EQ(*p2.execute().getResult(), false);
 }
 
 int main(int argc, char** argv) {

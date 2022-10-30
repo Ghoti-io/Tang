@@ -48,6 +48,12 @@ string Program::dumpBytecode() const {
         pc += 2;
         break;
       }
+      case Opcode::BOOLEAN: {
+        DUMPPROGRAMCHECK(1);
+        out << "BOOLEAN" << (this->bytecode[pc + 1] ? "true" : "false");
+        pc += 2;
+        break;
+      }
       case Opcode::ADD: {
         out << "ADD";
         ++pc;
@@ -85,6 +91,11 @@ string Program::dumpBytecode() const {
       }
       case Opcode::CASTFLOAT: {
         out << "CASTFLOAT";
+        ++pc;
+        break;
+      }
+      case Opcode::CASTBOOLEAN: {
+        out << "CASTBOOLEAN";
         ++pc;
         break;
       }

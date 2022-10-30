@@ -17,6 +17,10 @@ bool GarbageCollected::operator==(const double & val) const {
   return this->ref && this->ref->is_equal(val);
 }
 
+bool GarbageCollected::operator==(const bool & val) const {
+  return this->ref && this->ref->is_equal(val);
+}
+
 bool GarbageCollected::operator==(const Error & val) const {
   return this->ref && this->ref->is_equal(val);
 }
