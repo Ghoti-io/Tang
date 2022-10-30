@@ -1,5 +1,6 @@
 /**
  * @file
+ * Define the Tang::AstNodeSubtract class.
  */
 
 #include "astNodeSubtract.hpp"
@@ -7,6 +8,8 @@
 
 using namespace std;
 using namespace Tang;
+
+AstNodeSubtract::AstNodeSubtract(AstNode * lhs, AstNode * rhs, Tang::location location) : AstNode(location), lhs{lhs}, rhs{rhs} {}
 
 string AstNodeSubtract::dump(string indent) const {
   return indent + "Subtract:\n"

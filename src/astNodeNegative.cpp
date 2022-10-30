@@ -1,5 +1,6 @@
 /**
  * @file
+ * Define the Tang::AstNodeNegative class.
  */
 
 #include <bit>
@@ -8,6 +9,8 @@
 
 using namespace std;
 using namespace Tang;
+
+AstNodeNegative::AstNodeNegative(AstNode * operand, Tang::location location) : AstNode(location), operand{operand} {}
 
 string AstNodeNegative::dump(string indent) const {
   return indent + "Negative:\n" + this->operand->dump(indent + "  ");

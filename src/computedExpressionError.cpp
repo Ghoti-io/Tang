@@ -1,5 +1,6 @@
 /**
  * @file
+ * Define the Tang::ComputedExpressionError class.
  */
 
 #include "computedExpressionError.hpp"

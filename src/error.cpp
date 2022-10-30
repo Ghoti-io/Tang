@@ -1,5 +1,6 @@
 /**
  * @file
+ * Define the Tang::Error class.
  */
 
 #include "error.hpp"

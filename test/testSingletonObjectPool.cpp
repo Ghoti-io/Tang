@@ -1,5 +1,6 @@
 /**
  * @file
+ * Test the generic behavior of the Tang::SingletonObjectPool class.
  */
 
 #include <gtest/gtest.h>

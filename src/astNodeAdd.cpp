@@ -1,5 +1,6 @@
 /**
  * @file
+ * Define the Tang::AstNodeAdd class.
  */
 
 #include "astNodeAdd.hpp"
@@ -7,6 +8,8 @@
 
 using namespace std;
 using namespace Tang;
+
+AstNodeAdd::AstNodeAdd(AstNode * lhs, AstNode * rhs, Tang::location location) : AstNode(location), lhs{lhs}, rhs{rhs} {}
 
 string AstNodeAdd::dump(string indent) const {
   return indent + "Add:\n"

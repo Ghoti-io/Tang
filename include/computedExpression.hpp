@@ -1,5 +1,6 @@
 /**
  * @file
+ * Declare the Tang::ComputedExpression base class.
  */
 
 namespace Tang {

@@ -1,5 +1,6 @@
 /**
  * @file
+ * Define the Tang::AstNodeCastInteger class.
  */
 
 #include <bit>
@@ -8,6 +9,8 @@
 
 using namespace std;
 using namespace Tang;
+
+AstNodeCastInteger::AstNodeCastInteger(AstNode * expression, Tang::location location) : AstNode(location), expression{expression} {}
 
 string AstNodeCastInteger::dump(string indent) const {
   return indent + "Cast to Integer:\n" + this->expression->dump(indent + "  ");

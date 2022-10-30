@@ -1,6 +1,6 @@
 /**
  * @file
- * Define the Tang::Program class used to compile and execute source code.
+ * Declare the Tang::Program class used to compile and execute source code.
  */
 
 #ifndef TANG_PROGRAM_HPP

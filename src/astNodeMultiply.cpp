@@ -1,5 +1,6 @@
 /**
  * @file
+ * Define the Tang::AstNodeMultiply class.
  */
 
 #include "astNodeMultiply.hpp"
@@ -7,6 +8,8 @@
 
 using namespace std;
 using namespace Tang;
+
+AstNodeMultiply::AstNodeMultiply(AstNode * lhs, AstNode * rhs, Tang::location location) : AstNode(location), lhs{lhs}, rhs{rhs} {}
 
 string AstNodeMultiply::dump(string indent) const {
   return indent + "Multiply:\n"

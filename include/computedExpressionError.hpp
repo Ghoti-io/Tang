@@ -1,5 +1,6 @@
 /**
  * @file
+ * Declare the Tang::ComputedExpressionError class.
  */
 
 #ifndef TANG_COMPUTEDEXPRESSIONERROR_HPP

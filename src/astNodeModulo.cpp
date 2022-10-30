@@ -1,5 +1,6 @@
 /**
  * @file
+ * Define the Tang::AstNodeModulo class.
  */
 
 #include "astNodeModulo.hpp"
@@ -7,6 +8,8 @@
 
 using namespace std;
 using namespace Tang;
+
+AstNodeModulo::AstNodeModulo(AstNode * lhs, AstNode * rhs, Tang::location location) : AstNode(location), lhs{lhs}, rhs{rhs} {}
 
 string AstNodeModulo::dump(string indent) const {
   return indent + "Modulo:\n"

@@ -1,5 +1,6 @@
 /**
  * @file
+ * Declare the Tang::AstNodeFloat class.
  */
 
 #ifndef TANG_ASTNODECASTFLOAT_HPP
@@ -17,9 +18,9 @@ namespace Tang {
      * The constructor.
      *
      * @param expression The expression to be typecast.
-     * @location The location associated with this node.
+     * @param location The location associated with this node.
      */
-    AstNodeCastFloat(AstNode * expression, Tang::location loc) : AstNode(loc), expression{expression} {}
+    AstNodeCastFloat(AstNode * expression, Tang::location location);
 
     virtual std::string dump(std::string indent = "") const override;
     virtual void compile(Tang::Program & program) const override;

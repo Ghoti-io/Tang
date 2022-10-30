@@ -1,5 +1,6 @@
 /**
  * @file
+ * Define the Tang::AstNodeDivide class.
  */
 
 #include "astNodeDivide.hpp"
@@ -7,6 +8,8 @@
 
 using namespace std;
 using namespace Tang;
+
+AstNodeDivide::AstNodeDivide(AstNode * lhs, AstNode * rhs, Tang::location location) : AstNode(location), lhs{lhs}, rhs{rhs} {}
 
 string AstNodeDivide::dump(string indent) const {
   return indent + "Divide:\n"

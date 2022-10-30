@@ -1,5 +1,6 @@
 /**
  * @file
+ * Declare the Tang::ComputedExpressionFloat class.
  */
 
 #ifndef TANG_COMPUTEDEXPRESSIONFLOAT_HPP

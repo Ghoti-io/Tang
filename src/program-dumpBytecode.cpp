@@ -1,5 +1,6 @@
 /**
  * @file
+ * Define the Tang::Program::dumpBytecode method.
  */
 
 #include <sstream>

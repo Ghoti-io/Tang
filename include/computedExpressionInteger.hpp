@@ -1,5 +1,6 @@
 /**
  * @file
+ * Declare the Tang::ComputedExpressionInteger class.
  */
 
 #ifndef TANG_COMPUTEDEXPRESSIONINTEGER_HPP

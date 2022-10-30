@@ -1,5 +1,6 @@
 /**
  * @file
+ * Declare the Tang::AstNodeInteger class.
  */
 
 #ifndef TANG_ASTNODEINTEGER_HPP
@@ -20,10 +21,9 @@ namespace Tang {
      * The constructor.
      *
      * @param number The number to represent.
-     * @param loc The location associated with the expression.
-     * @location The location associated with this node.
+     * @param location The location associated with the expression.
      */
-    AstNodeInteger(int64_t number, Tang::location loc) : AstNode(loc), val{number} {}
+    AstNodeInteger(int64_t number, Tang::location location);
 
     virtual std::string dump(std::string indent = "") const override;
     virtual void compile(Tang::Program & program) const override;

@@ -1,6 +1,6 @@
 /**
  * @file
- * Define the Tang::AstNode and its associated/derivative classes.
+ * Declare the Tang::AstNode base class.
  */
 
 #ifndef TANG_ASTNODE_HPP
@@ -24,9 +24,9 @@ namespace Tang {
     /**
      * The generic constructor.  It should never be called on its own.
      *
-     * @param loc The location associated with this node.
+     * @param location The location associated with this node.
      */
-    AstNode(Tang::location loc) : location {loc} {}
+    AstNode(Tang::location location);
 
     /**
      * The location associated with this node.

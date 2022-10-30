@@ -1,6 +1,6 @@
 /**
  * @file
- * Defines the Tang::TangScanner used to tokenize a Tang script.
+ * Declare the Tang::TangScanner used to tokenize a Tang script.
  */
 
 #ifndef TANG_TANGSCANNER_HPP

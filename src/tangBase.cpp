@@ -1,5 +1,6 @@
 /**
  * @file
+ * Define the Tang::TangBase class.
  */
 
 #include "tangBase.hpp"

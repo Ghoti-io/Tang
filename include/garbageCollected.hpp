@@ -1,5 +1,6 @@
 /**
  * @file
+ * Declare the Tang::GarbageCollected class.
  */
 
 namespace Tang {

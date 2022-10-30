@@ -1,6 +1,6 @@
 /**
  * @file
- * Defines the Tang::TangBase class used to interact with Tang.
+ * Declare the Tang::TangBase class used to interact with Tang.
  */
 
 #ifndef TANG_TANGBASE_HPP

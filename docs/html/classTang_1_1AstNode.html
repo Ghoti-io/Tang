@@ -148,9 +148,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a17cadf7ca51469e42bf405925af27e9e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a17cadf7ca51469e42bf405925af27e9e">AstNode</a> (<a class="el" href="classTang_1_1location.html">Tang::location</a> loc)</td></tr>
-<tr class="memdesc:a17cadf7ca51469e42bf405925af27e9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The generic constructor.  <a href="classTang_1_1AstNode.html#a17cadf7ca51469e42bf405925af27e9e">More...</a><br /></td></tr>
-<tr class="separator:a17cadf7ca51469e42bf405925af27e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b8d92e81c4497aa330460a870708578"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a7b8d92e81c4497aa330460a870708578">AstNode</a> (<a class="el" href="classTang_1_1location.html">Tang::location</a> <a class="el" href="classTang_1_1location.html">location</a>)</td></tr>
+<tr class="memdesc:a7b8d92e81c4497aa330460a870708578"><td class="mdescLeft">&#160;</td><td class="mdescRight">The generic constructor.  <a href="classTang_1_1AstNode.html#a7b8d92e81c4497aa330460a870708578">More...</a><br /></td></tr>
+<tr class="separator:a7b8d92e81c4497aa330460a870708578"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -163,8 +163,8 @@ Protected Attributes</h2></td></tr>
 <div class="textblock"><p>Base class for representing nodes of an Abstract Syntax Tree (AST). </p>
 <p>There will be <em>many</em> derived classes, each one conveying the syntactic meaning of the code that it represents. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a17cadf7ca51469e42bf405925af27e9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17cadf7ca51469e42bf405925af27e9e">&#9670;&nbsp;</a></span>AstNode()</h2>
+<a id="a7b8d92e81c4497aa330460a870708578"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b8d92e81c4497aa330460a870708578">&#9670;&nbsp;</a></span>AstNode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,16 +173,16 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Tang::AstNode::AstNode </td>
+          <td class="memname">AstNode::AstNode </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classTang_1_1location.html">Tang::location</a>&#160;</td>
-          <td class="paramname"><em>loc</em></td><td>)</td>
+          <td class="paramname"><em>location</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -191,7 +191,7 @@ Protected Attributes</h2></td></tr>
 <p>It should never be called on its own.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">loc</td><td>The location associated with this node. </td></tr>
+    <tr><td class="paramname">location</td><td>The location associated with this node. </td></tr>
   </table>
   </dd>
 </dl>
@@ -226,6 +226,15 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to a new <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that is a copy of the current <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a>. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classTang_1_1AstNodeSubtract.html#a7947aca1fd0458617e495e6f278f925f">Tang::AstNodeSubtract</a>, <a class="el" href="classTang_1_1AstNodeNegative.html#afe08d6852107d5e9f8c3f7a2639dde06">Tang::AstNodeNegative</a>, <a class="el" href="classTang_1_1AstNodeMultiply.html#a9b8bedd8d1e013c51c946f63c2d5b5cc">Tang::AstNodeMultiply</a>, <a class="el" href="classTang_1_1AstNodeModulo.html#a8383bcfca6723325eaaf469bf5c73b13">Tang::AstNodeModulo</a>, <a class="el" href="classTang_1_1AstNodeInteger.html#aa08b8d130711349199d3a1263d44913a">Tang::AstNodeInteger</a>, <a class="el" href="classTang_1_1AstNodeFloat.html#ab0f61b3898f955e805da649831b675de">Tang::AstNodeFloat</a>, <a class="el" href="classTang_1_1AstNodeDivide.html#a67e49d25840f5944563d27809ee96869">Tang::AstNodeDivide</a>, <a class="el" href="classTang_1_1AstNodeCastInteger.html#a78382500c79280c205c55958964a2226">Tang::AstNodeCastInteger</a>, <a class="el" href="classTang_1_1AstNodeCastFloat.html#afa1b30d4ea1e8690703d2627f7c4608d">Tang::AstNodeCastFloat</a>, and <a class="el" href="classTang_1_1AstNodeAdd.html#ab310ae8a2bed99ca0cfbddbb88343196">Tang::AstNodeAdd</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTang_1_1AstNode_addcb807e895088616f1ec51c61a85c00_cgraph.png" border="0" usemap="#aclassTang_1_1AstNode_addcb807e895088616f1ec51c61a85c00_cgraph" alt=""/></div>
+<map name="aclassTang_1_1AstNode_addcb807e895088616f1ec51c61a85c00_cgraph" id="aclassTang_1_1AstNode_addcb807e895088616f1ec51c61a85c00_cgraph">
+<area shape="rect" title="Provide a copy of the AstNode (recursively, if appropriate)." alt="" coords="5,5,197,32"/>
+<area shape="rect" href="classTang_1_1AstNode.html#a7b8d92e81c4497aa330460a870708578" title="The generic constructor." alt="" coords="245,5,424,32"/>
+</map>
+</div>
 
 </div>
 </div>

@@ -121,9 +121,9 @@ Collaboration diagram for Tang::AstNodeCastInteger:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa9b7517f52fa9cdf974bf0135fff9f69"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeCastInteger.html#aa9b7517f52fa9cdf974bf0135fff9f69">AstNodeCastInteger</a> (<a class="el" href="classTang_1_1AstNode.html">AstNode</a> *expression, <a class="el" href="classTang_1_1location.html">Tang::location</a> loc)</td></tr>
-<tr class="memdesc:aa9b7517f52fa9cdf974bf0135fff9f69"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="classTang_1_1AstNodeCastInteger.html#aa9b7517f52fa9cdf974bf0135fff9f69">More...</a><br /></td></tr>
-<tr class="separator:aa9b7517f52fa9cdf974bf0135fff9f69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1be74dce5e1af398f641385db0d7f1d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeCastInteger.html#ad1be74dce5e1af398f641385db0d7f1d">AstNodeCastInteger</a> (<a class="el" href="classTang_1_1AstNode.html">AstNode</a> *expression, <a class="el" href="classTang_1_1location.html">Tang::location</a> <a class="el" href="classTang_1_1location.html">location</a>)</td></tr>
+<tr class="memdesc:ad1be74dce5e1af398f641385db0d7f1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="classTang_1_1AstNodeCastInteger.html#ad1be74dce5e1af398f641385db0d7f1d">More...</a><br /></td></tr>
+<tr class="separator:ad1be74dce5e1af398f641385db0d7f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac30b207c3280131b222ed39c382ddc41"><td class="memItemLeft" align="right" valign="top"><a id="ac30b207c3280131b222ed39c382ddc41"></a>
 virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeCastInteger.html#ac30b207c3280131b222ed39c382ddc41">dump</a> (std::string indent=&quot;&quot;) const override</td></tr>
 <tr class="memdesc:ac30b207c3280131b222ed39c382ddc41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string that describes the contents of the node. <br /></td></tr>
@@ -146,17 +146,14 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that represents a typecast to an integer. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aa9b7517f52fa9cdf974bf0135fff9f69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9b7517f52fa9cdf974bf0135fff9f69">&#9670;&nbsp;</a></span>AstNodeCastInteger()</h2>
+<a id="ad1be74dce5e1af398f641385db0d7f1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1be74dce5e1af398f641385db0d7f1d">&#9670;&nbsp;</a></span>AstNodeCastInteger()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Tang::AstNodeCastInteger::AstNodeCastInteger </td>
+          <td class="memname">AstNodeCastInteger::AstNodeCastInteger </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classTang_1_1AstNode.html">AstNode</a> *&#160;</td>
           <td class="paramname"><em>expression</em>, </td>
@@ -165,7 +162,7 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classTang_1_1location.html">Tang::location</a>&#160;</td>
-          <td class="paramname"><em>loc</em>&#160;</td>
+          <td class="paramname"><em>location</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -173,17 +170,13 @@ Protected Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>The constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">expression</td><td>The expression to be typecast. @location The location associated with this node. </td></tr>
+    <tr><td class="paramname">expression</td><td>The expression to be typecast. </td></tr>
+    <tr><td class="paramname">location</td><td>The location associated with this node. </td></tr>
   </table>
   </dd>
 </dl>
@@ -218,6 +211,17 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to a new <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that is a copy of the current <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a>. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classTang_1_1AstNode.html#addcb807e895088616f1ec51c61a85c00">Tang::AstNode</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTang_1_1AstNodeCastInteger_a78382500c79280c205c55958964a2226_cgraph.png" border="0" usemap="#aclassTang_1_1AstNodeCastInteger_a78382500c79280c205c55958964a2226_cgraph" alt=""/></div>
+<map name="aclassTang_1_1AstNodeCastInteger_a78382500c79280c205c55958964a2226_cgraph" id="aclassTang_1_1AstNodeCastInteger_a78382500c79280c205c55958964a2226_cgraph">
+<area shape="rect" title="Provide a copy of the AstNode (recursively, if appropriate)." alt="" coords="5,35,196,76"/>
+<area shape="rect" href="classTang_1_1AstNodeCastInteger.html#ad1be74dce5e1af398f641385db0d7f1d" title="The constructor." alt="" coords="245,5,435,47"/>
+<area shape="rect" href="classTang_1_1AstNode.html#addcb807e895088616f1ec51c61a85c00" title="Provide a copy of the AstNode (recursively, if appropriate)." alt="" coords="244,71,436,98"/>
+<area shape="rect" href="classTang_1_1AstNode.html#a7b8d92e81c4497aa330460a870708578" title="The generic constructor." alt="" coords="484,71,663,98"/>
+</map>
+</div>
 
 </div>
 </div>

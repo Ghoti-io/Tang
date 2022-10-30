@@ -1,5 +1,6 @@
 /**
  * @file
+ * Define the Tang::AstNodeCastFloat class.
  */
 
 #include <bit>
@@ -8,6 +9,8 @@
 
 using namespace std;
 using namespace Tang;
+
+AstNodeCastFloat::AstNodeCastFloat(AstNode * expression, Tang::location location) : AstNode(location), expression{expression} {}
 
 string AstNodeCastFloat::dump(string indent) const {
   return indent + "Cast to Float:\n" + this->expression->dump(indent + "  ");

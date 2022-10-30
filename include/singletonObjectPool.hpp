@@ -1,5 +1,6 @@
 /**
  * @file
+ * Declare the Tang::SingletonObjectPool class.
  */
 
 #ifndef TANG_SINGLETONOBJECTPOOL_HPP
@@ -15,6 +16,9 @@ using namespace std;
 #define GROW 1024
 
 namespace Tang {
+  /**
+   * A thread-safe, singleton object pool of the designated type.
+   */
   template <class T>
   class SingletonObjectPool {
   public:

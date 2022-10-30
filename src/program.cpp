@@ -1,5 +1,6 @@
 /**
  * @file
+ * Define the Tang::Program class.
  */
 
 #include <sstream>

@@ -1,5 +1,6 @@
 /**
  * @file
+ * Define the Tang::AstNode class.
  */
 
 #include <iostream>
@@ -7,6 +8,8 @@
 
 using namespace std;
 using namespace Tang;
+
+AstNode::AstNode(Tang::location location) : location {location} {}
 
 AstNode::~AstNode() {}
 

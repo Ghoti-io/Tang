@@ -1,5 +1,6 @@
 /**
  * @file
+ * Define the Tang::AstNodeInteger class.
  */
 
 #include <bit>
@@ -8,6 +9,8 @@
 
 using namespace std;
 using namespace Tang;
+
+AstNodeInteger::AstNodeInteger(int64_t number, Tang::location location) : AstNode(location), val{number} {}
 
 string AstNodeInteger::dump(string indent) const {
   return indent + "Integer: " + to_string(this->val) + "\n";

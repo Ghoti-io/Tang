@@ -121,9 +121,9 @@ Collaboration diagram for Tang::AstNodeFloat:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8a2796acfc946fe6403eae67c1708f3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeFloat.html#a8a2796acfc946fe6403eae67c1708f3b">AstNodeFloat</a> (double number, <a class="el" href="classTang_1_1location.html">Tang::location</a> loc)</td></tr>
-<tr class="memdesc:a8a2796acfc946fe6403eae67c1708f3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="classTang_1_1AstNodeFloat.html#a8a2796acfc946fe6403eae67c1708f3b">More...</a><br /></td></tr>
-<tr class="separator:a8a2796acfc946fe6403eae67c1708f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84c59fbd94842593ae7803c1285dc7ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeFloat.html#a84c59fbd94842593ae7803c1285dc7ba">AstNodeFloat</a> (double number, <a class="el" href="classTang_1_1location.html">Tang::location</a> <a class="el" href="classTang_1_1location.html">location</a>)</td></tr>
+<tr class="memdesc:a84c59fbd94842593ae7803c1285dc7ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="classTang_1_1AstNodeFloat.html#a84c59fbd94842593ae7803c1285dc7ba">More...</a><br /></td></tr>
+<tr class="separator:a84c59fbd94842593ae7803c1285dc7ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8305f0f49aa635b9f9035a175e162511"><td class="memItemLeft" align="right" valign="top"><a id="a8305f0f49aa635b9f9035a175e162511"></a>
 virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeFloat.html#a8305f0f49aa635b9f9035a175e162511">dump</a> (std::string indent=&quot;&quot;) const override</td></tr>
 <tr class="memdesc:a8305f0f49aa635b9f9035a175e162511"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string that describes the contents of the node. <br /></td></tr>
@@ -147,17 +147,14 @@ Protected Attributes</h2></td></tr>
 <div class="textblock"><p>An <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that represents an float literal. </p>
 <p>Integers are represented by the <code>long double</code> type, and so are limited in range by that of the underlying type. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a8a2796acfc946fe6403eae67c1708f3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a2796acfc946fe6403eae67c1708f3b">&#9670;&nbsp;</a></span>AstNodeFloat()</h2>
+<a id="a84c59fbd94842593ae7803c1285dc7ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84c59fbd94842593ae7803c1285dc7ba">&#9670;&nbsp;</a></span>AstNodeFloat()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Tang::AstNodeFloat::AstNodeFloat </td>
+          <td class="memname">AstNodeFloat::AstNodeFloat </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>number</em>, </td>
@@ -166,7 +163,7 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classTang_1_1location.html">Tang::location</a>&#160;</td>
-          <td class="paramname"><em>loc</em>&#160;</td>
+          <td class="paramname"><em>location</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -174,18 +171,13 @@ Protected Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>The constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">number</td><td>The number to represent. </td></tr>
-    <tr><td class="paramname">loc</td><td>The location associated with the expression. @location The location associated with this node. </td></tr>
+    <tr><td class="paramname">location</td><td>The location associated with the expression. </td></tr>
   </table>
   </dd>
 </dl>
@@ -220,6 +212,15 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to a new <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that is a copy of the current <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a>. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classTang_1_1AstNode.html#addcb807e895088616f1ec51c61a85c00">Tang::AstNode</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTang_1_1AstNodeFloat_ab0f61b3898f955e805da649831b675de_cgraph.png" border="0" usemap="#aclassTang_1_1AstNodeFloat_ab0f61b3898f955e805da649831b675de_cgraph" alt=""/></div>
+<map name="aclassTang_1_1AstNodeFloat_ab0f61b3898f955e805da649831b675de_cgraph" id="aclassTang_1_1AstNodeFloat_ab0f61b3898f955e805da649831b675de_cgraph">
+<area shape="rect" title="Provide a copy of the AstNode (recursively, if appropriate)." alt="" coords="5,5,153,47"/>
+<area shape="rect" href="classTang_1_1AstNodeFloat.html#a84c59fbd94842593ae7803c1285dc7ba" title="The constructor." alt="" coords="201,5,349,47"/>
+</map>
+</div>
 
 </div>
 </div>

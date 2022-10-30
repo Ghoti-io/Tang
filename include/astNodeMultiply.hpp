@@ -1,5 +1,6 @@
 /**
  * @file
+ * Declare the Tang::AstNodeMultiply class.
  */
 
 #ifndef TANG_ASTNODEMULTIPLY_HPP
@@ -18,10 +19,9 @@ namespace Tang {
      *
      * @param lhs The left hand side expression.
      * @param rhs The right hand side expression.
-     * @param loc The location associated with the expression.
-     * @location The location associated with this node.
+     * @param location The location associated with the expression.
      */
-    AstNodeMultiply(AstNode * lhs, AstNode * rhs, Tang::location loc) : AstNode(loc), lhs{lhs}, rhs{rhs} {}
+    AstNodeMultiply(AstNode * lhs, AstNode * rhs, Tang::location location);
 
     virtual std::string dump(std::string indent = "") const override;
     virtual void compile(Tang::Program & program) const override;

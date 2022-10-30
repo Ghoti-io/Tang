@@ -1,5 +1,6 @@
 /**
  * @file
+ * Define the Tang::ComputedExpression class.
  */
 
 #include "computedExpression.hpp"

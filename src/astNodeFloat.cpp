@@ -1,5 +1,6 @@
 /**
  * @file
+ * Define the Tang::AstNodeFloat class.
  */
 
 #include <bit>
@@ -8,6 +9,8 @@
 
 using namespace std;
 using namespace Tang;
+
+AstNodeFloat::AstNodeFloat(double number, Tang::location location) : AstNode(location), val{number} {}
 
 string AstNodeFloat::dump(string indent) const {
   return indent + "Float: " + to_string(this->val) + "\n";
