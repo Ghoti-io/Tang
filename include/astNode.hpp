@@ -6,6 +6,7 @@
 #ifndef TANG_ASTNODE_HPP
 #define TANG_ASTNODE_HPP
 
+#include <memory>
 #include <string>
 #include "location.hh"
 #include "program.hpp"
@@ -55,7 +56,7 @@ namespace Tang {
      * @return A pointer to a new AstNode that is a copy of the current
      *   AstNode.
      */
-    virtual AstNode * makeCopy() const;
+    virtual std::shared_ptr<AstNode> makeCopy() const;
   };
 }
 

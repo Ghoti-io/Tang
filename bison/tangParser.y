@@ -63,7 +63,7 @@
 // Additional arguments that yyparse() should accept.
 // https://www.gnu.org/software/bison/manual/bison.html#index-_0025parse_002dparam-3
 %parse-param { Tang::TangScanner & scanner }
-%parse-param { Tang::AstNode * & ast }
+%parse-param { std::shared_ptr<Tang::AstNode> & ast }
 %parse-param { Tang::Error * & parseError }
 
 // Add a prefix to token names
@@ -92,8 +92,8 @@
 
 // Any %type declarations of non-terminals.
 // https://www.gnu.org/software/bison/manual/bison.html#index-_0025type
-%type < Tang::AstNode * > program
-%type < Tang::AstNode * > expression
+%type <std::shared_ptr<Tang::AstNode>> program
+%type <std::shared_ptr<Tang::AstNode>> expression
 
 // Precedence rules.
 // For guidance, see:
@@ -109,6 +109,7 @@
 // https://www.gnu.org/software/bison/manual/bison.html#g_t_0025code-Summary
 // `requires` will be included in the .hpp file.
 %code requires {
+#include <memory>
 #include <stdint.h>
 #include "astNode.hpp"
 #include "error.hpp"
@@ -122,11 +123,7 @@ namespace Tang {
 #include "tangScanner.hpp"
 #include "tangParser.hpp"
 #include "location.hh"
-#include "astNodeAdd.hpp"
-#include "astNodeSubtract.hpp"
-#include "astNodeMultiply.hpp"
-#include "astNodeDivide.hpp"
-#include "astNodeModulo.hpp"
+#include "astNodeBinary.hpp"
 #include "astNodeFloat.hpp"
 #include "astNodeInteger.hpp"
 #include "astNodeBoolean.hpp"
@@ -174,38 +171,38 @@ program
 expression
   : INTEGER
     {
-      $$ = new Tang::AstNodeInteger($1, @1);
+      $$ = std::make_shared<Tang::AstNodeInteger>($1, @1);
     }
   | FLOAT
     {
-      $$ = new Tang::AstNodeFloat($1, @1);
+      $$ = std::make_shared<AstNodeFloat>($1, @1);
     }
   | BOOLEAN {
-      $$ = new Tang::AstNodeBoolean($1, @1);
+      $$ = std::make_shared<AstNodeBoolean>($1, @1);
     }
   | expression "+" expression
     {
-      $$ = new Tang::AstNodeAdd($1, $3, @2);
+      $$ = std::make_shared<AstNodeBinary>(AstNodeBinary::Add, $1, $3, @2);
     }
   | expression "-" expression
     {
-      $$ = new Tang::AstNodeSubtract($1, $3, @2);
+      $$ = std::make_shared<AstNodeBinary>(AstNodeBinary::Subtract, $1, $3, @2);
     }
   | expression "*" expression
     {
-      $$ = new Tang::AstNodeMultiply($1, $3, @2);
+      $$ = std::make_shared<AstNodeBinary>(AstNodeBinary::Multiply, $1, $3, @2);
     }
   | expression "/" expression
     {
-      $$ = new Tang::AstNodeDivide($1, $3, @2);
+      $$ = std::make_shared<AstNodeBinary>(AstNodeBinary::Divide, $1, $3, @2);
     }
   | expression "%" expression
     {
-      $$ = new Tang::AstNodeModulo($1, $3, @2);
+      $$ = std::make_shared<AstNodeBinary>(AstNodeBinary::Modulo, $1, $3, @2);
     }
   | "-" expression %prec UMINUS
     {
-      $$ = new Tang::AstNodeNegative($2, @1);
+      $$ = std::make_shared<AstNodeNegative>($2, @1);
     }
   | "(" expression ")"
     {
@@ -213,15 +210,15 @@ expression
     }
   | expression "as" "int"
     {
-      $$ = new Tang::AstNodeCastInteger($1, @2);
+      $$ = std::make_shared<AstNodeCastInteger>($1, @2);
     }
   | expression "as" "float"
     {
-      $$ = new Tang::AstNodeCastFloat($1, @2);
+      $$ = std::make_shared<AstNodeCastFloat>($1, @2);
     }
   | expression "as" "boolean"
     {
-      $$ = new Tang::AstNodeCastBoolean($1, @2);
+      $$ = std::make_shared<AstNodeCastBoolean>($1, @2);
     }
   ;
 

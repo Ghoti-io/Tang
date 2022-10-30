@@ -7,7 +7,7 @@ GEN_DIR := $(BUILD)/generated
 APP_DIR := $(BUILD)/apps
 TARGET := libtang.so
 INCLUDE := -I include/ -I $(GEN_DIR)/
-LIBOBJECTS := $(OBJ_DIR)/astNode.o $(OBJ_DIR)/astNodeAdd.o $(OBJ_DIR)/astNodeBoolean.o $(OBJ_DIR)/astNodeCastBoolean.o $(OBJ_DIR)/astNodeCastFloat.o $(OBJ_DIR)/astNodeCastInteger.o $(OBJ_DIR)/astNodeDivide.o $(OBJ_DIR)/astNodeFloat.o $(OBJ_DIR)/astNodeInteger.o $(OBJ_DIR)/astNodeModulo.o $(OBJ_DIR)/astNodeMultiply.o $(OBJ_DIR)/astNodeNegative.o $(OBJ_DIR)/astNodeSubtract.o $(OBJ_DIR)/computedExpression.o $(OBJ_DIR)/computedExpressionBoolean.o $(OBJ_DIR)/computedExpressionFloat.o $(OBJ_DIR)/computedExpressionInteger.o  $(OBJ_DIR)/computedExpressionError.o $(OBJ_DIR)/error.o $(OBJ_DIR)/garbageCollected.o $(OBJ_DIR)/program.o $(OBJ_DIR)/program-dumpBytecode.o  $(OBJ_DIR)/program-execute.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o
+LIBOBJECTS := $(OBJ_DIR)/astNode.o $(OBJ_DIR)/astNodeBinary.o $(OBJ_DIR)/astNodeBoolean.o $(OBJ_DIR)/astNodeCastBoolean.o $(OBJ_DIR)/astNodeCastFloat.o $(OBJ_DIR)/astNodeCastInteger.o $(OBJ_DIR)/astNodeFloat.o $(OBJ_DIR)/astNodeInteger.o $(OBJ_DIR)/astNodeNegative.o $(OBJ_DIR)/computedExpression.o $(OBJ_DIR)/computedExpressionBoolean.o $(OBJ_DIR)/computedExpressionFloat.o $(OBJ_DIR)/computedExpressionInteger.o  $(OBJ_DIR)/computedExpressionError.o $(OBJ_DIR)/error.o $(OBJ_DIR)/garbageCollected.o $(OBJ_DIR)/program.o $(OBJ_DIR)/program-dumpBytecode.o  $(OBJ_DIR)/program-execute.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o
 TESTFLAGS := `pkg-config --libs --cflags gtest`
 
 
@@ -48,33 +48,13 @@ $(OBJ_DIR)/astNode.o: src/astNode.cpp include/astNode.hpp include/macros.hpp inc
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/astNodeAdd.o: src/astNodeAdd.cpp include/astNodeAdd.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
-	@echo "\n### Compiling astNodeAdd.o ###"
+$(OBJ_DIR)/astNodeBinary.o: src/astNodeBinary.cpp include/astNodeBinary.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+	@echo "\n### Compiling astNodeBinary.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
 $(OBJ_DIR)/astNodeBoolean.o: src/astNodeBoolean.cpp include/astNodeBoolean.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling astNodeBoolean.o ###"
-	@mkdir -p $(@D)
-	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
-
-$(OBJ_DIR)/astNodeSubtract.o: src/astNodeSubtract.cpp include/astNodeSubtract.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
-	@echo "\n### Compiling astNodeSubtract.o ###"
-	@mkdir -p $(@D)
-	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
-
-$(OBJ_DIR)/astNodeMultiply.o: src/astNodeMultiply.cpp include/astNodeMultiply.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
-	@echo "\n### Compiling astNodeMultiply.o ###"
-	@mkdir -p $(@D)
-	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
-
-$(OBJ_DIR)/astNodeDivide.o: src/astNodeDivide.cpp include/astNodeDivide.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
-	@echo "\n### Compiling astNodeDivide.o ###"
-	@mkdir -p $(@D)
-	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
-
-$(OBJ_DIR)/astNodeModulo.o: src/astNodeModulo.cpp include/astNodeModulo.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
-	@echo "\n### Compiling astNodeModulo.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 

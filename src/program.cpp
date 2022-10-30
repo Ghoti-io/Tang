@@ -23,9 +23,6 @@ Program::~Program() {
   if (this->error) {
     delete this->error;
   }
-  if (this->ast) {
-    delete this->ast;
-  }
 }
 
 Program::Program(const Program & program) {
@@ -50,7 +47,6 @@ Program & Program::operator=(const Program & program) {
 
   // `ast` is a pointer, so cleanup before replacing.
   if (this->ast) {
-    delete this->ast;
     this->ast = nullptr;
   }
   if (program.ast) {
@@ -94,7 +90,7 @@ string Program::getCode() const {
   return this->code;
 }
 
-optional<const AstNode *> Program::getAst() const {
+optional<const shared_ptr<AstNode>> Program::getAst() const {
   if (this->ast) {
     return this->ast;
   }

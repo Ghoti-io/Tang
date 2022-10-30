@@ -10,7 +10,7 @@
 using namespace std;
 using namespace Tang;
 
-AstNodeCastInteger::AstNodeCastInteger(AstNode * expression, Tang::location location) : AstNode(location), expression{expression} {}
+AstNodeCastInteger::AstNodeCastInteger(shared_ptr<AstNode> expression, Tang::location location) : AstNode(location), expression{expression} {}
 
 string AstNodeCastInteger::dump(string indent) const {
   return indent + "Cast to Integer:\n" + this->expression->dump(indent + "  ");
@@ -21,7 +21,7 @@ void AstNodeCastInteger::compile(Tang::Program & program) const {
   program.addBytecode((uint64_t)Opcode::CASTINTEGER);
 }
 
-AstNode * AstNodeCastInteger::makeCopy() const {
-  return new AstNodeCastInteger(this->expression->makeCopy(), this->location);
+shared_ptr<AstNode> AstNodeCastInteger::makeCopy() const {
+  return make_shared<AstNodeCastInteger>(this->expression->makeCopy(), this->location);
 }
 

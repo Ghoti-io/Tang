@@ -83,7 +83,7 @@ namespace Tang {
      *
      * @return A pointer to the AST, if it exists.
      */
-    std::optional<const AstNode *> getAst() const;
+    std::optional<const std::shared_ptr<AstNode>> getAst() const;
 
     /**
      * Get the Opcodes of the compiled program, formatted like Assembly.
@@ -142,7 +142,7 @@ namespace Tang {
     /**
      * A pointer to the AST, if parsing was successful.
      */
-    AstNode * ast;
+    shared_ptr<AstNode> ast;
 
     /**
      * A pointer to an error message, if any, resulting from compilation or

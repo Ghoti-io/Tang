@@ -1,6 +1,6 @@
 /**
  * @file
- * Define the Tang::AstNodeCastFloat class.
+ * Define the Tang::shared_ptr<AstNode>CastFloat class.
  */
 
 #include <bit>
@@ -10,7 +10,7 @@
 using namespace std;
 using namespace Tang;
 
-AstNodeCastFloat::AstNodeCastFloat(AstNode * expression, Tang::location location) : AstNode(location), expression{expression} {}
+AstNodeCastFloat::AstNodeCastFloat(shared_ptr<AstNode> expression, Tang::location location) : AstNode(location), expression{expression} {}
 
 string AstNodeCastFloat::dump(string indent) const {
   return indent + "Cast to Float:\n" + this->expression->dump(indent + "  ");
@@ -21,7 +21,7 @@ void AstNodeCastFloat::compile(Tang::Program & program) const {
   program.addBytecode((uint64_t)Opcode::CASTFLOAT);
 }
 
-AstNode * AstNodeCastFloat::makeCopy() const {
-  return new AstNodeCastFloat(this->expression->makeCopy(), this->location);
+shared_ptr<AstNode> AstNodeCastFloat::makeCopy() const {
+  return make_shared<AstNodeCastFloat>(this->expression->makeCopy(), this->location);
 }
 

@@ -20,17 +20,17 @@ namespace Tang {
      * @param operand The expression to negate.
      * @param location The location associated with the expression.
      */
-    AstNodeNegative(AstNode * operand, Tang::location location);
+    AstNodeNegative(shared_ptr<AstNode> operand, Tang::location location);
 
     virtual std::string dump(std::string indent = "") const override;
     virtual void compile(Tang::Program & program) const override;
-    virtual AstNode * makeCopy() const override;
+    virtual shared_ptr<AstNode> makeCopy() const override;
 
   private:
     /**
      * The operand to which the unary minus will be applied.
      */
-    AstNode * operand;
+    shared_ptr<AstNode> operand;
   };
 }
 
