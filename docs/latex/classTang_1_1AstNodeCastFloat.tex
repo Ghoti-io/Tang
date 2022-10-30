@@ -11,7 +11,8 @@ An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a typecast
 
 
 
-Inheritance diagram for Tang\+::Ast\+Node\+Cast\+Float\+:\nopagebreak
+Inheritance diagram for Tang\+::Ast\+Node\+Cast\+Float\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,7 +21,8 @@ Inheritance diagram for Tang\+::Ast\+Node\+Cast\+Float\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Tang\+::Ast\+Node\+Cast\+Float\+:\nopagebreak
+Collaboration diagram for Tang\+::Ast\+Node\+Cast\+Float\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,7 +32,7 @@ Collaboration diagram for Tang\+::Ast\+Node\+Cast\+Float\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTang_1_1AstNodeCastFloat_a58281cc2080ae912bb84511aee5d52cc}{Ast\+Node\+Cast\+Float}} (\mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$expression, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
+\mbox{\hyperlink{classTang_1_1AstNodeCastFloat_a03deaa0e13a10b906d93da989eb531cd}{Ast\+Node\+Cast\+Float}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ expression, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
 \begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTang_1_1AstNodeCastFloat_a087d739acfa97f6d3e85538f66ab816c}\label{classTang_1_1AstNodeCastFloat_a087d739acfa97f6d3e85538f66ab816c}} 
 virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeCastFloat_a087d739acfa97f6d3e85538f66ab816c}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
@@ -38,7 +40,7 @@ virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeCastFloat_a087d739acf
 \mbox{\Hypertarget{classTang_1_1AstNodeCastFloat_a8b1563596e8dee0566dda47fbb2c1add}\label{classTang_1_1AstNodeCastFloat_a8b1563596e8dee0566dda47fbb2c1add}} 
 virtual void \mbox{\hyperlink{classTang_1_1AstNodeCastFloat_a8b1563596e8dee0566dda47fbb2c1add}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const override
 \begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$ \mbox{\hyperlink{classTang_1_1AstNodeCastFloat_afa1b30d4ea1e8690703d2627f7c4608d}{make\+Copy}} () const override
+virtual shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeCastFloat_a01d4dba5c1ae23aa14be9f8e3d956600}{make\+Copy}} () const override
 \begin{DoxyCompactList}\small\item\em Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -52,11 +54,11 @@ virtual \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$ \mbox{\hyperli
 An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a typecast to a float. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classTang_1_1AstNodeCastFloat_a58281cc2080ae912bb84511aee5d52cc}\label{classTang_1_1AstNodeCastFloat_a58281cc2080ae912bb84511aee5d52cc}} 
+\mbox{\Hypertarget{classTang_1_1AstNodeCastFloat_a03deaa0e13a10b906d93da989eb531cd}\label{classTang_1_1AstNodeCastFloat_a03deaa0e13a10b906d93da989eb531cd}} 
 \index{Tang::AstNodeCastFloat@{Tang::AstNodeCastFloat}!AstNodeCastFloat@{AstNodeCastFloat}}
 \index{AstNodeCastFloat@{AstNodeCastFloat}!Tang::AstNodeCastFloat@{Tang::AstNodeCastFloat}}
 \doxysubsubsection{\texorpdfstring{AstNodeCastFloat()}{AstNodeCastFloat()}}
-{\footnotesize\ttfamily Ast\+Node\+Cast\+Float\+::\+Ast\+Node\+Cast\+Float (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$}]{expression,  }\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{location }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Ast\+Node\+Cast\+Float\+::\+Ast\+Node\+Cast\+Float (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$}]{expression,  }\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{location }\end{DoxyParamCaption})}
 
 
 
@@ -72,11 +74,11 @@ The constructor.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classTang_1_1AstNodeCastFloat_afa1b30d4ea1e8690703d2627f7c4608d}\label{classTang_1_1AstNodeCastFloat_afa1b30d4ea1e8690703d2627f7c4608d}} 
+\mbox{\Hypertarget{classTang_1_1AstNodeCastFloat_a01d4dba5c1ae23aa14be9f8e3d956600}\label{classTang_1_1AstNodeCastFloat_a01d4dba5c1ae23aa14be9f8e3d956600}} 
 \index{Tang::AstNodeCastFloat@{Tang::AstNodeCastFloat}!makeCopy@{makeCopy}}
 \index{makeCopy@{makeCopy}!Tang::AstNodeCastFloat@{Tang::AstNodeCastFloat}}
 \doxysubsubsection{\texorpdfstring{makeCopy()}{makeCopy()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$ Ast\+Node\+Cast\+Float\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ Ast\+Node\+Cast\+Float\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -87,15 +89,8 @@ A pointer to a new \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that is a 
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_addcb807e895088616f1ec51c61a85c00}{Tang\+::\+Ast\+Node}}.
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a2ffa154eb71a3588659e2ce5dcd5744c}{Tang\+::\+Ast\+Node}}.
 
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classTang_1_1AstNodeCastFloat_afa1b30d4ea1e8690703d2627f7c4608d_cgraph}
-\end{center}
-\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

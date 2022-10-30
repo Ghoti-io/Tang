@@ -3,8 +3,8 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "astNode.hpp", "astNode_8hpp.html", [
       [ "AstNode", "classTang_1_1AstNode.html", "classTang_1_1AstNode" ]
     ] ],
-    [ "astNodeAdd.hpp", "astNodeAdd_8hpp.html", [
-      [ "AstNodeAdd", "classTang_1_1AstNodeAdd.html", "classTang_1_1AstNodeAdd" ]
+    [ "astNodeBinary.hpp", "astNodeBinary_8hpp.html", [
+      [ "AstNodeBinary", "classTang_1_1AstNodeBinary.html", "classTang_1_1AstNodeBinary" ]
     ] ],
     [ "astNodeBoolean.hpp", "astNodeBoolean_8hpp.html", [
       [ "AstNodeBoolean", "classTang_1_1AstNodeBoolean.html", "classTang_1_1AstNodeBoolean" ]
@@ -18,26 +18,14 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "astNodeCastInteger.hpp", "astNodeCastInteger_8hpp.html", [
       [ "AstNodeCastInteger", "classTang_1_1AstNodeCastInteger.html", "classTang_1_1AstNodeCastInteger" ]
     ] ],
-    [ "astNodeDivide.hpp", "astNodeDivide_8hpp.html", [
-      [ "AstNodeDivide", "classTang_1_1AstNodeDivide.html", "classTang_1_1AstNodeDivide" ]
-    ] ],
     [ "astNodeFloat.hpp", "astNodeFloat_8hpp.html", [
       [ "AstNodeFloat", "classTang_1_1AstNodeFloat.html", "classTang_1_1AstNodeFloat" ]
     ] ],
     [ "astNodeInteger.hpp", "astNodeInteger_8hpp.html", [
       [ "AstNodeInteger", "classTang_1_1AstNodeInteger.html", "classTang_1_1AstNodeInteger" ]
     ] ],
-    [ "astNodeModulo.hpp", "astNodeModulo_8hpp.html", [
-      [ "AstNodeModulo", "classTang_1_1AstNodeModulo.html", "classTang_1_1AstNodeModulo" ]
-    ] ],
-    [ "astNodeMultiply.hpp", "astNodeMultiply_8hpp.html", [
-      [ "AstNodeMultiply", "classTang_1_1AstNodeMultiply.html", "classTang_1_1AstNodeMultiply" ]
-    ] ],
     [ "astNodeNegative.hpp", "astNodeNegative_8hpp.html", [
       [ "AstNodeNegative", "classTang_1_1AstNodeNegative.html", "classTang_1_1AstNodeNegative" ]
-    ] ],
-    [ "astNodeSubtract.hpp", "astNodeSubtract_8hpp.html", [
-      [ "AstNodeSubtract", "classTang_1_1AstNodeSubtract.html", "classTang_1_1AstNodeSubtract" ]
     ] ],
     [ "computedExpression.hpp", "computedExpression_8hpp.html", [
       [ "ComputedExpression", "classTang_1_1ComputedExpression.html", "classTang_1_1ComputedExpression" ]

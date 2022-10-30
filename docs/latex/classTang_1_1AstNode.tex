@@ -11,7 +11,8 @@ Base class for representing nodes of an Abstract Syntax Tree (AST).
 
 
 
-Inheritance diagram for Tang\+::Ast\+Node\+:\nopagebreak
+Inheritance diagram for Tang\+::Ast\+Node\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,7 +21,8 @@ Inheritance diagram for Tang\+::Ast\+Node\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Tang\+::Ast\+Node\+:\nopagebreak
+Collaboration diagram for Tang\+::Ast\+Node\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -39,7 +41,7 @@ virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNode_a9884742e4b32db78c02
 \mbox{\Hypertarget{classTang_1_1AstNode_a390f8887c418f972d75e968f1274b2cb}\label{classTang_1_1AstNode_a390f8887c418f972d75e968f1274b2cb}} 
 virtual void \mbox{\hyperlink{classTang_1_1AstNode_a390f8887c418f972d75e968f1274b2cb}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const
 \begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$ \mbox{\hyperlink{classTang_1_1AstNode_addcb807e895088616f1ec51c61a85c00}{make\+Copy}} () const
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNode_a2ffa154eb71a3588659e2ce5dcd5744c}{make\+Copy}} () const
 \begin{DoxyCompactList}\small\item\em Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -80,11 +82,11 @@ It should never be called on its own.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classTang_1_1AstNode_addcb807e895088616f1ec51c61a85c00}\label{classTang_1_1AstNode_addcb807e895088616f1ec51c61a85c00}} 
+\mbox{\Hypertarget{classTang_1_1AstNode_a2ffa154eb71a3588659e2ce5dcd5744c}\label{classTang_1_1AstNode_a2ffa154eb71a3588659e2ce5dcd5744c}} 
 \index{Tang::AstNode@{Tang::AstNode}!makeCopy@{makeCopy}}
 \index{makeCopy@{makeCopy}!Tang::AstNode@{Tang::AstNode}}
 \doxysubsubsection{\texorpdfstring{makeCopy()}{makeCopy()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$ Ast\+Node\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ Ast\+Node\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -95,13 +97,14 @@ A pointer to a new \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that is a 
 \end{DoxyReturn}
 
 
-Reimplemented in \mbox{\hyperlink{classTang_1_1AstNodeSubtract_a7947aca1fd0458617e495e6f278f925f}{Tang\+::\+Ast\+Node\+Subtract}}, \mbox{\hyperlink{classTang_1_1AstNodeNegative_afe08d6852107d5e9f8c3f7a2639dde06}{Tang\+::\+Ast\+Node\+Negative}}, \mbox{\hyperlink{classTang_1_1AstNodeMultiply_a9b8bedd8d1e013c51c946f63c2d5b5cc}{Tang\+::\+Ast\+Node\+Multiply}}, \mbox{\hyperlink{classTang_1_1AstNodeModulo_a8383bcfca6723325eaaf469bf5c73b13}{Tang\+::\+Ast\+Node\+Modulo}}, \mbox{\hyperlink{classTang_1_1AstNodeInteger_aa08b8d130711349199d3a1263d44913a}{Tang\+::\+Ast\+Node\+Integer}}, \mbox{\hyperlink{classTang_1_1AstNodeFloat_ab0f61b3898f955e805da649831b675de}{Tang\+::\+Ast\+Node\+Float}}, \mbox{\hyperlink{classTang_1_1AstNodeDivide_a67e49d25840f5944563d27809ee96869}{Tang\+::\+Ast\+Node\+Divide}}, \mbox{\hyperlink{classTang_1_1AstNodeCastInteger_a78382500c79280c205c55958964a2226}{Tang\+::\+Ast\+Node\+Cast\+Integer}}, \mbox{\hyperlink{classTang_1_1AstNodeCastFloat_afa1b30d4ea1e8690703d2627f7c4608d}{Tang\+::\+Ast\+Node\+Cast\+Float}}, \mbox{\hyperlink{classTang_1_1AstNodeCastBoolean_a2076a1f7bc4452515d5219fcec6c5dbd}{Tang\+::\+Ast\+Node\+Cast\+Boolean}}, \mbox{\hyperlink{classTang_1_1AstNodeBoolean_a96c9d7320db9f86f6f77ae49dc38019e}{Tang\+::\+Ast\+Node\+Boolean}}, and \mbox{\hyperlink{classTang_1_1AstNodeAdd_ab310ae8a2bed99ca0cfbddbb88343196}{Tang\+::\+Ast\+Node\+Add}}.
+Reimplemented in \mbox{\hyperlink{classTang_1_1AstNodeNegative_ae5b973a40d7aff98da44e773af6f6780}{Tang\+::\+Ast\+Node\+Negative}}, \mbox{\hyperlink{classTang_1_1AstNodeInteger_ab5e5d6788c152dfaa2a6da8bc67fdad8}{Tang\+::\+Ast\+Node\+Integer}}, \mbox{\hyperlink{classTang_1_1AstNodeFloat_a4ed8f5896e0fdf1fbe0c43eead75c899}{Tang\+::\+Ast\+Node\+Float}}, \mbox{\hyperlink{classTang_1_1AstNodeCastInteger_aafbf0fda0a251c539b2c7de5a963fa10}{Tang\+::\+Ast\+Node\+Cast\+Integer}}, \mbox{\hyperlink{classTang_1_1AstNodeCastFloat_a01d4dba5c1ae23aa14be9f8e3d956600}{Tang\+::\+Ast\+Node\+Cast\+Float}}, \mbox{\hyperlink{classTang_1_1AstNodeCastBoolean_aee6c666a326138e9637b45b0881671fc}{Tang\+::\+Ast\+Node\+Cast\+Boolean}}, \mbox{\hyperlink{classTang_1_1AstNodeBoolean_a0df87176d66bac91317ec9bbef057a6a}{Tang\+::\+Ast\+Node\+Boolean}}, and \mbox{\hyperlink{classTang_1_1AstNodeBinary_a59db65e95e47c3038975047ea1096824}{Tang\+::\+Ast\+Node\+Binary}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classTang_1_1AstNode_addcb807e895088616f1ec51c61a85c00_cgraph}
+\includegraphics[width=350pt]{classTang_1_1AstNode_a2ffa154eb71a3588659e2ce5dcd5744c_cgraph}
 \end{center}
 \end{figure}
 

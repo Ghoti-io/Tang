@@ -11,7 +11,8 @@ An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a typecast
 
 
 
-Inheritance diagram for Tang\+::Ast\+Node\+Cast\+Integer\+:\nopagebreak
+Inheritance diagram for Tang\+::Ast\+Node\+Cast\+Integer\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,7 +21,8 @@ Inheritance diagram for Tang\+::Ast\+Node\+Cast\+Integer\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Tang\+::Ast\+Node\+Cast\+Integer\+:\nopagebreak
+Collaboration diagram for Tang\+::Ast\+Node\+Cast\+Integer\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,7 +32,7 @@ Collaboration diagram for Tang\+::Ast\+Node\+Cast\+Integer\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTang_1_1AstNodeCastInteger_ad1be74dce5e1af398f641385db0d7f1d}{Ast\+Node\+Cast\+Integer}} (\mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$expression, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
+\mbox{\hyperlink{classTang_1_1AstNodeCastInteger_a9afa797314b15119cf60b794e3e69eee}{Ast\+Node\+Cast\+Integer}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ expression, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
 \begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTang_1_1AstNodeCastInteger_ac30b207c3280131b222ed39c382ddc41}\label{classTang_1_1AstNodeCastInteger_ac30b207c3280131b222ed39c382ddc41}} 
 virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeCastInteger_ac30b207c3280131b222ed39c382ddc41}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
@@ -38,7 +40,7 @@ virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeCastInteger_ac30b207c
 \mbox{\Hypertarget{classTang_1_1AstNodeCastInteger_a35a56eec2019b0135ddba740b0cbb10b}\label{classTang_1_1AstNodeCastInteger_a35a56eec2019b0135ddba740b0cbb10b}} 
 virtual void \mbox{\hyperlink{classTang_1_1AstNodeCastInteger_a35a56eec2019b0135ddba740b0cbb10b}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const override
 \begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$ \mbox{\hyperlink{classTang_1_1AstNodeCastInteger_a78382500c79280c205c55958964a2226}{make\+Copy}} () const override
+virtual shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeCastInteger_aafbf0fda0a251c539b2c7de5a963fa10}{make\+Copy}} () const override
 \begin{DoxyCompactList}\small\item\em Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -52,11 +54,11 @@ virtual \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$ \mbox{\hyperli
 An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a typecast to an integer. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classTang_1_1AstNodeCastInteger_ad1be74dce5e1af398f641385db0d7f1d}\label{classTang_1_1AstNodeCastInteger_ad1be74dce5e1af398f641385db0d7f1d}} 
+\mbox{\Hypertarget{classTang_1_1AstNodeCastInteger_a9afa797314b15119cf60b794e3e69eee}\label{classTang_1_1AstNodeCastInteger_a9afa797314b15119cf60b794e3e69eee}} 
 \index{Tang::AstNodeCastInteger@{Tang::AstNodeCastInteger}!AstNodeCastInteger@{AstNodeCastInteger}}
 \index{AstNodeCastInteger@{AstNodeCastInteger}!Tang::AstNodeCastInteger@{Tang::AstNodeCastInteger}}
 \doxysubsubsection{\texorpdfstring{AstNodeCastInteger()}{AstNodeCastInteger()}}
-{\footnotesize\ttfamily Ast\+Node\+Cast\+Integer\+::\+Ast\+Node\+Cast\+Integer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$}]{expression,  }\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{location }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Ast\+Node\+Cast\+Integer\+::\+Ast\+Node\+Cast\+Integer (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$}]{expression,  }\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{location }\end{DoxyParamCaption})}
 
 
 
@@ -72,11 +74,11 @@ The constructor.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classTang_1_1AstNodeCastInteger_a78382500c79280c205c55958964a2226}\label{classTang_1_1AstNodeCastInteger_a78382500c79280c205c55958964a2226}} 
+\mbox{\Hypertarget{classTang_1_1AstNodeCastInteger_aafbf0fda0a251c539b2c7de5a963fa10}\label{classTang_1_1AstNodeCastInteger_aafbf0fda0a251c539b2c7de5a963fa10}} 
 \index{Tang::AstNodeCastInteger@{Tang::AstNodeCastInteger}!makeCopy@{makeCopy}}
 \index{makeCopy@{makeCopy}!Tang::AstNodeCastInteger@{Tang::AstNodeCastInteger}}
 \doxysubsubsection{\texorpdfstring{makeCopy()}{makeCopy()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$ Ast\+Node\+Cast\+Integer\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ Ast\+Node\+Cast\+Integer\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -87,15 +89,8 @@ A pointer to a new \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that is a 
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_addcb807e895088616f1ec51c61a85c00}{Tang\+::\+Ast\+Node}}.
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a2ffa154eb71a3588659e2ce5dcd5744c}{Tang\+::\+Ast\+Node}}.
 
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classTang_1_1AstNodeCastInteger_a78382500c79280c205c55958964a2226_cgraph}
-\end{center}
-\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
