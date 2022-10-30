@@ -156,6 +156,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4bbe91963e21fd8319b94a7b43a1e26e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionInteger.html#a4bbe91963e21fd8319b94a7b43a1e26e">__float</a> () const override</td></tr>
 <tr class="memdesc:a4bbe91963e21fd8319b94a7b43a1e26e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a type cast to float.  <a href="classTang_1_1ComputedExpressionInteger.html#a4bbe91963e21fd8319b94a7b43a1e26e">More...</a><br /></td></tr>
 <tr class="separator:a4bbe91963e21fd8319b94a7b43a1e26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c87432e8b46594ca2b89ff6787de1d3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionInteger.html#a0c87432e8b46594ca2b89ff6787de1d3">__boolean</a> () const override</td></tr>
+<tr class="memdesc:a0c87432e8b46594ca2b89ff6787de1d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a type cast to boolean.  <a href="classTang_1_1ComputedExpressionInteger.html#a0c87432e8b46594ca2b89ff6787de1d3">More...</a><br /></td></tr>
+<tr class="separator:a0c87432e8b46594ca2b89ff6787de1d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a907104a9d090d21e9bcc487b696738c4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpression.html#a907104a9d090d21e9bcc487b696738c4">is_equal</a> (const bool &amp;val) const</td></tr>
+<tr class="memdesc:a907104a9d090d21e9bcc487b696738c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether or not the computed expression is equal to another value.  <a href="classTang_1_1ComputedExpression.html#a907104a9d090d21e9bcc487b696738c4">More...</a><br /></td></tr>
+<tr class="separator:a907104a9d090d21e9bcc487b696738c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ce6d4bc0128f6aadf72c2f63a70275a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpression.html#a5ce6d4bc0128f6aadf72c2f63a70275a">is_equal</a> (const <a class="el" href="classTang_1_1Error.html">Error</a> &amp;val) const</td></tr>
 <tr class="memdesc:a5ce6d4bc0128f6aadf72c2f63a70275a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether or not the computed expression is equal to another value.  <a href="classTang_1_1ComputedExpression.html#a5ce6d4bc0128f6aadf72c2f63a70275a">More...</a><br /></td></tr>
 <tr class="separator:a5ce6d4bc0128f6aadf72c2f63a70275a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -230,6 +236,36 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>ComputedExpressionFl
 <dl class="section return"><dt>Returns</dt><dd>The result of the operation. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#a7265dda9f1e6db478f0c1cd9c3e37aa9">Tang::ComputedExpression</a>.</p>
+
+</div>
+</div>
+<a id="a0c87432e8b46594ca2b89ff6787de1d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c87432e8b46594ca2b89ff6787de1d3">&#9670;&nbsp;</a></span>__boolean()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> ComputedExpressionInteger::__boolean </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Perform a type cast to boolean. </p>
+<dl class="section return"><dt>Returns</dt><dd>The result of the the operation. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#ac38862531c17e25636ca68c7e74ba487">Tang::ComputedExpression</a>.</p>
 
 </div>
 </div>
@@ -501,8 +537,45 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>ComputedExpressionFl
 
 </div>
 </div>
+<a id="a907104a9d090d21e9bcc487b696738c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a907104a9d090d21e9bcc487b696738c4">&#9670;&nbsp;</a></span>is_equal() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Tang::ComputedExpression::is_equal </td>
+          <td>(</td>
+          <td class="paramtype">const bool &amp;&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check whether or not the computed expression is equal to another value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>The value to compare against. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if equal, false if not. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classTang_1_1ComputedExpressionBoolean.html#aaf17b861d5a8ab290ff01cc2fe8acf55">Tang::ComputedExpressionBoolean</a>.</p>
+
+</div>
+</div>
 <a id="acd871176aea0d4c04bd03fbbeaee6482"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd871176aea0d4c04bd03fbbeaee6482">&#9670;&nbsp;</a></span>is_equal() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acd871176aea0d4c04bd03fbbeaee6482">&#9670;&nbsp;</a></span>is_equal() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -539,7 +612,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>ComputedExpressionFl
 </div>
 </div>
 <a id="a5ce6d4bc0128f6aadf72c2f63a70275a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ce6d4bc0128f6aadf72c2f63a70275a">&#9670;&nbsp;</a></span>is_equal() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ce6d4bc0128f6aadf72c2f63a70275a">&#9670;&nbsp;</a></span>is_equal() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -576,7 +649,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>ComputedExpressionFl
 </div>
 </div>
 <a id="ab297128beba3aa851658eda17c00331b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab297128beba3aa851658eda17c00331b">&#9670;&nbsp;</a></span>is_equal() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab297128beba3aa851658eda17c00331b">&#9670;&nbsp;</a></span>is_equal() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

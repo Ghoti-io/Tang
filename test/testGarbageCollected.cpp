@@ -1,3 +1,8 @@
+/**
+ * @file
+ * Test the generic behavior of the Tang::GarbageCollected class.
+ */
+
 #include <gtest/gtest.h>
 #include "garbageCollected.hpp"
 #include "computedExpression.hpp"

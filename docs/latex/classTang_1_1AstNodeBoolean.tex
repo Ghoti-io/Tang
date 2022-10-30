@@ -1,0 +1,104 @@
+\hypertarget{classTang_1_1AstNodeBoolean}{}\doxysection{Tang\+::Ast\+Node\+Boolean Class Reference}
+\label{classTang_1_1AstNodeBoolean}\index{Tang::AstNodeBoolean@{Tang::AstNodeBoolean}}
+
+
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a boolean literal.  
+
+
+
+
+{\ttfamily \#include $<$ast\+Node\+Boolean.\+hpp$>$}
+
+
+
+Inheritance diagram for Tang\+::Ast\+Node\+Boolean\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{classTang_1_1AstNodeBoolean__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tang\+::Ast\+Node\+Boolean\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{classTang_1_1AstNodeBoolean__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTang_1_1AstNodeBoolean_ac1b4c6097f8fe54425cdb6c0ef162129}{Ast\+Node\+Boolean}} (bool val, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeBoolean_a17efb648820e70931ffc0b238efa27e9}\label{classTang_1_1AstNodeBoolean_a17efb648820e70931ffc0b238efa27e9}} 
+virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeBoolean_a17efb648820e70931ffc0b238efa27e9}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
+\begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeBoolean_a59b186598146a39d40460ea4574a4f74}\label{classTang_1_1AstNodeBoolean_a59b186598146a39d40460ea4574a4f74}} 
+virtual void \mbox{\hyperlink{classTang_1_1AstNodeBoolean_a59b186598146a39d40460ea4574a4f74}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const override
+\begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$ \mbox{\hyperlink{classTang_1_1AstNodeBoolean_a96c9d7320db9f86f6f77ae49dc38019e}{make\+Copy}} () const override
+\begin{DoxyCompactList}\small\item\em Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}\label{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}} 
+\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}{location}}
+\begin{DoxyCompactList}\small\item\em The location associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a boolean literal. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeBoolean_ac1b4c6097f8fe54425cdb6c0ef162129}\label{classTang_1_1AstNodeBoolean_ac1b4c6097f8fe54425cdb6c0ef162129}} 
+\index{Tang::AstNodeBoolean@{Tang::AstNodeBoolean}!AstNodeBoolean@{AstNodeBoolean}}
+\index{AstNodeBoolean@{AstNodeBoolean}!Tang::AstNodeBoolean@{Tang::AstNodeBoolean}}
+\doxysubsubsection{\texorpdfstring{AstNodeBoolean()}{AstNodeBoolean()}}
+{\footnotesize\ttfamily Ast\+Node\+Boolean\+::\+Ast\+Node\+Boolean (\begin{DoxyParamCaption}\item[{bool}]{val,  }\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{location }\end{DoxyParamCaption})}
+
+
+
+The constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The boolean to represent. \\
+\hline
+{\em location} & The location associated with the expression. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeBoolean_a96c9d7320db9f86f6f77ae49dc38019e}\label{classTang_1_1AstNodeBoolean_a96c9d7320db9f86f6f77ae49dc38019e}} 
+\index{Tang::AstNodeBoolean@{Tang::AstNodeBoolean}!makeCopy@{makeCopy}}
+\index{makeCopy@{makeCopy}!Tang::AstNodeBoolean@{Tang::AstNodeBoolean}}
+\doxysubsubsection{\texorpdfstring{makeCopy()}{makeCopy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $\ast$ Ast\+Node\+Boolean\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). 
+
+\begin{DoxyReturn}{Returns}
+A pointer to a new \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that is a copy of the current \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_addcb807e895088616f1ec51c61a85c00}{Tang\+::\+Ast\+Node}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTang_1_1AstNodeBoolean_a96c9d7320db9f86f6f77ae49dc38019e_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{astNodeBoolean_8hpp}{ast\+Node\+Boolean.\+hpp}}\item 
+src/\mbox{\hyperlink{astNodeBoolean_8cpp}{ast\+Node\+Boolean.\+cpp}}\end{DoxyCompactItemize}

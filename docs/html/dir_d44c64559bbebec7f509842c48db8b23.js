@@ -6,6 +6,12 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "astNodeAdd.hpp", "astNodeAdd_8hpp.html", [
       [ "AstNodeAdd", "classTang_1_1AstNodeAdd.html", "classTang_1_1AstNodeAdd" ]
     ] ],
+    [ "astNodeBoolean.hpp", "astNodeBoolean_8hpp.html", [
+      [ "AstNodeBoolean", "classTang_1_1AstNodeBoolean.html", "classTang_1_1AstNodeBoolean" ]
+    ] ],
+    [ "astNodeCastBoolean.hpp", "astNodeCastBoolean_8hpp.html", [
+      [ "AstNodeCastBoolean", "classTang_1_1AstNodeCastBoolean.html", "classTang_1_1AstNodeCastBoolean" ]
+    ] ],
     [ "astNodeCastFloat.hpp", "astNodeCastFloat_8hpp.html", [
       [ "AstNodeCastFloat", "classTang_1_1AstNodeCastFloat.html", "classTang_1_1AstNodeCastFloat" ]
     ] ],
@@ -35,6 +41,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     ] ],
     [ "computedExpression.hpp", "computedExpression_8hpp.html", [
       [ "ComputedExpression", "classTang_1_1ComputedExpression.html", "classTang_1_1ComputedExpression" ]
+    ] ],
+    [ "computedExpressionBoolean.hpp", "computedExpressionBoolean_8hpp.html", [
+      [ "ComputedExpressionBoolean", "classTang_1_1ComputedExpressionBoolean.html", "classTang_1_1ComputedExpressionBoolean" ]
     ] ],
     [ "computedExpressionError.hpp", "computedExpressionError_8hpp.html", [
       [ "ComputedExpressionError", "classTang_1_1ComputedExpressionError.html", "classTang_1_1ComputedExpressionError" ]

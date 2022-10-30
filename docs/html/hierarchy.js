@@ -2,6 +2,8 @@ var hierarchy =
 [
     [ "Tang::AstNode", "classTang_1_1AstNode.html", [
       [ "Tang::AstNodeAdd", "classTang_1_1AstNodeAdd.html", null ],
+      [ "Tang::AstNodeBoolean", "classTang_1_1AstNodeBoolean.html", null ],
+      [ "Tang::AstNodeCastBoolean", "classTang_1_1AstNodeCastBoolean.html", null ],
       [ "Tang::AstNodeCastFloat", "classTang_1_1AstNodeCastFloat.html", null ],
       [ "Tang::AstNodeCastInteger", "classTang_1_1AstNodeCastInteger.html", null ],
       [ "Tang::AstNodeDivide", "classTang_1_1AstNodeDivide.html", null ],
@@ -13,6 +15,7 @@ var hierarchy =
       [ "Tang::AstNodeSubtract", "classTang_1_1AstNodeSubtract.html", null ]
     ] ],
     [ "Tang::ComputedExpression", "classTang_1_1ComputedExpression.html", [
+      [ "Tang::ComputedExpressionBoolean", "classTang_1_1ComputedExpressionBoolean.html", null ],
       [ "Tang::ComputedExpressionError", "classTang_1_1ComputedExpressionError.html", null ],
       [ "Tang::ComputedExpressionFloat", "classTang_1_1ComputedExpressionFloat.html", null ],
       [ "Tang::ComputedExpressionInteger", "classTang_1_1ComputedExpressionInteger.html", null ]

@@ -102,17 +102,19 @@ Inheritance diagram for Tang::AstNode:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTang_1_1AstNode__inherit__graph.png" border="0" usemap="#aTang_1_1AstNode_inherit__map" alt="Inheritance graph"/></div>
 <map name="aTang_1_1AstNode_inherit__map" id="aTang_1_1AstNode_inherit__map">
-<area shape="rect" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="5,233,120,260"/>
-<area shape="rect" href="classTang_1_1AstNodeAdd.html" title="An AstNode that represents a &quot;+&quot; expression." alt="" coords="193,5,333,32"/>
-<area shape="rect" href="classTang_1_1AstNodeCastFloat.html" title="An AstNode that represents a typecast to a float." alt="" coords="175,56,352,83"/>
-<area shape="rect" href="classTang_1_1AstNodeCastInteger.html" title="An AstNode that represents a typecast to an integer." alt="" coords="168,107,359,133"/>
-<area shape="rect" href="classTang_1_1AstNodeDivide.html" title="An AstNode that represents a &quot;/&quot; expression." alt="" coords="185,157,342,184"/>
-<area shape="rect" href="classTang_1_1AstNodeFloat.html" title="An AstNode that represents an float literal." alt="" coords="189,208,337,235"/>
-<area shape="rect" href="classTang_1_1AstNodeInteger.html" title="An AstNode that represents an integer literal." alt="" coords="183,259,344,285"/>
-<area shape="rect" href="classTang_1_1AstNodeModulo.html" title="An AstNode that represents a &quot;%&quot; expression." alt="" coords="182,309,345,336"/>
-<area shape="rect" href="classTang_1_1AstNodeMultiply.html" title="An AstNode that represents a &quot;*&quot; expression." alt="" coords="179,360,347,387"/>
-<area shape="rect" href="classTang_1_1AstNodeNegative.html" title="An AstNode that represents a unary negation." alt="" coords="176,411,351,437"/>
-<area shape="rect" href="classTang_1_1AstNodeSubtract.html" title="An AstNode that represents a &quot;&#45;&quot; expression." alt="" coords="179,461,348,488"/>
+<area shape="rect" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="5,284,120,311"/>
+<area shape="rect" href="classTang_1_1AstNodeAdd.html" title="An AstNode that represents a &quot;+&quot; expression." alt="" coords="197,5,337,32"/>
+<area shape="rect" href="classTang_1_1AstNodeBoolean.html" title="An AstNode that represents a boolean literal." alt="" coords="183,56,351,83"/>
+<area shape="rect" href="classTang_1_1AstNodeCastBoolean.html" title="An AstNode that represents a typecast to a boolean." alt="" coords="168,107,365,133"/>
+<area shape="rect" href="classTang_1_1AstNodeCastFloat.html" title="An AstNode that represents a typecast to a float." alt="" coords="178,157,355,184"/>
+<area shape="rect" href="classTang_1_1AstNodeCastInteger.html" title="An AstNode that represents a typecast to an integer." alt="" coords="171,208,362,235"/>
+<area shape="rect" href="classTang_1_1AstNodeDivide.html" title="An AstNode that represents a &quot;/&quot; expression." alt="" coords="188,259,345,285"/>
+<area shape="rect" href="classTang_1_1AstNodeFloat.html" title="An AstNode that represents an float literal." alt="" coords="193,309,341,336"/>
+<area shape="rect" href="classTang_1_1AstNodeInteger.html" title="An AstNode that represents an integer literal." alt="" coords="186,360,347,387"/>
+<area shape="rect" href="classTang_1_1AstNodeModulo.html" title="An AstNode that represents a &quot;%&quot; expression." alt="" coords="185,411,348,437"/>
+<area shape="rect" href="classTang_1_1AstNodeMultiply.html" title="An AstNode that represents a &quot;*&quot; expression." alt="" coords="183,461,351,488"/>
+<area shape="rect" href="classTang_1_1AstNodeNegative.html" title="An AstNode that represents a unary negation." alt="" coords="179,512,354,539"/>
+<area shape="rect" href="classTang_1_1AstNodeSubtract.html" title="An AstNode that represents a &quot;&#45;&quot; expression." alt="" coords="182,563,351,589"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -225,7 +227,7 @@ Protected Attributes</h2></td></tr>
 <p>Provide a copy of the <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> (recursively, if appropriate). </p>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to a new <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that is a copy of the current <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a>. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classTang_1_1AstNodeSubtract.html#a7947aca1fd0458617e495e6f278f925f">Tang::AstNodeSubtract</a>, <a class="el" href="classTang_1_1AstNodeNegative.html#afe08d6852107d5e9f8c3f7a2639dde06">Tang::AstNodeNegative</a>, <a class="el" href="classTang_1_1AstNodeMultiply.html#a9b8bedd8d1e013c51c946f63c2d5b5cc">Tang::AstNodeMultiply</a>, <a class="el" href="classTang_1_1AstNodeModulo.html#a8383bcfca6723325eaaf469bf5c73b13">Tang::AstNodeModulo</a>, <a class="el" href="classTang_1_1AstNodeInteger.html#aa08b8d130711349199d3a1263d44913a">Tang::AstNodeInteger</a>, <a class="el" href="classTang_1_1AstNodeFloat.html#ab0f61b3898f955e805da649831b675de">Tang::AstNodeFloat</a>, <a class="el" href="classTang_1_1AstNodeDivide.html#a67e49d25840f5944563d27809ee96869">Tang::AstNodeDivide</a>, <a class="el" href="classTang_1_1AstNodeCastInteger.html#a78382500c79280c205c55958964a2226">Tang::AstNodeCastInteger</a>, <a class="el" href="classTang_1_1AstNodeCastFloat.html#afa1b30d4ea1e8690703d2627f7c4608d">Tang::AstNodeCastFloat</a>, and <a class="el" href="classTang_1_1AstNodeAdd.html#ab310ae8a2bed99ca0cfbddbb88343196">Tang::AstNodeAdd</a>.</p>
+<p>Reimplemented in <a class="el" href="classTang_1_1AstNodeSubtract.html#a7947aca1fd0458617e495e6f278f925f">Tang::AstNodeSubtract</a>, <a class="el" href="classTang_1_1AstNodeNegative.html#afe08d6852107d5e9f8c3f7a2639dde06">Tang::AstNodeNegative</a>, <a class="el" href="classTang_1_1AstNodeMultiply.html#a9b8bedd8d1e013c51c946f63c2d5b5cc">Tang::AstNodeMultiply</a>, <a class="el" href="classTang_1_1AstNodeModulo.html#a8383bcfca6723325eaaf469bf5c73b13">Tang::AstNodeModulo</a>, <a class="el" href="classTang_1_1AstNodeInteger.html#aa08b8d130711349199d3a1263d44913a">Tang::AstNodeInteger</a>, <a class="el" href="classTang_1_1AstNodeFloat.html#ab0f61b3898f955e805da649831b675de">Tang::AstNodeFloat</a>, <a class="el" href="classTang_1_1AstNodeDivide.html#a67e49d25840f5944563d27809ee96869">Tang::AstNodeDivide</a>, <a class="el" href="classTang_1_1AstNodeCastInteger.html#a78382500c79280c205c55958964a2226">Tang::AstNodeCastInteger</a>, <a class="el" href="classTang_1_1AstNodeCastFloat.html#afa1b30d4ea1e8690703d2627f7c4608d">Tang::AstNodeCastFloat</a>, <a class="el" href="classTang_1_1AstNodeCastBoolean.html#a2076a1f7bc4452515d5219fcec6c5dbd">Tang::AstNodeCastBoolean</a>, <a class="el" href="classTang_1_1AstNodeBoolean.html#a96c9d7320db9f86f6f77ae49dc38019e">Tang::AstNodeBoolean</a>, and <a class="el" href="classTang_1_1AstNodeAdd.html#ab310ae8a2bed99ca0cfbddbb88343196">Tang::AstNodeAdd</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

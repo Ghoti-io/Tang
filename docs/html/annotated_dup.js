@@ -3,6 +3,8 @@ var annotated_dup =
     [ "Tang", null, [
       [ "AstNode", "classTang_1_1AstNode.html", "classTang_1_1AstNode" ],
       [ "AstNodeAdd", "classTang_1_1AstNodeAdd.html", "classTang_1_1AstNodeAdd" ],
+      [ "AstNodeBoolean", "classTang_1_1AstNodeBoolean.html", "classTang_1_1AstNodeBoolean" ],
+      [ "AstNodeCastBoolean", "classTang_1_1AstNodeCastBoolean.html", "classTang_1_1AstNodeCastBoolean" ],
       [ "AstNodeCastFloat", "classTang_1_1AstNodeCastFloat.html", "classTang_1_1AstNodeCastFloat" ],
       [ "AstNodeCastInteger", "classTang_1_1AstNodeCastInteger.html", "classTang_1_1AstNodeCastInteger" ],
       [ "AstNodeDivide", "classTang_1_1AstNodeDivide.html", "classTang_1_1AstNodeDivide" ],
@@ -13,6 +15,7 @@ var annotated_dup =
       [ "AstNodeNegative", "classTang_1_1AstNodeNegative.html", "classTang_1_1AstNodeNegative" ],
       [ "AstNodeSubtract", "classTang_1_1AstNodeSubtract.html", "classTang_1_1AstNodeSubtract" ],
       [ "ComputedExpression", "classTang_1_1ComputedExpression.html", "classTang_1_1ComputedExpression" ],
+      [ "ComputedExpressionBoolean", "classTang_1_1ComputedExpressionBoolean.html", "classTang_1_1ComputedExpressionBoolean" ],
       [ "ComputedExpressionError", "classTang_1_1ComputedExpressionError.html", "classTang_1_1ComputedExpressionError" ],
       [ "ComputedExpressionFloat", "classTang_1_1ComputedExpressionFloat.html", "classTang_1_1ComputedExpressionFloat" ],
       [ "ComputedExpressionInteger", "classTang_1_1ComputedExpressionInteger.html", "classTang_1_1ComputedExpressionInteger" ],

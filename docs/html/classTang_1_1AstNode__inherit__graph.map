@@ -1,13 +1,15 @@
 <map id="Tang::AstNode" name="Tang::AstNode">
-<area shape="rect" id="node1" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="5,233,120,260"/>
-<area shape="rect" id="node2" href="$classTang_1_1AstNodeAdd.html" title="An AstNode that represents a &quot;+&quot; expression." alt="" coords="193,5,333,32"/>
-<area shape="rect" id="node3" href="$classTang_1_1AstNodeCastFloat.html" title="An AstNode that represents a typecast to a float." alt="" coords="175,56,352,83"/>
-<area shape="rect" id="node4" href="$classTang_1_1AstNodeCastInteger.html" title="An AstNode that represents a typecast to an integer." alt="" coords="168,107,359,133"/>
-<area shape="rect" id="node5" href="$classTang_1_1AstNodeDivide.html" title="An AstNode that represents a &quot;/&quot; expression." alt="" coords="185,157,342,184"/>
-<area shape="rect" id="node6" href="$classTang_1_1AstNodeFloat.html" title="An AstNode that represents an float literal." alt="" coords="189,208,337,235"/>
-<area shape="rect" id="node7" href="$classTang_1_1AstNodeInteger.html" title="An AstNode that represents an integer literal." alt="" coords="183,259,344,285"/>
-<area shape="rect" id="node8" href="$classTang_1_1AstNodeModulo.html" title="An AstNode that represents a &quot;%&quot; expression." alt="" coords="182,309,345,336"/>
-<area shape="rect" id="node9" href="$classTang_1_1AstNodeMultiply.html" title="An AstNode that represents a &quot;*&quot; expression." alt="" coords="179,360,347,387"/>
-<area shape="rect" id="node10" href="$classTang_1_1AstNodeNegative.html" title="An AstNode that represents a unary negation." alt="" coords="176,411,351,437"/>
-<area shape="rect" id="node11" href="$classTang_1_1AstNodeSubtract.html" title="An AstNode that represents a &quot;&#45;&quot; expression." alt="" coords="179,461,348,488"/>
+<area shape="rect" id="node1" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="5,284,120,311"/>
+<area shape="rect" id="node2" href="$classTang_1_1AstNodeAdd.html" title="An AstNode that represents a &quot;+&quot; expression." alt="" coords="197,5,337,32"/>
+<area shape="rect" id="node3" href="$classTang_1_1AstNodeBoolean.html" title="An AstNode that represents a boolean literal." alt="" coords="183,56,351,83"/>
+<area shape="rect" id="node4" href="$classTang_1_1AstNodeCastBoolean.html" title="An AstNode that represents a typecast to a boolean." alt="" coords="168,107,365,133"/>
+<area shape="rect" id="node5" href="$classTang_1_1AstNodeCastFloat.html" title="An AstNode that represents a typecast to a float." alt="" coords="178,157,355,184"/>
+<area shape="rect" id="node6" href="$classTang_1_1AstNodeCastInteger.html" title="An AstNode that represents a typecast to an integer." alt="" coords="171,208,362,235"/>
+<area shape="rect" id="node7" href="$classTang_1_1AstNodeDivide.html" title="An AstNode that represents a &quot;/&quot; expression." alt="" coords="188,259,345,285"/>
+<area shape="rect" id="node8" href="$classTang_1_1AstNodeFloat.html" title="An AstNode that represents an float literal." alt="" coords="193,309,341,336"/>
+<area shape="rect" id="node9" href="$classTang_1_1AstNodeInteger.html" title="An AstNode that represents an integer literal." alt="" coords="186,360,347,387"/>
+<area shape="rect" id="node10" href="$classTang_1_1AstNodeModulo.html" title="An AstNode that represents a &quot;%&quot; expression." alt="" coords="185,411,348,437"/>
+<area shape="rect" id="node11" href="$classTang_1_1AstNodeMultiply.html" title="An AstNode that represents a &quot;*&quot; expression." alt="" coords="183,461,351,488"/>
+<area shape="rect" id="node12" href="$classTang_1_1AstNodeNegative.html" title="An AstNode that represents a unary negation." alt="" coords="179,512,354,539"/>
+<area shape="rect" id="node13" href="$classTang_1_1AstNodeSubtract.html" title="An AstNode that represents a &quot;&#45;&quot; expression." alt="" coords="182,563,351,589"/>
 </map>

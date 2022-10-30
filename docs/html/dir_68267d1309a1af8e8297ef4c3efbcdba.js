@@ -2,6 +2,8 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
 [
     [ "astNode.cpp", "astNode_8cpp.html", null ],
     [ "astNodeAdd.cpp", "astNodeAdd_8cpp.html", null ],
+    [ "astNodeBoolean.cpp", "astNodeBoolean_8cpp.html", null ],
+    [ "astNodeCastBoolean.cpp", "astNodeCastBoolean_8cpp.html", null ],
     [ "astNodeCastFloat.cpp", "astNodeCastFloat_8cpp.html", null ],
     [ "astNodeCastInteger.cpp", "astNodeCastInteger_8cpp.html", null ],
     [ "astNodeDivide.cpp", "astNodeDivide_8cpp.html", null ],
@@ -12,6 +14,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "astNodeNegative.cpp", "astNodeNegative_8cpp.html", null ],
     [ "astNodeSubtract.cpp", "astNodeSubtract_8cpp.html", null ],
     [ "computedExpression.cpp", "computedExpression_8cpp.html", null ],
+    [ "computedExpressionBoolean.cpp", "computedExpressionBoolean_8cpp.html", null ],
     [ "computedExpressionError.cpp", "computedExpressionError_8cpp.html", null ],
     [ "computedExpressionFloat.cpp", "computedExpressionFloat_8cpp.html", null ],
     [ "computedExpressionInteger.cpp", "computedExpressionInteger_8cpp.html", null ],

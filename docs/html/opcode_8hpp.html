@@ -97,19 +97,21 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="opcode_8hpp__dep__incl.png" border="0" usemap="#ainclude_2opcode_8hppdep" alt=""/></div>
 <map name="ainclude_2opcode_8hppdep" id="ainclude_2opcode_8hppdep">
-<area shape="rect" title="Declare the Opcodes used in the Bytecode representation of a program." alt="" coords="1103,5,1251,32"/>
+<area shape="rect" title="Declare the Opcodes used in the Bytecode representation of a program." alt="" coords="1345,5,1493,32"/>
 <area shape="rect" href="astNodeAdd_8cpp.html" title="Define the Tang::AstNodeAdd class." alt="" coords="5,80,156,107"/>
-<area shape="rect" href="astNodeCastFloat_8cpp.html" title="Define the Tang::AstNodeCastFloat class." alt="" coords="180,80,368,107"/>
-<area shape="rect" href="astNodeCastInteger_8cpp.html" title="Define the Tang::AstNodeCastInteger class." alt="" coords="393,80,593,107"/>
-<area shape="rect" href="astNodeDivide_8cpp.html" title="Define the Tang::AstNodeDivide class." alt="" coords="617,80,785,107"/>
-<area shape="rect" href="astNodeFloat_8cpp.html" title="Define the Tang::AstNodeFloat class." alt="" coords="809,80,968,107"/>
-<area shape="rect" href="astNodeInteger_8cpp.html" title="Define the Tang::AstNodeInteger class." alt="" coords="993,80,1163,107"/>
-<area shape="rect" href="astNodeModulo_8cpp.html" title="Define the Tang::AstNodeModulo class." alt="" coords="1188,80,1363,107"/>
-<area shape="rect" href="astNodeMultiply_8cpp.html" title="Define the Tang::AstNodeMultiply class." alt="" coords="1387,80,1564,107"/>
-<area shape="rect" href="astNodeNegative_8cpp.html" title="Define the Tang::AstNodeNegative class." alt="" coords="1588,80,1773,107"/>
-<area shape="rect" href="astNodeSubtract_8cpp.html" title="Define the Tang::AstNodeSubtract class." alt="" coords="1797,80,1977,107"/>
-<area shape="rect" href="program-dumpBytecode_8cpp.html" title="Define the Tang::Program::dumpBytecode method." alt="" coords="2001,80,2232,107"/>
-<area shape="rect" href="program-execute_8cpp.html" title="Define the Tang::Program::execute method." alt="" coords="2256,80,2439,107"/>
+<area shape="rect" href="astNodeBoolean_8cpp.html" title="Define the Tang::AstNodeBoolean class." alt="" coords="181,80,359,107"/>
+<area shape="rect" href="astNodeCastBoolean_8cpp.html" title="Define the Tang::AstNodeCastBoolean class." alt="" coords="383,80,591,107"/>
+<area shape="rect" href="astNodeCastFloat_8cpp.html" title="Define the Tang::AstNodeCastFloat class." alt="" coords="616,80,804,107"/>
+<area shape="rect" href="astNodeCastInteger_8cpp.html" title="Define the Tang::AstNodeCastInteger class." alt="" coords="829,80,1029,107"/>
+<area shape="rect" href="astNodeDivide_8cpp.html" title="Define the Tang::AstNodeDivide class." alt="" coords="1053,80,1221,107"/>
+<area shape="rect" href="astNodeFloat_8cpp.html" title="Define the Tang::AstNodeFloat class." alt="" coords="1245,80,1404,107"/>
+<area shape="rect" href="astNodeInteger_8cpp.html" title="Define the Tang::AstNodeInteger class." alt="" coords="1429,80,1599,107"/>
+<area shape="rect" href="astNodeModulo_8cpp.html" title="Define the Tang::AstNodeModulo class." alt="" coords="1624,80,1799,107"/>
+<area shape="rect" href="astNodeMultiply_8cpp.html" title="Define the Tang::AstNodeMultiply class." alt="" coords="1823,80,2000,107"/>
+<area shape="rect" href="astNodeNegative_8cpp.html" title="Define the Tang::AstNodeNegative class." alt="" coords="2024,80,2209,107"/>
+<area shape="rect" href="astNodeSubtract_8cpp.html" title="Define the Tang::AstNodeSubtract class." alt="" coords="2233,80,2413,107"/>
+<area shape="rect" href="program-dumpBytecode_8cpp.html" title="Define the Tang::Program::dumpBytecode method." alt="" coords="2437,80,2668,107"/>
+<area shape="rect" href="program-execute_8cpp.html" title="Define the Tang::Program::execute method." alt="" coords="2692,80,2875,107"/>
 </map>
 </div>
 </div>
@@ -120,16 +122,18 @@ Enumerations</h2></td></tr>
 <tr class="memitem:a3db69378da7fea0383c531f8cae78f04"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04">Tang::Opcode</a> { <br />
 &#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a5d5cd46919fa987731fb2edefe0f2a0c">INTEGER</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ae738c26bf4ce1037fa81b039a915cbf6">FLOAT</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ac48d5da12d702e73d6966069f2687376">BOOLEAN</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a9eeb52badb613229884838847294b90d">ADD</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a23ebcc4776b613af25dfbe7c8ce4813e">SUBTRACT</a>
 , <br />
-&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a080aaf8d817ada96fca7096b7b55bd30">MULTIPLY</a>
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a23ebcc4776b613af25dfbe7c8ce4813e">SUBTRACT</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a080aaf8d817ada96fca7096b7b55bd30">MULTIPLY</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a210c66d794cec40488f3f8f634d6c33b">DIVIDE</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a928ab45d616dde447dbbbd0270db87ad">MODULO</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a50546bf973283065b6ccf09faf7a580a">NEGATIVE</a>
 , <br />
-&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a0a109fb07a3a6984f50ffe52dd2c213b">CASTINTEGER</a>
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a50546bf973283065b6ccf09faf7a580a">NEGATIVE</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a0a109fb07a3a6984f50ffe52dd2c213b">CASTINTEGER</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af721c36554a56d3695dda4af2863efbb">CASTFLOAT</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620">CASTBOOLEAN</a>
 <br />
  }</td></tr>
 <tr class="separator:a3db69378da7fea0383c531f8cae78f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,6 +165,8 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04ae738c26bf4ce1037fa81b039a915cbf6"></a>FLOAT&#160;</td><td class="fielddoc"><p>Push a floating point number onto the stack. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04ac48d5da12d702e73d6966069f2687376"></a>BOOLEAN&#160;</td><td class="fielddoc"><p>Push a boolean onto the stack. </p>
+</td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a9eeb52badb613229884838847294b90d"></a>ADD&#160;</td><td class="fielddoc"><p>Pop rhs, pop lhs, push lhs + rhs. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a23ebcc4776b613af25dfbe7c8ce4813e"></a>SUBTRACT&#160;</td><td class="fielddoc"><p>Pop rhs, pop lhs, push lhs - rhs. </p>
@@ -176,6 +182,8 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a0a109fb07a3a6984f50ffe52dd2c213b"></a>CASTINTEGER&#160;</td><td class="fielddoc"><p>Pop a val, typecast to int, push. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04af721c36554a56d3695dda4af2863efbb"></a>CASTFLOAT&#160;</td><td class="fielddoc"><p>Pop a val, typecast to float, push. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620"></a>CASTBOOLEAN&#160;</td><td class="fielddoc"><p>Pop a val, typecast to boolean, push. </p>
 </td></tr>
 </table>
 

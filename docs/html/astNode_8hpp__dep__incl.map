@@ -1,32 +1,36 @@
 <map id="include/astNode.hpp" name="include/astNode.hpp">
-<area shape="rect" id="node1" title="Declare the Tang::AstNode base class." alt="" coords="1502,5,1657,32"/>
+<area shape="rect" id="node1" title="Declare the Tang::AstNode base class." alt="" coords="1769,5,1923,32"/>
 <area shape="rect" id="node2" href="$astNodeAdd_8hpp.html" title="Declare the Tang::AstNodeAdd class." alt="" coords="5,80,185,107"/>
-<area shape="rect" id="node4" href="$astNodeCastFloat_8hpp.html" title="Declare the Tang::AstNodeFloat class." alt="" coords="209,80,427,107"/>
-<area shape="rect" id="node6" href="$astNodeCastInteger_8hpp.html" title="Declare the Tang::AstNodeInteger class." alt="" coords="451,80,681,107"/>
-<area shape="rect" id="node8" href="$astNodeDivide_8hpp.html" title="Declare the Tang::AstNodeDivide class." alt="" coords="705,80,902,107"/>
-<area shape="rect" id="node10" href="$astNodeFloat_8hpp.html" title="Declare the Tang::AstNodeFloat class." alt="" coords="927,80,1115,107"/>
-<area shape="rect" id="node12" href="$astNodeInteger_8hpp.html" title="Declare the Tang::AstNodeInteger class." alt="" coords="1139,80,1339,107"/>
-<area shape="rect" id="node14" href="$astNodeModulo_8hpp.html" title="Declare the Tang::AstNodeModulo class." alt="" coords="1363,80,1566,107"/>
-<area shape="rect" id="node16" href="$astNodeMultiply_8hpp.html" title="Declare the Tang::AstNodeMultiply class." alt="" coords="1591,80,1797,107"/>
-<area shape="rect" id="node18" href="$astNodeNegative_8hpp.html" title="Declare the Tang::AstNodeNegative class." alt="" coords="1821,80,2036,107"/>
-<area shape="rect" id="node20" href="$astNodeSubtract_8hpp.html" title="Declare the Tang::AstNodeSubtract class." alt="" coords="2060,80,2269,107"/>
-<area shape="rect" id="node22" href="$program_8hpp.html" title="Declare the Tang::Program class used to compile and execute source code." alt="" coords="2401,80,2557,107"/>
-<area shape="rect" id="node23" href="$tang_8hpp.html" title="Header file supplied for use by 3rd party code so that they can easily include all necessary headers." alt="" coords="2925,229,3055,256"/>
-<area shape="rect" id="node30" href="$astNode_8cpp.html" title="Define the Tang::AstNode class." alt="" coords="3079,80,3205,107"/>
+<area shape="rect" id="node4" href="$astNodeBoolean_8hpp.html" title="Declare the Tang::AstNodeBoolean class." alt="" coords="210,80,418,107"/>
+<area shape="rect" id="node6" href="$astNodeCastBoolean_8hpp.html" title="Declare the Tang::AstNodeBoolean class." alt="" coords="442,80,679,107"/>
+<area shape="rect" id="node8" href="$astNodeCastFloat_8hpp.html" title="Declare the Tang::AstNodeFloat class." alt="" coords="704,80,921,107"/>
+<area shape="rect" id="node10" href="$astNodeCastInteger_8hpp.html" title="Declare the Tang::AstNodeInteger class." alt="" coords="946,80,1175,107"/>
+<area shape="rect" id="node12" href="$astNodeDivide_8hpp.html" title="Declare the Tang::AstNodeDivide class." alt="" coords="1199,80,1397,107"/>
+<area shape="rect" id="node14" href="$astNodeFloat_8hpp.html" title="Declare the Tang::AstNodeFloat class." alt="" coords="1421,80,1609,107"/>
+<area shape="rect" id="node16" href="$astNodeInteger_8hpp.html" title="Declare the Tang::AstNodeInteger class." alt="" coords="1634,80,1834,107"/>
+<area shape="rect" id="node18" href="$astNodeModulo_8hpp.html" title="Declare the Tang::AstNodeModulo class." alt="" coords="1858,80,2061,107"/>
+<area shape="rect" id="node20" href="$astNodeMultiply_8hpp.html" title="Declare the Tang::AstNodeMultiply class." alt="" coords="2085,80,2292,107"/>
+<area shape="rect" id="node22" href="$astNodeNegative_8hpp.html" title="Declare the Tang::AstNodeNegative class." alt="" coords="2316,80,2531,107"/>
+<area shape="rect" id="node24" href="$astNodeSubtract_8hpp.html" title="Declare the Tang::AstNodeSubtract class." alt="" coords="2555,80,2764,107"/>
+<area shape="rect" id="node26" href="$program_8hpp.html" title="Declare the Tang::Program class used to compile and execute source code." alt="" coords="2943,80,3099,107"/>
+<area shape="rect" id="node27" href="$tang_8hpp.html" title="Header file supplied for use by 3rd party code so that they can easily include all necessary headers." alt="" coords="3146,229,3277,256"/>
+<area shape="rect" id="node34" href="$astNode_8cpp.html" title="Define the Tang::AstNode class." alt="" coords="3123,80,3249,107"/>
 <area shape="rect" id="node3" href="$astNodeAdd_8cpp.html" title="Define the Tang::AstNodeAdd class." alt="" coords="20,155,171,181"/>
-<area shape="rect" id="node5" href="$astNodeCastFloat_8cpp.html" title="Define the Tang::AstNodeCastFloat class." alt="" coords="224,155,412,181"/>
-<area shape="rect" id="node7" href="$astNodeCastInteger_8cpp.html" title="Define the Tang::AstNodeCastInteger class." alt="" coords="466,155,666,181"/>
-<area shape="rect" id="node9" href="$astNodeDivide_8cpp.html" title="Define the Tang::AstNodeDivide class." alt="" coords="719,155,887,181"/>
-<area shape="rect" id="node11" href="$astNodeFloat_8cpp.html" title="Define the Tang::AstNodeFloat class." alt="" coords="941,155,1100,181"/>
-<area shape="rect" id="node13" href="$astNodeInteger_8cpp.html" title="Define the Tang::AstNodeInteger class." alt="" coords="1154,155,1325,181"/>
-<area shape="rect" id="node15" href="$astNodeModulo_8cpp.html" title="Define the Tang::AstNodeModulo class." alt="" coords="1363,155,1537,181"/>
-<area shape="rect" id="node17" href="$astNodeMultiply_8cpp.html" title="Define the Tang::AstNodeMultiply class." alt="" coords="1561,155,1739,181"/>
-<area shape="rect" id="node19" href="$astNodeNegative_8cpp.html" title="Define the Tang::AstNodeNegative class." alt="" coords="1763,155,1948,181"/>
-<area shape="rect" id="node21" href="$astNodeSubtract_8cpp.html" title="Define the Tang::AstNodeSubtract class." alt="" coords="1972,155,2152,181"/>
-<area shape="rect" id="node25" href="$tangBase_8hpp.html" title="Declare the Tang::TangBase class used to interact with Tang." alt="" coords="2177,155,2339,181"/>
-<area shape="rect" id="node27" href="$program-dumpBytecode_8cpp.html" title="Define the Tang::Program::dumpBytecode method." alt="" coords="2364,155,2595,181"/>
-<area shape="rect" id="node28" href="$program-execute_8cpp.html" title="Define the Tang::Program::execute method." alt="" coords="2619,155,2801,181"/>
-<area shape="rect" id="node29" href="$program_8cpp.html" title="Define the Tang::Program class." alt="" coords="2825,155,2952,181"/>
-<area shape="rect" id="node24" href="$test_8cpp.html" title="Test the general language behaviors." alt="" coords="2939,304,3041,331"/>
-<area shape="rect" id="node26" href="$tangBase_8cpp.html" title="Define the Tang::TangBase class." alt="" coords="2191,229,2325,256"/>
+<area shape="rect" id="node5" href="$astNodeBoolean_8cpp.html" title="Define the Tang::AstNodeBoolean class." alt="" coords="225,155,403,181"/>
+<area shape="rect" id="node7" href="$astNodeCastBoolean_8cpp.html" title="Define the Tang::AstNodeCastBoolean class." alt="" coords="457,155,665,181"/>
+<area shape="rect" id="node9" href="$astNodeCastFloat_8cpp.html" title="Define the Tang::AstNodeCastFloat class." alt="" coords="719,155,907,181"/>
+<area shape="rect" id="node11" href="$astNodeCastInteger_8cpp.html" title="Define the Tang::AstNodeCastInteger class." alt="" coords="961,155,1161,181"/>
+<area shape="rect" id="node13" href="$astNodeDivide_8cpp.html" title="Define the Tang::AstNodeDivide class." alt="" coords="1214,155,1382,181"/>
+<area shape="rect" id="node15" href="$astNodeFloat_8cpp.html" title="Define the Tang::AstNodeFloat class." alt="" coords="1436,155,1595,181"/>
+<area shape="rect" id="node17" href="$astNodeInteger_8cpp.html" title="Define the Tang::AstNodeInteger class." alt="" coords="1649,155,1819,181"/>
+<area shape="rect" id="node19" href="$astNodeModulo_8cpp.html" title="Define the Tang::AstNodeModulo class." alt="" coords="1872,155,2047,181"/>
+<area shape="rect" id="node21" href="$astNodeMultiply_8cpp.html" title="Define the Tang::AstNodeMultiply class." alt="" coords="2100,155,2277,181"/>
+<area shape="rect" id="node23" href="$astNodeNegative_8cpp.html" title="Define the Tang::AstNodeNegative class." alt="" coords="2331,155,2516,181"/>
+<area shape="rect" id="node25" href="$astNodeSubtract_8cpp.html" title="Define the Tang::AstNodeSubtract class." alt="" coords="2569,155,2749,181"/>
+<area shape="rect" id="node29" href="$tangBase_8hpp.html" title="Declare the Tang::TangBase class used to interact with Tang." alt="" coords="3505,155,3667,181"/>
+<area shape="rect" id="node31" href="$program-dumpBytecode_8cpp.html" title="Define the Tang::Program::dumpBytecode method." alt="" coords="3249,155,3480,181"/>
+<area shape="rect" id="node32" href="$program-execute_8cpp.html" title="Define the Tang::Program::execute method." alt="" coords="2840,155,3023,181"/>
+<area shape="rect" id="node33" href="$program_8cpp.html" title="Define the Tang::Program class." alt="" coords="3047,155,3173,181"/>
+<area shape="rect" id="node28" href="$test_8cpp.html" title="Test the general language behaviors." alt="" coords="3160,304,3263,331"/>
+<area shape="rect" id="node30" href="$tangBase_8cpp.html" title="Define the Tang::TangBase class." alt="" coords="3519,229,3653,256"/>
 </map>
