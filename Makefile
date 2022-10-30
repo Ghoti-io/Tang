@@ -190,7 +190,7 @@ $(APP_DIR)/testGarbageCollected: test/testGarbageCollected.cpp include/garbageCo
 # Commands
 ####################################################################
 
-.PHONY: all clean cloc docs docs-pdf test watch watch-test
+.PHONY: all clean cloc docs docs-pdf test test-watch watch
 
 watch: ## Watch the file directory for changes and compile the target
 	@while true; do \
@@ -203,7 +203,7 @@ watch: ## Watch the file directory for changes and compile the target
 					inotifywait -qr -e modify -e create -e delete -e move src include bison flex test Makefile --exclude '/\.'; \
 					done
 
-watch-test: ## Watch the file directory for changes and run the unit tests
+test-watch: ## Watch the file directory for changes and run the unit tests
 	@while true; do \
 					make test; \
 					echo "\033[0;32m"; \
