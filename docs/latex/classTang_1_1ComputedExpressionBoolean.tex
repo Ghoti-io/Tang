@@ -11,8 +11,7 @@ Represents an Boolean that is the result of a computation.
 
 
 
-Inheritance diagram for Tang\+::Computed\+Expression\+Boolean\+:
-\nopagebreak
+Inheritance diagram for Tang\+::Computed\+Expression\+Boolean\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for Tang\+::Computed\+Expression\+Boolean\+:
 \end{figure}
 
 
-Collaboration diagram for Tang\+::Computed\+Expression\+Boolean\+:
-\nopagebreak
+Collaboration diagram for Tang\+::Computed\+Expression\+Boolean\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -40,6 +38,8 @@ virtual std\+::string \mbox{\hyperlink{classTang_1_1ComputedExpressionBoolean_a0
 \begin{DoxyCompactList}\small\item\em Make a copy of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} (recursively, if appropriate). \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpressionBoolean_aaf17b861d5a8ab290ff01cc2fe8acf55}{is\+\_\+equal}} (const bool \&val) const override
 \begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionBoolean_a920fe1b19024cf867179e4eada53ed32}{\+\_\+\+\_\+not}} () const override
+\begin{DoxyCompactList}\small\item\em Compute the logical not of this value. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionBoolean_a8f0172e1257ad63c50d2e75361d5a5bd}{\+\_\+\+\_\+integer}} () const override
 \begin{DoxyCompactList}\small\item\em Perform a type cast to integer. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionBoolean_ad9d88a48be735d59258c989399b143c7}{\+\_\+\+\_\+float}} () const override
@@ -244,6 +244,23 @@ The result of the operation.
 
 Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a50d5a488b02defd3c526696c5661800b}{Tang\+::\+Computed\+Expression\+Integer}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a203faa00cd83e6746084287b0e2ac778}{Tang\+::\+Computed\+Expression\+Float}}.
 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionBoolean_a920fe1b19024cf867179e4eada53ed32}\label{classTang_1_1ComputedExpressionBoolean_a920fe1b19024cf867179e4eada53ed32}} 
+\index{Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}!\_\_not@{\_\_not}}
+\index{\_\_not@{\_\_not}!Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}}
+\doxysubsubsection{\texorpdfstring{\_\_not()}{\_\_not()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Boolean\+::\+\_\+\+\_\+not (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compute the logical not of this value. 
+
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_ac21f9e07c9d1f0a98b60bb1d75d8e87d}{Tang\+::\+Computed\+Expression}}.
+
 \mbox{\Hypertarget{classTang_1_1ComputedExpression_ab0d79debcd475a5063e574c10f1715ff}\label{classTang_1_1ComputedExpression_ab0d79debcd475a5063e574c10f1715ff}} 
 \index{Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}!\_\_subtract@{\_\_subtract}}
 \index{\_\_subtract@{\_\_subtract}!Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}}
@@ -388,8 +405,7 @@ A pointer to the new \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\
 
 Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_abf7820ae7313878aa37573cce35eb613}{Tang\+::\+Computed\+Expression}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

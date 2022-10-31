@@ -97,17 +97,15 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="opcode_8hpp__dep__incl.png" border="0" usemap="#ainclude_2opcode_8hppdep" alt=""/></div>
 <map name="ainclude_2opcode_8hppdep" id="ainclude_2opcode_8hppdep">
-<area shape="rect" title="Declare the Opcodes used in the Bytecode representation of a program." alt="" coords="972,5,1120,32"/>
+<area shape="rect" title="Declare the Opcodes used in the Bytecode representation of a program." alt="" coords="679,5,827,32"/>
 <area shape="rect" href="astNodeBinary_8cpp.html" title="Define the Tang::AstNodeBinary class." alt="" coords="5,80,172,107"/>
 <area shape="rect" href="astNodeBoolean_8cpp.html" title="Define the Tang::AstNodeBoolean class." alt="" coords="197,80,375,107"/>
-<area shape="rect" href="astNodeCastBoolean_8cpp.html" title="Define the Tang::AstNodeCastBoolean class." alt="" coords="399,80,607,107"/>
-<area shape="rect" href="astNodeCastFloat_8cpp.html" title="Define the Tang::shared_ptr&lt;AstNode&gt;CastFloat class." alt="" coords="632,80,820,107"/>
-<area shape="rect" href="astNodeCastInteger_8cpp.html" title="Define the Tang::AstNodeCastInteger class." alt="" coords="845,80,1045,107"/>
-<area shape="rect" href="astNodeFloat_8cpp.html" title="Define the Tang::AstNodeFloat class." alt="" coords="1069,80,1228,107"/>
-<area shape="rect" href="astNodeInteger_8cpp.html" title="Define the Tang::AstNodeInteger class." alt="" coords="1253,80,1423,107"/>
-<area shape="rect" href="astNodeNegative_8cpp.html" title="Define the Tang::AstNodeNegative class." alt="" coords="1448,80,1633,107"/>
-<area shape="rect" href="program-dumpBytecode_8cpp.html" title="Define the Tang::Program::dumpBytecode method." alt="" coords="1657,80,1888,107"/>
-<area shape="rect" href="program-execute_8cpp.html" title="Define the Tang::Program::execute method." alt="" coords="1912,80,2095,107"/>
+<area shape="rect" href="astNodeCast_8cpp.html" title="Define the Tang::AstNodeCast class." alt="" coords="399,80,554,107"/>
+<area shape="rect" href="astNodeFloat_8cpp.html" title="Define the Tang::AstNodeFloat class." alt="" coords="579,80,737,107"/>
+<area shape="rect" href="astNodeInteger_8cpp.html" title="Define the Tang::AstNodeInteger class." alt="" coords="762,80,933,107"/>
+<area shape="rect" href="astNodeUnary_8cpp.html" title="Define the Tang::AstNodeUnary class." alt="" coords="957,80,1119,107"/>
+<area shape="rect" href="program-dumpBytecode_8cpp.html" title="Define the Tang::Program::dumpBytecode method." alt="" coords="1144,80,1375,107"/>
+<area shape="rect" href="program-execute_8cpp.html" title="Define the Tang::Program::execute method." alt="" coords="1399,80,1581,107"/>
 </map>
 </div>
 </div>
@@ -127,9 +125,11 @@ Enumerations</h2></td></tr>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a928ab45d616dde447dbbbd0270db87ad">MODULO</a>
 , <br />
 &#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a50546bf973283065b6ccf09faf7a580a">NEGATIVE</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a10df3d67626099df882920ba6552f16d">NOT</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a0a109fb07a3a6984f50ffe52dd2c213b">CASTINTEGER</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af721c36554a56d3695dda4af2863efbb">CASTFLOAT</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620">CASTBOOLEAN</a>
+, <br />
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620">CASTBOOLEAN</a>
 <br />
  }</td></tr>
 <tr class="separator:a3db69378da7fea0383c531f8cae78f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,6 +174,8 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a928ab45d616dde447dbbbd0270db87ad"></a>MODULO&#160;</td><td class="fielddoc"><p>Pop rhs, pop lhs, push lhs % rhs. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a50546bf973283065b6ccf09faf7a580a"></a>NEGATIVE&#160;</td><td class="fielddoc"><p>Pop val, push negative val. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a10df3d67626099df882920ba6552f16d"></a>NOT&#160;</td><td class="fielddoc"><p>Pop val, push logical not of val. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a0a109fb07a3a6984f50ffe52dd2c213b"></a>CASTINTEGER&#160;</td><td class="fielddoc"><p>Pop a val, typecast to int, push. </p>
 </td></tr>

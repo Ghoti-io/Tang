@@ -9,6 +9,7 @@ var classTang_1_1ComputedExpressionInteger =
     [ "__modulo", "classTang_1_1ComputedExpressionInteger.html#a959280a4da43a81276ef8ab658eb9015", null ],
     [ "__multiply", "classTang_1_1ComputedExpressionInteger.html#aadb7393ed0df73e42f2311377bb445d6", null ],
     [ "__negative", "classTang_1_1ComputedExpressionInteger.html#a50d5a488b02defd3c526696c5661800b", null ],
+    [ "__not", "classTang_1_1ComputedExpressionInteger.html#a12f9abfc8fc324d491453f8c6bbb3e1d", null ],
     [ "__subtract", "classTang_1_1ComputedExpressionInteger.html#a8a792a5911f9d90a4ff4e8ba99f5a657", null ],
     [ "dump", "classTang_1_1ComputedExpressionInteger.html#a02e4a8bba8b37bf02e5ec3fd1e25f094", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionInteger.html#a907104a9d090d21e9bcc487b696738c4", null ],

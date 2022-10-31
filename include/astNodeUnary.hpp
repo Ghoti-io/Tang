@@ -18,14 +18,15 @@ namespace Tang {
      * The type of operation.
      */
     enum Operator {
-      Negative,
-      Not,
+      Negative, ///< Compute the negative (-).
+      Not,      ///< Compute the logical not (!).
     };
 
     /**
      * The constructor.
      *
-     * @param operand The expression to negate.
+     * @param op The Tang::AstNodeUnary::Operator to apply to the operand.
+     * @param operand The expression to be operated on.
      * @param location The location associated with the expression.
      */
     AstNodeUnary(Operator op, shared_ptr<AstNode> operand, Tang::location location);
@@ -41,7 +42,7 @@ namespace Tang {
     Operator op;
 
     /**
-     * The operand to which the unary minus will be applied.
+     * The operand to which the operation will be applied.
      */
     shared_ptr<AstNode> operand;
   };

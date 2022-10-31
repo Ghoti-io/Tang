@@ -15,16 +15,17 @@ namespace Tang {
   class AstNodeBinary: public AstNode {
   public:
     enum Operation {
-      Add,
-      Subtract,
-      Multiply,
-      Divide,
-      Modulo,
+      Add,              ///< Indicates lhs + rhs
+      Subtract,         ///< Indicates lhs - rhs
+      Multiply,         ///< Indicates lhs * rhs
+      Divide,           ///< Indicates lhs / rhs
+      Modulo,           ///< Indicates lhs % rhs
     };
 
     /**
      * The constructor.
      *
+     * @param op The Tang::AstNodeBinary::Operation to perform.
      * @param lhs The left hand side expression.
      * @param rhs The right hand side expression.
      * @param location The location associated with the expression.

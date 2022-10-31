@@ -18,9 +18,9 @@ namespace Tang {
      * The possible types that can be cast to.
      */
     enum Type {
-      Integer,
-      Float,
-      Boolean,
+      Integer,  ///< Cast to a Tang::ComputedExpressionInteger.
+      Float,    ///< Cast to a Tang::ComputedExpressionFloat.
+      Boolean,  ///< Cast to a Tang::ComputedExpressionBoolean.
     };
 
     /**

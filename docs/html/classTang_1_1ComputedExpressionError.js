@@ -9,6 +9,7 @@ var classTang_1_1ComputedExpressionError =
     [ "__modulo", "classTang_1_1ComputedExpressionError.html#ab545455bd51f215ac139db456b829f66", null ],
     [ "__multiply", "classTang_1_1ComputedExpressionError.html#a39df4abc066123ec2d634e921be40d21", null ],
     [ "__negative", "classTang_1_1ComputedExpressionError.html#a8e779d014cbb877f078d61a2ff91603d", null ],
+    [ "__not", "classTang_1_1ComputedExpressionError.html#ac21f9e07c9d1f0a98b60bb1d75d8e87d", null ],
     [ "__subtract", "classTang_1_1ComputedExpressionError.html#ab0d79debcd475a5063e574c10f1715ff", null ],
     [ "dump", "classTang_1_1ComputedExpressionError.html#aac021c475141ea7155f7576d2ffba906", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionError.html#a907104a9d090d21e9bcc487b696738c4", null ],

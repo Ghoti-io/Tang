@@ -9,14 +9,8 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "astNodeBoolean.hpp", "astNodeBoolean_8hpp.html", [
       [ "AstNodeBoolean", "classTang_1_1AstNodeBoolean.html", "classTang_1_1AstNodeBoolean" ]
     ] ],
-    [ "astNodeCastBoolean.hpp", "astNodeCastBoolean_8hpp.html", [
-      [ "AstNodeCastBoolean", "classTang_1_1AstNodeCastBoolean.html", "classTang_1_1AstNodeCastBoolean" ]
-    ] ],
-    [ "astNodeCastFloat.hpp", "astNodeCastFloat_8hpp.html", [
-      [ "AstNodeCastFloat", "classTang_1_1AstNodeCastFloat.html", "classTang_1_1AstNodeCastFloat" ]
-    ] ],
-    [ "astNodeCastInteger.hpp", "astNodeCastInteger_8hpp.html", [
-      [ "AstNodeCastInteger", "classTang_1_1AstNodeCastInteger.html", "classTang_1_1AstNodeCastInteger" ]
+    [ "astNodeCast.hpp", "astNodeCast_8hpp.html", [
+      [ "AstNodeCast", "classTang_1_1AstNodeCast.html", "classTang_1_1AstNodeCast" ]
     ] ],
     [ "astNodeFloat.hpp", "astNodeFloat_8hpp.html", [
       [ "AstNodeFloat", "classTang_1_1AstNodeFloat.html", "classTang_1_1AstNodeFloat" ]
@@ -24,8 +18,8 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "astNodeInteger.hpp", "astNodeInteger_8hpp.html", [
       [ "AstNodeInteger", "classTang_1_1AstNodeInteger.html", "classTang_1_1AstNodeInteger" ]
     ] ],
-    [ "astNodeNegative.hpp", "astNodeNegative_8hpp.html", [
-      [ "AstNodeNegative", "classTang_1_1AstNodeNegative.html", "classTang_1_1AstNodeNegative" ]
+    [ "astNodeUnary.hpp", "astNodeUnary_8hpp.html", [
+      [ "AstNodeUnary", "classTang_1_1AstNodeUnary.html", "classTang_1_1AstNodeUnary" ]
     ] ],
     [ "computedExpression.hpp", "computedExpression_8hpp.html", [
       [ "ComputedExpression", "classTang_1_1ComputedExpression.html", "classTang_1_1ComputedExpression" ]

@@ -1,0 +1,134 @@
+\hypertarget{classTang_1_1AstNodeCast}{}\doxysection{Tang\+::Ast\+Node\+Cast Class Reference}
+\label{classTang_1_1AstNodeCast}\index{Tang::AstNodeCast@{Tang::AstNodeCast}}
+
+
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a typecast of an expression.  
+
+
+
+
+{\ttfamily \#include $<$ast\+Node\+Cast.\+hpp$>$}
+
+
+
+Inheritance diagram for Tang\+::Ast\+Node\+Cast\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classTang_1_1AstNodeCast__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tang\+::Ast\+Node\+Cast\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classTang_1_1AstNodeCast__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4}{Type}} \{ \mbox{\hyperlink{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4a12492d4efa5d84835d4e7cc31ae1a4ab}{Integer}}
+, \mbox{\hyperlink{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4a93f72af1ebc545c43fe366904a79dff5}{Float}}
+, \mbox{\hyperlink{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4a85206fe18cb8ea971023050f86050b2a}{Boolean}}
+ \}
+\begin{DoxyCompactList}\small\item\em The possible types that can be cast to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTang_1_1AstNodeCast_a36a56430aa8f8cd4facbf7df1fa50bdd}{Ast\+Node\+Cast}} (\mbox{\hyperlink{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4}{Type}} target\+Type, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ expression, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeCast_abc4a075ea319b747411aec57a61735eb}\label{classTang_1_1AstNodeCast_abc4a075ea319b747411aec57a61735eb}} 
+virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeCast_abc4a075ea319b747411aec57a61735eb}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
+\begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeCast_af911e11e47869acdd1f6b8fabd9555e2}\label{classTang_1_1AstNodeCast_af911e11e47869acdd1f6b8fabd9555e2}} 
+virtual void \mbox{\hyperlink{classTang_1_1AstNodeCast_af911e11e47869acdd1f6b8fabd9555e2}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const override
+\begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
+virtual shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeCast_ab36b44fe01ff2e37d638e6be9cf2f7fb}{make\+Copy}} () const override
+\begin{DoxyCompactList}\small\item\em Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}\label{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}} 
+\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}{location}}
+\begin{DoxyCompactList}\small\item\em The location associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a typecast of an expression. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4}\label{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4}} 
+\index{Tang::AstNodeCast@{Tang::AstNodeCast}!Type@{Type}}
+\index{Type@{Type}!Tang::AstNodeCast@{Tang::AstNodeCast}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4}{Tang\+::\+Ast\+Node\+Cast\+::\+Type}}}
+
+
+
+The possible types that can be cast to. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Integer@{Integer}!Tang::AstNodeCast@{Tang::AstNodeCast}}\index{Tang::AstNodeCast@{Tang::AstNodeCast}!Integer@{Integer}}}\mbox{\Hypertarget{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4a12492d4efa5d84835d4e7cc31ae1a4ab}\label{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4a12492d4efa5d84835d4e7cc31ae1a4ab}} 
+Integer&Cast to a \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger}{Tang\+::\+Computed\+Expression\+Integer}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Float@{Float}!Tang::AstNodeCast@{Tang::AstNodeCast}}\index{Tang::AstNodeCast@{Tang::AstNodeCast}!Float@{Float}}}\mbox{\Hypertarget{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4a93f72af1ebc545c43fe366904a79dff5}\label{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4a93f72af1ebc545c43fe366904a79dff5}} 
+Float&Cast to a \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat}{Tang\+::\+Computed\+Expression\+Float}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Boolean@{Boolean}!Tang::AstNodeCast@{Tang::AstNodeCast}}\index{Tang::AstNodeCast@{Tang::AstNodeCast}!Boolean@{Boolean}}}\mbox{\Hypertarget{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4a85206fe18cb8ea971023050f86050b2a}\label{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4a85206fe18cb8ea971023050f86050b2a}} 
+Boolean&Cast to a \mbox{\hyperlink{classTang_1_1ComputedExpressionBoolean}{Tang\+::\+Computed\+Expression\+Boolean}}. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeCast_a36a56430aa8f8cd4facbf7df1fa50bdd}\label{classTang_1_1AstNodeCast_a36a56430aa8f8cd4facbf7df1fa50bdd}} 
+\index{Tang::AstNodeCast@{Tang::AstNodeCast}!AstNodeCast@{AstNodeCast}}
+\index{AstNodeCast@{AstNodeCast}!Tang::AstNodeCast@{Tang::AstNodeCast}}
+\doxysubsubsection{\texorpdfstring{AstNodeCast()}{AstNodeCast()}}
+{\footnotesize\ttfamily Ast\+Node\+Cast\+::\+Ast\+Node\+Cast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4}{Type}}}]{target\+Type,  }\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$}]{expression,  }\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{location }\end{DoxyParamCaption})}
+
+
+
+The constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Type} & The target type that the expression will be cast to. \\
+\hline
+{\em expression} & The expression to be typecast. \\
+\hline
+{\em location} & The location associated with this node. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeCast_ab36b44fe01ff2e37d638e6be9cf2f7fb}\label{classTang_1_1AstNodeCast_ab36b44fe01ff2e37d638e6be9cf2f7fb}} 
+\index{Tang::AstNodeCast@{Tang::AstNodeCast}!makeCopy@{makeCopy}}
+\index{makeCopy@{makeCopy}!Tang::AstNodeCast@{Tang::AstNodeCast}}
+\doxysubsubsection{\texorpdfstring{makeCopy()}{makeCopy()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ Ast\+Node\+Cast\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). 
+
+\begin{DoxyReturn}{Returns}
+A pointer to a new \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that is a copy of the current \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a2ffa154eb71a3588659e2ce5dcd5744c}{Tang\+::\+Ast\+Node}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{astNodeCast_8hpp}{ast\+Node\+Cast.\+hpp}}\item 
+src/\mbox{\hyperlink{astNodeCast_8cpp}{ast\+Node\+Cast.\+cpp}}\end{DoxyCompactItemize}

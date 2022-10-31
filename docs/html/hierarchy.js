@@ -3,12 +3,10 @@ var hierarchy =
     [ "Tang::AstNode", "classTang_1_1AstNode.html", [
       [ "Tang::AstNodeBinary", "classTang_1_1AstNodeBinary.html", null ],
       [ "Tang::AstNodeBoolean", "classTang_1_1AstNodeBoolean.html", null ],
-      [ "Tang::AstNodeCastBoolean", "classTang_1_1AstNodeCastBoolean.html", null ],
-      [ "Tang::AstNodeCastFloat", "classTang_1_1AstNodeCastFloat.html", null ],
-      [ "Tang::AstNodeCastInteger", "classTang_1_1AstNodeCastInteger.html", null ],
+      [ "Tang::AstNodeCast", "classTang_1_1AstNodeCast.html", null ],
       [ "Tang::AstNodeFloat", "classTang_1_1AstNodeFloat.html", null ],
       [ "Tang::AstNodeInteger", "classTang_1_1AstNodeInteger.html", null ],
-      [ "Tang::AstNodeNegative", "classTang_1_1AstNodeNegative.html", null ]
+      [ "Tang::AstNodeUnary", "classTang_1_1AstNodeUnary.html", null ]
     ] ],
     [ "Tang::ComputedExpression", "classTang_1_1ComputedExpression.html", [
       [ "Tang::ComputedExpressionBoolean", "classTang_1_1ComputedExpressionBoolean.html", null ],
