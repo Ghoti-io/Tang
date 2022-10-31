@@ -129,9 +129,7 @@ namespace Tang {
 #include "astNodeFloat.hpp"
 #include "astNodeInteger.hpp"
 #include "astNodeBoolean.hpp"
-#include "astNodeCastInteger.hpp"
-#include "astNodeCastFloat.hpp"
-#include "astNodeCastBoolean.hpp"
+#include "astNodeCast.hpp"
 
 // We must provide the yylex() function.
 // yylex() arguments are defined in the bison .y file.
@@ -215,15 +213,15 @@ expression
     }
   | expression "as" "int"
     {
-      $$ = std::make_shared<AstNodeCastInteger>($1, @2);
+      $$ = std::make_shared<AstNodeCast>(AstNodeCast::Integer, $1, @2);
     }
   | expression "as" "float"
     {
-      $$ = std::make_shared<AstNodeCastFloat>($1, @2);
+      $$ = std::make_shared<AstNodeCast>(AstNodeCast::Float, $1, @2);
     }
   | expression "as" "boolean"
     {
-      $$ = std::make_shared<AstNodeCastBoolean>($1, @2);
+      $$ = std::make_shared<AstNodeCast>(AstNodeCast::Boolean, $1, @2);
     }
   ;
 
