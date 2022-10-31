@@ -89,6 +89,36 @@ string Program::dumpBytecode() const {
         ++pc;
         break;
       }
+      case Opcode::LT: {
+        out << "LT";
+        ++pc;
+        break;
+      }
+      case Opcode::LTE: {
+        out << "LTE";
+        ++pc;
+        break;
+      }
+      case Opcode::GT: {
+        out << "GT";
+        ++pc;
+        break;
+      }
+      case Opcode::GTE: {
+        out << "GTE";
+        ++pc;
+        break;
+      }
+      case Opcode::EQ: {
+        out << "EQ";
+        ++pc;
+        break;
+      }
+      case Opcode::NEQ: {
+        out << "NEQ";
+        ++pc;
+        break;
+      }
       case Opcode::CASTINTEGER: {
         out << "CASTINTEGER";
         ++pc;

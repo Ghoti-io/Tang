@@ -103,6 +103,36 @@ GarbageCollected ComputedExpressionFloat::__not() const {
   return GarbageCollected::make<ComputedExpressionBoolean>(!this->val);
 }
 
+GarbageCollected ComputedExpressionFloat::__lessThan(const GarbageCollected & rhs) const {
+  if (typeid(*rhs) == typeid(ComputedExpressionFloat)) {
+    auto & rhsConv = static_cast<ComputedExpressionFloat&>(*rhs);
+    return GarbageCollected::make<ComputedExpressionBoolean>(
+        this->val < rhsConv.val);
+  }
+  if (typeid(*rhs) == typeid(ComputedExpressionInteger)) {
+    auto & rhsConv = static_cast<ComputedExpressionInteger&>(*rhs);
+    return GarbageCollected::make<ComputedExpressionBoolean>(
+        this->val < rhsConv.val);
+  }
+
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to compare these values."});
+}
+
+GarbageCollected ComputedExpressionFloat::__equal(const GarbageCollected & rhs) const {
+  if (typeid(*rhs) == typeid(ComputedExpressionFloat)) {
+    auto & rhsConv = static_cast<ComputedExpressionFloat&>(*rhs);
+    return GarbageCollected::make<ComputedExpressionBoolean>(
+        this->val == rhsConv.val);
+  }
+  if (typeid(*rhs) == typeid(ComputedExpressionInteger)) {
+    auto & rhsConv = static_cast<ComputedExpressionInteger&>(*rhs);
+    return GarbageCollected::make<ComputedExpressionBoolean>(
+        this->val == rhsConv.val);
+  }
+
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to compare these values."});
+}
+
 GarbageCollected ComputedExpressionFloat::__integer() const {
   return GarbageCollected::make<ComputedExpressionInteger>((int64_t)this->val);
 }

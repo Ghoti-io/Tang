@@ -1,4 +1,5 @@
 #include "garbageCollected.hpp"
+#include "computedExpressionError.hpp"
 
 using namespace std;
 using namespace Tang;
@@ -35,16 +36,6 @@ GarbageCollected GarbageCollected::operator-(const GarbageCollected & rhs) const
   return result;
 }
 
-GarbageCollected GarbageCollected::operator-() const {
-  auto result = this->ref->__negative();
-  return result;
-}
-
-GarbageCollected GarbageCollected::operator!() const {
-  auto result = this->ref->__not();
-  return result;
-}
-
 GarbageCollected GarbageCollected::operator*(const GarbageCollected & rhs) const {
   auto result = this->ref->__multiply(rhs);
   return result;
@@ -58,6 +49,47 @@ GarbageCollected GarbageCollected::operator/(const GarbageCollected & rhs) const
 GarbageCollected GarbageCollected::operator%(const GarbageCollected & rhs) const {
   auto result = this->ref->__modulo(rhs);
   return result;
+}
+
+GarbageCollected GarbageCollected::operator-() const {
+  auto result = this->ref->__negative();
+  return result;
+}
+
+GarbageCollected GarbageCollected::operator!() const {
+  auto result = this->ref->__not();
+  return result;
+}
+
+GarbageCollected GarbageCollected::operator<(const GarbageCollected & rhs) const {
+  return this->ref->__lessThan(rhs);
+}
+
+GarbageCollected GarbageCollected::operator<=(const GarbageCollected & rhs) const {
+  auto result1 = *this < rhs;
+  if (typeid(*result1) == typeid(ComputedExpressionError)) {
+    return result1;
+  }
+  if (result1->is_equal(true)) {
+    return result1;
+  }
+  return *this == rhs;
+}
+
+GarbageCollected GarbageCollected::operator>(const GarbageCollected & rhs) const {
+  return !(*this <= rhs);
+}
+
+GarbageCollected GarbageCollected::operator>=(const GarbageCollected & rhs) const {
+  return !this->ref->__lessThan(rhs);
+}
+
+GarbageCollected GarbageCollected::operator==(const GarbageCollected & rhs) const {
+  return this->ref->__equal(rhs);
+}
+
+GarbageCollected GarbageCollected::operator!=(const GarbageCollected & rhs) const {
+  return !this->ref->__equal(rhs);
 }
 
 

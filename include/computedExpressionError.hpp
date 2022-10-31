@@ -25,6 +25,18 @@ namespace Tang {
       virtual std::string dump() const override;
       ComputedExpression * makeCopy() const override;
       virtual bool is_equal(const Error & val) const override;
+      virtual GarbageCollected __add(const GarbageCollected & rhs) const override;
+      virtual GarbageCollected __subtract(const GarbageCollected & rhs) const override;
+      virtual GarbageCollected __multiply(const GarbageCollected & rhs) const override;
+      virtual GarbageCollected __divide(const GarbageCollected & rhs) const override;
+      virtual GarbageCollected __modulo(const GarbageCollected & rhs) const override;
+      virtual GarbageCollected __negative() const override;
+      virtual GarbageCollected __not() const override;
+      virtual GarbageCollected __lessThan(const GarbageCollected & rhs) const override;
+      virtual GarbageCollected __equal(const GarbageCollected & rhs) const override;
+      virtual GarbageCollected __integer() const override;
+      virtual GarbageCollected __float() const override;
+      virtual GarbageCollected __boolean() const override;
 
     private:
       /**

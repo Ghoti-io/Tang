@@ -29,6 +29,15 @@ GarbageCollected ComputedExpressionBoolean::__not() const {
   return GarbageCollected::make<ComputedExpressionBoolean>(!this->val);
 }
 
+GarbageCollected ComputedExpressionBoolean::__equal(const GarbageCollected & rhs) const {
+  if (typeid(*rhs) == typeid(ComputedExpressionBoolean)) {
+    auto & rhsConv = static_cast<ComputedExpressionBoolean &>(*rhs);
+    return GarbageCollected::make<ComputedExpressionBoolean>(this->val == rhsConv.val);
+  }
+
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to compare these values."});
+}
+
 GarbageCollected ComputedExpressionBoolean::__integer() const {
   return GarbageCollected::make<ComputedExpressionInteger>(this->val ? 1 : 0);
 }

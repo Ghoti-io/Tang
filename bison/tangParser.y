@@ -86,6 +86,12 @@
 %token EXCLAMATIONPOINT "!"
 %token LPAREN "("
 %token RPAREN ")"
+%token LESSTHAN "<"
+%token LESSTHANEQUAL "<="
+%token GREATERTHAN ">"
+%token GREATERTHANEQUAL ">="
+%token EQUALCOMPARE "=="
+%token NOTEQUAL "!="
 %token AS "as"
 %token CASTINT "int"
 %token CASTFLOAT "float"
@@ -102,6 +108,8 @@
 // Notice that the order is reversed from:
 // https://en.cppreference.com/w/cpp/language/operator_precedence
 // Here, rules are in order of lowest to highest precedence.
+%left "==" "!="
+%left "<" "<=" ">" ">="
 %left "+" "-"
 %left "*" "/" "%"
 %right UMINUS AS "!"
@@ -206,6 +214,30 @@ expression
   | "!" expression
     {
       $$ = std::make_shared<AstNodeUnary>(AstNodeUnary::Not, $2, @1);
+    }
+  | expression "<" expression
+    {
+      $$ = std::make_shared<AstNodeBinary>(AstNodeBinary::LessThan, $1, $3, @2);
+    }
+  | expression "<=" expression
+    {
+      $$ = std::make_shared<AstNodeBinary>(AstNodeBinary::LessThanEqual, $1, $3, @2);
+    }
+  | expression ">" expression
+    {
+      $$ = std::make_shared<AstNodeBinary>(AstNodeBinary::GreaterThan, $1, $3, @2);
+    }
+  | expression ">=" expression
+    {
+      $$ = std::make_shared<AstNodeBinary>(AstNodeBinary::GreaterThanEqual, $1, $3, @2);
+    }
+  | expression "==" expression
+    {
+      $$ = std::make_shared<AstNodeBinary>(AstNodeBinary::Equal, $1, $3, @2);
+    }
+  | expression "!=" expression
+    {
+      $$ = std::make_shared<AstNodeBinary>(AstNodeBinary::NotEqual, $1, $3, @2);
     }
   | "(" expression ")"
     {

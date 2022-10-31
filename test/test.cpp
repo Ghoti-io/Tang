@@ -255,6 +255,204 @@ TEST(Expression, Not) {
   EXPECT_EQ(*p7.execute().getResult(), false);
 }
 
+TEST(Expression, LessThan) {
+  auto p1 = TangBase().compileScript("2 < 3");
+  EXPECT_EQ(*p1.execute().getResult(), true);
+  auto p2 = TangBase().compileScript("2 < 2");
+  EXPECT_EQ(*p2.execute().getResult(), false);
+  auto p3 = TangBase().compileScript("2 < 1");
+  EXPECT_EQ(*p3.execute().getResult(), false);
+  auto p4 = TangBase().compileScript("2 < 3.");
+  EXPECT_EQ(*p4.execute().getResult(), true);
+  auto p5 = TangBase().compileScript("2 < 2.");
+  EXPECT_EQ(*p5.execute().getResult(), false);
+  auto p6 = TangBase().compileScript("2 < 1.");
+  EXPECT_EQ(*p6.execute().getResult(), false);
+  auto p7 = TangBase().compileScript("2. < 3");
+  EXPECT_EQ(*p7.execute().getResult(), true);
+  auto p8 = TangBase().compileScript("2. < 2");
+  EXPECT_EQ(*p8.execute().getResult(), false);
+  auto p9 = TangBase().compileScript("2. < 1");
+  EXPECT_EQ(*p9.execute().getResult(), false);
+  auto p10 = TangBase().compileScript("2. < 3.");
+  EXPECT_EQ(*p10.execute().getResult(), true);
+  auto p11 = TangBase().compileScript("2. < 2.");
+  EXPECT_EQ(*p11.execute().getResult(), false);
+  auto p12 = TangBase().compileScript("2. < 1.");
+  EXPECT_EQ(*p12.execute().getResult(), false);
+  auto p13 = TangBase().compileScript("2 < true");
+  EXPECT_EQ(*p13.execute().getResult(), Error{"Don't know how to compare these values."});
+  auto p14 = TangBase().compileScript("2. < true");
+  EXPECT_EQ(*p14.execute().getResult(), Error{"Don't know how to compare these values."});
+  auto p15 = TangBase().compileScript("false < true");
+  EXPECT_EQ(*p15.execute().getResult(), Error{"Don't know how to compare these values."});
+}
+
+TEST(Expression, LessThanEqual) {
+  auto p1 = TangBase().compileScript("2 <= 3");
+  EXPECT_EQ(*p1.execute().getResult(), true);
+  auto p2 = TangBase().compileScript("2 <= 2");
+  EXPECT_EQ(*p2.execute().getResult(), true);
+  auto p3 = TangBase().compileScript("2 <= 1");
+  EXPECT_EQ(*p3.execute().getResult(), false);
+  auto p4 = TangBase().compileScript("2 <= 3.");
+  EXPECT_EQ(*p4.execute().getResult(), true);
+  auto p5 = TangBase().compileScript("2 <= 2.");
+  EXPECT_EQ(*p5.execute().getResult(), true);
+  auto p6 = TangBase().compileScript("2 <= 1.");
+  EXPECT_EQ(*p6.execute().getResult(), false);
+  auto p7 = TangBase().compileScript("2. <= 3");
+  EXPECT_EQ(*p7.execute().getResult(), true);
+  auto p8 = TangBase().compileScript("2. <= 2");
+  EXPECT_EQ(*p8.execute().getResult(), true);
+  auto p9 = TangBase().compileScript("2. <= 1");
+  EXPECT_EQ(*p9.execute().getResult(), false);
+  auto p10 = TangBase().compileScript("2. <= 3.");
+  EXPECT_EQ(*p10.execute().getResult(), true);
+  auto p11 = TangBase().compileScript("2. <= 2.");
+  EXPECT_EQ(*p11.execute().getResult(), true);
+  auto p12 = TangBase().compileScript("2. <= 1.");
+  EXPECT_EQ(*p12.execute().getResult(), false);
+  auto p13 = TangBase().compileScript("2 <= true");
+  EXPECT_EQ(*p13.execute().getResult(), Error{"Don't know how to compare these values."});
+  auto p14 = TangBase().compileScript("2. <= true");
+  EXPECT_EQ(*p14.execute().getResult(), Error{"Don't know how to compare these values."});
+  auto p15 = TangBase().compileScript("false <= true");
+  EXPECT_EQ(*p15.execute().getResult(), Error{"Don't know how to compare these values."});
+}
+
+TEST(Expression, GreaterThan) {
+  auto p1 = TangBase().compileScript("2 > 3");
+  EXPECT_EQ(*p1.execute().getResult(), false);
+  auto p2 = TangBase().compileScript("2 > 2");
+  EXPECT_EQ(*p2.execute().getResult(), false);
+  auto p3 = TangBase().compileScript("2 > 1");
+  EXPECT_EQ(*p3.execute().getResult(), true);
+  auto p4 = TangBase().compileScript("2 > 3.");
+  EXPECT_EQ(*p4.execute().getResult(), false);
+  auto p5 = TangBase().compileScript("2 > 2.");
+  EXPECT_EQ(*p5.execute().getResult(), false);
+  auto p6 = TangBase().compileScript("2 > 1.");
+  EXPECT_EQ(*p6.execute().getResult(), true);
+  auto p7 = TangBase().compileScript("2. > 3");
+  EXPECT_EQ(*p7.execute().getResult(), false);
+  auto p8 = TangBase().compileScript("2. > 2");
+  EXPECT_EQ(*p8.execute().getResult(), false);
+  auto p9 = TangBase().compileScript("2. > 1");
+  EXPECT_EQ(*p9.execute().getResult(), true);
+  auto p10 = TangBase().compileScript("2. > 3.");
+  EXPECT_EQ(*p10.execute().getResult(), false);
+  auto p11 = TangBase().compileScript("2. > 2.");
+  EXPECT_EQ(*p11.execute().getResult(), false);
+  auto p12 = TangBase().compileScript("2. > 1.");
+  EXPECT_EQ(*p12.execute().getResult(), true);
+  auto p13 = TangBase().compileScript("2 > true");
+  EXPECT_EQ(*p13.execute().getResult(), Error{"Don't know how to compare these values."});
+  auto p14 = TangBase().compileScript("2. > true");
+  EXPECT_EQ(*p14.execute().getResult(), Error{"Don't know how to compare these values."});
+  auto p15 = TangBase().compileScript("false > true");
+  EXPECT_EQ(*p15.execute().getResult(), Error{"Don't know how to compare these values."});
+}
+
+TEST(Expression, GreaterThanEqual) {
+  auto p1 = TangBase().compileScript("2 >= 3");
+  EXPECT_EQ(*p1.execute().getResult(), false);
+  auto p2 = TangBase().compileScript("2 >= 2");
+  EXPECT_EQ(*p2.execute().getResult(), true);
+  auto p3 = TangBase().compileScript("2 >= 1");
+  EXPECT_EQ(*p3.execute().getResult(), true);
+  auto p4 = TangBase().compileScript("2 >= 3.");
+  EXPECT_EQ(*p4.execute().getResult(), false);
+  auto p5 = TangBase().compileScript("2 >= 2.");
+  EXPECT_EQ(*p5.execute().getResult(), true);
+  auto p6 = TangBase().compileScript("2 >= 1.");
+  EXPECT_EQ(*p6.execute().getResult(), true);
+  auto p7 = TangBase().compileScript("2. >= 3");
+  EXPECT_EQ(*p7.execute().getResult(), false);
+  auto p8 = TangBase().compileScript("2. >= 2");
+  EXPECT_EQ(*p8.execute().getResult(), true);
+  auto p9 = TangBase().compileScript("2. >= 1");
+  EXPECT_EQ(*p9.execute().getResult(), true);
+  auto p10 = TangBase().compileScript("2. >= 3.");
+  EXPECT_EQ(*p10.execute().getResult(), false);
+  auto p11 = TangBase().compileScript("2. >= 2.");
+  EXPECT_EQ(*p11.execute().getResult(), true);
+  auto p12 = TangBase().compileScript("2. >= 1.");
+  EXPECT_EQ(*p12.execute().getResult(), true);
+  auto p13 = TangBase().compileScript("2 >= true");
+  EXPECT_EQ(*p13.execute().getResult(), Error{"Don't know how to compare these values."});
+  auto p14 = TangBase().compileScript("2. >= true");
+  EXPECT_EQ(*p14.execute().getResult(), Error{"Don't know how to compare these values."});
+  auto p15 = TangBase().compileScript("false >= true");
+  EXPECT_EQ(*p15.execute().getResult(), Error{"Don't know how to compare these values."});
+}
+
+TEST(Expression, Equal) {
+  auto p1 = TangBase().compileScript("2 == 3");
+  EXPECT_EQ(*p1.execute().getResult(), false);
+  auto p2 = TangBase().compileScript("2 == 2");
+  EXPECT_EQ(*p2.execute().getResult(), true);
+  auto p3 = TangBase().compileScript("2 == 1");
+  EXPECT_EQ(*p3.execute().getResult(), false);
+  auto p4 = TangBase().compileScript("2 == 3.");
+  EXPECT_EQ(*p4.execute().getResult(), false);
+  auto p5 = TangBase().compileScript("2 == 2.");
+  EXPECT_EQ(*p5.execute().getResult(), true);
+  auto p6 = TangBase().compileScript("2 == 1.");
+  EXPECT_EQ(*p6.execute().getResult(), false);
+  auto p7 = TangBase().compileScript("2. == 3");
+  EXPECT_EQ(*p7.execute().getResult(), false);
+  auto p8 = TangBase().compileScript("2. == 2");
+  EXPECT_EQ(*p8.execute().getResult(), true);
+  auto p9 = TangBase().compileScript("2. == 1");
+  EXPECT_EQ(*p9.execute().getResult(), false);
+  auto p10 = TangBase().compileScript("2. == 3.");
+  EXPECT_EQ(*p10.execute().getResult(), false);
+  auto p11 = TangBase().compileScript("2. == 2.");
+  EXPECT_EQ(*p11.execute().getResult(), true);
+  auto p12 = TangBase().compileScript("2. == 1.");
+  EXPECT_EQ(*p12.execute().getResult(), false);
+  auto p13 = TangBase().compileScript("2 == true");
+  EXPECT_EQ(*p13.execute().getResult(), Error{"Don't know how to compare these values."});
+  auto p14 = TangBase().compileScript("2. == true");
+  EXPECT_EQ(*p14.execute().getResult(), Error{"Don't know how to compare these values."});
+  auto p15 = TangBase().compileScript("false == true");
+  EXPECT_EQ(*p15.execute().getResult(), false);
+}
+
+TEST(Expression, NotEqual) {
+  auto p1 = TangBase().compileScript("2 != 3");
+  EXPECT_EQ(*p1.execute().getResult(), true);
+  auto p2 = TangBase().compileScript("2 != 2");
+  EXPECT_EQ(*p2.execute().getResult(), false);
+  auto p3 = TangBase().compileScript("2 != 1");
+  EXPECT_EQ(*p3.execute().getResult(), true);
+  auto p4 = TangBase().compileScript("2 != 3.");
+  EXPECT_EQ(*p4.execute().getResult(), true);
+  auto p5 = TangBase().compileScript("2 != 2.");
+  EXPECT_EQ(*p5.execute().getResult(), false);
+  auto p6 = TangBase().compileScript("2 != 1.");
+  EXPECT_EQ(*p6.execute().getResult(), true);
+  auto p7 = TangBase().compileScript("2. != 3");
+  EXPECT_EQ(*p7.execute().getResult(), true);
+  auto p8 = TangBase().compileScript("2. != 2");
+  EXPECT_EQ(*p8.execute().getResult(), false);
+  auto p9 = TangBase().compileScript("2. != 1");
+  EXPECT_EQ(*p9.execute().getResult(), true);
+  auto p10 = TangBase().compileScript("2. != 3.");
+  EXPECT_EQ(*p10.execute().getResult(), true);
+  auto p11 = TangBase().compileScript("2. != 2.");
+  EXPECT_EQ(*p11.execute().getResult(), false);
+  auto p12 = TangBase().compileScript("2. != 1.");
+  EXPECT_EQ(*p12.execute().getResult(), true);
+  auto p13 = TangBase().compileScript("2 != true");
+  EXPECT_EQ(*p13.execute().getResult(), Error{"Don't know how to compare these values."});
+  auto p14 = TangBase().compileScript("2. != true");
+  EXPECT_EQ(*p14.execute().getResult(), Error{"Don't know how to compare these values."});
+  auto p15 = TangBase().compileScript("false != true");
+  EXPECT_EQ(*p15.execute().getResult(), true);
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

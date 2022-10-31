@@ -63,6 +63,14 @@ GarbageCollected ComputedExpression::__not() const {
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to compute the logical not of this value."});
 }
 
+GarbageCollected ComputedExpression::__lessThan([[maybe_unused]] const GarbageCollected & rhs) const {
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to compare these values."});
+}
+
+GarbageCollected ComputedExpression::__equal([[maybe_unused]] const GarbageCollected & rhs) const {
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to compare these values."});
+}
+
 GarbageCollected ComputedExpression::__integer() const {
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to cast this value to an integer."});
 }

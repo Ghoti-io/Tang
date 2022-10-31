@@ -129,6 +129,22 @@ namespace Tang {
       virtual GarbageCollected __not() const;
 
       /**
+       * Compute the "less than" comparison.
+       *
+       * @param rhs The GarbageCollected value to compare against.
+       * @return The result of the the operation.
+       */
+      virtual GarbageCollected __lessThan(const GarbageCollected & rhs) const;
+
+      /**
+       * Perform an equalit test.
+       *
+       * @param rhs The GarbageCollected value to compare against.
+       * @return The result of the the operation.
+       */
+      virtual GarbageCollected __equal(const GarbageCollected & rhs) const;
+
+      /**
        * Perform a type cast to integer.
        *
        * @return The result of the the operation.

@@ -232,6 +232,54 @@ namespace Tang {
      */
     GarbageCollected operator!() const;
 
+    /**
+     * Perform a < between two GarbageCollected values.
+     *
+     * @param rhs The right hand side operand.
+     * @return The result of the operation.
+     */
+    GarbageCollected operator<(const GarbageCollected & rhs) const;
+
+    /**
+     * Perform a <= between two GarbageCollected values.
+     *
+     * @param rhs The right hand side operand.
+     * @return The result of the operation.
+     */
+    GarbageCollected operator<=(const GarbageCollected & rhs) const;
+
+    /**
+     * Perform a > between two GarbageCollected values.
+     *
+     * @param rhs The right hand side operand.
+     * @return The result of the operation.
+     */
+    GarbageCollected operator>(const GarbageCollected & rhs) const;
+
+    /**
+     * Perform a >= between two GarbageCollected values.
+     *
+     * @param rhs The right hand side operand.
+     * @return The result of the operation.
+     */
+    GarbageCollected operator>=(const GarbageCollected & rhs) const;
+
+    /**
+     * Perform a == between two GarbageCollected values.
+     *
+     * @param rhs The right hand side operand.
+     * @return The result of the operation.
+     */
+    GarbageCollected operator==(const GarbageCollected & rhs) const;
+
+    /**
+     * Perform a != between two GarbageCollected values.
+     *
+     * @param rhs The right hand side operand.
+     * @return The result of the operation.
+     */
+    GarbageCollected operator!=(const GarbageCollected & rhs) const;
+
   protected:
     /**
      * Constructs a garbage-collected object of the specified type.  It is

@@ -129,6 +129,66 @@ Program& Program::execute() {
         ++pc;
         break;
       }
+      case Opcode::LT: {
+        STACKCHECK(2);
+        auto rhs = stack.back();
+        stack.pop_back();
+        auto lhs = stack.back();
+        stack.pop_back();
+        stack.push_back(lhs < rhs);
+        ++pc;
+        break;
+      }
+      case Opcode::LTE: {
+        STACKCHECK(2);
+        auto rhs = stack.back();
+        stack.pop_back();
+        auto lhs = stack.back();
+        stack.pop_back();
+        stack.push_back(lhs <= rhs);
+        ++pc;
+        break;
+      }
+      case Opcode::GT: {
+        STACKCHECK(2);
+        auto rhs = stack.back();
+        stack.pop_back();
+        auto lhs = stack.back();
+        stack.pop_back();
+        stack.push_back(lhs > rhs);
+        ++pc;
+        break;
+      }
+      case Opcode::GTE: {
+        STACKCHECK(2);
+        auto rhs = stack.back();
+        stack.pop_back();
+        auto lhs = stack.back();
+        stack.pop_back();
+        stack.push_back(lhs >= rhs);
+        ++pc;
+        break;
+      }
+      case Opcode::EQ: {
+        STACKCHECK(2);
+        auto rhs = stack.back();
+        stack.pop_back();
+        auto lhs = stack.back();
+        stack.pop_back();
+        stack.push_back(lhs == rhs);
+        ++pc;
+        break;
+      }
+      case Opcode::NEQ: {
+        STACKCHECK(2);
+        auto rhs = stack.back();
+        stack.pop_back();
+        auto lhs = stack.back();
+        stack.pop_back();
+        stack.push_back(lhs != rhs);
+        ++pc;
+        break;
+      }
       case Opcode::CASTINTEGER: {
         STACKCHECK(1);
         auto operand = stack.back();

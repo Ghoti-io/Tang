@@ -19,6 +19,12 @@ string AstNodeBinary::dump(string indent) const {
     "Multiply",
     "Divide",
     "Modulo",
+    "Less Than",
+    "Less Than or Equal",
+    "Greater Than",
+    "Greater Than or Equal",
+    "Equal",
+    "Not Equal",
   };
 
   return indent + "Binary (" + description[this->op] + "):\n"
@@ -50,6 +56,30 @@ void AstNodeBinary::compile(Tang::Program & program) const {
     }
     case Modulo: {
       program.addBytecode((uint64_t)Opcode::MODULO);
+      break;
+    }
+    case LessThan : {
+      program.addBytecode((uint64_t)Opcode::LT);
+      break;
+    }
+    case LessThanEqual : {
+      program.addBytecode((uint64_t)Opcode::LTE);
+      break;
+    }
+    case GreaterThan : {
+      program.addBytecode((uint64_t)Opcode::GT);
+      break;
+    }
+    case GreaterThanEqual : {
+      program.addBytecode((uint64_t)Opcode::GTE);
+      break;
+    }
+    case Equal : {
+      program.addBytecode((uint64_t)Opcode::EQ);
+      break;
+    }
+    case NotEqual : {
+      program.addBytecode((uint64_t)Opcode::NEQ);
       break;
     }
   }

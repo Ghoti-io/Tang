@@ -20,6 +20,12 @@ namespace Tang {
       Multiply,         ///< Indicates lhs * rhs
       Divide,           ///< Indicates lhs / rhs
       Modulo,           ///< Indicates lhs % rhs
+      LessThan,         ///< Indicates lhs < rhs
+      LessThanEqual,    ///< Indicates lhs <= rhs
+      GreaterThan,      ///< Indicates lhs > rhs
+      GreaterThanEqual, ///< Indicates lhs >= rhs
+      Equal,            ///< Indicates lhs == rhs
+      NotEqual,         ///< Indicates lhs != rhs
     };
 
     /**

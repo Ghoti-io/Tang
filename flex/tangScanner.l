@@ -147,6 +147,24 @@ using namespace std;
   \! {
     return Tang::TangParser::make_EXCLAMATIONPOINT(Tang::location(location));
   }
+  \< {
+    return Tang::TangParser::make_LESSTHAN(Tang::location(location));
+  }
+  \<= {
+    return Tang::TangParser::make_LESSTHANEQUAL(Tang::location(location));
+  }
+  \> {
+    return Tang::TangParser::make_GREATERTHAN(Tang::location(location));
+  }
+  \>= {
+    return Tang::TangParser::make_GREATERTHANEQUAL(Tang::location(location));
+  }
+  == {
+    return Tang::TangParser::make_EQUALCOMPARE(Tang::location(location));
+  }
+  != {
+    return Tang::TangParser::make_NOTEQUAL(Tang::location(location));
+  }
   as {
     return Tang::TangParser::make_AS(Tang::location(location));
   }
