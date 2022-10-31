@@ -5,7 +5,8 @@
 Declare the Opcodes used in the Bytecode representation of a program.  
 
 
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -28,10 +29,17 @@ enum class \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04}{Tang\
 , \newline
 \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a50546bf973283065b6ccf09faf7a580a}{NEGATIVE}}
 , \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a10df3d67626099df882920ba6552f16d}{NOT}}
-, \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a0a109fb07a3a6984f50ffe52dd2c213b}{CASTINTEGER}}
-, \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04af721c36554a56d3695dda4af2863efbb}{CASTFLOAT}}
+, \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04ac562607189d77eb9dfb707464c1e7b0b}{LT}}
+, \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04acc981ecc65ecf63ad1673cbec9c64198}{LTE}}
 , \newline
-\mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620}{CASTBOOLEAN}}
+\mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04acd6a9bd2a175104eed40f0d33a8b4020}{GT}}
+, \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a32d35312e8f24bc1669bd2b45c00d47c}{GTE}}
+, \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a2dcbad7477fd40561e8b8198f173bd47}{EQ}}
+, \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a375b332cf2e0c6d522baf007ef7cb554}{NEQ}}
+, \newline
+\mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a0a109fb07a3a6984f50ffe52dd2c213b}{CASTINTEGER}}
+, \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04af721c36554a56d3695dda4af2863efbb}{CASTFLOAT}}
+, \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620}{CASTBOOLEAN}}
  \}
 \end{DoxyCompactItemize}
 
@@ -87,6 +95,30 @@ NEGATIVE&Pop val, push negative val. \\
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{NOT@{NOT}!opcode.hpp@{opcode.hpp}}\index{opcode.hpp@{opcode.hpp}!NOT@{NOT}}}\mbox{\Hypertarget{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a10df3d67626099df882920ba6552f16d}\label{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a10df3d67626099df882920ba6552f16d}} 
 NOT&Pop val, push logical not of val. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LT@{LT}!opcode.hpp@{opcode.hpp}}\index{opcode.hpp@{opcode.hpp}!LT@{LT}}}\mbox{\Hypertarget{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04ac562607189d77eb9dfb707464c1e7b0b}\label{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04ac562607189d77eb9dfb707464c1e7b0b}} 
+LT&Pop rhs, pop lhs, push lhs $<$ rhs. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LTE@{LTE}!opcode.hpp@{opcode.hpp}}\index{opcode.hpp@{opcode.hpp}!LTE@{LTE}}}\mbox{\Hypertarget{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04acc981ecc65ecf63ad1673cbec9c64198}\label{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04acc981ecc65ecf63ad1673cbec9c64198}} 
+LTE&Pop rhs, pop lhs, push lhs $<$= rhs. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GT@{GT}!opcode.hpp@{opcode.hpp}}\index{opcode.hpp@{opcode.hpp}!GT@{GT}}}\mbox{\Hypertarget{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04acd6a9bd2a175104eed40f0d33a8b4020}\label{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04acd6a9bd2a175104eed40f0d33a8b4020}} 
+GT&Pop rhs, pop lhs, push lhs $>$ rhs. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GTE@{GTE}!opcode.hpp@{opcode.hpp}}\index{opcode.hpp@{opcode.hpp}!GTE@{GTE}}}\mbox{\Hypertarget{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a32d35312e8f24bc1669bd2b45c00d47c}\label{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a32d35312e8f24bc1669bd2b45c00d47c}} 
+GTE&Pop rhs, pop lhs, push lhs $>$= rhs. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EQ@{EQ}!opcode.hpp@{opcode.hpp}}\index{opcode.hpp@{opcode.hpp}!EQ@{EQ}}}\mbox{\Hypertarget{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a2dcbad7477fd40561e8b8198f173bd47}\label{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a2dcbad7477fd40561e8b8198f173bd47}} 
+EQ&Pop rhs, pop lhs, push lhs == rhs. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NEQ@{NEQ}!opcode.hpp@{opcode.hpp}}\index{opcode.hpp@{opcode.hpp}!NEQ@{NEQ}}}\mbox{\Hypertarget{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a375b332cf2e0c6d522baf007ef7cb554}\label{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a375b332cf2e0c6d522baf007ef7cb554}} 
+NEQ&Pop rhs, pop lhs, push lhs != rhs. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{CASTINTEGER@{CASTINTEGER}!opcode.hpp@{opcode.hpp}}\index{opcode.hpp@{opcode.hpp}!CASTINTEGER@{CASTINTEGER}}}\mbox{\Hypertarget{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a0a109fb07a3a6984f50ffe52dd2c213b}\label{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a0a109fb07a3a6984f50ffe52dd2c213b}} 

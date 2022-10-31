@@ -153,6 +153,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a12f9abfc8fc324d491453f8c6bbb3e1d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionInteger.html#a12f9abfc8fc324d491453f8c6bbb3e1d">__not</a> () const override</td></tr>
 <tr class="memdesc:a12f9abfc8fc324d491453f8c6bbb3e1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the logical not of this value.  <a href="classTang_1_1ComputedExpressionInteger.html#a12f9abfc8fc324d491453f8c6bbb3e1d">More...</a><br /></td></tr>
 <tr class="separator:a12f9abfc8fc324d491453f8c6bbb3e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca18e4d07780ca7d8d1568f59cf358c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionInteger.html#a6ca18e4d07780ca7d8d1568f59cf358c">__lessThan</a> (const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;rhs) const override</td></tr>
+<tr class="memdesc:a6ca18e4d07780ca7d8d1568f59cf358c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the "less than" comparison.  <a href="classTang_1_1ComputedExpressionInteger.html#a6ca18e4d07780ca7d8d1568f59cf358c">More...</a><br /></td></tr>
+<tr class="separator:a6ca18e4d07780ca7d8d1568f59cf358c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a482daf778794d505964d7adb24bc97e3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionInteger.html#a482daf778794d505964d7adb24bc97e3">__equal</a> (const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;rhs) const override</td></tr>
+<tr class="memdesc:a482daf778794d505964d7adb24bc97e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform an equalit test.  <a href="classTang_1_1ComputedExpressionInteger.html#a482daf778794d505964d7adb24bc97e3">More...</a><br /></td></tr>
+<tr class="separator:a482daf778794d505964d7adb24bc97e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8f2123e3efec72df3dc6d62b74c78b6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionInteger.html#ac8f2123e3efec72df3dc6d62b74c78b6">__integer</a> () const override</td></tr>
 <tr class="memdesc:ac8f2123e3efec72df3dc6d62b74c78b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a type cast to integer.  <a href="classTang_1_1ComputedExpressionInteger.html#ac8f2123e3efec72df3dc6d62b74c78b6">More...</a><br /></td></tr>
 <tr class="separator:ac8f2123e3efec72df3dc6d62b74c78b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -309,6 +315,43 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>ComputedExpressionFl
 
 </div>
 </div>
+<a id="a482daf778794d505964d7adb24bc97e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a482daf778794d505964d7adb24bc97e3">&#9670;&nbsp;</a></span>__equal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> ComputedExpressionInteger::__equal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Perform an equalit test. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>The <a class="el" href="classTang_1_1GarbageCollected.html" title="A container that acts as a resource-counting garbage collector for the specified type.">GarbageCollected</a> value to compare against. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result of the the operation. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#aa6e3a065c2d0dfcde5e2eaefa26f7606">Tang::ComputedExpression</a>.</p>
+
+</div>
+</div>
 <a id="a4bbe91963e21fd8319b94a7b43a1e26e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4bbe91963e21fd8319b94a7b43a1e26e">&#9670;&nbsp;</a></span>__float()</h2>
 
@@ -366,6 +409,43 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>ComputedExpressionFl
 <dl class="section return"><dt>Returns</dt><dd>The result of the the operation. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#aa9bebad41df630a98cec2565b0aeda89">Tang::ComputedExpression</a>.</p>
+
+</div>
+</div>
+<a id="a6ca18e4d07780ca7d8d1568f59cf358c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ca18e4d07780ca7d8d1568f59cf358c">&#9670;&nbsp;</a></span>__lessThan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> ComputedExpressionInteger::__lessThan </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute the "less than" comparison. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>The <a class="el" href="classTang_1_1GarbageCollected.html" title="A container that acts as a resource-counting garbage collector for the specified type.">GarbageCollected</a> value to compare against. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result of the the operation. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#a7ac5773e7e1c7f4b7c7f8dcd29bfa00b">Tang::ComputedExpression</a>.</p>
 
 </div>
 </div>

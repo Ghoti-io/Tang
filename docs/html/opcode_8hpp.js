@@ -11,6 +11,12 @@ var opcode_8hpp =
       [ "MODULO", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a928ab45d616dde447dbbbd0270db87ad", null ],
       [ "NEGATIVE", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a50546bf973283065b6ccf09faf7a580a", null ],
       [ "NOT", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a10df3d67626099df882920ba6552f16d", null ],
+      [ "LT", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ac562607189d77eb9dfb707464c1e7b0b", null ],
+      [ "LTE", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acc981ecc65ecf63ad1673cbec9c64198", null ],
+      [ "GT", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acd6a9bd2a175104eed40f0d33a8b4020", null ],
+      [ "GTE", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a32d35312e8f24bc1669bd2b45c00d47c", null ],
+      [ "EQ", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a2dcbad7477fd40561e8b8198f173bd47", null ],
+      [ "NEQ", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a375b332cf2e0c6d522baf007ef7cb554", null ],
       [ "CASTINTEGER", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a0a109fb07a3a6984f50ffe52dd2c213b", null ],
       [ "CASTFLOAT", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af721c36554a56d3695dda4af2863efbb", null ],
       [ "CASTBOOLEAN", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620", null ]

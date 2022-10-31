@@ -126,10 +126,17 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a50546bf973283065b6ccf09faf7a580a">NEGATIVE</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a10df3d67626099df882920ba6552f16d">NOT</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a0a109fb07a3a6984f50ffe52dd2c213b">CASTINTEGER</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af721c36554a56d3695dda4af2863efbb">CASTFLOAT</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ac562607189d77eb9dfb707464c1e7b0b">LT</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acc981ecc65ecf63ad1673cbec9c64198">LTE</a>
 , <br />
-&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620">CASTBOOLEAN</a>
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acd6a9bd2a175104eed40f0d33a8b4020">GT</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a32d35312e8f24bc1669bd2b45c00d47c">GTE</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a2dcbad7477fd40561e8b8198f173bd47">EQ</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a375b332cf2e0c6d522baf007ef7cb554">NEQ</a>
+, <br />
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a0a109fb07a3a6984f50ffe52dd2c213b">CASTINTEGER</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af721c36554a56d3695dda4af2863efbb">CASTFLOAT</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620">CASTBOOLEAN</a>
 <br />
  }</td></tr>
 <tr class="separator:a3db69378da7fea0383c531f8cae78f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,6 +183,18 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a50546bf973283065b6ccf09faf7a580a"></a>NEGATIVE&#160;</td><td class="fielddoc"><p>Pop val, push negative val. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a10df3d67626099df882920ba6552f16d"></a>NOT&#160;</td><td class="fielddoc"><p>Pop val, push logical not of val. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04ac562607189d77eb9dfb707464c1e7b0b"></a>LT&#160;</td><td class="fielddoc"><p>Pop rhs, pop lhs, push lhs &lt; rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04acc981ecc65ecf63ad1673cbec9c64198"></a>LTE&#160;</td><td class="fielddoc"><p>Pop rhs, pop lhs, push lhs &lt;= rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04acd6a9bd2a175104eed40f0d33a8b4020"></a>GT&#160;</td><td class="fielddoc"><p>Pop rhs, pop lhs, push lhs &gt; rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a32d35312e8f24bc1669bd2b45c00d47c"></a>GTE&#160;</td><td class="fielddoc"><p>Pop rhs, pop lhs, push lhs &gt;= rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a2dcbad7477fd40561e8b8198f173bd47"></a>EQ&#160;</td><td class="fielddoc"><p>Pop rhs, pop lhs, push lhs == rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a375b332cf2e0c6d522baf007ef7cb554"></a>NEQ&#160;</td><td class="fielddoc"><p>Pop rhs, pop lhs, push lhs != rhs. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a0a109fb07a3a6984f50ffe52dd2c213b"></a>CASTINTEGER&#160;</td><td class="fielddoc"><p>Pop a val, typecast to int, push. </p>
 </td></tr>
