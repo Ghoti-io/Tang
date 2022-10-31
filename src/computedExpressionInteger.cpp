@@ -111,6 +111,10 @@ GarbageCollected ComputedExpressionInteger::__negative() const {
   return GarbageCollected::make<ComputedExpressionInteger>(-this->val);
 }
 
+GarbageCollected ComputedExpressionInteger::__not() const {
+  return GarbageCollected::make<ComputedExpressionBoolean>(!this->val);
+}
+
 GarbageCollected ComputedExpressionInteger::__integer() const {
   return GarbageCollected::make<ComputedExpressionInteger>(this->val);
 }

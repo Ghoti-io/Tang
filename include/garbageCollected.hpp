@@ -219,11 +219,18 @@ namespace Tang {
     GarbageCollected operator%(const GarbageCollected & rhs) const;
 
     /**
-     * Perform a negation on the  GarbageCollected value.
+     * Perform a negation on the GarbageCollected value.
      *
      * @return The result of the operation.
      */
     GarbageCollected operator-() const;
+
+    /**
+     * Perform a logical not on the GarbageCollected value.
+     *
+     * @return The result of the operation.
+     */
+    GarbageCollected operator!() const;
 
   protected:
     /**

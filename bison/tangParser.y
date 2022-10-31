@@ -83,6 +83,7 @@
 %token MULTIPLY "*"
 %token DIVIDE "/"
 %token MODULO "%"
+%token EXCLAMATIONPOINT "!"
 %token LPAREN "("
 %token RPAREN ")"
 %token AS "as"
@@ -103,7 +104,7 @@
 // Here, rules are in order of lowest to highest precedence.
 %left "+" "-"
 %left "*" "/" "%"
-%right UMINUS AS
+%right UMINUS AS "!"
 
 // Code sections.
 // https://www.gnu.org/software/bison/manual/bison.html#g_t_0025code-Summary
@@ -123,11 +124,11 @@ namespace Tang {
 #include "tangScanner.hpp"
 #include "tangParser.hpp"
 #include "location.hh"
+#include "astNodeUnary.hpp"
 #include "astNodeBinary.hpp"
 #include "astNodeFloat.hpp"
 #include "astNodeInteger.hpp"
 #include "astNodeBoolean.hpp"
-#include "astNodeNegative.hpp"
 #include "astNodeCastInteger.hpp"
 #include "astNodeCastFloat.hpp"
 #include "astNodeCastBoolean.hpp"
@@ -202,7 +203,11 @@ expression
     }
   | "-" expression %prec UMINUS
     {
-      $$ = std::make_shared<AstNodeNegative>($2, @1);
+      $$ = std::make_shared<AstNodeUnary>(AstNodeUnary::Negative, $2, @1);
+    }
+  | "!" expression
+    {
+      $$ = std::make_shared<AstNodeUnary>(AstNodeUnary::Not, $2, @1);
     }
   | "(" expression ")"
     {

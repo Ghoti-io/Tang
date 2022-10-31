@@ -40,6 +40,11 @@ GarbageCollected GarbageCollected::operator-() const {
   return result;
 }
 
+GarbageCollected GarbageCollected::operator!() const {
+  auto result = this->ref->__not();
+  return result;
+}
+
 GarbageCollected GarbageCollected::operator*(const GarbageCollected & rhs) const {
   auto result = this->ref->__multiply(rhs);
   return result;

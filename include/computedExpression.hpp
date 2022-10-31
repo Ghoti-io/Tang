@@ -122,6 +122,13 @@ namespace Tang {
       virtual GarbageCollected __negative() const;
 
       /**
+       * Compute the logical not of this value.
+       *
+       * @return The result of the operation.
+       */
+      virtual GarbageCollected __not() const;
+
+      /**
        * Perform a type cast to integer.
        *
        * @return The result of the the operation.

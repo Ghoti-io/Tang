@@ -14,6 +14,7 @@ namespace Tang {
     DIVIDE,   ///< Pop rhs, pop lhs, push lhs / rhs
     MODULO,   ///< Pop rhs, pop lhs, push lhs % rhs
     NEGATIVE, ///< Pop val, push negative val
+    NOT,      ///< Pop val, push logical not of val
     CASTINTEGER, ///< Pop a val, typecast to int, push
     CASTFLOAT,   ///< Pop a val, typecast to float, push
     CASTBOOLEAN, ///< Pop a val, typecast to boolean, push

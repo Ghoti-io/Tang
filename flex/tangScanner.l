@@ -144,6 +144,9 @@ using namespace std;
   \) {
     return Tang::TangParser::make_RPAREN(Tang::location(location));
   }
+  \! {
+    return Tang::TangParser::make_EXCLAMATIONPOINT(Tang::location(location));
+  }
   as {
     return Tang::TangParser::make_AS(Tang::location(location));
   }

@@ -84,6 +84,11 @@ string Program::dumpBytecode() const {
         ++pc;
         break;
       }
+      case Opcode::NOT: {
+        out << "NOT";
+        ++pc;
+        break;
+      }
       case Opcode::CASTINTEGER: {
         out << "CASTINTEGER";
         ++pc;

@@ -121,6 +121,14 @@ Program& Program::execute() {
         ++pc;
         break;
       }
+      case Opcode::NOT: {
+        STACKCHECK(1);
+        auto operand = stack.back();
+        stack.pop_back();
+        stack.push_back(!operand);
+        ++pc;
+        break;
+      }
       case Opcode::CASTINTEGER: {
         STACKCHECK(1);
         auto operand = stack.back();

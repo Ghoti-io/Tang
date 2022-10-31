@@ -25,6 +25,10 @@ bool ComputedExpressionBoolean::is_equal(const bool & val) const {
   return this->val == val;
 }
 
+GarbageCollected ComputedExpressionBoolean::__not() const {
+  return GarbageCollected::make<ComputedExpressionBoolean>(!this->val);
+}
+
 GarbageCollected ComputedExpressionBoolean::__integer() const {
   return GarbageCollected::make<ComputedExpressionInteger>(this->val ? 1 : 0);
 }

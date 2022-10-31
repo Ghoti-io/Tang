@@ -99,6 +99,10 @@ GarbageCollected ComputedExpressionFloat::__negative() const {
   return GarbageCollected::make<ComputedExpressionFloat>(-this->val);
 }
 
+GarbageCollected ComputedExpressionFloat::__not() const {
+  return GarbageCollected::make<ComputedExpressionBoolean>(!this->val);
+}
+
 GarbageCollected ComputedExpressionFloat::__integer() const {
   return GarbageCollected::make<ComputedExpressionInteger>((int64_t)this->val);
 }

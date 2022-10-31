@@ -238,6 +238,23 @@ TEST(Expression, Boolean) {
   EXPECT_EQ(*p2.execute().getResult(), false);
 }
 
+TEST(Expression, Not) {
+  auto p1 = TangBase().compileScript("!true");
+  EXPECT_EQ(*p1.execute().getResult(), false);
+  auto p2 = TangBase().compileScript("!false");
+  EXPECT_EQ(*p2.execute().getResult(), true);
+  auto p3 = TangBase().compileScript("!3");
+  EXPECT_EQ(*p3.execute().getResult(), false);
+  auto p4 = TangBase().compileScript("!0");
+  EXPECT_EQ(*p4.execute().getResult(), true);
+  auto p5 = TangBase().compileScript("!3.");
+  EXPECT_EQ(*p5.execute().getResult(), false);
+  auto p6 = TangBase().compileScript("!0.");
+  EXPECT_EQ(*p6.execute().getResult(), true);
+  auto p7 = TangBase().compileScript("!-3");
+  EXPECT_EQ(*p7.execute().getResult(), false);
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
