@@ -20,6 +20,12 @@ string AstNodeBlock::dump(string indent) const {
   return out;
 }
 
+void AstNodeBlock::compileIdentifiers(Program & program) const {
+  for (auto x : this->statements) {
+    x->compileIdentifiers(program);
+  }
+}
+
 void AstNodeBlock::compile(Tang::Program & program) const {
   if (this->statements.size()) {
     // Compile all but the last statement, adding POP after the statement.

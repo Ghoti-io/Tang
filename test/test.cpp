@@ -482,6 +482,15 @@ TEST(CodeBlock, Statements) {
   EXPECT_EQ(*p3.execute().getResult(), 42);
 }
 
+TEST(Assign, Identifier) {
+  auto p1 = TangBase().compileScript("a = 1; a;");
+  EXPECT_EQ(*p1.execute().getResult(), 1);
+  auto p2 = TangBase().compileScript("a = false; !a;");
+  EXPECT_EQ(*p2.execute().getResult(), true);
+  auto p3 = TangBase().compileScript("a = b = 1; a = a + b; a;");
+  EXPECT_EQ(*p3.execute().getResult(), 2);
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

@@ -24,3 +24,5 @@ shared_ptr<AstNode> AstNode::makeCopy() const {
   return shared_ptr<AstNode>(new AstNode(this->location));
 }
 
+void AstNode::compileIdentifiers([[maybe_unused]] Program & program) const {}
+

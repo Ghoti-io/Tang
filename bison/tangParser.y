@@ -75,9 +75,11 @@
 // Declare tokens (as opposed to the old, %union approach.
 // https://www.gnu.org/software/bison/manual/bison.html#index-_0025token
 %token EOF 0 "end of code"
-%token < int64_t > INTEGER "integer literal"
-%token < long double > FLOAT "float literal"
-%token < bool > BOOLEAN "boolean literal"
+%token <int64_t> INTEGER "integer literal"
+%token <long double> FLOAT "float literal"
+%token <bool> BOOLEAN "boolean literal"
+%token <std::string> IDENTIFIER "identifier"
+%token ASSIGN "="
 %token PLUS "+"
 %token MINUS "-"
 %token MULTIPLY "*"
@@ -112,6 +114,7 @@
 // Notice that the order is reversed from:
 // https://en.cppreference.com/w/cpp/language/operator_precedence
 // Here, rules are in order of lowest to highest precedence.
+%right "="
 %left "==" "!="
 %left "<" "<=" ">" ">="
 %left "+" "-"
@@ -137,9 +140,11 @@ namespace Tang {
 #include "tangParser.hpp"
 #include "location.hh"
 #include "astNodeUnary.hpp"
+#include "astNodeAssign.hpp"
 #include "astNodeBinary.hpp"
 #include "astNodeFloat.hpp"
 #include "astNodeNull.hpp"
+#include "astNodeIdentifier.hpp"
 #include "astNodeInteger.hpp"
 #include "astNodeBoolean.hpp"
 #include "astNodeCast.hpp"
@@ -210,6 +215,10 @@ expression
     {
       $$ = std::make_shared<Tang::AstNodeNull>(@1);
     }
+  | IDENTIFIER
+    {
+      $$ = std::make_shared<Tang::AstNodeIdentifier>($1, @1);
+    }
   | INTEGER
     {
       $$ = std::make_shared<Tang::AstNodeInteger>($1, @1);
@@ -220,6 +229,10 @@ expression
     }
   | BOOLEAN {
       $$ = std::make_shared<AstNodeBoolean>($1, @1);
+    }
+  | expression "=" expression
+    {
+      $$ = std::make_shared<AstNodeAssign>($1, $3, @2);
     }
   | expression "+" expression
     {

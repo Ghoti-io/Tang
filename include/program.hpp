@@ -9,6 +9,7 @@
 #include <string>
 #include <optional>
 #include <vector>
+#include <map>
 #include "astNode.hpp"
 #include "error.hpp"
 #include "computedExpression.hpp"
@@ -117,6 +118,11 @@ namespace Tang {
      * @return The current Program object.
      */
     Program & execute();
+
+    /**
+     * Stack of mappings of identifiers to their stack locations.
+     */
+    std::vector<std::map<std::string, size_t>> identifierStack;
 
   private:
     /**

@@ -41,6 +41,18 @@ string Program::dumpBytecode() const {
         ++pc;
         break;
       }
+      case Opcode::PEEK: {
+        DUMPPROGRAMCHECK(1);
+        out << "PEEK" << this->bytecode[pc + 1];
+        pc += 2;
+        break;
+      }
+      case Opcode::POKE: {
+        DUMPPROGRAMCHECK(1);
+        out << "POKE" << this->bytecode[pc + 1];
+        pc += 2;
+        break;
+      }
       case Opcode::NULLVAL: {
         out << "NULLVAL";
         ++pc;

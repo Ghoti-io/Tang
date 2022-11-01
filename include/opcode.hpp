@@ -6,6 +6,8 @@
 namespace Tang {
   enum class Opcode {
     POP,      ///< Pop a val
+    PEEK,     ///< Stack # (from fp): push val from stack #
+    POKE,     ///< Stack # (from fp): Copy a val, store @ stack #
     NULLVAL,  ///< Push a null onto the stack
     INTEGER,  ///< Push an integer onto the stack
     FLOAT,    ///< Push a floating point number onto the stack

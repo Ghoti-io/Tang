@@ -126,6 +126,9 @@ using namespace std;
     long double number = strtold(yytext, 0);
     return Tang::TangParser::make_FLOAT(number, Tang::location(location));
   }
+  = {
+    return Tang::TangParser::make_ASSIGN(Tang::location(location));
+  }
   \+ {
     return Tang::TangParser::make_PLUS(Tang::location(location));
   }
@@ -173,6 +176,9 @@ using namespace std;
   }
   ; {
     return Tang::TangParser::make_SEMICOLON(Tang::location(location));
+  }
+  [a-zA-Z_][a-zA-Z0-9_]* {
+    return Tang::TangParser::make_IDENTIFIER(yytext, Tang::location(location));
   }
   . {}
   \n {}

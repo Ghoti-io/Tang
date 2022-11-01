@@ -5,6 +5,7 @@
 
 #include <sstream>
 #include "program.hpp"
+#include "opcode.hpp"
 #include "tangScanner.hpp"
 #include "tangParser.hpp"
 #include "computedExpressionError.hpp"
@@ -83,6 +84,18 @@ void Program::parse() {
 }
 
 void Program::compile() {
+  // Prepare the identifier mapping stack with an empty map.
+  this->identifierStack.push_back(map<string,size_t>{});
+
+  // Gather all of the identifiers in the current scope into the current map.
+  this->ast->compileIdentifiers(*this);
+
+  // Reserve spaces on the stack for each variable.
+  for ([[maybe_unused]] const auto & x : this->identifierStack.back()) {
+    this->bytecode.push_back((uint64_t)Opcode::NULLVAL);
+  }
+
+  // Compile the program.
   this->ast->compile(*this);
 }
 

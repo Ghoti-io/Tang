@@ -57,6 +57,13 @@ namespace Tang {
      *   AstNode.
      */
     virtual std::shared_ptr<AstNode> makeCopy() const;
+
+    /**
+     * Compile a list of all variables in the scope.
+     *
+     * @param program The Tang::Program that is being compiled.
+     */
+    virtual void compileIdentifiers(Program & program) const;
   };
 }
 

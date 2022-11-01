@@ -52,6 +52,22 @@ Program& Program::execute() {
         ++pc;
         break;
       }
+      case Opcode::PEEK: {
+        EXECUTEPROGRAMCHECK(1);
+        auto position = this->bytecode[pc + 1];
+        STACKCHECK(position);
+        stack.push_back(stack[fp + position]);
+        pc += 2;
+        break;
+      }
+      case Opcode::POKE: {
+        EXECUTEPROGRAMCHECK(1);
+        auto position = this->bytecode[pc + 1];
+        STACKCHECK(position);
+        stack[fp + position] = stack.back();
+        pc += 2;
+        break;
+      }
       case Opcode::NULLVAL: {
         stack.push_back(GarbageCollected::make<ComputedExpressionNull>());
         ++pc;
