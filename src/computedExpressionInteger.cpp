@@ -3,6 +3,7 @@
  * Define the Tang::ComputedExpressionInteger class.
  */
 
+#include "computedExpressionNull.hpp"
 #include "computedExpressionInteger.hpp"
 #include "computedExpressionFloat.hpp"
 #include "computedExpressionBoolean.hpp"
@@ -140,6 +141,10 @@ GarbageCollected ComputedExpressionInteger::__equal(const GarbageCollected & rhs
     auto & rhsConv = static_cast<ComputedExpressionFloat&>(*rhs);
     return GarbageCollected::make<ComputedExpressionBoolean>(
         this->val == rhsConv.val);
+  }
+
+  if (typeid(*rhs) == typeid(ComputedExpressionNull)) {
+    return GarbageCollected::make<ComputedExpressionBoolean>(false);
   }
 
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to compare these values."});

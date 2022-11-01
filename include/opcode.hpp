@@ -6,6 +6,7 @@
 namespace Tang {
   enum class Opcode {
     POP,      ///< Pop a val
+    NULLVAL,  ///< Push a null onto the stack
     INTEGER,  ///< Push an integer onto the stack
     FLOAT,    ///< Push a floating point number onto the stack
     BOOLEAN,  ///< Push a boolean onto the stack

@@ -31,6 +31,10 @@ bool ComputedExpression::is_equal([[maybe_unused]] const bool & val) const {
   return false;
 }
 
+bool ComputedExpression::is_equal([[maybe_unused]] const nullptr_t & val) const {
+  return false;
+}
+
 bool ComputedExpression::is_equal([[maybe_unused]] const Error & val) const {
   return false;
 }

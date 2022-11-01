@@ -7,6 +7,7 @@
 #include "program.hpp"
 #include "opcode.hpp"
 #include "computedExpressionError.hpp"
+#include "computedExpressionNull.hpp"
 #include "computedExpressionInteger.hpp"
 #include "computedExpressionFloat.hpp"
 #include "computedExpressionBoolean.hpp"
@@ -48,6 +49,11 @@ Program& Program::execute() {
       case Opcode::POP: {
         STACKCHECK(1);
         stack.pop_back();
+        ++pc;
+        break;
+      }
+      case Opcode::NULLVAL: {
+        stack.push_back(GarbageCollected::make<ComputedExpressionNull>());
         ++pc;
         break;
       }

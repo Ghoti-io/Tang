@@ -41,6 +41,11 @@ string Program::dumpBytecode() const {
         ++pc;
         break;
       }
+      case Opcode::NULLVAL: {
+        out << "NULLVAL";
+        ++pc;
+        break;
+      }
       case Opcode::INTEGER: {
         DUMPPROGRAMCHECK(1);
         out << "INTEGER" << this->bytecode[pc + 1];

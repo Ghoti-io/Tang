@@ -11,6 +11,12 @@
 using namespace std;
 using namespace Tang;
 
+
+TEST(Declare, Null) {
+  auto p1 = TangBase().compileScript("null");
+  EXPECT_EQ(*p1.execute().getResult(), nullptr);
+}
+
 TEST(Declare, Integer) {
   auto p1 = TangBase().compileScript("3");
   EXPECT_EQ(*p1.execute().getResult(), 3);
@@ -418,6 +424,20 @@ TEST(Expression, Equal) {
   EXPECT_EQ(*p14.execute().getResult(), Error{"Don't know how to compare these values."});
   auto p15 = TangBase().compileScript("false == true");
   EXPECT_EQ(*p15.execute().getResult(), false);
+  auto p16 = TangBase().compileScript("true == true");
+  EXPECT_EQ(*p16.execute().getResult(), true);
+  auto p17 = TangBase().compileScript("false == false");
+  EXPECT_EQ(*p17.execute().getResult(), true);
+  auto p18 = TangBase().compileScript("null == null");
+  EXPECT_EQ(*p18.execute().getResult(), true);
+  auto p19 = TangBase().compileScript("null == 0");
+  EXPECT_EQ(*p19.execute().getResult(), false);
+  auto p20 = TangBase().compileScript("0 == null");
+  EXPECT_EQ(*p20.execute().getResult(), false);
+  auto p21 = TangBase().compileScript("0. == null");
+  EXPECT_EQ(*p21.execute().getResult(), false);
+  auto p22 = TangBase().compileScript("false == null");
+  EXPECT_EQ(*p22.execute().getResult(), false);
 }
 
 TEST(Expression, NotEqual) {

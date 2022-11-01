@@ -26,6 +26,10 @@ bool GarbageCollected::operator==(const Error & val) const {
   return this->ref && this->ref->is_equal(val);
 }
 
+bool GarbageCollected::operator==(const std::nullptr_t & val) const {
+  return this->ref && this->ref->is_equal(val);
+}
+
 GarbageCollected GarbageCollected::operator+(const GarbageCollected & rhs) const {
   auto result = this->ref->__add(rhs);
   return result;

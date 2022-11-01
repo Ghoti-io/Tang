@@ -75,6 +75,14 @@ namespace Tang {
       virtual bool is_equal(const Error & val) const;
 
       /**
+       * Check whether or not the computed expression is equal to another value.
+       *
+       * @param val The value to compare against.
+       * @return True if equal, false if not.
+       */
+      virtual bool is_equal(const std::nullptr_t & val) const;
+
+      /**
        * Compute the result of adding this value and the supplied value.
        *
        * @param rhs The GarbageCollected value to add to this.

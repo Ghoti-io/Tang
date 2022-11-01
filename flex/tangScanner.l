@@ -100,6 +100,9 @@ using namespace std;
   // (Note: there is no code yet, this is just a placeholder)
 
 <INITIAL,SCRIPT>{
+  null {
+    return Tang::TangParser::make_NULL(Tang::location(location));
+  }
   int {
     return Tang::TangParser::make_CASTINT(Tang::location(location));
   }

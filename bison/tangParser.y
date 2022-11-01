@@ -93,6 +93,7 @@
 %token EQUALCOMPARE "=="
 %token NOTEQUAL "!="
 %token AS "as"
+%token NULL "null"
 %token CASTINT "int"
 %token CASTFLOAT "float"
 %token CASTBOOLEAN "boolean"
@@ -138,6 +139,7 @@ namespace Tang {
 #include "astNodeUnary.hpp"
 #include "astNodeBinary.hpp"
 #include "astNodeFloat.hpp"
+#include "astNodeNull.hpp"
 #include "astNodeInteger.hpp"
 #include "astNodeBoolean.hpp"
 #include "astNodeCast.hpp"
@@ -204,7 +206,11 @@ statement
 
 // `expression` represents a computable value.
 expression
-  : INTEGER
+  : NULL
+    {
+      $$ = std::make_shared<Tang::AstNodeNull>(@1);
+    }
+  | INTEGER
     {
       $$ = std::make_shared<Tang::AstNodeInteger>($1, @1);
     }
