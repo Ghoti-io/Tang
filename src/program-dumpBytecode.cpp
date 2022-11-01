@@ -36,6 +36,11 @@ string Program::dumpBytecode() const {
       << setw(opcodeWidth) << setfill(' ') << left;
 
     switch((Opcode)this->bytecode[pc]) {
+      case Opcode::POP: {
+        out << "POP";
+        ++pc;
+        break;
+      }
       case Opcode::INTEGER: {
         DUMPPROGRAMCHECK(1);
         out << "INTEGER" << this->bytecode[pc + 1];

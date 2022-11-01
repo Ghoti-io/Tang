@@ -45,6 +45,12 @@ Program& Program::execute() {
 
   while (pc < this->bytecode.size()) {
     switch ((Opcode)this->bytecode[pc]) {
+      case Opcode::POP: {
+        STACKCHECK(1);
+        stack.pop_back();
+        ++pc;
+        break;
+      }
       case Opcode::INTEGER: {
         EXECUTEPROGRAMCHECK(1);
         stack.push_back(GarbageCollected::make<ComputedExpressionInteger>((int64_t)this->bytecode[pc + 1]));

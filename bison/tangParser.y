@@ -96,11 +96,14 @@
 %token CASTINT "int"
 %token CASTFLOAT "float"
 %token CASTBOOLEAN "boolean"
+%token SEMICOLON ";"
 
 // Any %type declarations of non-terminals.
 // https://www.gnu.org/software/bison/manual/bison.html#index-_0025type
 %type <std::shared_ptr<Tang::AstNode>> program
 %type <std::shared_ptr<Tang::AstNode>> expression
+%type <std::vector<std::shared_ptr<Tang::AstNode>>> statements
+%type <std::shared_ptr<Tang::AstNode>> statement
 
 // Precedence rules.
 // For guidance, see:
@@ -138,6 +141,7 @@ namespace Tang {
 #include "astNodeInteger.hpp"
 #include "astNodeBoolean.hpp"
 #include "astNodeCast.hpp"
+#include "astNodeBlock.hpp"
 
 // We must provide the yylex() function.
 // yylex() arguments are defined in the bison .y file.
@@ -170,8 +174,32 @@ program
     {
       ast = $1;
     }
+  | statements
+    {
+      ast = std::make_shared<AstNodeBlock>($1, @1);
+    }
   | EOF
     {}
+  ;
+
+// `statements` represent a sequence of `statement` expressions.
+statements
+  : statement
+    {
+      vector<shared_ptr<AstNode>> s{};
+      s.push_back($1);
+      $$ = s;
+    }
+  | statements statement
+    {
+      $1.push_back($2);
+      $$ = $1;
+    }
+  ;
+
+// `statement` represents an `expression`
+statement
+  : expression ";"
   ;
 
 // `expression` represents a computable value.

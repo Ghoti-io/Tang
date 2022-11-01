@@ -453,6 +453,15 @@ TEST(Expression, NotEqual) {
   EXPECT_EQ(*p15.execute().getResult(), true);
 }
 
+TEST(CodeBlock, Statements) {
+  auto p1 = TangBase().compileScript("2;");
+  EXPECT_EQ(*p1.execute().getResult(), 2);
+  auto p2 = TangBase().compileScript("2; true;");
+  EXPECT_EQ(*p2.execute().getResult(), true);
+  auto p3 = TangBase().compileScript("2; ((1 + 2.3 + 3) < -7) == true; 42;");
+  EXPECT_EQ(*p3.execute().getResult(), 42);
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
