@@ -1,11 +1,13 @@
 var dir_68267d1309a1af8e8297ef4c3efbcdba =
 [
     [ "astNode.cpp", "astNode_8cpp.html", null ],
+    [ "astNodeAssign.cpp", "astNodeAssign_8cpp.html", null ],
     [ "astNodeBinary.cpp", "astNodeBinary_8cpp.html", null ],
     [ "astNodeBlock.cpp", "astNodeBlock_8cpp.html", null ],
     [ "astNodeBoolean.cpp", "astNodeBoolean_8cpp.html", null ],
     [ "astNodeCast.cpp", "astNodeCast_8cpp.html", null ],
     [ "astNodeFloat.cpp", "astNodeFloat_8cpp.html", null ],
+    [ "astNodeIdentifier.cpp", "astNodeIdentifier_8cpp.html", null ],
     [ "astNodeInteger.cpp", "astNodeInteger_8cpp.html", null ],
     [ "astNodeNull.cpp", "astNodeNull_8cpp.html", null ],
     [ "astNodeUnary.cpp", "astNodeUnary_8cpp.html", null ],

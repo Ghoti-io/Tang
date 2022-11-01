@@ -7,6 +7,7 @@ var classTang_1_1AstNodeCast =
     ] ],
     [ "AstNodeCast", "classTang_1_1AstNodeCast.html#a36a56430aa8f8cd4facbf7df1fa50bdd", null ],
     [ "compile", "classTang_1_1AstNodeCast.html#af911e11e47869acdd1f6b8fabd9555e2", null ],
+    [ "compileIdentifiers", "classTang_1_1AstNodeCast.html#ae79b11a4c5dff87c2fd72bcc8eb5232d", null ],
     [ "dump", "classTang_1_1AstNodeCast.html#abc4a075ea319b747411aec57a61735eb", null ],
     [ "makeCopy", "classTang_1_1AstNodeCast.html#ab36b44fe01ff2e37d638e6be9cf2f7fb", null ],
     [ "location", "classTang_1_1AstNodeCast.html#a41e8328d5a342163a5aabcc4cb8f1b5e", null ]

@@ -3,6 +3,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "astNode.hpp", "astNode_8hpp.html", [
       [ "AstNode", "classTang_1_1AstNode.html", "classTang_1_1AstNode" ]
     ] ],
+    [ "astNodeAssign.hpp", "astNodeAssign_8hpp.html", [
+      [ "AstNodeAssign", "classTang_1_1AstNodeAssign.html", "classTang_1_1AstNodeAssign" ]
+    ] ],
     [ "astNodeBinary.hpp", "astNodeBinary_8hpp.html", [
       [ "AstNodeBinary", "classTang_1_1AstNodeBinary.html", "classTang_1_1AstNodeBinary" ]
     ] ],
@@ -17,6 +20,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     ] ],
     [ "astNodeFloat.hpp", "astNodeFloat_8hpp.html", [
       [ "AstNodeFloat", "classTang_1_1AstNodeFloat.html", "classTang_1_1AstNodeFloat" ]
+    ] ],
+    [ "astNodeIdentifier.hpp", "astNodeIdentifier_8hpp.html", [
+      [ "AstNodeIdentifier", "classTang_1_1AstNodeIdentifier.html", "classTang_1_1AstNodeIdentifier" ]
     ] ],
     [ "astNodeInteger.hpp", "astNodeInteger_8hpp.html", [
       [ "AstNodeInteger", "classTang_1_1AstNodeInteger.html", "classTang_1_1AstNodeInteger" ]

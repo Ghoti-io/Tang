@@ -15,6 +15,7 @@ var classTang_1_1AstNodeBinary =
     ] ],
     [ "AstNodeBinary", "classTang_1_1AstNodeBinary.html#adedfe569adbdc47097f8129b95c000dd", null ],
     [ "compile", "classTang_1_1AstNodeBinary.html#a7955b76c5e7bdf92aa86f8c58ce10473", null ],
+    [ "compileIdentifiers", "classTang_1_1AstNodeBinary.html#ab162edc6f175b438c16416e97fdc2d7d", null ],
     [ "dump", "classTang_1_1AstNodeBinary.html#a16506f66e9f45c069d6a280ba176e2a7", null ],
     [ "makeCopy", "classTang_1_1AstNodeBinary.html#a59db65e95e47c3038975047ea1096824", null ],
     [ "location", "classTang_1_1AstNodeBinary.html#a41e8328d5a342163a5aabcc4cb8f1b5e", null ]

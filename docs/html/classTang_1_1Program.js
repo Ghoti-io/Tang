@@ -16,5 +16,6 @@ var classTang_1_1Program =
     [ "getResult", "classTang_1_1Program.html#a84b2e5e25f57eea224d1c04f1f3741eb", null ],
     [ "operator=", "classTang_1_1Program.html#a012d63f78eaca32fea46ad0f8b39f5d2", null ],
     [ "operator=", "classTang_1_1Program.html#a5c87b50de0045d19ad46311af5a29c03", null ],
+    [ "identifierStack", "classTang_1_1Program.html#a440bf2cdcd08fe6b2b0c2c19c22fa276", null ],
     [ "out", "classTang_1_1Program.html#a81bee7c0545c053eee44d4381295e193", null ]
 ];

@@ -144,6 +144,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a38aa33f11d2c116aad337e6613cecf99"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeUnary.html#a38aa33f11d2c116aad337e6613cecf99">makeCopy</a> () const override</td></tr>
 <tr class="memdesc:a38aa33f11d2c116aad337e6613cecf99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide a copy of the <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> (recursively, if appropriate).  <a href="classTang_1_1AstNodeUnary.html#a38aa33f11d2c116aad337e6613cecf99">More...</a><br /></td></tr>
 <tr class="separator:a38aa33f11d2c116aad337e6613cecf99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae79b11a4c5dff87c2fd72bcc8eb5232d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#ae79b11a4c5dff87c2fd72bcc8eb5232d">compileIdentifiers</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program) const</td></tr>
+<tr class="memdesc:ae79b11a4c5dff87c2fd72bcc8eb5232d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a list of all variables in the scope.  <a href="classTang_1_1AstNode.html#ae79b11a4c5dff87c2fd72bcc8eb5232d">More...</a><br /></td></tr>
+<tr class="separator:ae79b11a4c5dff87c2fd72bcc8eb5232d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -223,6 +226,42 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae79b11a4c5dff87c2fd72bcc8eb5232d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae79b11a4c5dff87c2fd72bcc8eb5232d">&#9670;&nbsp;</a></span>compileIdentifiers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AstNode::compileIdentifiers </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classTang_1_1Program.html">Program</a> &amp;&#160;</td>
+          <td class="paramname"><em>program</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compile a list of all variables in the scope. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">program</td><td>The <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a> that is being compiled. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="classTang_1_1AstNodeIdentifier.html#a0718a134e6850888992b46099c8ceb11">Tang::AstNodeIdentifier</a>, <a class="el" href="classTang_1_1AstNodeBlock.html#a0694378503afba57ba4a49c7798cd6ea">Tang::AstNodeBlock</a>, <a class="el" href="classTang_1_1AstNodeBinary.html#ab162edc6f175b438c16416e97fdc2d7d">Tang::AstNodeBinary</a>, and <a class="el" href="classTang_1_1AstNodeAssign.html#ac79bca0819b3e7bdfa58d1aa411eb744">Tang::AstNodeAssign</a>.</p>
+
+</div>
+</div>
 <a id="a38aa33f11d2c116aad337e6613cecf99"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a38aa33f11d2c116aad337e6613cecf99">&#9670;&nbsp;</a></span>makeCopy()</h2>
 

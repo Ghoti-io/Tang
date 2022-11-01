@@ -1,11 +1,13 @@
 var hierarchy =
 [
     [ "Tang::AstNode", "classTang_1_1AstNode.html", [
+      [ "Tang::AstNodeAssign", "classTang_1_1AstNodeAssign.html", null ],
       [ "Tang::AstNodeBinary", "classTang_1_1AstNodeBinary.html", null ],
       [ "Tang::AstNodeBlock", "classTang_1_1AstNodeBlock.html", null ],
       [ "Tang::AstNodeBoolean", "classTang_1_1AstNodeBoolean.html", null ],
       [ "Tang::AstNodeCast", "classTang_1_1AstNodeCast.html", null ],
       [ "Tang::AstNodeFloat", "classTang_1_1AstNodeFloat.html", null ],
+      [ "Tang::AstNodeIdentifier", "classTang_1_1AstNodeIdentifier.html", null ],
       [ "Tang::AstNodeInteger", "classTang_1_1AstNodeInteger.html", null ],
       [ "Tang::AstNodeNull", "classTang_1_1AstNodeNull.html", null ],
       [ "Tang::AstNodeUnary", "classTang_1_1AstNodeUnary.html", null ]

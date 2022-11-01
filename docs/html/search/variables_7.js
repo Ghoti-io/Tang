@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['recycle_342',['recycle',['../classTang_1_1GarbageCollected.html#aedb9cabafac92d1ddb26610feaf36224',1,'Tang::GarbageCollected']]],
-  ['ref_343',['ref',['../classTang_1_1GarbageCollected.html#af9e17340a7d652cc0af584edf442a132',1,'Tang::GarbageCollected']]]
+  ['name_362',['name',['../classTang_1_1AstNodeIdentifier.html#a5179f37a6283f94c7093b573a12b3bd8',1,'Tang::AstNodeIdentifier']]]
 ];
