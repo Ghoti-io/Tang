@@ -2,6 +2,7 @@ var opcode_8hpp =
 [
     [ "Opcode", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04", [
       [ "POP", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04aefdb39a4c7286afcecf0e8a7435fce6a", null ],
+      [ "NULLVAL", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ad4184f26935a3ca6e6704e32771f53be", null ],
       [ "INTEGER", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a5d5cd46919fa987731fb2edefe0f2a0c", null ],
       [ "FLOAT", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ae738c26bf4ce1037fa81b039a915cbf6", null ],
       [ "BOOLEAN", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ac48d5da12d702e73d6966069f2687376", null ],

@@ -96,6 +96,7 @@ $(document).ready(function(){initNavTree('program-execute_8cpp.html',''); initRe
 <code>#include &quot;<a class="el" href="program_8hpp_source.html">program.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="opcode_8hpp_source.html">opcode.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="computedExpressionError_8hpp_source.html">computedExpressionError.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="computedExpressionNull_8hpp_source.html">computedExpressionNull.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="computedExpressionInteger_8hpp_source.html">computedExpressionInteger.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="computedExpressionFloat_8hpp_source.html">computedExpressionFloat.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="computedExpressionBoolean_8hpp_source.html">computedExpressionBoolean.hpp</a>&quot;</code><br />
@@ -104,29 +105,30 @@ Include dependency graph for program-execute.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="program-execute_8cpp__incl.png" border="0" usemap="#asrc_2program-execute_8cpp" alt=""/></div>
 <map name="asrc_2program-execute_8cpp" id="asrc_2program-execute_8cpp">
-<area shape="rect" title="Define the Tang::Program::execute method." alt="" coords="396,5,578,32"/>
-<area shape="rect" title=" " alt="" coords="58,80,97,107"/>
-<area shape="rect" href="program_8hpp.html" title="Declare the Tang::Program class used to compile and execute source code." alt="" coords="121,80,226,107"/>
-<area shape="rect" href="opcode_8hpp.html" title="Declare the Opcodes used in the Bytecode representation of a program." alt="" coords="250,80,348,107"/>
-<area shape="rect" href="computedExpressionError_8hpp.html" title="Declare the Tang::ComputedExpressionError class." alt="" coords="1134,80,1350,107"/>
-<area shape="rect" href="computedExpressionInteger_8hpp.html" title="Declare the Tang::ComputedExpressionInteger class." alt="" coords="372,80,602,107"/>
-<area shape="rect" href="computedExpressionFloat_8hpp.html" title="Declare the Tang::ComputedExpressionFloat class." alt="" coords="627,80,846,107"/>
-<area shape="rect" href="computedExpressionBoolean_8hpp.html" title="Declare the Tang::ComputedExpressionBoolean class." alt="" coords="870,80,1109,107"/>
-<area shape="rect" title=" " alt="" coords="240,453,299,480"/>
-<area shape="rect" title=" " alt="" coords="43,155,118,181"/>
+<area shape="rect" title="Define the Tang::Program::execute method." alt="" coords="490,5,673,32"/>
+<area shape="rect" title=" " alt="" coords="39,80,78,107"/>
+<area shape="rect" href="program_8hpp.html" title="Declare the Tang::Program class used to compile and execute source code." alt="" coords="102,80,207,107"/>
+<area shape="rect" href="opcode_8hpp.html" title="Declare the Opcodes used in the Bytecode representation of a program." alt="" coords="231,80,329,107"/>
+<area shape="rect" href="computedExpressionError_8hpp.html" title="Declare the Tang::ComputedExpressionError class." alt="" coords="1351,80,1567,107"/>
+<area shape="rect" href="computedExpressionNull_8hpp.html" title="Declare the Tang::ComputedExpressionNull class." alt="" coords="353,80,565,107"/>
+<area shape="rect" href="computedExpressionInteger_8hpp.html" title="Declare the Tang::ComputedExpressionInteger class." alt="" coords="589,80,819,107"/>
+<area shape="rect" href="computedExpressionFloat_8hpp.html" title="Declare the Tang::ComputedExpressionFloat class." alt="" coords="844,80,1063,107"/>
+<area shape="rect" href="computedExpressionBoolean_8hpp.html" title="Declare the Tang::ComputedExpressionBoolean class." alt="" coords="1087,80,1326,107"/>
+<area shape="rect" title=" " alt="" coords="280,453,339,480"/>
+<area shape="rect" title=" " alt="" coords="43,155,117,181"/>
 <area shape="rect" title=" " alt="" coords="142,155,205,181"/>
-<area shape="rect" href="astNode_8hpp.html" title="Declare the Tang::AstNode base class." alt="" coords="230,155,334,181"/>
-<area shape="rect" href="error_8hpp.html" title="Declare the Tang::Error class used to describe syntax and runtime errors." alt="" coords="390,304,470,331"/>
-<area shape="rect" href="computedExpression_8hpp.html" title="Declare the Tang::ComputedExpression base class." alt="" coords="534,155,720,181"/>
-<area shape="rect" href="garbageCollected_8hpp.html" title="Declare the Tang::GarbageCollected class." alt="" coords="545,229,709,256"/>
-<area shape="rect" title=" " alt="" coords="222,229,299,256"/>
-<area shape="rect" href="location_8hh.html" title="Define the Tang ::location class." alt="" coords="222,379,317,405"/>
-<area shape="rect" title=" " alt="" coords="450,453,530,480"/>
-<area shape="rect" title=" " alt="" coords="393,379,469,405"/>
-<area shape="rect" title=" " alt="" coords="734,229,800,256"/>
-<area shape="rect" title=" " alt="" coords="545,304,632,331"/>
-<area shape="rect" href="singletonObjectPool_8hpp.html" title="Declare the Tang::SingletonObjectPool class." alt="" coords="656,304,836,331"/>
-<area shape="rect" title=" " alt="" coords="714,379,778,405"/>
+<area shape="rect" href="astNode_8hpp.html" title="Declare the Tang::AstNode base class." alt="" coords="229,155,333,181"/>
+<area shape="rect" href="error_8hpp.html" title="Declare the Tang::Error class used to describe syntax and runtime errors." alt="" coords="429,304,509,331"/>
+<area shape="rect" href="computedExpression_8hpp.html" title="Declare the Tang::ComputedExpression base class." alt="" coords="573,155,760,181"/>
+<area shape="rect" href="garbageCollected_8hpp.html" title="Declare the Tang::GarbageCollected class." alt="" coords="585,229,749,256"/>
+<area shape="rect" title=" " alt="" coords="243,229,320,256"/>
+<area shape="rect" href="location_8hh.html" title="Define the Tang ::location class." alt="" coords="262,379,357,405"/>
+<area shape="rect" title=" " alt="" coords="489,453,569,480"/>
+<area shape="rect" title=" " alt="" coords="433,379,509,405"/>
+<area shape="rect" title=" " alt="" coords="773,229,840,256"/>
+<area shape="rect" title=" " alt="" coords="585,304,671,331"/>
+<area shape="rect" href="singletonObjectPool_8hpp.html" title="Declare the Tang::SingletonObjectPool class." alt="" coords="695,304,875,331"/>
+<area shape="rect" title=" " alt="" coords="753,379,817,405"/>
 </map>
 </div>
 </div><table class="memberdecls">

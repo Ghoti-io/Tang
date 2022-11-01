@@ -18,5 +18,6 @@ var classTang_1_1ComputedExpression =
     [ "is_equal", "classTang_1_1ComputedExpression.html#aa81900aeb157fdb024f1bb0f316b4006", null ],
     [ "is_equal", "classTang_1_1ComputedExpression.html#a5ce6d4bc0128f6aadf72c2f63a70275a", null ],
     [ "is_equal", "classTang_1_1ComputedExpression.html#a4b61cc4d447993bfc96dc37bfd552cef", null ],
+    [ "is_equal", "classTang_1_1ComputedExpression.html#a5287fabf86f19613afb04d5e285c0231", null ],
     [ "makeCopy", "classTang_1_1ComputedExpression.html#abf7820ae7313878aa37573cce35eb613", null ]
 ];

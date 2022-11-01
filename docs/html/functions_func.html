@@ -111,6 +111,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 , <a class="el" href="classTang_1_1ComputedExpressionError.html#a5fd54da21ee14fd6368721685e1ecb51">Tang::ComputedExpressionError</a>
 , <a class="el" href="classTang_1_1ComputedExpressionFloat.html#a9bf88a860f73564e4c90b76321a5ab6f">Tang::ComputedExpressionFloat</a>
 , <a class="el" href="classTang_1_1ComputedExpressionInteger.html#a482daf778794d505964d7adb24bc97e3">Tang::ComputedExpressionInteger</a>
+, <a class="el" href="classTang_1_1ComputedExpressionNull.html#a9aeab7802a28965b999b4b73ee6294d8">Tang::ComputedExpressionNull</a>
 </li>
 <li>__float()
 : <a class="el" href="classTang_1_1ComputedExpression.html#aa91f27a9f03b9a7fb9aa5a79efc3039f">Tang::ComputedExpression</a>
@@ -190,6 +191,9 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>AstNodeInteger()
 : <a class="el" href="classTang_1_1AstNodeInteger.html#a3ba7c23caeda9514580b9f0a57d1a625">Tang::AstNodeInteger</a>
 </li>
+<li>AstNodeNull()
+: <a class="el" href="classTang_1_1AstNodeNull.html#a6e9ad58917355f05f5b9ba20964cbb21">Tang::AstNodeNull</a>
+</li>
 <li>AstNodeUnary()
 : <a class="el" href="classTang_1_1AstNodeUnary.html#ab05ef630c3da6067267226a760ac5973">Tang::AstNodeUnary</a>
 </li>
@@ -209,6 +213,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 , <a class="el" href="classTang_1_1AstNodeCast.html#af911e11e47869acdd1f6b8fabd9555e2">Tang::AstNodeCast</a>
 , <a class="el" href="classTang_1_1AstNodeFloat.html#a5c13853df1e7d853525871349866fe49">Tang::AstNodeFloat</a>
 , <a class="el" href="classTang_1_1AstNodeInteger.html#a9191a01a987682db46530469a0b45048">Tang::AstNodeInteger</a>
+, <a class="el" href="classTang_1_1AstNodeNull.html#a6b935644cd2dacca42c353d1df3da8b9">Tang::AstNodeNull</a>
 , <a class="el" href="classTang_1_1AstNodeUnary.html#a38d4286ebfba6512fc5a48f75739c525">Tang::AstNodeUnary</a>
 </li>
 <li>compileScript()
@@ -226,6 +231,9 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>ComputedExpressionInteger()
 : <a class="el" href="classTang_1_1ComputedExpressionInteger.html#a0abaab0f37a735125e0fe6b440ace14d">Tang::ComputedExpressionInteger</a>
 </li>
+<li>ComputedExpressionNull()
+: <a class="el" href="classTang_1_1ComputedExpressionNull.html#acdc0473635c79212cd43b147ac461dcb">Tang::ComputedExpressionNull</a>
+</li>
 </ul>
 
 
@@ -238,12 +246,14 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 , <a class="el" href="classTang_1_1AstNodeCast.html#abc4a075ea319b747411aec57a61735eb">Tang::AstNodeCast</a>
 , <a class="el" href="classTang_1_1AstNodeFloat.html#a8305f0f49aa635b9f9035a175e162511">Tang::AstNodeFloat</a>
 , <a class="el" href="classTang_1_1AstNodeInteger.html#aab0cecb61eaed70471685dd0f7a76a43">Tang::AstNodeInteger</a>
+, <a class="el" href="classTang_1_1AstNodeNull.html#aedd095017786f811e0b9dccc0c157e0e">Tang::AstNodeNull</a>
 , <a class="el" href="classTang_1_1AstNodeUnary.html#a5844da9421ac8b05b95438e7e4a42a21">Tang::AstNodeUnary</a>
 , <a class="el" href="classTang_1_1ComputedExpression.html#ab5df8f689f9fe515a2299d8cef332f4c">Tang::ComputedExpression</a>
 , <a class="el" href="classTang_1_1ComputedExpressionBoolean.html#a0910cd4800443ec70f6888cf563fbe57">Tang::ComputedExpressionBoolean</a>
 , <a class="el" href="classTang_1_1ComputedExpressionError.html#aac021c475141ea7155f7576d2ffba906">Tang::ComputedExpressionError</a>
 , <a class="el" href="classTang_1_1ComputedExpressionFloat.html#a327db49914ba138b70c2403ebf609635">Tang::ComputedExpressionFloat</a>
 , <a class="el" href="classTang_1_1ComputedExpressionInteger.html#a02e4a8bba8b37bf02e5ec3fd1e25f094">Tang::ComputedExpressionInteger</a>
+, <a class="el" href="classTang_1_1ComputedExpressionNull.html#a3143a95f64ae069d258efe999e76bca6">Tang::ComputedExpressionNull</a>
 </li>
 <li>dumpBytecode()
 : <a class="el" href="classTang_1_1Program.html#aee5e79c40fac68e875c0d043f8fc2bc1">Tang::Program</a>
@@ -324,12 +334,14 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 , <a class="el" href="classTang_1_1AstNodeCast.html#ab36b44fe01ff2e37d638e6be9cf2f7fb">Tang::AstNodeCast</a>
 , <a class="el" href="classTang_1_1AstNodeFloat.html#a4ed8f5896e0fdf1fbe0c43eead75c899">Tang::AstNodeFloat</a>
 , <a class="el" href="classTang_1_1AstNodeInteger.html#ab5e5d6788c152dfaa2a6da8bc67fdad8">Tang::AstNodeInteger</a>
+, <a class="el" href="classTang_1_1AstNodeNull.html#a28d5145a21ecd57360fb70bf86e4e8c8">Tang::AstNodeNull</a>
 , <a class="el" href="classTang_1_1AstNodeUnary.html#a38aa33f11d2c116aad337e6613cecf99">Tang::AstNodeUnary</a>
 , <a class="el" href="classTang_1_1ComputedExpression.html#abf7820ae7313878aa37573cce35eb613">Tang::ComputedExpression</a>
 , <a class="el" href="classTang_1_1ComputedExpressionBoolean.html#a95d51c60309a7d30c5fb5c20911c8fe9">Tang::ComputedExpressionBoolean</a>
 , <a class="el" href="classTang_1_1ComputedExpressionError.html#a93519a1af765e75ebce373aa8d44f1e5">Tang::ComputedExpressionError</a>
 , <a class="el" href="classTang_1_1ComputedExpressionFloat.html#a67536e513f07f9324eb9af476df5a704">Tang::ComputedExpressionFloat</a>
 , <a class="el" href="classTang_1_1ComputedExpressionInteger.html#a1e1eb2070905763c0e81d1f06a3463d8">Tang::ComputedExpressionInteger</a>
+, <a class="el" href="classTang_1_1ComputedExpressionNull.html#aa5dfefd701509682ec47e09844eb5091">Tang::ComputedExpressionNull</a>
 </li>
 </ul>
 

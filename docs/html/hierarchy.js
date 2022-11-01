@@ -7,13 +7,15 @@ var hierarchy =
       [ "Tang::AstNodeCast", "classTang_1_1AstNodeCast.html", null ],
       [ "Tang::AstNodeFloat", "classTang_1_1AstNodeFloat.html", null ],
       [ "Tang::AstNodeInteger", "classTang_1_1AstNodeInteger.html", null ],
+      [ "Tang::AstNodeNull", "classTang_1_1AstNodeNull.html", null ],
       [ "Tang::AstNodeUnary", "classTang_1_1AstNodeUnary.html", null ]
     ] ],
     [ "Tang::ComputedExpression", "classTang_1_1ComputedExpression.html", [
       [ "Tang::ComputedExpressionBoolean", "classTang_1_1ComputedExpressionBoolean.html", null ],
       [ "Tang::ComputedExpressionError", "classTang_1_1ComputedExpressionError.html", null ],
       [ "Tang::ComputedExpressionFloat", "classTang_1_1ComputedExpressionFloat.html", null ],
-      [ "Tang::ComputedExpressionInteger", "classTang_1_1ComputedExpressionInteger.html", null ]
+      [ "Tang::ComputedExpressionInteger", "classTang_1_1ComputedExpressionInteger.html", null ],
+      [ "Tang::ComputedExpressionNull", "classTang_1_1ComputedExpressionNull.html", null ]
     ] ],
     [ "Tang::Error", "classTang_1_1Error.html", null ],
     [ "Tang::GarbageCollected", "classTang_1_1GarbageCollected.html", null ],

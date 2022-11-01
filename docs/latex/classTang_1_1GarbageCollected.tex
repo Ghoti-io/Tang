@@ -44,6 +44,8 @@ bool \mbox{\hyperlink{classTang_1_1GarbageCollected_a233b98cbedb6d8b63ab5285516c
 \begin{DoxyCompactList}\small\item\em Compare the \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} tracked object with a supplied value. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classTang_1_1GarbageCollected_a480bf0b3a1bded60b46b25b83cd56b00}{operator==}} (const \mbox{\hyperlink{classTang_1_1Error}{Error}} \&val) const
 \begin{DoxyCompactList}\small\item\em Compare the \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} tracked object with a supplied value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTang_1_1GarbageCollected_a66d70743d8f708c786ff0df24dfd3295}{operator==}} (const std\+::nullptr\+\_\+t \&null) const
+\begin{DoxyCompactList}\small\item\em Compare the \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} tracked object with a supplied value. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1GarbageCollected_aecc3c9f3d355fe43e5bf3db6a7cccb2d}{operator+}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const
 \begin{DoxyCompactList}\small\item\em Perform an addition between two \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} values. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1GarbageCollected_ab07b787947ec0f4451b14bf631d489a5}{operator-\/}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const
@@ -509,7 +511,7 @@ Here is the call graph for this function\+:
 \mbox{\Hypertarget{classTang_1_1GarbageCollected_a233b98cbedb6d8b63ab5285516c6aef4}\label{classTang_1_1GarbageCollected_a233b98cbedb6d8b63ab5285516c6aef4}} 
 \index{Tang::GarbageCollected@{Tang::GarbageCollected}!operator==@{operator==}}
 \index{operator==@{operator==}!Tang::GarbageCollected@{Tang::GarbageCollected}}
-\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
 {\footnotesize\ttfamily bool Garbage\+Collected\+::operator== (\begin{DoxyParamCaption}\item[{const bool \&}]{val }\end{DoxyParamCaption}) const}
 
 
@@ -527,7 +529,7 @@ True if they are equal, false otherwise.
 \mbox{\Hypertarget{classTang_1_1GarbageCollected_a263e467195dd443b0ad1ef72753d3bee}\label{classTang_1_1GarbageCollected_a263e467195dd443b0ad1ef72753d3bee}} 
 \index{Tang::GarbageCollected@{Tang::GarbageCollected}!operator==@{operator==}}
 \index{operator==@{operator==}!Tang::GarbageCollected@{Tang::GarbageCollected}}
-\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
 {\footnotesize\ttfamily bool Garbage\+Collected\+::operator== (\begin{DoxyParamCaption}\item[{const double \&}]{val }\end{DoxyParamCaption}) const}
 
 
@@ -545,7 +547,7 @@ True if they are equal, false otherwise.
 \mbox{\Hypertarget{classTang_1_1GarbageCollected_a480bf0b3a1bded60b46b25b83cd56b00}\label{classTang_1_1GarbageCollected_a480bf0b3a1bded60b46b25b83cd56b00}} 
 \index{Tang::GarbageCollected@{Tang::GarbageCollected}!operator==@{operator==}}
 \index{operator==@{operator==}!Tang::GarbageCollected@{Tang::GarbageCollected}}
-\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
 {\footnotesize\ttfamily bool Garbage\+Collected\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1Error}{Error}} \&}]{val }\end{DoxyParamCaption}) const}
 
 
@@ -563,7 +565,7 @@ True if they are equal, false otherwise.
 \mbox{\Hypertarget{classTang_1_1GarbageCollected_aa170b8dbd76a2e246526b13322f8d063}\label{classTang_1_1GarbageCollected_aa170b8dbd76a2e246526b13322f8d063}} 
 \index{Tang::GarbageCollected@{Tang::GarbageCollected}!operator==@{operator==}}
 \index{operator==@{operator==}!Tang::GarbageCollected@{Tang::GarbageCollected}}
-\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Garbage\+Collected\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{rhs }\end{DoxyParamCaption}) const}
 
 
@@ -589,8 +591,26 @@ Here is the call graph for this function\+:
 \mbox{\Hypertarget{classTang_1_1GarbageCollected_a53b7c1a0acbfdcc97fedc0d345239924}\label{classTang_1_1GarbageCollected_a53b7c1a0acbfdcc97fedc0d345239924}} 
 \index{Tang::GarbageCollected@{Tang::GarbageCollected}!operator==@{operator==}}
 \index{operator==@{operator==}!Tang::GarbageCollected@{Tang::GarbageCollected}}
-\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
 {\footnotesize\ttfamily bool Garbage\+Collected\+::operator== (\begin{DoxyParamCaption}\item[{const int \&}]{val }\end{DoxyParamCaption}) const}
+
+
+
+Compare the \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} tracked object with a supplied value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to compare the tracked object against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if they are equal, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1GarbageCollected_a66d70743d8f708c786ff0df24dfd3295}\label{classTang_1_1GarbageCollected_a66d70743d8f708c786ff0df24dfd3295}} 
+\index{Tang::GarbageCollected@{Tang::GarbageCollected}!operator==@{operator==}}
+\index{operator==@{operator==}!Tang::GarbageCollected@{Tang::GarbageCollected}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily bool Garbage\+Collected\+::operator== (\begin{DoxyParamCaption}\item[{const std\+::nullptr\+\_\+t \&}]{null }\end{DoxyParamCaption}) const}
 
 
 

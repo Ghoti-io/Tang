@@ -1,0 +1,469 @@
+\hypertarget{classTang_1_1ComputedExpressionNull}{}\doxysection{Tang\+::Computed\+Expression\+Null Class Reference}
+\label{classTang_1_1ComputedExpressionNull}\index{Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}}
+
+
+Represents an Null that is the result of a computation.  
+
+
+
+
+{\ttfamily \#include $<$computed\+Expression\+Null.\+hpp$>$}
+
+
+
+Inheritance diagram for Tang\+::Computed\+Expression\+Null\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{classTang_1_1ComputedExpressionNull__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tang\+::Computed\+Expression\+Null\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{classTang_1_1ComputedExpressionNull__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionNull_acdc0473635c79212cd43b147ac461dcb}\label{classTang_1_1ComputedExpressionNull_acdc0473635c79212cd43b147ac461dcb}} 
+\mbox{\hyperlink{classTang_1_1ComputedExpressionNull_acdc0473635c79212cd43b147ac461dcb}{Computed\+Expression\+Null}} ()
+\begin{DoxyCompactList}\small\item\em Construct an Null result. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classTang_1_1ComputedExpressionNull_a3143a95f64ae069d258efe999e76bca6}{dump}} () const override
+\begin{DoxyCompactList}\small\item\em Output the contents of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} as a string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} $\ast$ \mbox{\hyperlink{classTang_1_1ComputedExpressionNull_aa5dfefd701509682ec47e09844eb5091}{make\+Copy}} () const override
+\begin{DoxyCompactList}\small\item\em Make a copy of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} (recursively, if appropriate). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionNull_a61a0982dcfbb7a33d2ac251381cf85af}\label{classTang_1_1ComputedExpressionNull_a61a0982dcfbb7a33d2ac251381cf85af}} 
+bool {\bfseries is\+\_\+equal} (const nullptr\+\_\+t \&val) const override
+\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionNull_a9aeab7802a28965b999b4b73ee6294d8}{\+\_\+\+\_\+equal}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const override
+\begin{DoxyCompactList}\small\item\em Perform an equalit test. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a4b61cc4d447993bfc96dc37bfd552cef}{is\+\_\+equal}} (const int \&val) const
+\begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_aa81900aeb157fdb024f1bb0f316b4006}{is\+\_\+equal}} (const double \&val) const
+\begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a907104a9d090d21e9bcc487b696738c4}{is\+\_\+equal}} (const bool \&val) const
+\begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a5ce6d4bc0128f6aadf72c2f63a70275a}{is\+\_\+equal}} (const \mbox{\hyperlink{classTang_1_1Error}{Error}} \&val) const
+\begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a5287fabf86f19613afb04d5e285c0231}{is\+\_\+equal}} (const std\+::nullptr\+\_\+t \&val) const
+\begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_a7265dda9f1e6db478f0c1cd9c3e37aa9}{\+\_\+\+\_\+add}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Compute the result of adding this value and the supplied value. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_ab0d79debcd475a5063e574c10f1715ff}{\+\_\+\+\_\+subtract}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Compute the result of subtracting this value and the supplied value. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_a39df4abc066123ec2d634e921be40d21}{\+\_\+\+\_\+multiply}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Compute the result of multiplying this value and the supplied value. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_abb35e0328da2a96128de725ff1402192}{\+\_\+\+\_\+divide}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Compute the result of dividing this value and the supplied value. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_ab545455bd51f215ac139db456b829f66}{\+\_\+\+\_\+modulo}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Compute the result of moduloing this value and the supplied value. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_a8e779d014cbb877f078d61a2ff91603d}{\+\_\+\+\_\+negative}} () const
+\begin{DoxyCompactList}\small\item\em Compute the result of negating this value. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_ac21f9e07c9d1f0a98b60bb1d75d8e87d}{\+\_\+\+\_\+not}} () const
+\begin{DoxyCompactList}\small\item\em Compute the logical not of this value. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_a7ac5773e7e1c7f4b7c7f8dcd29bfa00b}{\+\_\+\+\_\+less\+Than}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Compute the \char`\"{}less than\char`\"{} comparison. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_aa9bebad41df630a98cec2565b0aeda89}{\+\_\+\+\_\+integer}} () const
+\begin{DoxyCompactList}\small\item\em Perform a type cast to integer. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_aa91f27a9f03b9a7fb9aa5a79efc3039f}{\+\_\+\+\_\+float}} () const
+\begin{DoxyCompactList}\small\item\em Perform a type cast to float. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_ac38862531c17e25636ca68c7e74ba487}{\+\_\+\+\_\+boolean}} () const
+\begin{DoxyCompactList}\small\item\em Perform a type cast to boolean. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an Null that is the result of a computation. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_a7265dda9f1e6db478f0c1cd9c3e37aa9}\label{classTang_1_1ComputedExpression_a7265dda9f1e6db478f0c1cd9c3e37aa9}} 
+\index{Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}!\_\_add@{\_\_add}}
+\index{\_\_add@{\_\_add}!Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}}
+\doxysubsubsection{\texorpdfstring{\_\_add()}{\_\_add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Compute the result of adding this value and the supplied value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value to add to this. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ab9c7c7ad34978c127b92ad7a24cbb717}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a024d709f222a059b2c70c7e84aec6ec4}{Tang\+::\+Computed\+Expression\+Float}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a8b592c106cd121e5891d1a1688bc3f5d}{Tang\+::\+Computed\+Expression\+Error}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_ac38862531c17e25636ca68c7e74ba487}\label{classTang_1_1ComputedExpression_ac38862531c17e25636ca68c7e74ba487}} 
+\index{Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}!\_\_boolean@{\_\_boolean}}
+\index{\_\_boolean@{\_\_boolean}!Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}}
+\doxysubsubsection{\texorpdfstring{\_\_boolean()}{\_\_boolean()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+boolean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Perform a type cast to boolean. 
+
+\begin{DoxyReturn}{Returns}
+The result of the the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a0c87432e8b46594ca2b89ff6787de1d3}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_ac8082fbd5e14a66226278fc93ff8c977}{Tang\+::\+Computed\+Expression\+Float}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionError_abf96315891e13c20cde5ec2767ced85a}{Tang\+::\+Computed\+Expression\+Error}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionBoolean_a423b841ea817eebc701ad26e82b50f0e}{Tang\+::\+Computed\+Expression\+Boolean}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_abb35e0328da2a96128de725ff1402192}\label{classTang_1_1ComputedExpression_abb35e0328da2a96128de725ff1402192}} 
+\index{Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}!\_\_divide@{\_\_divide}}
+\index{\_\_divide@{\_\_divide}!Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}}
+\doxysubsubsection{\texorpdfstring{\_\_divide()}{\_\_divide()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+divide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Compute the result of dividing this value and the supplied value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value to divide this by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_aeca0b7af9ecd1c64f0e72afb7bbd4ff7}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_af6bebf05fe3c59c46b4e7471317a3511}{Tang\+::\+Computed\+Expression\+Float}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionError_adc4c05c96d2e53b0e0dbf12381e96848}{Tang\+::\+Computed\+Expression\+Error}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionNull_a9aeab7802a28965b999b4b73ee6294d8}\label{classTang_1_1ComputedExpressionNull_a9aeab7802a28965b999b4b73ee6294d8}} 
+\index{Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}!\_\_equal@{\_\_equal}}
+\index{\_\_equal@{\_\_equal}!Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}}
+\doxysubsubsection{\texorpdfstring{\_\_equal()}{\_\_equal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Null\+::\+\_\+\+\_\+equal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Perform an equalit test. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_aa6e3a065c2d0dfcde5e2eaefa26f7606}{Tang\+::\+Computed\+Expression}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_aa91f27a9f03b9a7fb9aa5a79efc3039f}\label{classTang_1_1ComputedExpression_aa91f27a9f03b9a7fb9aa5a79efc3039f}} 
+\index{Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}!\_\_float@{\_\_float}}
+\index{\_\_float@{\_\_float}!Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}}
+\doxysubsubsection{\texorpdfstring{\_\_float()}{\_\_float()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+float (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Perform a type cast to float. 
+
+\begin{DoxyReturn}{Returns}
+The result of the the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a4bbe91963e21fd8319b94a7b43a1e26e}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a891a448c4b19eb52499f4be7d02b663a}{Tang\+::\+Computed\+Expression\+Float}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a62c448dad7b0e05a7a2d8a1b00f8b5e8}{Tang\+::\+Computed\+Expression\+Error}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionBoolean_ad9d88a48be735d59258c989399b143c7}{Tang\+::\+Computed\+Expression\+Boolean}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_aa9bebad41df630a98cec2565b0aeda89}\label{classTang_1_1ComputedExpression_aa9bebad41df630a98cec2565b0aeda89}} 
+\index{Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}!\_\_integer@{\_\_integer}}
+\index{\_\_integer@{\_\_integer}!Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}}
+\doxysubsubsection{\texorpdfstring{\_\_integer()}{\_\_integer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+integer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Perform a type cast to integer. 
+
+\begin{DoxyReturn}{Returns}
+The result of the the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ac8f2123e3efec72df3dc6d62b74c78b6}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_aa08d3e8e26ab701d0e9b33cd201c8aaf}{Tang\+::\+Computed\+Expression\+Float}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a70ad36b76c0ec73b98e50ed9738d0646}{Tang\+::\+Computed\+Expression\+Error}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionBoolean_a8f0172e1257ad63c50d2e75361d5a5bd}{Tang\+::\+Computed\+Expression\+Boolean}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_a7ac5773e7e1c7f4b7c7f8dcd29bfa00b}\label{classTang_1_1ComputedExpression_a7ac5773e7e1c7f4b7c7f8dcd29bfa00b}} 
+\index{Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}!\_\_lessThan@{\_\_lessThan}}
+\index{\_\_lessThan@{\_\_lessThan}!Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}}
+\doxysubsubsection{\texorpdfstring{\_\_lessThan()}{\_\_lessThan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+less\+Than (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Compute the \char`\"{}less than\char`\"{} comparison. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a6ca18e4d07780ca7d8d1568f59cf358c}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a017d94f17afa7f30c406892c6a001ed7}{Tang\+::\+Computed\+Expression\+Float}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a5789d84d94cacf70ed9c2bf350549b67}{Tang\+::\+Computed\+Expression\+Error}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_ab545455bd51f215ac139db456b829f66}\label{classTang_1_1ComputedExpression_ab545455bd51f215ac139db456b829f66}} 
+\index{Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}!\_\_modulo@{\_\_modulo}}
+\index{\_\_modulo@{\_\_modulo}!Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}}
+\doxysubsubsection{\texorpdfstring{\_\_modulo()}{\_\_modulo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+modulo (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Compute the result of moduloing this value and the supplied value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value to modulo this by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a959280a4da43a81276ef8ab658eb9015}{Tang\+::\+Computed\+Expression\+Integer}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a48ca1615486ea44032afb9e2d96dc552}{Tang\+::\+Computed\+Expression\+Error}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_a39df4abc066123ec2d634e921be40d21}\label{classTang_1_1ComputedExpression_a39df4abc066123ec2d634e921be40d21}} 
+\index{Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}!\_\_multiply@{\_\_multiply}}
+\index{\_\_multiply@{\_\_multiply}!Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}}
+\doxysubsubsection{\texorpdfstring{\_\_multiply()}{\_\_multiply()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Compute the result of multiplying this value and the supplied value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value to multiply to this. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_aadb7393ed0df73e42f2311377bb445d6}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_af041a3a4e933ebe4e043cddd29e0f56b}{Tang\+::\+Computed\+Expression\+Float}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a9d28fdf8b7df2db9ffd2bd3790e97d45}{Tang\+::\+Computed\+Expression\+Error}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_a8e779d014cbb877f078d61a2ff91603d}\label{classTang_1_1ComputedExpression_a8e779d014cbb877f078d61a2ff91603d}} 
+\index{Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}!\_\_negative@{\_\_negative}}
+\index{\_\_negative@{\_\_negative}!Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}}
+\doxysubsubsection{\texorpdfstring{\_\_negative()}{\_\_negative()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+negative (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Compute the result of negating this value. 
+
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a50d5a488b02defd3c526696c5661800b}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a203faa00cd83e6746084287b0e2ac778}{Tang\+::\+Computed\+Expression\+Float}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a997df4c08b3af938d338bbcf6292594a}{Tang\+::\+Computed\+Expression\+Error}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_ac21f9e07c9d1f0a98b60bb1d75d8e87d}\label{classTang_1_1ComputedExpression_ac21f9e07c9d1f0a98b60bb1d75d8e87d}} 
+\index{Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}!\_\_not@{\_\_not}}
+\index{\_\_not@{\_\_not}!Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}}
+\doxysubsubsection{\texorpdfstring{\_\_not()}{\_\_not()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+not (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Compute the logical not of this value. 
+
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a12f9abfc8fc324d491453f8c6bbb3e1d}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_ad85ce3aa542b81649d4756d84de09ea2}{Tang\+::\+Computed\+Expression\+Float}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a6656ac155a4ecf3e51f7588a6af9dc18}{Tang\+::\+Computed\+Expression\+Error}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionBoolean_a920fe1b19024cf867179e4eada53ed32}{Tang\+::\+Computed\+Expression\+Boolean}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_ab0d79debcd475a5063e574c10f1715ff}\label{classTang_1_1ComputedExpression_ab0d79debcd475a5063e574c10f1715ff}} 
+\index{Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}!\_\_subtract@{\_\_subtract}}
+\index{\_\_subtract@{\_\_subtract}!Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}}
+\doxysubsubsection{\texorpdfstring{\_\_subtract()}{\_\_subtract()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Compute the result of subtracting this value and the supplied value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value to subtract from this. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a8a792a5911f9d90a4ff4e8ba99f5a657}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_aa6e605b26eb90dbd2002be8215f754cf}{Tang\+::\+Computed\+Expression\+Float}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a6a9b874ae80e6513ffafaf92b8845a28}{Tang\+::\+Computed\+Expression\+Error}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionNull_a3143a95f64ae069d258efe999e76bca6}\label{classTang_1_1ComputedExpressionNull_a3143a95f64ae069d258efe999e76bca6}} 
+\index{Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}!dump@{dump}}
+\index{dump@{dump}!Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}}
+\doxysubsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily string Computed\+Expression\+Null\+::dump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Output the contents of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} as a string. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the computed expression. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_ab5df8f689f9fe515a2299d8cef332f4c}{Tang\+::\+Computed\+Expression}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_a907104a9d090d21e9bcc487b696738c4}\label{classTang_1_1ComputedExpression_a907104a9d090d21e9bcc487b696738c4}} 
+\index{Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}!is\_equal@{is\_equal}}
+\index{is\_equal@{is\_equal}!Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}}
+\doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily virtual bool Tang\+::\+Computed\+Expression\+::is\+\_\+equal (\begin{DoxyParamCaption}\item[{const bool \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Check whether or not the computed expression is equal to another value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if equal, false if not. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionBoolean_aaf17b861d5a8ab290ff01cc2fe8acf55}{Tang\+::\+Computed\+Expression\+Boolean}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_aa81900aeb157fdb024f1bb0f316b4006}\label{classTang_1_1ComputedExpression_aa81900aeb157fdb024f1bb0f316b4006}} 
+\index{Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}!is\_equal@{is\_equal}}
+\index{is\_equal@{is\_equal}!Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}}
+\doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily virtual bool Tang\+::\+Computed\+Expression\+::is\+\_\+equal (\begin{DoxyParamCaption}\item[{const double \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Check whether or not the computed expression is equal to another value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if equal, false if not. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_acd871176aea0d4c04bd03fbbeaee6482}{Tang\+::\+Computed\+Expression\+Integer}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_ab0d52e07e4bc34a81872d1f1da49adeb}{Tang\+::\+Computed\+Expression\+Float}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_a5ce6d4bc0128f6aadf72c2f63a70275a}\label{classTang_1_1ComputedExpression_a5ce6d4bc0128f6aadf72c2f63a70275a}} 
+\index{Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}!is\_equal@{is\_equal}}
+\index{is\_equal@{is\_equal}!Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}}
+\doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily virtual bool Tang\+::\+Computed\+Expression\+::is\+\_\+equal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1Error}{Error}} \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Check whether or not the computed expression is equal to another value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if equal, false if not. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a77f179435a44603e537357af7b828005}{Tang\+::\+Computed\+Expression\+Error}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_a4b61cc4d447993bfc96dc37bfd552cef}\label{classTang_1_1ComputedExpression_a4b61cc4d447993bfc96dc37bfd552cef}} 
+\index{Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}!is\_equal@{is\_equal}}
+\index{is\_equal@{is\_equal}!Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}}
+\doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily virtual bool Tang\+::\+Computed\+Expression\+::is\+\_\+equal (\begin{DoxyParamCaption}\item[{const int \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Check whether or not the computed expression is equal to another value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if equal, false if not. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ab297128beba3aa851658eda17c00331b}{Tang\+::\+Computed\+Expression\+Integer}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a921bc45b51873d475c2624272104f1eb}{Tang\+::\+Computed\+Expression\+Float}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_a5287fabf86f19613afb04d5e285c0231}\label{classTang_1_1ComputedExpression_a5287fabf86f19613afb04d5e285c0231}} 
+\index{Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}!is\_equal@{is\_equal}}
+\index{is\_equal@{is\_equal}!Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}}
+\doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily virtual bool Tang\+::\+Computed\+Expression\+::is\+\_\+equal (\begin{DoxyParamCaption}\item[{const std\+::nullptr\+\_\+t \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Check whether or not the computed expression is equal to another value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if equal, false if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionNull_aa5dfefd701509682ec47e09844eb5091}\label{classTang_1_1ComputedExpressionNull_aa5dfefd701509682ec47e09844eb5091}} 
+\index{Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}!makeCopy@{makeCopy}}
+\index{makeCopy@{makeCopy}!Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}}
+\doxysubsubsection{\texorpdfstring{makeCopy()}{makeCopy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} $\ast$ Computed\+Expression\+Null\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Make a copy of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} (recursively, if appropriate). 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the new \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_abf7820ae7313878aa37573cce35eb613}{Tang\+::\+Computed\+Expression}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{computedExpressionNull_8hpp}{computed\+Expression\+Null.\+hpp}}\item 
+src/\mbox{\hyperlink{computedExpressionNull_8cpp}{computed\+Expression\+Null.\+cpp}}\end{DoxyCompactItemize}

@@ -23,6 +23,7 @@ var classTang_1_1GarbageCollected =
     [ "operator==", "classTang_1_1GarbageCollected.html#a480bf0b3a1bded60b46b25b83cd56b00", null ],
     [ "operator==", "classTang_1_1GarbageCollected.html#aa170b8dbd76a2e246526b13322f8d063", null ],
     [ "operator==", "classTang_1_1GarbageCollected.html#a53b7c1a0acbfdcc97fedc0d345239924", null ],
+    [ "operator==", "classTang_1_1GarbageCollected.html#a66d70743d8f708c786ff0df24dfd3295", null ],
     [ "operator>", "classTang_1_1GarbageCollected.html#a0b6b70718e72c749ec89d194dbec6c9d", null ],
     [ "operator>=", "classTang_1_1GarbageCollected.html#a465292265694d060122445009a60c8e7", null ],
     [ "operator<<", "classTang_1_1GarbageCollected.html#a523aa4de91b9bd0fef2a585dbb4e4e55", null ],
