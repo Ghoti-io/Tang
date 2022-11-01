@@ -3,6 +3,7 @@ var annotated_dup =
     [ "Tang", null, [
       [ "AstNode", "classTang_1_1AstNode.html", "classTang_1_1AstNode" ],
       [ "AstNodeBinary", "classTang_1_1AstNodeBinary.html", "classTang_1_1AstNodeBinary" ],
+      [ "AstNodeBlock", "classTang_1_1AstNodeBlock.html", "classTang_1_1AstNodeBlock" ],
       [ "AstNodeBoolean", "classTang_1_1AstNodeBoolean.html", "classTang_1_1AstNodeBoolean" ],
       [ "AstNodeCast", "classTang_1_1AstNodeCast.html", "classTang_1_1AstNodeCast" ],
       [ "AstNodeFloat", "classTang_1_1AstNodeFloat.html", "classTang_1_1AstNodeFloat" ],

@@ -6,6 +6,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "astNodeBinary.hpp", "astNodeBinary_8hpp.html", [
       [ "AstNodeBinary", "classTang_1_1AstNodeBinary.html", "classTang_1_1AstNodeBinary" ]
     ] ],
+    [ "astNodeBlock.hpp", "astNodeBlock_8hpp.html", [
+      [ "AstNodeBlock", "classTang_1_1AstNodeBlock.html", "classTang_1_1AstNodeBlock" ]
+    ] ],
     [ "astNodeBoolean.hpp", "astNodeBoolean_8hpp.html", [
       [ "AstNodeBoolean", "classTang_1_1AstNodeBoolean.html", "classTang_1_1AstNodeBoolean" ]
     ] ],

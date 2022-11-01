@@ -1,229 +1,232 @@
 \begin{theindex}
 
   \item {\_\_add}
-    \subitem {Tang::ComputedExpression}, \hyperpage{31}
-    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{43}
-    \subitem {Tang::ComputedExpressionError}, \hyperpage{51}
-    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{60}
-    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{68}
+    \subitem {Tang::ComputedExpression}, \hyperpage{34}
+    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{46}
+    \subitem {Tang::ComputedExpressionError}, \hyperpage{54}
+    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{63}
+    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{71}
   \item {\_\_boolean}
-    \subitem {Tang::ComputedExpression}, \hyperpage{33}
-    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{43}
-    \subitem {Tang::ComputedExpressionError}, \hyperpage{52}
-    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{60}
-    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{69}
+    \subitem {Tang::ComputedExpression}, \hyperpage{36}
+    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{46}
+    \subitem {Tang::ComputedExpressionError}, \hyperpage{55}
+    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{63}
+    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{72}
   \item {\_\_divide}
-    \subitem {Tang::ComputedExpression}, \hyperpage{33}
-    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{43}
-    \subitem {Tang::ComputedExpressionError}, \hyperpage{52}
-    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{60}
-    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{69}
+    \subitem {Tang::ComputedExpression}, \hyperpage{36}
+    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{46}
+    \subitem {Tang::ComputedExpressionError}, \hyperpage{55}
+    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{63}
+    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{72}
   \item {\_\_equal}
-    \subitem {Tang::ComputedExpression}, \hyperpage{33}
-    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{44}
-    \subitem {Tang::ComputedExpressionError}, \hyperpage{52}
-    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{61}
-    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{69}
-  \item {\_\_float}
-    \subitem {Tang::ComputedExpression}, \hyperpage{35}
-    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{44}
-    \subitem {Tang::ComputedExpressionError}, \hyperpage{53}
-    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{61}
-    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{70}
-  \item {\_\_integer}
-    \subitem {Tang::ComputedExpression}, \hyperpage{35}
-    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{44}
-    \subitem {Tang::ComputedExpressionError}, \hyperpage{53}
-    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{61}
-    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{70}
-  \item {\_\_lessThan}
-    \subitem {Tang::ComputedExpression}, \hyperpage{35}
-    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{45}
-    \subitem {Tang::ComputedExpressionError}, \hyperpage{53}
-    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{62}
-    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{70}
-  \item {\_\_modulo}
     \subitem {Tang::ComputedExpression}, \hyperpage{36}
-    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{45}
-    \subitem {Tang::ComputedExpressionError}, \hyperpage{54}
-    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{62}
-    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{71}
-  \item {\_\_multiply}
-    \subitem {Tang::ComputedExpression}, \hyperpage{36}
-    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{45}
-    \subitem {Tang::ComputedExpressionError}, \hyperpage{54}
-    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{62}
-    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{71}
-  \item {\_\_negative}
-    \subitem {Tang::ComputedExpression}, \hyperpage{36}
-    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{46}
-    \subitem {Tang::ComputedExpressionError}, \hyperpage{54}
-    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{63}
-    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{71}
-  \item {\_\_not}
-    \subitem {Tang::ComputedExpression}, \hyperpage{37}
-    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{46}
-    \subitem {Tang::ComputedExpressionError}, \hyperpage{55}
-    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{63}
-    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{72}
-  \item {\_\_subtract}
-    \subitem {Tang::ComputedExpression}, \hyperpage{37}
-    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{46}
-    \subitem {Tang::ComputedExpressionError}, \hyperpage{55}
-    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{63}
-    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{72}
-  \item {$\sim$GarbageCollected}
-    \subitem {Tang::GarbageCollected}, \hyperpage{81}
-
-  \indexspace
-
-  \item {ADD}
-    \subitem {opcode.hpp}, \hyperpage{122}
-  \item {Add}
-    \subitem {Tang::AstNodeBinary}, \hyperpage{14}
-  \item {addBytecode}
-    \subitem {Tang::Program}, \hyperpage{97}
-  \item {AstNode}
-    \subitem {Tang::AstNode}, \hyperpage{11}
-  \item {AstNodeBinary}
-    \subitem {Tang::AstNodeBinary}, \hyperpage{14}
-  \item {AstNodeBoolean}
-    \subitem {Tang::AstNodeBoolean}, \hyperpage{17}
-  \item {AstNodeCast}
-    \subitem {Tang::AstNodeCast}, \hyperpage{20}
-  \item {AstNodeFloat}
-    \subitem {Tang::AstNodeFloat}, \hyperpage{23}
-  \item {AstNodeInteger}
-    \subitem {Tang::AstNodeInteger}, \hyperpage{26}
-  \item {AstNodeUnary}
-    \subitem {Tang::AstNodeUnary}, \hyperpage{29}
-
-  \indexspace
-
-  \item {BOOLEAN}
-    \subitem {opcode.hpp}, \hyperpage{122}
-  \item {Boolean}
-    \subitem {Tang::AstNodeCast}, \hyperpage{20}
-  \item {build/generated/location.hh}, \hyperpage{105}
-
-  \indexspace
-
-  \item {CASTBOOLEAN}
-    \subitem {opcode.hpp}, \hyperpage{122}
-  \item {CASTFLOAT}
-    \subitem {opcode.hpp}, \hyperpage{122}
-  \item {CASTINTEGER}
-    \subitem {opcode.hpp}, \hyperpage{122}
-  \item {CodeType}
-    \subitem {Tang::Program}, \hyperpage{97}
-  \item {compileScript}
-    \subitem {Tang::TangBase}, \hyperpage{101}
-  \item {ComputedExpressionBoolean}
-    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{41}
-  \item {ComputedExpressionError}
-    \subitem {Tang::ComputedExpressionError}, \hyperpage{51}
-  \item {ComputedExpressionFloat}
-    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{59}
-  \item {ComputedExpressionInteger}
-    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{68}
-
-  \indexspace
-
-  \item {DIVIDE}
-    \subitem {opcode.hpp}, \hyperpage{122}
-  \item {Divide}
-    \subitem {Tang::AstNodeBinary}, \hyperpage{14}
-  \item {dump}
-    \subitem {Tang::ComputedExpression}, \hyperpage{37}
     \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{47}
     \subitem {Tang::ComputedExpressionError}, \hyperpage{55}
     \subitem {Tang::ComputedExpressionFloat}, \hyperpage{64}
     \subitem {Tang::ComputedExpressionInteger}, \hyperpage{72}
+  \item {\_\_float}
+    \subitem {Tang::ComputedExpression}, \hyperpage{38}
+    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{47}
+    \subitem {Tang::ComputedExpressionError}, \hyperpage{56}
+    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{64}
+    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{73}
+  \item {\_\_integer}
+    \subitem {Tang::ComputedExpression}, \hyperpage{38}
+    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{47}
+    \subitem {Tang::ComputedExpressionError}, \hyperpage{56}
+    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{64}
+    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{73}
+  \item {\_\_lessThan}
+    \subitem {Tang::ComputedExpression}, \hyperpage{38}
+    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{48}
+    \subitem {Tang::ComputedExpressionError}, \hyperpage{56}
+    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{65}
+    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{73}
+  \item {\_\_modulo}
+    \subitem {Tang::ComputedExpression}, \hyperpage{39}
+    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{48}
+    \subitem {Tang::ComputedExpressionError}, \hyperpage{57}
+    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{65}
+    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{74}
+  \item {\_\_multiply}
+    \subitem {Tang::ComputedExpression}, \hyperpage{39}
+    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{48}
+    \subitem {Tang::ComputedExpressionError}, \hyperpage{57}
+    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{65}
+    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{74}
+  \item {\_\_negative}
+    \subitem {Tang::ComputedExpression}, \hyperpage{39}
+    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{49}
+    \subitem {Tang::ComputedExpressionError}, \hyperpage{57}
+    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{66}
+    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{74}
+  \item {\_\_not}
+    \subitem {Tang::ComputedExpression}, \hyperpage{40}
+    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{49}
+    \subitem {Tang::ComputedExpressionError}, \hyperpage{58}
+    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{66}
+    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{75}
+  \item {\_\_subtract}
+    \subitem {Tang::ComputedExpression}, \hyperpage{40}
+    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{49}
+    \subitem {Tang::ComputedExpressionError}, \hyperpage{58}
+    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{66}
+    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{75}
+  \item {$\sim$GarbageCollected}
+    \subitem {Tang::GarbageCollected}, \hyperpage{84}
+
+  \indexspace
+
+  \item {ADD}
+    \subitem {opcode.hpp}, \hyperpage{127}
+  \item {Add}
+    \subitem {Tang::AstNodeBinary}, \hyperpage{14}
+  \item {addBytecode}
+    \subitem {Tang::Program}, \hyperpage{100}
+  \item {AstNode}
+    \subitem {Tang::AstNode}, \hyperpage{11}
+  \item {AstNodeBinary}
+    \subitem {Tang::AstNodeBinary}, \hyperpage{14}
+  \item {AstNodeBlock}
+    \subitem {Tang::AstNodeBlock}, \hyperpage{17}
+  \item {AstNodeBoolean}
+    \subitem {Tang::AstNodeBoolean}, \hyperpage{20}
+  \item {AstNodeCast}
+    \subitem {Tang::AstNodeCast}, \hyperpage{23}
+  \item {AstNodeFloat}
+    \subitem {Tang::AstNodeFloat}, \hyperpage{26}
+  \item {AstNodeInteger}
+    \subitem {Tang::AstNodeInteger}, \hyperpage{29}
+  \item {AstNodeUnary}
+    \subitem {Tang::AstNodeUnary}, \hyperpage{32}
+
+  \indexspace
+
+  \item {BOOLEAN}
+    \subitem {opcode.hpp}, \hyperpage{127}
+  \item {Boolean}
+    \subitem {Tang::AstNodeCast}, \hyperpage{23}
+  \item {build/generated/location.hh}, \hyperpage{109}
+
+  \indexspace
+
+  \item {CASTBOOLEAN}
+    \subitem {opcode.hpp}, \hyperpage{127}
+  \item {CASTFLOAT}
+    \subitem {opcode.hpp}, \hyperpage{127}
+  \item {CASTINTEGER}
+    \subitem {opcode.hpp}, \hyperpage{127}
+  \item {CodeType}
+    \subitem {Tang::Program}, \hyperpage{100}
+  \item {compileScript}
+    \subitem {Tang::TangBase}, \hyperpage{104}
+  \item {ComputedExpressionBoolean}
+    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{44}
+  \item {ComputedExpressionError}
+    \subitem {Tang::ComputedExpressionError}, \hyperpage{54}
+  \item {ComputedExpressionFloat}
+    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{62}
+  \item {ComputedExpressionInteger}
+    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{71}
+
+  \indexspace
+
+  \item {DIVIDE}
+    \subitem {opcode.hpp}, \hyperpage{127}
+  \item {Divide}
+    \subitem {Tang::AstNodeBinary}, \hyperpage{14}
+  \item {dump}
+    \subitem {Tang::ComputedExpression}, \hyperpage{40}
+    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{50}
+    \subitem {Tang::ComputedExpressionError}, \hyperpage{58}
+    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{67}
+    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{75}
   \item {dumpBytecode}
-    \subitem {Tang::Program}, \hyperpage{98}
+    \subitem {Tang::Program}, \hyperpage{101}
   \item {DUMPPROGRAMCHECK}
-    \subitem {program-\/dumpBytecode.cpp}, \hyperpage{140}
+    \subitem {program-\/dumpBytecode.cpp}, \hyperpage{146}
 
   \indexspace
 
   \item {EQ}
-    \subitem {opcode.hpp}, \hyperpage{122}
+    \subitem {opcode.hpp}, \hyperpage{127}
   \item {Equal}
     \subitem {Tang::AstNodeBinary}, \hyperpage{14}
   \item {Error}
-    \subitem {Tang::Error}, \hyperpage{77}
+    \subitem {Tang::Error}, \hyperpage{80}
   \item {error.cpp}
-    \subitem {operator$<$$<$}, \hyperpage{138}
+    \subitem {operator$<$$<$}, \hyperpage{144}
   \item {execute}
-    \subitem {Tang::Program}, \hyperpage{98}
+    \subitem {Tang::Program}, \hyperpage{101}
   \item {EXECUTEPROGRAMCHECK}
-    \subitem {program-\/execute.cpp}, \hyperpage{141}
+    \subitem {program-\/execute.cpp}, \hyperpage{147}
 
   \indexspace
 
   \item {FLOAT}
-    \subitem {opcode.hpp}, \hyperpage{122}
+    \subitem {opcode.hpp}, \hyperpage{127}
   \item {Float}
-    \subitem {Tang::AstNodeCast}, \hyperpage{20}
+    \subitem {Tang::AstNodeCast}, \hyperpage{23}
 
   \indexspace
 
   \item {GarbageCollected}
-    \subitem {Tang::GarbageCollected}, \hyperpage{80, 81}
+    \subitem {Tang::GarbageCollected}, \hyperpage{83, 84}
   \item {get}
-    \subitem {Tang::SingletonObjectPool$<$ T $>$}, \hyperpage{100}
+    \subitem {Tang::SingletonObjectPool$<$ T $>$}, \hyperpage{103}
   \item {get\_next\_token}
-    \subitem {Tang::TangScanner}, \hyperpage{103}
+    \subitem {Tang::TangScanner}, \hyperpage{106}
   \item {getAst}
-    \subitem {Tang::Program}, \hyperpage{98}
+    \subitem {Tang::Program}, \hyperpage{101}
   \item {getCode}
-    \subitem {Tang::Program}, \hyperpage{98}
+    \subitem {Tang::Program}, \hyperpage{101}
   \item {getInstance}
-    \subitem {Tang::SingletonObjectPool$<$ T $>$}, \hyperpage{100}
+    \subitem {Tang::SingletonObjectPool$<$ T $>$}, \hyperpage{103}
   \item {getResult}
-    \subitem {Tang::Program}, \hyperpage{99}
+    \subitem {Tang::Program}, \hyperpage{102}
   \item {GreaterThan}
     \subitem {Tang::AstNodeBinary}, \hyperpage{14}
   \item {GreaterThanEqual}
     \subitem {Tang::AstNodeBinary}, \hyperpage{14}
   \item {GT}
-    \subitem {opcode.hpp}, \hyperpage{122}
+    \subitem {opcode.hpp}, \hyperpage{127}
   \item {GTE}
-    \subitem {opcode.hpp}, \hyperpage{122}
+    \subitem {opcode.hpp}, \hyperpage{127}
 
   \indexspace
 
-  \item {include/astNode.hpp}, \hyperpage{107}
-  \item {include/astNodeBinary.hpp}, \hyperpage{108}
-  \item {include/astNodeBoolean.hpp}, \hyperpage{109}
-  \item {include/astNodeCast.hpp}, \hyperpage{110}
-  \item {include/astNodeFloat.hpp}, \hyperpage{111}
-  \item {include/astNodeInteger.hpp}, \hyperpage{112}
-  \item {include/astNodeUnary.hpp}, \hyperpage{113}
-  \item {include/computedExpression.hpp}, \hyperpage{114}
-  \item {include/computedExpressionBoolean.hpp}, \hyperpage{115}
-  \item {include/computedExpressionError.hpp}, \hyperpage{116}
-  \item {include/computedExpressionFloat.hpp}, \hyperpage{117}
-  \item {include/computedExpressionInteger.hpp}, \hyperpage{118}
-  \item {include/error.hpp}, \hyperpage{119}
-  \item {include/garbageCollected.hpp}, \hyperpage{120}
-  \item {include/macros.hpp}, \hyperpage{120}
-  \item {include/opcode.hpp}, \hyperpage{121}
-  \item {include/program.hpp}, \hyperpage{122}
-  \item {include/singletonObjectPool.hpp}, \hyperpage{124}
-  \item {include/tang.hpp}, \hyperpage{125}
-  \item {include/tangBase.hpp}, \hyperpage{126}
-  \item {include/tangScanner.hpp}, \hyperpage{127}
+  \item {include/astNode.hpp}, \hyperpage{111}
+  \item {include/astNodeBinary.hpp}, \hyperpage{112}
+  \item {include/astNodeBlock.hpp}, \hyperpage{113}
+  \item {include/astNodeBoolean.hpp}, \hyperpage{114}
+  \item {include/astNodeCast.hpp}, \hyperpage{115}
+  \item {include/astNodeFloat.hpp}, \hyperpage{116}
+  \item {include/astNodeInteger.hpp}, \hyperpage{117}
+  \item {include/astNodeUnary.hpp}, \hyperpage{118}
+  \item {include/computedExpression.hpp}, \hyperpage{119}
+  \item {include/computedExpressionBoolean.hpp}, \hyperpage{120}
+  \item {include/computedExpressionError.hpp}, \hyperpage{121}
+  \item {include/computedExpressionFloat.hpp}, \hyperpage{122}
+  \item {include/computedExpressionInteger.hpp}, \hyperpage{123}
+  \item {include/error.hpp}, \hyperpage{124}
+  \item {include/garbageCollected.hpp}, \hyperpage{125}
+  \item {include/macros.hpp}, \hyperpage{126}
+  \item {include/opcode.hpp}, \hyperpage{126}
+  \item {include/program.hpp}, \hyperpage{128}
+  \item {include/singletonObjectPool.hpp}, \hyperpage{129}
+  \item {include/tang.hpp}, \hyperpage{130}
+  \item {include/tangBase.hpp}, \hyperpage{131}
+  \item {include/tangScanner.hpp}, \hyperpage{132}
   \item {INTEGER}
-    \subitem {opcode.hpp}, \hyperpage{122}
+    \subitem {opcode.hpp}, \hyperpage{127}
   \item {Integer}
-    \subitem {Tang::AstNodeCast}, \hyperpage{20}
+    \subitem {Tang::AstNodeCast}, \hyperpage{23}
   \item {is\_equal}
-    \subitem {Tang::ComputedExpression}, \hyperpage{38, 39}
-    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{47, 48}
-    \subitem {Tang::ComputedExpressionError}, \hyperpage{55--57}
-    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{64, 65}
-    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{73, 74}
+    \subitem {Tang::ComputedExpression}, \hyperpage{41, 42}
+    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{50, 51}
+    \subitem {Tang::ComputedExpressionError}, \hyperpage{58--60}
+    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{67, 68}
+    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{76, 77}
 
   \indexspace
 
@@ -232,158 +235,163 @@
   \item {LessThanEqual}
     \subitem {Tang::AstNodeBinary}, \hyperpage{14}
   \item {location.hh}
-    \subitem {operator$<$$<$}, \hyperpage{106, 107}
+    \subitem {operator$<$$<$}, \hyperpage{110, 111}
   \item {LT}
-    \subitem {opcode.hpp}, \hyperpage{122}
+    \subitem {opcode.hpp}, \hyperpage{127}
   \item {LTE}
-    \subitem {opcode.hpp}, \hyperpage{122}
+    \subitem {opcode.hpp}, \hyperpage{127}
 
   \indexspace
 
   \item {macros.hpp}
-    \subitem {TANG\_UNUSED}, \hyperpage{121}
+    \subitem {TANG\_UNUSED}, \hyperpage{126}
   \item {make}
-    \subitem {Tang::GarbageCollected}, \hyperpage{81}
+    \subitem {Tang::GarbageCollected}, \hyperpage{84}
   \item {makeCopy}
     \subitem {Tang::AstNode}, \hyperpage{11}
     \subitem {Tang::AstNodeBinary}, \hyperpage{15}
-    \subitem {Tang::AstNodeBoolean}, \hyperpage{17}
-    \subitem {Tang::AstNodeCast}, \hyperpage{21}
-    \subitem {Tang::AstNodeFloat}, \hyperpage{23}
-    \subitem {Tang::AstNodeInteger}, \hyperpage{26}
-    \subitem {Tang::AstNodeUnary}, \hyperpage{30}
-    \subitem {Tang::ComputedExpression}, \hyperpage{39}
-    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{48}
-    \subitem {Tang::ComputedExpressionError}, \hyperpage{57}
-    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{65}
-    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{74}
+    \subitem {Tang::AstNodeBlock}, \hyperpage{17}
+    \subitem {Tang::AstNodeBoolean}, \hyperpage{20}
+    \subitem {Tang::AstNodeCast}, \hyperpage{24}
+    \subitem {Tang::AstNodeFloat}, \hyperpage{26}
+    \subitem {Tang::AstNodeInteger}, \hyperpage{29}
+    \subitem {Tang::AstNodeUnary}, \hyperpage{33}
+    \subitem {Tang::ComputedExpression}, \hyperpage{42}
+    \subitem {Tang::ComputedExpressionBoolean}, \hyperpage{51}
+    \subitem {Tang::ComputedExpressionError}, \hyperpage{60}
+    \subitem {Tang::ComputedExpressionFloat}, \hyperpage{68}
+    \subitem {Tang::ComputedExpressionInteger}, \hyperpage{77}
   \item {MODULO}
-    \subitem {opcode.hpp}, \hyperpage{122}
+    \subitem {opcode.hpp}, \hyperpage{127}
   \item {Modulo}
     \subitem {Tang::AstNodeBinary}, \hyperpage{14}
   \item {MULTIPLY}
-    \subitem {opcode.hpp}, \hyperpage{122}
+    \subitem {opcode.hpp}, \hyperpage{127}
   \item {Multiply}
     \subitem {Tang::AstNodeBinary}, \hyperpage{14}
 
   \indexspace
 
   \item {NEGATIVE}
-    \subitem {opcode.hpp}, \hyperpage{122}
+    \subitem {opcode.hpp}, \hyperpage{127}
   \item {Negative}
-    \subitem {Tang::AstNodeUnary}, \hyperpage{29}
+    \subitem {Tang::AstNodeUnary}, \hyperpage{32}
   \item {NEQ}
-    \subitem {opcode.hpp}, \hyperpage{122}
+    \subitem {opcode.hpp}, \hyperpage{127}
   \item {NOT}
-    \subitem {opcode.hpp}, \hyperpage{122}
+    \subitem {opcode.hpp}, \hyperpage{127}
   \item {Not}
-    \subitem {Tang::AstNodeUnary}, \hyperpage{29}
+    \subitem {Tang::AstNodeUnary}, \hyperpage{32}
   \item {NotEqual}
     \subitem {Tang::AstNodeBinary}, \hyperpage{14}
 
   \indexspace
 
   \item {Opcode}
-    \subitem {opcode.hpp}, \hyperpage{122}
+    \subitem {opcode.hpp}, \hyperpage{127}
   \item {opcode.hpp}
-    \subitem {ADD}, \hyperpage{122}
-    \subitem {BOOLEAN}, \hyperpage{122}
-    \subitem {CASTBOOLEAN}, \hyperpage{122}
-    \subitem {CASTFLOAT}, \hyperpage{122}
-    \subitem {CASTINTEGER}, \hyperpage{122}
-    \subitem {DIVIDE}, \hyperpage{122}
-    \subitem {EQ}, \hyperpage{122}
-    \subitem {FLOAT}, \hyperpage{122}
-    \subitem {GT}, \hyperpage{122}
-    \subitem {GTE}, \hyperpage{122}
-    \subitem {INTEGER}, \hyperpage{122}
-    \subitem {LT}, \hyperpage{122}
-    \subitem {LTE}, \hyperpage{122}
-    \subitem {MODULO}, \hyperpage{122}
-    \subitem {MULTIPLY}, \hyperpage{122}
-    \subitem {NEGATIVE}, \hyperpage{122}
-    \subitem {NEQ}, \hyperpage{122}
-    \subitem {NOT}, \hyperpage{122}
-    \subitem {Opcode}, \hyperpage{122}
-    \subitem {SUBTRACT}, \hyperpage{122}
+    \subitem {ADD}, \hyperpage{127}
+    \subitem {BOOLEAN}, \hyperpage{127}
+    \subitem {CASTBOOLEAN}, \hyperpage{127}
+    \subitem {CASTFLOAT}, \hyperpage{127}
+    \subitem {CASTINTEGER}, \hyperpage{127}
+    \subitem {DIVIDE}, \hyperpage{127}
+    \subitem {EQ}, \hyperpage{127}
+    \subitem {FLOAT}, \hyperpage{127}
+    \subitem {GT}, \hyperpage{127}
+    \subitem {GTE}, \hyperpage{127}
+    \subitem {INTEGER}, \hyperpage{127}
+    \subitem {LT}, \hyperpage{127}
+    \subitem {LTE}, \hyperpage{127}
+    \subitem {MODULO}, \hyperpage{127}
+    \subitem {MULTIPLY}, \hyperpage{127}
+    \subitem {NEGATIVE}, \hyperpage{127}
+    \subitem {NEQ}, \hyperpage{127}
+    \subitem {NOT}, \hyperpage{127}
+    \subitem {Opcode}, \hyperpage{127}
+    \subitem {POP}, \hyperpage{127}
+    \subitem {SUBTRACT}, \hyperpage{127}
   \item {Operation}
     \subitem {Tang::AstNodeBinary}, \hyperpage{14}
   \item {Operator}
-    \subitem {Tang::AstNodeUnary}, \hyperpage{29}
+    \subitem {Tang::AstNodeUnary}, \hyperpage{32}
   \item {operator!}
-    \subitem {Tang::GarbageCollected}, \hyperpage{82}
-  \item {operator!=}
-    \subitem {Tang::GarbageCollected}, \hyperpage{82}
-  \item {operator$<$}
-    \subitem {Tang::GarbageCollected}, \hyperpage{87}
-  \item {operator$<$$<$}
-    \subitem {error.cpp}, \hyperpage{138}
-    \subitem {location.hh}, \hyperpage{106, 107}
-    \subitem {Tang::Error}, \hyperpage{77}
-    \subitem {Tang::GarbageCollected}, \hyperpage{92}
-  \item {operator$<$=}
-    \subitem {Tang::GarbageCollected}, \hyperpage{87}
-  \item {operator$>$}
-    \subitem {Tang::GarbageCollected}, \hyperpage{91}
-  \item {operator$>$=}
-    \subitem {Tang::GarbageCollected}, \hyperpage{91}
-  \item {operator$\ast$}
-    \subitem {Tang::GarbageCollected}, \hyperpage{83, 84}
-  \item {operator+}
-    \subitem {Tang::GarbageCollected}, \hyperpage{84}
-  \item {operator-\/}
     \subitem {Tang::GarbageCollected}, \hyperpage{85}
-  \item {operator-\/$>$}
-    \subitem {Tang::GarbageCollected}, \hyperpage{86}
-  \item {operator/}
-    \subitem {Tang::GarbageCollected}, \hyperpage{86}
-  \item {operator=}
+  \item {operator!=}
+    \subitem {Tang::GarbageCollected}, \hyperpage{85}
+  \item {operator$<$}
+    \subitem {Tang::GarbageCollected}, \hyperpage{90}
+  \item {operator$<$$<$}
+    \subitem {error.cpp}, \hyperpage{144}
+    \subitem {location.hh}, \hyperpage{110, 111}
+    \subitem {Tang::Error}, \hyperpage{80}
+    \subitem {Tang::GarbageCollected}, \hyperpage{95}
+  \item {operator$<$=}
+    \subitem {Tang::GarbageCollected}, \hyperpage{90}
+  \item {operator$>$}
+    \subitem {Tang::GarbageCollected}, \hyperpage{94}
+  \item {operator$>$=}
+    \subitem {Tang::GarbageCollected}, \hyperpage{94}
+  \item {operator$\ast$}
+    \subitem {Tang::GarbageCollected}, \hyperpage{86, 87}
+  \item {operator+}
+    \subitem {Tang::GarbageCollected}, \hyperpage{87}
+  \item {operator-\/}
     \subitem {Tang::GarbageCollected}, \hyperpage{88}
+  \item {operator-\/$>$}
+    \subitem {Tang::GarbageCollected}, \hyperpage{89}
+  \item {operator/}
+    \subitem {Tang::GarbageCollected}, \hyperpage{89}
+  \item {operator=}
+    \subitem {Tang::GarbageCollected}, \hyperpage{91}
   \item {operator==}
-    \subitem {Tang::GarbageCollected}, \hyperpage{89, 90}
+    \subitem {Tang::GarbageCollected}, \hyperpage{92, 93}
   \item {operator\%}
-    \subitem {Tang::GarbageCollected}, \hyperpage{83}
+    \subitem {Tang::GarbageCollected}, \hyperpage{86}
 
   \indexspace
 
+  \item {POP}
+    \subitem {opcode.hpp}, \hyperpage{127}
   \item {Program}
-    \subitem {Tang::Program}, \hyperpage{97}
+    \subitem {Tang::Program}, \hyperpage{100}
   \item {program-\/dumpBytecode.cpp}
-    \subitem {DUMPPROGRAMCHECK}, \hyperpage{140}
+    \subitem {DUMPPROGRAMCHECK}, \hyperpage{146}
   \item {program-\/execute.cpp}
-    \subitem {EXECUTEPROGRAMCHECK}, \hyperpage{141}
-    \subitem {STACKCHECK}, \hyperpage{141}
+    \subitem {EXECUTEPROGRAMCHECK}, \hyperpage{147}
+    \subitem {STACKCHECK}, \hyperpage{147}
 
   \indexspace
 
   \item {recycle}
-    \subitem {Tang::SingletonObjectPool$<$ T $>$}, \hyperpage{100}
+    \subitem {Tang::SingletonObjectPool$<$ T $>$}, \hyperpage{103}
 
   \indexspace
 
   \item {Script}
-    \subitem {Tang::Program}, \hyperpage{97}
-  \item {src/astNode.cpp}, \hyperpage{128}
-  \item {src/astNodeBinary.cpp}, \hyperpage{129}
-  \item {src/astNodeBoolean.cpp}, \hyperpage{129}
-  \item {src/astNodeCast.cpp}, \hyperpage{130}
-  \item {src/astNodeFloat.cpp}, \hyperpage{131}
-  \item {src/astNodeInteger.cpp}, \hyperpage{132}
-  \item {src/astNodeUnary.cpp}, \hyperpage{133}
-  \item {src/computedExpression.cpp}, \hyperpage{134}
-  \item {src/computedExpressionBoolean.cpp}, \hyperpage{135}
-  \item {src/computedExpressionError.cpp}, \hyperpage{136}
-  \item {src/computedExpressionFloat.cpp}, \hyperpage{136}
-  \item {src/computedExpressionInteger.cpp}, \hyperpage{137}
-  \item {src/error.cpp}, \hyperpage{138}
-  \item {src/program-\/dumpBytecode.cpp}, \hyperpage{139}
-  \item {src/program-\/execute.cpp}, \hyperpage{140}
-  \item {src/program.cpp}, \hyperpage{142}
-  \item {src/tangBase.cpp}, \hyperpage{142}
+    \subitem {Tang::Program}, \hyperpage{100}
+  \item {src/astNode.cpp}, \hyperpage{133}
+  \item {src/astNodeBinary.cpp}, \hyperpage{134}
+  \item {src/astNodeBlock.cpp}, \hyperpage{134}
+  \item {src/astNodeBoolean.cpp}, \hyperpage{135}
+  \item {src/astNodeCast.cpp}, \hyperpage{136}
+  \item {src/astNodeFloat.cpp}, \hyperpage{137}
+  \item {src/astNodeInteger.cpp}, \hyperpage{138}
+  \item {src/astNodeUnary.cpp}, \hyperpage{139}
+  \item {src/computedExpression.cpp}, \hyperpage{140}
+  \item {src/computedExpressionBoolean.cpp}, \hyperpage{141}
+  \item {src/computedExpressionError.cpp}, \hyperpage{142}
+  \item {src/computedExpressionFloat.cpp}, \hyperpage{142}
+  \item {src/computedExpressionInteger.cpp}, \hyperpage{143}
+  \item {src/error.cpp}, \hyperpage{144}
+  \item {src/program-\/dumpBytecode.cpp}, \hyperpage{145}
+  \item {src/program-\/execute.cpp}, \hyperpage{146}
+  \item {src/program.cpp}, \hyperpage{148}
+  \item {src/tangBase.cpp}, \hyperpage{148}
   \item {STACKCHECK}
-    \subitem {program-\/execute.cpp}, \hyperpage{141}
+    \subitem {program-\/execute.cpp}, \hyperpage{147}
   \item {SUBTRACT}
-    \subitem {opcode.hpp}, \hyperpage{122}
+    \subitem {opcode.hpp}, \hyperpage{127}
   \item {Subtract}
     \subitem {Tang::AstNodeBinary}, \hyperpage{14}
 
@@ -407,169 +415,172 @@
     \subitem {NotEqual}, \hyperpage{14}
     \subitem {Operation}, \hyperpage{14}
     \subitem {Subtract}, \hyperpage{14}
-  \item {Tang::AstNodeBoolean}, \hyperpage{15}
-    \subitem {AstNodeBoolean}, \hyperpage{17}
+  \item {Tang::AstNodeBlock}, \hyperpage{15}
+    \subitem {AstNodeBlock}, \hyperpage{17}
     \subitem {makeCopy}, \hyperpage{17}
-  \item {Tang::AstNodeCast}, \hyperpage{18}
-    \subitem {AstNodeCast}, \hyperpage{20}
-    \subitem {Boolean}, \hyperpage{20}
-    \subitem {Float}, \hyperpage{20}
-    \subitem {Integer}, \hyperpage{20}
-    \subitem {makeCopy}, \hyperpage{21}
-    \subitem {Type}, \hyperpage{20}
-  \item {Tang::AstNodeFloat}, \hyperpage{21}
-    \subitem {AstNodeFloat}, \hyperpage{23}
-    \subitem {makeCopy}, \hyperpage{23}
-  \item {Tang::AstNodeInteger}, \hyperpage{24}
-    \subitem {AstNodeInteger}, \hyperpage{26}
+  \item {Tang::AstNodeBoolean}, \hyperpage{18}
+    \subitem {AstNodeBoolean}, \hyperpage{20}
+    \subitem {makeCopy}, \hyperpage{20}
+  \item {Tang::AstNodeCast}, \hyperpage{21}
+    \subitem {AstNodeCast}, \hyperpage{23}
+    \subitem {Boolean}, \hyperpage{23}
+    \subitem {Float}, \hyperpage{23}
+    \subitem {Integer}, \hyperpage{23}
+    \subitem {makeCopy}, \hyperpage{24}
+    \subitem {Type}, \hyperpage{23}
+  \item {Tang::AstNodeFloat}, \hyperpage{24}
+    \subitem {AstNodeFloat}, \hyperpage{26}
     \subitem {makeCopy}, \hyperpage{26}
-  \item {Tang::AstNodeUnary}, \hyperpage{27}
-    \subitem {AstNodeUnary}, \hyperpage{29}
-    \subitem {makeCopy}, \hyperpage{30}
-    \subitem {Negative}, \hyperpage{29}
-    \subitem {Not}, \hyperpage{29}
-    \subitem {Operator}, \hyperpage{29}
-  \item {Tang::ComputedExpression}, \hyperpage{30}
-    \subitem {\_\_add}, \hyperpage{31}
-    \subitem {\_\_boolean}, \hyperpage{33}
-    \subitem {\_\_divide}, \hyperpage{33}
-    \subitem {\_\_equal}, \hyperpage{33}
-    \subitem {\_\_float}, \hyperpage{35}
-    \subitem {\_\_integer}, \hyperpage{35}
-    \subitem {\_\_lessThan}, \hyperpage{35}
-    \subitem {\_\_modulo}, \hyperpage{36}
-    \subitem {\_\_multiply}, \hyperpage{36}
-    \subitem {\_\_negative}, \hyperpage{36}
-    \subitem {\_\_not}, \hyperpage{37}
-    \subitem {\_\_subtract}, \hyperpage{37}
-    \subitem {dump}, \hyperpage{37}
-    \subitem {is\_equal}, \hyperpage{38, 39}
-    \subitem {makeCopy}, \hyperpage{39}
-  \item {Tang::ComputedExpressionBoolean}, \hyperpage{40}
-    \subitem {\_\_add}, \hyperpage{43}
-    \subitem {\_\_boolean}, \hyperpage{43}
-    \subitem {\_\_divide}, \hyperpage{43}
-    \subitem {\_\_equal}, \hyperpage{44}
-    \subitem {\_\_float}, \hyperpage{44}
-    \subitem {\_\_integer}, \hyperpage{44}
-    \subitem {\_\_lessThan}, \hyperpage{45}
-    \subitem {\_\_modulo}, \hyperpage{45}
-    \subitem {\_\_multiply}, \hyperpage{45}
-    \subitem {\_\_negative}, \hyperpage{46}
-    \subitem {\_\_not}, \hyperpage{46}
-    \subitem {\_\_subtract}, \hyperpage{46}
-    \subitem {ComputedExpressionBoolean}, \hyperpage{41}
-    \subitem {dump}, \hyperpage{47}
-    \subitem {is\_equal}, \hyperpage{47, 48}
-    \subitem {makeCopy}, \hyperpage{48}
-  \item {Tang::ComputedExpressionError}, \hyperpage{49}
-    \subitem {\_\_add}, \hyperpage{51}
-    \subitem {\_\_boolean}, \hyperpage{52}
-    \subitem {\_\_divide}, \hyperpage{52}
-    \subitem {\_\_equal}, \hyperpage{52}
-    \subitem {\_\_float}, \hyperpage{53}
-    \subitem {\_\_integer}, \hyperpage{53}
-    \subitem {\_\_lessThan}, \hyperpage{53}
-    \subitem {\_\_modulo}, \hyperpage{54}
-    \subitem {\_\_multiply}, \hyperpage{54}
-    \subitem {\_\_negative}, \hyperpage{54}
-    \subitem {\_\_not}, \hyperpage{55}
-    \subitem {\_\_subtract}, \hyperpage{55}
-    \subitem {ComputedExpressionError}, \hyperpage{51}
-    \subitem {dump}, \hyperpage{55}
-    \subitem {is\_equal}, \hyperpage{55--57}
-    \subitem {makeCopy}, \hyperpage{57}
-  \item {Tang::ComputedExpressionFloat}, \hyperpage{58}
-    \subitem {\_\_add}, \hyperpage{60}
-    \subitem {\_\_boolean}, \hyperpage{60}
-    \subitem {\_\_divide}, \hyperpage{60}
-    \subitem {\_\_equal}, \hyperpage{61}
-    \subitem {\_\_float}, \hyperpage{61}
-    \subitem {\_\_integer}, \hyperpage{61}
-    \subitem {\_\_lessThan}, \hyperpage{62}
-    \subitem {\_\_modulo}, \hyperpage{62}
-    \subitem {\_\_multiply}, \hyperpage{62}
-    \subitem {\_\_negative}, \hyperpage{63}
-    \subitem {\_\_not}, \hyperpage{63}
-    \subitem {\_\_subtract}, \hyperpage{63}
-    \subitem {ComputedExpressionFloat}, \hyperpage{59}
-    \subitem {dump}, \hyperpage{64}
-    \subitem {is\_equal}, \hyperpage{64, 65}
-    \subitem {makeCopy}, \hyperpage{65}
-  \item {Tang::ComputedExpressionInteger}, \hyperpage{66}
-    \subitem {\_\_add}, \hyperpage{68}
-    \subitem {\_\_boolean}, \hyperpage{69}
-    \subitem {\_\_divide}, \hyperpage{69}
-    \subitem {\_\_equal}, \hyperpage{69}
-    \subitem {\_\_float}, \hyperpage{70}
-    \subitem {\_\_integer}, \hyperpage{70}
-    \subitem {\_\_lessThan}, \hyperpage{70}
-    \subitem {\_\_modulo}, \hyperpage{71}
-    \subitem {\_\_multiply}, \hyperpage{71}
-    \subitem {\_\_negative}, \hyperpage{71}
-    \subitem {\_\_not}, \hyperpage{72}
-    \subitem {\_\_subtract}, \hyperpage{72}
-    \subitem {ComputedExpressionInteger}, \hyperpage{68}
-    \subitem {dump}, \hyperpage{72}
-    \subitem {is\_equal}, \hyperpage{73, 74}
-    \subitem {makeCopy}, \hyperpage{74}
-  \item {Tang::Error}, \hyperpage{75}
-    \subitem {Error}, \hyperpage{77}
-    \subitem {operator$<$$<$}, \hyperpage{77}
-  \item {Tang::GarbageCollected}, \hyperpage{78}
-    \subitem {$\sim$GarbageCollected}, \hyperpage{81}
-    \subitem {GarbageCollected}, \hyperpage{80, 81}
-    \subitem {make}, \hyperpage{81}
-    \subitem {operator!}, \hyperpage{82}
-    \subitem {operator!=}, \hyperpage{82}
-    \subitem {operator$<$}, \hyperpage{87}
-    \subitem {operator$<$$<$}, \hyperpage{92}
-    \subitem {operator$<$=}, \hyperpage{87}
-    \subitem {operator$>$}, \hyperpage{91}
-    \subitem {operator$>$=}, \hyperpage{91}
-    \subitem {operator$\ast$}, \hyperpage{83, 84}
-    \subitem {operator+}, \hyperpage{84}
-    \subitem {operator-\/}, \hyperpage{85}
-    \subitem {operator-\/$>$}, \hyperpage{86}
-    \subitem {operator/}, \hyperpage{86}
-    \subitem {operator=}, \hyperpage{88}
-    \subitem {operator==}, \hyperpage{89, 90}
-    \subitem {operator\%}, \hyperpage{83}
-  \item {Tang::location}, \hyperpage{92}
-  \item {Tang::position}, \hyperpage{94}
-  \item {Tang::Program}, \hyperpage{95}
-    \subitem {addBytecode}, \hyperpage{97}
-    \subitem {CodeType}, \hyperpage{97}
-    \subitem {dumpBytecode}, \hyperpage{98}
-    \subitem {execute}, \hyperpage{98}
-    \subitem {getAst}, \hyperpage{98}
-    \subitem {getCode}, \hyperpage{98}
-    \subitem {getResult}, \hyperpage{99}
-    \subitem {Program}, \hyperpage{97}
-    \subitem {Script}, \hyperpage{97}
-    \subitem {Template}, \hyperpage{97}
-  \item {Tang::SingletonObjectPool$<$ T $>$}, \hyperpage{99}
-    \subitem {get}, \hyperpage{100}
-    \subitem {getInstance}, \hyperpage{100}
-    \subitem {recycle}, \hyperpage{100}
-  \item {Tang::TangBase}, \hyperpage{101}
-    \subitem {compileScript}, \hyperpage{101}
-    \subitem {TangBase}, \hyperpage{101}
-  \item {Tang::TangScanner}, \hyperpage{102}
-    \subitem {get\_next\_token}, \hyperpage{103}
-    \subitem {TangScanner}, \hyperpage{103}
+  \item {Tang::AstNodeInteger}, \hyperpage{27}
+    \subitem {AstNodeInteger}, \hyperpage{29}
+    \subitem {makeCopy}, \hyperpage{29}
+  \item {Tang::AstNodeUnary}, \hyperpage{30}
+    \subitem {AstNodeUnary}, \hyperpage{32}
+    \subitem {makeCopy}, \hyperpage{33}
+    \subitem {Negative}, \hyperpage{32}
+    \subitem {Not}, \hyperpage{32}
+    \subitem {Operator}, \hyperpage{32}
+  \item {Tang::ComputedExpression}, \hyperpage{33}
+    \subitem {\_\_add}, \hyperpage{34}
+    \subitem {\_\_boolean}, \hyperpage{36}
+    \subitem {\_\_divide}, \hyperpage{36}
+    \subitem {\_\_equal}, \hyperpage{36}
+    \subitem {\_\_float}, \hyperpage{38}
+    \subitem {\_\_integer}, \hyperpage{38}
+    \subitem {\_\_lessThan}, \hyperpage{38}
+    \subitem {\_\_modulo}, \hyperpage{39}
+    \subitem {\_\_multiply}, \hyperpage{39}
+    \subitem {\_\_negative}, \hyperpage{39}
+    \subitem {\_\_not}, \hyperpage{40}
+    \subitem {\_\_subtract}, \hyperpage{40}
+    \subitem {dump}, \hyperpage{40}
+    \subitem {is\_equal}, \hyperpage{41, 42}
+    \subitem {makeCopy}, \hyperpage{42}
+  \item {Tang::ComputedExpressionBoolean}, \hyperpage{43}
+    \subitem {\_\_add}, \hyperpage{46}
+    \subitem {\_\_boolean}, \hyperpage{46}
+    \subitem {\_\_divide}, \hyperpage{46}
+    \subitem {\_\_equal}, \hyperpage{47}
+    \subitem {\_\_float}, \hyperpage{47}
+    \subitem {\_\_integer}, \hyperpage{47}
+    \subitem {\_\_lessThan}, \hyperpage{48}
+    \subitem {\_\_modulo}, \hyperpage{48}
+    \subitem {\_\_multiply}, \hyperpage{48}
+    \subitem {\_\_negative}, \hyperpage{49}
+    \subitem {\_\_not}, \hyperpage{49}
+    \subitem {\_\_subtract}, \hyperpage{49}
+    \subitem {ComputedExpressionBoolean}, \hyperpage{44}
+    \subitem {dump}, \hyperpage{50}
+    \subitem {is\_equal}, \hyperpage{50, 51}
+    \subitem {makeCopy}, \hyperpage{51}
+  \item {Tang::ComputedExpressionError}, \hyperpage{52}
+    \subitem {\_\_add}, \hyperpage{54}
+    \subitem {\_\_boolean}, \hyperpage{55}
+    \subitem {\_\_divide}, \hyperpage{55}
+    \subitem {\_\_equal}, \hyperpage{55}
+    \subitem {\_\_float}, \hyperpage{56}
+    \subitem {\_\_integer}, \hyperpage{56}
+    \subitem {\_\_lessThan}, \hyperpage{56}
+    \subitem {\_\_modulo}, \hyperpage{57}
+    \subitem {\_\_multiply}, \hyperpage{57}
+    \subitem {\_\_negative}, \hyperpage{57}
+    \subitem {\_\_not}, \hyperpage{58}
+    \subitem {\_\_subtract}, \hyperpage{58}
+    \subitem {ComputedExpressionError}, \hyperpage{54}
+    \subitem {dump}, \hyperpage{58}
+    \subitem {is\_equal}, \hyperpage{58--60}
+    \subitem {makeCopy}, \hyperpage{60}
+  \item {Tang::ComputedExpressionFloat}, \hyperpage{61}
+    \subitem {\_\_add}, \hyperpage{63}
+    \subitem {\_\_boolean}, \hyperpage{63}
+    \subitem {\_\_divide}, \hyperpage{63}
+    \subitem {\_\_equal}, \hyperpage{64}
+    \subitem {\_\_float}, \hyperpage{64}
+    \subitem {\_\_integer}, \hyperpage{64}
+    \subitem {\_\_lessThan}, \hyperpage{65}
+    \subitem {\_\_modulo}, \hyperpage{65}
+    \subitem {\_\_multiply}, \hyperpage{65}
+    \subitem {\_\_negative}, \hyperpage{66}
+    \subitem {\_\_not}, \hyperpage{66}
+    \subitem {\_\_subtract}, \hyperpage{66}
+    \subitem {ComputedExpressionFloat}, \hyperpage{62}
+    \subitem {dump}, \hyperpage{67}
+    \subitem {is\_equal}, \hyperpage{67, 68}
+    \subitem {makeCopy}, \hyperpage{68}
+  \item {Tang::ComputedExpressionInteger}, \hyperpage{69}
+    \subitem {\_\_add}, \hyperpage{71}
+    \subitem {\_\_boolean}, \hyperpage{72}
+    \subitem {\_\_divide}, \hyperpage{72}
+    \subitem {\_\_equal}, \hyperpage{72}
+    \subitem {\_\_float}, \hyperpage{73}
+    \subitem {\_\_integer}, \hyperpage{73}
+    \subitem {\_\_lessThan}, \hyperpage{73}
+    \subitem {\_\_modulo}, \hyperpage{74}
+    \subitem {\_\_multiply}, \hyperpage{74}
+    \subitem {\_\_negative}, \hyperpage{74}
+    \subitem {\_\_not}, \hyperpage{75}
+    \subitem {\_\_subtract}, \hyperpage{75}
+    \subitem {ComputedExpressionInteger}, \hyperpage{71}
+    \subitem {dump}, \hyperpage{75}
+    \subitem {is\_equal}, \hyperpage{76, 77}
+    \subitem {makeCopy}, \hyperpage{77}
+  \item {Tang::Error}, \hyperpage{78}
+    \subitem {Error}, \hyperpage{80}
+    \subitem {operator$<$$<$}, \hyperpage{80}
+  \item {Tang::GarbageCollected}, \hyperpage{81}
+    \subitem {$\sim$GarbageCollected}, \hyperpage{84}
+    \subitem {GarbageCollected}, \hyperpage{83, 84}
+    \subitem {make}, \hyperpage{84}
+    \subitem {operator!}, \hyperpage{85}
+    \subitem {operator!=}, \hyperpage{85}
+    \subitem {operator$<$}, \hyperpage{90}
+    \subitem {operator$<$$<$}, \hyperpage{95}
+    \subitem {operator$<$=}, \hyperpage{90}
+    \subitem {operator$>$}, \hyperpage{94}
+    \subitem {operator$>$=}, \hyperpage{94}
+    \subitem {operator$\ast$}, \hyperpage{86, 87}
+    \subitem {operator+}, \hyperpage{87}
+    \subitem {operator-\/}, \hyperpage{88}
+    \subitem {operator-\/$>$}, \hyperpage{89}
+    \subitem {operator/}, \hyperpage{89}
+    \subitem {operator=}, \hyperpage{91}
+    \subitem {operator==}, \hyperpage{92, 93}
+    \subitem {operator\%}, \hyperpage{86}
+  \item {Tang::location}, \hyperpage{95}
+  \item {Tang::position}, \hyperpage{97}
+  \item {Tang::Program}, \hyperpage{98}
+    \subitem {addBytecode}, \hyperpage{100}
+    \subitem {CodeType}, \hyperpage{100}
+    \subitem {dumpBytecode}, \hyperpage{101}
+    \subitem {execute}, \hyperpage{101}
+    \subitem {getAst}, \hyperpage{101}
+    \subitem {getCode}, \hyperpage{101}
+    \subitem {getResult}, \hyperpage{102}
+    \subitem {Program}, \hyperpage{100}
+    \subitem {Script}, \hyperpage{100}
+    \subitem {Template}, \hyperpage{100}
+  \item {Tang::SingletonObjectPool$<$ T $>$}, \hyperpage{102}
+    \subitem {get}, \hyperpage{103}
+    \subitem {getInstance}, \hyperpage{103}
+    \subitem {recycle}, \hyperpage{103}
+  \item {Tang::TangBase}, \hyperpage{104}
+    \subitem {compileScript}, \hyperpage{104}
+    \subitem {TangBase}, \hyperpage{104}
+  \item {Tang::TangScanner}, \hyperpage{105}
+    \subitem {get\_next\_token}, \hyperpage{106}
+    \subitem {TangScanner}, \hyperpage{106}
   \item {TANG\_UNUSED}
-    \subitem {macros.hpp}, \hyperpage{121}
+    \subitem {macros.hpp}, \hyperpage{126}
   \item {TangBase}
-    \subitem {Tang::TangBase}, \hyperpage{101}
+    \subitem {Tang::TangBase}, \hyperpage{104}
   \item {TangScanner}
-    \subitem {Tang::TangScanner}, \hyperpage{103}
+    \subitem {Tang::TangScanner}, \hyperpage{106}
   \item {Template}
-    \subitem {Tang::Program}, \hyperpage{97}
-  \item {test/test.cpp}, \hyperpage{143}
-  \item {test/testGarbageCollected.cpp}, \hyperpage{145}
-  \item {test/testSingletonObjectPool.cpp}, \hyperpage{145}
+    \subitem {Tang::Program}, \hyperpage{100}
+  \item {test/test.cpp}, \hyperpage{149}
+  \item {test/testGarbageCollected.cpp}, \hyperpage{151}
+  \item {test/testSingletonObjectPool.cpp}, \hyperpage{151}
   \item {Type}
-    \subitem {Tang::AstNodeCast}, \hyperpage{20}
+    \subitem {Tang::AstNodeCast}, \hyperpage{23}
 
 \end{theindex}
