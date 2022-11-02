@@ -41,7 +41,3 @@ void AstNodeAssign::compile(Tang::Program & program) const {
   }
 }
 
-shared_ptr<AstNode> AstNodeAssign::makeCopy() const {
-  return make_shared<AstNodeAssign>(this->lhs->makeCopy(), this->rhs->makeCopy(), this->location);
-}
-

@@ -21,7 +21,3 @@ void AstNodeFloat::compile(Tang::Program & program) const {
   program.addBytecode(bit_cast<uint64_t>(this->val));
 }
 
-shared_ptr<AstNode> AstNodeFloat::makeCopy() const {
-  return make_shared<AstNodeFloat>(this->val, this->location);
-}
-

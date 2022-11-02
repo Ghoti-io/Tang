@@ -24,7 +24,6 @@ namespace Tang {
 
     virtual std::string dump(std::string indent = "") const override;
     virtual void compile(Tang::Program & program) const override;
-    virtual shared_ptr<AstNode> makeCopy() const override;
 
   private:
     /**

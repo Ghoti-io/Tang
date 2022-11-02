@@ -51,14 +51,6 @@ namespace Tang {
     virtual void compile(Tang::Program & program) const;
 
     /**
-     * Provide a copy of the AstNode (recursively, if appropriate).
-     *
-     * @return A pointer to a new AstNode that is a copy of the current
-     *   AstNode.
-     */
-    virtual std::shared_ptr<AstNode> makeCopy() const;
-
-    /**
      * Compile a list of all variables in the scope.
      *
      * @param program The Tang::Program that is being compiled.

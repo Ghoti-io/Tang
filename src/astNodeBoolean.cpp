@@ -21,7 +21,4 @@ void AstNodeBoolean::compile(Tang::Program & program) const {
   program.addBytecode(this->val ? 1 : 0);
 }
 
-shared_ptr<AstNode> AstNodeBoolean::makeCopy() const {
-  return make_shared<AstNodeBoolean>(this->val, this->location);
-}
 

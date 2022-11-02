@@ -39,7 +39,3 @@ void AstNodeBlock::compile(Tang::Program & program) const {
   }
 }
 
-shared_ptr<AstNode> AstNodeBlock::makeCopy() const {
-  return make_shared<AstNodeBlock>(this->statements, this->location);
-}
-

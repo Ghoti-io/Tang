@@ -29,7 +29,7 @@ Program::~Program() {
 Program::Program(const Program & program) {
   this->code = program.code;
   this->codeType = program.codeType;
-  this->ast = program.ast->makeCopy();
+  this->ast = program.ast;
   this->error = new Error(*program.error);
   this->result = program.result;
 }
@@ -51,7 +51,7 @@ Program & Program::operator=(const Program & program) {
     this->ast = nullptr;
   }
   if (program.ast) {
-    this->ast = program.ast->makeCopy();
+    this->ast = program.ast;
   }
 
   // `error` is a pointer, so cleanup before replacing.

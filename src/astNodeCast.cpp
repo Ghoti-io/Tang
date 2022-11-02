@@ -39,7 +39,3 @@ void AstNodeCast::compile(Tang::Program & program) const {
   }
 }
 
-shared_ptr<AstNode> AstNodeCast::makeCopy() const {
-  return make_shared<AstNodeCast>(this->targetType, this->expression->makeCopy(), this->location);
-}
-

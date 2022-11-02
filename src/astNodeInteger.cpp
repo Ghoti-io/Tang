@@ -21,7 +21,3 @@ void AstNodeInteger::compile(Tang::Program & program) const {
   program.addBytecode(bit_cast<uint64_t>(this->val));
 }
 
-shared_ptr<AstNode> AstNodeInteger::makeCopy() const {
-  return make_shared<AstNodeInteger>(this->val, this->location);
-}
-

@@ -90,7 +90,3 @@ void AstNodeBinary::compile(Tang::Program & program) const {
   }
 }
 
-shared_ptr<AstNode> AstNodeBinary::makeCopy() const {
-  return make_shared<AstNodeBinary>(this->op, this->lhs->makeCopy(), this->rhs->makeCopy(), this->location);
-}
-

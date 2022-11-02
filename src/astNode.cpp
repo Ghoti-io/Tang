@@ -20,9 +20,5 @@ string AstNode::dump(string indent) const {
 void AstNode::compile([[maybe_unused]] Tang::Program & program) const {
 }
 
-shared_ptr<AstNode> AstNode::makeCopy() const {
-  return shared_ptr<AstNode>(new AstNode(this->location));
-}
-
 void AstNode::compileIdentifiers([[maybe_unused]] Program & program) const {}
 

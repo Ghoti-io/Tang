@@ -20,7 +20,3 @@ void AstNodeNull::compile(Tang::Program & program) const {
   program.addBytecode((uint64_t)Opcode::NULLVAL);
 }
 
-shared_ptr<AstNode> AstNodeNull::makeCopy() const {
-  return make_shared<AstNodeNull>(this->location);
-}
-

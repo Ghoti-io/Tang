@@ -34,7 +34,3 @@ void AstNodeIdentifier::compile(Tang::Program & program) const {
   }
 }
 
-shared_ptr<AstNode> AstNodeIdentifier::makeCopy() const {
-  return make_shared<AstNodeIdentifier>(this->name, this->location);
-}
-

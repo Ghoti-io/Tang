@@ -35,7 +35,3 @@ void AstNodeUnary::compile(Tang::Program & program) const {
   }
 }
 
-shared_ptr<AstNode> AstNodeUnary::makeCopy() const {
-  return make_shared<AstNodeUnary>(this->op, this->operand->makeCopy(), this->location);
-}
-
