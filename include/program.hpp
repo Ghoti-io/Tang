@@ -45,31 +45,6 @@ namespace Tang {
     Program(std::string code, CodeType codeType);
 
     /**
-     * The Program Destructor.
-     */
-    ~Program();
-
-    /**
-     * The Copy Constructor.
-     */
-    Program(const Program & program);
-
-    /**
-     * The Copy Assignment operator.
-     */
-    Program & operator=(const Program & program);
-
-    /**
-     * The Move Constructor.
-     */
-    Program(Program && program);
-
-    /**
-     * The Move Assignment operator.
-     */
-    Program & operator=(Program && program);
-
-    /**
      * Get the code that was provided when the Program was created.
      *
      * @return The source code from which the Program was created.
@@ -149,12 +124,6 @@ namespace Tang {
      * A pointer to the AST, if parsing was successful.
      */
     shared_ptr<AstNode> ast;
-
-    /**
-     * A pointer to an error message, if any, resulting from compilation or
-     * runtime errors.
-     */
-    Error * error;
 
     /**
      * The Bytecode of the compiled program.
