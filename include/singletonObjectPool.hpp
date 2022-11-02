@@ -114,10 +114,19 @@ namespace Tang {
      * Destructor.
      */
     ~SingletonObjectPool() {
-      for (int i = 0; i <= this->currentAllocation; ++i) {
-        free (this->allocations[i]);
+      // It is possible that an object pool was created (via the templated
+      // get() function) but never used.  Don't free memory unless it was
+      // actually allocated in the first place.
+      if (this->allocations) {
+        // Free all of the allocation pages.
+        for (int i = 0; i <= this->currentAllocation; ++i) {
+          free (this->allocations[i]);
+        }
+        free (this->allocations);
       }
-      free (this->recycled);
+      if (this->recycled) {
+        free (this->recycled);
+      }
     }
 
   private:

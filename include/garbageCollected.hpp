@@ -35,10 +35,14 @@ namespace Tang {
     template<class T, typename... Args>
     static GarbageCollected make(Args... args) {
       GarbageCollected gc{};
-      auto temp = SingletonObjectPool<T>::getInstance().get();
+      T* temp = SingletonObjectPool<T>::getInstance().get();
       gc.ref = new(temp) T{args...};
       gc.count = new size_t{1};
       gc.recycle = [temp](){
+        // Explicitly call the object destructor.
+        temp->~T();
+
+        // Return the object to the object pool.
         SingletonObjectPool<T>::getInstance().recycle(temp);
       };
       return gc;
