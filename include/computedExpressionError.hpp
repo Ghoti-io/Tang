@@ -23,7 +23,7 @@ namespace Tang {
       ComputedExpressionError(Tang::Error error);
 
       virtual std::string dump() const override;
-      ComputedExpression * makeCopy() const override;
+      GarbageCollected makeCopy() const override;
       virtual bool is_equal(const Error & val) const override;
       virtual GarbageCollected __add(const GarbageCollected & rhs) const override;
       virtual GarbageCollected __subtract(const GarbageCollected & rhs) const override;

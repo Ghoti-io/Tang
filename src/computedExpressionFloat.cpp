@@ -18,8 +18,8 @@ string ComputedExpressionFloat::dump() const {
   return to_string(this->val);
 }
 
-ComputedExpression * ComputedExpressionFloat::makeCopy() const {
-  return new ComputedExpressionFloat(this->val);
+GarbageCollected ComputedExpressionFloat::makeCopy() const {
+  return GarbageCollected::make<ComputedExpressionFloat>(this->val);
 }
 
 bool ComputedExpressionFloat::is_equal(const int & val) const {

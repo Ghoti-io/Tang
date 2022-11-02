@@ -18,8 +18,8 @@ string ComputedExpressionBoolean::dump() const {
   return this->val ? "true" : "false";
 }
 
-ComputedExpression * ComputedExpressionBoolean::makeCopy() const {
-  return new ComputedExpressionBoolean(this->val);
+GarbageCollected ComputedExpressionBoolean::makeCopy() const {
+  return GarbageCollected::make<ComputedExpressionBoolean>(this->val);
 }
 
 bool ComputedExpressionBoolean::is_equal(const bool & val) const {

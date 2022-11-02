@@ -15,8 +15,8 @@ string ComputedExpression::dump() const {
   return "";
 }
 
-ComputedExpression * ComputedExpression::makeCopy() const {
-  return new ComputedExpression();
+GarbageCollected ComputedExpression::makeCopy() const {
+  return GarbageCollected::make<ComputedExpression>();
 }
 
 bool ComputedExpression::is_equal([[maybe_unused]] const int & val) const {

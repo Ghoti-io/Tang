@@ -18,8 +18,8 @@ string ComputedExpressionInteger::dump() const {
   return to_string(this->val);
 }
 
-ComputedExpression * ComputedExpressionInteger::makeCopy() const {
-  return new ComputedExpressionInteger(this->val);
+GarbageCollected ComputedExpressionInteger::makeCopy() const {
+  return GarbageCollected::make<ComputedExpressionInteger>(this->val);
 }
 
 bool ComputedExpressionInteger::is_equal(const int & val) const {

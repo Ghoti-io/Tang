@@ -14,8 +14,8 @@ std::string ComputedExpressionError::dump() const {
   return string("Error: ") + this->error.message;
 }
 
-ComputedExpression * ComputedExpressionError::makeCopy() const {
-  return new ComputedExpressionError(*this);
+GarbageCollected ComputedExpressionError::makeCopy() const {
+  return GarbageCollected::make<ComputedExpressionError>(*this);
 }
 
 bool ComputedExpressionError::is_equal(const Error & val) const {

@@ -15,8 +15,8 @@ string ComputedExpressionNull::dump() const {
   return "NULL";
 }
 
-ComputedExpression * ComputedExpressionNull::makeCopy() const {
-  return new ComputedExpressionNull();
+GarbageCollected ComputedExpressionNull::makeCopy() const {
+  return GarbageCollected::make<ComputedExpressionNull>();
 }
 
 bool ComputedExpressionNull::is_equal([[maybe_unused]] const nullptr_t & val) const {

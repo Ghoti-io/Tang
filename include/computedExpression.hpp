@@ -38,9 +38,9 @@ namespace Tang {
       /**
        * Make a copy of the ComputedExpression (recursively, if appropriate).
        *
-       * @return A pointer to the new ComputedExpression.
+       * @return A Tang::GarbageCollected value for the new ComputedExpression.
        */
-      virtual ComputedExpression * makeCopy() const;
+      virtual GarbageCollected makeCopy() const;
 
       /**
        * Check whether or not the computed expression is equal to another value.

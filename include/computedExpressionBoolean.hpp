@@ -22,7 +22,7 @@ namespace Tang {
       ComputedExpressionBoolean(bool val);
 
       virtual std::string dump() const override;
-      ComputedExpression * makeCopy() const override;
+      GarbageCollected makeCopy() const override;
       virtual bool is_equal(const bool & val) const override;
       virtual GarbageCollected __not() const override;
       virtual GarbageCollected __equal(const GarbageCollected & rhs) const override;

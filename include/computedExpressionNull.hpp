@@ -20,7 +20,7 @@ namespace Tang {
       ComputedExpressionNull();
 
       virtual std::string dump() const override;
-      ComputedExpression * makeCopy() const override;
+      GarbageCollected makeCopy() const override;
       bool is_equal(const nullptr_t & val) const override;
       virtual GarbageCollected __equal(const GarbageCollected & rhs) const override;
 
