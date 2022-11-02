@@ -59,8 +59,6 @@ virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeBinary_a16506f66e9f45
 \mbox{\Hypertarget{classTang_1_1AstNodeBinary_a7955b76c5e7bdf92aa86f8c58ce10473}\label{classTang_1_1AstNodeBinary_a7955b76c5e7bdf92aa86f8c58ce10473}} 
 virtual void \mbox{\hyperlink{classTang_1_1AstNodeBinary_a7955b76c5e7bdf92aa86f8c58ce10473}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const override
 \begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
-virtual shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeBinary_a59db65e95e47c3038975047ea1096824}{make\+Copy}} () const override
-\begin{DoxyCompactList}\small\item\em Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classTang_1_1AstNodeBinary_ab162edc6f175b438c16416e97fdc2d7d}{compile\+Identifiers}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program) const override
 \begin{DoxyCompactList}\small\item\em Compile a list of all variables in the scope. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
@@ -172,23 +170,6 @@ Compile a list of all variables in the scope.
 
 
 Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_ae79b11a4c5dff87c2fd72bcc8eb5232d}{Tang\+::\+Ast\+Node}}.
-
-\mbox{\Hypertarget{classTang_1_1AstNodeBinary_a59db65e95e47c3038975047ea1096824}\label{classTang_1_1AstNodeBinary_a59db65e95e47c3038975047ea1096824}} 
-\index{Tang::AstNodeBinary@{Tang::AstNodeBinary}!makeCopy@{makeCopy}}
-\index{makeCopy@{makeCopy}!Tang::AstNodeBinary@{Tang::AstNodeBinary}}
-\doxysubsubsection{\texorpdfstring{makeCopy()}{makeCopy()}}
-{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ Ast\+Node\+Binary\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). 
-
-\begin{DoxyReturn}{Returns}
-A pointer to a new \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that is a copy of the current \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}}. 
-\end{DoxyReturn}
-
-
-Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a2ffa154eb71a3588659e2ce5dcd5744c}{Tang\+::\+Ast\+Node}}.
 
 
 

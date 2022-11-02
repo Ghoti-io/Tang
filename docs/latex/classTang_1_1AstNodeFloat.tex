@@ -40,8 +40,6 @@ virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeFloat_a8305f0f49aa635
 \mbox{\Hypertarget{classTang_1_1AstNodeFloat_a5c13853df1e7d853525871349866fe49}\label{classTang_1_1AstNodeFloat_a5c13853df1e7d853525871349866fe49}} 
 virtual void \mbox{\hyperlink{classTang_1_1AstNodeFloat_a5c13853df1e7d853525871349866fe49}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const override
 \begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
-virtual shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeFloat_a4ed8f5896e0fdf1fbe0c43eead75c899}{make\+Copy}} () const override
-\begin{DoxyCompactList}\small\item\em Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classTang_1_1AstNode_ae79b11a4c5dff87c2fd72bcc8eb5232d}{compile\+Identifiers}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program) const
 \begin{DoxyCompactList}\small\item\em Compile a list of all variables in the scope. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
@@ -96,23 +94,6 @@ Compile a list of all variables in the scope.
 
 
 Reimplemented in \mbox{\hyperlink{classTang_1_1AstNodeIdentifier_a0718a134e6850888992b46099c8ceb11}{Tang\+::\+Ast\+Node\+Identifier}}, \mbox{\hyperlink{classTang_1_1AstNodeBlock_a0694378503afba57ba4a49c7798cd6ea}{Tang\+::\+Ast\+Node\+Block}}, \mbox{\hyperlink{classTang_1_1AstNodeBinary_ab162edc6f175b438c16416e97fdc2d7d}{Tang\+::\+Ast\+Node\+Binary}}, and \mbox{\hyperlink{classTang_1_1AstNodeAssign_ac79bca0819b3e7bdfa58d1aa411eb744}{Tang\+::\+Ast\+Node\+Assign}}.
-
-\mbox{\Hypertarget{classTang_1_1AstNodeFloat_a4ed8f5896e0fdf1fbe0c43eead75c899}\label{classTang_1_1AstNodeFloat_a4ed8f5896e0fdf1fbe0c43eead75c899}} 
-\index{Tang::AstNodeFloat@{Tang::AstNodeFloat}!makeCopy@{makeCopy}}
-\index{makeCopy@{makeCopy}!Tang::AstNodeFloat@{Tang::AstNodeFloat}}
-\doxysubsubsection{\texorpdfstring{makeCopy()}{makeCopy()}}
-{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ Ast\+Node\+Float\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). 
-
-\begin{DoxyReturn}{Returns}
-A pointer to a new \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that is a copy of the current \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}}. 
-\end{DoxyReturn}
-
-
-Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a2ffa154eb71a3588659e2ce5dcd5744c}{Tang\+::\+Ast\+Node}}.
 
 
 

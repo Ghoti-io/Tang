@@ -37,7 +37,7 @@ Collaboration diagram for Tang\+::Computed\+Expression\+Null\+:
 \begin{DoxyCompactList}\small\item\em Construct an Null result. \end{DoxyCompactList}\item 
 virtual std\+::string \mbox{\hyperlink{classTang_1_1ComputedExpressionNull_a3143a95f64ae069d258efe999e76bca6}{dump}} () const override
 \begin{DoxyCompactList}\small\item\em Output the contents of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} as a string. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} $\ast$ \mbox{\hyperlink{classTang_1_1ComputedExpressionNull_aa5dfefd701509682ec47e09844eb5091}{make\+Copy}} () const override
+\mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionNull_a5d13ef955b73182dd9f01c653cc8dce8}{make\+Copy}} () const override
 \begin{DoxyCompactList}\small\item\em Make a copy of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} (recursively, if appropriate). \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTang_1_1ComputedExpressionNull_a61a0982dcfbb7a33d2ac251381cf85af}\label{classTang_1_1ComputedExpressionNull_a61a0982dcfbb7a33d2ac251381cf85af}} 
 bool {\bfseries is\+\_\+equal} (const nullptr\+\_\+t \&val) const override
@@ -444,22 +444,22 @@ Check whether or not the computed expression is equal to another value.
 \begin{DoxyReturn}{Returns}
 True if equal, false if not. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classTang_1_1ComputedExpressionNull_aa5dfefd701509682ec47e09844eb5091}\label{classTang_1_1ComputedExpressionNull_aa5dfefd701509682ec47e09844eb5091}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionNull_a5d13ef955b73182dd9f01c653cc8dce8}\label{classTang_1_1ComputedExpressionNull_a5d13ef955b73182dd9f01c653cc8dce8}} 
 \index{Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}!makeCopy@{makeCopy}}
 \index{makeCopy@{makeCopy}!Tang::ComputedExpressionNull@{Tang::ComputedExpressionNull}}
 \doxysubsubsection{\texorpdfstring{makeCopy()}{makeCopy()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} $\ast$ Computed\+Expression\+Null\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Null\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
 Make a copy of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} (recursively, if appropriate). 
 
 \begin{DoxyReturn}{Returns}
-A pointer to the new \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}}. 
+A \mbox{\hyperlink{classTang_1_1GarbageCollected}{Tang\+::\+Garbage\+Collected}} value for the new \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}}. 
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_abf7820ae7313878aa37573cce35eb613}{Tang\+::\+Computed\+Expression}}.
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a2c862b516b38bbb010677176f101eb19}{Tang\+::\+Computed\+Expression}}.
 
 
 

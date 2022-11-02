@@ -142,9 +142,6 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeCast.html#af911e11e47869acdd1f6b8fabd9555e2">compile</a> (<a class="el" href="classTang_1_1Program.html">Tang::Program</a> &amp;program) const override</td></tr>
 <tr class="memdesc:af911e11e47869acdd1f6b8fabd9555e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile the ast of the provided <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a>. <br /></td></tr>
 <tr class="separator:af911e11e47869acdd1f6b8fabd9555e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab36b44fe01ff2e37d638e6be9cf2f7fb"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeCast.html#ab36b44fe01ff2e37d638e6be9cf2f7fb">makeCopy</a> () const override</td></tr>
-<tr class="memdesc:ab36b44fe01ff2e37d638e6be9cf2f7fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide a copy of the <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> (recursively, if appropriate).  <a href="classTang_1_1AstNodeCast.html#ab36b44fe01ff2e37d638e6be9cf2f7fb">More...</a><br /></td></tr>
-<tr class="separator:ab36b44fe01ff2e37d638e6be9cf2f7fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae79b11a4c5dff87c2fd72bcc8eb5232d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#ae79b11a4c5dff87c2fd72bcc8eb5232d">compileIdentifiers</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program) const</td></tr>
 <tr class="memdesc:ae79b11a4c5dff87c2fd72bcc8eb5232d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a list of all variables in the scope.  <a href="classTang_1_1AstNode.html#ae79b11a4c5dff87c2fd72bcc8eb5232d">More...</a><br /></td></tr>
 <tr class="separator:ae79b11a4c5dff87c2fd72bcc8eb5232d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -262,36 +259,6 @@ Protected Attributes</h2></td></tr>
 </dl>
 
 <p>Reimplemented in <a class="el" href="classTang_1_1AstNodeIdentifier.html#a0718a134e6850888992b46099c8ceb11">Tang::AstNodeIdentifier</a>, <a class="el" href="classTang_1_1AstNodeBlock.html#a0694378503afba57ba4a49c7798cd6ea">Tang::AstNodeBlock</a>, <a class="el" href="classTang_1_1AstNodeBinary.html#ab162edc6f175b438c16416e97fdc2d7d">Tang::AstNodeBinary</a>, and <a class="el" href="classTang_1_1AstNodeAssign.html#ac79bca0819b3e7bdfa58d1aa411eb744">Tang::AstNodeAssign</a>.</p>
-
-</div>
-</div>
-<a id="ab36b44fe01ff2e37d638e6be9cf2f7fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab36b44fe01ff2e37d638e6be9cf2f7fb">&#9670;&nbsp;</a></span>makeCopy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt; AstNodeCast::makeCopy </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Provide a copy of the <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> (recursively, if appropriate). </p>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to a new <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that is a copy of the current <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a>. </dd></dl>
-
-<p>Reimplemented from <a class="el" href="classTang_1_1AstNode.html#a2ffa154eb71a3588659e2ce5dcd5744c">Tang::AstNode</a>.</p>
 
 </div>
 </div>

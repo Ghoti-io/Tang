@@ -142,9 +142,6 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a390f8887c418f972d75e968f1274b2cb">compile</a> (<a class="el" href="classTang_1_1Program.html">Tang::Program</a> &amp;program) const</td></tr>
 <tr class="memdesc:a390f8887c418f972d75e968f1274b2cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile the ast of the provided <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a>. <br /></td></tr>
 <tr class="separator:a390f8887c418f972d75e968f1274b2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ffa154eb71a3588659e2ce5dcd5744c"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a2ffa154eb71a3588659e2ce5dcd5744c">makeCopy</a> () const</td></tr>
-<tr class="memdesc:a2ffa154eb71a3588659e2ce5dcd5744c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide a copy of the <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> (recursively, if appropriate).  <a href="classTang_1_1AstNode.html#a2ffa154eb71a3588659e2ce5dcd5744c">More...</a><br /></td></tr>
-<tr class="separator:a2ffa154eb71a3588659e2ce5dcd5744c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae79b11a4c5dff87c2fd72bcc8eb5232d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#ae79b11a4c5dff87c2fd72bcc8eb5232d">compileIdentifiers</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program) const</td></tr>
 <tr class="memdesc:ae79b11a4c5dff87c2fd72bcc8eb5232d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a list of all variables in the scope.  <a href="classTang_1_1AstNode.html#ae79b11a4c5dff87c2fd72bcc8eb5232d">More...</a><br /></td></tr>
 <tr class="separator:ae79b11a4c5dff87c2fd72bcc8eb5232d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -235,45 +232,6 @@ Protected Attributes</h2></td></tr>
 </dl>
 
 <p>Reimplemented in <a class="el" href="classTang_1_1AstNodeIdentifier.html#a0718a134e6850888992b46099c8ceb11">Tang::AstNodeIdentifier</a>, <a class="el" href="classTang_1_1AstNodeBlock.html#a0694378503afba57ba4a49c7798cd6ea">Tang::AstNodeBlock</a>, <a class="el" href="classTang_1_1AstNodeBinary.html#ab162edc6f175b438c16416e97fdc2d7d">Tang::AstNodeBinary</a>, and <a class="el" href="classTang_1_1AstNodeAssign.html#ac79bca0819b3e7bdfa58d1aa411eb744">Tang::AstNodeAssign</a>.</p>
-
-</div>
-</div>
-<a id="a2ffa154eb71a3588659e2ce5dcd5744c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ffa154eb71a3588659e2ce5dcd5744c">&#9670;&nbsp;</a></span>makeCopy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt; AstNode::makeCopy </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Provide a copy of the <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> (recursively, if appropriate). </p>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to a new <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that is a copy of the current <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a>. </dd></dl>
-
-<p>Reimplemented in <a class="el" href="classTang_1_1AstNodeUnary.html#a38aa33f11d2c116aad337e6613cecf99">Tang::AstNodeUnary</a>, <a class="el" href="classTang_1_1AstNodeNull.html#a28d5145a21ecd57360fb70bf86e4e8c8">Tang::AstNodeNull</a>, <a class="el" href="classTang_1_1AstNodeInteger.html#ab5e5d6788c152dfaa2a6da8bc67fdad8">Tang::AstNodeInteger</a>, <a class="el" href="classTang_1_1AstNodeIdentifier.html#adb6be72ba6fb34d255d96f07062c1b6f">Tang::AstNodeIdentifier</a>, <a class="el" href="classTang_1_1AstNodeFloat.html#a4ed8f5896e0fdf1fbe0c43eead75c899">Tang::AstNodeFloat</a>, <a class="el" href="classTang_1_1AstNodeCast.html#ab36b44fe01ff2e37d638e6be9cf2f7fb">Tang::AstNodeCast</a>, <a class="el" href="classTang_1_1AstNodeBoolean.html#a0df87176d66bac91317ec9bbef057a6a">Tang::AstNodeBoolean</a>, <a class="el" href="classTang_1_1AstNodeBlock.html#a1bc0ffd7e92a9ea965ef986d335219da">Tang::AstNodeBlock</a>, <a class="el" href="classTang_1_1AstNodeBinary.html#a59db65e95e47c3038975047ea1096824">Tang::AstNodeBinary</a>, and <a class="el" href="classTang_1_1AstNodeAssign.html#a9a774c86a27f3f27d910754bb68103cd">Tang::AstNodeAssign</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classTang_1_1AstNode_a2ffa154eb71a3588659e2ce5dcd5744c_cgraph.png" border="0" usemap="#aclassTang_1_1AstNode_a2ffa154eb71a3588659e2ce5dcd5744c_cgraph" alt=""/></div>
-<map name="aclassTang_1_1AstNode_a2ffa154eb71a3588659e2ce5dcd5744c_cgraph" id="aclassTang_1_1AstNode_a2ffa154eb71a3588659e2ce5dcd5744c_cgraph">
-<area shape="rect" title="Provide a copy of the AstNode (recursively, if appropriate)." alt="" coords="5,5,197,32"/>
-<area shape="rect" href="classTang_1_1AstNode.html#a7b8d92e81c4497aa330460a870708578" title="The generic constructor." alt="" coords="245,5,424,32"/>
-</map>
-</div>
 
 </div>
 </div>

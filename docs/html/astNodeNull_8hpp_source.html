@@ -100,17 +100,15 @@ $(document).ready(function(){initNavTree('astNodeNull_8hpp_source.html',''); ini
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="classTang_1_1AstNodeNull.html#aedd095017786f811e0b9dccc0c157e0e">dump</a>(std::string indent = <span class="stringliteral">&quot;&quot;</span>) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classTang_1_1AstNodeNull.html#a6b935644cd2dacca42c353d1df3da8b9">compile</a>(<a class="code" href="classTang_1_1Program.html">Tang::Program</a> &amp; program) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">virtual</span> shared_ptr&lt;AstNode&gt; <a class="code" href="classTang_1_1AstNodeNull.html#a28d5145a21ecd57360fb70bf86e4e8c8">makeCopy</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  };</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// TANG_ASTNODENULL_HPP</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  };</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// TANG_ASTNODENULL_HPP</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="ttc" id="aastNode_8hpp_html"><div class="ttname"><a href="astNode_8hpp.html">astNode.hpp</a></div><div class="ttdoc">Declare the Tang::AstNode base class.</div></div>
 <div class="ttc" id="aclassTang_1_1AstNodeNull_html"><div class="ttname"><a href="classTang_1_1AstNodeNull.html">Tang::AstNodeNull</a></div><div class="ttdoc">An AstNode that represents a NULL value.</div><div class="ttdef"><b>Definition:</b> astNodeNull.hpp:15</div></div>
-<div class="ttc" id="aclassTang_1_1AstNodeNull_html_a28d5145a21ecd57360fb70bf86e4e8c8"><div class="ttname"><a href="classTang_1_1AstNodeNull.html#a28d5145a21ecd57360fb70bf86e4e8c8">Tang::AstNodeNull::makeCopy</a></div><div class="ttdeci">virtual shared_ptr&lt; AstNode &gt; makeCopy() const override</div><div class="ttdoc">Provide a copy of the AstNode (recursively, if appropriate).</div><div class="ttdef"><b>Definition:</b> astNodeNull.cpp:23</div></div>
 <div class="ttc" id="aclassTang_1_1AstNodeNull_html_a6b935644cd2dacca42c353d1df3da8b9"><div class="ttname"><a href="classTang_1_1AstNodeNull.html#a6b935644cd2dacca42c353d1df3da8b9">Tang::AstNodeNull::compile</a></div><div class="ttdeci">virtual void compile(Tang::Program &amp;program) const override</div><div class="ttdoc">Compile the ast of the provided Tang::Program.</div><div class="ttdef"><b>Definition:</b> astNodeNull.cpp:19</div></div>
 <div class="ttc" id="aclassTang_1_1AstNodeNull_html_a6e9ad58917355f05f5b9ba20964cbb21"><div class="ttname"><a href="classTang_1_1AstNodeNull.html#a6e9ad58917355f05f5b9ba20964cbb21">Tang::AstNodeNull::AstNodeNull</a></div><div class="ttdeci">AstNodeNull(Tang::location location)</div><div class="ttdoc">The constructor.</div><div class="ttdef"><b>Definition:</b> astNodeNull.cpp:13</div></div>
 <div class="ttc" id="aclassTang_1_1AstNodeNull_html_aedd095017786f811e0b9dccc0c157e0e"><div class="ttname"><a href="classTang_1_1AstNodeNull.html#aedd095017786f811e0b9dccc0c157e0e">Tang::AstNodeNull::dump</a></div><div class="ttdeci">virtual std::string dump(std::string indent=&quot;&quot;) const override</div><div class="ttdoc">Return a string that describes the contents of the node.</div><div class="ttdef"><b>Definition:</b> astNodeNull.cpp:15</div></div>

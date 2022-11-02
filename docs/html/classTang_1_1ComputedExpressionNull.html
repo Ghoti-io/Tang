@@ -123,9 +123,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3143a95f64ae069d258efe999e76bca6"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionNull.html#a3143a95f64ae069d258efe999e76bca6">dump</a> () const override</td></tr>
 <tr class="memdesc:a3143a95f64ae069d258efe999e76bca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output the contents of the <a class="el" href="classTang_1_1ComputedExpression.html" title="Represents the result of a computation that has been executed.">ComputedExpression</a> as a string.  <a href="classTang_1_1ComputedExpressionNull.html#a3143a95f64ae069d258efe999e76bca6">More...</a><br /></td></tr>
 <tr class="separator:a3143a95f64ae069d258efe999e76bca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5dfefd701509682ec47e09844eb5091"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTang_1_1ComputedExpression.html">ComputedExpression</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionNull.html#aa5dfefd701509682ec47e09844eb5091">makeCopy</a> () const override</td></tr>
-<tr class="memdesc:aa5dfefd701509682ec47e09844eb5091"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of the <a class="el" href="classTang_1_1ComputedExpression.html" title="Represents the result of a computation that has been executed.">ComputedExpression</a> (recursively, if appropriate).  <a href="classTang_1_1ComputedExpressionNull.html#aa5dfefd701509682ec47e09844eb5091">More...</a><br /></td></tr>
-<tr class="separator:aa5dfefd701509682ec47e09844eb5091"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d13ef955b73182dd9f01c653cc8dce8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionNull.html#a5d13ef955b73182dd9f01c653cc8dce8">makeCopy</a> () const override</td></tr>
+<tr class="memdesc:a5d13ef955b73182dd9f01c653cc8dce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of the <a class="el" href="classTang_1_1ComputedExpression.html" title="Represents the result of a computation that has been executed.">ComputedExpression</a> (recursively, if appropriate).  <a href="classTang_1_1ComputedExpressionNull.html#a5d13ef955b73182dd9f01c653cc8dce8">More...</a><br /></td></tr>
+<tr class="separator:a5d13ef955b73182dd9f01c653cc8dce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61a0982dcfbb7a33d2ac251381cf85af"><td class="memItemLeft" align="right" valign="top"><a id="a61a0982dcfbb7a33d2ac251381cf85af"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_equal</b> (const nullptr_t &amp;val) const override</td></tr>
 <tr class="separator:a61a0982dcfbb7a33d2ac251381cf85af"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -806,8 +806,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_equal</b> (const n
 
 </div>
 </div>
-<a id="aa5dfefd701509682ec47e09844eb5091"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5dfefd701509682ec47e09844eb5091">&#9670;&nbsp;</a></span>makeCopy()</h2>
+<a id="a5d13ef955b73182dd9f01c653cc8dce8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d13ef955b73182dd9f01c653cc8dce8">&#9670;&nbsp;</a></span>makeCopy()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -816,7 +816,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_equal</b> (const n
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classTang_1_1ComputedExpression.html">ComputedExpression</a> * ComputedExpressionNull::makeCopy </td>
+          <td class="memname"><a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> ComputedExpressionNull::makeCopy </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -830,9 +830,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_equal</b> (const n
 </div><div class="memdoc">
 
 <p>Make a copy of the <a class="el" href="classTang_1_1ComputedExpression.html" title="Represents the result of a computation that has been executed.">ComputedExpression</a> (recursively, if appropriate). </p>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the new <a class="el" href="classTang_1_1ComputedExpression.html" title="Represents the result of a computation that has been executed.">ComputedExpression</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="classTang_1_1GarbageCollected.html" title="A container that acts as a resource-counting garbage collector for the specified type.">Tang::GarbageCollected</a> value for the new <a class="el" href="classTang_1_1ComputedExpression.html" title="Represents the result of a computation that has been executed.">ComputedExpression</a>. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#abf7820ae7313878aa37573cce35eb613">Tang::ComputedExpression</a>.</p>
+<p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#a2c862b516b38bbb010677176f101eb19">Tang::ComputedExpression</a>.</p>
 
 </div>
 </div>

@@ -41,8 +41,6 @@ virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNode_a9884742e4b32db78c02
 \mbox{\Hypertarget{classTang_1_1AstNode_a390f8887c418f972d75e968f1274b2cb}\label{classTang_1_1AstNode_a390f8887c418f972d75e968f1274b2cb}} 
 virtual void \mbox{\hyperlink{classTang_1_1AstNode_a390f8887c418f972d75e968f1274b2cb}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const
 \begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
-virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNode_a2ffa154eb71a3588659e2ce5dcd5744c}{make\+Copy}} () const
-\begin{DoxyCompactList}\small\item\em Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classTang_1_1AstNode_ae79b11a4c5dff87c2fd72bcc8eb5232d}{compile\+Identifiers}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program) const
 \begin{DoxyCompactList}\small\item\em Compile a list of all variables in the scope. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
@@ -103,31 +101,6 @@ Compile a list of all variables in the scope.
 
 Reimplemented in \mbox{\hyperlink{classTang_1_1AstNodeIdentifier_a0718a134e6850888992b46099c8ceb11}{Tang\+::\+Ast\+Node\+Identifier}}, \mbox{\hyperlink{classTang_1_1AstNodeBlock_a0694378503afba57ba4a49c7798cd6ea}{Tang\+::\+Ast\+Node\+Block}}, \mbox{\hyperlink{classTang_1_1AstNodeBinary_ab162edc6f175b438c16416e97fdc2d7d}{Tang\+::\+Ast\+Node\+Binary}}, and \mbox{\hyperlink{classTang_1_1AstNodeAssign_ac79bca0819b3e7bdfa58d1aa411eb744}{Tang\+::\+Ast\+Node\+Assign}}.
 
-\mbox{\Hypertarget{classTang_1_1AstNode_a2ffa154eb71a3588659e2ce5dcd5744c}\label{classTang_1_1AstNode_a2ffa154eb71a3588659e2ce5dcd5744c}} 
-\index{Tang::AstNode@{Tang::AstNode}!makeCopy@{makeCopy}}
-\index{makeCopy@{makeCopy}!Tang::AstNode@{Tang::AstNode}}
-\doxysubsubsection{\texorpdfstring{makeCopy()}{makeCopy()}}
-{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ Ast\+Node\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
-Provide a copy of the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} (recursively, if appropriate). 
-
-\begin{DoxyReturn}{Returns}
-A pointer to a new \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that is a copy of the current \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}}. 
-\end{DoxyReturn}
-
-
-Reimplemented in \mbox{\hyperlink{classTang_1_1AstNodeUnary_a38aa33f11d2c116aad337e6613cecf99}{Tang\+::\+Ast\+Node\+Unary}}, \mbox{\hyperlink{classTang_1_1AstNodeNull_a28d5145a21ecd57360fb70bf86e4e8c8}{Tang\+::\+Ast\+Node\+Null}}, \mbox{\hyperlink{classTang_1_1AstNodeInteger_ab5e5d6788c152dfaa2a6da8bc67fdad8}{Tang\+::\+Ast\+Node\+Integer}}, \mbox{\hyperlink{classTang_1_1AstNodeIdentifier_adb6be72ba6fb34d255d96f07062c1b6f}{Tang\+::\+Ast\+Node\+Identifier}}, \mbox{\hyperlink{classTang_1_1AstNodeFloat_a4ed8f5896e0fdf1fbe0c43eead75c899}{Tang\+::\+Ast\+Node\+Float}}, \mbox{\hyperlink{classTang_1_1AstNodeCast_ab36b44fe01ff2e37d638e6be9cf2f7fb}{Tang\+::\+Ast\+Node\+Cast}}, \mbox{\hyperlink{classTang_1_1AstNodeBoolean_a0df87176d66bac91317ec9bbef057a6a}{Tang\+::\+Ast\+Node\+Boolean}}, \mbox{\hyperlink{classTang_1_1AstNodeBlock_a1bc0ffd7e92a9ea965ef986d335219da}{Tang\+::\+Ast\+Node\+Block}}, \mbox{\hyperlink{classTang_1_1AstNodeBinary_a59db65e95e47c3038975047ea1096824}{Tang\+::\+Ast\+Node\+Binary}}, and \mbox{\hyperlink{classTang_1_1AstNodeAssign_a9a774c86a27f3f27d910754bb68103cd}{Tang\+::\+Ast\+Node\+Assign}}.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classTang_1_1AstNode_a2ffa154eb71a3588659e2ce5dcd5744c_cgraph}
-\end{center}
-\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
