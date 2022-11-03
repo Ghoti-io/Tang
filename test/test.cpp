@@ -491,6 +491,45 @@ TEST(Assign, Identifier) {
   EXPECT_EQ(*p3.execute().getResult(), 2);
 }
 
+TEST(Assign, IfElse) {
+  auto p1 = TangBase().compileScript("a = 1; if (true) a = 2; a;");
+  EXPECT_EQ(*p1.execute().getResult(), 2);
+  auto p2 = TangBase().compileScript("a = 1; if (true) a = 2; else a = 3; a;");
+  EXPECT_EQ(*p2.execute().getResult(), 2);
+  auto p3 = TangBase().compileScript("a = 1; if (false) a = 2; a;");
+  EXPECT_EQ(*p3.execute().getResult(), 1);
+  auto p4 = TangBase().compileScript("a = 1; if (false) a = 2; else a = 3; a;");
+  EXPECT_EQ(*p4.execute().getResult(), 3);
+  auto p5 = TangBase().compileScript("a = 1; if (true) {b = 2; a = a + b;} a;");
+  EXPECT_EQ(*p5.execute().getResult(), 3);
+  auto p6 = TangBase().compileScript("a = 1; if (true) {b = 3; a = a + b;} else {b = 3; a = a + b;} a;");
+  EXPECT_EQ(*p6.execute().getResult(), 4);
+  auto p7 = TangBase().compileScript("a = 1; if (false) {b = 2; a = a + b;} a;");
+  EXPECT_EQ(*p7.execute().getResult(), 1);
+  auto p8 = TangBase().compileScript("a = 1; if (false) {b = 2; a = a + b;} else {b = 3; a = a + b;} a;");
+  EXPECT_EQ(*p8.execute().getResult(), 4);
+  auto p9 = TangBase().compileScript("a = 1; if (true) a = 2; else {b = 3; a = a + b;} a;");
+  EXPECT_EQ(*p9.execute().getResult(), 2);
+  auto p10 = TangBase().compileScript("a = 1; if (false) a = 2; else {b = 3; a = a + b;} a;");
+  EXPECT_EQ(*p10.execute().getResult(), 4);
+  auto p11 = TangBase().compileScript("a = 1; if (true) {b = 2; a = a + b;} else a = 4; a;");
+  EXPECT_EQ(*p11.execute().getResult(), 3);
+  auto p12 = TangBase().compileScript("a = 1; if (false) {b = 2; a = a + b;} else a = 4; a;");
+  EXPECT_EQ(*p12.execute().getResult(), 4);
+  auto p13 = TangBase().compileScript("a = 1; if (true) if (true) a = 3; else a = 4; a;");
+  EXPECT_EQ(*p13.execute().getResult(), 3);
+  auto p14 = TangBase().compileScript("a = 1; if (true) if (false) a = 3; else a = 4; a;");
+  EXPECT_EQ(*p14.execute().getResult(), 4);
+  auto p15 = TangBase().compileScript("a = 1; if (false) if (true) a = 3; else a = 4; a;");
+  EXPECT_EQ(*p15.execute().getResult(), 1);
+  auto p16 = TangBase().compileScript("a = 1; if (false) if (false) a = 3; else a = 4; a;");
+  EXPECT_EQ(*p16.execute().getResult(), 1);
+  auto p17 = TangBase().compileScript("a = 1; b = 2; if (a != b) a = 3; a;");
+  EXPECT_EQ(*p17.execute().getResult(), 3);
+  auto p18 = TangBase().compileScript("a = 1; b = 2; if (a == b) a = 3; a;");
+  EXPECT_EQ(*p18.execute().getResult(), 1);
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

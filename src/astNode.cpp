@@ -17,8 +17,7 @@ string AstNode::dump(string indent) const {
   return indent + "\n";
 }
 
-void AstNode::compile([[maybe_unused]] Tang::Program & program) const {
-}
+void AstNode::compile([[maybe_unused]] Tang::Program & program) const {}
 
 void AstNode::compileIdentifiers([[maybe_unused]] Program & program) const {}
 

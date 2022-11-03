@@ -94,6 +94,10 @@
 %token GREATERTHANEQUAL ">="
 %token EQUALCOMPARE "=="
 %token NOTEQUAL "!="
+%token LBRACE "{"
+%token RBRACE "}"
+%token IF "if"
+%token ELSE "else"
 %token AS "as"
 %token NULL "null"
 %token CASTINT "int"
@@ -107,6 +111,9 @@
 %type <std::shared_ptr<Tang::AstNode>> expression
 %type <std::vector<std::shared_ptr<Tang::AstNode>>> statements
 %type <std::shared_ptr<Tang::AstNode>> statement
+%type <std::shared_ptr<Tang::AstNode>> codeBlock
+%type <std::shared_ptr<Tang::AstNode>> openStatement
+%type <std::shared_ptr<Tang::AstNode>> closedStatement
 
 // Precedence rules.
 // For guidance, see:
@@ -149,6 +156,7 @@ namespace Tang {
 #include "astNodeBoolean.hpp"
 #include "astNodeCast.hpp"
 #include "astNodeBlock.hpp"
+#include "astNodeIfElse.hpp"
 
 // We must provide the yylex() function.
 // yylex() arguments are defined in the bison .y file.
@@ -206,7 +214,46 @@ statements
 
 // `statement` represents an `expression`
 statement
-  : expression ";"
+  : closedStatement
+  | openStatement
+  ;
+
+// To avoid the "dangling else" problem:
+// https://en.wikipedia.org/wiki/Dangling_else#Avoiding_the_conflict_in_LR_parsers
+// These should only contain closedStatements
+
+closedStatement
+  : "if" "(" expression ")" closedStatement "else" closedStatement
+    {
+      $$ = std::make_shared<AstNodeIfElse>($3, $5, $7, @1);
+    }
+  | codeBlock
+  | expression ";"
+  ;
+
+// These should only have an openStatement as the last terminal.
+openStatement
+  : "if" "(" expression ")" statement
+    {
+      $$ = std::make_shared<AstNodeIfElse>($3, $5, @1);
+    }
+  | "if" "(" expression ")" statement "else" openStatement
+    {
+      $$ = std::make_shared<AstNodeIfElse>($3, $5, $7, @1);
+    }
+  ;
+
+
+// `codeBlock` represents a series of statements.
+codeBlock
+  : "{" "}"
+    {
+      $$ = std::make_shared<AstNodeBlock>(std::vector<shared_ptr<AstNode>>{}, @1);
+    }
+  | "{" statements "}"
+    {
+      $$ = std::make_shared<AstNodeBlock>($2, @1);
+    }
   ;
 
 // `expression` represents a computable value.

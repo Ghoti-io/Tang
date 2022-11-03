@@ -63,7 +63,25 @@ optional<const GarbageCollected> Program::getResult() const {
   return this->result;
 }
 
-void Program::addBytecode(uint64_t op) {
+size_t Program::addBytecode(uint64_t op) {
   this->bytecode.push_back(op);
+  return this->bytecode.size();
+}
+
+const Bytecode & Program::getBytecode() {
+  return this->bytecode;
+}
+
+bool Program::setJumpTarget(size_t opcodeAddress, uint64_t jumpTarget) {
+  // Verify that the address is in scope.
+  if (opcodeAddress >= this->bytecode.size() - 1) {
+    return false;
+  }
+  // Verify that the opcodeAddress is, in fact, a jump instruction.
+  // TODO
+
+  // Set the instruction.
+  this->bytecode[opcodeAddress + 1] = jumpTarget;
+  return true;
 }
 

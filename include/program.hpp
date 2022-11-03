@@ -84,8 +84,16 @@ namespace Tang {
      * Add a uint64_t to the Bytecode.
      *
      * @param op The value to add to the Bytecode.
+     * @return The size of the bytecode structure.
      */
-    void addBytecode(uint64_t);
+    size_t addBytecode(uint64_t);
+
+    /**
+     * Get the Bytecode vector.
+     * 
+     * @return The Bytecode vector.
+     */
+    const Bytecode & getBytecode();
 
     /**
      * Execute the program's Bytecode, and return the current Program object.
@@ -98,6 +106,15 @@ namespace Tang {
      * Stack of mappings of identifiers to their stack locations.
      */
     std::vector<std::map<std::string, size_t>> identifierStack;
+
+    /**
+     * Set the target address of a Jump opcode.
+     *
+     * @param opcodeAddress The location of the jump statement.
+     * @param jumpTarget The address to jump to.
+     * @return Whether or not the jumpTarget was set.
+     */
+    bool setJumpTarget(size_t opcodeAddress, uint64_t jumpTarget);
 
   private:
     /**

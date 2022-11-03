@@ -8,6 +8,8 @@ namespace Tang {
     POP,      ///< Pop a val
     PEEK,     ///< Stack # (from fp): push val from stack #
     POKE,     ///< Stack # (from fp): Copy a val, store @ stack #
+    JMP,      ///< PC #: set pc to PC #
+    JMPF_POP, ///< PC #: pop val, if false, set pc to PC #
     NULLVAL,  ///< Push a null onto the stack
     INTEGER,  ///< Push an integer onto the stack
     FLOAT,    ///< Push a floating point number onto the stack

@@ -100,6 +100,12 @@ using namespace std;
   // (Note: there is no code yet, this is just a placeholder)
 
 <INITIAL,SCRIPT>{
+  if {
+    return Tang::TangParser::make_IF(Tang::location(location));
+  }
+  else {
+    return Tang::TangParser::make_ELSE(Tang::location(location));
+  }
   null {
     return Tang::TangParser::make_NULL(Tang::location(location));
   }
@@ -149,6 +155,12 @@ using namespace std;
   }
   \) {
     return Tang::TangParser::make_RPAREN(Tang::location(location));
+  }
+  \{ {
+    return Tang::TangParser::make_LBRACE(Tang::location(location));
+  }
+  \} {
+    return Tang::TangParser::make_RBRACE(Tang::location(location));
   }
   \! {
     return Tang::TangParser::make_EXCLAMATIONPOINT(Tang::location(location));
