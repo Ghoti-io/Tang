@@ -1,0 +1,126 @@
+\hypertarget{classTang_1_1AstNodeIfElse}{}\doxysection{Tang\+::Ast\+Node\+If\+Else Class Reference}
+\label{classTang_1_1AstNodeIfElse}\index{Tang::AstNodeIfElse@{Tang::AstNodeIfElse}}
+
+
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents an if..else statement.  
+
+
+
+
+{\ttfamily \#include $<$ast\+Node\+If\+Else.\+hpp$>$}
+
+
+
+Inheritance diagram for Tang\+::Ast\+Node\+If\+Else\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classTang_1_1AstNodeIfElse__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tang\+::Ast\+Node\+If\+Else\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classTang_1_1AstNodeIfElse__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTang_1_1AstNodeIfElse_afdb4eaf64eab3cf234744b9b63641ef2}{Ast\+Node\+If\+Else}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ condition, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ then\+Block, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ else\+Block, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTang_1_1AstNodeIfElse_a199f9cd6eb991ff25f79f5473864a163}{Ast\+Node\+If\+Else}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ condition, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ then\+Block, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeIfElse_a4d6ac0ee37277ee15bc00d76c8a0c739}\label{classTang_1_1AstNodeIfElse_a4d6ac0ee37277ee15bc00d76c8a0c739}} 
+virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeIfElse_a4d6ac0ee37277ee15bc00d76c8a0c739}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
+\begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeIfElse_acfdd91afcec11f0cf8a8531eea591b16}\label{classTang_1_1AstNodeIfElse_acfdd91afcec11f0cf8a8531eea591b16}} 
+virtual void \mbox{\hyperlink{classTang_1_1AstNodeIfElse_acfdd91afcec11f0cf8a8531eea591b16}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const override
+\begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTang_1_1AstNodeIfElse_a2ec4e8bac6e4af8db290f48beedbc0e0}{compile\+Identifiers}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program) const override
+\begin{DoxyCompactList}\small\item\em Compile a list of all variables in the scope. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}\label{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}} 
+\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}{location}}
+\begin{DoxyCompactList}\small\item\em The location associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents an if..else statement. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeIfElse_afdb4eaf64eab3cf234744b9b63641ef2}\label{classTang_1_1AstNodeIfElse_afdb4eaf64eab3cf234744b9b63641ef2}} 
+\index{Tang::AstNodeIfElse@{Tang::AstNodeIfElse}!AstNodeIfElse@{AstNodeIfElse}}
+\index{AstNodeIfElse@{AstNodeIfElse}!Tang::AstNodeIfElse@{Tang::AstNodeIfElse}}
+\doxysubsubsection{\texorpdfstring{AstNodeIfElse()}{AstNodeIfElse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Ast\+Node\+If\+Else\+::\+Ast\+Node\+If\+Else (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$}]{condition,  }\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$}]{then\+Block,  }\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$}]{else\+Block,  }\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{location }\end{DoxyParamCaption})}
+
+
+
+The constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em condition} & The expression which determines whether the then\+Block or else\+Block is executed. \\
+\hline
+{\em then\+Block} & The statement executed when the condition is true. \\
+\hline
+{\em else\+Block} & The statement executed when the condition is false. \\
+\hline
+{\em location} & The location associated with the expression. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTang_1_1AstNodeIfElse_a199f9cd6eb991ff25f79f5473864a163}\label{classTang_1_1AstNodeIfElse_a199f9cd6eb991ff25f79f5473864a163}} 
+\index{Tang::AstNodeIfElse@{Tang::AstNodeIfElse}!AstNodeIfElse@{AstNodeIfElse}}
+\index{AstNodeIfElse@{AstNodeIfElse}!Tang::AstNodeIfElse@{Tang::AstNodeIfElse}}
+\doxysubsubsection{\texorpdfstring{AstNodeIfElse()}{AstNodeIfElse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Ast\+Node\+If\+Else\+::\+Ast\+Node\+If\+Else (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$}]{condition,  }\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$}]{then\+Block,  }\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{location }\end{DoxyParamCaption})}
+
+
+
+The constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em condition} & The expression which determines whether the then\+Block or else\+Block is executed. \\
+\hline
+{\em then\+Block} & The statement executed when the condition is true. \\
+\hline
+{\em location} & The location associated with the expression. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeIfElse_a2ec4e8bac6e4af8db290f48beedbc0e0}\label{classTang_1_1AstNodeIfElse_a2ec4e8bac6e4af8db290f48beedbc0e0}} 
+\index{Tang::AstNodeIfElse@{Tang::AstNodeIfElse}!compileIdentifiers@{compileIdentifiers}}
+\index{compileIdentifiers@{compileIdentifiers}!Tang::AstNodeIfElse@{Tang::AstNodeIfElse}}
+\doxysubsubsection{\texorpdfstring{compileIdentifiers()}{compileIdentifiers()}}
+{\footnotesize\ttfamily void Ast\+Node\+If\+Else\+::compile\+Identifiers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1Program}{Program}} \&}]{program }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compile a list of all variables in the scope. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em program} & The \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} that is being compiled. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_ae79b11a4c5dff87c2fd72bcc8eb5232d}{Tang\+::\+Ast\+Node}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{astNodeIfElse_8hpp}{ast\+Node\+If\+Else.\+hpp}}\item 
+src/\mbox{\hyperlink{astNodeIfElse_8cpp}{ast\+Node\+If\+Else.\+cpp}}\end{DoxyCompactItemize}

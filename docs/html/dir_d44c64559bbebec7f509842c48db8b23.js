@@ -24,6 +24,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "astNodeIdentifier.hpp", "astNodeIdentifier_8hpp.html", [
       [ "AstNodeIdentifier", "classTang_1_1AstNodeIdentifier.html", "classTang_1_1AstNodeIdentifier" ]
     ] ],
+    [ "astNodeIfElse.hpp", "astNodeIfElse_8hpp.html", [
+      [ "AstNodeIfElse", "classTang_1_1AstNodeIfElse.html", "classTang_1_1AstNodeIfElse" ]
+    ] ],
     [ "astNodeInteger.hpp", "astNodeInteger_8hpp.html", [
       [ "AstNodeInteger", "classTang_1_1AstNodeInteger.html", "classTang_1_1AstNodeInteger" ]
     ] ],

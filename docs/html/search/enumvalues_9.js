@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['modulo_395',['Modulo',['../classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9abf7c0807bcb63fc747346bbfe1d7df01',1,'Tang::AstNodeBinary']]],
-  ['modulo_396',['MODULO',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a928ab45d616dde447dbbbd0270db87ad',1,'Tang']]],
-  ['multiply_397',['Multiply',['../classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9a1640514f35be5812468a7f301c31d043',1,'Tang::AstNodeBinary']]],
-  ['multiply_398',['MULTIPLY',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a080aaf8d817ada96fca7096b7b55bd30',1,'Tang']]]
+  ['lessthan_406',['LessThan',['../classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9a30572097b4f0915573ab7a0d12f87b5b',1,'Tang::AstNodeBinary']]],
+  ['lessthanequal_407',['LessThanEqual',['../classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9a057c591301d7dad9a2623d8297153792',1,'Tang::AstNodeBinary']]],
+  ['lt_408',['LT',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ac562607189d77eb9dfb707464c1e7b0b',1,'Tang']]],
+  ['lte_409',['LTE',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acc981ecc65ecf63ad1673cbec9c64198',1,'Tang']]]
 ];

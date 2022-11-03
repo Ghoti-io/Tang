@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['name_132',['name',['../classTang_1_1AstNodeIdentifier.html#a5179f37a6283f94c7093b573a12b3bd8',1,'Tang::AstNodeIdentifier']]],
-  ['negative_133',['Negative',['../classTang_1_1AstNodeUnary.html#aace748ce32f4cc74ea732f9bf0cc9172aa5a1364df884d313a410fca007869557',1,'Tang::AstNodeUnary']]],
-  ['negative_134',['NEGATIVE',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a50546bf973283065b6ccf09faf7a580a',1,'Tang']]],
-  ['neq_135',['NEQ',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a375b332cf2e0c6d522baf007ef7cb554',1,'Tang']]],
-  ['not_136',['Not',['../classTang_1_1AstNodeUnary.html#aace748ce32f4cc74ea732f9bf0cc9172a2007865afee8a3bca9028892a6564050',1,'Tang::AstNodeUnary']]],
-  ['not_137',['NOT',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a10df3d67626099df882920ba6552f16d',1,'Tang']]],
-  ['notequal_138',['NotEqual',['../classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9af78c571c30eec0c4ab36248852c59471',1,'Tang::AstNodeBinary']]],
-  ['nullval_139',['NULLVAL',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ad4184f26935a3ca6e6704e32771f53be',1,'Tang']]]
+  ['macros_2ehpp_130',['macros.hpp',['../macros_8hpp.html',1,'']]],
+  ['make_131',['make',['../classTang_1_1GarbageCollected.html#acb3de1421025af18d948dfae7dad5fb0',1,'Tang::GarbageCollected']]],
+  ['makecopy_132',['makeCopy',['../classTang_1_1ComputedExpression.html#a2c862b516b38bbb010677176f101eb19',1,'Tang::ComputedExpression::makeCopy()'],['../classTang_1_1ComputedExpressionBoolean.html#aaddd6846e22a48cc1531731cef64a678',1,'Tang::ComputedExpressionBoolean::makeCopy()'],['../classTang_1_1ComputedExpressionError.html#a3600a4bb5e62c5599abe8226fe06d887',1,'Tang::ComputedExpressionError::makeCopy()'],['../classTang_1_1ComputedExpressionFloat.html#a40135f884be9c81a5163b2c45024b498',1,'Tang::ComputedExpressionFloat::makeCopy()'],['../classTang_1_1ComputedExpressionInteger.html#a9e1b2e88d3c6574177f291563dd45262',1,'Tang::ComputedExpressionInteger::makeCopy()'],['../classTang_1_1ComputedExpressionNull.html#a5d13ef955b73182dd9f01c653cc8dce8',1,'Tang::ComputedExpressionNull::makeCopy()']]],
+  ['message_133',['message',['../classTang_1_1Error.html#a03780cc93b440ae9964399989af02573',1,'Tang::Error']]],
+  ['modulo_134',['Modulo',['../classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9abf7c0807bcb63fc747346bbfe1d7df01',1,'Tang::AstNodeBinary']]],
+  ['modulo_135',['MODULO',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a928ab45d616dde447dbbbd0270db87ad',1,'Tang']]],
+  ['multiply_136',['Multiply',['../classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9a1640514f35be5812468a7f301c31d043',1,'Tang::AstNodeBinary']]],
+  ['multiply_137',['MULTIPLY',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a080aaf8d817ada96fca7096b7b55bd30',1,'Tang']]]
 ];

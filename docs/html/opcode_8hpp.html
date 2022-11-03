@@ -97,7 +97,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="opcode_8hpp__dep__incl.png" border="0" usemap="#ainclude_2opcode_8hppdep" alt=""/></div>
 <map name="ainclude_2opcode_8hppdep" id="ainclude_2opcode_8hppdep">
-<area shape="rect" title="Declare the Opcodes used in the Bytecode representation of a program." alt="" coords="1159,5,1307,32"/>
+<area shape="rect" title="Declare the Opcodes used in the Bytecode representation of a program." alt="" coords="1257,5,1405,32"/>
 <area shape="rect" href="astNodeAssign_8cpp.html" title="Define the Tang::AstNodeAssign class." alt="" coords="5,80,175,107"/>
 <area shape="rect" href="astNodeBinary_8cpp.html" title="Define the Tang::AstNodeBinary class." alt="" coords="199,80,365,107"/>
 <area shape="rect" href="astNodeBlock_8cpp.html" title="Define the Tang::AstNodeBlock class." alt="" coords="390,80,553,107"/>
@@ -105,12 +105,13 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="rect" href="astNodeCast_8cpp.html" title="Define the Tang::AstNodeCast class." alt="" coords="779,80,934,107"/>
 <area shape="rect" href="astNodeFloat_8cpp.html" title="Define the Tang::AstNodeFloat class." alt="" coords="959,80,1117,107"/>
 <area shape="rect" href="astNodeIdentifier_8cpp.html" title="Define the Tang::AstNodeIdentifier class." alt="" coords="1141,80,1324,107"/>
-<area shape="rect" href="astNodeInteger_8cpp.html" title="Define the Tang::AstNodeInteger class." alt="" coords="1349,80,1519,107"/>
-<area shape="rect" href="astNodeNull_8cpp.html" title="Define the Tang::AstNodeNull class." alt="" coords="1543,80,1695,107"/>
-<area shape="rect" href="astNodeUnary_8cpp.html" title="Define the Tang::AstNodeUnary class." alt="" coords="1719,80,1882,107"/>
-<area shape="rect" href="program-dumpBytecode_8cpp.html" title="Define the Tang::Program::dumpBytecode method." alt="" coords="1907,80,2137,107"/>
-<area shape="rect" href="program-execute_8cpp.html" title="Define the Tang::Program::execute method." alt="" coords="2161,80,2344,107"/>
-<area shape="rect" href="program_8cpp.html" title="Define the Tang::Program class." alt="" coords="2368,80,2495,107"/>
+<area shape="rect" href="astNodeIfElse_8cpp.html" title="Define the Tang::AstNodeIfElse class." alt="" coords="1349,80,1511,107"/>
+<area shape="rect" href="astNodeInteger_8cpp.html" title="Define the Tang::AstNodeInteger class." alt="" coords="1535,80,1706,107"/>
+<area shape="rect" href="astNodeNull_8cpp.html" title="Define the Tang::AstNodeNull class." alt="" coords="1730,80,1882,107"/>
+<area shape="rect" href="astNodeUnary_8cpp.html" title="Define the Tang::AstNodeUnary class." alt="" coords="1906,80,2069,107"/>
+<area shape="rect" href="program-dumpBytecode_8cpp.html" title="Define the Tang::Program::dumpBytecode method." alt="" coords="2093,80,2324,107"/>
+<area shape="rect" href="program-execute_8cpp.html" title="Define the Tang::Program::execute method." alt="" coords="2348,80,2531,107"/>
+<area shape="rect" href="program_8cpp.html" title="Define the Tang::Program class." alt="" coords="2555,80,2681,107"/>
 </map>
 </div>
 </div>
@@ -122,31 +123,34 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04aefdb39a4c7286afcecf0e8a7435fce6a">POP</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a422982ae154d01bf45c66c601981e6c2">PEEK</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af0e166c6fa2443a133f77d263161b11f">POKE</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a152b9af76a9e7dd95d9da277b69fdd95">JMP</a>
+, <br />
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a58d52e0bb8076b5b59f991df9f515adc">JMPF_POP</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ad4184f26935a3ca6e6704e32771f53be">NULLVAL</a>
-, <br />
-&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a5d5cd46919fa987731fb2edefe0f2a0c">INTEGER</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a5d5cd46919fa987731fb2edefe0f2a0c">INTEGER</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ae738c26bf4ce1037fa81b039a915cbf6">FLOAT</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ac48d5da12d702e73d6966069f2687376">BOOLEAN</a>
+, <br />
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ac48d5da12d702e73d6966069f2687376">BOOLEAN</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a9eeb52badb613229884838847294b90d">ADD</a>
-, <br />
-&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a23ebcc4776b613af25dfbe7c8ce4813e">SUBTRACT</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a23ebcc4776b613af25dfbe7c8ce4813e">SUBTRACT</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a080aaf8d817ada96fca7096b7b55bd30">MULTIPLY</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a210c66d794cec40488f3f8f634d6c33b">DIVIDE</a>
+, <br />
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a210c66d794cec40488f3f8f634d6c33b">DIVIDE</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a928ab45d616dde447dbbbd0270db87ad">MODULO</a>
-, <br />
-&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a50546bf973283065b6ccf09faf7a580a">NEGATIVE</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a50546bf973283065b6ccf09faf7a580a">NEGATIVE</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a10df3d67626099df882920ba6552f16d">NOT</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ac562607189d77eb9dfb707464c1e7b0b">LT</a>
+, <br />
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ac562607189d77eb9dfb707464c1e7b0b">LT</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acc981ecc65ecf63ad1673cbec9c64198">LTE</a>
-, <br />
-&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acd6a9bd2a175104eed40f0d33a8b4020">GT</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acd6a9bd2a175104eed40f0d33a8b4020">GT</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a32d35312e8f24bc1669bd2b45c00d47c">GTE</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a2dcbad7477fd40561e8b8198f173bd47">EQ</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a375b332cf2e0c6d522baf007ef7cb554">NEQ</a>
 , <br />
-&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a0a109fb07a3a6984f50ffe52dd2c213b">CASTINTEGER</a>
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a2dcbad7477fd40561e8b8198f173bd47">EQ</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a375b332cf2e0c6d522baf007ef7cb554">NEQ</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a0a109fb07a3a6984f50ffe52dd2c213b">CASTINTEGER</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af721c36554a56d3695dda4af2863efbb">CASTFLOAT</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620">CASTBOOLEAN</a>
+, <br />
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620">CASTBOOLEAN</a>
 <br />
  }</td></tr>
 <tr class="separator:a3db69378da7fea0383c531f8cae78f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,6 +183,10 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a422982ae154d01bf45c66c601981e6c2"></a>PEEK&#160;</td><td class="fielddoc"><p>Stack # (from fp): push val from stack #. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04af0e166c6fa2443a133f77d263161b11f"></a>POKE&#160;</td><td class="fielddoc"><p>Stack # (from fp): Copy a val, store @ stack #. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a152b9af76a9e7dd95d9da277b69fdd95"></a>JMP&#160;</td><td class="fielddoc"><p>PC #: set pc to PC #. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a58d52e0bb8076b5b59f991df9f515adc"></a>JMPF_POP&#160;</td><td class="fielddoc"><p>PC #: pop val, if false, set pc to PC #. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04ad4184f26935a3ca6e6704e32771f53be"></a>NULLVAL&#160;</td><td class="fielddoc"><p>Push a null onto the stack. </p>
 </td></tr>

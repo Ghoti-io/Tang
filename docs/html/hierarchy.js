@@ -8,6 +8,7 @@ var hierarchy =
       [ "Tang::AstNodeCast", "classTang_1_1AstNodeCast.html", null ],
       [ "Tang::AstNodeFloat", "classTang_1_1AstNodeFloat.html", null ],
       [ "Tang::AstNodeIdentifier", "classTang_1_1AstNodeIdentifier.html", null ],
+      [ "Tang::AstNodeIfElse", "classTang_1_1AstNodeIfElse.html", null ],
       [ "Tang::AstNodeInteger", "classTang_1_1AstNodeInteger.html", null ],
       [ "Tang::AstNodeNull", "classTang_1_1AstNodeNull.html", null ],
       [ "Tang::AstNodeUnary", "classTang_1_1AstNodeUnary.html", null ]

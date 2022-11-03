@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['peek_406',['PEEK',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a422982ae154d01bf45c66c601981e6c2',1,'Tang']]],
-  ['poke_407',['POKE',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af0e166c6fa2443a133f77d263161b11f',1,'Tang']]],
-  ['pop_408',['POP',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04aefdb39a4c7286afcecf0e8a7435fce6a',1,'Tang']]]
+  ['negative_414',['Negative',['../classTang_1_1AstNodeUnary.html#aace748ce32f4cc74ea732f9bf0cc9172aa5a1364df884d313a410fca007869557',1,'Tang::AstNodeUnary']]],
+  ['negative_415',['NEGATIVE',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a50546bf973283065b6ccf09faf7a580a',1,'Tang']]],
+  ['neq_416',['NEQ',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a375b332cf2e0c6d522baf007ef7cb554',1,'Tang']]],
+  ['not_417',['Not',['../classTang_1_1AstNodeUnary.html#aace748ce32f4cc74ea732f9bf0cc9172a2007865afee8a3bca9028892a6564050',1,'Tang::AstNodeUnary']]],
+  ['not_418',['NOT',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a10df3d67626099df882920ba6552f16d',1,'Tang']]],
+  ['notequal_419',['NotEqual',['../classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9af78c571c30eec0c4ab36248852c59471',1,'Tang::AstNodeBinary']]],
+  ['nullval_420',['NULLVAL',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ad4184f26935a3ca6e6704e32771f53be',1,'Tang']]]
 ];
