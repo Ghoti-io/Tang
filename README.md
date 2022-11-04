@@ -118,7 +118,7 @@ sudo apt install g++ make bison flex build-essential pkgconf libgtest-dev google
 Additional packages must be installed in order to create documentation and
 enhance the build experience.
 ```
-sudo apt install doxygen graphviz texlive-latex-base texlive-latex-extra cloc inotify-tools
+sudo apt install doxygen graphviz texlive-latex-base texlive-latex-extra cloc inotify-tools valgrind gdb
 ```
 
 If you're working in the WSL, you can install the `wslu` package, so that you can view files (such as the documentation) using a cli command.

@@ -491,7 +491,7 @@ TEST(Assign, Identifier) {
   EXPECT_EQ(*p3.execute().getResult(), 2);
 }
 
-TEST(Assign, IfElse) {
+TEST(ControlFlow, IfElse) {
   auto p1 = TangBase().compileScript("a = 1; if (true) a = 2; a;");
   EXPECT_EQ(*p1.execute().getResult(), 2);
   auto p2 = TangBase().compileScript("a = 1; if (true) a = 2; else a = 3; a;");
@@ -528,6 +528,13 @@ TEST(Assign, IfElse) {
   EXPECT_EQ(*p17.execute().getResult(), 3);
   auto p18 = TangBase().compileScript("a = 1; b = 2; if (a == b) a = 3; a;");
   EXPECT_EQ(*p18.execute().getResult(), 1);
+}
+
+TEST(ControlFlow, While) {
+  auto p1 = TangBase().compileScript("a = 1; while (a < 10) b = a = a + 1; b;");
+  EXPECT_EQ(*p1.execute().getResult(), 10);
+  auto p2 = TangBase().compileScript("a = 1; b = 0; while (a < 10) {a = a + 1; b = a;} b;");
+  EXPECT_EQ(*p2.execute().getResult(), 10);
 }
 
 int main(int argc, char** argv) {
