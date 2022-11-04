@@ -533,8 +533,23 @@ TEST(ControlFlow, IfElse) {
 TEST(ControlFlow, While) {
   auto p1 = TangBase().compileScript("a = 1; while (a < 10) b = a = a + 1; b;");
   EXPECT_EQ(*p1.execute().getResult(), 10);
-  auto p2 = TangBase().compileScript("a = 1; b = 0; while (a < 10) {a = a + 1; b = a;} b;");
+  auto p2 = TangBase().compileScript("a = 1; while (a < 10) {a = a + 1; b = a;} b;");
   EXPECT_EQ(*p2.execute().getResult(), 10);
+  auto p3 = TangBase().compileScript("a = 1; while (a > 10) b = a = a + 1; b;");
+  EXPECT_EQ(*p3.execute().getResult(), nullptr);
+  auto p4 = TangBase().compileScript("a = 1; while (a > 10) {a = a + 1; b = a;} b;");
+  EXPECT_EQ(*p4.execute().getResult(), nullptr);
+}
+
+TEST(ControlFlow, DoWhile) {
+  auto p1 = TangBase().compileScript("a = 1; do b = a = a + 1; while (a < 10); b;");
+  EXPECT_EQ(*p1.execute().getResult(), 10);
+  auto p2 = TangBase().compileScript("a = 1; do {a = a + 1; b = a;} while (a < 10); b;");
+  EXPECT_EQ(*p2.execute().getResult(), 10);
+  auto p3 = TangBase().compileScript("a = 1; do b = a = a + 1; while (a > 10); b;");
+  EXPECT_EQ(*p3.execute().getResult(), nullptr);
+  auto p4 = TangBase().compileScript("a = 1; do {a = a + 1; b = a;} while (a > 10); b;");
+  EXPECT_EQ(*p4.execute().getResult(), nullptr);
 }
 
 int main(int argc, char** argv) {

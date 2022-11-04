@@ -98,6 +98,7 @@
 %token RBRACE "}"
 %token IF "if"
 %token ELSE "else"
+%token DO "do"
 %token WHILE "while"
 %token AS "as"
 %token NULL "null"
@@ -159,6 +160,7 @@ namespace Tang {
 #include "astNodeBlock.hpp"
 #include "astNodeIfElse.hpp"
 #include "astNodeWhile.hpp"
+#include "astNodeDoWhile.hpp"
 
 // We must provide the yylex() function.
 // yylex() arguments are defined in the bison .y file.
@@ -232,6 +234,10 @@ closedStatement
   | "while" "(" expression ")" closedStatement
     {
       $$ = std::make_shared<AstNodeWhile>($3, $5, @1);
+    }
+  | "do" statement "while" "(" expression ")" ";"
+    {
+      $$ = std::make_shared<AstNodeWhile>($5, $2, @1);
     }
   | codeBlock
   | expression ";"

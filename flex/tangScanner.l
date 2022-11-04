@@ -106,6 +106,9 @@ using namespace std;
   else {
     return Tang::TangParser::make_ELSE(Tang::location(location));
   }
+  do {
+    return Tang::TangParser::make_DO(Tang::location(location));
+  }
   while {
     return Tang::TangParser::make_WHILE(Tang::location(location));
   }
