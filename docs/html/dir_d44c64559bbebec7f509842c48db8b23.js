@@ -18,6 +18,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "astNodeCast.hpp", "astNodeCast_8hpp.html", [
       [ "AstNodeCast", "classTang_1_1AstNodeCast.html", "classTang_1_1AstNodeCast" ]
     ] ],
+    [ "astNodeDoWhile.hpp", "astNodeDoWhile_8hpp.html", [
+      [ "AstNodeDoWhile", "classTang_1_1AstNodeDoWhile.html", "classTang_1_1AstNodeDoWhile" ]
+    ] ],
     [ "astNodeFloat.hpp", "astNodeFloat_8hpp.html", [
       [ "AstNodeFloat", "classTang_1_1AstNodeFloat.html", "classTang_1_1AstNodeFloat" ]
     ] ],
@@ -35,6 +38,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     ] ],
     [ "astNodeUnary.hpp", "astNodeUnary_8hpp.html", [
       [ "AstNodeUnary", "classTang_1_1AstNodeUnary.html", "classTang_1_1AstNodeUnary" ]
+    ] ],
+    [ "astNodeWhile.hpp", "astNodeWhile_8hpp.html", [
+      [ "AstNodeWhile", "classTang_1_1AstNodeWhile.html", "classTang_1_1AstNodeWhile" ]
     ] ],
     [ "computedExpression.hpp", "computedExpression_8hpp.html", [
       [ "ComputedExpression", "classTang_1_1ComputedExpression.html", "classTang_1_1ComputedExpression" ]
