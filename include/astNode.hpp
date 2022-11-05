@@ -55,7 +55,7 @@ namespace Tang {
      *
      * @param program The Tang::Program that is being compiled.
      */
-    virtual void compileIdentifiers(Program & program) const;
+    virtual void collectIdentifiers(Program & program) const;
   };
 }
 

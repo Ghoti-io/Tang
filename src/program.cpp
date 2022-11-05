@@ -37,7 +37,7 @@ void Program::compile() {
   this->identifierStack.push_back(map<string,size_t>{});
 
   // Gather all of the identifiers in the current scope into the current map.
-  this->ast->compileIdentifiers(*this);
+  this->ast->collectIdentifiers(*this);
 
   // Reserve spaces on the stack for each variable.
   for ([[maybe_unused]] const auto & x : this->identifierStack.back()) {

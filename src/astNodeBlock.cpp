@@ -20,9 +20,9 @@ string AstNodeBlock::dump(string indent) const {
   return out;
 }
 
-void AstNodeBlock::compileIdentifiers(Program & program) const {
+void AstNodeBlock::collectIdentifiers(Program & program) const {
   for (auto x : this->statements) {
-    x->compileIdentifiers(program);
+    x->collectIdentifiers(program);
   }
 }
 

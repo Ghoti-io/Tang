@@ -21,9 +21,9 @@ string AstNodeAssign::dump(string indent) const {
     + this->rhs->dump(indent + "    ");
 }
 
-void AstNodeAssign::compileIdentifiers(Program & program) const {
-  this->lhs->compileIdentifiers(program);
-  this->rhs->compileIdentifiers(program);
+void AstNodeAssign::collectIdentifiers(Program & program) const {
+  this->lhs->collectIdentifiers(program);
+  this->rhs->collectIdentifiers(program);
 }
 
 void AstNodeAssign::compile(Tang::Program & program) const {

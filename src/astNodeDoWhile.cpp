@@ -38,8 +38,8 @@ void AstNodeDoWhile::compile(Tang::Program & program) const {
   program.addBytecode((uint64_t)Opcode::NULLVAL);
 }
 
-void AstNodeDoWhile::compileIdentifiers(Program & program) const {
-  this->condition->compileIdentifiers(program);
-  this->codeBlock->compileIdentifiers(program);
+void AstNodeDoWhile::collectIdentifiers(Program & program) const {
+  this->condition->collectIdentifiers(program);
+  this->codeBlock->collectIdentifiers(program);
 }
 

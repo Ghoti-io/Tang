@@ -16,7 +16,7 @@ string AstNodeIdentifier::dump(string indent) const {
   return indent + "Identifier: " + this->name + "\n";
 }
 
-void AstNodeIdentifier::compileIdentifiers(Program & program) const {
+void AstNodeIdentifier::collectIdentifiers(Program & program) const {
   auto & identifiers = program.identifierStack.back();
   if (identifiers.count(this->name) == 0) {
     identifiers[this->name] = identifiers.size();

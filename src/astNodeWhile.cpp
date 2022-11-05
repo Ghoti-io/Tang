@@ -43,8 +43,8 @@ void AstNodeWhile::compile(Tang::Program & program) const {
   program.setJumpTarget(conditionFalseJump, program.getBytecode().size() + 1);
 }
 
-void AstNodeWhile::compileIdentifiers(Program & program) const {
-  this->condition->compileIdentifiers(program);
-  this->codeBlock->compileIdentifiers(program);
+void AstNodeWhile::collectIdentifiers(Program & program) const {
+  this->condition->collectIdentifiers(program);
+  this->codeBlock->collectIdentifiers(program);
 }
 
