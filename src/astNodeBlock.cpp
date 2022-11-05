@@ -37,5 +37,9 @@ void AstNodeBlock::compile(Tang::Program & program) const {
     // the stack.
     this->statements.back()->compile(program);
   }
+  else {
+    // This compile *must* leave something on the stack, so leave a NULL
+    program.addBytecode((uint64_t)Opcode::NULLVAL);
+  }
 }
 

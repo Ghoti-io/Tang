@@ -21,6 +21,13 @@
 //    27 PEEK        0
 //    ex: 26 & 27 can be removed, if not a jump target.
 //
+// 3. Push.. pop, can be removed.
+//    17 JMPF_POP    24
+//    19 NULLVAL
+//    20 POP
+//    21 JMP         7
+//    ex: 19 & 20 can be removed, if 20 is not a jump target.
+//
 
 #ifndef TANG_HPP
 #define TANG_HPP

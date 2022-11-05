@@ -539,6 +539,8 @@ TEST(ControlFlow, While) {
   EXPECT_EQ(*p3.execute().getResult(), nullptr);
   auto p4 = TangBase().compileScript("a = 1; while (a > 10) {a = a + 1; b = a;} b;");
   EXPECT_EQ(*p4.execute().getResult(), nullptr);
+  auto p5 = TangBase().compileScript("a = 1; while ((a = a + 1) < 10) {} b;");
+  EXPECT_EQ(*p5.execute().getResult(), nullptr);
 }
 
 TEST(ControlFlow, DoWhile) {
