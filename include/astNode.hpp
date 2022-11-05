@@ -17,11 +17,12 @@ namespace Tang {
   /**
    * Base class for representing nodes of an Abstract Syntax Tree (AST).
    *
+   * By default, it will represent a NULL value.
    * There will be *many* derived classes, each one conveying the syntactic
    * meaning of the code that it represents.
    */
   class AstNode {
-  protected:
+  public:
     /**
      * The generic constructor.  It should never be called on its own.
      *
@@ -29,12 +30,6 @@ namespace Tang {
      */
     AstNode(Tang::location location);
 
-    /**
-     * The location associated with this node.
-     */
-    Tang::location location;
-
-  public:
     /**
      * The object destructor.
      */
@@ -56,6 +51,13 @@ namespace Tang {
      * @param program The Tang::Program that is being compiled.
      */
     virtual void collectIdentifiers(Program & program) const;
+
+  private:
+    /**
+     * The location associated with this node.
+     */
+    Tang::location location;
+
   };
 }
 

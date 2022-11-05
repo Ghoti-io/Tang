@@ -4,6 +4,7 @@
  */
 
 #include "computedExpression.hpp"
+#include "computedExpressionBoolean.hpp"
 #include "computedExpressionError.hpp"
 
 using namespace std;
@@ -12,7 +13,12 @@ using namespace Tang;
 ComputedExpression::~ComputedExpression() {}
 
 string ComputedExpression::dump() const {
-  return "";
+  // Because this is a virtual function, we must ensure that the type is
+  // actually ComputedExpression, and not a derived type that forgot to
+  // override the virtual method.
+  return typeid(*this) == typeid(ComputedExpression)
+    ? "NULL"
+    : "UNKNOWN";
 }
 
 GarbageCollected ComputedExpression::makeCopy() const {
@@ -32,7 +38,12 @@ bool ComputedExpression::is_equal([[maybe_unused]] const bool & val) const {
 }
 
 bool ComputedExpression::is_equal([[maybe_unused]] const nullptr_t & val) const {
-  return false;
+  // Because this is a virtual function, we must ensure that the type is
+  // actually ComputedExpression, and not a derived type that forgot to
+  // override the virtual method.
+  return typeid(*this) == typeid(ComputedExpression)
+    ? true
+    : false;
 }
 
 bool ComputedExpression::is_equal([[maybe_unused]] const Error & val) const {
@@ -72,6 +83,15 @@ GarbageCollected ComputedExpression::__lessThan([[maybe_unused]] const GarbageCo
 }
 
 GarbageCollected ComputedExpression::__equal([[maybe_unused]] const GarbageCollected & rhs) const {
+  // Because this is a virtual function, we must ensure that the type is
+  // actually ComputedExpression, and not a derived type that forgot to
+  // override the virtual method.
+  if (typeid(*this) == typeid(ComputedExpression)) {
+    if (typeid(*rhs) == typeid(ComputedExpression)) {
+      return GarbageCollected::make<ComputedExpressionBoolean>(true);
+    }
+    return GarbageCollected::make<ComputedExpressionBoolean>(false);
+  }
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to compare these values."});
 }
 

@@ -152,7 +152,6 @@ namespace Tang {
 #include "astNodeAssign.hpp"
 #include "astNodeBinary.hpp"
 #include "astNodeFloat.hpp"
-#include "astNodeNull.hpp"
 #include "astNodeIdentifier.hpp"
 #include "astNodeInteger.hpp"
 #include "astNodeBoolean.hpp"
@@ -276,7 +275,7 @@ codeBlock
 expression
   : NULL
     {
-      $$ = std::make_shared<Tang::AstNodeNull>(@1);
+      $$ = std::make_shared<Tang::AstNode>(@1);
     }
   | IDENTIFIER
     {

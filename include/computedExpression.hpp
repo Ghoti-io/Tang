@@ -20,6 +20,8 @@ namespace Tang {
 namespace Tang {
   /**
    * Represents the result of a computation that has been executed.
+   *
+   * By default, it will represent a NULL value.
    */
   class ComputedExpression {
     public:
