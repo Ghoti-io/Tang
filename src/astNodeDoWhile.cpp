@@ -22,32 +22,20 @@ string AstNodeDoWhile::dump(string indent) const {
 }
 
 void AstNodeDoWhile::compile(Tang::Program & program) const {
-  // Initial jump past the condition to the code block.
-  program.addBytecode((uint64_t)Opcode::JMP);
-  auto initialJump = program.getBytecode().size() - 1;
-  program.addBytecode(0);
-
-  // Compile the condition.
-  auto conditionStart = program.getBytecode().size();
-  this->condition->compile(program);
-
-  // If condition is false, jump to the end of the if..else statement.
-  program.addBytecode((uint64_t)Opcode::JMPF_POP);
-  auto conditionFalseJump = program.getBytecode().size() - 1;
-  program.addBytecode(0);
-
   // Compile the code block and clean up the stack afterwards.
-  program.setJumpTarget(initialJump, program.getBytecode().size());
+  auto codeBlockStart = program.getBytecode().size();
   this->codeBlock->compile(program);
   program.addBytecode((uint64_t)Opcode::POP);
 
-  // Jump back up to the condition.
-  program.addBytecode((uint64_t)Opcode::JMP);
-  program.addBytecode((uint64_t)conditionStart);
+  // Compile the condition.
+  this->condition->compile(program);
 
-  // We now know where the code after the while statement will be.
-  // The parent will add a POP instruction, so account for that by using "+ 1".
-  program.setJumpTarget(conditionFalseJump, program.getBytecode().size() + 1);
+  // If condition is true, jump up to the start of the code block.
+  program.addBytecode((uint64_t)Opcode::JMPT_POP);
+  program.addBytecode(codeBlockStart);
+
+  // Add extra stack push, which will be removed by the parent AST compile.
+  program.addBytecode((uint64_t)Opcode::NULLVAL);
 }
 
 void AstNodeDoWhile::compileIdentifiers(Program & program) const {

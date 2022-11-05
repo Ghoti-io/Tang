@@ -86,6 +86,19 @@ Program& Program::execute() {
         }
         break;
       }
+      case Opcode::JMPT_POP: {
+        EXECUTEPROGRAMCHECK(1);
+        STACKCHECK(1);
+        auto condition = stack.back();
+        stack.pop_back();
+        if (condition == true) {
+          pc = this->bytecode[pc + 1];
+        }
+        else {
+          pc += 2;
+        }
+        break;
+      }
       case Opcode::NULLVAL: {
         stack.push_back(GarbageCollected::make<ComputedExpressionNull>());
         ++pc;

@@ -65,6 +65,12 @@ string Program::dumpBytecode() const {
         pc += 2;
         break;
       }
+      case Opcode::JMPT_POP: {
+        DUMPPROGRAMCHECK(1);
+        out << "JMPT_POP" << this->bytecode[pc + 1];
+        pc += 2;
+        break;
+      }
       case Opcode::NULLVAL: {
         out << "NULLVAL";
         ++pc;
