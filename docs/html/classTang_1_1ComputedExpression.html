@@ -100,12 +100,11 @@ Inheritance diagram for Tang::ComputedExpression:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTang_1_1ComputedExpression__inherit__graph.png" border="0" usemap="#aTang_1_1ComputedExpression_inherit__map" alt="Inheritance graph"/></div>
 <map name="aTang_1_1ComputedExpression_inherit__map" id="aTang_1_1ComputedExpression_inherit__map">
-<area shape="rect" title="Represents the result of a computation that has been executed." alt="" coords="5,143,204,170"/>
-<area shape="rect" href="classTang_1_1ComputedExpressionBoolean.html" title="Represents an Boolean that is the result of a computation." alt="" coords="265,5,463,47"/>
-<area shape="rect" href="classTang_1_1ComputedExpressionError.html" title="Represents a Runtime Error." alt="" coords="265,71,463,112"/>
-<area shape="rect" href="classTang_1_1ComputedExpressionFloat.html" title="Represents a Float that is the result of a computation." alt="" coords="265,136,463,177"/>
-<area shape="rect" href="classTang_1_1ComputedExpressionInteger.html" title="Represents an Integer that is the result of a computation." alt="" coords="265,201,463,243"/>
-<area shape="rect" href="classTang_1_1ComputedExpressionNull.html" title="Represents an Null that is the result of a computation." alt="" coords="252,267,476,294"/>
+<area shape="rect" title="Represents the result of a computation that has been executed." alt="" coords="5,111,204,138"/>
+<area shape="rect" href="classTang_1_1ComputedExpressionBoolean.html" title="Represents an Boolean that is the result of a computation." alt="" coords="252,5,451,47"/>
+<area shape="rect" href="classTang_1_1ComputedExpressionError.html" title="Represents a Runtime Error." alt="" coords="252,71,451,112"/>
+<area shape="rect" href="classTang_1_1ComputedExpressionFloat.html" title="Represents a Float that is the result of a computation." alt="" coords="252,136,451,177"/>
+<area shape="rect" href="classTang_1_1ComputedExpressionInteger.html" title="Represents an Integer that is the result of a computation." alt="" coords="252,201,451,243"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -175,6 +174,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents the result of a computation that has been executed. </p>
+<p>By default, it will represent a NULL value. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a7265dda9f1e6db478f0c1cd9c3e37aa9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7265dda9f1e6db478f0c1cd9c3e37aa9">&#9670;&nbsp;</a></span>__add()</h2>
@@ -313,7 +313,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result of the the operation. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classTang_1_1ComputedExpressionNull.html#a9aeab7802a28965b999b4b73ee6294d8">Tang::ComputedExpressionNull</a>, <a class="el" href="classTang_1_1ComputedExpressionInteger.html#a482daf778794d505964d7adb24bc97e3">Tang::ComputedExpressionInteger</a>, <a class="el" href="classTang_1_1ComputedExpressionFloat.html#a9bf88a860f73564e4c90b76321a5ab6f">Tang::ComputedExpressionFloat</a>, <a class="el" href="classTang_1_1ComputedExpressionError.html#a5fd54da21ee14fd6368721685e1ecb51">Tang::ComputedExpressionError</a>, and <a class="el" href="classTang_1_1ComputedExpressionBoolean.html#ad65795656cca293eb1e92d878d7967c0">Tang::ComputedExpressionBoolean</a>.</p>
+<p>Reimplemented in <a class="el" href="classTang_1_1ComputedExpressionInteger.html#a482daf778794d505964d7adb24bc97e3">Tang::ComputedExpressionInteger</a>, <a class="el" href="classTang_1_1ComputedExpressionFloat.html#a9bf88a860f73564e4c90b76321a5ab6f">Tang::ComputedExpressionFloat</a>, <a class="el" href="classTang_1_1ComputedExpressionError.html#a5fd54da21ee14fd6368721685e1ecb51">Tang::ComputedExpressionError</a>, and <a class="el" href="classTang_1_1ComputedExpressionBoolean.html#ad65795656cca293eb1e92d878d7967c0">Tang::ComputedExpressionBoolean</a>.</p>
 
 </div>
 </div>
@@ -611,7 +611,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>Output the contents of the <a class="el" href="classTang_1_1ComputedExpression.html" title="Represents the result of a computation that has been executed.">ComputedExpression</a> as a string. </p>
 <dl class="section return"><dt>Returns</dt><dd>A string representation of the computed expression. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classTang_1_1ComputedExpressionNull.html#a3143a95f64ae069d258efe999e76bca6">Tang::ComputedExpressionNull</a>, <a class="el" href="classTang_1_1ComputedExpressionInteger.html#a02e4a8bba8b37bf02e5ec3fd1e25f094">Tang::ComputedExpressionInteger</a>, <a class="el" href="classTang_1_1ComputedExpressionFloat.html#a327db49914ba138b70c2403ebf609635">Tang::ComputedExpressionFloat</a>, <a class="el" href="classTang_1_1ComputedExpressionError.html#aac021c475141ea7155f7576d2ffba906">Tang::ComputedExpressionError</a>, and <a class="el" href="classTang_1_1ComputedExpressionBoolean.html#a0910cd4800443ec70f6888cf563fbe57">Tang::ComputedExpressionBoolean</a>.</p>
+<p>Reimplemented in <a class="el" href="classTang_1_1ComputedExpressionInteger.html#a02e4a8bba8b37bf02e5ec3fd1e25f094">Tang::ComputedExpressionInteger</a>, <a class="el" href="classTang_1_1ComputedExpressionFloat.html#a327db49914ba138b70c2403ebf609635">Tang::ComputedExpressionFloat</a>, <a class="el" href="classTang_1_1ComputedExpressionError.html#aac021c475141ea7155f7576d2ffba906">Tang::ComputedExpressionError</a>, and <a class="el" href="classTang_1_1ComputedExpressionBoolean.html#a0910cd4800443ec70f6888cf563fbe57">Tang::ComputedExpressionBoolean</a>.</p>
 
 </div>
 </div>
@@ -824,7 +824,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>Make a copy of the <a class="el" href="classTang_1_1ComputedExpression.html" title="Represents the result of a computation that has been executed.">ComputedExpression</a> (recursively, if appropriate). </p>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="classTang_1_1GarbageCollected.html" title="A container that acts as a resource-counting garbage collector for the specified type.">Tang::GarbageCollected</a> value for the new <a class="el" href="classTang_1_1ComputedExpression.html" title="Represents the result of a computation that has been executed.">ComputedExpression</a>. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classTang_1_1ComputedExpressionNull.html#a5d13ef955b73182dd9f01c653cc8dce8">Tang::ComputedExpressionNull</a>, <a class="el" href="classTang_1_1ComputedExpressionInteger.html#a9e1b2e88d3c6574177f291563dd45262">Tang::ComputedExpressionInteger</a>, <a class="el" href="classTang_1_1ComputedExpressionFloat.html#a40135f884be9c81a5163b2c45024b498">Tang::ComputedExpressionFloat</a>, <a class="el" href="classTang_1_1ComputedExpressionError.html#a3600a4bb5e62c5599abe8226fe06d887">Tang::ComputedExpressionError</a>, and <a class="el" href="classTang_1_1ComputedExpressionBoolean.html#aaddd6846e22a48cc1531731cef64a678">Tang::ComputedExpressionBoolean</a>.</p>
+<p>Reimplemented in <a class="el" href="classTang_1_1ComputedExpressionInteger.html#a9e1b2e88d3c6574177f291563dd45262">Tang::ComputedExpressionInteger</a>, <a class="el" href="classTang_1_1ComputedExpressionFloat.html#a40135f884be9c81a5163b2c45024b498">Tang::ComputedExpressionFloat</a>, <a class="el" href="classTang_1_1ComputedExpressionError.html#a3600a4bb5e62c5599abe8226fe06d887">Tang::ComputedExpressionError</a>, and <a class="el" href="classTang_1_1ComputedExpressionBoolean.html#aaddd6846e22a48cc1531731cef64a678">Tang::ComputedExpressionBoolean</a>.</p>
 
 </div>
 </div>

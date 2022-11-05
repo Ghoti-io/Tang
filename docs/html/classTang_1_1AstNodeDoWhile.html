@@ -85,7 +85,6 @@ $(document).ready(function(){initNavTree('classTang_1_1AstNodeDoWhile.html','');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classTang_1_1AstNodeDoWhile-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tang::AstNodeDoWhile Class Reference</div>  </div>
@@ -110,12 +109,8 @@ Collaboration diagram for Tang::AstNodeDoWhile:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTang_1_1AstNodeDoWhile__coll__graph.png" border="0" usemap="#aTang_1_1AstNodeDoWhile_coll__map" alt="Collaboration graph"/></div>
 <map name="aTang_1_1AstNodeDoWhile_coll__map" id="aTang_1_1AstNodeDoWhile_coll__map">
-<area shape="rect" title="An AstNode that represents a do..while statement." alt="" coords="5,455,176,481"/>
-<area shape="rect" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="33,379,148,405"/>
-<area shape="rect" href="classTang_1_1location.html" title="Two points in a source file." alt="" coords="35,289,147,316"/>
-<area shape="rect" href="classTang_1_1position.html" title="A point in a source file." alt="" coords="35,185,147,212"/>
-<area shape="rect" title=" " alt="" coords="47,96,134,123"/>
-<area shape="rect" title=" " alt="" coords="21,5,160,47"/>
+<area shape="rect" title="An AstNode that represents a do..while statement." alt="" coords="5,80,176,107"/>
+<area shape="rect" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="33,5,148,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -132,16 +127,9 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeDoWhile.html#a06589e54066e7706c54e9a69d6a3228f">compile</a> (<a class="el" href="classTang_1_1Program.html">Tang::Program</a> &amp;program) const override</td></tr>
 <tr class="memdesc:a06589e54066e7706c54e9a69d6a3228f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile the ast of the provided <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a>. <br /></td></tr>
 <tr class="separator:a06589e54066e7706c54e9a69d6a3228f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab55be946b63ba4592a64fa9e6bbb4139"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeDoWhile.html#ab55be946b63ba4592a64fa9e6bbb4139">compileIdentifiers</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program) const override</td></tr>
-<tr class="memdesc:ab55be946b63ba4592a64fa9e6bbb4139"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a list of all variables in the scope.  <a href="classTang_1_1AstNodeDoWhile.html#ab55be946b63ba4592a64fa9e6bbb4139">More...</a><br /></td></tr>
-<tr class="separator:ab55be946b63ba4592a64fa9e6bbb4139"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="memItemLeft" align="right" valign="top"><a id="a41e8328d5a342163a5aabcc4cb8f1b5e"></a>
-<a class="el" href="classTang_1_1location.html">Tang::location</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a41e8328d5a342163a5aabcc4cb8f1b5e">location</a></td></tr>
-<tr class="memdesc:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The location associated with this node. <br /></td></tr>
-<tr class="separator:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e1265b0166c0bfda0e1ff6737c0395f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeDoWhile.html#a6e1265b0166c0bfda0e1ff6737c0395f">collectIdentifiers</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program) const override</td></tr>
+<tr class="memdesc:a6e1265b0166c0bfda0e1ff6737c0395f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a list of all variables in the scope.  <a href="classTang_1_1AstNodeDoWhile.html#a6e1265b0166c0bfda0e1ff6737c0395f">More...</a><br /></td></tr>
+<tr class="separator:a6e1265b0166c0bfda0e1ff6737c0395f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that represents a do..while statement. </p>
@@ -191,8 +179,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab55be946b63ba4592a64fa9e6bbb4139"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab55be946b63ba4592a64fa9e6bbb4139">&#9670;&nbsp;</a></span>compileIdentifiers()</h2>
+<a id="a6e1265b0166c0bfda0e1ff6737c0395f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e1265b0166c0bfda0e1ff6737c0395f">&#9670;&nbsp;</a></span>collectIdentifiers()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,7 +189,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void AstNodeDoWhile::compileIdentifiers </td>
+          <td class="memname">void AstNodeDoWhile::collectIdentifiers </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classTang_1_1Program.html">Program</a> &amp;&#160;</td>
           <td class="paramname"><em>program</em></td><td>)</td>
@@ -223,7 +211,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="classTang_1_1AstNode.html#ae79b11a4c5dff87c2fd72bcc8eb5232d">Tang::AstNode</a>.</p>
+<p>Reimplemented from <a class="el" href="classTang_1_1AstNode.html#a804f9247f774f9444ee7e8db7e7d3e4e">Tang::AstNode</a>.</p>
 
 </div>
 </div>

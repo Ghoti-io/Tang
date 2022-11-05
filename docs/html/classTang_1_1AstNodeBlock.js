@@ -1,8 +1,7 @@
 var classTang_1_1AstNodeBlock =
 [
     [ "AstNodeBlock", "classTang_1_1AstNodeBlock.html#a47307004cf670b57e2709cd80cf7fcb6", null ],
+    [ "collectIdentifiers", "classTang_1_1AstNodeBlock.html#a490a42690bd3ef0f3574cb947102a40d", null ],
     [ "compile", "classTang_1_1AstNodeBlock.html#a76de4b4f4025e3c2376a514dd4b7fae4", null ],
-    [ "compileIdentifiers", "classTang_1_1AstNodeBlock.html#a0694378503afba57ba4a49c7798cd6ea", null ],
-    [ "dump", "classTang_1_1AstNodeBlock.html#aa62f013125ccc52c6b37abe6267c9427", null ],
-    [ "location", "classTang_1_1AstNodeBlock.html#a41e8328d5a342163a5aabcc4cb8f1b5e", null ]
+    [ "dump", "classTang_1_1AstNodeBlock.html#aa62f013125ccc52c6b37abe6267c9427", null ]
 ];

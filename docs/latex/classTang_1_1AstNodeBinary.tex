@@ -11,7 +11,8 @@ An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a binary e
 
 
 
-Inheritance diagram for Tang\+::Ast\+Node\+Binary\+:\nopagebreak
+Inheritance diagram for Tang\+::Ast\+Node\+Binary\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,7 +21,8 @@ Inheritance diagram for Tang\+::Ast\+Node\+Binary\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Tang\+::Ast\+Node\+Binary\+:\nopagebreak
+Collaboration diagram for Tang\+::Ast\+Node\+Binary\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -57,14 +59,8 @@ virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeBinary_a16506f66e9f45
 \mbox{\Hypertarget{classTang_1_1AstNodeBinary_a7955b76c5e7bdf92aa86f8c58ce10473}\label{classTang_1_1AstNodeBinary_a7955b76c5e7bdf92aa86f8c58ce10473}} 
 virtual void \mbox{\hyperlink{classTang_1_1AstNodeBinary_a7955b76c5e7bdf92aa86f8c58ce10473}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const override
 \begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classTang_1_1AstNodeBinary_ab162edc6f175b438c16416e97fdc2d7d}{compile\+Identifiers}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program) const override
+virtual void \mbox{\hyperlink{classTang_1_1AstNodeBinary_a50355e4cc496ba08d0e048dd984397cc}{collect\+Identifiers}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program) const override
 \begin{DoxyCompactList}\small\item\em Compile a list of all variables in the scope. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Protected Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}\label{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}} 
-\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}{location}}
-\begin{DoxyCompactList}\small\item\em The location associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -150,11 +146,11 @@ The constructor.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classTang_1_1AstNodeBinary_ab162edc6f175b438c16416e97fdc2d7d}\label{classTang_1_1AstNodeBinary_ab162edc6f175b438c16416e97fdc2d7d}} 
-\index{Tang::AstNodeBinary@{Tang::AstNodeBinary}!compileIdentifiers@{compileIdentifiers}}
-\index{compileIdentifiers@{compileIdentifiers}!Tang::AstNodeBinary@{Tang::AstNodeBinary}}
-\doxysubsubsection{\texorpdfstring{compileIdentifiers()}{compileIdentifiers()}}
-{\footnotesize\ttfamily void Ast\+Node\+Binary\+::compile\+Identifiers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1Program}{Program}} \&}]{program }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+\mbox{\Hypertarget{classTang_1_1AstNodeBinary_a50355e4cc496ba08d0e048dd984397cc}\label{classTang_1_1AstNodeBinary_a50355e4cc496ba08d0e048dd984397cc}} 
+\index{Tang::AstNodeBinary@{Tang::AstNodeBinary}!collectIdentifiers@{collectIdentifiers}}
+\index{collectIdentifiers@{collectIdentifiers}!Tang::AstNodeBinary@{Tang::AstNodeBinary}}
+\doxysubsubsection{\texorpdfstring{collectIdentifiers()}{collectIdentifiers()}}
+{\footnotesize\ttfamily void Ast\+Node\+Binary\+::collect\+Identifiers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1Program}{Program}} \&}]{program }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -167,7 +163,7 @@ Compile a list of all variables in the scope.
 \end{DoxyParams}
 
 
-Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_ae79b11a4c5dff87c2fd72bcc8eb5232d}{Tang\+::\+Ast\+Node}}.
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a804f9247f774f9444ee7e8db7e7d3e4e}{Tang\+::\+Ast\+Node}}.
 
 
 

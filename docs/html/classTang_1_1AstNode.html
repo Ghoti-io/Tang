@@ -85,8 +85,6 @@ $(document).ready(function(){initNavTree('classTang_1_1AstNode.html',''); initRe
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classTang_1_1AstNode-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tang::AstNode Class Reference</div>  </div>
@@ -102,7 +100,7 @@ Inheritance diagram for Tang::AstNode:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTang_1_1AstNode__inherit__graph.png" border="0" usemap="#aTang_1_1AstNode_inherit__map" alt="Inheritance graph"/></div>
 <map name="aTang_1_1AstNode_inherit__map" id="aTang_1_1AstNode_inherit__map">
-<area shape="rect" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="5,309,120,336"/>
+<area shape="rect" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="5,284,120,311"/>
 <area shape="rect" href="classTang_1_1AstNodeAssign.html" title="An AstNode that represents a binary expression." alt="" coords="175,5,334,32"/>
 <area shape="rect" href="classTang_1_1AstNodeBinary.html" title="An AstNode that represents a binary expression." alt="" coords="176,56,333,83"/>
 <area shape="rect" href="classTang_1_1AstNodeBlock.html" title="An AstNode that represents a code block." alt="" coords="179,107,330,133"/>
@@ -113,26 +111,16 @@ Inheritance diagram for Tang::AstNode:</div>
 <area shape="rect" href="classTang_1_1AstNodeIdentifier.html" title="An AstNode that represents an identifier." alt="" coords="168,360,341,387"/>
 <area shape="rect" href="classTang_1_1AstNodeIfElse.html" title="An AstNode that represents an if..else statement." alt="" coords="179,411,330,437"/>
 <area shape="rect" href="classTang_1_1AstNodeInteger.html" title="An AstNode that represents an integer literal." alt="" coords="174,461,335,488"/>
-<area shape="rect" href="classTang_1_1AstNodeNull.html" title="An AstNode that represents a NULL value." alt="" coords="184,512,325,539"/>
-<area shape="rect" href="classTang_1_1AstNodeUnary.html" title="An AstNode that represents a unary negation." alt="" coords="177,563,332,589"/>
-<area shape="rect" href="classTang_1_1AstNodeWhile.html" title="An AstNode that represents a while statement." alt="" coords="179,613,331,640"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for Tang::AstNode:</div>
-<div class="dyncontent">
-<div class="center"><img src="classTang_1_1AstNode__coll__graph.png" border="0" usemap="#aTang_1_1AstNode_coll__map" alt="Collaboration graph"/></div>
-<map name="aTang_1_1AstNode_coll__map" id="aTang_1_1AstNode_coll__map">
-<area shape="rect" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="17,379,132,405"/>
-<area shape="rect" href="classTang_1_1location.html" title="Two points in a source file." alt="" coords="19,289,131,316"/>
-<area shape="rect" href="classTang_1_1position.html" title="A point in a source file." alt="" coords="19,185,131,212"/>
-<area shape="rect" title=" " alt="" coords="31,96,118,123"/>
-<area shape="rect" title=" " alt="" coords="5,5,144,47"/>
+<area shape="rect" href="classTang_1_1AstNodeUnary.html" title="An AstNode that represents a unary negation." alt="" coords="177,512,332,539"/>
+<area shape="rect" href="classTang_1_1AstNodeWhile.html" title="An AstNode that represents a while statement." alt="" coords="179,563,331,589"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a7b8d92e81c4497aa330460a870708578"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a7b8d92e81c4497aa330460a870708578">AstNode</a> (<a class="el" href="classTang_1_1location.html">Tang::location</a> <a class="el" href="classTang_1_1location.html">location</a>)</td></tr>
+<tr class="memdesc:a7b8d92e81c4497aa330460a870708578"><td class="mdescLeft">&#160;</td><td class="mdescRight">The generic constructor.  <a href="classTang_1_1AstNode.html#a7b8d92e81c4497aa330460a870708578">More...</a><br /></td></tr>
+<tr class="separator:a7b8d92e81c4497aa330460a870708578"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb0797e0870237b6adb6398fc81ebe6b"><td class="memItemLeft" align="right" valign="top"><a id="aeb0797e0870237b6adb6398fc81ebe6b"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#aeb0797e0870237b6adb6398fc81ebe6b">~AstNode</a> ()</td></tr>
 <tr class="memdesc:aeb0797e0870237b6adb6398fc81ebe6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The object destructor. <br /></td></tr>
@@ -145,35 +133,19 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a390f8887c418f972d75e968f1274b2cb">compile</a> (<a class="el" href="classTang_1_1Program.html">Tang::Program</a> &amp;program) const</td></tr>
 <tr class="memdesc:a390f8887c418f972d75e968f1274b2cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile the ast of the provided <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a>. <br /></td></tr>
 <tr class="separator:a390f8887c418f972d75e968f1274b2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae79b11a4c5dff87c2fd72bcc8eb5232d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#ae79b11a4c5dff87c2fd72bcc8eb5232d">compileIdentifiers</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program) const</td></tr>
-<tr class="memdesc:ae79b11a4c5dff87c2fd72bcc8eb5232d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a list of all variables in the scope.  <a href="classTang_1_1AstNode.html#ae79b11a4c5dff87c2fd72bcc8eb5232d">More...</a><br /></td></tr>
-<tr class="separator:ae79b11a4c5dff87c2fd72bcc8eb5232d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a7b8d92e81c4497aa330460a870708578"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a7b8d92e81c4497aa330460a870708578">AstNode</a> (<a class="el" href="classTang_1_1location.html">Tang::location</a> <a class="el" href="classTang_1_1location.html">location</a>)</td></tr>
-<tr class="memdesc:a7b8d92e81c4497aa330460a870708578"><td class="mdescLeft">&#160;</td><td class="mdescRight">The generic constructor.  <a href="classTang_1_1AstNode.html#a7b8d92e81c4497aa330460a870708578">More...</a><br /></td></tr>
-<tr class="separator:a7b8d92e81c4497aa330460a870708578"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="memItemLeft" align="right" valign="top"><a id="a41e8328d5a342163a5aabcc4cb8f1b5e"></a>
-<a class="el" href="classTang_1_1location.html">Tang::location</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a41e8328d5a342163a5aabcc4cb8f1b5e">location</a></td></tr>
-<tr class="memdesc:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The location associated with this node. <br /></td></tr>
-<tr class="separator:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a804f9247f774f9444ee7e8db7e7d3e4e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a804f9247f774f9444ee7e8db7e7d3e4e">collectIdentifiers</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program) const</td></tr>
+<tr class="memdesc:a804f9247f774f9444ee7e8db7e7d3e4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a list of all variables in the scope.  <a href="classTang_1_1AstNode.html#a804f9247f774f9444ee7e8db7e7d3e4e">More...</a><br /></td></tr>
+<tr class="separator:a804f9247f774f9444ee7e8db7e7d3e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for representing nodes of an Abstract Syntax Tree (AST). </p>
-<p>There will be <em>many</em> derived classes, each one conveying the syntactic meaning of the code that it represents. </p>
+<p>By default, it will represent a NULL value. There will be <em>many</em> derived classes, each one conveying the syntactic meaning of the code that it represents. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7b8d92e81c4497aa330460a870708578"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7b8d92e81c4497aa330460a870708578">&#9670;&nbsp;</a></span>AstNode()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">AstNode::AstNode </td>
@@ -183,11 +155,6 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>The generic constructor. </p>
@@ -202,8 +169,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae79b11a4c5dff87c2fd72bcc8eb5232d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae79b11a4c5dff87c2fd72bcc8eb5232d">&#9670;&nbsp;</a></span>compileIdentifiers()</h2>
+<a id="a804f9247f774f9444ee7e8db7e7d3e4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a804f9247f774f9444ee7e8db7e7d3e4e">&#9670;&nbsp;</a></span>collectIdentifiers()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -212,7 +179,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void AstNode::compileIdentifiers </td>
+          <td class="memname">void AstNode::collectIdentifiers </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classTang_1_1Program.html">Program</a> &amp;&#160;</td>
           <td class="paramname"><em>program</em></td><td>)</td>
@@ -234,7 +201,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="classTang_1_1AstNodeWhile.html#a1e6d3f6cd8950045147d305044b9dbc5">Tang::AstNodeWhile</a>, <a class="el" href="classTang_1_1AstNodeIfElse.html#a2ec4e8bac6e4af8db290f48beedbc0e0">Tang::AstNodeIfElse</a>, <a class="el" href="classTang_1_1AstNodeIdentifier.html#a0718a134e6850888992b46099c8ceb11">Tang::AstNodeIdentifier</a>, <a class="el" href="classTang_1_1AstNodeDoWhile.html#ab55be946b63ba4592a64fa9e6bbb4139">Tang::AstNodeDoWhile</a>, <a class="el" href="classTang_1_1AstNodeBlock.html#a0694378503afba57ba4a49c7798cd6ea">Tang::AstNodeBlock</a>, <a class="el" href="classTang_1_1AstNodeBinary.html#ab162edc6f175b438c16416e97fdc2d7d">Tang::AstNodeBinary</a>, and <a class="el" href="classTang_1_1AstNodeAssign.html#ac79bca0819b3e7bdfa58d1aa411eb744">Tang::AstNodeAssign</a>.</p>
+<p>Reimplemented in <a class="el" href="classTang_1_1AstNodeWhile.html#a5f5075591f9f471664cbdfcef137f5f3">Tang::AstNodeWhile</a>, <a class="el" href="classTang_1_1AstNodeUnary.html#a24a23250c1e1c96cf3e0afb15f1fabf8">Tang::AstNodeUnary</a>, <a class="el" href="classTang_1_1AstNodeIfElse.html#a346c308f5064d274cb76a1d29e10608c">Tang::AstNodeIfElse</a>, <a class="el" href="classTang_1_1AstNodeIdentifier.html#a03a1a9dfe03f5bd1dba96f31f7ea27bc">Tang::AstNodeIdentifier</a>, <a class="el" href="classTang_1_1AstNodeDoWhile.html#a6e1265b0166c0bfda0e1ff6737c0395f">Tang::AstNodeDoWhile</a>, <a class="el" href="classTang_1_1AstNodeBlock.html#a490a42690bd3ef0f3574cb947102a40d">Tang::AstNodeBlock</a>, <a class="el" href="classTang_1_1AstNodeBinary.html#a50355e4cc496ba08d0e048dd984397cc">Tang::AstNodeBinary</a>, and <a class="el" href="classTang_1_1AstNodeAssign.html#abbd4a351c39e88046c307e14fa5cdf6d">Tang::AstNodeAssign</a>.</p>
 
 </div>
 </div>

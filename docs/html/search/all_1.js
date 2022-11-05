@@ -36,13 +36,10 @@ var searchData=
   ['astnodeinteger_45',['AstNodeInteger',['../classTang_1_1AstNodeInteger.html#a3ba7c23caeda9514580b9f0a57d1a625',1,'Tang::AstNodeInteger::AstNodeInteger()'],['../classTang_1_1AstNodeInteger.html',1,'Tang::AstNodeInteger']]],
   ['astnodeinteger_2ecpp_46',['astNodeInteger.cpp',['../astNodeInteger_8cpp.html',1,'']]],
   ['astnodeinteger_2ehpp_47',['astNodeInteger.hpp',['../astNodeInteger_8hpp.html',1,'']]],
-  ['astnodenull_48',['AstNodeNull',['../classTang_1_1AstNodeNull.html#a6e9ad58917355f05f5b9ba20964cbb21',1,'Tang::AstNodeNull::AstNodeNull()'],['../classTang_1_1AstNodeNull.html',1,'Tang::AstNodeNull']]],
-  ['astnodenull_2ecpp_49',['astNodeNull.cpp',['../astNodeNull_8cpp.html',1,'']]],
-  ['astnodenull_2ehpp_50',['astNodeNull.hpp',['../astNodeNull_8hpp.html',1,'']]],
-  ['astnodeunary_51',['AstNodeUnary',['../classTang_1_1AstNodeUnary.html#ab05ef630c3da6067267226a760ac5973',1,'Tang::AstNodeUnary::AstNodeUnary()'],['../classTang_1_1AstNodeUnary.html',1,'Tang::AstNodeUnary']]],
-  ['astnodeunary_2ecpp_52',['astNodeUnary.cpp',['../astNodeUnary_8cpp.html',1,'']]],
-  ['astnodeunary_2ehpp_53',['astNodeUnary.hpp',['../astNodeUnary_8hpp.html',1,'']]],
-  ['astnodewhile_54',['AstNodeWhile',['../classTang_1_1AstNodeWhile.html#a0c21ef27e39dae086b7329e8b70b58cc',1,'Tang::AstNodeWhile::AstNodeWhile()'],['../classTang_1_1AstNodeWhile.html',1,'Tang::AstNodeWhile']]],
-  ['astnodewhile_2ecpp_55',['astNodeWhile.cpp',['../astNodeWhile_8cpp.html',1,'']]],
-  ['astnodewhile_2ehpp_56',['astNodeWhile.hpp',['../astNodeWhile_8hpp.html',1,'']]]
+  ['astnodeunary_48',['AstNodeUnary',['../classTang_1_1AstNodeUnary.html#ab05ef630c3da6067267226a760ac5973',1,'Tang::AstNodeUnary::AstNodeUnary()'],['../classTang_1_1AstNodeUnary.html',1,'Tang::AstNodeUnary']]],
+  ['astnodeunary_2ecpp_49',['astNodeUnary.cpp',['../astNodeUnary_8cpp.html',1,'']]],
+  ['astnodeunary_2ehpp_50',['astNodeUnary.hpp',['../astNodeUnary_8hpp.html',1,'']]],
+  ['astnodewhile_51',['AstNodeWhile',['../classTang_1_1AstNodeWhile.html#a0c21ef27e39dae086b7329e8b70b58cc',1,'Tang::AstNodeWhile::AstNodeWhile()'],['../classTang_1_1AstNodeWhile.html',1,'Tang::AstNodeWhile']]],
+  ['astnodewhile_2ecpp_52',['astNodeWhile.cpp',['../astNodeWhile_8cpp.html',1,'']]],
+  ['astnodewhile_2ehpp_53',['astNodeWhile.hpp',['../astNodeWhile_8hpp.html',1,'']]]
 ];
