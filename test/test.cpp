@@ -547,9 +547,9 @@ TEST(ControlFlow, DoWhile) {
   auto p2 = TangBase().compileScript("a = 1; do {a = a + 1; b = a;} while (a < 10); b;");
   EXPECT_EQ(*p2.execute().getResult(), 10);
   auto p3 = TangBase().compileScript("a = 1; do b = a = a + 1; while (a > 10); b;");
-  EXPECT_EQ(*p3.execute().getResult(), nullptr);
+  EXPECT_EQ(*p3.execute().getResult(), 2);
   auto p4 = TangBase().compileScript("a = 1; do {a = a + 1; b = a;} while (a > 10); b;");
-  EXPECT_EQ(*p4.execute().getResult(), nullptr);
+  EXPECT_EQ(*p4.execute().getResult(), 2);
 }
 
 int main(int argc, char** argv) {

@@ -237,7 +237,7 @@ closedStatement
     }
   | "do" statement "while" "(" expression ")" ";"
     {
-      $$ = std::make_shared<AstNodeWhile>($5, $2, @1);
+      $$ = std::make_shared<AstNodeDoWhile>($5, $2, @1);
     }
   | codeBlock
   | expression ";"
