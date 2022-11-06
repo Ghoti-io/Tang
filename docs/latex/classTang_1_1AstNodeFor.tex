@@ -1,0 +1,101 @@
+\hypertarget{classTang_1_1AstNodeFor}{}\doxysection{Tang\+::Ast\+Node\+For Class Reference}
+\label{classTang_1_1AstNodeFor}\index{Tang::AstNodeFor@{Tang::AstNodeFor}}
+
+
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents an if() statement.  
+
+
+
+
+{\ttfamily \#include $<$ast\+Node\+For.\+hpp$>$}
+
+
+
+Inheritance diagram for Tang\+::Ast\+Node\+For\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classTang_1_1AstNodeFor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tang\+::Ast\+Node\+For\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classTang_1_1AstNodeFor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTang_1_1AstNodeFor_a31e07e4e686d9bd033e1d8ad117d4cb3}{Ast\+Node\+For}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ initialization, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ condition, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ increment, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ code\+Block, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeFor_ae90bac4d66394687615f93f50bfa4872}\label{classTang_1_1AstNodeFor_ae90bac4d66394687615f93f50bfa4872}} 
+virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeFor_ae90bac4d66394687615f93f50bfa4872}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
+\begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeFor_ab2da77ba66b9f359937e5992027ef192}\label{classTang_1_1AstNodeFor_ab2da77ba66b9f359937e5992027ef192}} 
+virtual void \mbox{\hyperlink{classTang_1_1AstNodeFor_ab2da77ba66b9f359937e5992027ef192}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const override
+\begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTang_1_1AstNodeFor_a0a5baa49c223998f64ab64d7613a4d5e}{collect\+Identifiers}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program) const override
+\begin{DoxyCompactList}\small\item\em Compile a list of all variables in the scope. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents an if() statement. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeFor_a31e07e4e686d9bd033e1d8ad117d4cb3}\label{classTang_1_1AstNodeFor_a31e07e4e686d9bd033e1d8ad117d4cb3}} 
+\index{Tang::AstNodeFor@{Tang::AstNodeFor}!AstNodeFor@{AstNodeFor}}
+\index{AstNodeFor@{AstNodeFor}!Tang::AstNodeFor@{Tang::AstNodeFor}}
+\doxysubsubsection{\texorpdfstring{AstNodeFor()}{AstNodeFor()}}
+{\footnotesize\ttfamily Ast\+Node\+For\+::\+Ast\+Node\+For (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$}]{initialization,  }\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$}]{condition,  }\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$}]{increment,  }\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$}]{code\+Block,  }\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{location }\end{DoxyParamCaption})}
+
+
+
+The constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em initialization} & The expression to be executed first. \\
+\hline
+{\em condition} & The expression which determines whether the code\+Block is executed. \\
+\hline
+{\em increment} & The expression to be executed after each code\+Block. \\
+\hline
+{\em code\+Block} & The statement executed when the condition is true. \\
+\hline
+{\em location} & The location associated with the expression. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeFor_a0a5baa49c223998f64ab64d7613a4d5e}\label{classTang_1_1AstNodeFor_a0a5baa49c223998f64ab64d7613a4d5e}} 
+\index{Tang::AstNodeFor@{Tang::AstNodeFor}!collectIdentifiers@{collectIdentifiers}}
+\index{collectIdentifiers@{collectIdentifiers}!Tang::AstNodeFor@{Tang::AstNodeFor}}
+\doxysubsubsection{\texorpdfstring{collectIdentifiers()}{collectIdentifiers()}}
+{\footnotesize\ttfamily void Ast\+Node\+For\+::collect\+Identifiers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1Program}{Program}} \&}]{program }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compile a list of all variables in the scope. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em program} & The \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} that is being compiled. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a804f9247f774f9444ee7e8db7e7d3e4e}{Tang\+::\+Ast\+Node}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{astNodeFor_8hpp}{ast\+Node\+For.\+hpp}}\item 
+src/\mbox{\hyperlink{astNodeFor_8cpp}{ast\+Node\+For.\+cpp}}\end{DoxyCompactItemize}

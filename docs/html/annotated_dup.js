@@ -9,6 +9,7 @@ var annotated_dup =
       [ "AstNodeCast", "classTang_1_1AstNodeCast.html", "classTang_1_1AstNodeCast" ],
       [ "AstNodeDoWhile", "classTang_1_1AstNodeDoWhile.html", "classTang_1_1AstNodeDoWhile" ],
       [ "AstNodeFloat", "classTang_1_1AstNodeFloat.html", "classTang_1_1AstNodeFloat" ],
+      [ "AstNodeFor", "classTang_1_1AstNodeFor.html", "classTang_1_1AstNodeFor" ],
       [ "AstNodeIdentifier", "classTang_1_1AstNodeIdentifier.html", "classTang_1_1AstNodeIdentifier" ],
       [ "AstNodeIfElse", "classTang_1_1AstNodeIfElse.html", "classTang_1_1AstNodeIfElse" ],
       [ "AstNodeInteger", "classTang_1_1AstNodeInteger.html", "classTang_1_1AstNodeInteger" ],
