@@ -15,6 +15,7 @@ namespace Tang {
     INTEGER,  ///< Push an integer onto the stack
     FLOAT,    ///< Push a floating point number onto the stack
     BOOLEAN,  ///< Push a boolean onto the stack
+    STRING,   ///< Get len, char string: push string
     ADD,      ///< Pop rhs, pop lhs, push lhs + rhs
     SUBTRACT, ///< Pop rhs, pop lhs, push lhs - rhs
     MULTIPLY, ///< Pop rhs, pop lhs, push lhs * rhs

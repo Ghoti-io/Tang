@@ -94,6 +94,23 @@ string Program::dumpBytecode() const {
         pc += 2;
         break;
       }
+      case Opcode::STRING: {
+        DUMPPROGRAMCHECK(1);
+        auto size = this->bytecode[pc + 1];
+        auto bytes = ceil((double)size / sizeof(uint64_t));
+        DUMPPROGRAMCHECK(1 + bytes);
+        string temp{};
+        for (size_t i = 0; i < bytes; ++i) {
+          for (size_t j = 0; j < sizeof(uint64_t); ++j) {
+            if (((i * 8) + j) < size) {
+              temp += (unsigned char)((this->bytecode[pc + 2 + i] >> (8 * (7 - j))) & 0xFF);
+            }
+          }
+        }
+        out << "STRING" << "\"" << temp << "\"";
+        pc += bytes + 2;
+        break;
+      }
       case Opcode::ADD: {
         out << "ADD";
         ++pc;

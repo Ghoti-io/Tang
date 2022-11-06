@@ -4,12 +4,14 @@
  */
 
 #include <bit>
+#include <cmath>
 #include "program.hpp"
 #include "opcode.hpp"
 #include "computedExpressionError.hpp"
 #include "computedExpressionInteger.hpp"
 #include "computedExpressionFloat.hpp"
 #include "computedExpressionBoolean.hpp"
+#include "computedExpressionString.hpp"
 
 using namespace std;
 using namespace Tang;
@@ -119,6 +121,24 @@ Program& Program::execute() {
         EXECUTEPROGRAMCHECK(1);
         stack.push_back(GarbageCollected::make<ComputedExpressionBoolean>(this->bytecode[pc + 1] ? true : false));
         pc += 2;
+        break;
+      }
+      case Opcode::STRING: {
+        EXECUTEPROGRAMCHECK(1);
+        auto size = this->bytecode[pc + 1];
+        auto bytes = ceil((double)size / sizeof(uint64_t));
+        EXECUTEPROGRAMCHECK(1 + bytes);
+        // Construct the string.
+        string temp{};
+        for (size_t i = 0; i < bytes; ++i) {
+          for (size_t j = 0; j < sizeof(uint64_t); ++j) {
+            if (((i * 8) + j) < size) {
+              temp += (unsigned char)((this->bytecode[pc + 2 + i] >> (8 * (7 - j))) & 0xFF);
+            }
+          }
+        }
+        stack.push_back(GarbageCollected::make<ComputedExpressionString>(temp));
+        pc += bytes + 2;
         break;
       }
       case Opcode::ADD: {

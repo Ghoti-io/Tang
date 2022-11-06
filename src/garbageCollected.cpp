@@ -22,6 +22,14 @@ bool GarbageCollected::operator==(const bool & val) const {
   return this->ref && this->ref->is_equal(val);
 }
 
+bool GarbageCollected::operator==(const string & val) const {
+  return this->ref && this->ref->is_equal(val);
+}
+
+bool GarbageCollected::operator==(const char * const & val) const {
+  return this->ref && this->ref->is_equal(string(val));
+}
+
 bool GarbageCollected::operator==(const Error & val) const {
   return this->ref && this->ref->is_equal(val);
 }

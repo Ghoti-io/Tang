@@ -92,14 +92,22 @@ using namespace std;
  *   (search for "C-style")
  * Also given here: https://www.cs.virginia.edu/~cr4bd/flex-manual/Start-Conditions.html
  */
-%x SCRIPT
+%x SCRIPT doubleQuoteString
 
 %%
   // Include any initialization code here.  These lines *must* be indented,
   // otherwise, flex will try to interpret them as rules rather than code.
   // (Note: there is no code yet, this is just a placeholder)
 
+  // Holds the contents of a double-quoted string as it is being parsed.
+  std::string stringBuffer;
+
 <INITIAL,SCRIPT>{
+  \" {
+    // The start of a new, double-quoted string.
+    stringBuffer.clear();
+    yy_push_state(doubleQuoteString);
+  }
   if {
     return Tang::TangParser::make_IF(Tang::location(location));
   }
@@ -202,6 +210,66 @@ using namespace std;
   \n {}
   <<EOF>> {
     yyterminate();
+  }
+}
+
+<doubleQuoteString>{
+  \" {
+    // Found the end of a double-quoted string.
+    yy_pop_state();
+    return Tang::TangParser::make_STRING(stringBuffer, Tang::location(location));
+  }
+  \\[0-7]{1,3} {
+    // Interpret an escaped octal number.
+    unsigned char result = yytext[1] - '0';
+    if (yytext[2]) {
+      result <<= 3;
+      result += yytext[2] - '0';
+      if (yytext[3]) {
+        result <<= 3;
+        result += yytext[3] - '0';
+      }
+    }
+    stringBuffer += result;
+  }
+  \\[0-9]+ {
+    // Generate Error - Bad escape sequence.
+    // Something like "\48" or "\07777777"
+    return Tang::TangParser::make_STRINGERROR(Tang::location(location));
+  }
+  \n|\\n {
+    // Matches either an explicit or escaped newline.
+    stringBuffer += "\n";
+  }
+  \t|\\t {
+    // Matches either an explicit or escaped tab.
+    stringBuffer += "\t";
+  }
+  \r|\\r {
+    // Matches either an explicit or escaped carriage return.
+    stringBuffer += "\r";
+  }
+  \b|\\b {
+    // Matches either an explicit or escaped bell.
+    stringBuffer += "\b";
+  }
+  \f|\\f {
+    // Matches either an explicit or escaped form feed.
+    stringBuffer += "\f";
+  }
+  \\(.|\n) {
+    // Any other escaped character.
+    stringBuffer += yytext[1];
+  }
+  [^\\\n\"]+ {
+    // " <-- to fix the highlighting in Vim.
+    // Any other character in the string.
+    stringBuffer += yytext;
+  }
+  \\ {
+    // Because we specified escape characters, we also need to specify what to
+    // do if we see only a single backslash at the end of the input.
+    return Tang::TangParser::make_STRINGERROR(Tang::location(location));
   }
 }
 

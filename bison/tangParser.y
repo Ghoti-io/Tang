@@ -78,6 +78,8 @@
 %token <int64_t> INTEGER "integer literal"
 %token <long double> FLOAT "float literal"
 %token <bool> BOOLEAN "boolean literal"
+%token <std::string> STRING "string"
+%token STRINGERROR "Malformed String"
 %token <std::string> IDENTIFIER "identifier"
 %token ASSIGN "="
 %token PLUS "+"
@@ -155,6 +157,7 @@ namespace Tang {
 #include "astNodeIdentifier.hpp"
 #include "astNodeInteger.hpp"
 #include "astNodeBoolean.hpp"
+#include "astNodeString.hpp"
 #include "astNodeCast.hpp"
 #include "astNodeBlock.hpp"
 #include "astNodeIfElse.hpp"
@@ -291,6 +294,9 @@ expression
     }
   | BOOLEAN {
       $$ = std::make_shared<AstNodeBoolean>($1, @1);
+    }
+  | STRING {
+      $$ = std::make_shared<AstNodeString>($1, @1);
     }
   | expression "=" expression
     {

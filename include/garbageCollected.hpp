@@ -171,6 +171,22 @@ namespace Tang {
      * @param val The value to compare the tracked object against.
      * @return True if they are equal, false otherwise.
      */
+    bool operator==(const std::string & val) const;
+
+    /**
+     * Compare the GarbageCollected tracked object with a supplied value.
+     *
+     * @param val The value to compare the tracked object against.
+     * @return True if they are equal, false otherwise.
+     */
+    bool operator==(const char * const & val) const;
+
+    /**
+     * Compare the GarbageCollected tracked object with a supplied value.
+     *
+     * @param val The value to compare the tracked object against.
+     * @return True if they are equal, false otherwise.
+     */
     bool operator==(const Error & val) const;
 
     /**

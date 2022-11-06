@@ -49,6 +49,23 @@ TEST(Declare, Float) {
   EXPECT_NE(*p8.execute().getResult(), 3);
 }
 
+TEST(Declare, Boolean) {
+  auto p1 = TangBase().compileScript("true");
+  EXPECT_EQ(*p1.execute().getResult(), true);
+  auto p2 = TangBase().compileScript("false");
+  EXPECT_EQ(*p2.execute().getResult(), false);
+}
+
+TEST(Declare, String) {
+  auto p1 = TangBase().compileScript("\"\"");
+  EXPECT_EQ(*p1.execute().getResult(), string(""));
+  EXPECT_EQ(*p1.execute().getResult(), "");
+  EXPECT_NE(*p1.execute().getResult(), nullptr);
+  auto p2 = TangBase().compileScript("\"Hello World!\"");
+  EXPECT_EQ(*p2.execute().getResult(), "Hello World!");
+  EXPECT_NE(*p2.execute().getResult(), nullptr);
+}
+
 TEST(Expression, Add) {
   auto p1 = TangBase().compileScript("3 + 5");
   EXPECT_EQ(*p1.execute().getResult(), 8);
@@ -68,6 +85,8 @@ TEST(Expression, Add) {
   EXPECT_EQ(*p8.execute().getResult(), 8.5);
   auto p9 = TangBase().compileScript("3 + 3 + 5.5");
   EXPECT_EQ(*p9.execute().getResult(), 11.5);
+  auto p10 = TangBase().compileScript("\"Hello\" + \" \" + \"World!\"");
+  EXPECT_EQ(*p10.execute().getResult(), "Hello World!");
 }
 
 TEST(Expression, Subtract) {
@@ -237,13 +256,6 @@ TEST(Expression, TypeCast) {
   EXPECT_EQ(*p19.execute().getResult(), false);
 }
 
-TEST(Expression, Boolean) {
-  auto p1 = TangBase().compileScript("true");
-  EXPECT_EQ(*p1.execute().getResult(), true);
-  auto p2 = TangBase().compileScript("false");
-  EXPECT_EQ(*p2.execute().getResult(), false);
-}
-
 TEST(Expression, Not) {
   auto p1 = TangBase().compileScript("!true");
   EXPECT_EQ(*p1.execute().getResult(), false);
@@ -292,6 +304,10 @@ TEST(Expression, LessThan) {
   EXPECT_EQ(*p14.execute().getResult(), Error{"Don't know how to compare these values."});
   auto p15 = TangBase().compileScript("false < true");
   EXPECT_EQ(*p15.execute().getResult(), Error{"Don't know how to compare these values."});
+  auto p16 = TangBase().compileScript("\"a\" < \"b\"");
+  EXPECT_EQ(*p16.execute().getResult(), true);
+  auto p17 = TangBase().compileScript("\"b\" < \"a\"");
+  EXPECT_EQ(*p17.execute().getResult(), false);
 }
 
 TEST(Expression, LessThanEqual) {
@@ -438,6 +454,10 @@ TEST(Expression, Equal) {
   EXPECT_EQ(*p21.execute().getResult(), false);
   auto p22 = TangBase().compileScript("false == null");
   EXPECT_EQ(*p22.execute().getResult(), false);
+  auto p23 = TangBase().compileScript("\"a\" == \"b\"");
+  EXPECT_EQ(*p23.execute().getResult(), false);
+  auto p24 = TangBase().compileScript("\"a\" == \"a\"");
+  EXPECT_EQ(*p24.execute().getResult(), true);
 }
 
 TEST(Expression, NotEqual) {

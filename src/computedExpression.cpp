@@ -37,6 +37,10 @@ bool ComputedExpression::is_equal([[maybe_unused]] const bool & val) const {
   return false;
 }
 
+bool ComputedExpression::is_equal([[maybe_unused]] const string & val) const {
+  return false;
+}
+
 bool ComputedExpression::is_equal([[maybe_unused]] const nullptr_t & val) const {
   // Because this is a virtual function, we must ensure that the type is
   // actually ComputedExpression, and not a derived type that forgot to
