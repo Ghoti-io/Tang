@@ -29,6 +29,59 @@
 //    21 JMP         7
 //    ex: 19 & 20 can be removed, if 20 is not a jump target.
 //
+//
+// TODO What's next:
+// * print() basic
+// * string literal on stack
+// * function declaration (ast) and calling
+// * continue and break
+// * TangString
+//   * ICU compiling in
+//   * Graphemes & string length
+//   * substring
+//   * html encode
+//   * percent encode
+//   * percent decode
+// * Convert ComputedExpressionString to use TangString
+// * print!()
+// * print%()
+// * print<>()
+// * !"" - raw string
+// * default print() on ComputedExpressionString
+//   * What to do when combining strings?
+// * GarbageCollected refactor
+//   * recycle should not call realloc.
+//   * recycled pointer space should be reserved when get() allocates object space.
+// * Better location tracking for bytecode and error reporting.
+// * Array []
+//   * [] access
+//   * [] assignment
+//   * Slice
+// * String [] access
+// * String Slice
+// * Ranged for and iterators
+//   * Arrays
+//   * strings
+// * "use" syntax to import libraries
+//   * native functions
+//     * Tang version
+//   * Execution Context
+// * Object {}
+//   * Type members
+//   * . access
+//   * . assignment
+// * functions on objects (bound)
+// * template scanning
+//   * short tags
+// * Library Extension
+// * Math library
+//   * round, min, max, log, ceil, floor, exp
+//   * number format to string
+// * Date/Time type & functions
+// * Execution count timeout
+// * Stand-alone interpreter program
+// * Optimization
+//
 
 #ifndef TANG_HPP
 #define TANG_HPP
