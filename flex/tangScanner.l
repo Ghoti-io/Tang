@@ -120,6 +120,9 @@ using namespace std;
   while {
     return Tang::TangParser::make_WHILE(Tang::location(location));
   }
+  for {
+    return Tang::TangParser::make_FOR(Tang::location(location));
+  }
   null {
     return Tang::TangParser::make_NULL(Tang::location(location));
   }

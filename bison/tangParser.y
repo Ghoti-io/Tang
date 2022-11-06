@@ -102,6 +102,7 @@
 %token ELSE "else"
 %token DO "do"
 %token WHILE "while"
+%token FOR "for"
 %token AS "as"
 %token NULL "null"
 %token CASTINT "int"
@@ -118,6 +119,7 @@
 %type <std::shared_ptr<Tang::AstNode>> codeBlock
 %type <std::shared_ptr<Tang::AstNode>> openStatement
 %type <std::shared_ptr<Tang::AstNode>> closedStatement
+%type <std::shared_ptr<Tang::AstNode>> forExpression
 
 // Precedence rules.
 // For guidance, see:
@@ -163,6 +165,7 @@ namespace Tang {
 #include "astNodeIfElse.hpp"
 #include "astNodeWhile.hpp"
 #include "astNodeDoWhile.hpp"
+#include "astNodeFor.hpp"
 
 // We must provide the yylex() function.
 // yylex() arguments are defined in the bison .y file.
@@ -241,6 +244,10 @@ closedStatement
     {
       $$ = std::make_shared<AstNodeDoWhile>($5, $2, @1);
     }
+  | "for" "(" forExpression ";" forExpression ";" forExpression ")" closedStatement
+    {
+      $$ = std::make_shared<AstNodeFor>($3, $5, $7, $9, @1);
+    }
   | codeBlock
   | expression ";"
   ;
@@ -259,8 +266,20 @@ openStatement
     {
       $$ = std::make_shared<AstNodeWhile>($3, $5, @1);
     }
+  | "for" "(" forExpression ";" forExpression ";" forExpression ")" openStatement
+    {
+      $$ = std::make_shared<AstNodeFor>($3, $5, $7, $9, @1);
+    }
   ;
 
+// `forExpression` is an optional expression.
+forExpression
+  : %empty
+    {
+      $$ = std::make_shared<AstNode>(Tang::location{});
+    }
+  | expression
+  ;
 
 // `codeBlock` represents a series of statements.
 codeBlock

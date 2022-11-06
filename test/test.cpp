@@ -574,6 +574,55 @@ TEST(ControlFlow, DoWhile) {
   EXPECT_EQ(*p4.execute().getResult(), 2);
 }
 
+TEST(ControlFlow, For) {
+  auto p1 = TangBase().compileScript(R"(
+    a = "";
+    for (i = 0; i < 10; i = i + 1) {
+      a = a + "-";
+    }
+    a;
+  )");
+  EXPECT_EQ(*p1.execute().getResult(), "----------");
+  auto p2 = TangBase().compileScript(R"(
+    a = "";
+    for (i = 0; i < 3; i = i + 1)
+      a = a + "-";
+    a;
+  )");
+  EXPECT_EQ(*p2.execute().getResult(), "---");
+  auto p3 = TangBase().compileScript(R"(
+    a = "";
+    i = 0;
+    for (; i < 3;) {
+      a = a + "-";
+      i = i + 1;
+    }
+    a;
+  )");
+  EXPECT_EQ(*p3.execute().getResult(), "---");
+  auto p4 = TangBase().compileScript(R"(
+    for (i = 0; i > 10; i = i + 1) {
+      a = "-";
+    }
+    a;
+  )");
+  EXPECT_EQ(*p4.execute().getResult(), nullptr);
+  auto p5 = TangBase().compileScript(R"(
+    for (i = 0; i > 10; i = i + 1)
+      a = "-";
+    a;
+  )");
+  EXPECT_EQ(*p5.execute().getResult(), nullptr);
+  auto p6 = TangBase().compileScript(R"(
+    a = 0;
+    for (i = 0; i < 10; i = i + 1)
+      for (j = 0; j < 10; j = j + 1)
+        a = a + 1;
+    a;
+  )");
+  EXPECT_EQ(*p6.execute().getResult(), 100);
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
