@@ -54,6 +54,8 @@ virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a4b61cc4d447993bfc
 \begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_aa81900aeb157fdb024f1bb0f316b4006}{is\+\_\+equal}} (const double \&val) const
 \begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a726aea52e0773883fe628f7d97b608cb}{is\+\_\+equal}} (const string \&val) const
+\begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a5ce6d4bc0128f6aadf72c2f63a70275a}{is\+\_\+equal}} (const \mbox{\hyperlink{classTang_1_1Error}{Error}} \&val) const
 \begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a5287fabf86f19613afb04d5e285c0231}{is\+\_\+equal}} (const std\+::nullptr\+\_\+t \&val) const
@@ -116,7 +118,7 @@ The result of the operation.
 \end{DoxyReturn}
 
 
-Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ab9c7c7ad34978c127b92ad7a24cbb717}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a024d709f222a059b2c70c7e84aec6ec4}{Tang\+::\+Computed\+Expression\+Float}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a8b592c106cd121e5891d1a1688bc3f5d}{Tang\+::\+Computed\+Expression\+Error}}.
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionString_ae2b11008518d5e5bb1ab842dea1eb435}{Tang\+::\+Computed\+Expression\+String}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ab9c7c7ad34978c127b92ad7a24cbb717}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a024d709f222a059b2c70c7e84aec6ec4}{Tang\+::\+Computed\+Expression\+Float}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a8b592c106cd121e5891d1a1688bc3f5d}{Tang\+::\+Computed\+Expression\+Error}}.
 
 \mbox{\Hypertarget{classTang_1_1ComputedExpressionBoolean_a423b841ea817eebc701ad26e82b50f0e}\label{classTang_1_1ComputedExpressionBoolean_a423b841ea817eebc701ad26e82b50f0e}} 
 \index{Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}!\_\_boolean@{\_\_boolean}}
@@ -233,7 +235,7 @@ The result of the the operation.
 \end{DoxyReturn}
 
 
-Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a6ca18e4d07780ca7d8d1568f59cf358c}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a017d94f17afa7f30c406892c6a001ed7}{Tang\+::\+Computed\+Expression\+Float}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a5789d84d94cacf70ed9c2bf350549b67}{Tang\+::\+Computed\+Expression\+Error}}.
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionString_a8a4a89683a1285628b9751d18eab88cb}{Tang\+::\+Computed\+Expression\+String}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a6ca18e4d07780ca7d8d1568f59cf358c}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a017d94f17afa7f30c406892c6a001ed7}{Tang\+::\+Computed\+Expression\+Float}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a5789d84d94cacf70ed9c2bf350549b67}{Tang\+::\+Computed\+Expression\+Error}}.
 
 \mbox{\Hypertarget{classTang_1_1ComputedExpression_ab545455bd51f215ac139db456b829f66}\label{classTang_1_1ComputedExpression_ab545455bd51f215ac139db456b829f66}} 
 \index{Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}!\_\_modulo@{\_\_modulo}}
@@ -355,7 +357,7 @@ Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_ab5df8f689f9
 \mbox{\Hypertarget{classTang_1_1ComputedExpressionBoolean_aaf17b861d5a8ab290ff01cc2fe8acf55}\label{classTang_1_1ComputedExpressionBoolean_aaf17b861d5a8ab290ff01cc2fe8acf55}} 
 \index{Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}!is\_equal@{is\_equal}}
 \index{is\_equal@{is\_equal}!Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}}
-\doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+\doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
 {\footnotesize\ttfamily bool Computed\+Expression\+Boolean\+::is\+\_\+equal (\begin{DoxyParamCaption}\item[{const bool \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
@@ -377,7 +379,7 @@ Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a907104a9d09
 \mbox{\Hypertarget{classTang_1_1ComputedExpression_aa81900aeb157fdb024f1bb0f316b4006}\label{classTang_1_1ComputedExpression_aa81900aeb157fdb024f1bb0f316b4006}} 
 \index{Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}!is\_equal@{is\_equal}}
 \index{is\_equal@{is\_equal}!Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}}
-\doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+\doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
 {\footnotesize\ttfamily virtual bool Tang\+::\+Computed\+Expression\+::is\+\_\+equal (\begin{DoxyParamCaption}\item[{const double \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
 
 
@@ -399,7 +401,7 @@ Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_acd8711
 \mbox{\Hypertarget{classTang_1_1ComputedExpression_a5ce6d4bc0128f6aadf72c2f63a70275a}\label{classTang_1_1ComputedExpression_a5ce6d4bc0128f6aadf72c2f63a70275a}} 
 \index{Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}!is\_equal@{is\_equal}}
 \index{is\_equal@{is\_equal}!Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}}
-\doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+\doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
 {\footnotesize\ttfamily virtual bool Tang\+::\+Computed\+Expression\+::is\+\_\+equal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1Error}{Error}} \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
 
 
@@ -421,7 +423,7 @@ Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a77f17943
 \mbox{\Hypertarget{classTang_1_1ComputedExpression_a4b61cc4d447993bfc96dc37bfd552cef}\label{classTang_1_1ComputedExpression_a4b61cc4d447993bfc96dc37bfd552cef}} 
 \index{Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}!is\_equal@{is\_equal}}
 \index{is\_equal@{is\_equal}!Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}}
-\doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+\doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
 {\footnotesize\ttfamily virtual bool Tang\+::\+Computed\+Expression\+::is\+\_\+equal (\begin{DoxyParamCaption}\item[{const int \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
 
 
@@ -443,7 +445,7 @@ Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ab29712
 \mbox{\Hypertarget{classTang_1_1ComputedExpression_a5287fabf86f19613afb04d5e285c0231}\label{classTang_1_1ComputedExpression_a5287fabf86f19613afb04d5e285c0231}} 
 \index{Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}!is\_equal@{is\_equal}}
 \index{is\_equal@{is\_equal}!Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}}
-\doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+\doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
 {\footnotesize\ttfamily virtual bool Tang\+::\+Computed\+Expression\+::is\+\_\+equal (\begin{DoxyParamCaption}\item[{const std\+::nullptr\+\_\+t \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
 
 
@@ -458,6 +460,28 @@ Check whether or not the computed expression is equal to another value.
 \begin{DoxyReturn}{Returns}
 True if equal, false if not. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_a726aea52e0773883fe628f7d97b608cb}\label{classTang_1_1ComputedExpression_a726aea52e0773883fe628f7d97b608cb}} 
+\index{Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}!is\_equal@{is\_equal}}
+\index{is\_equal@{is\_equal}!Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}}
+\doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily virtual bool Tang\+::\+Computed\+Expression\+::is\+\_\+equal (\begin{DoxyParamCaption}\item[{const string \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Check whether or not the computed expression is equal to another value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if equal, false if not. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionString_a91b777a2aa5bc6748cdceca5cbabf6c5}{Tang\+::\+Computed\+Expression\+String}}.
+
 \mbox{\Hypertarget{classTang_1_1ComputedExpressionBoolean_aaddd6846e22a48cc1531731cef64a678}\label{classTang_1_1ComputedExpressionBoolean_aaddd6846e22a48cc1531731cef64a678}} 
 \index{Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}!makeCopy@{makeCopy}}
 \index{makeCopy@{makeCopy}!Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}}

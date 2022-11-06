@@ -19,5 +19,6 @@ var classTang_1_1ComputedExpressionError =
     [ "is_equal", "classTang_1_1ComputedExpressionError.html#a77f179435a44603e537357af7b828005", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionError.html#a4b61cc4d447993bfc96dc37bfd552cef", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionError.html#a5287fabf86f19613afb04d5e285c0231", null ],
+    [ "is_equal", "classTang_1_1ComputedExpressionError.html#a726aea52e0773883fe628f7d97b608cb", null ],
     [ "makeCopy", "classTang_1_1ComputedExpressionError.html#a3600a4bb5e62c5599abe8226fe06d887", null ]
 ];

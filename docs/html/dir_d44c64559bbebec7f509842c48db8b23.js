@@ -33,6 +33,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "astNodeInteger.hpp", "astNodeInteger_8hpp.html", [
       [ "AstNodeInteger", "classTang_1_1AstNodeInteger.html", "classTang_1_1AstNodeInteger" ]
     ] ],
+    [ "astNodeString.hpp", "astNodeString_8hpp.html", [
+      [ "AstNodeString", "classTang_1_1AstNodeString.html", "classTang_1_1AstNodeString" ]
+    ] ],
     [ "astNodeUnary.hpp", "astNodeUnary_8hpp.html", [
       [ "AstNodeUnary", "classTang_1_1AstNodeUnary.html", "classTang_1_1AstNodeUnary" ]
     ] ],
@@ -53,6 +56,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     ] ],
     [ "computedExpressionInteger.hpp", "computedExpressionInteger_8hpp.html", [
       [ "ComputedExpressionInteger", "classTang_1_1ComputedExpressionInteger.html", "classTang_1_1ComputedExpressionInteger" ]
+    ] ],
+    [ "computedExpressionString.hpp", "computedExpressionString_8hpp.html", [
+      [ "ComputedExpressionString", "classTang_1_1ComputedExpressionString.html", "classTang_1_1ComputedExpressionString" ]
     ] ],
     [ "error.hpp", "error_8hpp.html", [
       [ "Error", "classTang_1_1Error.html", "classTang_1_1Error" ]
