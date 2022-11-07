@@ -623,6 +623,38 @@ TEST(ControlFlow, For) {
   EXPECT_EQ(*p6.execute().getResult(), 100);
 }
 
+TEST(Print, Default) {
+  auto p1 = TangBase().compileScript("print(\"\");");
+  EXPECT_EQ(p1.out, "");
+  EXPECT_EQ(p1.execute().out, "");
+  auto p2 = TangBase().compileScript("print(\"Hello World!\");");
+  EXPECT_EQ(p2.out, "");
+  EXPECT_EQ(p2.execute().out, "Hello World!");
+  EXPECT_EQ(p2.out, "Hello World!");
+  auto p3 = TangBase().compileScript("print(3);");
+  EXPECT_EQ(p3.execute().out, "3");
+  auto p4 = TangBase().compileScript("print(3.);");
+  EXPECT_EQ(p4.execute().out, "3.000000");
+  auto p5 = TangBase().compileScript("print(true);");
+  EXPECT_EQ(p5.execute().out, "");
+  auto p6 = TangBase().compileScript("print(false);");
+  EXPECT_EQ(p6.execute().out, "");
+  auto p7 = TangBase().compileScript("print(null);");
+  EXPECT_EQ(p7.execute().out, "");
+  auto p8 = TangBase().compileScript("a = \"Hi\"; print(a);");
+  EXPECT_EQ(p8.execute().out, "Hi");
+  auto p9 = TangBase().compileScript("print(3 + 5);");
+  EXPECT_EQ(p9.execute().out, "8");
+  auto p10 = TangBase().compileScript("print(3 + null);");
+  EXPECT_EQ(*p10.execute().getResult(), Error{"Don't know how to add these values."});
+  auto p11 = TangBase().compileScript(R"(
+    for (i = 0; i < 10; i = i + 1) {
+      print("-");
+    }
+  )");
+  EXPECT_EQ(p11.execute().out, "----------");
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

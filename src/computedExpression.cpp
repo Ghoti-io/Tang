@@ -111,3 +111,7 @@ GarbageCollected ComputedExpression::__boolean() const {
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to cast this value to a boolean."});
 }
 
+GarbageCollected ComputedExpression::__string() const {
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to cast this value to a string."});
+}
+

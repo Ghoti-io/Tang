@@ -70,3 +70,7 @@ GarbageCollected ComputedExpressionError::__boolean() const {
   return GarbageCollected::make<ComputedExpressionError>(this->error.message);
 }
 
+GarbageCollected ComputedExpressionError::__string() const {
+  return GarbageCollected::make<ComputedExpressionError>(this->error.message);
+}
+

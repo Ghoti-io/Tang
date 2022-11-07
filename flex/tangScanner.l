@@ -141,6 +141,9 @@ using namespace std;
   false {
     return Tang::TangParser::make_BOOLEAN(false, Tang::location(location));
   }
+  print {
+    return Tang::TangParser::make_PRINT(Tang::location(location));
+  }
   [0-9]+ {
     int64_t number = strtoll(yytext, 0, 10);
     return Tang::TangParser::make_INTEGER(number, Tang::location(location));

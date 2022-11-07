@@ -6,6 +6,7 @@
 #include "computedExpressionFloat.hpp"
 #include "computedExpressionInteger.hpp"
 #include "computedExpressionBoolean.hpp"
+#include "computedExpressionString.hpp"
 #include "computedExpressionError.hpp"
 
 using namespace std;
@@ -147,5 +148,9 @@ GarbageCollected ComputedExpressionFloat::__float() const {
 
 GarbageCollected ComputedExpressionFloat::__boolean() const {
   return GarbageCollected::make<ComputedExpressionBoolean>((bool)this->val);
+}
+
+GarbageCollected ComputedExpressionFloat::__string() const {
+  return GarbageCollected::make<ComputedExpressionString>(this->dump());
 }
 

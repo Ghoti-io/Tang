@@ -29,6 +29,7 @@ namespace Tang {
       virtual GarbageCollected __lessThan(const GarbageCollected & rhs) const override;
       virtual GarbageCollected __equal(const GarbageCollected & rhs) const override;
       virtual GarbageCollected __boolean() const override;
+      virtual GarbageCollected __string() const override;
 
     private:
       /**

@@ -191,6 +191,11 @@ string Program::dumpBytecode() const {
         ++pc;
         break;
       }
+      case Opcode::PRINT: {
+        out << "PRINT";
+        ++pc;
+        break;
+      }
       default: {}
     }
     out << endl;

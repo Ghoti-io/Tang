@@ -108,6 +108,7 @@
 %token CASTINT "int"
 %token CASTFLOAT "float"
 %token CASTBOOLEAN "boolean"
+%token PRINT "print"
 %token SEMICOLON ";"
 
 // Any %type declarations of non-terminals.
@@ -166,6 +167,7 @@ namespace Tang {
 #include "astNodeWhile.hpp"
 #include "astNodeDoWhile.hpp"
 #include "astNodeFor.hpp"
+#include "astNodePrint.hpp"
 
 // We must provide the yylex() function.
 // yylex() arguments are defined in the bison .y file.
@@ -388,6 +390,10 @@ expression
   | expression "as" "boolean"
     {
       $$ = std::make_shared<AstNodeCast>(AstNodeCast::Boolean, $1, @2);
+    }
+  | "print" "(" expression ")"
+    {
+      $$ = std::make_shared<AstNodePrint>(AstNodePrint::Default, $3, @1);
     }
   ;
 

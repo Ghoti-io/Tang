@@ -32,6 +32,7 @@ namespace Tang {
     CASTINTEGER, ///< Pop a val, typecast to int, push
     CASTFLOAT,   ///< Pop a val, typecast to float, push
     CASTBOOLEAN, ///< Pop a val, typecast to boolean, push
+    PRINT,    ///< Pop val, print(val), push error or NULL
   };
 }
 

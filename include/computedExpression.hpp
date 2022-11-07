@@ -182,6 +182,13 @@ namespace Tang {
        * @return The result of the the operation.
        */
       virtual GarbageCollected __boolean() const;
+
+      /**
+       * Perform a type cast to string.
+       *
+       * @return The result of the the operation.
+       */
+      virtual GarbageCollected __string() const;
   };
 }
 

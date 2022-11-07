@@ -65,3 +65,7 @@ GarbageCollected ComputedExpressionString::__boolean() const {
   return GarbageCollected::make<ComputedExpressionBoolean>((bool)this->val.length());
 }
 
+GarbageCollected ComputedExpressionString::__string() const {
+  return GarbageCollected::make<ComputedExpressionString>(this->val);
+}
+

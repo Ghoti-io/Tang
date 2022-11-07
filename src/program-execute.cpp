@@ -291,6 +291,24 @@ Program& Program::execute() {
         ++pc;
         break;
       }
+      case Opcode::PRINT: {
+        STACKCHECK(1);
+        auto expression = stack.back();
+        stack.pop_back();
+        // Try to convert the expression to a string.
+        auto result = expression->__string();
+        if (typeid(*result) != typeid(ComputedExpressionError)) {
+          this->out += result->dump();
+          // Push an empty value onto the stack.
+          stack.push_back(GarbageCollected::make<ComputedExpression>());
+        }
+        else {
+          // Should be an error, pass that back to the stack.
+          stack.push_back(result);
+        }
+        ++pc;
+        break;
+      }
       default: {
         // We should never reach this.
         stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Unrecognized Opcode."}));
