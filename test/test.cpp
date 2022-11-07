@@ -493,6 +493,60 @@ TEST(Expression, NotEqual) {
   EXPECT_EQ(*p15.execute().getResult(), true);
 }
 
+TEST(Expression, And) {
+  auto p1 = TangBase().compileScript("true && true");
+  EXPECT_EQ(*p1.execute().getResult(), true);
+  auto p2 = TangBase().compileScript("true && false");
+  EXPECT_EQ(*p2.execute().getResult(), false);
+  auto p3 = TangBase().compileScript("false && true");
+  EXPECT_EQ(*p3.execute().getResult(), false);
+  auto p4 = TangBase().compileScript("false && false");
+  EXPECT_EQ(*p4.execute().getResult(), false);
+  auto p5 = TangBase().compileScript("(a = 0) && (a = 2); a;");
+  EXPECT_EQ(*p5.execute().getResult(), 0);
+  auto p6 = TangBase().compileScript("(a = 1) && (a = 2); a;");
+  EXPECT_EQ(*p6.execute().getResult(), 2);
+  auto p7 = TangBase().compileScript("(a = 0.) && (a = 2.); a;");
+  EXPECT_EQ(*p7.execute().getResult(), 0.);
+  auto p8 = TangBase().compileScript("(a = 1.) && (a = 2.); a;");
+  EXPECT_EQ(*p8.execute().getResult(), 2.);
+  auto p9 = TangBase().compileScript("(a = \"\") && (a = \"foo\"); a;");
+  EXPECT_EQ(*p9.execute().getResult(), "");
+  auto p10 = TangBase().compileScript("(a = \"foo\") && (a = \"bar\"); a;");
+  EXPECT_EQ(*p10.execute().getResult(), "bar");
+  auto p11 = TangBase().compileScript("(a = null) && (a = 2.); a;");
+  EXPECT_EQ(*p11.execute().getResult(), nullptr);
+  auto p12 = TangBase().compileScript("(a = true) && (a = null); a;");
+  EXPECT_EQ(*p12.execute().getResult(), nullptr);
+}
+
+TEST(Expression, Or) {
+  auto p1 = TangBase().compileScript("true || true");
+  EXPECT_EQ(*p1.execute().getResult(), true);
+  auto p2 = TangBase().compileScript("true || false");
+  EXPECT_EQ(*p2.execute().getResult(), true);
+  auto p3 = TangBase().compileScript("false || true");
+  EXPECT_EQ(*p3.execute().getResult(), true);
+  auto p4 = TangBase().compileScript("false || false");
+  EXPECT_EQ(*p4.execute().getResult(), false);
+  auto p5 = TangBase().compileScript("(a = 0) || (a = 2); a;");
+  EXPECT_EQ(*p5.execute().getResult(), 2);
+  auto p6 = TangBase().compileScript("(a = 1) || (a = 2); a;");
+  EXPECT_EQ(*p6.execute().getResult(), 1);
+  auto p7 = TangBase().compileScript("(a = 0.) || (a = 2.); a;");
+  EXPECT_EQ(*p7.execute().getResult(), 2.);
+  auto p8 = TangBase().compileScript("(a = 1.) || (a = 2.); a;");
+  EXPECT_EQ(*p8.execute().getResult(), 1.);
+  auto p9 = TangBase().compileScript("(a = \"\") || (a = \"foo\"); a;");
+  EXPECT_EQ(*p9.execute().getResult(), "foo");
+  auto p10 = TangBase().compileScript("(a = \"foo\") || (a = \"bar\"); a;");
+  EXPECT_EQ(*p10.execute().getResult(), "foo");
+  auto p11 = TangBase().compileScript("(a = null) || (a = 2.); a;");
+  EXPECT_EQ(*p11.execute().getResult(), 2.);
+  auto p12 = TangBase().compileScript("(a = true) || (a = null); a;");
+  EXPECT_EQ(*p12.execute().getResult(), true);
+}
+
 TEST(CodeBlock, Statements) {
   auto p1 = TangBase().compileScript("2;");
   EXPECT_EQ(*p1.execute().getResult(), 2);

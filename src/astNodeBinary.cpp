@@ -25,6 +25,8 @@ string AstNodeBinary::dump(string indent) const {
     "Greater Than or Equal",
     "Equal",
     "Not Equal",
+    "And",
+    "Or",
   };
 
   return indent + "Binary (" + description[this->op] + "):\n"
@@ -40,8 +42,16 @@ void AstNodeBinary::collectIdentifiers(Program & program) const {
 }
 
 void AstNodeBinary::compile(Tang::Program & program) const {
+  // All binary operators require that the lhs be compiled first.
   this->lhs->compile(program);
-  this->rhs->compile(program);
+
+  // And and Or require short-circuit evaluation, so don't compile rhs yet.
+  // Everything else needs the rhs compiled.
+  if (this->op != And && this->op != Or) {
+    this->rhs->compile(program);
+  }
+
+  // This is a standard binary operator.
   switch (this->op) {
     case Add: {
       program.addBytecode((uint64_t)Opcode::ADD);
@@ -85,6 +95,34 @@ void AstNodeBinary::compile(Tang::Program & program) const {
     }
     case NotEqual : {
       program.addBytecode((uint64_t)Opcode::NEQ);
+      break;
+    }
+    case And : {
+      // Evaluate the lhs.
+      auto conditionFalseJump = program.getBytecode().size();
+      program.addBytecode((uint64_t)Opcode::JMPF);
+      program.addBytecode(0);
+
+      // Remove lhs from stack, evaluate rhs.
+      program.addBytecode((uint64_t)Opcode::POP);
+      this->rhs->compile(program);
+
+      // Set the lhs JMPF target
+      program.setJumpTarget(conditionFalseJump, program.getBytecode().size());
+      break;
+    }
+    case Or : {
+      // Evaluate the lhs.
+      auto conditionTrueJump = program.getBytecode().size();
+      program.addBytecode((uint64_t)Opcode::JMPT);
+      program.addBytecode(0);
+
+      // Remove lhs from stack, evaluate rhs.
+      program.addBytecode((uint64_t)Opcode::POP);
+      this->rhs->compile(program);
+
+      // Set the lhs JMPT target
+      program.setJumpTarget(conditionTrueJump, program.getBytecode().size());
       break;
     }
   }

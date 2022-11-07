@@ -30,6 +30,10 @@ bool ComputedExpressionInteger::is_equal(const double & val) const {
   return val == (double)this->val;
 }
 
+bool ComputedExpressionInteger::is_equal(const bool & val) const {
+  return val == (bool)this->val;
+}
+
 GarbageCollected ComputedExpressionInteger::__add(const GarbageCollected & rhs) const {
   if (typeid(*rhs) == typeid(ComputedExpressionInteger)) {
     auto & rhsConv = static_cast<ComputedExpressionInteger&>(*rhs);

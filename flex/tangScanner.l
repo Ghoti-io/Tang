@@ -203,6 +203,12 @@ using namespace std;
   != {
     return Tang::TangParser::make_NOTEQUAL(Tang::location(location));
   }
+  && {
+    return Tang::TangParser::make_AND(Tang::location(location));
+  }
+  \|\| {
+    return Tang::TangParser::make_OR(Tang::location(location));
+  }
   as {
     return Tang::TangParser::make_AS(Tang::location(location));
   }

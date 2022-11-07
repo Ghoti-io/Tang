@@ -23,6 +23,7 @@ namespace Tang {
 
       virtual std::string dump() const override;
       GarbageCollected makeCopy() const override;
+      virtual bool is_equal(const bool & val) const override;
       virtual bool is_equal(const string & val) const override;
       virtual GarbageCollected __add(const GarbageCollected & rhs) const override;
       virtual GarbageCollected __not() const override;

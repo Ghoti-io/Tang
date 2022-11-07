@@ -96,6 +96,8 @@
 %token GREATERTHANEQUAL ">="
 %token EQUALCOMPARE "=="
 %token NOTEQUAL "!="
+%token AND "&&"
+%token OR "||"
 %token LBRACE "{"
 %token RBRACE "}"
 %token IF "if"
@@ -374,6 +376,14 @@ expression
   | expression "!=" expression
     {
       $$ = std::make_shared<AstNodeBinary>(AstNodeBinary::NotEqual, $1, $3, @2);
+    }
+  | expression "&&" expression
+    {
+      $$ = std::make_shared<AstNodeBinary>(AstNodeBinary::And, $1, $3, @2);
+    }
+  | expression "||" expression
+    {
+      $$ = std::make_shared<AstNodeBinary>(AstNodeBinary::Or, $1, $3, @2);
     }
   | "(" expression ")"
     {

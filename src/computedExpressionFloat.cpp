@@ -30,6 +30,10 @@ bool ComputedExpressionFloat::is_equal(const double & val) const {
   return val == this->val;
 }
 
+bool ComputedExpressionFloat::is_equal(const bool & val) const {
+  return val == (bool)this->val;
+}
+
 GarbageCollected ComputedExpressionFloat::__add(const GarbageCollected & rhs) const {
   if (typeid(*rhs) == typeid(ComputedExpressionFloat)) {
     auto & rhsConv = static_cast<ComputedExpressionFloat&>(*rhs);

@@ -20,6 +20,10 @@ GarbageCollected ComputedExpressionString::makeCopy() const {
   return GarbageCollected::make<ComputedExpressionString>(this->val);
 }
 
+bool ComputedExpressionString::is_equal(const bool & val) const {
+  return val == (bool)this->val.length();
+}
+
 bool ComputedExpressionString::is_equal(const string & val) const {
   return val == this->val;
 }

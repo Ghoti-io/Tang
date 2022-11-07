@@ -26,6 +26,8 @@ namespace Tang {
       GreaterThanEqual, ///< Indicates lhs >= rhs
       Equal,            ///< Indicates lhs == rhs
       NotEqual,         ///< Indicates lhs != rhs
+      And,              ///< Indicates lhs && rhs with short-circuit evaluation
+      Or,               ///< Indicates lhs || rhs with short-circuit evaluation
     };
 
     /**

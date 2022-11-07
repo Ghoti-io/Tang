@@ -59,9 +59,21 @@ string Program::dumpBytecode() const {
         pc += 2;
         break;
       }
+      case Opcode::JMPF: {
+        DUMPPROGRAMCHECK(1);
+        out << "JMPF" << this->bytecode[pc + 1];
+        pc += 2;
+        break;
+      }
       case Opcode::JMPF_POP: {
         DUMPPROGRAMCHECK(1);
         out << "JMPF_POP" << this->bytecode[pc + 1];
+        pc += 2;
+        break;
+      }
+      case Opcode::JMPT: {
+        DUMPPROGRAMCHECK(1);
+        out << "JMPT" << this->bytecode[pc + 1];
         pc += 2;
         break;
       }

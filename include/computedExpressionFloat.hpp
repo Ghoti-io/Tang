@@ -25,6 +25,7 @@ namespace Tang {
       GarbageCollected makeCopy() const override;
       virtual bool is_equal(const int & val) const override;
       virtual bool is_equal(const double & val) const override;
+      virtual bool is_equal(const bool & val) const override;
       virtual GarbageCollected __add(const GarbageCollected & rhs) const override;
       virtual GarbageCollected __subtract(const GarbageCollected & rhs) const override;
       virtual GarbageCollected __multiply(const GarbageCollected & rhs) const override;

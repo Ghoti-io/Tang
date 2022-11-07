@@ -34,7 +34,9 @@ bool ComputedExpression::is_equal([[maybe_unused]] const double & val) const {
 }
 
 bool ComputedExpression::is_equal([[maybe_unused]] const bool & val) const {
-  return false;
+  return typeid(*this) == typeid(ComputedExpression)
+    ? val == false
+    : false;
 }
 
 bool ComputedExpression::is_equal([[maybe_unused]] const string & val) const {
