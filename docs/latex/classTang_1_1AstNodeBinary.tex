@@ -11,8 +11,7 @@ An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a binary e
 
 
 
-Inheritance diagram for Tang\+::Ast\+Node\+Binary\+:
-\nopagebreak
+Inheritance diagram for Tang\+::Ast\+Node\+Binary\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for Tang\+::Ast\+Node\+Binary\+:
 \end{figure}
 
 
-Collaboration diagram for Tang\+::Ast\+Node\+Binary\+:
-\nopagebreak
+Collaboration diagram for Tang\+::Ast\+Node\+Binary\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -46,8 +44,11 @@ enum \mbox{\hyperlink{classTang_1_1AstNodeBinary_a8fa249142e89a3ade59f2c7a98eb74
 \mbox{\hyperlink{classTang_1_1AstNodeBinary_a8fa249142e89a3ade59f2c7a98eb74f9a6721b31d02d8790473f5d1c5688df43d}{Greater\+Than\+Equal}}
 , \mbox{\hyperlink{classTang_1_1AstNodeBinary_a8fa249142e89a3ade59f2c7a98eb74f9a8c261fcdff94933173014373dee231de}{Equal}}
 , \mbox{\hyperlink{classTang_1_1AstNodeBinary_a8fa249142e89a3ade59f2c7a98eb74f9af78c571c30eec0c4ab36248852c59471}{Not\+Equal}}
+, \mbox{\hyperlink{classTang_1_1AstNodeBinary_a8fa249142e89a3ade59f2c7a98eb74f9af2d352022a9f92608a9c92b9f44c13d3}{And}}
+, \newline
+\mbox{\hyperlink{classTang_1_1AstNodeBinary_a8fa249142e89a3ade59f2c7a98eb74f9a33a8dd4d74fbd7e16aebe58154fe4ccd}{Or}}
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Indicates the type of binary expression that this node represents. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -72,6 +73,10 @@ An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a binary e
 \index{Operation@{Operation}!Tang::AstNodeBinary@{Tang::AstNodeBinary}}
 \doxysubsubsection{\texorpdfstring{Operation}{Operation}}
 {\footnotesize\ttfamily enum \mbox{\hyperlink{classTang_1_1AstNodeBinary_a8fa249142e89a3ade59f2c7a98eb74f9}{Tang\+::\+Ast\+Node\+Binary\+::\+Operation}}}
+
+
+
+Indicates the type of binary expression that this node represents. 
 
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{Add@{Add}!Tang::AstNodeBinary@{Tang::AstNodeBinary}}\index{Tang::AstNodeBinary@{Tang::AstNodeBinary}!Add@{Add}}}\mbox{\Hypertarget{classTang_1_1AstNodeBinary_a8fa249142e89a3ade59f2c7a98eb74f9a1dd302421fe2ba4eaa8595459dc24a84}\label{classTang_1_1AstNodeBinary_a8fa249142e89a3ade59f2c7a98eb74f9a1dd302421fe2ba4eaa8595459dc24a84}} 
@@ -116,6 +121,14 @@ Equal&Indicates lhs == rhs. \\
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{NotEqual@{NotEqual}!Tang::AstNodeBinary@{Tang::AstNodeBinary}}\index{Tang::AstNodeBinary@{Tang::AstNodeBinary}!NotEqual@{NotEqual}}}\mbox{\Hypertarget{classTang_1_1AstNodeBinary_a8fa249142e89a3ade59f2c7a98eb74f9af78c571c30eec0c4ab36248852c59471}\label{classTang_1_1AstNodeBinary_a8fa249142e89a3ade59f2c7a98eb74f9af78c571c30eec0c4ab36248852c59471}} 
 Not\+Equal&Indicates lhs != rhs. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{And@{And}!Tang::AstNodeBinary@{Tang::AstNodeBinary}}\index{Tang::AstNodeBinary@{Tang::AstNodeBinary}!And@{And}}}\mbox{\Hypertarget{classTang_1_1AstNodeBinary_a8fa249142e89a3ade59f2c7a98eb74f9af2d352022a9f92608a9c92b9f44c13d3}\label{classTang_1_1AstNodeBinary_a8fa249142e89a3ade59f2c7a98eb74f9af2d352022a9f92608a9c92b9f44c13d3}} 
+And&Indicates lhs \&\& rhs with short-\/circuit evaluation. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Or@{Or}!Tang::AstNodeBinary@{Tang::AstNodeBinary}}\index{Tang::AstNodeBinary@{Tang::AstNodeBinary}!Or@{Or}}}\mbox{\Hypertarget{classTang_1_1AstNodeBinary_a8fa249142e89a3ade59f2c7a98eb74f9a33a8dd4d74fbd7e16aebe58154fe4ccd}\label{classTang_1_1AstNodeBinary_a8fa249142e89a3ade59f2c7a98eb74f9a33a8dd4d74fbd7e16aebe58154fe4ccd}} 
+Or&Indicates lhs $\vert$$\vert$ rhs with short-\/circuit evaluation. \\
 \hline
 
 \end{DoxyEnumFields}

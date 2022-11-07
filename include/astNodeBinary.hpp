@@ -14,6 +14,9 @@ namespace Tang {
    */
   class AstNodeBinary: public AstNode {
   public:
+    /**
+     * Indicates the type of binary expression that this node represents.
+     */
     enum Operation {
       Add,              ///< Indicates lhs + rhs
       Subtract,         ///< Indicates lhs - rhs

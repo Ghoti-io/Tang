@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['script_461',['Script',['../classTang_1_1Program.html#ad99e214562094e21f38b6a453163041ba38b647d35ef85ffa1affec5c7fcb7ac1',1,'Tang::Program']]],
-  ['string_462',['STRING',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a63b588d5559f64f89a416e656880b949',1,'Tang']]],
-  ['subtract_463',['Subtract',['../classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9aa99c8c7c2de680bb7cb914e59a82c3e9',1,'Tang::AstNodeBinary']]],
-  ['subtract_464',['SUBTRACT',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a23ebcc4776b613af25dfbe7c8ce4813e',1,'Tang']]]
+  ['peek_465',['PEEK',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a422982ae154d01bf45c66c601981e6c2',1,'Tang']]],
+  ['poke_466',['POKE',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af0e166c6fa2443a133f77d263161b11f',1,'Tang']]],
+  ['pop_467',['POP',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04aefdb39a4c7286afcecf0e8a7435fce6a',1,'Tang']]],
+  ['print_468',['PRINT',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af96eee4e48ee90430f17fb3a8388507b',1,'Tang']]]
 ];

@@ -131,8 +131,12 @@ Public Types</h2></td></tr>
 &#160;&#160;<a class="el" href="classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9a6721b31d02d8790473f5d1c5688df43d">GreaterThanEqual</a>
 , <a class="el" href="classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9a8c261fcdff94933173014373dee231de">Equal</a>
 , <a class="el" href="classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9af78c571c30eec0c4ab36248852c59471">NotEqual</a>
+, <a class="el" href="classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9af2d352022a9f92608a9c92b9f44c13d3">And</a>
+, <br />
+&#160;&#160;<a class="el" href="classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9a33a8dd4d74fbd7e16aebe58154fe4ccd">Or</a>
 <br />
  }</td></tr>
+<tr class="memdesc:a8fa249142e89a3ade59f2c7a98eb74f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates the type of binary expression that this node represents.  <a href="classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9">More...</a><br /></td></tr>
 <tr class="separator:a8fa249142e89a3ade59f2c7a98eb74f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -166,6 +170,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Indicates the type of binary expression that this node represents. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a8fa249142e89a3ade59f2c7a98eb74f9a1dd302421fe2ba4eaa8595459dc24a84"></a>Add&#160;</td><td class="fielddoc"><p>Indicates lhs + rhs. </p>
 </td></tr>
@@ -188,6 +194,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr><td class="fieldname"><a id="a8fa249142e89a3ade59f2c7a98eb74f9a8c261fcdff94933173014373dee231de"></a>Equal&#160;</td><td class="fielddoc"><p>Indicates lhs == rhs. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a8fa249142e89a3ade59f2c7a98eb74f9af78c571c30eec0c4ab36248852c59471"></a>NotEqual&#160;</td><td class="fielddoc"><p>Indicates lhs != rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8fa249142e89a3ade59f2c7a98eb74f9af2d352022a9f92608a9c92b9f44c13d3"></a>And&#160;</td><td class="fielddoc"><p>Indicates lhs &amp;&amp; rhs with short-circuit evaluation. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8fa249142e89a3ade59f2c7a98eb74f9a33a8dd4d74fbd7e16aebe58154fe4ccd"></a>Or&#160;</td><td class="fielddoc"><p>Indicates lhs || rhs with short-circuit evaluation. </p>
 </td></tr>
 </table>
 
@@ -235,7 +245,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <p>The constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">op</td><td>The <a class="el" href="classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9">Tang::AstNodeBinary::Operation</a> to perform. </td></tr>
+    <tr><td class="paramname">op</td><td>The <a class="el" href="classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9" title="Indicates the type of binary expression that this node represents.">Tang::AstNodeBinary::Operation</a> to perform. </td></tr>
     <tr><td class="paramname">lhs</td><td>The left hand side expression. </td></tr>
     <tr><td class="paramname">rhs</td><td>The right hand side expression. </td></tr>
     <tr><td class="paramname">location</td><td>The location associated with the expression. </td></tr>

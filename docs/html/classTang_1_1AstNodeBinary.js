@@ -11,7 +11,9 @@ var classTang_1_1AstNodeBinary =
       [ "GreaterThan", "classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9a8d88a01a3ee03786d73de4aefe58425b", null ],
       [ "GreaterThanEqual", "classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9a6721b31d02d8790473f5d1c5688df43d", null ],
       [ "Equal", "classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9a8c261fcdff94933173014373dee231de", null ],
-      [ "NotEqual", "classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9af78c571c30eec0c4ab36248852c59471", null ]
+      [ "NotEqual", "classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9af78c571c30eec0c4ab36248852c59471", null ],
+      [ "And", "classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9af2d352022a9f92608a9c92b9f44c13d3", null ],
+      [ "Or", "classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9a33a8dd4d74fbd7e16aebe58154fe4ccd", null ]
     ] ],
     [ "AstNodeBinary", "classTang_1_1AstNodeBinary.html#adedfe569adbdc47097f8129b95c000dd", null ],
     [ "collectIdentifiers", "classTang_1_1AstNodeBinary.html#a50355e4cc496ba08d0e048dd984397cc", null ],

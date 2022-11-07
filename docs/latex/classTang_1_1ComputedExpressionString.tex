@@ -11,8 +11,7 @@ Represents a String that is the result of a computation.
 
 
 
-Inheritance diagram for Tang\+::Computed\+Expression\+String\+:
-\nopagebreak
+Inheritance diagram for Tang\+::Computed\+Expression\+String\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for Tang\+::Computed\+Expression\+String\+:
 \end{figure}
 
 
-Collaboration diagram for Tang\+::Computed\+Expression\+String\+:
-\nopagebreak
+Collaboration diagram for Tang\+::Computed\+Expression\+String\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -38,6 +36,8 @@ virtual std\+::string \mbox{\hyperlink{classTang_1_1ComputedExpressionString_a97
 \begin{DoxyCompactList}\small\item\em Output the contents of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} as a string. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionString_aa424ab2f196af728a8810fc7ed188f7c}{make\+Copy}} () const override
 \begin{DoxyCompactList}\small\item\em Make a copy of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} (recursively, if appropriate). \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpressionString_a30aa173d92fe72fbe171a3f2808a8773}{is\+\_\+equal}} (const bool \&val) const override
+\begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpressionString_a91b777a2aa5bc6748cdceca5cbabf6c5}{is\+\_\+equal}} (const string \&val) const override
 \begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionString_ae2b11008518d5e5bb1ab842dea1eb435}{\+\_\+\+\_\+add}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const override
@@ -55,8 +55,6 @@ virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mb
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a4b61cc4d447993bfc96dc37bfd552cef}{is\+\_\+equal}} (const int \&val) const
 \begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_aa81900aeb157fdb024f1bb0f316b4006}{is\+\_\+equal}} (const double \&val) const
-\begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a907104a9d090d21e9bcc487b696738c4}{is\+\_\+equal}} (const bool \&val) const
 \begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a5ce6d4bc0128f6aadf72c2f63a70275a}{is\+\_\+equal}} (const \mbox{\hyperlink{classTang_1_1Error}{Error}} \&val) const
 \begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
@@ -373,11 +371,11 @@ A string representation of the computed expression.
 
 Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_ab5df8f689f9fe515a2299d8cef332f4c}{Tang\+::\+Computed\+Expression}}.
 
-\mbox{\Hypertarget{classTang_1_1ComputedExpression_a907104a9d090d21e9bcc487b696738c4}\label{classTang_1_1ComputedExpression_a907104a9d090d21e9bcc487b696738c4}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionString_a30aa173d92fe72fbe171a3f2808a8773}\label{classTang_1_1ComputedExpressionString_a30aa173d92fe72fbe171a3f2808a8773}} 
 \index{Tang::ComputedExpressionString@{Tang::ComputedExpressionString}!is\_equal@{is\_equal}}
 \index{is\_equal@{is\_equal}!Tang::ComputedExpressionString@{Tang::ComputedExpressionString}}
 \doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
-{\footnotesize\ttfamily virtual bool Tang\+::\+Computed\+Expression\+::is\+\_\+equal (\begin{DoxyParamCaption}\item[{const bool \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+{\footnotesize\ttfamily bool Computed\+Expression\+String\+::is\+\_\+equal (\begin{DoxyParamCaption}\item[{const bool \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -393,7 +391,7 @@ True if equal, false if not.
 \end{DoxyReturn}
 
 
-Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionBoolean_aaf17b861d5a8ab290ff01cc2fe8acf55}{Tang\+::\+Computed\+Expression\+Boolean}}.
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a907104a9d090d21e9bcc487b696738c4}{Tang\+::\+Computed\+Expression}}.
 
 \mbox{\Hypertarget{classTang_1_1ComputedExpression_aa81900aeb157fdb024f1bb0f316b4006}\label{classTang_1_1ComputedExpression_aa81900aeb157fdb024f1bb0f316b4006}} 
 \index{Tang::ComputedExpressionString@{Tang::ComputedExpressionString}!is\_equal@{is\_equal}}
