@@ -31,7 +31,6 @@
 //
 //
 // TODO What's next:
-// * print() basic
 // * string literal on stack
 // * function declaration (ast) and calling
 // * continue and break
@@ -43,6 +42,7 @@
 //   * percent encode
 //   * percent decode
 // * Convert ComputedExpressionString to use TangString
+// * ternary operator
 // * print!()
 // * print%()
 // * print<>()
