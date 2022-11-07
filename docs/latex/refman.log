@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.10.15)  5 NOV 2022 21:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.10.15)  6 NOV 2022 18:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -768,6 +768,10 @@ LaTeX Warning: Label `classTang_1_1ComputedExpression_a8e779d014cbb877f078d61a2
 ff91603d' multiply defined.
 
 
+LaTeX Warning: Label `classTang_1_1ComputedExpression_a14a57cffe9fb44b0d5f34d06
+afd0db1b' multiply defined.
+
+
 LaTeX Warning: Label `classTang_1_1ComputedExpression_ab0d79debcd475a5063e574c1
 0f1715ff' multiply defined.
 
@@ -1098,12 +1102,12 @@ Chapter 5.
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNode__inherit__graph.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNode__inherit__graph.pdf, id=2843, 333.245pt x 596.2275pt>
+<classTang_1_1AstNode__inherit__graph.pdf, id=2947, 333.245pt x 634.37pt>
 File: classTang_1_1AstNode__inherit__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNode__inherit__graph.pdf>
 Package pdftex.def Info: classTang_1_1AstNode__inherit__graph.pdf  used on inpu
 t line 19.
-(pdftex.def)             Requested size: 307.42303pt x 550.0pt.
+(pdftex.def)             Requested size: 288.94449pt x 550.0pt.
  [11]
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 10.79993pt on input line 22.
@@ -1125,7 +1129,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 50.
 
-Underfull \hbox (badness 1946) in paragraph at lines 83--84
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 []\T1/phv/m/n/10 Reimplemented in [], [], [], [],
  []
 
@@ -1135,7 +1139,7 @@ _graph.pdf
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeAssign__inherit__graph.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeAssign__inherit__graph.pdf, id=2911, 199.74625pt x 156.585
+<classTang_1_1AstNodeAssign__inherit__graph.pdf, id=3015, 199.74625pt x 156.585
 pt>
 File: classTang_1_1AstNodeAssign__inherit__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeAssign__inherit__graph.pdf>
@@ -1147,20 +1151,20 @@ n input line 19.
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeAssign__coll__graph.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeAssign__coll__graph.pdf, id=2919, 199.74625pt x 156.585pt>
+<classTang_1_1AstNodeAssign__coll__graph.pdf, id=3023, 199.74625pt x 156.585pt>
 
 File: classTang_1_1AstNodeAssign__coll__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeAssign__coll__graph.pdf>
 Package pdftex.def Info: classTang_1_1AstNodeAssign__coll__graph.pdf  used on i
 nput line 29.
 (pdftex.def)             Requested size: 199.0pt x 156.00879pt.
- [14]) (./classTang_1_1AstNodeBinary.tex [15] <./classTang_1_1AstNodeBinary__in
+ [14] [15]) (./classTang_1_1AstNodeBinary.tex <./classTang_1_1AstNodeBinary__in
 herit__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeBinary__inherit__graph.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeBinary__inherit__graph.pdf, id=2977, 198.7425pt x 156.585p
+<classTang_1_1AstNodeBinary__inherit__graph.pdf, id=3082, 198.7425pt x 156.585p
 t>
 File: classTang_1_1AstNodeBinary__inherit__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeBinary__inherit__graph.pdf>
@@ -1172,7 +1176,7 @@ n input line 19.
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeBinary__coll__graph.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeBinary__coll__graph.pdf, id=2985, 198.7425pt x 156.585pt>
+<classTang_1_1AstNodeBinary__coll__graph.pdf, id=3090, 198.7425pt x 156.585pt>
 File: classTang_1_1AstNodeBinary__coll__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeBinary__coll__graph.pdf>
 Package pdftex.def Info: classTang_1_1AstNodeBinary__coll__graph.pdf  used on i
@@ -1191,76 +1195,76 @@ it__graph.pdf
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeBlock__inherit__graph.pdf)
 : PDF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeBlock__inherit__graph.pdf, id=3066, 193.72375pt x 156.585p
+<classTang_1_1AstNodeBlock__inherit__graph.pdf, id=3171, 193.72375pt x 156.585p
 t>
 File: classTang_1_1AstNodeBlock__inherit__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeBlock__inherit__graph.pdf>
 Package pdftex.def Info: classTang_1_1AstNodeBlock__inherit__graph.pdf  used on
  input line 19.
 (pdftex.def)             Requested size: 193.0pt x 156.00162pt.
- <./classTang_1_1AstNodeBlock__coll__graph.pdf
+ [18] <./classTang_1_1AstNodeBlock__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeBlock__coll__graph.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeBlock__coll__graph.pdf, id=3074, 193.72375pt x 156.585pt>
+<classTang_1_1AstNodeBlock__coll__graph.pdf, id=3185, 193.72375pt x 156.585pt>
 File: classTang_1_1AstNodeBlock__coll__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeBlock__coll__graph.pdf>
 Package pdftex.def Info: classTang_1_1AstNodeBlock__coll__graph.pdf  used on in
 put line 29.
 (pdftex.def)             Requested size: 193.0pt x 156.00162pt.
- [18] [19]) (./classTang_1_1AstNodeBoolean.tex <./classTang_1_1AstNodeBoolean__
-inherit__graph.pdf>
-<classTang_1_1AstNodeBoolean__inherit__graph.pdf, id=3122, 206.7725pt x 156.585
+ [19]) (./classTang_1_1AstNodeBoolean.tex <./classTang_1_1AstNodeBoolean__inher
+it__graph.pdf>
+<classTang_1_1AstNodeBoolean__inherit__graph.pdf, id=3225, 206.7725pt x 156.585
 pt>
 File: classTang_1_1AstNodeBoolean__inherit__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeBoolean__inherit__graph.pdf>
 Package pdftex.def Info: classTang_1_1AstNodeBoolean__inherit__graph.pdf  used 
 on input line 19.
 (pdftex.def)             Requested size: 206.0pt x 156.004pt.
- <./classTang_1_1AstNodeBoolean__coll__graph.pdf
+ [20] <./classTang_1_1AstNodeBoolean__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeBoolean__coll__graph.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeBoolean__coll__graph.pdf, id=3130, 206.7725pt x 156.585pt>
+<classTang_1_1AstNodeBoolean__coll__graph.pdf, id=3239, 206.7725pt x 156.585pt>
 
 File: classTang_1_1AstNodeBoolean__coll__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeBoolean__coll__graph.pdf>
 Package pdftex.def Info: classTang_1_1AstNodeBoolean__coll__graph.pdf  used on 
 input line 29.
 (pdftex.def)             Requested size: 206.0pt x 156.004pt.
- [20]pdfTeX warning (ext4): destination with the same identifier (name{classTan
+ [21]pdfTeX warning (ext4): destination with the same identifier (name{classTan
 g_1_1AstNode_a804f9247f774f9444ee7e8db7e7d3e4e}) has been already used, duplica
 te ignored
 <to be read again> 
                    \relax 
 l.71 ...stNode_a804f9247f774f9444ee7e8db7e7d3e4e}}
-                                                   [21]
-Underfull \hbox (badness 1946) in paragraph at lines 88--89
+                                                  
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 []\T1/phv/m/n/10 Reimplemented in [], [], [], [],
  []
 
 ) (./classTang_1_1AstNodeCast.tex <./classTang_1_1AstNodeCast__inherit__graph.p
 df>
-<classTang_1_1AstNodeCast__inherit__graph.pdf, id=3183, 188.705pt x 156.585pt>
+<classTang_1_1AstNodeCast__inherit__graph.pdf, id=3287, 188.705pt x 156.585pt>
 File: classTang_1_1AstNodeCast__inherit__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeCast__inherit__graph.pdf>
 Package pdftex.def Info: classTang_1_1AstNodeCast__inherit__graph.pdf  used on 
 input line 19.
 (pdftex.def)             Requested size: 188.0pt x 155.99922pt.
- <./classTang_1_1AstNodeCast__coll__graph.pdf
+ [22] <./classTang_1_1AstNodeCast__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeCast__coll__graph.pdf): PD
 F inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeCast__coll__graph.pdf, id=3191, 188.705pt x 156.585pt>
+<classTang_1_1AstNodeCast__coll__graph.pdf, id=3301, 188.705pt x 156.585pt>
 File: classTang_1_1AstNodeCast__coll__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeCast__coll__graph.pdf>
 Package pdftex.def Info: classTang_1_1AstNodeCast__coll__graph.pdf  used on inp
 ut line 29.
 (pdftex.def)             Requested size: 188.0pt x 155.99922pt.
- [22] [23]
+ [23]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 90.
 pdfTeX warning (ext4): destination with the same identifier (name{classTang_1_1
@@ -1269,18 +1273,18 @@ nored
 <to be read again> 
                    \relax 
 l.108 ...tNode_a804f9247f774f9444ee7e8db7e7d3e4e}}
-                                                  
-Underfull \hbox (badness 1946) in paragraph at lines 125--126
+                                                   [24]
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 []\T1/phv/m/n/10 Reimplemented in [], [], [], [],
  []
 
-) (./classTang_1_1AstNodeDoWhile.tex [24] <./classTang_1_1AstNodeDoWhile__inher
-it__graph.pdf
+) (./classTang_1_1AstNodeDoWhile.tex <./classTang_1_1AstNodeDoWhile__inherit__g
+raph.pdf
 
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeDoWhile__inherit__graph.pd
 f): PDF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeDoWhile__inherit__graph.pdf, id=3275, 208.78pt x 156.585pt
+<classTang_1_1AstNodeDoWhile__inherit__graph.pdf, id=3379, 208.78pt x 156.585pt
 >
 File: classTang_1_1AstNodeDoWhile__inherit__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeDoWhile__inherit__graph.pdf>
@@ -1292,19 +1296,19 @@ on input line 19.
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeDoWhile__coll__graph.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeDoWhile__coll__graph.pdf, id=3283, 208.78pt x 156.585pt>
+<classTang_1_1AstNodeDoWhile__coll__graph.pdf, id=3387, 208.78pt x 156.585pt>
 File: classTang_1_1AstNodeDoWhile__coll__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeDoWhile__coll__graph.pdf>
 Package pdftex.def Info: classTang_1_1AstNodeDoWhile__coll__graph.pdf  used on 
 input line 29.
 (pdftex.def)             Requested size: 208.0pt x 156.00879pt.
- [25]) (./classTang_1_1AstNodeFloat.tex [26] <./classTang_1_1AstNodeFloat__inhe
+ [25] [26]) (./classTang_1_1AstNodeFloat.tex <./classTang_1_1AstNodeFloat__inhe
 rit__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeFloat__inherit__graph.pdf)
 : PDF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeFloat__inherit__graph.pdf, id=3332, 191.71625pt x 156.585p
+<classTang_1_1AstNodeFloat__inherit__graph.pdf, id=3435, 191.71625pt x 156.585p
 t>
 File: classTang_1_1AstNodeFloat__inherit__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeFloat__inherit__graph.pdf>
@@ -1316,7 +1320,7 @@ Package pdftex.def Info: classTang_1_1AstNodeFloat__inherit__graph.pdf  used on
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeFloat__coll__graph.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeFloat__coll__graph.pdf, id=3340, 191.71625pt x 156.585pt>
+<classTang_1_1AstNodeFloat__coll__graph.pdf, id=3443, 191.71625pt x 156.585pt>
 File: classTang_1_1AstNodeFloat__coll__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeFloat__coll__graph.pdf>
 Package pdftex.def Info: classTang_1_1AstNodeFloat__coll__graph.pdf  used on in
@@ -1328,18 +1332,18 @@ te ignored
 <to be read again> 
                    \relax 
 l.73 ...stNode_a804f9247f774f9444ee7e8db7e7d3e4e}}
-                                                  
-Underfull \hbox (badness 1946) in paragraph at lines 90--91
+                                                   [28]
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
 []\T1/phv/m/n/10 Reimplemented in [], [], [], [],
  []
 
-) (./classTang_1_1AstNodeFor.tex [28] <./classTang_1_1AstNodeFor__inherit__grap
-h.pdf
+) (./classTang_1_1AstNodeFor.tex <./classTang_1_1AstNodeFor__inherit__graph.pdf
+
 
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeFor__inherit__graph.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeFor__inherit__graph.pdf, id=3392, 181.67876pt x 156.585pt>
+<classTang_1_1AstNodeFor__inherit__graph.pdf, id=3497, 181.67876pt x 156.585pt>
 
 File: classTang_1_1AstNodeFor__inherit__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeFor__inherit__graph.pdf>
@@ -1351,19 +1355,19 @@ nput line 19.
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeFor__coll__graph.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeFor__coll__graph.pdf, id=3400, 181.67876pt x 156.585pt>
+<classTang_1_1AstNodeFor__coll__graph.pdf, id=3505, 181.67876pt x 156.585pt>
 File: classTang_1_1AstNodeFor__coll__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeFor__coll__graph.pdf>
 Package pdftex.def Info: classTang_1_1AstNodeFor__coll__graph.pdf  used on inpu
 t line 29.
 (pdftex.def)             Requested size: 181.0pt x 156.004pt.
- [29]) (./classTang_1_1AstNodeIdentifier.tex [30] <./classTang_1_1AstNodeIdenti
+ [29] [30]) (./classTang_1_1AstNodeIdentifier.tex <./classTang_1_1AstNodeIdenti
 fier__inherit__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeIdentifier__inherit__graph
 .pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeIdentifier__inherit__graph.pdf, id=3454, 210.7875pt x 156.
+<classTang_1_1AstNodeIdentifier__inherit__graph.pdf, id=3558, 210.7875pt x 156.
 585pt>
 File: classTang_1_1AstNodeIdentifier__inherit__graph.pdf Graphic file (type pdf
 )
@@ -1376,7 +1380,7 @@ ed on input line 19.
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeIdentifier__coll__graph.pd
 f): PDF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeIdentifier__coll__graph.pdf, id=3469, 276.03125pt x 235.88
+<classTang_1_1AstNodeIdentifier__coll__graph.pdf, id=3573, 276.03125pt x 235.88
 126pt>
 File: classTang_1_1AstNodeIdentifier__coll__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeIdentifier__coll__graph.pdf>
@@ -1389,7 +1393,7 @@ herit__graph.pdf
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeIfElse__inherit__graph.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeIfElse__inherit__graph.pdf, id=3524, 193.72375pt x 156.585
+<classTang_1_1AstNodeIfElse__inherit__graph.pdf, id=3629, 193.72375pt x 156.585
 pt>
 File: classTang_1_1AstNodeIfElse__inherit__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeIfElse__inherit__graph.pdf>
@@ -1401,7 +1405,7 @@ n input line 19.
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeIfElse__coll__graph.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeIfElse__coll__graph.pdf, id=3532, 193.72375pt x 156.585pt>
+<classTang_1_1AstNodeIfElse__coll__graph.pdf, id=3637, 193.72375pt x 156.585pt>
 
 File: classTang_1_1AstNodeIfElse__coll__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeIfElse__coll__graph.pdf>
@@ -1418,13 +1422,13 @@ k, shared[]_[]ptr$\OML/cmm/m/it/10 <$
 [33]
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 7.19995pt on input line 56.
- [34]) (./classTang_1_1AstNodeInteger.tex <./classTang_1_1AstNodeInteger__inher
-it__graph.pdf
+ [34] [35]) (./classTang_1_1AstNodeInteger.tex <./classTang_1_1AstNodeInteger__
+inherit__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeInteger__inherit__graph.pd
 f): PDF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeInteger__inherit__graph.pdf, id=3593, 201.75375pt x 156.58
+<classTang_1_1AstNodeInteger__inherit__graph.pdf, id=3703, 201.75375pt x 156.58
 5pt>
 File: classTang_1_1AstNodeInteger__inherit__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeInteger__inherit__graph.pdf>
@@ -1436,31 +1440,55 @@ on input line 19.
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeInteger__coll__graph.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeInteger__coll__graph.pdf, id=3601, 201.75375pt x 156.585pt
+<classTang_1_1AstNodeInteger__coll__graph.pdf, id=3711, 201.75375pt x 156.585pt
 >
 File: classTang_1_1AstNodeInteger__coll__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeInteger__coll__graph.pdf>
 Package pdftex.def Info: classTang_1_1AstNodeInteger__coll__graph.pdf  used on 
 input line 29.
 (pdftex.def)             Requested size: 201.0pt x 156.00162pt.
- [35]pdfTeX warning (ext4): destination with the same identifier (name{classTan
-g_1_1AstNode_a804f9247f774f9444ee7e8db7e7d3e4e}) has been already used, duplica
-te ignored
+ [36]
+Overfull \vbox (7.54974pt too high) has occurred while \output is active []
+
+
+[37]pdfTeX warning (ext4): destination with the same identifier (name{classTang
+_1_1AstNode_a804f9247f774f9444ee7e8db7e7d3e4e}) has been already used, duplicat
+e ignored
 <to be read again> 
                    \relax 
 l.73 ...stNode_a804f9247f774f9444ee7e8db7e7d3e4e}}
-                                                   [36]
-Underfull \hbox (badness 1946) in paragraph at lines 90--91
+                                                  
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
 []\T1/phv/m/n/10 Reimplemented in [], [], [], [],
  []
 
-) (./classTang_1_1AstNodeString.tex <./classTang_1_1AstNodeString__inherit__gra
-ph.pdf
+) (./classTang_1_1AstNodePrint.tex <./classTang_1_1AstNodePrint__inherit__graph
+.pdf>
+<classTang_1_1AstNodePrint__inherit__graph.pdf, id=3766, 189.70876pt x 156.585p
+t>
+File: classTang_1_1AstNodePrint__inherit__graph.pdf Graphic file (type pdf)
+<use classTang_1_1AstNodePrint__inherit__graph.pdf>
+Package pdftex.def Info: classTang_1_1AstNodePrint__inherit__graph.pdf  used on
+ input line 19.
+(pdftex.def)             Requested size: 189.0pt x 156.004pt.
+ <./classTang_1_1AstNodePrint__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classTang_1_1AstNodePrint__coll__graph.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
+>
+<classTang_1_1AstNodePrint__coll__graph.pdf, id=3774, 189.70876pt x 156.585pt>
+File: classTang_1_1AstNodePrint__coll__graph.pdf Graphic file (type pdf)
+<use classTang_1_1AstNodePrint__coll__graph.pdf>
+Package pdftex.def Info: classTang_1_1AstNodePrint__coll__graph.pdf  used on in
+put line 29.
+(pdftex.def)             Requested size: 189.0pt x 156.004pt.
+ [38] [39]) (./classTang_1_1AstNodeString.tex [40] <./classTang_1_1AstNodeStrin
+g__inherit__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeString__inherit__graph.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeString__inherit__graph.pdf, id=3654, 195.73125pt x 156.585
+<classTang_1_1AstNodeString__inherit__graph.pdf, id=3839, 195.73125pt x 156.585
 pt>
 File: classTang_1_1AstNodeString__inherit__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeString__inherit__graph.pdf>
@@ -1472,63 +1500,51 @@ n input line 19.
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeString__coll__graph.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeString__coll__graph.pdf, id=3662, 195.73125pt x 156.585pt>
+<classTang_1_1AstNodeString__coll__graph.pdf, id=3847, 195.73125pt x 156.585pt>
 
 File: classTang_1_1AstNodeString__coll__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeString__coll__graph.pdf>
 Package pdftex.def Info: classTang_1_1AstNodeString__coll__graph.pdf  used on i
 nput line 29.
 (pdftex.def)             Requested size: 195.0pt x 156.00879pt.
- [37]pdfTeX warning (ext4): destination with the same identifier (name{classTan
+ [41]pdfTeX warning (ext4): destination with the same identifier (name{classTan
 g_1_1AstNode_a804f9247f774f9444ee7e8db7e7d3e4e}) has been already used, duplica
 te ignored
 <to be read again> 
                    \relax 
 l.71 ...stNode_a804f9247f774f9444ee7e8db7e7d3e4e}}
                                                   
-Overfull \vbox (7.13654pt too high) has occurred while \output is active []
-
-
-[38]
-Underfull \hbox (badness 1946) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 []\T1/phv/m/n/10 Reimplemented in [], [], [], [],
  []
 
 ) (./classTang_1_1AstNodeUnary.tex <./classTang_1_1AstNodeUnary__inherit__graph
-.pdf
-
-pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeUnary__inherit__graph.pdf)
-: PDF inclusion: multiple pdfs with page group included in a single page
->
-<classTang_1_1AstNodeUnary__inherit__graph.pdf, id=3716, 196.735pt x 156.585pt>
+.pdf>
+<classTang_1_1AstNodeUnary__inherit__graph.pdf, id=3895, 196.735pt x 156.585pt>
 
 File: classTang_1_1AstNodeUnary__inherit__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeUnary__inherit__graph.pdf>
 Package pdftex.def Info: classTang_1_1AstNodeUnary__inherit__graph.pdf  used on
  input line 19.
 (pdftex.def)             Requested size: 196.0pt x 155.99922pt.
- <./classTang_1_1AstNodeUnary__coll__graph.pdf
+ [42] <./classTang_1_1AstNodeUnary__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeUnary__coll__graph.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeUnary__coll__graph.pdf, id=3724, 196.735pt x 156.585pt>
+<classTang_1_1AstNodeUnary__coll__graph.pdf, id=3910, 196.735pt x 156.585pt>
 File: classTang_1_1AstNodeUnary__coll__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeUnary__coll__graph.pdf>
 Package pdftex.def Info: classTang_1_1AstNodeUnary__coll__graph.pdf  used on in
 put line 29.
 (pdftex.def)             Requested size: 196.0pt x 155.99922pt.
- [39]
-Overfull \vbox (36.66032pt too high) has occurred while \output is active []
-
-
-[40]) (./classTang_1_1AstNodeWhile.tex <./classTang_1_1AstNodeWhile__inherit__g
-raph.pdf
+ [43] [44]) (./classTang_1_1AstNodeWhile.tex <./classTang_1_1AstNodeWhile__inhe
+rit__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeWhile__inherit__graph.pdf)
 : PDF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeWhile__inherit__graph.pdf, id=3784, 194.7275pt x 156.585pt
+<classTang_1_1AstNodeWhile__inherit__graph.pdf, id=3969, 194.7275pt x 156.585pt
 >
 File: classTang_1_1AstNodeWhile__inherit__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeWhile__inherit__graph.pdf>
@@ -1540,19 +1556,19 @@ Package pdftex.def Info: classTang_1_1AstNodeWhile__inherit__graph.pdf  used on
 pdfTeX warning: pdflatex (file ./classTang_1_1AstNodeWhile__coll__graph.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1AstNodeWhile__coll__graph.pdf, id=3792, 194.7275pt x 156.585pt>
+<classTang_1_1AstNodeWhile__coll__graph.pdf, id=3977, 194.7275pt x 156.585pt>
 File: classTang_1_1AstNodeWhile__coll__graph.pdf Graphic file (type pdf)
 <use classTang_1_1AstNodeWhile__coll__graph.pdf>
 Package pdftex.def Info: classTang_1_1AstNodeWhile__coll__graph.pdf  used on in
 put line 29.
 (pdftex.def)             Requested size: 194.0pt x 156.0064pt.
- [41]
-Overfull \vbox (19.8987pt too high) has occurred while \output is active []
+ [45] [46]) (./classTang_1_1ComputedExpression.tex <./classTang_1_1ComputedExpr
+ession__inherit__graph.pdf
 
-
-[42]) (./classTang_1_1ComputedExpression.tex <./classTang_1_1ComputedExpression
-__inherit__graph.pdf>
-<classTang_1_1ComputedExpression__inherit__graph.pdf, id=3841, 415.5525pt x 308
+pdfTeX warning: pdflatex (file ./classTang_1_1ComputedExpression__inherit__grap
+h.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>
+<classTang_1_1ComputedExpression__inherit__graph.pdf, id=4025, 415.5525pt x 308
 .15125pt>
 File: classTang_1_1ComputedExpression__inherit__graph.pdf Graphic file (type pd
 f)
@@ -1560,183 +1576,189 @@ f)
 Package pdftex.def Info: classTang_1_1ComputedExpression__inherit__graph.pdf  u
 sed on input line 19.
 (pdftex.def)             Requested size: 350.0pt x 259.55057pt.
- [43] [44]
-Underfull \hbox (badness 10000) detected at line 91
+ [47] [48]
+Underfull \hbox (badness 10000) detected at line 93
 [][][]
  []
 
 
-Overfull \hbox (33.20726pt too wide) in paragraph at lines 96--97
+Overfull \hbox (33.20726pt too wide) in paragraph at lines 98--99
 []\T1/phv/m/n/10 Reimplemented in [], [], [],
  []
 
 
-Underfull \hbox (badness 10000) detected at line 108
+Underfull \hbox (badness 10000) detected at line 110
 [][][]
  []
 
 
-Overfull \hbox (33.20726pt too wide) in paragraph at lines 113--114
+Overfull \hbox (33.20726pt too wide) in paragraph at lines 115--116
 []\T1/phv/m/n/10 Reimplemented in [], [], [],
  []
 
 
-Overfull \vbox (8.10849pt too high) has occurred while \output is active []
-
-
-[45]
-Underfull \hbox (badness 10000) detected at line 130
+Underfull \hbox (badness 10000) detected at line 132
 [][][]
  []
 
 
-Overfull \hbox (46.48216pt too wide) in paragraph at lines 135--136
+Overfull \hbox (46.48216pt too wide) in paragraph at lines 137--138
 []\T1/phv/m/n/10 Reimplemented in [], [], and []. 
- []
-
-
-Underfull \hbox (badness 10000) detected at line 152
-[][][]
- []
-
-
-Overfull \hbox (33.20726pt too wide) in paragraph at lines 157--158
-[]\T1/phv/m/n/10 Reimplemented in [], [], [],
- []
-
-
-Underfull \hbox (badness 10000) detected at line 169
-[][][]
- []
-
-
-Overfull \hbox (29.56247pt too wide) in paragraph at lines 174--175
-[]\T1/phv/m/n/10 Reimplemented in [], [], [],
- []
-
-
-Underfull \hbox (badness 10000) detected at line 186
-[][][]
- []
-
-
-Overfull \hbox (29.56247pt too wide) in paragraph at lines 191--192
-[]\T1/phv/m/n/10 Reimplemented in [], [], [],
- []
-
-[46]
-Underfull \hbox (badness 10000) detected at line 208
-[][][]
- []
-
-
-Overfull \hbox (33.20726pt too wide) in paragraph at lines 213--214
-[]\T1/phv/m/n/10 Reimplemented in [], [], [],
- []
-
-
-Underfull \hbox (badness 10000) detected at line 230
-[][][]
- []
-
-[47]
-Underfull \hbox (badness 10000) detected at line 252
-[][][]
- []
-
-
-Overfull \hbox (46.48216pt too wide) in paragraph at lines 257--258
-[]\T1/phv/m/n/10 Reimplemented in [], [], and []. 
- []
-
-
-Underfull \hbox (badness 10000) detected at line 269
-[][][]
- []
-
-
-Overfull \hbox (46.48216pt too wide) in paragraph at lines 274--275
-[]\T1/phv/m/n/10 Reimplemented in [], [], and []. 
- []
-
-
-Underfull \hbox (badness 10000) detected at line 286
-[][][]
- []
-
-
-Overfull \hbox (33.20726pt too wide) in paragraph at lines 291--292
-[]\T1/phv/m/n/10 Reimplemented in [], [], [],
- []
-
-[48]
-Underfull \hbox (badness 10000) detected at line 308
-[][][]
- []
-
-
-Overfull \hbox (46.48216pt too wide) in paragraph at lines 313--314
-[]\T1/phv/m/n/10 Reimplemented in [], [], and []. 
- []
-
-
-Underfull \hbox (badness 10000) detected at line 325
-[][][]
- []
-
-
-Overfull \hbox (33.20726pt too wide) in paragraph at lines 330--331
-[]\T1/phv/m/n/10 Reimplemented in [], [], [],
- []
-
-
-Underfull \hbox (badness 10000) detected at line 347
-[][][]
  []
 
 [49]
-Underfull \hbox (badness 10000) detected at line 369
+Underfull \hbox (badness 10000) detected at line 154
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 391
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 413
-[][][]
- []
-
-[50]
-Underfull \hbox (badness 10000) detected at line 435
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 453
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 470
-[][][]
- []
-
-
-Overfull \hbox (33.20726pt too wide) in paragraph at lines 475--476
+Overfull \hbox (33.20726pt too wide) in paragraph at lines 159--160
 []\T1/phv/m/n/10 Reimplemented in [], [], [],
  []
 
-) (./classTang_1_1ComputedExpressionBoolean.tex [51] <./classTang_1_1ComputedEx
+
+Underfull \hbox (badness 10000) detected at line 171
+[][][]
+ []
+
+
+Overfull \hbox (29.56247pt too wide) in paragraph at lines 176--177
+[]\T1/phv/m/n/10 Reimplemented in [], [], [],
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 188
+[][][]
+ []
+
+
+Overfull \hbox (29.56247pt too wide) in paragraph at lines 193--194
+[]\T1/phv/m/n/10 Reimplemented in [], [], [],
+ []
+
+[50]
+Underfull \hbox (badness 10000) detected at line 210
+[][][]
+ []
+
+
+Overfull \hbox (33.20726pt too wide) in paragraph at lines 215--216
+[]\T1/phv/m/n/10 Reimplemented in [], [], [],
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 232
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 254
+[][][]
+ []
+
+
+Overfull \hbox (46.48216pt too wide) in paragraph at lines 259--260
+[]\T1/phv/m/n/10 Reimplemented in [], [], and []. 
+ []
+
+[51]
+Underfull \hbox (badness 10000) detected at line 271
+[][][]
+ []
+
+
+Overfull \hbox (46.48216pt too wide) in paragraph at lines 276--277
+[]\T1/phv/m/n/10 Reimplemented in [], [], and []. 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 288
+[][][]
+ []
+
+
+Overfull \hbox (33.20726pt too wide) in paragraph at lines 293--294
+[]\T1/phv/m/n/10 Reimplemented in [], [], [],
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 305
+[][][]
+ []
+
+
+Overfull \hbox (33.20726pt too wide) in paragraph at lines 310--311
+[]\T1/phv/m/n/10 Reimplemented in [], [], [],
+ []
+
+[52]
+Underfull \hbox (badness 10000) detected at line 327
+[][][]
+ []
+
+
+Overfull \hbox (46.48216pt too wide) in paragraph at lines 332--333
+[]\T1/phv/m/n/10 Reimplemented in [], [], and []. 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 344
+[][][]
+ []
+
+
+Overfull \hbox (33.20726pt too wide) in paragraph at lines 349--350
+[]\T1/phv/m/n/10 Reimplemented in [], [], [],
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 366
+[][][]
+ []
+
+[53] [54]
+Underfull \hbox (badness 10000) detected at line 388
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 410
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 432
+[][][]
+ []
+
+[55]
+Underfull \hbox (badness 10000) detected at line 454
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 472
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 489
+[][][]
+ []
+
+
+Overfull \hbox (33.20726pt too wide) in paragraph at lines 494--495
+[]\T1/phv/m/n/10 Reimplemented in [], [], [],
+ []
+
+) (./classTang_1_1ComputedExpressionBoolean.tex [56] <./classTang_1_1ComputedEx
 pressionBoolean__inherit__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classTang_1_1ComputedExpressionBoolean__inheri
 t__graph.pdf): PDF inclusion: multiple pdfs with page group included in a singl
 e page
 >
-<classTang_1_1ComputedExpressionBoolean__inherit__graph.pdf, id=4143, 229.85875
+<classTang_1_1ComputedExpressionBoolean__inherit__graph.pdf, id=4343, 229.85875
 pt x 167.62625pt>
 File: classTang_1_1ComputedExpressionBoolean__inherit__graph.pdf Graphic file (
 type pdf)
@@ -1750,7 +1772,7 @@ pdfTeX warning: pdflatex (file ./classTang_1_1ComputedExpressionBoolean__coll__
 graph.pdf): PDF inclusion: multiple pdfs with page group included in a single p
 age
 >
-<classTang_1_1ComputedExpressionBoolean__coll__graph.pdf, id=4151, 229.85875pt 
+<classTang_1_1ComputedExpressionBoolean__coll__graph.pdf, id=4351, 229.85875pt 
 x 167.62625pt>
 File: classTang_1_1ComputedExpressionBoolean__coll__graph.pdf Graphic file (typ
 e pdf)
@@ -1758,24 +1780,24 @@ e pdf)
 Package pdftex.def Info: classTang_1_1ComputedExpressionBoolean__coll__graph.pd
 f  used on input line 29.
 (pdftex.def)             Requested size: 229.0pt x 167.0094pt.
- [52] [53]pdfTeX warning (ext4): destination with the same identifier (name{cla
+ [57] [58]pdfTeX warning (ext4): destination with the same identifier (name{cla
 ssTang_1_1ComputedExpression_a7265dda9f1e6db478f0c1cd9c3e37aa9}) has been alrea
 dy used, duplicate ignored
 <to be read again> 
                    \relax 
-l.101 ...ssion_a7265dda9f1e6db478f0c1cd9c3e37aa9}}
+l.103 ...ssion_a7265dda9f1e6db478f0c1cd9c3e37aa9}}
                                                   
-Underfull \hbox (badness 10000) detected at line 116
+Underfull \hbox (badness 10000) detected at line 118
 [][][]
  []
 
 
-Overfull \hbox (33.20726pt too wide) in paragraph at lines 121--122
+Overfull \hbox (33.20726pt too wide) in paragraph at lines 123--124
 []\T1/phv/m/n/10 Reimplemented in [], [], [],
  []
 
 
-Underfull \hbox (badness 10000) detected at line 133
+Underfull \hbox (badness 10000) detected at line 135
 [][][]
  []
 
@@ -1784,29 +1806,29 @@ ComputedExpression_abb35e0328da2a96128de725ff1402192}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.140 ...ssion_abb35e0328da2a96128de725ff1402192}}
-                                                   [54]
-Underfull \hbox (badness 10000) detected at line 155
+l.142 ...ssion_abb35e0328da2a96128de725ff1402192}}
+                                                   [59]
+Underfull \hbox (badness 10000) detected at line 157
 [][][]
  []
 
 
-Overfull \hbox (46.48216pt too wide) in paragraph at lines 160--161
+Overfull \hbox (46.48216pt too wide) in paragraph at lines 162--163
 []\T1/phv/m/n/10 Reimplemented in [], [], and []. 
  []
 
 
-Underfull \hbox (badness 10000) detected at line 177
+Underfull \hbox (badness 10000) detected at line 179
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 194
+Underfull \hbox (badness 10000) detected at line 196
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 211
+Underfull \hbox (badness 10000) detected at line 213
 [][][]
  []
 
@@ -1815,14 +1837,14 @@ ComputedExpression_a7ac5773e7e1c7f4b7c7f8dcd29bfa00b}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.218 ...ssion_a7ac5773e7e1c7f4b7c7f8dcd29bfa00b}}
-                                                   [55]
-Underfull \hbox (badness 10000) detected at line 233
+l.220 ...ssion_a7ac5773e7e1c7f4b7c7f8dcd29bfa00b}}
+                                                   [60]
+Underfull \hbox (badness 10000) detected at line 235
 [][][]
  []
 
 
-Overfull \hbox (33.20726pt too wide) in paragraph at lines 238--239
+Overfull \hbox (33.20726pt too wide) in paragraph at lines 240--241
 []\T1/phv/m/n/10 Reimplemented in [], [], [],
  []
 
@@ -1831,9 +1853,9 @@ ComputedExpression_ab545455bd51f215ac139db456b829f66}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.240 ...ssion_ab545455bd51f215ac139db456b829f66}}
+l.242 ...ssion_ab545455bd51f215ac139db456b829f66}}
                                                   
-Underfull \hbox (badness 10000) detected at line 255
+Underfull \hbox (badness 10000) detected at line 257
 [][][]
  []
 
@@ -1842,14 +1864,14 @@ ComputedExpression_a39df4abc066123ec2d634e921be40d21}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.262 ...ssion_a39df4abc066123ec2d634e921be40d21}}
-                                                   [56]
-Underfull \hbox (badness 10000) detected at line 277
+l.264 ...ssion_a39df4abc066123ec2d634e921be40d21}}
+                                                   [61]
+Underfull \hbox (badness 10000) detected at line 279
 [][][]
  []
 
 
-Overfull \hbox (46.48216pt too wide) in paragraph at lines 282--283
+Overfull \hbox (46.48216pt too wide) in paragraph at lines 284--285
 []\T1/phv/m/n/10 Reimplemented in [], [], and []. 
  []
 
@@ -1858,45 +1880,61 @@ ComputedExpression_a8e779d014cbb877f078d61a2ff91603d}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.284 ...ssion_a8e779d014cbb877f078d61a2ff91603d}}
+l.286 ...ssion_a8e779d014cbb877f078d61a2ff91603d}}
                                                   
-Underfull \hbox (badness 10000) detected at line 294
+Underfull \hbox (badness 10000) detected at line 296
 [][][]
  []
 
 
-Overfull \hbox (46.48216pt too wide) in paragraph at lines 299--300
+Overfull \hbox (46.48216pt too wide) in paragraph at lines 301--302
 []\T1/phv/m/n/10 Reimplemented in [], [], and []. 
  []
 
 
-Underfull \hbox (badness 10000) detected at line 311
+Underfull \hbox (badness 10000) detected at line 313
 [][][]
  []
 
 pdfTeX warning (ext4): destination with the same identifier (name{classTang_1_1
-ComputedExpression_ab0d79debcd475a5063e574c10f1715ff}) has been already used, d
+ComputedExpression_a14a57cffe9fb44b0d5f34d06afd0db1b}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.318 ...ssion_ab0d79debcd475a5063e574c10f1715ff}}
-                                                   [57]
-Underfull \hbox (badness 10000) detected at line 333
+l.320 ...ssion_a14a57cffe9fb44b0d5f34d06afd0db1b}}
+                                                  
+Underfull \hbox (badness 10000) detected at line 330
 [][][]
  []
 
 
-Overfull \hbox (46.48216pt too wide) in paragraph at lines 338--339
+Overfull \hbox (33.20726pt too wide) in paragraph at lines 335--336
+[]\T1/phv/m/n/10 Reimplemented in [], [], [],
+ []
+
+[62]pdfTeX warning (ext4): destination with the same identifier (name{classTang
+_1_1ComputedExpression_ab0d79debcd475a5063e574c10f1715ff}) has been already use
+d, duplicate ignored
+<to be read again> 
+                   \relax 
+l.337 ...ssion_ab0d79debcd475a5063e574c10f1715ff}}
+                                                  
+Underfull \hbox (badness 10000) detected at line 352
+[][][]
+ []
+
+
+Overfull \hbox (46.48216pt too wide) in paragraph at lines 357--358
 []\T1/phv/m/n/10 Reimplemented in [], [], and []. 
  []
 
 
-Underfull \hbox (badness 10000) detected at line 350
+Underfull \hbox (badness 10000) detected at line 369
 [][][]
  []
 
-
-Underfull \hbox (badness 10000) detected at line 372
+[63]
+Underfull \hbox (badness 10000) detected at line 391
 [][][]
  []
 
@@ -1905,9 +1943,9 @@ ComputedExpression_aa81900aeb157fdb024f1bb0f316b4006}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.379 ...ssion_aa81900aeb157fdb024f1bb0f316b4006}}
-                                                   [58]
-Underfull \hbox (badness 10000) detected at line 394
+l.398 ...ssion_aa81900aeb157fdb024f1bb0f316b4006}}
+                                                  
+Underfull \hbox (badness 10000) detected at line 413
 [][][]
  []
 
@@ -1916,9 +1954,9 @@ ComputedExpression_a5ce6d4bc0128f6aadf72c2f63a70275a}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.401 ...ssion_a5ce6d4bc0128f6aadf72c2f63a70275a}}
+l.420 ...ssion_a5ce6d4bc0128f6aadf72c2f63a70275a}}
                                                   
-Underfull \hbox (badness 10000) detected at line 416
+Underfull \hbox (badness 10000) detected at line 435
 [][][]
  []
 
@@ -1927,9 +1965,9 @@ ComputedExpression_a4b61cc4d447993bfc96dc37bfd552cef}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.423 ...ssion_a4b61cc4d447993bfc96dc37bfd552cef}}
-                                                  
-Underfull \hbox (badness 10000) detected at line 438
+l.442 ...ssion_a4b61cc4d447993bfc96dc37bfd552cef}}
+                                                   [64]
+Underfull \hbox (badness 10000) detected at line 457
 [][][]
  []
 
@@ -1938,9 +1976,9 @@ ComputedExpression_a5287fabf86f19613afb04d5e285c0231}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.445 ...ssion_a5287fabf86f19613afb04d5e285c0231}}
-                                                   [59]
-Underfull \hbox (badness 10000) detected at line 460
+l.464 ...ssion_a5287fabf86f19613afb04d5e285c0231}}
+                                                  
+Underfull \hbox (badness 10000) detected at line 479
 [][][]
  []
 
@@ -1949,25 +1987,25 @@ ComputedExpression_a726aea52e0773883fe628f7d97b608cb}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.463 ...ssion_a726aea52e0773883fe628f7d97b608cb}}
-                                                  
-Underfull \hbox (badness 10000) detected at line 478
+l.482 ...ssion_a726aea52e0773883fe628f7d97b608cb}}
+                                                   [65]
+Underfull \hbox (badness 10000) detected at line 497
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 495
+Underfull \hbox (badness 10000) detected at line 514
 [][][]
  []
 
-) (./classTang_1_1ComputedExpressionError.tex [60] <./classTang_1_1ComputedExpr
-essionError__inherit__graph.pdf
+) (./classTang_1_1ComputedExpressionError.tex <./classTang_1_1ComputedExpressio
+nError__inherit__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classTang_1_1ComputedExpressionError__inherit_
 _graph.pdf): PDF inclusion: multiple pdfs with page group included in a single 
 page
 >
-<classTang_1_1ComputedExpressionError__inherit__graph.pdf, id=4347, 229.85875pt
+<classTang_1_1ComputedExpressionError__inherit__graph.pdf, id=4554, 229.85875pt
  x 167.62625pt>
 File: classTang_1_1ComputedExpressionError__inherit__graph.pdf Graphic file (ty
 pe pdf)
@@ -1981,7 +2019,7 @@ pdfTeX warning: pdflatex (file ./classTang_1_1ComputedExpressionError__coll__gr
 aph.pdf): PDF inclusion: multiple pdfs with page group included in a single pag
 e
 >
-<classTang_1_1ComputedExpressionError__coll__graph.pdf, id=4355, 229.85875pt x 
+<classTang_1_1ComputedExpressionError__coll__graph.pdf, id=4562, 229.85875pt x 
 167.62625pt>
 File: classTang_1_1ComputedExpressionError__coll__graph.pdf Graphic file (type 
 pdf)
@@ -1989,68 +2027,73 @@ pdf)
 Package pdftex.def Info: classTang_1_1ComputedExpressionError__coll__graph.pdf 
  used on input line 29.
 (pdftex.def)             Requested size: 229.0pt x 167.0094pt.
- [61] [62]
-Underfull \hbox (badness 10000) detected at line 116
+ [66] [67] [68]
+Underfull \hbox (badness 10000) detected at line 118
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 133
-[][][]
- []
-
-[63]
-Underfull \hbox (badness 10000) detected at line 155
+Underfull \hbox (badness 10000) detected at line 135
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 177
+Underfull \hbox (badness 10000) detected at line 157
+[][][]
+ []
+
+[69]
+Underfull \hbox (badness 10000) detected at line 179
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 194
+Underfull \hbox (badness 10000) detected at line 196
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 211
+Underfull \hbox (badness 10000) detected at line 213
 [][][]
  []
 
-[64]
-Underfull \hbox (badness 10000) detected at line 233
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 255
-[][][]
- []
-
-[65]
-Underfull \hbox (badness 10000) detected at line 277
+[70]
+Underfull \hbox (badness 10000) detected at line 235
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 294
+Underfull \hbox (badness 10000) detected at line 257
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 311
+Underfull \hbox (badness 10000) detected at line 279
 [][][]
  []
 
-[66]
-Underfull \hbox (badness 10000) detected at line 333
+[71]
+Underfull \hbox (badness 10000) detected at line 296
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 350
+Underfull \hbox (badness 10000) detected at line 313
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 330
+[][][]
+ []
+
+[72]
+Underfull \hbox (badness 10000) detected at line 352
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 369
 [][][]
  []
 
@@ -2059,9 +2102,9 @@ ComputedExpression_a907104a9d090d21e9bcc487b696738c4}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.357 ...ssion_a907104a9d090d21e9bcc487b696738c4}}
+l.376 ...ssion_a907104a9d090d21e9bcc487b696738c4}}
                                                   
-Underfull \hbox (badness 10000) detected at line 372
+Underfull \hbox (badness 10000) detected at line 391
 [][][]
  []
 
@@ -2070,14 +2113,14 @@ ComputedExpression_aa81900aeb157fdb024f1bb0f316b4006}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.379 ...ssion_aa81900aeb157fdb024f1bb0f316b4006}}
-                                                   [67]
-Underfull \hbox (badness 10000) detected at line 394
+l.398 ...ssion_aa81900aeb157fdb024f1bb0f316b4006}}
+                                                   [73]
+Underfull \hbox (badness 10000) detected at line 413
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 416
+Underfull \hbox (badness 10000) detected at line 435
 [][][]
  []
 
@@ -2086,9 +2129,9 @@ ComputedExpression_a4b61cc4d447993bfc96dc37bfd552cef}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.423 ...ssion_a4b61cc4d447993bfc96dc37bfd552cef}}
+l.442 ...ssion_a4b61cc4d447993bfc96dc37bfd552cef}}
                                                   
-Underfull \hbox (badness 10000) detected at line 438
+Underfull \hbox (badness 10000) detected at line 457
 [][][]
  []
 
@@ -2097,9 +2140,9 @@ ComputedExpression_a5287fabf86f19613afb04d5e285c0231}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.445 ...ssion_a5287fabf86f19613afb04d5e285c0231}}
-                                                   [68]
-Underfull \hbox (badness 10000) detected at line 460
+l.464 ...ssion_a5287fabf86f19613afb04d5e285c0231}}
+                                                   [74]
+Underfull \hbox (badness 10000) detected at line 479
 [][][]
  []
 
@@ -2108,25 +2151,25 @@ ComputedExpression_a726aea52e0773883fe628f7d97b608cb}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.463 ...ssion_a726aea52e0773883fe628f7d97b608cb}}
+l.482 ...ssion_a726aea52e0773883fe628f7d97b608cb}}
                                                   
-Underfull \hbox (badness 10000) detected at line 478
+Underfull \hbox (badness 10000) detected at line 497
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 495
+Underfull \hbox (badness 10000) detected at line 514
 [][][]
  []
 
-) (./classTang_1_1ComputedExpressionFloat.tex [69] <./classTang_1_1ComputedExpr
+) (./classTang_1_1ComputedExpressionFloat.tex [75] <./classTang_1_1ComputedExpr
 essionFloat__inherit__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classTang_1_1ComputedExpressionFloat__inherit_
 _graph.pdf): PDF inclusion: multiple pdfs with page group included in a single 
 page
 >
-<classTang_1_1ComputedExpressionFloat__inherit__graph.pdf, id=4542, 229.85875pt
+<classTang_1_1ComputedExpressionFloat__inherit__graph.pdf, id=4758, 229.85875pt
  x 167.62625pt>
 File: classTang_1_1ComputedExpressionFloat__inherit__graph.pdf Graphic file (ty
 pe pdf)
@@ -2140,7 +2183,7 @@ pdfTeX warning: pdflatex (file ./classTang_1_1ComputedExpressionFloat__coll__gr
 aph.pdf): PDF inclusion: multiple pdfs with page group included in a single pag
 e
 >
-<classTang_1_1ComputedExpressionFloat__coll__graph.pdf, id=4550, 229.85875pt x 
+<classTang_1_1ComputedExpressionFloat__coll__graph.pdf, id=4766, 229.85875pt x 
 167.62625pt>
 File: classTang_1_1ComputedExpressionFloat__coll__graph.pdf Graphic file (type 
 pdf)
@@ -2148,38 +2191,38 @@ pdf)
 Package pdftex.def Info: classTang_1_1ComputedExpressionFloat__coll__graph.pdf 
  used on input line 29.
 (pdftex.def)             Requested size: 229.0pt x 167.0094pt.
- [70] [71]
-Underfull \hbox (badness 10000) detected at line 122
+ [76] [77]
+Underfull \hbox (badness 10000) detected at line 124
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 139
+Underfull \hbox (badness 10000) detected at line 141
 [][][]
  []
 
-[72]
-Underfull \hbox (badness 10000) detected at line 161
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 183
+[78]
+Underfull \hbox (badness 10000) detected at line 163
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 200
+Underfull \hbox (badness 10000) detected at line 185
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 217
+Underfull \hbox (badness 10000) detected at line 202
 [][][]
  []
 
-[73]
-Underfull \hbox (badness 10000) detected at line 239
+
+Underfull \hbox (badness 10000) detected at line 219
+[][][]
+ []
+
+[79]
+Underfull \hbox (badness 10000) detected at line 241
 [][][]
  []
 
@@ -2188,50 +2231,71 @@ ComputedExpression_ab545455bd51f215ac139db456b829f66}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.246 ...ssion_ab545455bd51f215ac139db456b829f66}}
+l.248 ...ssion_ab545455bd51f215ac139db456b829f66}}
                                                   
-Underfull \hbox (badness 10000) detected at line 261
+Underfull \hbox (badness 10000) detected at line 263
 [][][]
  []
 
-[74]
-Underfull \hbox (badness 10000) detected at line 283
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 300
+[80]
+Underfull \hbox (badness 10000) detected at line 285
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 317
-[][][]
- []
-
-[75]
-Underfull \hbox (badness 10000) detected at line 339
+Underfull \hbox (badness 10000) detected at line 302
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 356
+Underfull \hbox (badness 10000) detected at line 319
 [][][]
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{classTang_1_1
-ComputedExpression_a907104a9d090d21e9bcc487b696738c4}) has been already used, d
-uplicate ignored
+
+Underfull \hbox (badness 10000) detected at line 336
+[][][]
+ []
+
+ <./classTang_1_1ComputedExpressionFloat_a873e1a1bd0810ab622e4be3b60a4c77b_cgra
+ph.pdf
+
+pdfTeX warning: pdflatex (file ./classTang_1_1ComputedExpressionFloat_a873e1a1b
+d0810ab622e4be3b60a4c77b_cgraph.pdf): PDF inclusion: multiple pdfs with page gr
+oup included in a single page
+>
+<classTang_1_1ComputedExpressionFloat_a873e1a1bd0810ab622e4be3b60a4c77b_cgraph.
+pdf, id=4905, 415.5525pt x 111.41624pt>
+File: classTang_1_1ComputedExpressionFloat_a873e1a1bd0810ab622e4be3b60a4c77b_cg
+raph.pdf Graphic file (type pdf)
+<use classTang_1_1ComputedExpressionFloat_a873e1a1bd0810ab622e4be3b60a4c77b_cgr
+aph.pdf>
+Package pdftex.def Info: classTang_1_1ComputedExpressionFloat_a873e1a1bd0810ab6
+22e4be3b60a4c77b_cgraph.pdf  used on input line 348.
+(pdftex.def)             Requested size: 350.0pt x 93.84401pt.
+ [81]
+Underfull \hbox (badness 10000) detected at line 366
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 383
+[][][]
+ []
+
+[82]pdfTeX warning (ext4): destination with the same identifier (name{classTang
+_1_1ComputedExpression_a907104a9d090d21e9bcc487b696738c4}) has been already use
+d, duplicate ignored
 <to be read again> 
                    \relax 
-l.363 ...ssion_a907104a9d090d21e9bcc487b696738c4}}
+l.390 ...ssion_a907104a9d090d21e9bcc487b696738c4}}
                                                   
-Underfull \hbox (badness 10000) detected at line 378
+Underfull \hbox (badness 10000) detected at line 405
 [][][]
  []
 
-[76]
-Underfull \hbox (badness 10000) detected at line 400
+
+Underfull \hbox (badness 10000) detected at line 427
 [][][]
  []
 
@@ -2240,14 +2304,14 @@ ComputedExpression_a5ce6d4bc0128f6aadf72c2f63a70275a}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.407 ...ssion_a5ce6d4bc0128f6aadf72c2f63a70275a}}
-                                                  
-Underfull \hbox (badness 10000) detected at line 422
+l.434 ...ssion_a5ce6d4bc0128f6aadf72c2f63a70275a}}
+                                                   [83]
+Underfull \hbox (badness 10000) detected at line 449
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 444
+Underfull \hbox (badness 10000) detected at line 471
 [][][]
  []
 
@@ -2256,9 +2320,9 @@ ComputedExpression_a5287fabf86f19613afb04d5e285c0231}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.451 ...ssion_a5287fabf86f19613afb04d5e285c0231}}
-                                                   [77]
-Underfull \hbox (badness 10000) detected at line 466
+l.478 ...ssion_a5287fabf86f19613afb04d5e285c0231}}
+                                                  
+Underfull \hbox (badness 10000) detected at line 493
 [][][]
  []
 
@@ -2267,25 +2331,25 @@ ComputedExpression_a726aea52e0773883fe628f7d97b608cb}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.469 ...ssion_a726aea52e0773883fe628f7d97b608cb}}
-                                                  
-Underfull \hbox (badness 10000) detected at line 484
+l.496 ...ssion_a726aea52e0773883fe628f7d97b608cb}}
+                                                   [84]
+Underfull \hbox (badness 10000) detected at line 511
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 501
+Underfull \hbox (badness 10000) detected at line 528
 [][][]
  []
 
-) (./classTang_1_1ComputedExpressionInteger.tex [78] <./classTang_1_1ComputedEx
-pressionInteger__inherit__graph.pdf
+) (./classTang_1_1ComputedExpressionInteger.tex <./classTang_1_1ComputedExpress
+ionInteger__inherit__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classTang_1_1ComputedExpressionInteger__inheri
 t__graph.pdf): PDF inclusion: multiple pdfs with page group included in a singl
 e page
 >
-<classTang_1_1ComputedExpressionInteger__inherit__graph.pdf, id=4731, 229.85875
+<classTang_1_1ComputedExpressionInteger__inherit__graph.pdf, id=4960, 229.85875
 pt x 167.62625pt>
 File: classTang_1_1ComputedExpressionInteger__inherit__graph.pdf Graphic file (
 type pdf)
@@ -2299,7 +2363,7 @@ pdfTeX warning: pdflatex (file ./classTang_1_1ComputedExpressionInteger__coll__
 graph.pdf): PDF inclusion: multiple pdfs with page group included in a single p
 age
 >
-<classTang_1_1ComputedExpressionInteger__coll__graph.pdf, id=4739, 229.85875pt 
+<classTang_1_1ComputedExpressionInteger__coll__graph.pdf, id=4968, 229.85875pt 
 x 167.62625pt>
 File: classTang_1_1ComputedExpressionInteger__coll__graph.pdf Graphic file (typ
 e pdf)
@@ -2307,84 +2371,105 @@ e pdf)
 Package pdftex.def Info: classTang_1_1ComputedExpressionInteger__coll__graph.pd
 f  used on input line 29.
 (pdftex.def)             Requested size: 229.0pt x 167.0094pt.
- [79] [80]
-Underfull \hbox (badness 10000) detected at line 122
+ [85] [86] [87]
+Underfull \hbox (badness 10000) detected at line 124
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 139
+Underfull \hbox (badness 10000) detected at line 141
 [][][]
  []
 
-[81]
-Underfull \hbox (badness 10000) detected at line 161
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 183
+[88]
+Underfull \hbox (badness 10000) detected at line 163
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 200
+Underfull \hbox (badness 10000) detected at line 185
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 217
-[][][]
- []
-
-[82]
-Underfull \hbox (badness 10000) detected at line 239
+Underfull \hbox (badness 10000) detected at line 202
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 261
+Underfull \hbox (badness 10000) detected at line 219
 [][][]
  []
 
-[83]
-Underfull \hbox (badness 10000) detected at line 283
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 300
+[89]
+Underfull \hbox (badness 10000) detected at line 241
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 317
+Underfull \hbox (badness 10000) detected at line 263
 [][][]
  []
 
-[84]
-Underfull \hbox (badness 10000) detected at line 339
+[90]
+Underfull \hbox (badness 10000) detected at line 285
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 356
+Underfull \hbox (badness 10000) detected at line 302
 [][][]
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{classTang_1_1
-ComputedExpression_a907104a9d090d21e9bcc487b696738c4}) has been already used, d
-uplicate ignored
+
+Underfull \hbox (badness 10000) detected at line 319
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 336
+[][][]
+ []
+
+ <./classTang_1_1ComputedExpressionInteger_a70d1079d4d4d8ff14725e435680a1a8a_cg
+raph.pdf
+
+pdfTeX warning: pdflatex (file ./classTang_1_1ComputedExpressionInteger_a70d107
+9d4d4d8ff14725e435680a1a8a_cgraph.pdf): PDF inclusion: multiple pdfs with page 
+group included in a single page
+>
+<classTang_1_1ComputedExpressionInteger_a70d1079d4d4d8ff14725e435680a1a8a_cgrap
+h.pdf, id=5111, 415.5525pt x 111.41624pt>
+File: classTang_1_1ComputedExpressionInteger_a70d1079d4d4d8ff14725e435680a1a8a_
+cgraph.pdf Graphic file (type pdf)
+<use classTang_1_1ComputedExpressionInteger_a70d1079d4d4d8ff14725e435680a1a8a_c
+graph.pdf>
+Package pdftex.def Info: classTang_1_1ComputedExpressionInteger_a70d1079d4d4d8f
+f14725e435680a1a8a_cgraph.pdf  used on input line 348.
+(pdftex.def)             Requested size: 350.0pt x 93.84401pt.
+ [91]
+Underfull \hbox (badness 10000) detected at line 366
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 383
+[][][]
+ []
+
+[92]pdfTeX warning (ext4): destination with the same identifier (name{classTang
+_1_1ComputedExpression_a907104a9d090d21e9bcc487b696738c4}) has been already use
+d, duplicate ignored
 <to be read again> 
                    \relax 
-l.363 ...ssion_a907104a9d090d21e9bcc487b696738c4}}
+l.390 ...ssion_a907104a9d090d21e9bcc487b696738c4}}
                                                   
-Underfull \hbox (badness 10000) detected at line 378
+Underfull \hbox (badness 10000) detected at line 405
 [][][]
  []
 
-[85]
-Underfull \hbox (badness 10000) detected at line 400
+
+Underfull \hbox (badness 10000) detected at line 427
 [][][]
  []
 
@@ -2393,14 +2478,14 @@ ComputedExpression_a5ce6d4bc0128f6aadf72c2f63a70275a}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.407 ...ssion_a5ce6d4bc0128f6aadf72c2f63a70275a}}
-                                                  
-Underfull \hbox (badness 10000) detected at line 422
+l.434 ...ssion_a5ce6d4bc0128f6aadf72c2f63a70275a}}
+                                                   [93]
+Underfull \hbox (badness 10000) detected at line 449
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 444
+Underfull \hbox (badness 10000) detected at line 471
 [][][]
  []
 
@@ -2409,9 +2494,9 @@ ComputedExpression_a5287fabf86f19613afb04d5e285c0231}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.451 ...ssion_a5287fabf86f19613afb04d5e285c0231}}
-                                                   [86]
-Underfull \hbox (badness 10000) detected at line 466
+l.478 ...ssion_a5287fabf86f19613afb04d5e285c0231}}
+                                                  
+Underfull \hbox (badness 10000) detected at line 493
 [][][]
  []
 
@@ -2420,25 +2505,25 @@ ComputedExpression_a726aea52e0773883fe628f7d97b608cb}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.469 ...ssion_a726aea52e0773883fe628f7d97b608cb}}
-                                                  
-Underfull \hbox (badness 10000) detected at line 484
+l.496 ...ssion_a726aea52e0773883fe628f7d97b608cb}}
+                                                   [94]
+Underfull \hbox (badness 10000) detected at line 511
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 501
+Underfull \hbox (badness 10000) detected at line 528
 [][][]
  []
 
-) (./classTang_1_1ComputedExpressionString.tex [87] <./classTang_1_1ComputedExp
-ressionString__inherit__graph.pdf
+) (./classTang_1_1ComputedExpressionString.tex <./classTang_1_1ComputedExpressi
+onString__inherit__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classTang_1_1ComputedExpressionString__inherit
 __graph.pdf): PDF inclusion: multiple pdfs with page group included in a single
  page
 >
-<classTang_1_1ComputedExpressionString__inherit__graph.pdf, id=4918, 229.85875p
+<classTang_1_1ComputedExpressionString__inherit__graph.pdf, id=5165, 229.85875p
 t x 167.62625pt>
 File: classTang_1_1ComputedExpressionString__inherit__graph.pdf Graphic file (t
 ype pdf)
@@ -2452,7 +2537,7 @@ pdfTeX warning: pdflatex (file ./classTang_1_1ComputedExpressionString__coll__g
 raph.pdf): PDF inclusion: multiple pdfs with page group included in a single pa
 ge
 >
-<classTang_1_1ComputedExpressionString__coll__graph.pdf, id=4926, 229.85875pt x
+<classTang_1_1ComputedExpressionString__coll__graph.pdf, id=5173, 229.85875pt x
  167.62625pt>
 File: classTang_1_1ComputedExpressionString__coll__graph.pdf Graphic file (type
  pdf)
@@ -2460,13 +2545,13 @@ File: classTang_1_1ComputedExpressionString__coll__graph.pdf Graphic file (type
 Package pdftex.def Info: classTang_1_1ComputedExpressionString__coll__graph.pdf
   used on input line 29.
 (pdftex.def)             Requested size: 229.0pt x 167.0094pt.
- [88] [89]
-Underfull \hbox (badness 10000) detected at line 116
+ [95] [96] [97]
+Underfull \hbox (badness 10000) detected at line 118
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 133
+Underfull \hbox (badness 10000) detected at line 135
 [][][]
  []
 
@@ -2475,19 +2560,19 @@ ComputedExpression_abb35e0328da2a96128de725ff1402192}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.140 ...ssion_abb35e0328da2a96128de725ff1402192}}
-                                                   [90]
-Underfull \hbox (badness 10000) detected at line 155
+l.142 ...ssion_abb35e0328da2a96128de725ff1402192}}
+                                                   [98]
+Underfull \hbox (badness 10000) detected at line 157
 [][][]
  []
 
 
-Overfull \hbox (46.48216pt too wide) in paragraph at lines 160--161
+Overfull \hbox (46.48216pt too wide) in paragraph at lines 162--163
 []\T1/phv/m/n/10 Reimplemented in [], [], and []. 
  []
 
 
-Underfull \hbox (badness 10000) detected at line 177
+Underfull \hbox (badness 10000) detected at line 179
 [][][]
  []
 
@@ -2496,14 +2581,14 @@ ComputedExpression_aa91f27a9f03b9a7fb9aa5a79efc3039f}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.184 ...ssion_aa91f27a9f03b9a7fb9aa5a79efc3039f}}
+l.186 ...ssion_aa91f27a9f03b9a7fb9aa5a79efc3039f}}
                                                   
-Underfull \hbox (badness 10000) detected at line 194
+Underfull \hbox (badness 10000) detected at line 196
 [][][]
  []
 
 
-Overfull \hbox (29.56247pt too wide) in paragraph at lines 199--200
+Overfull \hbox (29.56247pt too wide) in paragraph at lines 201--202
 []\T1/phv/m/n/10 Reimplemented in [], [], [],
  []
 
@@ -2512,19 +2597,19 @@ ComputedExpression_aa9bebad41df630a98cec2565b0aeda89}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.201 ...ssion_aa9bebad41df630a98cec2565b0aeda89}}
+l.203 ...ssion_aa9bebad41df630a98cec2565b0aeda89}}
                                                   
-Underfull \hbox (badness 10000) detected at line 211
+Underfull \hbox (badness 10000) detected at line 213
 [][][]
  []
 
 
-Overfull \hbox (29.56247pt too wide) in paragraph at lines 216--217
+Overfull \hbox (29.56247pt too wide) in paragraph at lines 218--219
 []\T1/phv/m/n/10 Reimplemented in [], [], [],
  []
 
-[91]
-Underfull \hbox (badness 10000) detected at line 233
+[99]
+Underfull \hbox (badness 10000) detected at line 235
 [][][]
  []
 
@@ -2533,9 +2618,9 @@ ComputedExpression_ab545455bd51f215ac139db456b829f66}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.240 ...ssion_ab545455bd51f215ac139db456b829f66}}
+l.242 ...ssion_ab545455bd51f215ac139db456b829f66}}
                                                   
-Underfull \hbox (badness 10000) detected at line 255
+Underfull \hbox (badness 10000) detected at line 257
 [][][]
  []
 
@@ -2544,14 +2629,14 @@ ComputedExpression_a39df4abc066123ec2d634e921be40d21}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.262 ...ssion_a39df4abc066123ec2d634e921be40d21}}
-                                                   [92]
-Underfull \hbox (badness 10000) detected at line 277
+l.264 ...ssion_a39df4abc066123ec2d634e921be40d21}}
+                                                   [100]
+Underfull \hbox (badness 10000) detected at line 279
 [][][]
  []
 
 
-Overfull \hbox (46.48216pt too wide) in paragraph at lines 282--283
+Overfull \hbox (46.48216pt too wide) in paragraph at lines 284--285
 []\T1/phv/m/n/10 Reimplemented in [], [], and []. 
  []
 
@@ -2560,19 +2645,24 @@ ComputedExpression_a8e779d014cbb877f078d61a2ff91603d}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.284 ...ssion_a8e779d014cbb877f078d61a2ff91603d}}
+l.286 ...ssion_a8e779d014cbb877f078d61a2ff91603d}}
                                                   
-Underfull \hbox (badness 10000) detected at line 294
+Underfull \hbox (badness 10000) detected at line 296
 [][][]
  []
 
 
-Overfull \hbox (46.48216pt too wide) in paragraph at lines 299--300
+Overfull \hbox (46.48216pt too wide) in paragraph at lines 301--302
 []\T1/phv/m/n/10 Reimplemented in [], [], and []. 
  []
 
 
-Underfull \hbox (badness 10000) detected at line 311
+Underfull \hbox (badness 10000) detected at line 313
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 330
 [][][]
  []
 
@@ -2581,19 +2671,19 @@ ComputedExpression_ab0d79debcd475a5063e574c10f1715ff}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.318 ...ssion_ab0d79debcd475a5063e574c10f1715ff}}
-                                                   [93]
-Underfull \hbox (badness 10000) detected at line 333
+l.337 ...ssion_ab0d79debcd475a5063e574c10f1715ff}}
+                                                   [101]
+Underfull \hbox (badness 10000) detected at line 352
 [][][]
  []
 
 
-Overfull \hbox (46.48216pt too wide) in paragraph at lines 338--339
+Overfull \hbox (46.48216pt too wide) in paragraph at lines 357--358
 []\T1/phv/m/n/10 Reimplemented in [], [], and []. 
  []
 
 
-Underfull \hbox (badness 10000) detected at line 350
+Underfull \hbox (badness 10000) detected at line 369
 [][][]
  []
 
@@ -2602,9 +2692,9 @@ ComputedExpression_a907104a9d090d21e9bcc487b696738c4}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.357 ...ssion_a907104a9d090d21e9bcc487b696738c4}}
+l.376 ...ssion_a907104a9d090d21e9bcc487b696738c4}}
                                                   
-Underfull \hbox (badness 10000) detected at line 372
+Underfull \hbox (badness 10000) detected at line 391
 [][][]
  []
 
@@ -2613,9 +2703,9 @@ ComputedExpression_aa81900aeb157fdb024f1bb0f316b4006}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.379 ...ssion_aa81900aeb157fdb024f1bb0f316b4006}}
-                                                   [94]
-Underfull \hbox (badness 10000) detected at line 394
+l.398 ...ssion_aa81900aeb157fdb024f1bb0f316b4006}}
+                                                   [102]
+Underfull \hbox (badness 10000) detected at line 413
 [][][]
  []
 
@@ -2624,9 +2714,9 @@ ComputedExpression_a5ce6d4bc0128f6aadf72c2f63a70275a}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.401 ...ssion_a5ce6d4bc0128f6aadf72c2f63a70275a}}
+l.420 ...ssion_a5ce6d4bc0128f6aadf72c2f63a70275a}}
                                                   
-Underfull \hbox (badness 10000) detected at line 416
+Underfull \hbox (badness 10000) detected at line 435
 [][][]
  []
 
@@ -2635,9 +2725,9 @@ ComputedExpression_a4b61cc4d447993bfc96dc37bfd552cef}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.423 ...ssion_a4b61cc4d447993bfc96dc37bfd552cef}}
+l.442 ...ssion_a4b61cc4d447993bfc96dc37bfd552cef}}
                                                   
-Underfull \hbox (badness 10000) detected at line 438
+Underfull \hbox (badness 10000) detected at line 457
 [][][]
  []
 
@@ -2646,34 +2736,34 @@ ComputedExpression_a5287fabf86f19613afb04d5e285c0231}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.445 ...ssion_a5287fabf86f19613afb04d5e285c0231}}
-                                                   [95]
-Underfull \hbox (badness 10000) detected at line 460
+l.464 ...ssion_a5287fabf86f19613afb04d5e285c0231}}
+                                                   [103]
+Underfull \hbox (badness 10000) detected at line 479
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 478
+Underfull \hbox (badness 10000) detected at line 497
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 495
+Underfull \hbox (badness 10000) detected at line 514
 [][][]
  []
 
-) (./classTang_1_1Error.tex [96] <./classTang_1_1Error__coll__graph.pdf
+) (./classTang_1_1Error.tex [104] <./classTang_1_1Error__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classTang_1_1Error__coll__graph.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1Error__coll__graph.pdf, id=5122, 228.855pt x 381.425pt>
+<classTang_1_1Error__coll__graph.pdf, id=5379, 228.855pt x 381.425pt>
 File: classTang_1_1Error__coll__graph.pdf Graphic file (type pdf)
 <use classTang_1_1Error__coll__graph.pdf>
 Package pdftex.def Info: classTang_1_1Error__coll__graph.pdf  used on input lin
 e 19.
 (pdftex.def)             Requested size: 228.0pt x 380.0156pt.
- [97] [98]
+ [105] [106]
 Underfull \hbox (badness 10000) detected at line 104
 [][][]
  []
@@ -2684,14 +2774,14 @@ graph.pdf
 pdfTeX warning: pdflatex (file ./classTang_1_1GarbageCollected__coll__graph.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1GarbageCollected__coll__graph.pdf, id=5178, 229.85875pt x 167.626
+<classTang_1_1GarbageCollected__coll__graph.pdf, id=5435, 229.85875pt x 167.626
 25pt>
 File: classTang_1_1GarbageCollected__coll__graph.pdf Graphic file (type pdf)
 <use classTang_1_1GarbageCollected__coll__graph.pdf>
 Package pdftex.def Info: classTang_1_1GarbageCollected__coll__graph.pdf  used o
 n input line 19.
 (pdftex.def)             Requested size: 229.0pt x 167.0094pt.
- [99] [100] [101] [102]
+ [107] [108] [109] [110]
 Underfull \hbox (badness 10000) detected at line 190
 [][][]
  []
@@ -2703,7 +2793,7 @@ pdfTeX warning: pdflatex (file ./classTang_1_1GarbageCollected_acb3de1421025af1
 luded in a single page
 >
 <classTang_1_1GarbageCollected_acb3de1421025af18d948dfae7dad5fb0_cgraph.pdf, id
-=5353, 392.46625pt x 111.41624pt>
+=5610, 392.46625pt x 111.41624pt>
 File: classTang_1_1GarbageCollected_acb3de1421025af18d948dfae7dad5fb0_cgraph.pd
 f Graphic file (type pdf)
 <use classTang_1_1GarbageCollected_acb3de1421025af18d948dfae7dad5fb0_cgraph.pdf
@@ -2723,7 +2813,7 @@ pdfTeX warning: pdflatex (file ./classTang_1_1GarbageCollected_a3683ebb77cfca1a
 luded in a single page
 >
 <classTang_1_1GarbageCollected_a3683ebb77cfca1a8ac1aaf26c41d3666_cgraph.pdf, id
-=5363, 398.48875pt x 111.41624pt>
+=5620, 398.48875pt x 111.41624pt>
 File: classTang_1_1GarbageCollected_a3683ebb77cfca1a8ac1aaf26c41d3666_cgraph.pd
 f Graphic file (type pdf)
 <use classTang_1_1GarbageCollected_a3683ebb77cfca1a8ac1aaf26c41d3666_cgraph.pdf
@@ -2731,14 +2821,14 @@ f Graphic file (type pdf)
 Package pdftex.def Info: classTang_1_1GarbageCollected_a3683ebb77cfca1a8ac1aaf2
 6c41d3666_cgraph.pdf  used on input line 219.
 (pdftex.def)             Requested size: 350.0pt x 97.86298pt.
- [103]
+ [111]
 Underfull \hbox (badness 10000) detected at line 237
 [][][]
  []
 
  <./classTang_1_1GarbageCollected_adca82e086b51cd4b33df3d9a638ff0f2_cgraph.pdf>
 <classTang_1_1GarbageCollected_adca82e086b51cd4b33df3d9a638ff0f2_cgraph.pdf, id
-=5383, 398.48875pt x 111.41624pt>
+=5640, 398.48875pt x 111.41624pt>
 File: classTang_1_1GarbageCollected_adca82e086b51cd4b33df3d9a638ff0f2_cgraph.pd
 f Graphic file (type pdf)
 <use classTang_1_1GarbageCollected_adca82e086b51cd4b33df3d9a638ff0f2_cgraph.pdf
@@ -2758,7 +2848,7 @@ pdfTeX warning: pdflatex (file ./classTang_1_1GarbageCollected_a4acf35c0dd46b2c
 luded in a single page
 >
 <classTang_1_1GarbageCollected_a4acf35c0dd46b2c14b4bccb7152fe918_cgraph.pdf, id
-=5394, 398.48875pt x 111.41624pt>
+=5651, 398.48875pt x 111.41624pt>
 File: classTang_1_1GarbageCollected_a4acf35c0dd46b2c14b4bccb7152fe918_cgraph.pd
 f Graphic file (type pdf)
 <use classTang_1_1GarbageCollected_a4acf35c0dd46b2c14b4bccb7152fe918_cgraph.pdf
@@ -2766,7 +2856,7 @@ f Graphic file (type pdf)
 Package pdftex.def Info: classTang_1_1GarbageCollected_a4acf35c0dd46b2c14b4bccb
 7152fe918_cgraph.pdf  used on input line 271.
 (pdftex.def)             Requested size: 350.0pt x 97.86298pt.
- [104]
+ [112]
 Underfull \hbox (badness 10000) detected at line 284
 [][][]
  []
@@ -2778,7 +2868,7 @@ Underfull \hbox (badness 10000) detected at line 302
 
  <./classTang_1_1GarbageCollected_aad4b500a2798b4109115c6b8d38bef1b_cgraph.pdf>
 <classTang_1_1GarbageCollected_aad4b500a2798b4109115c6b8d38bef1b_cgraph.pdf, id
-=5415, 398.48875pt x 111.41624pt>
+=5672, 398.48875pt x 111.41624pt>
 File: classTang_1_1GarbageCollected_aad4b500a2798b4109115c6b8d38bef1b_cgraph.pd
 f Graphic file (type pdf)
 <use classTang_1_1GarbageCollected_aad4b500a2798b4109115c6b8d38bef1b_cgraph.pdf
@@ -2786,14 +2876,14 @@ f Graphic file (type pdf)
 Package pdftex.def Info: classTang_1_1GarbageCollected_aad4b500a2798b4109115c6b
 8d38bef1b_cgraph.pdf  used on input line 310.
 (pdftex.def)             Requested size: 350.0pt x 97.86298pt.
-[105]
+[113]
 Underfull \hbox (badness 10000) detected at line 328
 [][][]
  []
 
  <./classTang_1_1GarbageCollected_aecc3c9f3d355fe43e5bf3db6a7cccb2d_cgraph.pdf>
 <classTang_1_1GarbageCollected_aecc3c9f3d355fe43e5bf3db6a7cccb2d_cgraph.pdf, id
-=5433, 398.48875pt x 111.41624pt>
+=5691, 398.48875pt x 111.41624pt>
 File: classTang_1_1GarbageCollected_aecc3c9f3d355fe43e5bf3db6a7cccb2d_cgraph.pd
 f Graphic file (type pdf)
 <use classTang_1_1GarbageCollected_aecc3c9f3d355fe43e5bf3db6a7cccb2d_cgraph.pdf
@@ -2813,7 +2903,7 @@ pdfTeX warning: pdflatex (file ./classTang_1_1GarbageCollected_a67e99aa13b932a0
 luded in a single page
 >
 <classTang_1_1GarbageCollected_a67e99aa13b932a0894e6bb5301417e69_cgraph.pdf, id
-=5443, 398.48875pt x 111.41624pt>
+=5701, 398.48875pt x 111.41624pt>
 File: classTang_1_1GarbageCollected_a67e99aa13b932a0894e6bb5301417e69_cgraph.pd
 f Graphic file (type pdf)
 <use classTang_1_1GarbageCollected_a67e99aa13b932a0894e6bb5301417e69_cgraph.pdf
@@ -2821,14 +2911,14 @@ f Graphic file (type pdf)
 Package pdftex.def Info: classTang_1_1GarbageCollected_a67e99aa13b932a0894e6bb5
 301417e69_cgraph.pdf  used on input line 357.
 (pdftex.def)             Requested size: 350.0pt x 97.86298pt.
- [106]
+ [114]
 Underfull \hbox (badness 10000) detected at line 375
 [][][]
  []
 
  <./classTang_1_1GarbageCollected_ab07b787947ec0f4451b14bf631d489a5_cgraph.pdf>
 <classTang_1_1GarbageCollected_ab07b787947ec0f4451b14bf631d489a5_cgraph.pdf, id
-=5463, 398.48875pt x 111.41624pt>
+=5721, 398.48875pt x 111.41624pt>
 File: classTang_1_1GarbageCollected_ab07b787947ec0f4451b14bf631d489a5_cgraph.pd
 f Graphic file (type pdf)
 <use classTang_1_1GarbageCollected_ab07b787947ec0f4451b14bf631d489a5_cgraph.pdf
@@ -2853,7 +2943,7 @@ pdfTeX warning: pdflatex (file ./classTang_1_1GarbageCollected_ae058b709868baa4
 luded in a single page
 >
 <classTang_1_1GarbageCollected_ae058b709868baa462d2140a95a300a36_cgraph.pdf, id
-=5475, 398.48875pt x 111.41624pt>
+=5733, 398.48875pt x 111.41624pt>
 File: classTang_1_1GarbageCollected_ae058b709868baa462d2140a95a300a36_cgraph.pd
 f Graphic file (type pdf)
 <use classTang_1_1GarbageCollected_ae058b709868baa462d2140a95a300a36_cgraph.pdf
@@ -2861,14 +2951,14 @@ f Graphic file (type pdf)
 Package pdftex.def Info: classTang_1_1GarbageCollected_ae058b709868baa462d2140a
 95a300a36_cgraph.pdf  used on input line 422.
 (pdftex.def)             Requested size: 350.0pt x 97.86298pt.
- [107]
+ [115]
 Underfull \hbox (badness 10000) detected at line 440
 [][][]
  []
 
  <./classTang_1_1GarbageCollected_abb0034e1cc4a1dbbcde328985456da06_cgraph.pdf>
 <classTang_1_1GarbageCollected_abb0034e1cc4a1dbbcde328985456da06_cgraph.pdf, id
-=5495, 398.48875pt x 111.41624pt>
+=5752, 398.48875pt x 111.41624pt>
 File: classTang_1_1GarbageCollected_abb0034e1cc4a1dbbcde328985456da06_cgraph.pd
 f Graphic file (type pdf)
 <use classTang_1_1GarbageCollected_abb0034e1cc4a1dbbcde328985456da06_cgraph.pdf
@@ -2876,14 +2966,14 @@ f Graphic file (type pdf)
 Package pdftex.def Info: classTang_1_1GarbageCollected_abb0034e1cc4a1dbbcde3289
 85456da06_cgraph.pdf  used on input line 448.
 (pdftex.def)             Requested size: 350.0pt x 97.86298pt.
-[108]
+[116]
 Underfull \hbox (badness 10000) detected at line 466
 [][][]
  []
 
  <./classTang_1_1GarbageCollected_ae3c11ed5cee365f7cb47aac9d4094482_cgraph.pdf>
 <classTang_1_1GarbageCollected_ae3c11ed5cee365f7cb47aac9d4094482_cgraph.pdf, id
-=5519, 381.425pt x 111.41624pt>
+=5776, 381.425pt x 111.41624pt>
 File: classTang_1_1GarbageCollected_ae3c11ed5cee365f7cb47aac9d4094482_cgraph.pd
 f Graphic file (type pdf)
 <use classTang_1_1GarbageCollected_ae3c11ed5cee365f7cb47aac9d4094482_cgraph.pdf
@@ -2898,7 +2988,7 @@ pdfTeX warning: pdflatex (file ./classTang_1_1GarbageCollected_a6354db39b643c18
 luded in a single page
 >
 <classTang_1_1GarbageCollected_a6354db39b643c1828754ff1fe8856b1a_cgraph.pdf, id
-=5532, 381.425pt x 111.41624pt>
+=5789, 381.425pt x 111.41624pt>
 File: classTang_1_1GarbageCollected_a6354db39b643c1828754ff1fe8856b1a_cgraph.pd
 f Graphic file (type pdf)
 <use classTang_1_1GarbageCollected_a6354db39b643c1828754ff1fe8856b1a_cgraph.pdf
@@ -2906,7 +2996,7 @@ f Graphic file (type pdf)
 Package pdftex.def Info: classTang_1_1GarbageCollected_a6354db39b643c1828754ff1
 fe8856b1a_cgraph.pdf  used on input line 512.
 (pdftex.def)             Requested size: 350.0pt x 102.24068pt.
- [109]
+ [117]
 Underfull \hbox (badness 10000) detected at line 530
 [][][]
  []
@@ -2916,7 +3006,7 @@ Underfull \hbox (badness 10000) detected at line 548
 [][][]
  []
 
-[110]
+[118]
 Underfull \hbox (badness 10000) detected at line 566
 [][][]
  []
@@ -2933,7 +3023,7 @@ Underfull \hbox (badness 10000) detected at line 602
 
  <./classTang_1_1GarbageCollected_aa170b8dbd76a2e246526b13322f8d063_cgraph.pdf>
 <classTang_1_1GarbageCollected_aa170b8dbd76a2e246526b13322f8d063_cgraph.pdf, id
-=5565, 398.48875pt x 111.41624pt>
+=5823, 398.48875pt x 111.41624pt>
 File: classTang_1_1GarbageCollected_aa170b8dbd76a2e246526b13322f8d063_cgraph.pd
 f Graphic file (type pdf)
 <use classTang_1_1GarbageCollected_aa170b8dbd76a2e246526b13322f8d063_cgraph.pdf
@@ -2941,7 +3031,7 @@ f Graphic file (type pdf)
 Package pdftex.def Info: classTang_1_1GarbageCollected_aa170b8dbd76a2e246526b13
 322f8d063_cgraph.pdf  used on input line 610.
 (pdftex.def)             Requested size: 350.0pt x 97.86298pt.
-[111]
+[119]
 Underfull \hbox (badness 10000) detected at line 628
 [][][]
  []
@@ -2951,7 +3041,7 @@ Underfull \hbox (badness 10000) detected at line 646
 [][][]
  []
 
-[112]
+[120]
 Underfull \hbox (badness 10000) detected at line 664
 [][][]
  []
@@ -2968,7 +3058,7 @@ Underfull \hbox (badness 10000) detected at line 700
 
  <./classTang_1_1GarbageCollected_a465292265694d060122445009a60c8e7_cgraph.pdf>
 <classTang_1_1GarbageCollected_a465292265694d060122445009a60c8e7_cgraph.pdf, id
-=5598, 398.48875pt x 111.41624pt>
+=5856, 398.48875pt x 111.41624pt>
 File: classTang_1_1GarbageCollected_a465292265694d060122445009a60c8e7_cgraph.pd
 f Graphic file (type pdf)
 <use classTang_1_1GarbageCollected_a465292265694d060122445009a60c8e7_cgraph.pdf
@@ -2976,7 +3066,7 @@ f Graphic file (type pdf)
 Package pdftex.def Info: classTang_1_1GarbageCollected_a465292265694d0601224450
 09a60c8e7_cgraph.pdf  used on input line 708.
 (pdftex.def)             Requested size: 350.0pt x 97.86298pt.
-[113]
+[121]
 Underfull \hbox (badness 10000) detected at line 731
 [][][]
  []
@@ -2986,33 +3076,33 @@ Underfull \hbox (badness 10000) detected at line 731
 pdfTeX warning: pdflatex (file ./classTang_1_1location__coll__graph.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1location__coll__graph.pdf, id=5619, 184.69pt x 314.17375pt>
+<classTang_1_1location__coll__graph.pdf, id=5876, 184.69pt x 314.17375pt>
 File: classTang_1_1location__coll__graph.pdf Graphic file (type pdf)
 <use classTang_1_1location__coll__graph.pdf>
 Package pdftex.def Info: classTang_1_1location__coll__graph.pdf  used on input 
 line 19.
 (pdftex.def)             Requested size: 184.0pt x 313.00325pt.
- [114] [115]) (./classTang_1_1position.tex <./classTang_1_1position__coll__grap
+ [122] [123]) (./classTang_1_1position.tex <./classTang_1_1position__coll__grap
 h.pdf>
-<classTang_1_1position__coll__graph.pdf, id=5689, 184.69pt x 235.88126pt>
+<classTang_1_1position__coll__graph.pdf, id=5946, 184.69pt x 235.88126pt>
 File: classTang_1_1position__coll__graph.pdf Graphic file (type pdf)
 <use classTang_1_1position__coll__graph.pdf>
 Package pdftex.def Info: classTang_1_1position__coll__graph.pdf  used on input 
 line 19.
 (pdftex.def)             Requested size: 184.0pt x 235.00246pt.
- [116]) (./classTang_1_1Program.tex <./classTang_1_1Program__coll__graph.pdf>
-<classTang_1_1Program__coll__graph.pdf, id=5735, 279.0425pt x 392.46625pt>
+ [124]) (./classTang_1_1Program.tex <./classTang_1_1Program__coll__graph.pdf>
+<classTang_1_1Program__coll__graph.pdf, id=5992, 279.0425pt x 392.46625pt>
 File: classTang_1_1Program__coll__graph.pdf Graphic file (type pdf)
 <use classTang_1_1Program__coll__graph.pdf>
 Package pdftex.def Info: classTang_1_1Program__coll__graph.pdf  used on input l
 ine 19.
 (pdftex.def)             Requested size: 278.0pt x 391.01004pt.
- [117] [118]
+ [125] [126]
 LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <9> not available
 (Font)              Font shape `TS1/phv/m/sl' tried instead on input line 47.
 LaTeX Font Info:    Font shape `TS1/phv/m/sl' will be
 (Font)              scaled to size 8.09995pt on input line 47.
- [119]
+ [127]
 Underfull \hbox (badness 10000) detected at line 123
 [][][]
  []
@@ -3027,7 +3117,7 @@ Underfull \hbox (badness 10000) detected at line 149
 [][][]
  []
 
-[120]
+[128]
 Underfull \hbox (badness 10000) detected at line 164
 [][][]
  []
@@ -3047,7 +3137,7 @@ Underfull \hbox (badness 10000) detected at line 203
 [][][]
  []
 
-[121]
+[129]
 Underfull \hbox (badness 10000) detected at line 223
 [][][]
  []
@@ -3069,7 +3159,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[122]
+[130]
 Underfull \hbox (badness 10000) detected at line 47
 [][][]
  []
@@ -3086,11 +3176,11 @@ Underfull \hbox (badness 10000) detected at line 61
 [][][]
  []
 
-) (./classTang_1_1TangBase.tex [123]
+) (./classTang_1_1TangBase.tex [131]
 Overfull \vbox (3.05487pt too high) has occurred while \output is active []
 
 
-[124]
+[132]
 Underfull \hbox (badness 10000) detected at line 64
 [][][]
  []
@@ -3101,7 +3191,7 @@ df
 pdfTeX warning: pdflatex (file ./classTang_1_1TangScanner__inherit__graph.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1TangScanner__inherit__graph.pdf, id=5894, 189.70876pt x 156.585pt
+<classTang_1_1TangScanner__inherit__graph.pdf, id=6152, 189.70876pt x 156.585pt
 >
 File: classTang_1_1TangScanner__inherit__graph.pdf Graphic file (type pdf)
 <use classTang_1_1TangScanner__inherit__graph.pdf>
@@ -3113,7 +3203,7 @@ input line 19.
 pdfTeX warning: pdflatex (file ./classTang_1_1TangScanner__coll__graph.pdf): PD
 F inclusion: multiple pdfs with page group included in a single page
 >
-<classTang_1_1TangScanner__coll__graph.pdf, id=5902, 189.70876pt x 156.585pt>
+<classTang_1_1TangScanner__coll__graph.pdf, id=6160, 189.70876pt x 156.585pt>
 File: classTang_1_1TangScanner__coll__graph.pdf Graphic file (type pdf)
 <use classTang_1_1TangScanner__coll__graph.pdf>
 Package pdftex.def Info: classTang_1_1TangScanner__coll__graph.pdf  used on inp
@@ -3121,19 +3211,19 @@ ut line 29.
 (pdftex.def)             Requested size: 189.0pt x 156.004pt.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 38.
- [125]
+ [133]
 Underfull \hbox (badness 10000) detected at line 81
 [][][]
  []
 
-) [126]
+) [134]
 Chapter 6.
 (./location_8hh.tex <./location_8hh__incl.pdf
 
 pdfTeX warning: pdflatex (file ./location_8hh__incl.pdf): PDF inclusion: multip
 le pdfs with page group included in a single page
 >
-<location_8hh__incl.pdf, id=5932, 230.8625pt x 156.585pt>
+<location_8hh__incl.pdf, id=6189, 230.8625pt x 156.585pt>
 File: location_8hh__incl.pdf Graphic file (type pdf)
 <use location_8hh__incl.pdf>
 Package pdftex.def Info: location_8hh__incl.pdf  used on input line 15.
@@ -3143,19 +3233,19 @@ Package pdftex.def Info: location_8hh__incl.pdf  used on input line 15.
 pdfTeX warning: pdflatex (file ./location_8hh__dep__incl.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
 >
-<location_8hh__dep__incl.pdf, id=5940, 3815.25375pt x 504.88625pt>
+<location_8hh__dep__incl.pdf, id=6197, 3791.16376pt x 504.88625pt>
 File: location_8hh__dep__incl.pdf Graphic file (type pdf)
 <use location_8hh__dep__incl.pdf>
 Package pdftex.def Info: location_8hh__dep__incl.pdf  used on input line 23.
-(pdftex.def)             Requested size: 350.0pt x 46.31604pt.
- [127
+(pdftex.def)             Requested size: 350.0pt x 46.6088pt.
+ [135
 
-] [128]) (./astNode_8hpp.tex <./astNode_8hpp__incl.pdf
+] [136]) (./astNode_8hpp.tex <./astNode_8hpp__incl.pdf
 
 pdfTeX warning: pdflatex (file ./astNode_8hpp__incl.pdf): PDF inclusion: multip
 le pdfs with page group included in a single page
 >
-<astNode_8hpp__incl.pdf, id=6000, 797.98125pt x 437.635pt>
+<astNode_8hpp__incl.pdf, id=6257, 797.98125pt x 437.635pt>
 File: astNode_8hpp__incl.pdf Graphic file (type pdf)
 <use astNode_8hpp__incl.pdf>
 Package pdftex.def Info: astNode_8hpp__incl.pdf  used on input line 17.
@@ -3165,13 +3255,13 @@ Package pdftex.def Info: astNode_8hpp__incl.pdf  used on input line 17.
 pdfTeX warning: pdflatex (file ./astNode_8hpp__dep__incl.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
 >
-<astNode_8hpp__dep__incl.pdf, id=6008, 3051.4pt x 325.215pt>
+<astNode_8hpp__dep__incl.pdf, id=6265, 3235.08624pt x 325.215pt>
 File: astNode_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use astNode_8hpp__dep__incl.pdf>
 Package pdftex.def Info: astNode_8hpp__dep__incl.pdf  used on input line 25.
-(pdftex.def)             Requested size: 350.0pt x 37.30217pt.
- [129]) (./astNodeAssign_8hpp.tex <./astNodeAssign_8hpp__incl.pdf>
-<astNodeAssign_8hpp__incl.pdf, id=6034, 797.98125pt x 493.845pt>
+(pdftex.def)             Requested size: 350.0pt x 35.18323pt.
+ [137]) (./astNodeAssign_8hpp.tex <./astNodeAssign_8hpp__incl.pdf>
+<astNodeAssign_8hpp__incl.pdf, id=6292, 797.98125pt x 493.845pt>
 File: astNodeAssign_8hpp__incl.pdf Graphic file (type pdf)
 <use astNodeAssign_8hpp__incl.pdf>
 Package pdftex.def Info: astNodeAssign_8hpp__incl.pdf  used on input line 14.
@@ -3181,14 +3271,14 @@ Package pdftex.def Info: astNodeAssign_8hpp__incl.pdf  used on input line 14.
 pdfTeX warning: pdflatex (file ./astNodeAssign_8hpp__dep__incl.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
 >
-<astNodeAssign_8hpp__dep__incl.pdf, id=6042, 229.85875pt x 156.585pt>
+<astNodeAssign_8hpp__dep__incl.pdf, id=6300, 229.85875pt x 156.585pt>
 File: astNodeAssign_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use astNodeAssign_8hpp__dep__incl.pdf>
 Package pdftex.def Info: astNodeAssign_8hpp__dep__incl.pdf  used on input line 
 22.
 (pdftex.def)             Requested size: 229.0pt x 156.00879pt.
- [130]) (./astNodeBinary_8hpp.tex <./astNodeBinary_8hpp__incl.pdf>
-<astNodeBinary_8hpp__incl.pdf, id=6062, 797.98125pt x 493.845pt>
+ [138]) (./astNodeBinary_8hpp.tex <./astNodeBinary_8hpp__incl.pdf>
+<astNodeBinary_8hpp__incl.pdf, id=6320, 797.98125pt x 493.845pt>
 File: astNodeBinary_8hpp__incl.pdf Graphic file (type pdf)
 <use astNodeBinary_8hpp__incl.pdf>
 Package pdftex.def Info: astNodeBinary_8hpp__incl.pdf  used on input line 14.
@@ -3198,14 +3288,14 @@ Package pdftex.def Info: astNodeBinary_8hpp__incl.pdf  used on input line 14.
 pdfTeX warning: pdflatex (file ./astNodeBinary_8hpp__dep__incl.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
 >
-<astNodeBinary_8hpp__dep__incl.pdf, id=6070, 226.8475pt x 156.585pt>
+<astNodeBinary_8hpp__dep__incl.pdf, id=6328, 226.8475pt x 156.585pt>
 File: astNodeBinary_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use astNodeBinary_8hpp__dep__incl.pdf>
 Package pdftex.def Info: astNodeBinary_8hpp__dep__incl.pdf  used on input line 
 22.
 (pdftex.def)             Requested size: 226.0pt x 156.00162pt.
- [131]) (./astNodeBlock_8hpp.tex <./astNodeBlock_8hpp__incl.pdf>
-<astNodeBlock_8hpp__incl.pdf, id=6092, 683.55376pt x 493.845pt>
+ [139]) (./astNodeBlock_8hpp.tex <./astNodeBlock_8hpp__incl.pdf>
+<astNodeBlock_8hpp__incl.pdf, id=6349, 683.55376pt x 493.845pt>
 File: astNodeBlock_8hpp__incl.pdf Graphic file (type pdf)
 <use astNodeBlock_8hpp__incl.pdf>
 Package pdftex.def Info: astNodeBlock_8hpp__incl.pdf  used on input line 16.
@@ -3215,14 +3305,14 @@ Package pdftex.def Info: astNodeBlock_8hpp__incl.pdf  used on input line 16.
 pdfTeX warning: pdflatex (file ./astNodeBlock_8hpp__dep__incl.pdf): PDF inclusi
 on: multiple pdfs with page group included in a single page
 >
-<astNodeBlock_8hpp__dep__incl.pdf, id=6100, 223.83624pt x 156.585pt>
+<astNodeBlock_8hpp__dep__incl.pdf, id=6357, 223.83624pt x 156.585pt>
 File: astNodeBlock_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use astNodeBlock_8hpp__dep__incl.pdf>
 Package pdftex.def Info: astNodeBlock_8hpp__dep__incl.pdf  used on input line 2
 4.
 (pdftex.def)             Requested size: 223.0pt x 156.004pt.
- [132]) (./astNodeBoolean_8hpp.tex <./astNodeBoolean_8hpp__incl.pdf>
-<astNodeBoolean_8hpp__incl.pdf, id=6120, 797.98125pt x 493.845pt>
+ [140]) (./astNodeBoolean_8hpp.tex <./astNodeBoolean_8hpp__incl.pdf>
+<astNodeBoolean_8hpp__incl.pdf, id=6377, 797.98125pt x 493.845pt>
 File: astNodeBoolean_8hpp__incl.pdf Graphic file (type pdf)
 <use astNodeBoolean_8hpp__incl.pdf>
 Package pdftex.def Info: astNodeBoolean_8hpp__incl.pdf  used on input line 14.
@@ -3232,14 +3322,14 @@ Package pdftex.def Info: astNodeBoolean_8hpp__incl.pdf  used on input line 14.
 pdfTeX warning: pdflatex (file ./astNodeBoolean_8hpp__dep__incl.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
 >
-<astNodeBoolean_8hpp__dep__incl.pdf, id=6128, 236.885pt x 156.585pt>
+<astNodeBoolean_8hpp__dep__incl.pdf, id=6385, 236.885pt x 156.585pt>
 File: astNodeBoolean_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use astNodeBoolean_8hpp__dep__incl.pdf>
 Package pdftex.def Info: astNodeBoolean_8hpp__dep__incl.pdf  used on input line
  22.
 (pdftex.def)             Requested size: 236.0pt x 156.004pt.
- [133]) (./astNodeCast_8hpp.tex <./astNodeCast_8hpp__incl.pdf>
-<astNodeCast_8hpp__incl.pdf, id=6148, 797.98125pt x 493.845pt>
+ [141]) (./astNodeCast_8hpp.tex <./astNodeCast_8hpp__incl.pdf>
+<astNodeCast_8hpp__incl.pdf, id=6405, 797.98125pt x 493.845pt>
 File: astNodeCast_8hpp__incl.pdf Graphic file (type pdf)
 <use astNodeCast_8hpp__incl.pdf>
 Package pdftex.def Info: astNodeCast_8hpp__incl.pdf  used on input line 14.
@@ -3249,14 +3339,14 @@ Package pdftex.def Info: astNodeCast_8hpp__incl.pdf  used on input line 14.
 pdfTeX warning: pdflatex (file ./astNodeCast_8hpp__dep__incl.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >
-<astNodeCast_8hpp__dep__incl.pdf, id=6156, 218.8175pt x 156.585pt>
+<astNodeCast_8hpp__dep__incl.pdf, id=6413, 218.8175pt x 156.585pt>
 File: astNodeCast_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use astNodeCast_8hpp__dep__incl.pdf>
 Package pdftex.def Info: astNodeCast_8hpp__dep__incl.pdf  used on input line 22
 .
 (pdftex.def)             Requested size: 218.0pt x 156.00162pt.
- [134]) (./astNodeDoWhile_8hpp.tex <./astNodeDoWhile_8hpp__incl.pdf>
-<astNodeDoWhile_8hpp__incl.pdf, id=6176, 797.98125pt x 493.845pt>
+ [142]) (./astNodeDoWhile_8hpp.tex <./astNodeDoWhile_8hpp__incl.pdf>
+<astNodeDoWhile_8hpp__incl.pdf, id=6433, 797.98125pt x 493.845pt>
 File: astNodeDoWhile_8hpp__incl.pdf Graphic file (type pdf)
 <use astNodeDoWhile_8hpp__incl.pdf>
 Package pdftex.def Info: astNodeDoWhile_8hpp__incl.pdf  used on input line 14.
@@ -3266,14 +3356,14 @@ Package pdftex.def Info: astNodeDoWhile_8hpp__incl.pdf  used on input line 14.
 pdfTeX warning: pdflatex (file ./astNodeDoWhile_8hpp__dep__incl.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
 >
-<astNodeDoWhile_8hpp__dep__incl.pdf, id=6184, 238.8925pt x 156.585pt>
+<astNodeDoWhile_8hpp__dep__incl.pdf, id=6441, 238.8925pt x 156.585pt>
 File: astNodeDoWhile_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use astNodeDoWhile_8hpp__dep__incl.pdf>
 Package pdftex.def Info: astNodeDoWhile_8hpp__dep__incl.pdf  used on input line
  22.
 (pdftex.def)             Requested size: 238.0pt x 155.99922pt.
- [135]) (./astNodeFloat_8hpp.tex <./astNodeFloat_8hpp__incl.pdf>
-<astNodeFloat_8hpp__incl.pdf, id=6205, 797.98125pt x 493.845pt>
+ [143]) (./astNodeFloat_8hpp.tex <./astNodeFloat_8hpp__incl.pdf>
+<astNodeFloat_8hpp__incl.pdf, id=6463, 797.98125pt x 493.845pt>
 File: astNodeFloat_8hpp__incl.pdf Graphic file (type pdf)
 <use astNodeFloat_8hpp__incl.pdf>
 Package pdftex.def Info: astNodeFloat_8hpp__incl.pdf  used on input line 14.
@@ -3283,14 +3373,14 @@ Package pdftex.def Info: astNodeFloat_8hpp__incl.pdf  used on input line 14.
 pdfTeX warning: pdflatex (file ./astNodeFloat_8hpp__dep__incl.pdf): PDF inclusi
 on: multiple pdfs with page group included in a single page
 >
-<astNodeFloat_8hpp__dep__incl.pdf, id=6213, 221.82875pt x 156.585pt>
+<astNodeFloat_8hpp__dep__incl.pdf, id=6471, 221.82875pt x 156.585pt>
 File: astNodeFloat_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use astNodeFloat_8hpp__dep__incl.pdf>
 Package pdftex.def Info: astNodeFloat_8hpp__dep__incl.pdf  used on input line 2
 2.
 (pdftex.def)             Requested size: 221.0pt x 155.99922pt.
- [136]) (./astNodeFor_8hpp.tex <./astNodeFor_8hpp__incl.pdf>
-<astNodeFor_8hpp__incl.pdf, id=6233, 797.98125pt x 493.845pt>
+ [144]) (./astNodeFor_8hpp.tex <./astNodeFor_8hpp__incl.pdf>
+<astNodeFor_8hpp__incl.pdf, id=6491, 797.98125pt x 493.845pt>
 File: astNodeFor_8hpp__incl.pdf Graphic file (type pdf)
 <use astNodeFor_8hpp__incl.pdf>
 Package pdftex.def Info: astNodeFor_8hpp__incl.pdf  used on input line 14.
@@ -3300,14 +3390,14 @@ Package pdftex.def Info: astNodeFor_8hpp__incl.pdf  used on input line 14.
 pdfTeX warning: pdflatex (file ./astNodeFor_8hpp__dep__incl.pdf): PDF inclusion
 : multiple pdfs with page group included in a single page
 >
-<astNodeFor_8hpp__dep__incl.pdf, id=6241, 211.79124pt x 156.585pt>
+<astNodeFor_8hpp__dep__incl.pdf, id=6499, 211.79124pt x 156.585pt>
 File: astNodeFor_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use astNodeFor_8hpp__dep__incl.pdf>
 Package pdftex.def Info: astNodeFor_8hpp__dep__incl.pdf  used on input line 22.
 
 (pdftex.def)             Requested size: 211.0pt x 156.0064pt.
- [137]) (./astNodeIdentifier_8hpp.tex <./astNodeIdentifier_8hpp__incl.pdf>
-<astNodeIdentifier_8hpp__incl.pdf, id=6262, 701.62125pt x 493.845pt>
+ [145]) (./astNodeIdentifier_8hpp.tex <./astNodeIdentifier_8hpp__incl.pdf>
+<astNodeIdentifier_8hpp__incl.pdf, id=6519, 701.62125pt x 493.845pt>
 File: astNodeIdentifier_8hpp__incl.pdf Graphic file (type pdf)
 <use astNodeIdentifier_8hpp__incl.pdf>
 Package pdftex.def Info: astNodeIdentifier_8hpp__incl.pdf  used on input line 1
@@ -3318,14 +3408,14 @@ Package pdftex.def Info: astNodeIdentifier_8hpp__incl.pdf  used on input line 1
 pdfTeX warning: pdflatex (file ./astNodeIdentifier_8hpp__dep__incl.pdf): PDF in
 clusion: multiple pdfs with page group included in a single page
 >
-<astNodeIdentifier_8hpp__dep__incl.pdf, id=6277, 363.3575pt x 156.585pt>
+<astNodeIdentifier_8hpp__dep__incl.pdf, id=6534, 363.3575pt x 156.585pt>
 File: astNodeIdentifier_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use astNodeIdentifier_8hpp__dep__incl.pdf>
 Package pdftex.def Info: astNodeIdentifier_8hpp__dep__incl.pdf  used on input l
 ine 23.
 (pdftex.def)             Requested size: 350.0pt x 150.83357pt.
- [138]) (./astNodeIfElse_8hpp.tex <./astNodeIfElse_8hpp__incl.pdf>
-<astNodeIfElse_8hpp__incl.pdf, id=6304, 797.98125pt x 493.845pt>
+ [146]) (./astNodeIfElse_8hpp.tex <./astNodeIfElse_8hpp__incl.pdf>
+<astNodeIfElse_8hpp__incl.pdf, id=6561, 797.98125pt x 493.845pt>
 File: astNodeIfElse_8hpp__incl.pdf Graphic file (type pdf)
 <use astNodeIfElse_8hpp__incl.pdf>
 Package pdftex.def Info: astNodeIfElse_8hpp__incl.pdf  used on input line 14.
@@ -3335,14 +3425,14 @@ Package pdftex.def Info: astNodeIfElse_8hpp__incl.pdf  used on input line 14.
 pdfTeX warning: pdflatex (file ./astNodeIfElse_8hpp__dep__incl.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
 >
-<astNodeIfElse_8hpp__dep__incl.pdf, id=6312, 223.83624pt x 156.585pt>
+<astNodeIfElse_8hpp__dep__incl.pdf, id=6569, 223.83624pt x 156.585pt>
 File: astNodeIfElse_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use astNodeIfElse_8hpp__dep__incl.pdf>
 Package pdftex.def Info: astNodeIfElse_8hpp__dep__incl.pdf  used on input line 
 22.
 (pdftex.def)             Requested size: 223.0pt x 156.004pt.
- [139]) (./astNodeInteger_8hpp.tex <./astNodeInteger_8hpp__incl.pdf>
-<astNodeInteger_8hpp__incl.pdf, id=6333, 797.98125pt x 493.845pt>
+ [147]) (./astNodeInteger_8hpp.tex <./astNodeInteger_8hpp__incl.pdf>
+<astNodeInteger_8hpp__incl.pdf, id=6590, 797.98125pt x 493.845pt>
 File: astNodeInteger_8hpp__incl.pdf Graphic file (type pdf)
 <use astNodeInteger_8hpp__incl.pdf>
 Package pdftex.def Info: astNodeInteger_8hpp__incl.pdf  used on input line 14.
@@ -3352,14 +3442,31 @@ Package pdftex.def Info: astNodeInteger_8hpp__incl.pdf  used on input line 14.
 pdfTeX warning: pdflatex (file ./astNodeInteger_8hpp__dep__incl.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
 >
-<astNodeInteger_8hpp__dep__incl.pdf, id=6341, 230.8625pt x 156.585pt>
+<astNodeInteger_8hpp__dep__incl.pdf, id=6598, 230.8625pt x 156.585pt>
 File: astNodeInteger_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use astNodeInteger_8hpp__dep__incl.pdf>
 Package pdftex.def Info: astNodeInteger_8hpp__dep__incl.pdf  used on input line
  22.
 (pdftex.def)             Requested size: 230.0pt x 156.00162pt.
- [140]) (./astNodeString_8hpp.tex <./astNodeString_8hpp__incl.pdf>
-<astNodeString_8hpp__incl.pdf, id=6361, 797.98125pt x 493.845pt>
+ [148]) (./astNodePrint_8hpp.tex <./astNodePrint_8hpp__incl.pdf>
+<astNodePrint_8hpp__incl.pdf, id=6618, 797.98125pt x 493.845pt>
+File: astNodePrint_8hpp__incl.pdf Graphic file (type pdf)
+<use astNodePrint_8hpp__incl.pdf>
+Package pdftex.def Info: astNodePrint_8hpp__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 350.0pt x 216.5992pt.
+ <./astNodePrint_8hpp__dep__incl.pdf
+
+pdfTeX warning: pdflatex (file ./astNodePrint_8hpp__dep__incl.pdf): PDF inclusi
+on: multiple pdfs with page group included in a single page
+>
+<astNodePrint_8hpp__dep__incl.pdf, id=6626, 219.82124pt x 156.585pt>
+File: astNodePrint_8hpp__dep__incl.pdf Graphic file (type pdf)
+<use astNodePrint_8hpp__dep__incl.pdf>
+Package pdftex.def Info: astNodePrint_8hpp__dep__incl.pdf  used on input line 2
+2.
+(pdftex.def)             Requested size: 219.0pt x 156.004pt.
+ [149]) (./astNodeString_8hpp.tex <./astNodeString_8hpp__incl.pdf>
+<astNodeString_8hpp__incl.pdf, id=6647, 797.98125pt x 493.845pt>
 File: astNodeString_8hpp__incl.pdf Graphic file (type pdf)
 <use astNodeString_8hpp__incl.pdf>
 Package pdftex.def Info: astNodeString_8hpp__incl.pdf  used on input line 14.
@@ -3369,14 +3476,14 @@ Package pdftex.def Info: astNodeString_8hpp__incl.pdf  used on input line 14.
 pdfTeX warning: pdflatex (file ./astNodeString_8hpp__dep__incl.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
 >
-<astNodeString_8hpp__dep__incl.pdf, id=6369, 225.84375pt x 156.585pt>
+<astNodeString_8hpp__dep__incl.pdf, id=6655, 225.84375pt x 156.585pt>
 File: astNodeString_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use astNodeString_8hpp__dep__incl.pdf>
 Package pdftex.def Info: astNodeString_8hpp__dep__incl.pdf  used on input line 
 22.
 (pdftex.def)             Requested size: 225.0pt x 156.00879pt.
- [141]) (./astNodeUnary_8hpp.tex <./astNodeUnary_8hpp__incl.pdf>
-<astNodeUnary_8hpp__incl.pdf, id=6389, 797.98125pt x 493.845pt>
+ [150]) (./astNodeUnary_8hpp.tex <./astNodeUnary_8hpp__incl.pdf>
+<astNodeUnary_8hpp__incl.pdf, id=6675, 797.98125pt x 493.845pt>
 File: astNodeUnary_8hpp__incl.pdf Graphic file (type pdf)
 <use astNodeUnary_8hpp__incl.pdf>
 Package pdftex.def Info: astNodeUnary_8hpp__incl.pdf  used on input line 14.
@@ -3386,14 +3493,14 @@ Package pdftex.def Info: astNodeUnary_8hpp__incl.pdf  used on input line 14.
 pdfTeX warning: pdflatex (file ./astNodeUnary_8hpp__dep__incl.pdf): PDF inclusi
 on: multiple pdfs with page group included in a single page
 >
-<astNodeUnary_8hpp__dep__incl.pdf, id=6397, 224.84pt x 156.585pt>
+<astNodeUnary_8hpp__dep__incl.pdf, id=6683, 224.84pt x 156.585pt>
 File: astNodeUnary_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use astNodeUnary_8hpp__dep__incl.pdf>
 Package pdftex.def Info: astNodeUnary_8hpp__dep__incl.pdf  used on input line 2
 2.
 (pdftex.def)             Requested size: 224.0pt x 156.0064pt.
- [142]) (./astNodeWhile_8hpp.tex <./astNodeWhile_8hpp__incl.pdf>
-<astNodeWhile_8hpp__incl.pdf, id=6417, 797.98125pt x 493.845pt>
+ [151]) (./astNodeWhile_8hpp.tex <./astNodeWhile_8hpp__incl.pdf>
+<astNodeWhile_8hpp__incl.pdf, id=6704, 797.98125pt x 493.845pt>
 File: astNodeWhile_8hpp__incl.pdf Graphic file (type pdf)
 <use astNodeWhile_8hpp__incl.pdf>
 Package pdftex.def Info: astNodeWhile_8hpp__incl.pdf  used on input line 14.
@@ -3403,14 +3510,14 @@ Package pdftex.def Info: astNodeWhile_8hpp__incl.pdf  used on input line 14.
 pdfTeX warning: pdflatex (file ./astNodeWhile_8hpp__dep__incl.pdf): PDF inclusi
 on: multiple pdfs with page group included in a single page
 >
-<astNodeWhile_8hpp__dep__incl.pdf, id=6425, 224.84pt x 156.585pt>
+<astNodeWhile_8hpp__dep__incl.pdf, id=6712, 224.84pt x 156.585pt>
 File: astNodeWhile_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use astNodeWhile_8hpp__dep__incl.pdf>
 Package pdftex.def Info: astNodeWhile_8hpp__dep__incl.pdf  used on input line 2
 2.
 (pdftex.def)             Requested size: 224.0pt x 156.0064pt.
- [143]) (./computedExpression_8hpp.tex <./computedExpression_8hpp__incl.pdf>
-<computedExpression_8hpp__incl.pdf, id=6447, 540.0175pt x 325.215pt>
+ [152]) (./computedExpression_8hpp.tex <./computedExpression_8hpp__incl.pdf>
+<computedExpression_8hpp__incl.pdf, id=6732, 540.0175pt x 325.215pt>
 File: computedExpression_8hpp__incl.pdf Graphic file (type pdf)
 <use computedExpression_8hpp__incl.pdf>
 Package pdftex.def Info: computedExpression_8hpp__incl.pdf  used on input line 
@@ -3421,15 +3528,15 @@ Package pdftex.def Info: computedExpression_8hpp__incl.pdf  used on input line
 pdfTeX warning: pdflatex (file ./computedExpression_8hpp__dep__incl.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >
-<computedExpression_8hpp__dep__incl.pdf, id=6455, 2722.17pt x 392.46625pt>
+<computedExpression_8hpp__dep__incl.pdf, id=6740, 4230.80624pt x 392.46625pt>
 File: computedExpression_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use computedExpression_8hpp__dep__incl.pdf>
 Package pdftex.def Info: computedExpression_8hpp__dep__incl.pdf  used on input 
 line 25.
-(pdftex.def)             Requested size: 350.0pt x 50.45947pt.
- [144]) (./computedExpressionBoolean_8hpp.tex <./computedExpressionBoolean_8hpp
+(pdftex.def)             Requested size: 350.0pt x 32.4639pt.
+ [153]) (./computedExpressionBoolean_8hpp.tex <./computedExpressionBoolean_8hpp
 __incl.pdf>
-<computedExpressionBoolean_8hpp__incl.pdf, id=6481, 540.0175pt x 392.46625pt>
+<computedExpressionBoolean_8hpp__incl.pdf, id=6766, 540.0175pt x 392.46625pt>
 File: computedExpressionBoolean_8hpp__incl.pdf Graphic file (type pdf)
 <use computedExpressionBoolean_8hpp__incl.pdf>
 Package pdftex.def Info: computedExpressionBoolean_8hpp__incl.pdf  used on inpu
@@ -3440,16 +3547,16 @@ t line 14.
 pdfTeX warning: pdflatex (file ./computedExpressionBoolean_8hpp__dep__incl.pdf)
 : PDF inclusion: multiple pdfs with page group included in a single page
 >
-<computedExpressionBoolean_8hpp__dep__incl.pdf, id=6489, 1221.56375pt x 167.626
+<computedExpressionBoolean_8hpp__dep__incl.pdf, id=6774, 1221.56375pt x 167.626
 25pt>
 File: computedExpressionBoolean_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use computedExpressionBoolean_8hpp__dep__incl.pdf>
 Package pdftex.def Info: computedExpressionBoolean_8hpp__dep__incl.pdf  used on
  input line 22.
 (pdftex.def)             Requested size: 350.0pt x 48.02719pt.
- [145]) (./computedExpressionError_8hpp.tex <./computedExpressionError_8hpp__in
+ [154]) (./computedExpressionError_8hpp.tex <./computedExpressionError_8hpp__in
 cl.pdf>
-<computedExpressionError_8hpp__incl.pdf, id=6509, 517.935pt x 392.46625pt>
+<computedExpressionError_8hpp__incl.pdf, id=6794, 517.935pt x 392.46625pt>
 File: computedExpressionError_8hpp__incl.pdf Graphic file (type pdf)
 <use computedExpressionError_8hpp__incl.pdf>
 Package pdftex.def Info: computedExpressionError_8hpp__incl.pdf  used on input 
@@ -3460,16 +3567,16 @@ line 15.
 pdfTeX warning: pdflatex (file ./computedExpressionError_8hpp__dep__incl.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
 >
-<computedExpressionError_8hpp__dep__incl.pdf, id=6517, 1532.72626pt x 167.62625
+<computedExpressionError_8hpp__dep__incl.pdf, id=6802, 1532.72626pt x 167.62625
 pt>
 File: computedExpressionError_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use computedExpressionError_8hpp__dep__incl.pdf>
 Package pdftex.def Info: computedExpressionError_8hpp__dep__incl.pdf  used on i
 nput line 23.
 (pdftex.def)             Requested size: 350.0pt x 38.27698pt.
-) (./computedExpressionFloat_8hpp.tex [146] <./computedExpressionFloat_8hpp__in
+) (./computedExpressionFloat_8hpp.tex [155] <./computedExpressionFloat_8hpp__in
 cl.pdf>
-<computedExpressionFloat_8hpp__incl.pdf, id=6538, 540.0175pt x 392.46625pt>
+<computedExpressionFloat_8hpp__incl.pdf, id=6825, 540.0175pt x 392.46625pt>
 File: computedExpressionFloat_8hpp__incl.pdf Graphic file (type pdf)
 <use computedExpressionFloat_8hpp__incl.pdf>
 Package pdftex.def Info: computedExpressionFloat_8hpp__incl.pdf  used on input 
@@ -3480,15 +3587,15 @@ line 14.
 pdfTeX warning: pdflatex (file ./computedExpressionFloat_8hpp__dep__incl.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
 >
-<computedExpressionFloat_8hpp__dep__incl.pdf, id=6546, 843.15pt x 167.62625pt>
+<computedExpressionFloat_8hpp__dep__incl.pdf, id=6833, 843.15pt x 167.62625pt>
 File: computedExpressionFloat_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use computedExpressionFloat_8hpp__dep__incl.pdf>
 Package pdftex.def Info: computedExpressionFloat_8hpp__dep__incl.pdf  used on i
 nput line 22.
 (pdftex.def)             Requested size: 350.0pt x 69.58405pt.
-) (./computedExpressionInteger_8hpp.tex [147] <./computedExpressionInteger_8hpp
+) (./computedExpressionInteger_8hpp.tex [156] <./computedExpressionInteger_8hpp
 __incl.pdf>
-<computedExpressionInteger_8hpp__incl.pdf, id=6566, 540.0175pt x 392.46625pt>
+<computedExpressionInteger_8hpp__incl.pdf, id=6852, 540.0175pt x 392.46625pt>
 File: computedExpressionInteger_8hpp__incl.pdf Graphic file (type pdf)
 <use computedExpressionInteger_8hpp__incl.pdf>
 Package pdftex.def Info: computedExpressionInteger_8hpp__incl.pdf  used on inpu
@@ -3499,7 +3606,7 @@ t line 14.
 pdfTeX warning: pdflatex (file ./computedExpressionInteger_8hpp__dep__incl.pdf)
 : PDF inclusion: multiple pdfs with page group included in a single page
 >
-<computedExpressionInteger_8hpp__dep__incl.pdf, id=6574, 1025.8325pt x 167.6262
+<computedExpressionInteger_8hpp__dep__incl.pdf, id=6860, 1025.8325pt x 167.6262
 5pt>
 File: computedExpressionInteger_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use computedExpressionInteger_8hpp__dep__incl.pdf>
@@ -3512,108 +3619,112 @@ df
 pdfTeX warning: pdflatex (file ./computedExpressionString_8hpp__incl.pdf): PDF 
 inclusion: multiple pdfs with page group included in a single page
 >
-<computedExpressionString_8hpp__incl.pdf, id=6585, 540.0175pt x 392.46625pt>
+<computedExpressionString_8hpp__incl.pdf, id=6871, 540.0175pt x 392.46625pt>
 File: computedExpressionString_8hpp__incl.pdf Graphic file (type pdf)
 <use computedExpressionString_8hpp__incl.pdf>
 Package pdftex.def Info: computedExpressionString_8hpp__incl.pdf  used on input
  line 14.
 (pdftex.def)             Requested size: 350.0pt x 254.37541pt.
- [148] <./computedExpressionString_8hpp__dep__incl.pdf>
-<computedExpressionString_8hpp__dep__incl.pdf, id=6601, 421.575pt x 167.62625pt
+ [157] <./computedExpressionString_8hpp__dep__incl.pdf>
+<computedExpressionString_8hpp__dep__incl.pdf, id=6887, 831.105pt x 167.62625pt
 >
 File: computedExpressionString_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use computedExpressionString_8hpp__dep__incl.pdf>
 Package pdftex.def Info: computedExpressionString_8hpp__dep__incl.pdf  used on 
 input line 22.
-(pdftex.def)             Requested size: 350.0pt x 139.1681pt.
-) (./error_8hpp.tex
-[149] <./error_8hpp__incl.pdf>
-<error_8hpp__incl.pdf, id=6621, 247.92625pt x 212.795pt>
+(pdftex.def)             Requested size: 350.0pt x 70.59181pt.
+) (./error_8hpp.tex <./error_8hpp__incl.pdf
+
+pdfTeX warning: pdflatex (file ./error_8hpp__incl.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+>
+<error_8hpp__incl.pdf, id=6898, 247.92625pt x 212.795pt>
 File: error_8hpp__incl.pdf Graphic file (type pdf)
 <use error_8hpp__incl.pdf>
 Package pdftex.def Info: error_8hpp__incl.pdf  used on input line 16.
 (pdftex.def)             Requested size: 247.0pt x 212.0022pt.
- <./error_8hpp__dep__incl.pdf
-
-pdfTeX warning: pdflatex (file ./error_8hpp__dep__incl.pdf): PDF inclusion: mul
-tiple pdfs with page group included in a single page
->
-<error_8hpp__dep__incl.pdf, id=6629, 2777.37625pt x 448.67625pt>
+ [158] <./error_8hpp__dep__incl.pdf>
+<error_8hpp__dep__incl.pdf, id=6914, 2936.9725pt x 448.67625pt>
 File: error_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use error_8hpp__dep__incl.pdf>
 Package pdftex.def Info: error_8hpp__dep__incl.pdf  used on input line 24.
-(pdftex.def)             Requested size: 350.0pt x 56.53624pt.
+(pdftex.def)             Requested size: 350.0pt x 53.46912pt.
 ) (./garbageCollected_8hpp.tex <./garbageCollected_8hpp__incl.pdf
 
 pdfTeX warning: pdflatex (file ./garbageCollected_8hpp__incl.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >
-<garbageCollected_8hpp__incl.pdf, id=6648, 496.85625pt x 325.215pt>
+<garbageCollected_8hpp__incl.pdf, id=6934, 496.85625pt x 325.215pt>
 File: garbageCollected_8hpp__incl.pdf Graphic file (type pdf)
 <use garbageCollected_8hpp__incl.pdf>
 Package pdftex.def Info: garbageCollected_8hpp__incl.pdf  used on input line 17
 .
 (pdftex.def)             Requested size: 350.0pt x 229.09299pt.
- [150] <./garbageCollected_8hpp__dep__incl.pdf>
-<garbageCollected_8hpp__dep__incl.pdf, id=6664, 3179.88pt x 392.46625pt>
+ [159] <./garbageCollected_8hpp__dep__incl.pdf>
+<garbageCollected_8hpp__dep__incl.pdf, id=6950, 2885.78125pt x 392.46625pt>
 File: garbageCollected_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use garbageCollected_8hpp__dep__incl.pdf>
 Package pdftex.def Info: garbageCollected_8hpp__dep__incl.pdf  used on input li
 ne 25.
-(pdftex.def)             Requested size: 350.0pt x 43.19536pt.
-) (./macros_8hpp.tex [151])
+(pdftex.def)             Requested size: 350.0pt x 47.59694pt.
+) (./macros_8hpp.tex [160])
 (./opcode_8hpp.tex <./opcode_8hpp__dep__incl.pdf>
-<opcode_8hpp__dep__incl.pdf, id=6692, 2640.86626pt x 156.585pt>
+<opcode_8hpp__dep__incl.pdf, id=6977, 2776.3725pt x 156.585pt>
 File: opcode_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use opcode_8hpp__dep__incl.pdf>
 Package pdftex.def Info: opcode_8hpp__dep__incl.pdf  used on input line 13.
-(pdftex.def)             Requested size: 350.0pt x 20.75099pt.
- [152]) (./program_8hpp.tex <./program_8hpp__incl.pdf>
-<program_8hpp__incl.pdf, id=6775, 674.52pt x 381.425pt>
+(pdftex.def)             Requested size: 350.0pt x 19.73793pt.
+ [161]) (./program_8hpp.tex
+[162] <./program_8hpp__incl.pdf
+
+pdfTeX warning: pdflatex (file ./program_8hpp__incl.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+>
+<program_8hpp__incl.pdf, id=7069, 674.52pt x 381.425pt>
 File: program_8hpp__incl.pdf Graphic file (type pdf)
 <use program_8hpp__incl.pdf>
 Package pdftex.def Info: program_8hpp__incl.pdf  used on input line 21.
 (pdftex.def)             Requested size: 350.0pt x 197.91727pt.
- [153] <./program_8hpp__dep__incl.pdf
+ <./program_8hpp__dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./program_8hpp__dep__incl.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
 >
-<program_8hpp__dep__incl.pdf, id=6789, 3076.49374pt x 269.005pt>
+<program_8hpp__dep__incl.pdf, id=7077, 3234.0825pt x 269.005pt>
 File: program_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use program_8hpp__dep__incl.pdf>
 Package pdftex.def Info: program_8hpp__dep__incl.pdf  used on input line 29.
-(pdftex.def)             Requested size: 350.0pt x 30.60039pt.
+(pdftex.def)             Requested size: 350.0pt x 29.11038pt.
 ) (./singletonObjectPool_8hpp.tex <./singletonObjectPool_8hpp__incl.pdf
 
 pdfTeX warning: pdflatex (file ./singletonObjectPool_8hpp__incl.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
 >
-<singletonObjectPool_8hpp__incl.pdf, id=6808, 253.94875pt x 156.585pt>
+<singletonObjectPool_8hpp__incl.pdf, id=7096, 253.94875pt x 156.585pt>
 File: singletonObjectPool_8hpp__incl.pdf Graphic file (type pdf)
 <use singletonObjectPool_8hpp__incl.pdf>
 Package pdftex.def Info: singletonObjectPool_8hpp__incl.pdf  used on input line
  15.
 (pdftex.def)             Requested size: 253.0pt x 156.0064pt.
- [154] <./singletonObjectPool_8hpp__dep__incl.pdf>
-<singletonObjectPool_8hpp__dep__incl.pdf, id=6825, 3170.84625pt x 459.7175pt>
+ [163] <./singletonObjectPool_8hpp__dep__incl.pdf>
+<singletonObjectPool_8hpp__dep__incl.pdf, id=7113, 2885.78125pt x 459.7175pt>
 File: singletonObjectPool_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use singletonObjectPool_8hpp__dep__incl.pdf>
 Package pdftex.def Info: singletonObjectPool_8hpp__dep__incl.pdf  used on input
  line 23.
-(pdftex.def)             Requested size: 350.0pt x 50.73743pt.
+(pdftex.def)             Requested size: 350.0pt x 55.75294pt.
 ) (./tang_8hpp.tex <./tang_8hpp__incl.pdf
 
 pdfTeX warning: pdflatex (file ./tang_8hpp__incl.pdf): PDF inclusion: multiple 
 pdfs with page group included in a single page
 >
-<tang_8hpp__incl.pdf, id=6843, 727.71875pt x 493.845pt>
+<tang_8hpp__incl.pdf, id=7131, 727.71875pt x 493.845pt>
 File: tang_8hpp__incl.pdf Graphic file (type pdf)
 <use tang_8hpp__incl.pdf>
 Package pdftex.def Info: tang_8hpp__incl.pdf  used on input line 18.
 (pdftex.def)             Requested size: 350.0pt x 237.52516pt.
- [155] <./tang_8hpp__dep__incl.pdf>
-<tang_8hpp__dep__incl.pdf, id=6862, 178.6675pt x 156.585pt>
+ [164] <./tang_8hpp__dep__incl.pdf>
+<tang_8hpp__dep__incl.pdf, id=7150, 178.6675pt x 156.585pt>
 File: tang_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use tang_8hpp__dep__incl.pdf>
 Package pdftex.def Info: tang_8hpp__dep__incl.pdf  used on input line 26.
@@ -3623,19 +3734,19 @@ Package pdftex.def Info: tang_8hpp__dep__incl.pdf  used on input line 26.
 pdfTeX warning: pdflatex (file ./tangBase_8hpp__incl.pdf): PDF inclusion: multi
 ple pdfs with page group included in a single page
 >
-<tangBase_8hpp__incl.pdf, id=6871, 760.8425pt x 437.635pt>
+<tangBase_8hpp__incl.pdf, id=7159, 760.8425pt x 437.635pt>
 File: tangBase_8hpp__incl.pdf Graphic file (type pdf)
 <use tangBase_8hpp__incl.pdf>
 Package pdftex.def Info: tangBase_8hpp__incl.pdf  used on input line 15.
 (pdftex.def)             Requested size: 350.0pt x 201.32121pt.
- [156] <./tangBase_8hpp__dep__incl.pdf>
-<tangBase_8hpp__dep__incl.pdf, id=6886, 297.11pt x 212.795pt>
+ [165] <./tangBase_8hpp__dep__incl.pdf>
+<tangBase_8hpp__dep__incl.pdf, id=7174, 297.11pt x 212.795pt>
 File: tangBase_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use tangBase_8hpp__dep__incl.pdf>
 Package pdftex.def Info: tangBase_8hpp__dep__incl.pdf  used on input line 23.
 (pdftex.def)             Requested size: 296.0pt x 212.00868pt.
-) (./tangScanner_8hpp.tex [157] <./tangScanner_8hpp__incl.pdf>
-<tangScanner_8hpp__incl.pdf, id=6906, 339.2675pt x 156.585pt>
+) (./tangScanner_8hpp.tex [166] <./tangScanner_8hpp__incl.pdf>
+<tangScanner_8hpp__incl.pdf, id=7193, 339.2675pt x 156.585pt>
 File: tangScanner_8hpp__incl.pdf Graphic file (type pdf)
 <use tangScanner_8hpp__incl.pdf>
 Package pdftex.def Info: tangScanner_8hpp__incl.pdf  used on input line 16.
@@ -3645,14 +3756,14 @@ Package pdftex.def Info: tangScanner_8hpp__incl.pdf  used on input line 16.
 pdfTeX warning: pdflatex (file ./tangScanner_8hpp__dep__incl.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >
-<tangScanner_8hpp__dep__incl.pdf, id=6914, 216.81pt x 156.585pt>
+<tangScanner_8hpp__dep__incl.pdf, id=7201, 216.81pt x 156.585pt>
 File: tangScanner_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use tangScanner_8hpp__dep__incl.pdf>
 Package pdftex.def Info: tangScanner_8hpp__dep__incl.pdf  used on input line 24
 .
 (pdftex.def)             Requested size: 216.0pt x 156.00879pt.
-) (./astNode_8cpp.tex [158] <./astNode_8cpp__incl.pdf>
-<astNode_8cpp__incl.pdf, id=6934, 842.14626pt x 493.845pt>
+) (./astNode_8cpp.tex [167] <./astNode_8cpp__incl.pdf>
+<astNode_8cpp__incl.pdf, id=7222, 842.14626pt x 493.845pt>
 File: astNode_8cpp__incl.pdf Graphic file (type pdf)
 <use astNode_8cpp__incl.pdf>
 Package pdftex.def Info: astNode_8cpp__incl.pdf  used on input line 16.
@@ -3663,20 +3774,20 @@ Package pdftex.def Info: astNode_8cpp__incl.pdf  used on input line 16.
 pdfTeX warning: pdflatex (file ./astNodeAssign_8cpp__incl.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
 >
-<astNodeAssign_8cpp__incl.pdf, id=6944, 907.39pt x 550.055pt>
+<astNodeAssign_8cpp__incl.pdf, id=7232, 907.39pt x 550.055pt>
 File: astNodeAssign_8cpp__incl.pdf Graphic file (type pdf)
 <use astNodeAssign_8cpp__incl.pdf>
 Package pdftex.def Info: astNodeAssign_8cpp__incl.pdf  used on input line 17.
 (pdftex.def)             Requested size: 350.0pt x 212.1705pt.
- [159]) (./astNodeBinary_8cpp.tex <./astNodeBinary_8cpp__incl.pdf>
-<astNodeBinary_8cpp__incl.pdf, id=6970, 862.22125pt x 550.055pt>
+ [168]) (./astNodeBinary_8cpp.tex <./astNodeBinary_8cpp__incl.pdf>
+<astNodeBinary_8cpp__incl.pdf, id=7258, 862.22125pt x 550.055pt>
 File: astNodeBinary_8cpp__incl.pdf Graphic file (type pdf)
 <use astNodeBinary_8cpp__incl.pdf>
 Package pdftex.def Info: astNodeBinary_8cpp__incl.pdf  used on input line 16.
 (pdftex.def)             Requested size: 350.0pt x 223.27464pt.
 )
-(./astNodeBlock_8cpp.tex [160] <./astNodeBlock_8cpp__incl.pdf>
-<astNodeBlock_8cpp__incl.pdf, id=6987, 719.68875pt x 550.055pt>
+(./astNodeBlock_8cpp.tex [169] <./astNodeBlock_8cpp__incl.pdf>
+<astNodeBlock_8cpp__incl.pdf, id=7276, 719.68875pt x 550.055pt>
 File: astNodeBlock_8cpp__incl.pdf Graphic file (type pdf)
 <use astNodeBlock_8cpp__incl.pdf>
 Package pdftex.def Info: astNodeBlock_8cpp__incl.pdf  used on input line 16.
@@ -3687,34 +3798,34 @@ Package pdftex.def Info: astNodeBlock_8cpp__incl.pdf  used on input line 16.
 pdfTeX warning: pdflatex (file ./astNodeBoolean_8cpp__incl.pdf): PDF inclusion:
  multiple pdfs with page group included in a single page
 >
-<astNodeBoolean_8cpp__incl.pdf, id=6997, 797.98125pt x 550.055pt>
+<astNodeBoolean_8cpp__incl.pdf, id=7286, 797.98125pt x 550.055pt>
 File: astNodeBoolean_8cpp__incl.pdf Graphic file (type pdf)
 <use astNodeBoolean_8cpp__incl.pdf>
 Package pdftex.def Info: astNodeBoolean_8cpp__incl.pdf  used on input line 16.
 (pdftex.def)             Requested size: 350.0pt x 241.25278pt.
- [161]) (./astNodeCast_8cpp.tex <./astNodeCast_8cpp__incl.pdf>
-<astNodeCast_8cpp__incl.pdf, id=7015, 797.98125pt x 550.055pt>
+ [170]) (./astNodeCast_8cpp.tex <./astNodeCast_8cpp__incl.pdf>
+<astNodeCast_8cpp__incl.pdf, id=7302, 797.98125pt x 550.055pt>
 File: astNodeCast_8cpp__incl.pdf Graphic file (type pdf)
 <use astNodeCast_8cpp__incl.pdf>
 Package pdftex.def Info: astNodeCast_8cpp__incl.pdf  used on input line 16.
 (pdftex.def)             Requested size: 350.0pt x 241.25278pt.
- [162])
+ [171])
 (./astNodeDoWhile_8cpp.tex <./astNodeDoWhile_8cpp__incl.pdf>
-<astNodeDoWhile_8cpp__incl.pdf, id=7031, 862.22125pt x 550.055pt>
+<astNodeDoWhile_8cpp__incl.pdf, id=7318, 862.22125pt x 550.055pt>
 File: astNodeDoWhile_8cpp__incl.pdf Graphic file (type pdf)
 <use astNodeDoWhile_8cpp__incl.pdf>
 Package pdftex.def Info: astNodeDoWhile_8cpp__incl.pdf  used on input line 17.
 (pdftex.def)             Requested size: 350.0pt x 223.27464pt.
- [163])
+ [172])
 (./astNodeFloat_8cpp.tex <./astNodeFloat_8cpp__incl.pdf>
-<astNodeFloat_8cpp__incl.pdf, id=7047, 797.98125pt x 550.055pt>
+<astNodeFloat_8cpp__incl.pdf, id=7334, 797.98125pt x 550.055pt>
 File: astNodeFloat_8cpp__incl.pdf Graphic file (type pdf)
 <use astNodeFloat_8cpp__incl.pdf>
 Package pdftex.def Info: astNodeFloat_8cpp__incl.pdf  used on input line 16.
 (pdftex.def)             Requested size: 350.0pt x 241.25278pt.
 )
-(./astNodeFor_8cpp.tex [164] <./astNodeFor_8cpp__incl.pdf>
-<astNodeFor_8cpp__incl.pdf, id=7064, 862.22125pt x 550.055pt>
+(./astNodeFor_8cpp.tex [173] <./astNodeFor_8cpp__incl.pdf>
+<astNodeFor_8cpp__incl.pdf, id=7352, 862.22125pt x 550.055pt>
 File: astNodeFor_8cpp__incl.pdf Graphic file (type pdf)
 <use astNodeFor_8cpp__incl.pdf>
 Package pdftex.def Info: astNodeFor_8cpp__incl.pdf  used on input line 17.
@@ -3725,52 +3836,59 @@ Package pdftex.def Info: astNodeFor_8cpp__incl.pdf  used on input line 17.
 pdfTeX warning: pdflatex (file ./astNodeIdentifier_8cpp__incl.pdf): PDF inclusi
 on: multiple pdfs with page group included in a single page
 >
-<astNodeIdentifier_8cpp__incl.pdf, id=7074, 714.67pt x 550.055pt>
+<astNodeIdentifier_8cpp__incl.pdf, id=7362, 714.67pt x 550.055pt>
 File: astNodeIdentifier_8cpp__incl.pdf Graphic file (type pdf)
 <use astNodeIdentifier_8cpp__incl.pdf>
 Package pdftex.def Info: astNodeIdentifier_8cpp__incl.pdf  used on input line 1
 6.
 (pdftex.def)             Requested size: 350.0pt x 269.37822pt.
- [165]) (./astNodeIfElse_8cpp.tex <./astNodeIfElse_8cpp__incl.pdf>
-<astNodeIfElse_8cpp__incl.pdf, id=7097, 862.22125pt x 550.055pt>
+ [174]) (./astNodeIfElse_8cpp.tex <./astNodeIfElse_8cpp__incl.pdf>
+<astNodeIfElse_8cpp__incl.pdf, id=7386, 862.22125pt x 550.055pt>
 File: astNodeIfElse_8cpp__incl.pdf Graphic file (type pdf)
 <use astNodeIfElse_8cpp__incl.pdf>
 Package pdftex.def Info: astNodeIfElse_8cpp__incl.pdf  used on input line 17.
 (pdftex.def)             Requested size: 350.0pt x 223.27464pt.
- [166])
+ [175])
 (./astNodeInteger_8cpp.tex <./astNodeInteger_8cpp__incl.pdf>
-<astNodeInteger_8cpp__incl.pdf, id=7113, 797.98125pt x 550.055pt>
+<astNodeInteger_8cpp__incl.pdf, id=7402, 797.98125pt x 550.055pt>
 File: astNodeInteger_8cpp__incl.pdf Graphic file (type pdf)
 <use astNodeInteger_8cpp__incl.pdf>
 Package pdftex.def Info: astNodeInteger_8cpp__incl.pdf  used on input line 16.
 (pdftex.def)             Requested size: 350.0pt x 241.25278pt.
 )
-(./astNodeString_8cpp.tex [167] <./astNodeString_8cpp__incl.pdf>
-<astNodeString_8cpp__incl.pdf, id=7132, 797.98125pt x 550.055pt>
+(./astNodePrint_8cpp.tex [176] <./astNodePrint_8cpp__incl.pdf>
+<astNodePrint_8cpp__incl.pdf, id=7419, 862.22125pt x 550.055pt>
+File: astNodePrint_8cpp__incl.pdf Graphic file (type pdf)
+<use astNodePrint_8cpp__incl.pdf>
+Package pdftex.def Info: astNodePrint_8cpp__incl.pdf  used on input line 16.
+(pdftex.def)             Requested size: 350.0pt x 223.27464pt.
+)
+(./astNodeString_8cpp.tex <./astNodeString_8cpp__incl.pdf
+
+pdfTeX warning: pdflatex (file ./astNodeString_8cpp__incl.pdf): PDF inclusion: 
+multiple pdfs with page group included in a single page
+>
+<astNodeString_8cpp__incl.pdf, id=7429, 797.98125pt x 550.055pt>
 File: astNodeString_8cpp__incl.pdf Graphic file (type pdf)
 <use astNodeString_8cpp__incl.pdf>
 Package pdftex.def Info: astNodeString_8cpp__incl.pdf  used on input line 18.
 (pdftex.def)             Requested size: 350.0pt x 241.25278pt.
-)
-(./astNodeUnary_8cpp.tex <./astNodeUnary_8cpp__incl.pdf
-
-pdfTeX warning: pdflatex (file ./astNodeUnary_8cpp__incl.pdf): PDF inclusion: m
-ultiple pdfs with page group included in a single page
->
-<astNodeUnary_8cpp__incl.pdf, id=7142, 862.22125pt x 550.055pt>
+ [177]) (./astNodeUnary_8cpp.tex <./astNodeUnary_8cpp__incl.pdf>
+<astNodeUnary_8cpp__incl.pdf, id=7445, 862.22125pt x 550.055pt>
 File: astNodeUnary_8cpp__incl.pdf Graphic file (type pdf)
 <use astNodeUnary_8cpp__incl.pdf>
 Package pdftex.def Info: astNodeUnary_8cpp__incl.pdf  used on input line 17.
 (pdftex.def)             Requested size: 350.0pt x 223.27464pt.
- [168]) (./astNodeWhile_8cpp.tex <./astNodeWhile_8cpp__incl.pdf>
-<astNodeWhile_8cpp__incl.pdf, id=7158, 862.22125pt x 550.055pt>
+ [178])
+(./astNodeWhile_8cpp.tex <./astNodeWhile_8cpp__incl.pdf>
+<astNodeWhile_8cpp__incl.pdf, id=7461, 862.22125pt x 550.055pt>
 File: astNodeWhile_8cpp__incl.pdf Graphic file (type pdf)
 <use astNodeWhile_8cpp__incl.pdf>
 Package pdftex.def Info: astNodeWhile_8cpp__incl.pdf  used on input line 17.
 (pdftex.def)             Requested size: 350.0pt x 223.27464pt.
 )
-(./computedExpression_8cpp.tex [169] <./computedExpression_8cpp__incl.pdf>
-<computedExpression_8cpp__incl.pdf, id=7175, 585.18625pt x 437.635pt>
+(./computedExpression_8cpp.tex [179] <./computedExpression_8cpp__incl.pdf>
+<computedExpression_8cpp__incl.pdf, id=7479, 585.18625pt x 437.635pt>
 File: computedExpression_8cpp__incl.pdf Graphic file (type pdf)
 <use computedExpression_8cpp__incl.pdf>
 Package pdftex.def Info: computedExpression_8cpp__incl.pdf  used on input line 
@@ -3783,81 +3901,81 @@ df
 pdfTeX warning: pdflatex (file ./computedExpressionBoolean_8cpp__incl.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
 >
-<computedExpressionBoolean_8cpp__incl.pdf, id=7185, 816.04875pt x 437.635pt>
+<computedExpressionBoolean_8cpp__incl.pdf, id=7490, 816.04875pt x 437.635pt>
 File: computedExpressionBoolean_8cpp__incl.pdf Graphic file (type pdf)
 <use computedExpressionBoolean_8cpp__incl.pdf>
 Package pdftex.def Info: computedExpressionBoolean_8cpp__incl.pdf  used on inpu
 t line 17.
 (pdftex.def)             Requested size: 350.0pt x 187.69858pt.
- [170]) (./computedExpressionError_8cpp.tex <./computedExpressionError_8cpp__in
+ [180]) (./computedExpressionError_8cpp.tex <./computedExpressionError_8cpp__in
 cl.pdf>
-<computedExpressionError_8cpp__incl.pdf, id=7201, 528.97626pt x 437.635pt>
+<computedExpressionError_8cpp__incl.pdf, id=7506, 528.97626pt x 437.635pt>
 File: computedExpressionError_8cpp__incl.pdf Graphic file (type pdf)
 <use computedExpressionError_8cpp__incl.pdf>
 Package pdftex.def Info: computedExpressionError_8cpp__incl.pdf  used on input 
 line 14.
 (pdftex.def)             Requested size: 350.0pt x 289.56119pt.
-) (./computedExpressionFloat_8cpp.tex [171] <./computedExpressionFloat_8cpp__in
+) (./computedExpressionFloat_8cpp.tex [181] <./computedExpressionFloat_8cpp__in
 cl.pdf>
-<computedExpressionFloat_8cpp__incl.pdf, id=7218, 816.04875pt x 437.635pt>
+<computedExpressionFloat_8cpp__incl.pdf, id=7523, 1002.74625pt x 437.635pt>
 File: computedExpressionFloat_8cpp__incl.pdf Graphic file (type pdf)
 <use computedExpressionFloat_8cpp__incl.pdf>
 Package pdftex.def Info: computedExpressionFloat_8cpp__incl.pdf  used on input 
-line 17.
-(pdftex.def)             Requested size: 350.0pt x 187.69858pt.
+line 18.
+(pdftex.def)             Requested size: 350.0pt x 152.75385pt.
 ) (./computedExpressionInteger_8cpp.tex <./computedExpressionInteger_8cpp__incl
 .pdf
 
 pdfTeX warning: pdflatex (file ./computedExpressionInteger_8cpp__incl.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
 >
-<computedExpressionInteger_8cpp__incl.pdf, id=7228, 817.0525pt x 437.635pt>
+<computedExpressionInteger_8cpp__incl.pdf, id=7533, 1003.75pt x 437.635pt>
 File: computedExpressionInteger_8cpp__incl.pdf Graphic file (type pdf)
 <use computedExpressionInteger_8cpp__incl.pdf>
 Package pdftex.def Info: computedExpressionInteger_8cpp__incl.pdf  used on inpu
-t line 17.
-(pdftex.def)             Requested size: 350.0pt x 187.47153pt.
- [172]) (./computedExpressionString_8cpp.tex <./computedExpressionString_8cpp__
+t line 18.
+(pdftex.def)             Requested size: 350.0pt x 152.60025pt.
+ [182]) (./computedExpressionString_8cpp.tex <./computedExpressionString_8cpp__
 incl.pdf>
-<computedExpressionString_8cpp__incl.pdf, id=7245, 628.3475pt x 437.635pt>
+<computedExpressionString_8cpp__incl.pdf, id=7549, 628.3475pt x 437.635pt>
 File: computedExpressionString_8cpp__incl.pdf Graphic file (type pdf)
 <use computedExpressionString_8cpp__incl.pdf>
 Package pdftex.def Info: computedExpressionString_8cpp__incl.pdf  used on input
  line 16.
 (pdftex.def)             Requested size: 350.0pt x 243.76508pt.
-) (./error_8cpp.tex [173] <./error_8cpp__incl.pdf>
-<error_8cpp__incl.pdf, id=7263, 242.9075pt x 269.005pt>
+) (./error_8cpp.tex [183] <./error_8cpp__incl.pdf>
+<error_8cpp__incl.pdf, id=7566, 242.9075pt x 269.005pt>
 File: error_8cpp__incl.pdf Graphic file (type pdf)
 <use error_8cpp__incl.pdf>
 Package pdftex.def Info: error_8cpp__incl.pdf  used on input line 14.
 (pdftex.def)             Requested size: 242.0pt x 267.99867pt.
- [174]
+ [184]
 Underfull \hbox (badness 10000) detected at line 43
 [][][]
  []
 
 ) (./program-dumpBytecode_8cpp.tex <./program-dumpBytecode_8cpp__incl.pdf>
-<program-dumpBytecode_8cpp__incl.pdf, id=7283, 686.565pt x 437.635pt>
+<program-dumpBytecode_8cpp__incl.pdf, id=7587, 686.565pt x 437.635pt>
 File: program-dumpBytecode_8cpp__incl.pdf Graphic file (type pdf)
 <use program-dumpBytecode_8cpp__incl.pdf>
 Package pdftex.def Info: program-dumpBytecode_8cpp__incl.pdf  used on input lin
 e 19.
 (pdftex.def)             Requested size: 350.0pt x 223.0974pt.
 
-[175]) (./program-execute_8cpp.tex <./program-execute_8cpp__incl.pdf>
-<program-execute_8cpp__incl.pdf, id=7303, 1304.875pt x 437.635pt>
+[185]) (./program-execute_8cpp.tex <./program-execute_8cpp__incl.pdf>
+<program-execute_8cpp__incl.pdf, id=7608, 1304.875pt x 437.635pt>
 File: program-execute_8cpp__incl.pdf Graphic file (type pdf)
 <use program-execute_8cpp__incl.pdf>
 Package pdftex.def Info: program-execute_8cpp__incl.pdf  used on input line 22.
 
 (pdftex.def)             Requested size: 350.0pt x 117.38173pt.
- [176])
-(./program_8cpp.tex [177] <./program_8cpp__incl.pdf
+ [186])
+(./program_8cpp.tex [187] <./program_8cpp__incl.pdf
 
 pdfTeX warning: pdflatex (file ./program_8cpp__incl.pdf): PDF inclusion: multip
 le pdfs with page group included in a single page
 >
-<program_8cpp__incl.pdf, id=7334, 896.34875pt x 437.635pt>
+<program_8cpp__incl.pdf, id=7638, 896.34875pt x 437.635pt>
 File: program_8cpp__incl.pdf Graphic file (type pdf)
 <use program_8cpp__incl.pdf>
 Package pdftex.def Info: program_8cpp__incl.pdf  used on input line 19.
@@ -3867,58 +3985,61 @@ Package pdftex.def Info: program_8cpp__incl.pdf  used on input line 19.
 pdfTeX warning: pdflatex (file ./tangBase_8cpp__incl.pdf): PDF inclusion: multi
 ple pdfs with page group included in a single page
 >
-<tangBase_8cpp__incl.pdf, id=7344, 760.8425pt x 493.845pt>
+<tangBase_8cpp__incl.pdf, id=7648, 760.8425pt x 493.845pt>
 File: tangBase_8cpp__incl.pdf Graphic file (type pdf)
 <use tangBase_8cpp__incl.pdf>
 Package pdftex.def Info: tangBase_8cpp__incl.pdf  used on input line 14.
 (pdftex.def)             Requested size: 350.0pt x 227.17899pt.
- [178]) (./test_8cpp.tex <./test_8cpp__incl.pdf>
-<test_8cpp__incl.pdf, id=7359, 923.45pt x 550.055pt>
+ [188]) (./test_8cpp.tex <./test_8cpp__incl.pdf>
+<test_8cpp__incl.pdf, id=7663, 923.45pt x 550.055pt>
 File: test_8cpp__incl.pdf Graphic file (type pdf)
 <use test_8cpp__incl.pdf>
 Package pdftex.def Info: test_8cpp__incl.pdf  used on input line 16.
 (pdftex.def)             Requested size: 350.0pt x 208.47751pt.
- [179])
+ [189])
 (./testGarbageCollected_8cpp.tex <./testGarbageCollected_8cpp__incl.pdf>
-<testGarbageCollected_8cpp__incl.pdf, id=7376, 620.3175pt x 381.425pt>
+<testGarbageCollected_8cpp__incl.pdf, id=7679, 620.3175pt x 381.425pt>
 File: testGarbageCollected_8cpp__incl.pdf Graphic file (type pdf)
 <use testGarbageCollected_8cpp__incl.pdf>
 Package pdftex.def Info: testGarbageCollected_8cpp__incl.pdf  used on input lin
 e 17.
 (pdftex.def)             Requested size: 350.0pt x 215.2087pt.
 
-[180]) (./testSingletonObjectPool_8cpp.tex <./testSingletonObjectPool_8cpp__inc
+[190]) (./testSingletonObjectPool_8cpp.tex <./testSingletonObjectPool_8cpp__inc
 l.pdf
 
 pdfTeX warning: pdflatex (file ./testSingletonObjectPool_8cpp__incl.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >
-<testSingletonObjectPool_8cpp__incl.pdf, id=7418, 477.785pt x 223.83624pt>
+<testSingletonObjectPool_8cpp__incl.pdf, id=7723, 477.785pt x 223.83624pt>
 File: testSingletonObjectPool_8cpp__incl.pdf Graphic file (type pdf)
 <use testSingletonObjectPool_8cpp__incl.pdf>
 Package pdftex.def Info: testSingletonObjectPool_8cpp__incl.pdf  used on input 
 line 18.
 (pdftex.def)             Requested size: 350.0pt x 163.96947pt.
- [181]) [182] (./refman.ind [183
+ [191]) [192] (./refman.ind [193
 
 
 
-] [184] [185] [186] [187] [188]) (./refman.aux)
+] [194] [195] [196] [197] [198] [199
+
+])
+(./refman.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 001C95D63278C2675E6B1EF6770397AF;105724.
+(rerunfilecheck)             Checksum: A759478F16868DC54D740D1084CD554C;109700.
 
  ) 
 Here is how much of TeX's memory you used:
- 21501 strings out of 480247
- 419021 string characters out of 5896150
- 729237 words of memory out of 5000000
- 37433 multiletter control sequences out of 15000+600000
+ 21669 strings out of 480247
+ 425488 string characters out of 5896150
+ 734608 words of memory out of 5000000
+ 37537 multiletter control sequences out of 15000+600000
  536529 words of font info for 119 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 99i,16n,117p,1076b,635s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,16n,117p,1184b,635s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist
@@ -3934,10 +4055,10 @@ e/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist
 /urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvet
 ic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.p
 fb>
-Output written on refman.pdf (202 pages, 1750681 bytes).
+Output written on refman.pdf (213 pages, 1819994 bytes).
 PDF statistics:
- 8410 PDF objects out of 8907 (max. 8388607)
- 7446 compressed objects within 75 object streams
- 1494 named destinations out of 1728 (max. 500000)
- 4514 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 8760 PDF objects out of 8907 (max. 8388607)
+ 7755 compressed objects within 78 object streams
+ 1552 named destinations out of 1728 (max. 500000)
+ 4693 words of extra memory for PDF output out of 10000 (max. 10000000)
 

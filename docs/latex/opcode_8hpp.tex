@@ -50,6 +50,7 @@ enum class \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04}{Tang\
 \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a0a109fb07a3a6984f50ffe52dd2c213b}{CASTINTEGER}}
 , \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04af721c36554a56d3695dda4af2863efbb}{CASTFLOAT}}
 , \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620}{CASTBOOLEAN}}
+, \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04af96eee4e48ee90430f17fb3a8388507b}{PRINT}}
  \}
 \end{DoxyCompactItemize}
 
@@ -173,6 +174,10 @@ CASTFLOAT&Pop a val, typecast to float, push. \\
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{CASTBOOLEAN@{CASTBOOLEAN}!opcode.hpp@{opcode.hpp}}\index{opcode.hpp@{opcode.hpp}!CASTBOOLEAN@{CASTBOOLEAN}}}\mbox{\Hypertarget{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620}\label{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620}} 
 CASTBOOLEAN&Pop a val, typecast to boolean, push. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PRINT@{PRINT}!opcode.hpp@{opcode.hpp}}\index{opcode.hpp@{opcode.hpp}!PRINT@{PRINT}}}\mbox{\Hypertarget{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04af96eee4e48ee90430f17fb3a8388507b}\label{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04af96eee4e48ee90430f17fb3a8388507b}} 
+PRINT&Pop val, print(val), push error or NULL. \\
 \hline
 
 \end{DoxyEnumFields}

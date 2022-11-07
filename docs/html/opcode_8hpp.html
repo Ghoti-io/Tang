@@ -97,7 +97,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="opcode_8hpp__dep__incl.png" border="0" usemap="#ainclude_2opcode_8hppdep" alt=""/></div>
 <map name="ainclude_2opcode_8hppdep" id="ainclude_2opcode_8hppdep">
-<area shape="rect" title="Declare the Opcodes used in the Bytecode representation of a program." alt="" coords="1589,5,1737,32"/>
+<area shape="rect" title="Declare the Opcodes used in the Bytecode representation of a program." alt="" coords="1684,5,1832,32"/>
 <area shape="rect" href="astNode_8cpp.html" title="Define the Tang::AstNode class." alt="" coords="5,80,132,107"/>
 <area shape="rect" href="astNodeAssign_8cpp.html" title="Define the Tang::AstNodeAssign class." alt="" coords="156,80,325,107"/>
 <area shape="rect" href="astNodeBinary_8cpp.html" title="Define the Tang::AstNodeBinary class." alt="" coords="349,80,516,107"/>
@@ -110,12 +110,13 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="rect" href="astNodeIdentifier_8cpp.html" title="Define the Tang::AstNodeIdentifier class." alt="" coords="1667,80,1849,107"/>
 <area shape="rect" href="astNodeIfElse_8cpp.html" title="Define the Tang::AstNodeIfElse class." alt="" coords="1874,80,2037,107"/>
 <area shape="rect" href="astNodeInteger_8cpp.html" title="Define the Tang::AstNodeInteger class." alt="" coords="2061,80,2231,107"/>
-<area shape="rect" href="astNodeString_8cpp.html" title="Define the Tang::AstNodeString class." alt="" coords="2256,80,2420,107"/>
-<area shape="rect" href="astNodeUnary_8cpp.html" title="Define the Tang::AstNodeUnary class." alt="" coords="2445,80,2607,107"/>
-<area shape="rect" href="astNodeWhile_8cpp.html" title="Define the Tang::AstNodeWhile class." alt="" coords="2631,80,2794,107"/>
-<area shape="rect" href="program-dumpBytecode_8cpp.html" title="Define the Tang::Program::dumpBytecode method." alt="" coords="2819,80,3049,107"/>
-<area shape="rect" href="program-execute_8cpp.html" title="Define the Tang::Program::execute method." alt="" coords="3073,80,3256,107"/>
-<area shape="rect" href="program_8cpp.html" title="Define the Tang::Program class." alt="" coords="3280,80,3407,107"/>
+<area shape="rect" href="astNodePrint_8cpp.html" title="Define the Tang::AstNodePrint class." alt="" coords="2256,80,2412,107"/>
+<area shape="rect" href="astNodeString_8cpp.html" title="Define the Tang::AstNodeString class." alt="" coords="2436,80,2600,107"/>
+<area shape="rect" href="astNodeUnary_8cpp.html" title="Define the Tang::AstNodeUnary class." alt="" coords="2625,80,2787,107"/>
+<area shape="rect" href="astNodeWhile_8cpp.html" title="Define the Tang::AstNodeWhile class." alt="" coords="2811,80,2974,107"/>
+<area shape="rect" href="program-dumpBytecode_8cpp.html" title="Define the Tang::Program::dumpBytecode method." alt="" coords="2999,80,3229,107"/>
+<area shape="rect" href="program-execute_8cpp.html" title="Define the Tang::Program::execute method." alt="" coords="3253,80,3436,107"/>
+<area shape="rect" href="program_8cpp.html" title="Define the Tang::Program class." alt="" coords="3460,80,3587,107"/>
 </map>
 </div>
 </div>
@@ -157,6 +158,7 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a0a109fb07a3a6984f50ffe52dd2c213b">CASTINTEGER</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af721c36554a56d3695dda4af2863efbb">CASTFLOAT</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620">CASTBOOLEAN</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af96eee4e48ee90430f17fb3a8388507b">PRINT</a>
 <br />
  }</td></tr>
 <tr class="separator:a3db69378da7fea0383c531f8cae78f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -237,6 +239,8 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04af721c36554a56d3695dda4af2863efbb"></a>CASTFLOAT&#160;</td><td class="fielddoc"><p>Pop a val, typecast to float, push. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620"></a>CASTBOOLEAN&#160;</td><td class="fielddoc"><p>Pop a val, typecast to boolean, push. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04af96eee4e48ee90430f17fb3a8388507b"></a>PRINT&#160;</td><td class="fielddoc"><p>Pop val, print(val), push error or NULL. </p>
 </td></tr>
 </table>
 

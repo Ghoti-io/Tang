@@ -27,6 +27,7 @@ var opcode_8hpp =
       [ "NEQ", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a375b332cf2e0c6d522baf007ef7cb554", null ],
       [ "CASTINTEGER", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a0a109fb07a3a6984f50ffe52dd2c213b", null ],
       [ "CASTFLOAT", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af721c36554a56d3695dda4af2863efbb", null ],
-      [ "CASTBOOLEAN", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620", null ]
+      [ "CASTBOOLEAN", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620", null ],
+      [ "PRINT", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af96eee4e48ee90430f17fb3a8388507b", null ]
     ] ]
 ];

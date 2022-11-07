@@ -12,6 +12,7 @@ var classTang_1_1ComputedExpressionBoolean =
     [ "__multiply", "classTang_1_1ComputedExpressionBoolean.html#a39df4abc066123ec2d634e921be40d21", null ],
     [ "__negative", "classTang_1_1ComputedExpressionBoolean.html#a8e779d014cbb877f078d61a2ff91603d", null ],
     [ "__not", "classTang_1_1ComputedExpressionBoolean.html#a920fe1b19024cf867179e4eada53ed32", null ],
+    [ "__string", "classTang_1_1ComputedExpressionBoolean.html#a14a57cffe9fb44b0d5f34d06afd0db1b", null ],
     [ "__subtract", "classTang_1_1ComputedExpressionBoolean.html#ab0d79debcd475a5063e574c10f1715ff", null ],
     [ "dump", "classTang_1_1ComputedExpressionBoolean.html#a0910cd4800443ec70f6888cf563fbe57", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionBoolean.html#aaf17b861d5a8ab290ff01cc2fe8acf55", null ],
