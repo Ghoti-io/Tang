@@ -74,3 +74,11 @@ void AstNodeIfElse::collectIdentifiers(Program & program) const {
   }
 }
 
+void AstNodeIfElse::collectStrings(Program & program) const {
+  this->condition->collectStrings(program);
+  this->thenBlock->collectStrings(program);
+  if (this->elseBlock) {
+    this->elseBlock->collectStrings(program);
+  }
+}
+

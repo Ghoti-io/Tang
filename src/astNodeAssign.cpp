@@ -26,6 +26,11 @@ void AstNodeAssign::collectIdentifiers(Program & program) const {
   this->rhs->collectIdentifiers(program);
 }
 
+void AstNodeAssign::collectStrings(Program & program) const {
+  this->lhs->collectStrings(program);
+  this->rhs->collectStrings(program);
+}
+
 void AstNodeAssign::compile(Tang::Program & program) const {
   // Compile the rhs, leaving the value on the stack.
   this->rhs->compile(program);

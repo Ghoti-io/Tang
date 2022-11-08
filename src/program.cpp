@@ -8,6 +8,7 @@
 #include "opcode.hpp"
 #include "tangScanner.hpp"
 #include "tangParser.hpp"
+#include "astNodeString.hpp"
 #include "computedExpressionError.hpp"
 
 using namespace std;
@@ -36,12 +37,27 @@ void Program::compile() {
   // Prepare the identifier mapping stack with an empty map.
   this->identifierStack.push_back(map<string,size_t>{});
 
+  // Prepare the string mapping stack with an empty map.
+  this->stringStack.push_back(map<string,size_t>{});
+
   // Gather all of the identifiers in the current scope into the current map.
   this->ast->collectIdentifiers(*this);
+
+  // Gather all of the strings in the current scope into the current map.
+  this->ast->collectStrings(*this);
 
   // Reserve spaces on the stack for each variable.
   for ([[maybe_unused]] const auto & x : this->identifierStack.back()) {
     this->bytecode.push_back((uint64_t)Opcode::NULLVAL);
+  }
+
+  // Reserve spaces on the stack for each string.
+  vector<string> stringLiterals(this->stringStack.back().size());
+  for (auto & item : this->stringStack.back()) {
+    stringLiterals[item.second] = item.first;
+  }
+  for (auto & literal : stringLiterals) {
+    AstNodeString(literal, Tang::location{}).compileLiteral(*this);
   }
 
   // Compile the program.

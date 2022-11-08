@@ -63,3 +63,10 @@ void AstNodeFor::collectIdentifiers(Program & program) const {
   this->codeBlock->collectIdentifiers(program);
 }
 
+void AstNodeFor::collectStrings(Program & program) const {
+  this->initialization->collectStrings(program);
+  this->condition->collectStrings(program);
+  this->increment->collectStrings(program);
+  this->codeBlock->collectStrings(program);
+}
+

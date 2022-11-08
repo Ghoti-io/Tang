@@ -24,6 +24,8 @@ namespace Tang {
 
     virtual std::string dump(std::string indent = "") const override;
     virtual void compile(Tang::Program & program) const override;
+    virtual void collectStrings(Program & program) const override;
+    void compileLiteral(Tang::Program & program) const;
 
   private:
     /**

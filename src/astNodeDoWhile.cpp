@@ -43,3 +43,8 @@ void AstNodeDoWhile::collectIdentifiers(Program & program) const {
   this->codeBlock->collectIdentifiers(program);
 }
 
+void AstNodeDoWhile::collectStrings(Program & program) const {
+  this->condition->collectStrings(program);
+  this->codeBlock->collectStrings(program);
+}
+

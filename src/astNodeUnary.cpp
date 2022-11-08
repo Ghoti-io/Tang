@@ -25,6 +25,10 @@ void AstNodeUnary::collectIdentifiers(Program & program) const {
   this->operand->collectIdentifiers(program);
 }
 
+void AstNodeUnary::collectStrings(Program & program) const {
+  this->operand->collectStrings(program);
+}
+
 void AstNodeUnary::compile(Tang::Program & program) const {
   this->operand->compile(program);
   switch (this->op) {

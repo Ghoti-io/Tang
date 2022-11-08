@@ -108,6 +108,11 @@ namespace Tang {
     std::vector<std::map<std::string, size_t>> identifierStack;
 
     /**
+     * Stack of mappings of strings to their stack locations.
+     */
+    std::vector<std::map<std::string, size_t>> stringStack;
+
+    /**
      * Set the target address of a Jump opcode.
      *
      * @param opcodeAddress The location of the jump statement.

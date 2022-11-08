@@ -41,6 +41,11 @@ void AstNodeBinary::collectIdentifiers(Program & program) const {
   this->rhs->collectIdentifiers(program);
 }
 
+void AstNodeBinary::collectStrings(Program & program) const {
+  this->lhs->collectStrings(program);
+  this->rhs->collectStrings(program);
+}
+
 void AstNodeBinary::compile(Tang::Program & program) const {
   // All binary operators require that the lhs be compiled first.
   this->lhs->compile(program);

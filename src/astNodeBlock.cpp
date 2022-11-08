@@ -26,6 +26,12 @@ void AstNodeBlock::collectIdentifiers(Program & program) const {
   }
 }
 
+void AstNodeBlock::collectStrings(Program & program) const {
+  for (auto x : this->statements) {
+    x->collectStrings(program);
+  }
+}
+
 void AstNodeBlock::compile(Tang::Program & program) const {
   if (this->statements.size()) {
     // Compile all but the last statement, adding POP after the statement.

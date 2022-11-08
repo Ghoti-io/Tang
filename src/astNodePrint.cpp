@@ -24,6 +24,10 @@ void AstNodePrint::collectIdentifiers(Program & program) const {
   this->expression->collectIdentifiers(program);
 }
 
+void AstNodePrint::collectStrings(Program & program) const {
+  this->expression->collectStrings(program);
+}
+
 void AstNodePrint::compile(Tang::Program & program) const {
   this->expression->compile(program);
   switch (this->type) {

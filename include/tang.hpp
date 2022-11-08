@@ -31,7 +31,6 @@
 //
 //
 // TODO What's next:
-// * string literal on stack
 // * function declaration (ast) and calling
 // * continue and break
 // * TangString

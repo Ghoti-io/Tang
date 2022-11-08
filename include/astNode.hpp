@@ -52,6 +52,13 @@ namespace Tang {
      */
     virtual void collectIdentifiers(Program & program) const;
 
+    /**
+     * Compile a list of all string constants in the scope.
+     *
+     * @param program The Tang::Program that is being compiled.
+     */
+    virtual void collectStrings(Program & program) const;
+
   private:
     /**
      * The location associated with this node.
