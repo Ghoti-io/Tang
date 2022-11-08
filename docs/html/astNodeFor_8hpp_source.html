@@ -101,25 +101,27 @@ $(document).ready(function(){initNavTree('astNodeFor_8hpp_source.html',''); init
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="classTang_1_1AstNodeFor.html#ae90bac4d66394687615f93f50bfa4872">dump</a>(std::string indent = <span class="stringliteral">&quot;&quot;</span>) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classTang_1_1AstNodeFor.html#ab2da77ba66b9f359937e5992027ef192">compile</a>(<a class="code" href="classTang_1_1Program.html">Tang::Program</a> &amp; program) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classTang_1_1AstNodeFor.html#a0a5baa49c223998f64ab64d7613a4d5e">collectIdentifiers</a>(<a class="code" href="classTang_1_1Program.html">Program</a> &amp; program) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    shared_ptr&lt;AstNode&gt; initialization;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    shared_ptr&lt;AstNode&gt; condition;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    shared_ptr&lt;AstNode&gt; increment;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    shared_ptr&lt;AstNode&gt; codeBlock;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  };</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// TANG_ASTNODEFOR_HPP</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classTang_1_1AstNodeFor.html#aca80086b3e29aa18e5987e87d13f0df0">collectStrings</a>(<a class="code" href="classTang_1_1Program.html">Program</a> &amp; program) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    shared_ptr&lt;AstNode&gt; initialization;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    shared_ptr&lt;AstNode&gt; condition;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    shared_ptr&lt;AstNode&gt; increment;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    shared_ptr&lt;AstNode&gt; codeBlock;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  };</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// TANG_ASTNODEFOR_HPP</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="ttc" id="aastNode_8hpp_html"><div class="ttname"><a href="astNode_8hpp.html">astNode.hpp</a></div><div class="ttdoc">Declare the Tang::AstNode base class.</div></div>
 <div class="ttc" id="aclassTang_1_1AstNodeFor_html"><div class="ttname"><a href="classTang_1_1AstNodeFor.html">Tang::AstNodeFor</a></div><div class="ttdoc">An AstNode that represents an if() statement.</div><div class="ttdef"><b>Definition:</b> astNodeFor.hpp:15</div></div>
 <div class="ttc" id="aclassTang_1_1AstNodeFor_html_a0a5baa49c223998f64ab64d7613a4d5e"><div class="ttname"><a href="classTang_1_1AstNodeFor.html#a0a5baa49c223998f64ab64d7613a4d5e">Tang::AstNodeFor::collectIdentifiers</a></div><div class="ttdeci">virtual void collectIdentifiers(Program &amp;program) const override</div><div class="ttdoc">Compile a list of all variables in the scope.</div><div class="ttdef"><b>Definition:</b> astNodeFor.cpp:59</div></div>
 <div class="ttc" id="aclassTang_1_1AstNodeFor_html_a31e07e4e686d9bd033e1d8ad117d4cb3"><div class="ttname"><a href="classTang_1_1AstNodeFor.html#a31e07e4e686d9bd033e1d8ad117d4cb3">Tang::AstNodeFor::AstNodeFor</a></div><div class="ttdeci">AstNodeFor(shared_ptr&lt; AstNode &gt; initialization, shared_ptr&lt; AstNode &gt; condition, shared_ptr&lt; AstNode &gt; increment, shared_ptr&lt; AstNode &gt; codeBlock, Tang::location location)</div><div class="ttdoc">The constructor.</div><div class="ttdef"><b>Definition:</b> astNodeFor.cpp:14</div></div>
 <div class="ttc" id="aclassTang_1_1AstNodeFor_html_ab2da77ba66b9f359937e5992027ef192"><div class="ttname"><a href="classTang_1_1AstNodeFor.html#ab2da77ba66b9f359937e5992027ef192">Tang::AstNodeFor::compile</a></div><div class="ttdeci">virtual void compile(Tang::Program &amp;program) const override</div><div class="ttdoc">Compile the ast of the provided Tang::Program.</div><div class="ttdef"><b>Definition:</b> astNodeFor.cpp:28</div></div>
+<div class="ttc" id="aclassTang_1_1AstNodeFor_html_aca80086b3e29aa18e5987e87d13f0df0"><div class="ttname"><a href="classTang_1_1AstNodeFor.html#aca80086b3e29aa18e5987e87d13f0df0">Tang::AstNodeFor::collectStrings</a></div><div class="ttdeci">virtual void collectStrings(Program &amp;program) const override</div><div class="ttdoc">Compile a list of all string constants in the scope.</div><div class="ttdef"><b>Definition:</b> astNodeFor.cpp:66</div></div>
 <div class="ttc" id="aclassTang_1_1AstNodeFor_html_ae90bac4d66394687615f93f50bfa4872"><div class="ttname"><a href="classTang_1_1AstNodeFor.html#ae90bac4d66394687615f93f50bfa4872">Tang::AstNodeFor::dump</a></div><div class="ttdeci">virtual std::string dump(std::string indent=&quot;&quot;) const override</div><div class="ttdoc">Return a string that describes the contents of the node.</div><div class="ttdef"><b>Definition:</b> astNodeFor.cpp:16</div></div>
 <div class="ttc" id="aclassTang_1_1AstNode_html"><div class="ttname"><a href="classTang_1_1AstNode.html">Tang::AstNode</a></div><div class="ttdoc">Base class for representing nodes of an Abstract Syntax Tree (AST).</div><div class="ttdef"><b>Definition:</b> astNode.hpp:24</div></div>
 <div class="ttc" id="aclassTang_1_1Program_html"><div class="ttname"><a href="classTang_1_1Program.html">Tang::Program</a></div><div class="ttdoc">Represents a compiled script or template that may be executed.</div><div class="ttdef"><b>Definition:</b> program.hpp:29</div></div>

@@ -105,21 +105,24 @@ $(document).ready(function(){initNavTree('astNode_8hpp_source.html',''); initRes
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classTang_1_1AstNode.html#aeb0797e0870237b6adb6398fc81ebe6b">~AstNode</a>();</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="classTang_1_1AstNode.html#a9884742e4b32db78c0257d0b0904d05f">dump</a>(std::string indent = <span class="stringliteral">&quot;&quot;</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classTang_1_1AstNode.html#a390f8887c418f972d75e968f1274b2cb">compile</a>(<a class="code" href="classTang_1_1Program.html">Tang::Program</a> &amp; program) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classTang_1_1AstNode.html#a804f9247f774f9444ee7e8db7e7d3e4e">collectIdentifiers</a>(<a class="code" href="classTang_1_1Program.html">Program</a> &amp; program) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="classTang_1_1location.html">Tang::location</a> <a class="code" href="classTang_1_1location.html">location</a>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  };</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// TANG_ASTNODE_HPP</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="classTang_1_1AstNode.html#a9884742e4b32db78c0257d0b0904d05f">dump</a>(std::string indent = <span class="stringliteral">&quot;&quot;</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classTang_1_1AstNode.html#a390f8887c418f972d75e968f1274b2cb">compile</a>(<a class="code" href="classTang_1_1Program.html">Tang::Program</a> &amp; program) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classTang_1_1AstNode.html#a804f9247f774f9444ee7e8db7e7d3e4e">collectIdentifiers</a>(<a class="code" href="classTang_1_1Program.html">Program</a> &amp; program) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classTang_1_1AstNode.html#a32b4e64d2333d842b2004872336f5a81">collectStrings</a>(<a class="code" href="classTang_1_1Program.html">Program</a> &amp; program) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="classTang_1_1location.html">Tang::location</a> <a class="code" href="classTang_1_1location.html">location</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  };</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// TANG_ASTNODE_HPP</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
 <div class="ttc" id="aclassTang_1_1AstNode_html"><div class="ttname"><a href="classTang_1_1AstNode.html">Tang::AstNode</a></div><div class="ttdoc">Base class for representing nodes of an Abstract Syntax Tree (AST).</div><div class="ttdef"><b>Definition:</b> astNode.hpp:24</div></div>
+<div class="ttc" id="aclassTang_1_1AstNode_html_a32b4e64d2333d842b2004872336f5a81"><div class="ttname"><a href="classTang_1_1AstNode.html#a32b4e64d2333d842b2004872336f5a81">Tang::AstNode::collectStrings</a></div><div class="ttdeci">virtual void collectStrings(Program &amp;program) const</div><div class="ttdoc">Compile a list of all string constants in the scope.</div><div class="ttdef"><b>Definition:</b> astNode.cpp:37</div></div>
 <div class="ttc" id="aclassTang_1_1AstNode_html_a390f8887c418f972d75e968f1274b2cb"><div class="ttname"><a href="classTang_1_1AstNode.html#a390f8887c418f972d75e968f1274b2cb">Tang::AstNode::compile</a></div><div class="ttdeci">virtual void compile(Tang::Program &amp;program) const</div><div class="ttdoc">Compile the ast of the provided Tang::Program.</div><div class="ttdef"><b>Definition:</b> astNode.cpp:26</div></div>
 <div class="ttc" id="aclassTang_1_1AstNode_html_a7b8d92e81c4497aa330460a870708578"><div class="ttname"><a href="classTang_1_1AstNode.html#a7b8d92e81c4497aa330460a870708578">Tang::AstNode::AstNode</a></div><div class="ttdeci">AstNode(Tang::location location)</div><div class="ttdoc">The generic constructor.</div><div class="ttdef"><b>Definition:</b> astNode.cpp:13</div></div>
 <div class="ttc" id="aclassTang_1_1AstNode_html_a804f9247f774f9444ee7e8db7e7d3e4e"><div class="ttname"><a href="classTang_1_1AstNode.html#a804f9247f774f9444ee7e8db7e7d3e4e">Tang::AstNode::collectIdentifiers</a></div><div class="ttdeci">virtual void collectIdentifiers(Program &amp;program) const</div><div class="ttdoc">Compile a list of all variables in the scope.</div><div class="ttdef"><b>Definition:</b> astNode.cpp:35</div></div>

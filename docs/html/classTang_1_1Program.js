@@ -14,5 +14,6 @@ var classTang_1_1Program =
     [ "getResult", "classTang_1_1Program.html#a84b2e5e25f57eea224d1c04f1f3741eb", null ],
     [ "setJumpTarget", "classTang_1_1Program.html#a044aecf4340fe7379c588b62562459bc", null ],
     [ "identifierStack", "classTang_1_1Program.html#a440bf2cdcd08fe6b2b0c2c19c22fa276", null ],
-    [ "out", "classTang_1_1Program.html#a81bee7c0545c053eee44d4381295e193", null ]
+    [ "out", "classTang_1_1Program.html#a81bee7c0545c053eee44d4381295e193", null ],
+    [ "stringStack", "classTang_1_1Program.html#aae4297c7f590e95eadc98f3c09f9dae9", null ]
 ];

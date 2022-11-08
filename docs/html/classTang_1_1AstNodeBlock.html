@@ -119,17 +119,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a47307004cf670b57e2709cd80cf7fcb6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeBlock.html#a47307004cf670b57e2709cd80cf7fcb6">AstNodeBlock</a> (const std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt;&gt; &amp;statements, <a class="el" href="classTang_1_1location.html">Tang::location</a> <a class="el" href="classTang_1_1location.html">location</a>)</td></tr>
 <tr class="memdesc:a47307004cf670b57e2709cd80cf7fcb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="classTang_1_1AstNodeBlock.html#a47307004cf670b57e2709cd80cf7fcb6">More...</a><br /></td></tr>
 <tr class="separator:a47307004cf670b57e2709cd80cf7fcb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa62f013125ccc52c6b37abe6267c9427"><td class="memItemLeft" align="right" valign="top"><a id="aa62f013125ccc52c6b37abe6267c9427"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeBlock.html#aa62f013125ccc52c6b37abe6267c9427">dump</a> (std::string indent=&quot;&quot;) const override</td></tr>
-<tr class="memdesc:aa62f013125ccc52c6b37abe6267c9427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string that describes the contents of the node. <br /></td></tr>
+<tr class="memitem:aa62f013125ccc52c6b37abe6267c9427"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeBlock.html#aa62f013125ccc52c6b37abe6267c9427">dump</a> (std::string indent=&quot;&quot;) const override</td></tr>
+<tr class="memdesc:aa62f013125ccc52c6b37abe6267c9427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string that describes the contents of the node.  <a href="classTang_1_1AstNodeBlock.html#aa62f013125ccc52c6b37abe6267c9427">More...</a><br /></td></tr>
 <tr class="separator:aa62f013125ccc52c6b37abe6267c9427"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76de4b4f4025e3c2376a514dd4b7fae4"><td class="memItemLeft" align="right" valign="top"><a id="a76de4b4f4025e3c2376a514dd4b7fae4"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeBlock.html#a76de4b4f4025e3c2376a514dd4b7fae4">compile</a> (<a class="el" href="classTang_1_1Program.html">Tang::Program</a> &amp;program) const override</td></tr>
-<tr class="memdesc:a76de4b4f4025e3c2376a514dd4b7fae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile the ast of the provided <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a>. <br /></td></tr>
+<tr class="memitem:a76de4b4f4025e3c2376a514dd4b7fae4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeBlock.html#a76de4b4f4025e3c2376a514dd4b7fae4">compile</a> (<a class="el" href="classTang_1_1Program.html">Tang::Program</a> &amp;program) const override</td></tr>
+<tr class="memdesc:a76de4b4f4025e3c2376a514dd4b7fae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile the ast of the provided <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a>.  <a href="classTang_1_1AstNodeBlock.html#a76de4b4f4025e3c2376a514dd4b7fae4">More...</a><br /></td></tr>
 <tr class="separator:a76de4b4f4025e3c2376a514dd4b7fae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a490a42690bd3ef0f3574cb947102a40d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeBlock.html#a490a42690bd3ef0f3574cb947102a40d">collectIdentifiers</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program) const override</td></tr>
 <tr class="memdesc:a490a42690bd3ef0f3574cb947102a40d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a list of all variables in the scope.  <a href="classTang_1_1AstNodeBlock.html#a490a42690bd3ef0f3574cb947102a40d">More...</a><br /></td></tr>
 <tr class="separator:a490a42690bd3ef0f3574cb947102a40d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2d5aa49befa311c8c97898ee4d759a2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeBlock.html#ad2d5aa49befa311c8c97898ee4d759a2">collectStrings</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program) const override</td></tr>
+<tr class="memdesc:ad2d5aa49befa311c8c97898ee4d759a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a list of all string constants in the scope.  <a href="classTang_1_1AstNodeBlock.html#ad2d5aa49befa311c8c97898ee4d759a2">More...</a><br /></td></tr>
+<tr class="separator:ad2d5aa49befa311c8c97898ee4d759a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that represents a code block. </p>
@@ -205,6 +206,124 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </dl>
 
 <p>Reimplemented from <a class="el" href="classTang_1_1AstNode.html#a804f9247f774f9444ee7e8db7e7d3e4e">Tang::AstNode</a>.</p>
+
+</div>
+</div>
+<a id="ad2d5aa49befa311c8c97898ee4d759a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2d5aa49befa311c8c97898ee4d759a2">&#9670;&nbsp;</a></span>collectStrings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AstNodeBlock::collectStrings </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classTang_1_1Program.html">Program</a> &amp;&#160;</td>
+          <td class="paramname"><em>program</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compile a list of all string constants in the scope. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">program</td><td>The <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a> that is being compiled. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classTang_1_1AstNode.html#a32b4e64d2333d842b2004872336f5a81">Tang::AstNode</a>.</p>
+
+</div>
+</div>
+<a id="a76de4b4f4025e3c2376a514dd4b7fae4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76de4b4f4025e3c2376a514dd4b7fae4">&#9670;&nbsp;</a></span>compile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AstNodeBlock::compile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classTang_1_1Program.html">Tang::Program</a> &amp;&#160;</td>
+          <td class="paramname"><em>program</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compile the ast of the provided <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">program</td><td>The <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Program</a> which will hold the generated Bytecode. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classTang_1_1AstNode.html#a390f8887c418f972d75e968f1274b2cb">Tang::AstNode</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTang_1_1AstNodeBlock_a76de4b4f4025e3c2376a514dd4b7fae4_cgraph.png" border="0" usemap="#aclassTang_1_1AstNodeBlock_a76de4b4f4025e3c2376a514dd4b7fae4_cgraph" alt=""/></div>
+<map name="aclassTang_1_1AstNodeBlock_a76de4b4f4025e3c2376a514dd4b7fae4_cgraph" id="aclassTang_1_1AstNodeBlock_a76de4b4f4025e3c2376a514dd4b7fae4_cgraph">
+<area shape="rect" title="Compile the ast of the provided Tang::Program." alt="" coords="5,5,156,47"/>
+<area shape="rect" href="classTang_1_1Program.html#a4fd12230e463c5dbc01470ea446fcb11" title="Add a uint64_t to the Bytecode." alt="" coords="204,13,412,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa62f013125ccc52c6b37abe6267c9427"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa62f013125ccc52c6b37abe6267c9427">&#9670;&nbsp;</a></span>dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string AstNodeBlock::dump </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>indent</em> = <code>&quot;&quot;</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return a string that describes the contents of the node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">indent</td><td>A string used to indent the dump. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The value as a string. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classTang_1_1AstNode.html#a9884742e4b32db78c0257d0b0904d05f">Tang::AstNode</a>.</p>
 
 </div>
 </div>
