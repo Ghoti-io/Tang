@@ -14,6 +14,7 @@ var hierarchy =
       [ "Tang::AstNodeInteger", "classTang_1_1AstNodeInteger.html", null ],
       [ "Tang::AstNodePrint", "classTang_1_1AstNodePrint.html", null ],
       [ "Tang::AstNodeString", "classTang_1_1AstNodeString.html", null ],
+      [ "Tang::AstNodeTernary", "classTang_1_1AstNodeTernary.html", null ],
       [ "Tang::AstNodeUnary", "classTang_1_1AstNodeUnary.html", null ],
       [ "Tang::AstNodeWhile", "classTang_1_1AstNodeWhile.html", null ]
     ] ],

@@ -1,0 +1,167 @@
+\hypertarget{classTang_1_1AstNodeTernary}{}\doxysection{Tang\+::Ast\+Node\+Ternary Class Reference}
+\label{classTang_1_1AstNodeTernary}\index{Tang::AstNodeTernary@{Tang::AstNodeTernary}}
+
+
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a ternary expression.  
+
+
+
+
+{\ttfamily \#include $<$ast\+Node\+Ternary.\+hpp$>$}
+
+
+
+Inheritance diagram for Tang\+::Ast\+Node\+Ternary\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classTang_1_1AstNodeTernary__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tang\+::Ast\+Node\+Ternary\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classTang_1_1AstNodeTernary__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTang_1_1AstNodeTernary_a97fce073d6fe6caf68b2d64fad8b07c6}{Ast\+Node\+Ternary}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ condition, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ true\+Expression, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ false\+Expression, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeTernary_a82753605540abde7c343a8a7818af074}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
+\begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTang_1_1AstNodeTernary_ab5fd3ddab7bd7b2aa9c3a90865a40968}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const override
+\begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTang_1_1AstNodeTernary_af2593e1a23f5afb597b296c435b359d8}{collect\+Identifiers}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program) const override
+\begin{DoxyCompactList}\small\item\em Compile a list of all variables in the scope. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTang_1_1AstNodeTernary_a12c42f84e0092b4429efd58e39c5251f}{collect\+Strings}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program) const override
+\begin{DoxyCompactList}\small\item\em Compile a list of all string constants in the scope. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a ternary expression. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeTernary_a97fce073d6fe6caf68b2d64fad8b07c6}\label{classTang_1_1AstNodeTernary_a97fce073d6fe6caf68b2d64fad8b07c6}} 
+\index{Tang::AstNodeTernary@{Tang::AstNodeTernary}!AstNodeTernary@{AstNodeTernary}}
+\index{AstNodeTernary@{AstNodeTernary}!Tang::AstNodeTernary@{Tang::AstNodeTernary}}
+\doxysubsubsection{\texorpdfstring{AstNodeTernary()}{AstNodeTernary()}}
+{\footnotesize\ttfamily Ast\+Node\+Ternary\+::\+Ast\+Node\+Ternary (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$}]{condition,  }\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$}]{true\+Expression,  }\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$}]{false\+Expression,  }\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{location }\end{DoxyParamCaption})}
+
+
+
+The constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em condition} & The expression which determines whether the true\+Expression or false\+Expression is executed. \\
+\hline
+{\em true\+Expression} & The expression executed when the condition is true. \\
+\hline
+{\em false\+Expression} & The expression executed when the condition is false. \\
+\hline
+{\em location} & The location associated with the expression. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeTernary_af2593e1a23f5afb597b296c435b359d8}\label{classTang_1_1AstNodeTernary_af2593e1a23f5afb597b296c435b359d8}} 
+\index{Tang::AstNodeTernary@{Tang::AstNodeTernary}!collectIdentifiers@{collectIdentifiers}}
+\index{collectIdentifiers@{collectIdentifiers}!Tang::AstNodeTernary@{Tang::AstNodeTernary}}
+\doxysubsubsection{\texorpdfstring{collectIdentifiers()}{collectIdentifiers()}}
+{\footnotesize\ttfamily void Ast\+Node\+Ternary\+::collect\+Identifiers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1Program}{Program}} \&}]{program }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compile a list of all variables in the scope. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em program} & The \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} that is being compiled. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a804f9247f774f9444ee7e8db7e7d3e4e}{Tang\+::\+Ast\+Node}}.
+
+\mbox{\Hypertarget{classTang_1_1AstNodeTernary_a12c42f84e0092b4429efd58e39c5251f}\label{classTang_1_1AstNodeTernary_a12c42f84e0092b4429efd58e39c5251f}} 
+\index{Tang::AstNodeTernary@{Tang::AstNodeTernary}!collectStrings@{collectStrings}}
+\index{collectStrings@{collectStrings}!Tang::AstNodeTernary@{Tang::AstNodeTernary}}
+\doxysubsubsection{\texorpdfstring{collectStrings()}{collectStrings()}}
+{\footnotesize\ttfamily void Ast\+Node\+Ternary\+::collect\+Strings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1Program}{Program}} \&}]{program }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compile a list of all string constants in the scope. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em program} & The \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} that is being compiled. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a32b4e64d2333d842b2004872336f5a81}{Tang\+::\+Ast\+Node}}.
+
+\mbox{\Hypertarget{classTang_1_1AstNodeTernary_ab5fd3ddab7bd7b2aa9c3a90865a40968}\label{classTang_1_1AstNodeTernary_ab5fd3ddab7bd7b2aa9c3a90865a40968}} 
+\index{Tang::AstNodeTernary@{Tang::AstNodeTernary}!compile@{compile}}
+\index{compile@{compile}!Tang::AstNodeTernary@{Tang::AstNodeTernary}}
+\doxysubsubsection{\texorpdfstring{compile()}{compile()}}
+{\footnotesize\ttfamily void Ast\+Node\+Ternary\+::compile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&}]{program }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em program} & The \mbox{\hyperlink{classTang_1_1Program}{Program}} which will hold the generated Bytecode. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a390f8887c418f972d75e968f1274b2cb}{Tang\+::\+Ast\+Node}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTang_1_1AstNodeTernary_ab5fd3ddab7bd7b2aa9c3a90865a40968_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTang_1_1AstNodeTernary_a82753605540abde7c343a8a7818af074}\label{classTang_1_1AstNodeTernary_a82753605540abde7c343a8a7818af074}} 
+\index{Tang::AstNodeTernary@{Tang::AstNodeTernary}!dump@{dump}}
+\index{dump@{dump}!Tang::AstNodeTernary@{Tang::AstNodeTernary}}
+\doxysubsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily string Ast\+Node\+Ternary\+::dump (\begin{DoxyParamCaption}\item[{std\+::string}]{indent = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return a string that describes the contents of the node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indent} & A string used to indent the dump. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value as a string. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a9884742e4b32db78c0257d0b0904d05f}{Tang\+::\+Ast\+Node}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{astNodeTernary_8hpp}{ast\+Node\+Ternary.\+hpp}}\item 
+src/\mbox{\hyperlink{astNodeTernary_8cpp}{ast\+Node\+Ternary.\+cpp}}\end{DoxyCompactItemize}

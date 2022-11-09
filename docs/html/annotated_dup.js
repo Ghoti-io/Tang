@@ -15,6 +15,7 @@ var annotated_dup =
       [ "AstNodeInteger", "classTang_1_1AstNodeInteger.html", "classTang_1_1AstNodeInteger" ],
       [ "AstNodePrint", "classTang_1_1AstNodePrint.html", "classTang_1_1AstNodePrint" ],
       [ "AstNodeString", "classTang_1_1AstNodeString.html", "classTang_1_1AstNodeString" ],
+      [ "AstNodeTernary", "classTang_1_1AstNodeTernary.html", "classTang_1_1AstNodeTernary" ],
       [ "AstNodeUnary", "classTang_1_1AstNodeUnary.html", "classTang_1_1AstNodeUnary" ],
       [ "AstNodeWhile", "classTang_1_1AstNodeWhile.html", "classTang_1_1AstNodeWhile" ],
       [ "ComputedExpression", "classTang_1_1ComputedExpression.html", "classTang_1_1ComputedExpression" ],

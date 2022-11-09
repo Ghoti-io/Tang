@@ -42,6 +42,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "astNodeString.hpp", "astNodeString_8hpp.html", [
       [ "AstNodeString", "classTang_1_1AstNodeString.html", "classTang_1_1AstNodeString" ]
     ] ],
+    [ "astNodeTernary.hpp", "astNodeTernary_8hpp.html", [
+      [ "AstNodeTernary", "classTang_1_1AstNodeTernary.html", "classTang_1_1AstNodeTernary" ]
+    ] ],
     [ "astNodeUnary.hpp", "astNodeUnary_8hpp.html", [
       [ "AstNodeUnary", "classTang_1_1AstNodeUnary.html", "classTang_1_1AstNodeUnary" ]
     ] ],
