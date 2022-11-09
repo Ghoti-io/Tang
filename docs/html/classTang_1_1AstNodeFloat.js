@@ -1,6 +1,6 @@
 var classTang_1_1AstNodeFloat =
 [
-    [ "AstNodeFloat", "classTang_1_1AstNodeFloat.html#a84c59fbd94842593ae7803c1285dc7ba", null ],
+    [ "AstNodeFloat", "classTang_1_1AstNodeFloat.html#a36545af4171a0e25f4b992902e977755", null ],
     [ "collectIdentifiers", "classTang_1_1AstNodeFloat.html#a804f9247f774f9444ee7e8db7e7d3e4e", null ],
     [ "collectStrings", "classTang_1_1AstNodeFloat.html#a32b4e64d2333d842b2004872336f5a81", null ],
     [ "compile", "classTang_1_1AstNodeFloat.html#a5c13853df1e7d853525871349866fe49", null ],

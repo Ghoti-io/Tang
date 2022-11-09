@@ -5,33 +5,28 @@
 Contains generic macros.  
 
 
-\doxysubsection*{Macros}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{macros_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{macros_8hpp_a3b422a315500c6bf86432e412962fa66}{TANG\+\_\+\+UNUSED}}(x)~x
-\begin{DoxyCompactList}\small\item\em Instruct the compiler that a function argument will not be used so that it does not generate an error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{macros_8hpp_a48da4f54f29ec5b8a4dfd1a9234f7ee8}\label{macros_8hpp_a48da4f54f29ec5b8a4dfd1a9234f7ee8}} 
+using \mbox{\hyperlink{macros_8hpp_a48da4f54f29ec5b8a4dfd1a9234f7ee8}{Tang\+::integer\+\_\+t}} = int32\+\_\+t
+\begin{DoxyCompactList}\small\item\em Define the size of signed integers used by Tang. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{macros_8hpp_ac3ea9ca53071c2710a6034d60f61d76e}\label{macros_8hpp_ac3ea9ca53071c2710a6034d60f61d76e}} 
+using \mbox{\hyperlink{macros_8hpp_ac3ea9ca53071c2710a6034d60f61d76e}{Tang\+::uinteger\+\_\+t}} = int32\+\_\+t
+\begin{DoxyCompactList}\small\item\em Define the size of integers used by Tang. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{macros_8hpp_a5fab10267a7a4379e7d3642508736ab8}\label{macros_8hpp_a5fab10267a7a4379e7d3642508736ab8}} 
+using \mbox{\hyperlink{macros_8hpp_a5fab10267a7a4379e7d3642508736ab8}{Tang\+::float\+\_\+t}} = float
+\begin{DoxyCompactList}\small\item\em Define the size of floats used by Tang. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Contains generic macros. 
 
-
-
-\doxysubsection{Macro Definition Documentation}
-\mbox{\Hypertarget{macros_8hpp_a3b422a315500c6bf86432e412962fa66}\label{macros_8hpp_a3b422a315500c6bf86432e412962fa66}} 
-\index{macros.hpp@{macros.hpp}!TANG\_UNUSED@{TANG\_UNUSED}}
-\index{TANG\_UNUSED@{TANG\_UNUSED}!macros.hpp@{macros.hpp}}
-\doxysubsubsection{\texorpdfstring{TANG\_UNUSED}{TANG\_UNUSED}}
-{\footnotesize\ttfamily \#define TANG\+\_\+\+UNUSED(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~x}
-
-
-
-Instruct the compiler that a function argument will not be used so that it does not generate an error. 
-
-When defining a funcion, use the \mbox{\hyperlink{macros_8hpp_a3b422a315500c6bf86432e412962fa66}{TANG\+\_\+\+UNUSED()}} macro around any argument which is {\itshape not} used in the function, in order to squash any compiler warnings. e.\+g., void foo(int TANG\+\_\+\+UNUSED(a)) \{\}
-
-
-\begin{DoxyParams}{Parameters}
-{\em x} & The argument to be ignored. \\
-\hline
-\end{DoxyParams}

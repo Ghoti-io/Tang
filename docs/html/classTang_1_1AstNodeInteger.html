@@ -116,9 +116,9 @@ Collaboration diagram for Tang::AstNodeInteger:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3ba7c23caeda9514580b9f0a57d1a625"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeInteger.html#a3ba7c23caeda9514580b9f0a57d1a625">AstNodeInteger</a> (int64_t number, <a class="el" href="classTang_1_1location.html">Tang::location</a> <a class="el" href="classTang_1_1location.html">location</a>)</td></tr>
-<tr class="memdesc:a3ba7c23caeda9514580b9f0a57d1a625"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="classTang_1_1AstNodeInteger.html#a3ba7c23caeda9514580b9f0a57d1a625">More...</a><br /></td></tr>
-<tr class="separator:a3ba7c23caeda9514580b9f0a57d1a625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61d3e8314508bcbbaf2a92f8e16308e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeInteger.html#a61d3e8314508bcbbaf2a92f8e16308e4">AstNodeInteger</a> (<a class="el" href="macros_8hpp.html#a48da4f54f29ec5b8a4dfd1a9234f7ee8">Tang::integer_t</a> number, <a class="el" href="classTang_1_1location.html">Tang::location</a> <a class="el" href="classTang_1_1location.html">location</a>)</td></tr>
+<tr class="memdesc:a61d3e8314508bcbbaf2a92f8e16308e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="classTang_1_1AstNodeInteger.html#a61d3e8314508bcbbaf2a92f8e16308e4">More...</a><br /></td></tr>
+<tr class="separator:a61d3e8314508bcbbaf2a92f8e16308e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab0cecb61eaed70471685dd0f7a76a43"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeInteger.html#aab0cecb61eaed70471685dd0f7a76a43">dump</a> (std::string indent=&quot;&quot;) const override</td></tr>
 <tr class="memdesc:aab0cecb61eaed70471685dd0f7a76a43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string that describes the contents of the node.  <a href="classTang_1_1AstNodeInteger.html#aab0cecb61eaed70471685dd0f7a76a43">More...</a><br /></td></tr>
 <tr class="separator:aab0cecb61eaed70471685dd0f7a76a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,10 +134,10 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that represents an integer literal. </p>
-<p>Integers are represented by the <code>int64_t</code> type, and so are limited in range by that of the underlying type. </p>
+<p>Integers are represented by the <code>Tang::integer_t</code> type, and so are limited in range by that of the underlying type. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a3ba7c23caeda9514580b9f0a57d1a625"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ba7c23caeda9514580b9f0a57d1a625">&#9670;&nbsp;</a></span>AstNodeInteger()</h2>
+<a id="a61d3e8314508bcbbaf2a92f8e16308e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61d3e8314508bcbbaf2a92f8e16308e4">&#9670;&nbsp;</a></span>AstNodeInteger()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -145,7 +145,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">AstNodeInteger::AstNodeInteger </td>
           <td>(</td>
-          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramtype"><a class="el" href="macros_8hpp.html#a48da4f54f29ec5b8a4dfd1a9234f7ee8">Tang::integer_t</a>&#160;</td>
           <td class="paramname"><em>number</em>, </td>
         </tr>
         <tr>
@@ -285,7 +285,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classTang_1_1AstNodeInteger_a9191a01a987682db46530469a0b45048_cgraph.png" border="0" usemap="#aclassTang_1_1AstNodeInteger_a9191a01a987682db46530469a0b45048_cgraph" alt=""/></div>
 <map name="aclassTang_1_1AstNodeInteger_a9191a01a987682db46530469a0b45048_cgraph" id="aclassTang_1_1AstNodeInteger_a9191a01a987682db46530469a0b45048_cgraph">
 <area shape="rect" title="Compile the ast of the provided Tang::Program." alt="" coords="5,5,167,47"/>
-<area shape="rect" href="classTang_1_1Program.html#a4fd12230e463c5dbc01470ea446fcb11" title="Add a uint64_t to the Bytecode." alt="" coords="215,13,423,39"/>
+<area shape="rect" href="classTang_1_1Program.html#a1067d000db48378fa37ff569ffdf7329" title="Add a Tang::uinteger_t to the Bytecode." alt="" coords="215,13,423,39"/>
 </map>
 </div>
 

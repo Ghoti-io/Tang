@@ -16,10 +16,10 @@ var classTang_1_1ComputedExpressionString =
     [ "__subtract", "classTang_1_1ComputedExpressionString.html#ab0d79debcd475a5063e574c10f1715ff", null ],
     [ "dump", "classTang_1_1ComputedExpressionString.html#a97bdb82b5f4cf5b99a2819b93d7ac047", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionString.html#a30aa173d92fe72fbe171a3f2808a8773", null ],
-    [ "is_equal", "classTang_1_1ComputedExpressionString.html#aa81900aeb157fdb024f1bb0f316b4006", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionString.html#a5ce6d4bc0128f6aadf72c2f63a70275a", null ],
-    [ "is_equal", "classTang_1_1ComputedExpressionString.html#a4b61cc4d447993bfc96dc37bfd552cef", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionString.html#a5287fabf86f19613afb04d5e285c0231", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionString.html#a91b777a2aa5bc6748cdceca5cbabf6c5", null ],
+    [ "is_equal", "classTang_1_1ComputedExpressionString.html#a7265d530e9b32f55d2485a326ab353aa", null ],
+    [ "is_equal", "classTang_1_1ComputedExpressionString.html#a76aaf726b67cedb54b6b3c75c834645f", null ],
     [ "makeCopy", "classTang_1_1ComputedExpressionString.html#aa424ab2f196af728a8810fc7ed188f7c", null ]
 ];

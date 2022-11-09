@@ -39,13 +39,13 @@ std\+::string \mbox{\hyperlink{classTang_1_1Program_aee5e79c40fac68e875c0d043f8f
 \begin{DoxyCompactList}\small\item\em Get the Opcodes of the compiled program, formatted like Assembly. \end{DoxyCompactList}\item 
 std\+::optional$<$ const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} $>$ \mbox{\hyperlink{classTang_1_1Program_a84b2e5e25f57eea224d1c04f1f3741eb}{get\+Result}} () const
 \begin{DoxyCompactList}\small\item\em Get the result of the \mbox{\hyperlink{classTang_1_1Program}{Program}} execution, if it exists. \end{DoxyCompactList}\item 
-size\+\_\+t \mbox{\hyperlink{classTang_1_1Program_a4fd12230e463c5dbc01470ea446fcb11}{add\+Bytecode}} (uint64\+\_\+t)
-\begin{DoxyCompactList}\small\item\em Add a uint64\+\_\+t to the Bytecode. \end{DoxyCompactList}\item 
-const \mbox{\hyperlink{program_8hpp_ab900d54b19c52378faf3ce1d9f9e6d19}{Bytecode}} \& \mbox{\hyperlink{classTang_1_1Program_a742a5415a123a8a0cffa57476f74d55f}{get\+Bytecode}} ()
+size\+\_\+t \mbox{\hyperlink{classTang_1_1Program_a1067d000db48378fa37ff569ffdf7329}{add\+Bytecode}} (\mbox{\hyperlink{macros_8hpp_ac3ea9ca53071c2710a6034d60f61d76e}{Tang\+::uinteger\+\_\+t}})
+\begin{DoxyCompactList}\small\item\em Add a Tang\+::uinteger\+\_\+t to the Bytecode. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{program_8hpp_a70114beec5ecf129f5367a4107442ca4}{Bytecode}} \& \mbox{\hyperlink{classTang_1_1Program_a742a5415a123a8a0cffa57476f74d55f}{get\+Bytecode}} ()
 \begin{DoxyCompactList}\small\item\em Get the Bytecode vector. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTang_1_1Program}{Program}} \& \mbox{\hyperlink{classTang_1_1Program_a68dc832846a651693dea5770d047d4a6}{execute}} ()
 \begin{DoxyCompactList}\small\item\em Execute the program\textquotesingle{}s Bytecode, and return the current \mbox{\hyperlink{classTang_1_1Program}{Program}} object. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classTang_1_1Program_a044aecf4340fe7379c588b62562459bc}{set\+Jump\+Target}} (size\+\_\+t opcode\+Address, uint64\+\_\+t jump\+Target)
+bool \mbox{\hyperlink{classTang_1_1Program_a5da413efe8435cebd927a8be58dcb9be}{set\+Jump\+Target}} (size\+\_\+t opcode\+Address, \mbox{\hyperlink{macros_8hpp_ac3ea9ca53071c2710a6034d60f61d76e}{Tang\+::uinteger\+\_\+t}} jump\+Target)
 \begin{DoxyCompactList}\small\item\em Set the target address of a Jump opcode. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -108,15 +108,15 @@ Create a compiled program using the provided code.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classTang_1_1Program_a4fd12230e463c5dbc01470ea446fcb11}\label{classTang_1_1Program_a4fd12230e463c5dbc01470ea446fcb11}} 
+\mbox{\Hypertarget{classTang_1_1Program_a1067d000db48378fa37ff569ffdf7329}\label{classTang_1_1Program_a1067d000db48378fa37ff569ffdf7329}} 
 \index{Tang::Program@{Tang::Program}!addBytecode@{addBytecode}}
 \index{addBytecode@{addBytecode}!Tang::Program@{Tang::Program}}
 \doxysubsubsection{\texorpdfstring{addBytecode()}{addBytecode()}}
-{\footnotesize\ttfamily size\+\_\+t Program\+::add\+Bytecode (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{op }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily size\+\_\+t Program\+::add\+Bytecode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{macros_8hpp_ac3ea9ca53071c2710a6034d60f61d76e}{Tang\+::uinteger\+\_\+t}}}]{op }\end{DoxyParamCaption})}
 
 
 
-Add a uint64\+\_\+t to the Bytecode. 
+Add a Tang\+::uinteger\+\_\+t to the Bytecode. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -171,7 +171,7 @@ A pointer to the AST, if it exists.
 \index{Tang::Program@{Tang::Program}!getBytecode@{getBytecode}}
 \index{getBytecode@{getBytecode}!Tang::Program@{Tang::Program}}
 \doxysubsubsection{\texorpdfstring{getBytecode()}{getBytecode()}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{program_8hpp_ab900d54b19c52378faf3ce1d9f9e6d19}{Bytecode}} \& Program\+::get\+Bytecode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily const \mbox{\hyperlink{program_8hpp_a70114beec5ecf129f5367a4107442ca4}{Bytecode}} \& Program\+::get\+Bytecode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -206,11 +206,11 @@ Get the result of the \mbox{\hyperlink{classTang_1_1Program}{Program}} execution
 \begin{DoxyReturn}{Returns}
 The result of the \mbox{\hyperlink{classTang_1_1Program}{Program}} execution, if it exists. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classTang_1_1Program_a044aecf4340fe7379c588b62562459bc}\label{classTang_1_1Program_a044aecf4340fe7379c588b62562459bc}} 
+\mbox{\Hypertarget{classTang_1_1Program_a5da413efe8435cebd927a8be58dcb9be}\label{classTang_1_1Program_a5da413efe8435cebd927a8be58dcb9be}} 
 \index{Tang::Program@{Tang::Program}!setJumpTarget@{setJumpTarget}}
 \index{setJumpTarget@{setJumpTarget}!Tang::Program@{Tang::Program}}
 \doxysubsubsection{\texorpdfstring{setJumpTarget()}{setJumpTarget()}}
-{\footnotesize\ttfamily bool Program\+::set\+Jump\+Target (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{opcode\+Address,  }\item[{uint64\+\_\+t}]{jump\+Target }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Program\+::set\+Jump\+Target (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{opcode\+Address,  }\item[{\mbox{\hyperlink{macros_8hpp_ac3ea9ca53071c2710a6034d60f61d76e}{Tang\+::uinteger\+\_\+t}}}]{jump\+Target }\end{DoxyParamCaption})}
 
 
 
