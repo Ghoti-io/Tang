@@ -133,6 +133,8 @@
 // https://en.cppreference.com/w/cpp/language/operator_precedence
 // Here, rules are in order of lowest to highest precedence.
 %right "=" "?" ":"
+%left "||"
+%left "&&"
 %left "==" "!="
 %left "<" "<=" ">" ">="
 %left "+" "-"
