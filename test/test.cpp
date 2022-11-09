@@ -165,24 +165,24 @@ TEST(Expression, Division) {
 }
 
 TEST(Expression, Modulo) {
-  auto p1 = TangBase().compileScript("3 + 5");
-  EXPECT_EQ(*p1.execute().getResult(), (integer_t)8);
-  auto p2 = TangBase().compileScript("3. + 5");
-  EXPECT_EQ(*p2.execute().getResult(), (integer_t)8);
-  auto p3 = TangBase().compileScript("3. + 5.");
-  EXPECT_EQ(*p3.execute().getResult(), (integer_t)8);
-  auto p4 = TangBase().compileScript("3 + 5.");
-  EXPECT_EQ(*p4.execute().getResult(), (integer_t)8);
-  auto p5 = TangBase().compileScript("3 + -5");
-  EXPECT_EQ(*p5.execute().getResult(), (integer_t)-2);
-  auto p6 = TangBase().compileScript("3.5 + 5");
-  EXPECT_EQ(*p6.execute().getResult(), (float_t)8.5);
-  auto p7 = TangBase().compileScript("3.25 + 5.25");
-  EXPECT_EQ(*p7.execute().getResult(), (float_t)8.5);
-  auto p8 = TangBase().compileScript("3 + 5.5");
-  EXPECT_EQ(*p8.execute().getResult(), (float_t)8.5);
-  auto p9 = TangBase().compileScript("3 + 3 + 5.5");
-  EXPECT_EQ(*p9.execute().getResult(), (float_t)11.5);
+  auto p1 = TangBase().compileScript("3 % 5");
+  EXPECT_EQ(*p1.execute().getResult(), (integer_t)3);
+  auto p2 = TangBase().compileScript("3. % 5");
+  EXPECT_EQ(*p2.execute().getResult(), Error{"Don't know how to modulo these values."});
+  auto p3 = TangBase().compileScript("3. % 5.");
+  EXPECT_EQ(*p3.execute().getResult(), Error{"Don't know how to modulo these values."});
+  auto p4 = TangBase().compileScript("3 % 5.");
+  EXPECT_EQ(*p4.execute().getResult(), Error{"Don't know how to modulo these values."});
+  auto p5 = TangBase().compileScript("3 % -5");
+  EXPECT_EQ(*p5.execute().getResult(), (integer_t)3);
+  auto p6 = TangBase().compileScript("3.5 % 5");
+  EXPECT_EQ(*p6.execute().getResult(), Error{"Don't know how to modulo these values."});
+  auto p7 = TangBase().compileScript("3.25 % 5.25");
+  EXPECT_EQ(*p7.execute().getResult(), Error{"Don't know how to modulo these values."});
+  auto p8 = TangBase().compileScript("3 % 5.5");
+  EXPECT_EQ(*p8.execute().getResult(), Error{"Don't know how to modulo these values."});
+  auto p9 = TangBase().compileScript("13 % 7 % 5");
+  EXPECT_EQ(*p9.execute().getResult(), 1);
   auto p10 = TangBase().compileScript("3 % 0");
   EXPECT_EQ(*p10.execute().getResult(), Error("Cannot modulo by zero."));
 }
