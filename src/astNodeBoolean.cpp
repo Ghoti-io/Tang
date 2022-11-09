@@ -17,7 +17,7 @@ string AstNodeBoolean::dump(string indent) const {
 }
 
 void AstNodeBoolean::compile(Tang::Program & program) const {
-  program.addBytecode((uint64_t)Opcode::BOOLEAN);
+  program.addBytecode((uinteger_t)Opcode::BOOLEAN);
   program.addBytecode(this->val ? 1 : 0);
 }
 

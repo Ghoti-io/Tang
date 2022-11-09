@@ -25,17 +25,17 @@ void AstNodeDoWhile::compile(Tang::Program & program) const {
   // Compile the code block and clean up the stack afterwards.
   auto codeBlockStart = program.getBytecode().size();
   this->codeBlock->compile(program);
-  program.addBytecode((uint64_t)Opcode::POP);
+  program.addBytecode((uinteger_t)Opcode::POP);
 
   // Compile the condition.
   this->condition->compile(program);
 
   // If condition is true, jump up to the start of the code block.
-  program.addBytecode((uint64_t)Opcode::JMPT_POP);
+  program.addBytecode((uinteger_t)Opcode::JMPT_POP);
   program.addBytecode(codeBlockStart);
 
   // Add extra stack push, which will be removed by the parent AST compile.
-  program.addBytecode((uint64_t)Opcode::NULLVAL);
+  program.addBytecode((uinteger_t)Opcode::NULLVAL);
 }
 
 void AstNodeDoWhile::collectIdentifiers(Program & program) const {

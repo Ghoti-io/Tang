@@ -96,7 +96,7 @@ string Program::dumpBytecode() const {
       }
       case Opcode::FLOAT: {
         DUMPPROGRAMCHECK(1);
-        out << "FLOAT" << bit_cast<double>(this->bytecode[pc + 1]);
+        out << "FLOAT" << bit_cast<float_t>(this->bytecode[pc + 1]);
         pc += 2;
         break;
       }
@@ -109,13 +109,13 @@ string Program::dumpBytecode() const {
       case Opcode::STRING: {
         DUMPPROGRAMCHECK(1);
         auto size = this->bytecode[pc + 1];
-        auto bytes = ceil((double)size / sizeof(uint64_t));
+        auto bytes = ceil((double)size / sizeof(uinteger_t));
         DUMPPROGRAMCHECK(1 + bytes);
         string temp{};
         for (size_t i = 0; i < bytes; ++i) {
-          for (size_t j = 0; j < sizeof(uint64_t); ++j) {
-            if (((i * 8) + j) < size) {
-              temp += (unsigned char)((this->bytecode[pc + 2 + i] >> (8 * (7 - j))) & 0xFF);
+          for (size_t j = 0; j < sizeof(uinteger_t); ++j) {
+            if ((integer_t)((i * sizeof(uinteger_t)) + j) < size) {
+              temp += (unsigned char)((this->bytecode[pc + 2 + i] >> (8 * (sizeof(uinteger_t) - 1 - j))) & 0xFF);
             }
           }
         }

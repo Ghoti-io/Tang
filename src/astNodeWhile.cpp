@@ -26,17 +26,17 @@ void AstNodeWhile::compile(Tang::Program & program) const {
   this->condition->compile(program);
 
   // If condition is false, jump to the end of the if..else statement.
-  program.addBytecode((uint64_t)Opcode::JMPF_POP);
+  program.addBytecode((uinteger_t)Opcode::JMPF_POP);
   auto conditionFalseJump = program.getBytecode().size() - 1;
   program.addBytecode(0);
 
   // Compile the code block and clean up the stack afterwards.
   this->codeBlock->compile(program);
-  program.addBytecode((uint64_t)Opcode::POP);
+  program.addBytecode((uinteger_t)Opcode::POP);
 
   // Jump back up to the condition.
-  program.addBytecode((uint64_t)Opcode::JMP);
-  program.addBytecode((uint64_t)conditionStart);
+  program.addBytecode((uinteger_t)Opcode::JMP);
+  program.addBytecode((uinteger_t)conditionStart);
 
   // We now know where the code after the while statement will be.
   // The parent will add a POP instruction, so account for that by using "+ 1".

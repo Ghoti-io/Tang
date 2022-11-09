@@ -32,7 +32,7 @@ void AstNodePrint::compile(Tang::Program & program) const {
   this->expression->compile(program);
   switch (this->type) {
     case Default: {
-      program.addBytecode((uint64_t)Opcode::PRINT);
+      program.addBytecode((uinteger_t)Opcode::PRINT);
       break;
     }
   }

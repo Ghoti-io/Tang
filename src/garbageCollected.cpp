@@ -10,11 +10,11 @@ namespace Tang {
   }
 }
 
-bool GarbageCollected::operator==(const int & val) const {
+bool GarbageCollected::operator==(const integer_t & val) const {
   return this->ref && this->ref->is_equal(val);
 }
 
-bool GarbageCollected::operator==(const double & val) const {
+bool GarbageCollected::operator==(const float_t & val) const {
   return this->ref && this->ref->is_equal(val);
 }
 

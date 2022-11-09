@@ -85,6 +85,7 @@
 #ifndef TANG_HPP
 #define TANG_HPP
 
+#include "macros.hpp"
 #include "tangBase.hpp"
 #include "astNode.hpp"
 #include "error.hpp"

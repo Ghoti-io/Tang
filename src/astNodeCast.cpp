@@ -25,15 +25,15 @@ void AstNodeCast::compile(Tang::Program & program) const {
   this->expression->compile(program);
   switch (this->targetType) {
     case Integer: {
-      program.addBytecode((uint64_t)Opcode::CASTINTEGER);
+      program.addBytecode((uinteger_t)Opcode::CASTINTEGER);
       break;
     }
     case Float: {
-      program.addBytecode((uint64_t)Opcode::CASTFLOAT);
+      program.addBytecode((uinteger_t)Opcode::CASTFLOAT);
       break;
     }
     case Boolean: {
-      program.addBytecode((uint64_t)Opcode::CASTBOOLEAN);
+      program.addBytecode((uinteger_t)Opcode::CASTBOOLEAN);
       break;
     }
   }

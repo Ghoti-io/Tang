@@ -59,57 +59,57 @@ void AstNodeBinary::compile(Tang::Program & program) const {
   // This is a standard binary operator.
   switch (this->op) {
     case Add: {
-      program.addBytecode((uint64_t)Opcode::ADD);
+      program.addBytecode((uinteger_t)Opcode::ADD);
       break;
     }
     case Subtract: {
-      program.addBytecode((uint64_t)Opcode::SUBTRACT);
+      program.addBytecode((uinteger_t)Opcode::SUBTRACT);
       break;
     }
     case Multiply: {
-      program.addBytecode((uint64_t)Opcode::MULTIPLY);
+      program.addBytecode((uinteger_t)Opcode::MULTIPLY);
       break;
     }
     case Divide: {
-      program.addBytecode((uint64_t)Opcode::DIVIDE);
+      program.addBytecode((uinteger_t)Opcode::DIVIDE);
       break;
     }
     case Modulo: {
-      program.addBytecode((uint64_t)Opcode::MODULO);
+      program.addBytecode((uinteger_t)Opcode::MODULO);
       break;
     }
     case LessThan : {
-      program.addBytecode((uint64_t)Opcode::LT);
+      program.addBytecode((uinteger_t)Opcode::LT);
       break;
     }
     case LessThanEqual : {
-      program.addBytecode((uint64_t)Opcode::LTE);
+      program.addBytecode((uinteger_t)Opcode::LTE);
       break;
     }
     case GreaterThan : {
-      program.addBytecode((uint64_t)Opcode::GT);
+      program.addBytecode((uinteger_t)Opcode::GT);
       break;
     }
     case GreaterThanEqual : {
-      program.addBytecode((uint64_t)Opcode::GTE);
+      program.addBytecode((uinteger_t)Opcode::GTE);
       break;
     }
     case Equal : {
-      program.addBytecode((uint64_t)Opcode::EQ);
+      program.addBytecode((uinteger_t)Opcode::EQ);
       break;
     }
     case NotEqual : {
-      program.addBytecode((uint64_t)Opcode::NEQ);
+      program.addBytecode((uinteger_t)Opcode::NEQ);
       break;
     }
     case And : {
       // Evaluate the lhs.
       auto conditionFalseJump = program.getBytecode().size();
-      program.addBytecode((uint64_t)Opcode::JMPF);
+      program.addBytecode((uinteger_t)Opcode::JMPF);
       program.addBytecode(0);
 
       // Remove lhs from stack, evaluate rhs.
-      program.addBytecode((uint64_t)Opcode::POP);
+      program.addBytecode((uinteger_t)Opcode::POP);
       this->rhs->compile(program);
 
       // Set the lhs JMPF target
@@ -119,11 +119,11 @@ void AstNodeBinary::compile(Tang::Program & program) const {
     case Or : {
       // Evaluate the lhs.
       auto conditionTrueJump = program.getBytecode().size();
-      program.addBytecode((uint64_t)Opcode::JMPT);
+      program.addBytecode((uinteger_t)Opcode::JMPT);
       program.addBytecode(0);
 
       // Remove lhs from stack, evaluate rhs.
-      program.addBytecode((uint64_t)Opcode::POP);
+      program.addBytecode((uinteger_t)Opcode::POP);
       this->rhs->compile(program);
 
       // Set the lhs JMPT target

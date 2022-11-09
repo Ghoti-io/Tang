@@ -19,34 +19,34 @@ TEST(Declare, Null) {
 
 TEST(Declare, Integer) {
   auto p1 = TangBase().compileScript("3");
-  EXPECT_EQ(*p1.execute().getResult(), 3);
+  EXPECT_EQ(*p1.execute().getResult(), (integer_t)3);
   auto p2 = TangBase().compileScript("42");
-  EXPECT_EQ(*p2.execute().getResult(), 42);
+  EXPECT_EQ(*p2.execute().getResult(), (integer_t)42);
   auto p3 = TangBase().compileScript("-42");
-  EXPECT_EQ(*p3.execute().getResult(), -42);
+  EXPECT_EQ(*p3.execute().getResult(), (integer_t)-42);
   auto p4 = TangBase().compileScript("-42");
-  EXPECT_EQ(*p4.execute().getResult(), -42.0);
+  EXPECT_EQ(*p4.execute().getResult(), (float_t)-42.0);
   auto p5 = TangBase().compileScript("-42");
-  EXPECT_NE(*p5.execute().getResult(), -42.5);
+  EXPECT_NE(*p5.execute().getResult(), (float_t)-42.5);
 }
 
 TEST(Declare, Float) {
   auto p1 = TangBase().compileScript("3.");
-  EXPECT_EQ(*p1.execute().getResult(), 3.);
+  EXPECT_EQ(*p1.execute().getResult(), (float_t)3.);
   auto p2 = TangBase().compileScript("4.2");
-  EXPECT_EQ(*p2.execute().getResult(), 4.2);
+  EXPECT_EQ(*p2.execute().getResult(), (float_t)4.2);
   auto p3 = TangBase().compileScript("-4.2");
-  EXPECT_EQ(*p3.execute().getResult(), -4.2);
+  EXPECT_EQ(*p3.execute().getResult(), (float_t)-4.2);
   auto p4 = TangBase().compileScript(".2");
-  EXPECT_EQ(*p4.execute().getResult(), .2);
+  EXPECT_EQ(*p4.execute().getResult(), (float_t).2);
   auto p5 = TangBase().compileScript("0.");
-  EXPECT_EQ(*p5.execute().getResult(), 0.);
+  EXPECT_EQ(*p5.execute().getResult(), (float_t)0.);
   auto p6 = TangBase().compileScript(".0");
-  EXPECT_EQ(*p6.execute().getResult(), 0.);
+  EXPECT_EQ(*p6.execute().getResult(), (float_t)0.);
   auto p7 = TangBase().compileScript("3.0");
-  EXPECT_EQ(*p7.execute().getResult(), 3);
+  EXPECT_EQ(*p7.execute().getResult(), (integer_t)3);
   auto p8 = TangBase().compileScript("3.5");
-  EXPECT_NE(*p8.execute().getResult(), 3);
+  EXPECT_NE(*p8.execute().getResult(), (integer_t)3);
 }
 
 TEST(Declare, Boolean) {
@@ -68,95 +68,95 @@ TEST(Declare, String) {
 
 TEST(Expression, Add) {
   auto p1 = TangBase().compileScript("3 + 5");
-  EXPECT_EQ(*p1.execute().getResult(), 8);
+  EXPECT_EQ(*p1.execute().getResult(), (integer_t)8);
   auto p2 = TangBase().compileScript("3. + 5");
-  EXPECT_EQ(*p2.execute().getResult(), 8);
+  EXPECT_EQ(*p2.execute().getResult(), (integer_t)8);
   auto p3 = TangBase().compileScript("3. + 5.");
-  EXPECT_EQ(*p3.execute().getResult(), 8);
+  EXPECT_EQ(*p3.execute().getResult(), (integer_t)8);
   auto p4 = TangBase().compileScript("3 + 5.");
-  EXPECT_EQ(*p4.execute().getResult(), 8);
+  EXPECT_EQ(*p4.execute().getResult(), (integer_t)8);
   auto p5 = TangBase().compileScript("3 + -5");
-  EXPECT_EQ(*p5.execute().getResult(), -2);
+  EXPECT_EQ(*p5.execute().getResult(), (integer_t)-2);
   auto p6 = TangBase().compileScript("3.5 + 5");
-  EXPECT_EQ(*p6.execute().getResult(), 8.5);
+  EXPECT_EQ(*p6.execute().getResult(), (float_t)8.5);
   auto p7 = TangBase().compileScript("3.25 + 5.25");
-  EXPECT_EQ(*p7.execute().getResult(), 8.5);
+  EXPECT_EQ(*p7.execute().getResult(), (float_t)8.5);
   auto p8 = TangBase().compileScript("3 + 5.5");
-  EXPECT_EQ(*p8.execute().getResult(), 8.5);
+  EXPECT_EQ(*p8.execute().getResult(), (float_t)8.5);
   auto p9 = TangBase().compileScript("3 + 3 + 5.5");
-  EXPECT_EQ(*p9.execute().getResult(), 11.5);
+  EXPECT_EQ(*p9.execute().getResult(), (float_t)11.5);
   auto p10 = TangBase().compileScript("\"Hello\" + \" \" + \"World!\"");
   EXPECT_EQ(*p10.execute().getResult(), "Hello World!");
 }
 
 TEST(Expression, Subtract) {
   auto p1 = TangBase().compileScript("3 - 5");
-  EXPECT_EQ(*p1.execute().getResult(), -2);
+  EXPECT_EQ(*p1.execute().getResult(), (integer_t)-2);
   auto p2 = TangBase().compileScript("3. - 5");
-  EXPECT_EQ(*p2.execute().getResult(), -2);
+  EXPECT_EQ(*p2.execute().getResult(), (integer_t)-2);
   auto p3 = TangBase().compileScript("3. - 5.");
-  EXPECT_EQ(*p3.execute().getResult(), -2);
+  EXPECT_EQ(*p3.execute().getResult(), (integer_t)-2);
   auto p4 = TangBase().compileScript("3 - 5.");
-  EXPECT_EQ(*p4.execute().getResult(), -2);
+  EXPECT_EQ(*p4.execute().getResult(), (integer_t)-2);
   auto p5 = TangBase().compileScript("3 - -5");
-  EXPECT_EQ(*p5.execute().getResult(), 8);
+  EXPECT_EQ(*p5.execute().getResult(), (integer_t)8);
   auto p6 = TangBase().compileScript("3.5 - 5");
-  EXPECT_EQ(*p6.execute().getResult(), -1.5);
+  EXPECT_EQ(*p6.execute().getResult(), (float_t)-1.5);
   auto p7 = TangBase().compileScript("3.75 - 5.25");
-  EXPECT_EQ(*p7.execute().getResult(), -1.5);
+  EXPECT_EQ(*p7.execute().getResult(), (float_t)-1.5);
   auto p8 = TangBase().compileScript("3 - 5.5");
-  EXPECT_EQ(*p8.execute().getResult(), -2.5);
+  EXPECT_EQ(*p8.execute().getResult(), (float_t)-2.5);
   auto p9 = TangBase().compileScript("3 - 3 - 5.5");
-  EXPECT_EQ(*p9.execute().getResult(), -5.5);
+  EXPECT_EQ(*p9.execute().getResult(), (float_t)-5.5);
 }
 
 TEST(Expression, Multiplication) {
   auto p1 = TangBase().compileScript("3 * 5");
-  EXPECT_EQ(*p1.execute().getResult(), 15);
+  EXPECT_EQ(*p1.execute().getResult(), (integer_t)15);
   auto p2 = TangBase().compileScript("3. * 5");
-  EXPECT_EQ(*p2.execute().getResult(), 15);
+  EXPECT_EQ(*p2.execute().getResult(), (integer_t)15);
   auto p3 = TangBase().compileScript("3. * 5.");
-  EXPECT_EQ(*p3.execute().getResult(), 15);
+  EXPECT_EQ(*p3.execute().getResult(), (integer_t)15);
   auto p4 = TangBase().compileScript("3 * 5.");
-  EXPECT_EQ(*p4.execute().getResult(), 15);
+  EXPECT_EQ(*p4.execute().getResult(), (integer_t)15);
   auto p5 = TangBase().compileScript("3 * -5");
-  EXPECT_EQ(*p5.execute().getResult(), -15);
+  EXPECT_EQ(*p5.execute().getResult(), (integer_t)-15);
   auto p6 = TangBase().compileScript("3.5 * 5");
-  EXPECT_EQ(*p6.execute().getResult(), 17.5);
+  EXPECT_EQ(*p6.execute().getResult(), (float_t)17.5);
   auto p7 = TangBase().compileScript("3.25 * 5.25");
-  EXPECT_EQ(*p7.execute().getResult(), 17.0625);
+  EXPECT_EQ(*p7.execute().getResult(), (float_t)17.0625);
   auto p8 = TangBase().compileScript("3 * 5.5");
-  EXPECT_EQ(*p8.execute().getResult(), 16.5);
+  EXPECT_EQ(*p8.execute().getResult(), (float_t)16.5);
   auto p9 = TangBase().compileScript("3 * 3 * 5.5");
-  EXPECT_EQ(*p9.execute().getResult(), 49.5);
+  EXPECT_EQ(*p9.execute().getResult(), (float_t)49.5);
   auto p10 = TangBase().compileScript("3 + 3 * 5.5");
-  EXPECT_EQ(*p10.execute().getResult(), 19.5);
+  EXPECT_EQ(*p10.execute().getResult(), (float_t)19.5);
   auto p11 = TangBase().compileScript("3 * 3 + 5.5");
-  EXPECT_EQ(*p11.execute().getResult(), 14.5);
+  EXPECT_EQ(*p11.execute().getResult(), (float_t)14.5);
 }
 
 TEST(Expression, Division) {
   auto p1 = TangBase().compileScript("3 / 5");
-  EXPECT_EQ(*p1.execute().getResult(), 0);
+  EXPECT_EQ(*p1.execute().getResult(), (integer_t)0);
   auto p2 = TangBase().compileScript("3. / 5");
-  EXPECT_EQ(*p2.execute().getResult(), .6);
+  EXPECT_EQ(*p2.execute().getResult(), (float_t).6);
   auto p3 = TangBase().compileScript("3. / 5.");
-  EXPECT_EQ(*p3.execute().getResult(), .6);
+  EXPECT_EQ(*p3.execute().getResult(), (float_t).6);
   auto p4 = TangBase().compileScript("3 / 5.");
-  EXPECT_EQ(*p4.execute().getResult(), .6);
+  EXPECT_EQ(*p4.execute().getResult(), (float_t).6);
   auto p5 = TangBase().compileScript("3 / -5");
-  EXPECT_EQ(*p5.execute().getResult(), 0);
+  EXPECT_EQ(*p5.execute().getResult(), (integer_t)0);
   auto p6 = TangBase().compileScript("3.5 / 5");
-  EXPECT_EQ(*p6.execute().getResult(), .7);
+  EXPECT_EQ(*p6.execute().getResult(), (float_t).7);
   auto p7 = TangBase().compileScript("1.5 / .1");
-  EXPECT_EQ(*p7.execute().getResult(), 15);
+  EXPECT_EQ(*p7.execute().getResult(), (integer_t)15);
   auto p8 = TangBase().compileScript("100 / .1");
-  EXPECT_EQ(*p8.execute().getResult(), 1000);
+  EXPECT_EQ(*p8.execute().getResult(), (float_t)1000.);
   auto p9 = TangBase().compileScript("3 / 3 / 5.");
-  EXPECT_EQ(*p9.execute().getResult(), .2);
-  auto p10 = TangBase().compileScript("3 / 0");
+  EXPECT_EQ(*p9.execute().getResult(), (float_t).2);
+  auto p10 = TangBase().compileScript("3 / 0.");
   EXPECT_EQ(*p10.execute().getResult(), Error("Cannot divide by zero."));
-  auto p11 = TangBase().compileScript("3. / 0");
+  auto p11 = TangBase().compileScript("3. / 0.");
   EXPECT_EQ(*p11.execute().getResult(), Error("Cannot divide by zero."));
   auto p12 = TangBase().compileScript("3 / 0.");
   EXPECT_EQ(*p12.execute().getResult(), Error("Cannot divide by zero."));
@@ -166,70 +166,70 @@ TEST(Expression, Division) {
 
 TEST(Expression, Modulo) {
   auto p1 = TangBase().compileScript("3 + 5");
-  EXPECT_EQ(*p1.execute().getResult(), 8);
+  EXPECT_EQ(*p1.execute().getResult(), (integer_t)8);
   auto p2 = TangBase().compileScript("3. + 5");
-  EXPECT_EQ(*p2.execute().getResult(), 8);
+  EXPECT_EQ(*p2.execute().getResult(), (integer_t)8);
   auto p3 = TangBase().compileScript("3. + 5.");
-  EXPECT_EQ(*p3.execute().getResult(), 8);
+  EXPECT_EQ(*p3.execute().getResult(), (integer_t)8);
   auto p4 = TangBase().compileScript("3 + 5.");
-  EXPECT_EQ(*p4.execute().getResult(), 8);
+  EXPECT_EQ(*p4.execute().getResult(), (integer_t)8);
   auto p5 = TangBase().compileScript("3 + -5");
-  EXPECT_EQ(*p5.execute().getResult(), -2);
+  EXPECT_EQ(*p5.execute().getResult(), (integer_t)-2);
   auto p6 = TangBase().compileScript("3.5 + 5");
-  EXPECT_EQ(*p6.execute().getResult(), 8.5);
+  EXPECT_EQ(*p6.execute().getResult(), (float_t)8.5);
   auto p7 = TangBase().compileScript("3.25 + 5.25");
-  EXPECT_EQ(*p7.execute().getResult(), 8.5);
+  EXPECT_EQ(*p7.execute().getResult(), (float_t)8.5);
   auto p8 = TangBase().compileScript("3 + 5.5");
-  EXPECT_EQ(*p8.execute().getResult(), 8.5);
+  EXPECT_EQ(*p8.execute().getResult(), (float_t)8.5);
   auto p9 = TangBase().compileScript("3 + 3 + 5.5");
-  EXPECT_EQ(*p9.execute().getResult(), 11.5);
+  EXPECT_EQ(*p9.execute().getResult(), (float_t)11.5);
   auto p10 = TangBase().compileScript("3 % 0");
   EXPECT_EQ(*p10.execute().getResult(), Error("Cannot modulo by zero."));
 }
 
 TEST(Expression, UnaryMinus) {
   auto p1 = TangBase().compileScript("3-5");
-  EXPECT_EQ(*p1.execute().getResult(), -2);
+  EXPECT_EQ(*p1.execute().getResult(), (integer_t)-2);
   auto p2 = TangBase().compileScript("3--5");
-  EXPECT_EQ(*p2.execute().getResult(), 8);
+  EXPECT_EQ(*p2.execute().getResult(), (integer_t)8);
   auto p3 = TangBase().compileScript("-3.-5.");
-  EXPECT_EQ(*p3.execute().getResult(), -8);
+  EXPECT_EQ(*p3.execute().getResult(), (integer_t)-8);
   auto p4 = TangBase().compileScript("-3--5.");
-  EXPECT_EQ(*p4.execute().getResult(), 2);
+  EXPECT_EQ(*p4.execute().getResult(), (integer_t)2);
   auto p5 = TangBase().compileScript("--5");
-  EXPECT_EQ(*p5.execute().getResult(), 5);
+  EXPECT_EQ(*p5.execute().getResult(), (integer_t)5);
   auto p6 = TangBase().compileScript("---5");
-  EXPECT_EQ(*p6.execute().getResult(), -5);
+  EXPECT_EQ(*p6.execute().getResult(), (integer_t)-5);
   auto p7 = TangBase().compileScript("---3.75-----5.25");
-  EXPECT_EQ(*p7.execute().getResult(), -9);
+  EXPECT_EQ(*p7.execute().getResult(), (integer_t)-9);
 }
 
 TEST(Expression, Parentheses) {
   auto p1 = TangBase().compileScript("(3-5)-1");
-  EXPECT_EQ(*p1.execute().getResult(), -3);
+  EXPECT_EQ(*p1.execute().getResult(), (integer_t)-3);
   auto p2 = TangBase().compileScript("3-(5-1)");
-  EXPECT_EQ(*p2.execute().getResult(), -1);
+  EXPECT_EQ(*p2.execute().getResult(), (integer_t)-1);
   auto p3 = TangBase().compileScript("((-(3.)))-(5.)");
-  EXPECT_EQ(*p3.execute().getResult(), -8);
-  auto p4 = TangBase().compileScript("(((((-3)))))");
-  EXPECT_EQ(*p4.execute().getResult(), -3);
+  EXPECT_EQ(*p3.execute().getResult(), (integer_t)-8);
+  auto p4 = TangBase().compileScript("(((((-3.)))))");
+  EXPECT_EQ(*p4.execute().getResult(), (integer_t)-3);
 }
 
 TEST(Expression, TypeCast) {
   auto p1 = TangBase().compileScript("3.5 as int");
-  EXPECT_EQ(*p1.execute().getResult(), 3);
+  EXPECT_EQ(*p1.execute().getResult(), (integer_t)3);
   auto p2 = TangBase().compileScript("7.5 as int / 2");
-  EXPECT_EQ(*p2.execute().getResult(), 3);
+  EXPECT_EQ(*p2.execute().getResult(), (integer_t)3);
   auto p3 = TangBase().compileScript("3 as float / 5");
-  EXPECT_EQ(*p3.execute().getResult(), .6);
+  EXPECT_EQ(*p3.execute().getResult(), (float_t).6);
   auto p4 = TangBase().compileScript("7 / 5 as float");
-  EXPECT_EQ(*p4.execute().getResult(), 1.4);
+  EXPECT_EQ(*p4.execute().getResult(), (float_t)1.4);
   auto p5 = TangBase().compileScript("(7 / 5) as float");
-  EXPECT_EQ(*p5.execute().getResult(), 1);
+  EXPECT_EQ(*p5.execute().getResult(), (integer_t)1);
   auto p6 = TangBase().compileScript("7 as int");
-  EXPECT_EQ(*p6.execute().getResult(), 7);
+  EXPECT_EQ(*p6.execute().getResult(), (integer_t)7);
   auto p7 = TangBase().compileScript("7.5 as float");
-  EXPECT_EQ(*p7.execute().getResult(), 7.5);
+  EXPECT_EQ(*p7.execute().getResult(), (float_t)7.5);
   auto p8 = TangBase().compileScript("0 as bool");
   EXPECT_EQ(*p8.execute().getResult(), false);
   auto p9 = TangBase().compileScript("1 as bool");
@@ -243,13 +243,13 @@ TEST(Expression, TypeCast) {
   auto p13 = TangBase().compileScript("1.5 as int as bool");
   EXPECT_EQ(*p13.execute().getResult(), true);
   auto p14 = TangBase().compileScript("true as int");
-  EXPECT_EQ(*p14.execute().getResult(), 1);
+  EXPECT_EQ(*p14.execute().getResult(), (integer_t)1);
   auto p15 = TangBase().compileScript("false as int");
-  EXPECT_EQ(*p15.execute().getResult(), 0);
+  EXPECT_EQ(*p15.execute().getResult(), (integer_t)0);
   auto p16 = TangBase().compileScript("true as float");
-  EXPECT_EQ(*p16.execute().getResult(), 1.);
+  EXPECT_EQ(*p16.execute().getResult(), (float_t)1.);
   auto p17 = TangBase().compileScript("false as float");
-  EXPECT_EQ(*p17.execute().getResult(), 0.);
+  EXPECT_EQ(*p17.execute().getResult(), (float_t)0.);
   auto p18 = TangBase().compileScript("true as bool");
   EXPECT_EQ(*p18.execute().getResult(), true);
   auto p19 = TangBase().compileScript("false as bool");
@@ -503,13 +503,13 @@ TEST(Expression, And) {
   auto p4 = TangBase().compileScript("false && false");
   EXPECT_EQ(*p4.execute().getResult(), false);
   auto p5 = TangBase().compileScript("(a = 0) && (a = 2); a;");
-  EXPECT_EQ(*p5.execute().getResult(), 0);
+  EXPECT_EQ(*p5.execute().getResult(), (integer_t)0);
   auto p6 = TangBase().compileScript("(a = 1) && (a = 2); a;");
-  EXPECT_EQ(*p6.execute().getResult(), 2);
+  EXPECT_EQ(*p6.execute().getResult(), (integer_t)2);
   auto p7 = TangBase().compileScript("(a = 0.) && (a = 2.); a;");
-  EXPECT_EQ(*p7.execute().getResult(), 0.);
+  EXPECT_EQ(*p7.execute().getResult(), (float_t)0.);
   auto p8 = TangBase().compileScript("(a = 1.) && (a = 2.); a;");
-  EXPECT_EQ(*p8.execute().getResult(), 2.);
+  EXPECT_EQ(*p8.execute().getResult(), (float_t)2.);
   auto p9 = TangBase().compileScript("(a = \"\") && (a = \"foo\"); a;");
   EXPECT_EQ(*p9.execute().getResult(), "");
   auto p10 = TangBase().compileScript("(a = \"foo\") && (a = \"bar\"); a;");
@@ -530,108 +530,108 @@ TEST(Expression, Or) {
   auto p4 = TangBase().compileScript("false || false");
   EXPECT_EQ(*p4.execute().getResult(), false);
   auto p5 = TangBase().compileScript("(a = 0) || (a = 2); a;");
-  EXPECT_EQ(*p5.execute().getResult(), 2);
+  EXPECT_EQ(*p5.execute().getResult(), (integer_t)2);
   auto p6 = TangBase().compileScript("(a = 1) || (a = 2); a;");
-  EXPECT_EQ(*p6.execute().getResult(), 1);
+  EXPECT_EQ(*p6.execute().getResult(), (integer_t)1);
   auto p7 = TangBase().compileScript("(a = 0.) || (a = 2.); a;");
-  EXPECT_EQ(*p7.execute().getResult(), 2.);
+  EXPECT_EQ(*p7.execute().getResult(), (float_t)2.);
   auto p8 = TangBase().compileScript("(a = 1.) || (a = 2.); a;");
-  EXPECT_EQ(*p8.execute().getResult(), 1.);
+  EXPECT_EQ(*p8.execute().getResult(), (float_t)1.);
   auto p9 = TangBase().compileScript("(a = \"\") || (a = \"foo\"); a;");
   EXPECT_EQ(*p9.execute().getResult(), "foo");
   auto p10 = TangBase().compileScript("(a = \"foo\") || (a = \"bar\"); a;");
   EXPECT_EQ(*p10.execute().getResult(), "foo");
   auto p11 = TangBase().compileScript("(a = null) || (a = 2.); a;");
-  EXPECT_EQ(*p11.execute().getResult(), 2.);
+  EXPECT_EQ(*p11.execute().getResult(), (float_t)2.);
   auto p12 = TangBase().compileScript("(a = true) || (a = null); a;");
   EXPECT_EQ(*p12.execute().getResult(), true);
 }
 
 TEST(Expression, Ternary) {
   auto p1 = TangBase().compileScript("true ? 3 : 5");
-  EXPECT_EQ(*p1.execute().getResult(), 3);
+  EXPECT_EQ(*p1.execute().getResult(), (integer_t)3);
   auto p2 = TangBase().compileScript("false ? 3 : 5");
-  EXPECT_EQ(*p2.execute().getResult(), 5);
+  EXPECT_EQ(*p2.execute().getResult(), (integer_t)5);
   auto p3 = TangBase().compileScript("false ? true ? 1 : 3 : 5");
-  EXPECT_EQ(*p3.execute().getResult(), 5);
+  EXPECT_EQ(*p3.execute().getResult(), (integer_t)5);
   auto p4 = TangBase().compileScript("false ? false ? 1 : 3 : 5");
-  EXPECT_EQ(*p4.execute().getResult(), 5);
+  EXPECT_EQ(*p4.execute().getResult(), (integer_t)5);
   auto p5 = TangBase().compileScript("true ? true ? 1 : 3 : 5");
-  EXPECT_EQ(*p5.execute().getResult(), 1);
+  EXPECT_EQ(*p5.execute().getResult(), (integer_t)1);
   auto p6 = TangBase().compileScript("true ? false ? 1 : 3 : 5");
-  EXPECT_EQ(*p6.execute().getResult(), 3);
+  EXPECT_EQ(*p6.execute().getResult(), (integer_t)3);
   auto p7 = TangBase().compileScript("false ? 1 : true ? 3 : 5");
-  EXPECT_EQ(*p7.execute().getResult(), 3);
+  EXPECT_EQ(*p7.execute().getResult(), (integer_t)3);
   auto p8 = TangBase().compileScript("false ? 1 : false ? 3 : 5");
-  EXPECT_EQ(*p8.execute().getResult(), 5);
+  EXPECT_EQ(*p8.execute().getResult(), (integer_t)5);
   auto p9 = TangBase().compileScript("true ? 1 : true ? 3 : 5");
-  EXPECT_EQ(*p9.execute().getResult(), 1);
+  EXPECT_EQ(*p9.execute().getResult(), (integer_t)1);
   auto p10 = TangBase().compileScript("true ? 1 : false ? 3 : 5");
-  EXPECT_EQ(*p10.execute().getResult(), 1);
+  EXPECT_EQ(*p10.execute().getResult(), (integer_t)1);
 }
 
 TEST(CodeBlock, Statements) {
   auto p1 = TangBase().compileScript("2;");
-  EXPECT_EQ(*p1.execute().getResult(), 2);
+  EXPECT_EQ(*p1.execute().getResult(), (integer_t)2);
   auto p2 = TangBase().compileScript("2; true;");
   EXPECT_EQ(*p2.execute().getResult(), true);
   auto p3 = TangBase().compileScript("2; ((1 + 2.3 + 3) < -7) == true; 42;");
-  EXPECT_EQ(*p3.execute().getResult(), 42);
+  EXPECT_EQ(*p3.execute().getResult(), (integer_t)42);
 }
 
 TEST(Assign, Identifier) {
   auto p1 = TangBase().compileScript("a = 1; a;");
-  EXPECT_EQ(*p1.execute().getResult(), 1);
+  EXPECT_EQ(*p1.execute().getResult(), (integer_t)1);
   auto p2 = TangBase().compileScript("a = false; !a;");
   EXPECT_EQ(*p2.execute().getResult(), true);
   auto p3 = TangBase().compileScript("a = b = 1; a = a + b; a;");
-  EXPECT_EQ(*p3.execute().getResult(), 2);
+  EXPECT_EQ(*p3.execute().getResult(), (integer_t)2);
 }
 
 TEST(ControlFlow, IfElse) {
   auto p1 = TangBase().compileScript("a = 1; if (true) a = 2; a;");
-  EXPECT_EQ(*p1.execute().getResult(), 2);
+  EXPECT_EQ(*p1.execute().getResult(), (integer_t)2);
   auto p2 = TangBase().compileScript("a = 1; if (true) a = 2; else a = 3; a;");
-  EXPECT_EQ(*p2.execute().getResult(), 2);
+  EXPECT_EQ(*p2.execute().getResult(), (integer_t)2);
   auto p3 = TangBase().compileScript("a = 1; if (false) a = 2; a;");
-  EXPECT_EQ(*p3.execute().getResult(), 1);
+  EXPECT_EQ(*p3.execute().getResult(), (integer_t)1);
   auto p4 = TangBase().compileScript("a = 1; if (false) a = 2; else a = 3; a;");
-  EXPECT_EQ(*p4.execute().getResult(), 3);
+  EXPECT_EQ(*p4.execute().getResult(), (integer_t)3);
   auto p5 = TangBase().compileScript("a = 1; if (true) {b = 2; a = a + b;} a;");
-  EXPECT_EQ(*p5.execute().getResult(), 3);
+  EXPECT_EQ(*p5.execute().getResult(), (integer_t)3);
   auto p6 = TangBase().compileScript("a = 1; if (true) {b = 3; a = a + b;} else {b = 3; a = a + b;} a;");
-  EXPECT_EQ(*p6.execute().getResult(), 4);
+  EXPECT_EQ(*p6.execute().getResult(), (integer_t)4);
   auto p7 = TangBase().compileScript("a = 1; if (false) {b = 2; a = a + b;} a;");
-  EXPECT_EQ(*p7.execute().getResult(), 1);
+  EXPECT_EQ(*p7.execute().getResult(), (integer_t)1);
   auto p8 = TangBase().compileScript("a = 1; if (false) {b = 2; a = a + b;} else {b = 3; a = a + b;} a;");
-  EXPECT_EQ(*p8.execute().getResult(), 4);
+  EXPECT_EQ(*p8.execute().getResult(), (integer_t)4);
   auto p9 = TangBase().compileScript("a = 1; if (true) a = 2; else {b = 3; a = a + b;} a;");
-  EXPECT_EQ(*p9.execute().getResult(), 2);
+  EXPECT_EQ(*p9.execute().getResult(), (integer_t)2);
   auto p10 = TangBase().compileScript("a = 1; if (false) a = 2; else {b = 3; a = a + b;} a;");
-  EXPECT_EQ(*p10.execute().getResult(), 4);
+  EXPECT_EQ(*p10.execute().getResult(), (integer_t)4);
   auto p11 = TangBase().compileScript("a = 1; if (true) {b = 2; a = a + b;} else a = 4; a;");
-  EXPECT_EQ(*p11.execute().getResult(), 3);
+  EXPECT_EQ(*p11.execute().getResult(), (integer_t)3);
   auto p12 = TangBase().compileScript("a = 1; if (false) {b = 2; a = a + b;} else a = 4; a;");
-  EXPECT_EQ(*p12.execute().getResult(), 4);
+  EXPECT_EQ(*p12.execute().getResult(), (integer_t)4);
   auto p13 = TangBase().compileScript("a = 1; if (true) if (true) a = 3; else a = 4; a;");
-  EXPECT_EQ(*p13.execute().getResult(), 3);
+  EXPECT_EQ(*p13.execute().getResult(), (integer_t)3);
   auto p14 = TangBase().compileScript("a = 1; if (true) if (false) a = 3; else a = 4; a;");
-  EXPECT_EQ(*p14.execute().getResult(), 4);
+  EXPECT_EQ(*p14.execute().getResult(), (integer_t)4);
   auto p15 = TangBase().compileScript("a = 1; if (false) if (true) a = 3; else a = 4; a;");
-  EXPECT_EQ(*p15.execute().getResult(), 1);
+  EXPECT_EQ(*p15.execute().getResult(), (integer_t)1);
   auto p16 = TangBase().compileScript("a = 1; if (false) if (false) a = 3; else a = 4; a;");
-  EXPECT_EQ(*p16.execute().getResult(), 1);
+  EXPECT_EQ(*p16.execute().getResult(), (integer_t)1);
   auto p17 = TangBase().compileScript("a = 1; b = 2; if (a != b) a = 3; a;");
-  EXPECT_EQ(*p17.execute().getResult(), 3);
+  EXPECT_EQ(*p17.execute().getResult(), (integer_t)3);
   auto p18 = TangBase().compileScript("a = 1; b = 2; if (a == b) a = 3; a;");
-  EXPECT_EQ(*p18.execute().getResult(), 1);
+  EXPECT_EQ(*p18.execute().getResult(), (integer_t)1);
 }
 
 TEST(ControlFlow, While) {
   auto p1 = TangBase().compileScript("a = 1; while (a < 10) b = a = a + 1; b;");
-  EXPECT_EQ(*p1.execute().getResult(), 10);
+  EXPECT_EQ(*p1.execute().getResult(), (integer_t)10);
   auto p2 = TangBase().compileScript("a = 1; while (a < 10) {a = a + 1; b = a;} b;");
-  EXPECT_EQ(*p2.execute().getResult(), 10);
+  EXPECT_EQ(*p2.execute().getResult(), (integer_t)10);
   auto p3 = TangBase().compileScript("a = 1; while (a > 10) b = a = a + 1; b;");
   EXPECT_EQ(*p3.execute().getResult(), nullptr);
   auto p4 = TangBase().compileScript("a = 1; while (a > 10) {a = a + 1; b = a;} b;");
@@ -642,13 +642,13 @@ TEST(ControlFlow, While) {
 
 TEST(ControlFlow, DoWhile) {
   auto p1 = TangBase().compileScript("a = 1; do b = a = a + 1; while (a < 10); b;");
-  EXPECT_EQ(*p1.execute().getResult(), 10);
+  EXPECT_EQ(*p1.execute().getResult(), (integer_t)10);
   auto p2 = TangBase().compileScript("a = 1; do {a = a + 1; b = a;} while (a < 10); b;");
-  EXPECT_EQ(*p2.execute().getResult(), 10);
+  EXPECT_EQ(*p2.execute().getResult(), (integer_t)10);
   auto p3 = TangBase().compileScript("a = 1; do b = a = a + 1; while (a > 10); b;");
-  EXPECT_EQ(*p3.execute().getResult(), 2);
+  EXPECT_EQ(*p3.execute().getResult(), (integer_t)2);
   auto p4 = TangBase().compileScript("a = 1; do {a = a + 1; b = a;} while (a > 10); b;");
-  EXPECT_EQ(*p4.execute().getResult(), 2);
+  EXPECT_EQ(*p4.execute().getResult(), (integer_t)2);
 }
 
 TEST(ControlFlow, For) {
@@ -697,7 +697,7 @@ TEST(ControlFlow, For) {
         a = a + 1;
     a;
   )");
-  EXPECT_EQ(*p6.execute().getResult(), 100);
+  EXPECT_EQ(*p6.execute().getResult(), (float_t)100.);
 }
 
 TEST(Print, Default) {

@@ -37,7 +37,7 @@ void AstNodeBlock::compile(Tang::Program & program) const {
     // Compile all but the last statement, adding POP after the statement.
     for (size_t i = 0; i < this->statements.size() - 1; ++i) {
       this->statements[i]->compile(program);
-      program.addBytecode((uint64_t)Opcode::POP);
+      program.addBytecode((uinteger_t)Opcode::POP);
     }
     // Compile the last statement without a POP so that its value is left on
     // the stack.
@@ -45,7 +45,7 @@ void AstNodeBlock::compile(Tang::Program & program) const {
   }
   else {
     // This compile *must* leave something on the stack, so leave a NULL
-    program.addBytecode((uint64_t)Opcode::NULLVAL);
+    program.addBytecode((uinteger_t)Opcode::NULLVAL);
   }
 }
 

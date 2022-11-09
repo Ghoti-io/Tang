@@ -28,28 +28,28 @@ string AstNodeFor::dump(string indent) const {
 void AstNodeFor::compile(Tang::Program & program) const {
   // Compile the Initialization expression.
   this->initialization->compile(program);
-  program.addBytecode((uint64_t)Opcode::POP);
+  program.addBytecode((uinteger_t)Opcode::POP);
 
   // Store the location for the start condition.
   auto conditionStart = program.getBytecode().size();
   this->condition->compile(program);
 
   // If condition is false, jump to the end of the if..else statement.
-  program.addBytecode((uint64_t)Opcode::JMPF_POP);
+  program.addBytecode((uinteger_t)Opcode::JMPF_POP);
   auto conditionFalseJump = program.getBytecode().size() - 1;
   program.addBytecode(0);
 
   // Compile the code block and clean up the stack afterwards.
   this->codeBlock->compile(program);
-  program.addBytecode((uint64_t)Opcode::POP);
+  program.addBytecode((uinteger_t)Opcode::POP);
 
   // Compile the increment expression.
   this->increment->compile(program);
-  program.addBytecode((uint64_t)Opcode::POP);
+  program.addBytecode((uinteger_t)Opcode::POP);
 
   // Jump back up to the condition.
-  program.addBytecode((uint64_t)Opcode::JMP);
-  program.addBytecode((uint64_t)conditionStart);
+  program.addBytecode((uinteger_t)Opcode::JMP);
+  program.addBytecode((uinteger_t)conditionStart);
 
   // We now know where the code after the while statement will be.
   // The parent will add a POP instruction, so account for that by using "+ 1".

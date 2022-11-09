@@ -12,7 +12,7 @@
 using namespace std;
 using namespace Tang;
 
-ComputedExpressionFloat::ComputedExpressionFloat(double val) : val{val} {}
+ComputedExpressionFloat::ComputedExpressionFloat(float_t val) : val{val} {}
 
 string ComputedExpressionFloat::dump() const {
   return to_string(this->val);
@@ -22,11 +22,11 @@ GarbageCollected ComputedExpressionFloat::makeCopy() const {
   return GarbageCollected::make<ComputedExpressionFloat>(this->val);
 }
 
-bool ComputedExpressionFloat::is_equal(const int & val) const {
+bool ComputedExpressionFloat::is_equal(const integer_t & val) const {
   return (float)val == this->val;
 }
 
-bool ComputedExpressionFloat::is_equal(const double & val) const {
+bool ComputedExpressionFloat::is_equal(const float_t & val) const {
   return val == this->val;
 }
 
@@ -143,7 +143,7 @@ GarbageCollected ComputedExpressionFloat::__equal(const GarbageCollected & rhs) 
 }
 
 GarbageCollected ComputedExpressionFloat::__integer() const {
-  return GarbageCollected::make<ComputedExpressionInteger>((int64_t)this->val);
+  return GarbageCollected::make<ComputedExpressionInteger>((integer_t)this->val);
 }
 
 GarbageCollected ComputedExpressionFloat::__float() const {

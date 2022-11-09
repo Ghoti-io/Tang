@@ -4,6 +4,7 @@
  */
 
 #include <iostream>
+#include "macros.hpp"
 #include "astNode.hpp"
 #include "opcode.hpp"
 
@@ -28,7 +29,7 @@ void AstNode::compile(Tang::Program & program) const {
   // actually AstNode, and not a derived type that forgot to override the
   // virtual method.
   if (typeid(*this) == typeid(AstNode)) {
-    program.addBytecode((uint64_t)Opcode::NULLVAL);
+    program.addBytecode((uinteger_t)Opcode::NULLVAL);
   }
 }
 

@@ -19,12 +19,12 @@ namespace Tang {
        *
        * @param val The float value.
        */
-      ComputedExpressionFloat(double val);
+      ComputedExpressionFloat(Tang::float_t val);
 
       virtual std::string dump() const override;
       GarbageCollected makeCopy() const override;
-      virtual bool is_equal(const int & val) const override;
-      virtual bool is_equal(const double & val) const override;
+      virtual bool is_equal(const Tang::integer_t & val) const override;
+      virtual bool is_equal(const Tang::float_t & val) const override;
       virtual bool is_equal(const bool & val) const override;
       virtual GarbageCollected __add(const GarbageCollected & rhs) const override;
       virtual GarbageCollected __subtract(const GarbageCollected & rhs) const override;
@@ -45,7 +45,7 @@ namespace Tang {
       /**
        * The float value.
        */
-      double val;
+      Tang::float_t val;
   };
 }
 

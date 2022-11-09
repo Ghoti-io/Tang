@@ -147,7 +147,7 @@ namespace Tang {
      * @param val The value to compare the tracked object against.
      * @return True if they are equal, false otherwise.
      */
-    bool operator==(const int & val) const;
+    bool operator==(const Tang::integer_t & val) const;
 
     /**
      * Compare the GarbageCollected tracked object with a supplied value.
@@ -155,7 +155,7 @@ namespace Tang {
      * @param val The value to compare the tracked object against.
      * @return True if they are equal, false otherwise.
      */
-    bool operator==(const double & val) const;
+    bool operator==(const Tang::float_t & val) const;
 
     /**
      * Compare the GarbageCollected tracked object with a supplied value.

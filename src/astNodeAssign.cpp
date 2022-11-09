@@ -40,8 +40,8 @@ void AstNodeAssign::compile(Tang::Program & program) const {
     auto & lhsConv = static_cast<AstNodeIdentifier&>(*this->lhs);
     auto & identifier = program.identifierStack.back();
     if (identifier.count(lhsConv.name)) {
-      program.addBytecode((uint64_t)Opcode::POKE);
-      program.addBytecode((uint64_t)identifier[lhsConv.name]);
+      program.addBytecode((uinteger_t)Opcode::POKE);
+      program.addBytecode((uinteger_t)identifier[lhsConv.name]);
     }
   }
 }

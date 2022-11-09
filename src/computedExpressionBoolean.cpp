@@ -47,7 +47,7 @@ GarbageCollected ComputedExpressionBoolean::__integer() const {
 }
 
 GarbageCollected ComputedExpressionBoolean::__float() const {
-  return GarbageCollected::make<ComputedExpressionFloat>(this->val ? 1. : 0);
+  return GarbageCollected::make<ComputedExpressionFloat>(this->val ? (float_t)1. : 0);
 }
 
 GarbageCollected ComputedExpressionBoolean::__boolean() const {

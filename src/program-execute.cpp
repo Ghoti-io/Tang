@@ -131,13 +131,13 @@ Program& Program::execute() {
       }
       case Opcode::INTEGER: {
         EXECUTEPROGRAMCHECK(1);
-        stack.push_back(GarbageCollected::make<ComputedExpressionInteger>((int64_t)this->bytecode[pc + 1]));
+        stack.push_back(GarbageCollected::make<ComputedExpressionInteger>((integer_t)this->bytecode[pc + 1]));
         pc += 2;
         break;
       }
       case Opcode::FLOAT: {
         EXECUTEPROGRAMCHECK(1);
-        stack.push_back(GarbageCollected::make<ComputedExpressionFloat>(bit_cast<double>(this->bytecode[pc + 1])));
+        stack.push_back(GarbageCollected::make<ComputedExpressionFloat>(bit_cast<float_t>(this->bytecode[pc + 1])));
         pc += 2;
         break;
       }
@@ -150,14 +150,15 @@ Program& Program::execute() {
       case Opcode::STRING: {
         EXECUTEPROGRAMCHECK(1);
         auto size = this->bytecode[pc + 1];
-        auto bytes = ceil((double)size / sizeof(uint64_t));
+        auto bytes = ceil((double)size / sizeof(uinteger_t));
         EXECUTEPROGRAMCHECK(1 + bytes);
         // Construct the string.
         string temp{};
         for (size_t i = 0; i < bytes; ++i) {
-          for (size_t j = 0; j < sizeof(uint64_t); ++j) {
-            if (((i * 8) + j) < size) {
-              temp += (unsigned char)((this->bytecode[pc + 2 + i] >> (8 * (7 - j))) & 0xFF);
+          for (size_t j = 0; j < sizeof(uinteger_t); ++j) {
+            if ((integer_t)((i * sizeof(uinteger_t)) + j) < size) {
+              temp += (unsigned char)
+                ((this->bytecode[pc + 2 + i] >> (8 * (sizeof(uinteger_t) - 1 - j))) & 0xFF);
             }
           }
         }

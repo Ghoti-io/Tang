@@ -14,6 +14,7 @@ namespace Tang {
 
 #include <cstdint>
 #include <string>
+#include "macros.hpp"
 #include "garbageCollected.hpp"
 #include "error.hpp"
 
@@ -50,7 +51,7 @@ namespace Tang {
        * @param val The value to compare against.
        * @return True if equal, false if not.
        */
-      virtual bool is_equal(const int & val) const;
+      virtual bool is_equal(const Tang::integer_t & val) const;
 
       /**
        * Check whether or not the computed expression is equal to another value.
@@ -58,7 +59,7 @@ namespace Tang {
        * @param val The value to compare against.
        * @return True if equal, false if not.
        */
-      virtual bool is_equal(const double & val) const;
+      virtual bool is_equal(const Tang::float_t & val) const;
 
       /**
        * Check whether or not the computed expression is equal to another value.

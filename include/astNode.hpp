@@ -9,6 +9,7 @@
 #include <memory>
 #include <string>
 #include "location.hh"
+#include "macros.hpp"
 #include "program.hpp"
 
 namespace Tang {

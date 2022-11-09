@@ -21,7 +21,7 @@ namespace Tang {
   /**
    * Contains the Opcodes of a compiled program.
    */
-  using Bytecode = std::vector<uint64_t>;
+  using Bytecode = std::vector<Tang::uinteger_t>;
 
   /**
    * Represents a compiled script or template that may be executed.
@@ -81,12 +81,12 @@ namespace Tang {
     std::string out;
 
     /**
-     * Add a uint64_t to the Bytecode.
+     * Add a Tang::uinteger_t to the Bytecode.
      *
      * @param op The value to add to the Bytecode.
      * @return The size of the bytecode structure.
      */
-    size_t addBytecode(uint64_t);
+    size_t addBytecode(Tang::uinteger_t);
 
     /**
      * Get the Bytecode vector.
@@ -119,7 +119,7 @@ namespace Tang {
      * @param jumpTarget The address to jump to.
      * @return Whether or not the jumpTarget was set.
      */
-    bool setJumpTarget(size_t opcodeAddress, uint64_t jumpTarget);
+    bool setJumpTarget(size_t opcodeAddress, Tang::uinteger_t jumpTarget);
 
   private:
     /**

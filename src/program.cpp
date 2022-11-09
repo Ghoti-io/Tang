@@ -48,7 +48,7 @@ void Program::compile() {
 
   // Reserve spaces on the stack for each variable.
   for ([[maybe_unused]] const auto & x : this->identifierStack.back()) {
-    this->bytecode.push_back((uint64_t)Opcode::NULLVAL);
+    this->bytecode.push_back((uinteger_t)Opcode::NULLVAL);
   }
 
   // Reserve spaces on the stack for each string.
@@ -79,7 +79,7 @@ optional<const GarbageCollected> Program::getResult() const {
   return this->result;
 }
 
-size_t Program::addBytecode(uint64_t op) {
+size_t Program::addBytecode(uinteger_t op) {
   this->bytecode.push_back(op);
   return this->bytecode.size();
 }
@@ -88,7 +88,7 @@ const Bytecode & Program::getBytecode() {
   return this->bytecode;
 }
 
-bool Program::setJumpTarget(size_t opcodeAddress, uint64_t jumpTarget) {
+bool Program::setJumpTarget(size_t opcodeAddress, uinteger_t jumpTarget) {
   // Verify that the address is in scope.
   if (opcodeAddress >= this->bytecode.size() - 1) {
     return false;

@@ -43,152 +43,152 @@ $(GEN_DIR)/location.hh: $(GEN_DIR)/tangParser.hpp
 # Object Files
 ####################################################################
 
-$(OBJ_DIR)/astNode.o: src/astNode.cpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNode.o: src/astNode.cpp include/macros.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling astNode.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/astNodeAssign.o: src/astNodeAssign.cpp include/astNodeAssign.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeAssign.o: src/astNodeAssign.cpp include/macros.hpp include/astNodeAssign.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling astNodeAssign.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/astNodeBinary.o: src/astNodeBinary.cpp include/astNodeBinary.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeBinary.o: src/astNodeBinary.cpp include/macros.hpp include/astNodeBinary.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling astNodeBinary.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/astNodeBlock.o: src/astNodeBlock.cpp include/astNodeBlock.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeBlock.o: src/astNodeBlock.cpp include/macros.hpp include/astNodeBlock.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling astNodeBlock.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/astNodeBoolean.o: src/astNodeBoolean.cpp include/astNodeBoolean.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeBoolean.o: src/astNodeBoolean.cpp include/macros.hpp include/astNodeBoolean.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling astNodeBoolean.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/astNodeFloat.o: src/astNodeFloat.cpp include/astNodeFloat.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeFloat.o: src/astNodeFloat.cpp include/macros.hpp include/astNodeFloat.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling astNodeFloat.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/astNodeIdentifier.o: src/astNodeIdentifier.cpp include/astNodeIdentifier.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeIdentifier.o: src/astNodeIdentifier.cpp include/macros.hpp include/astNodeIdentifier.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling astNodeIdentifier.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/astNodeInteger.o: src/astNodeInteger.cpp include/astNodeInteger.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeInteger.o: src/astNodeInteger.cpp include/macros.hpp include/astNodeInteger.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling astNodeInteger.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/astNodePrint.o: src/astNodePrint.cpp include/astNodePrint.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodePrint.o: src/astNodePrint.cpp include/macros.hpp include/astNodePrint.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling astNodePrint.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/astNodeString.o: src/astNodeString.cpp include/astNodeString.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeString.o: src/astNodeString.cpp include/macros.hpp include/astNodeString.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling astNodeString.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/astNodeTernary.o: src/astNodeTernary.cpp include/astNodeTernary.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeTernary.o: src/astNodeTernary.cpp include/macros.hpp include/astNodeTernary.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling astNodeTernary.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/astNodeUnary.o: src/astNodeUnary.cpp include/astNodeUnary.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeUnary.o: src/astNodeUnary.cpp include/macros.hpp include/astNodeUnary.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling astNodeUnary.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/astNodeWhile.o: src/astNodeWhile.cpp include/astNodeWhile.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeWhile.o: src/astNodeWhile.cpp include/macros.hpp include/astNodeWhile.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling astNodeWhile.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/astNodeCast.o: src/astNodeCast.cpp include/astNodeCast.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeCast.o: src/astNodeCast.cpp include/macros.hpp include/astNodeCast.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling astNodeCast.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/astNodeDoWhile.o: src/astNodeDoWhile.cpp include/astNodeDoWhile.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeDoWhile.o: src/astNodeDoWhile.cpp include/macros.hpp include/astNodeDoWhile.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling astNodeDoWhile.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/astNodeFor.o: src/astNodeFor.cpp include/astNodeFor.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeFor.o: src/astNodeFor.cpp include/macros.hpp include/astNodeFor.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling astNodeFor.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/astNodeIfElse.o: src/astNodeIfElse.cpp include/astNodeIfElse.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeIfElse.o: src/astNodeIfElse.cpp include/macros.hpp include/astNodeIfElse.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling astNodeIfElse.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/computedExpression.o: src/computedExpression.cpp include/computedExpression.hpp include/garbageCollected.hpp
+$(OBJ_DIR)/computedExpression.o: src/computedExpression.cpp include/macros.hpp include/computedExpression.hpp include/garbageCollected.hpp
 	@echo "\n### Compiling computedExpression.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/computedExpressionBoolean.o: src/computedExpressionBoolean.cpp include/computedExpressionBoolean.hpp include/computedExpression.hpp include/error.hpp include/garbageCollected.hpp
+$(OBJ_DIR)/computedExpressionBoolean.o: src/computedExpressionBoolean.cpp include/macros.hpp include/computedExpressionBoolean.hpp include/computedExpression.hpp include/error.hpp include/garbageCollected.hpp
 	@echo "\n### Compiling computedExpressionBoolean.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/computedExpressionError.o: src/computedExpressionError.cpp include/computedExpressionError.hpp include/computedExpression.hpp include/error.hpp include/garbageCollected.hpp
+$(OBJ_DIR)/computedExpressionError.o: src/computedExpressionError.cpp include/macros.hpp include/computedExpressionError.hpp include/computedExpression.hpp include/error.hpp include/garbageCollected.hpp
 	@echo "\n### Compiling computedExpressionError.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/computedExpressionFloat.o: src/computedExpressionFloat.cpp include/computedExpressionFloat.hpp include/computedExpression.hpp include/error.hpp include/garbageCollected.hpp
+$(OBJ_DIR)/computedExpressionFloat.o: src/computedExpressionFloat.cpp include/macros.hpp include/computedExpressionFloat.hpp include/computedExpression.hpp include/error.hpp include/garbageCollected.hpp
 	@echo "\n### Compiling computedExpressionFloat.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/computedExpressionInteger.o: src/computedExpressionInteger.cpp include/computedExpressionInteger.hpp include/computedExpression.hpp include/error.hpp include/garbageCollected.hpp
+$(OBJ_DIR)/computedExpressionInteger.o: src/computedExpressionInteger.cpp include/macros.hpp include/computedExpressionInteger.hpp include/computedExpression.hpp include/error.hpp include/garbageCollected.hpp
 	@echo "\n### Compiling computedExpressionInteger.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/computedExpressionString.o: src/computedExpressionString.cpp include/computedExpressionString.hpp include/computedExpression.hpp include/error.hpp include/garbageCollected.hpp
+$(OBJ_DIR)/computedExpressionString.o: src/computedExpressionString.cpp include/macros.hpp include/computedExpressionString.hpp include/computedExpression.hpp include/error.hpp include/garbageCollected.hpp
 	@echo "\n### Compiling computedExpressionString.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/error.o: src/error.cpp include/error.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/error.o: src/error.cpp include/error.hpp include/macros.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling error.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/garbageCollected.o: src/garbageCollected.cpp include/garbageCollected.hpp
+$(OBJ_DIR)/garbageCollected.o: src/garbageCollected.cpp include/macros.hpp include/garbageCollected.hpp
 	@echo "\n### Compiling garbageCollected.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/program.o: src/program.cpp include/program.hpp include/tangScanner.hpp include/opcode.hpp include/astNode.hpp include/error.hpp include/garbageCollected.hpp include/computedExpression.hpp include/singletonObjectPool.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/program.o: src/program.cpp include/macros.hpp include/program.hpp include/tangScanner.hpp include/opcode.hpp include/astNode.hpp include/error.hpp include/garbageCollected.hpp include/computedExpression.hpp include/singletonObjectPool.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling program.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/program-dumpBytecode.o: src/program-dumpBytecode.cpp include/program.hpp include/tangScanner.hpp include/opcode.hpp include/astNode.hpp include/error.hpp include/garbageCollected.hpp include/computedExpression.hpp include/singletonObjectPool.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/program-dumpBytecode.o: src/program-dumpBytecode.cpp include/macros.hpp include/program.hpp include/tangScanner.hpp include/opcode.hpp include/astNode.hpp include/error.hpp include/garbageCollected.hpp include/computedExpression.hpp include/singletonObjectPool.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling program-dumpBytecode.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/program-execute.o: src/program-execute.cpp include/program.hpp include/tangScanner.hpp include/opcode.hpp include/astNode.hpp include/error.hpp include/garbageCollected.hpp include/computedExpression.hpp include/singletonObjectPool.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/program-execute.o: src/program-execute.cpp include/macros.hpp include/program.hpp include/tangScanner.hpp include/opcode.hpp include/astNode.hpp include/error.hpp include/garbageCollected.hpp include/computedExpression.hpp include/singletonObjectPool.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling program-execute.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/tangBase.o: src/tangBase.cpp include/tangBase.hpp include/program.hpp include/astNode.hpp include/error.hpp include/garbageCollected.hpp include/computedExpression.hpp include/singletonObjectPool.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/tangBase.o: src/tangBase.cpp include/macros.hpp include/tangBase.hpp include/program.hpp include/astNode.hpp include/error.hpp include/garbageCollected.hpp include/computedExpression.hpp include/singletonObjectPool.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling tangBase.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/tangParser.o: $(GEN_DIR)/tangParser.cpp include/tangScanner.hpp
+$(OBJ_DIR)/tangParser.o: $(GEN_DIR)/tangParser.cpp include/macros.hpp include/tangScanner.hpp
 	@echo "\n### Compiling tangParser.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
@@ -211,7 +211,7 @@ $(APP_DIR)/$(TARGET): $(LIBOBJECTS)
 # Unit Tests
 ####################################################################
 
-$(APP_DIR)/test: test/test.cpp include/singletonObjectPool.hpp $(APP_DIR)/$(TARGET)
+$(APP_DIR)/test: test/test.cpp include/singletonObjectPool.hpp include/macros.hpp $(APP_DIR)/$(TARGET)
 	@echo "\n### Compiling Tang Test ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ $< $(LDFLAGS) $(TESTFLAGS) $(TANGLIBRARY)
@@ -221,7 +221,7 @@ $(APP_DIR)/testSingletonObjectPool: test/testSingletonObjectPool.cpp include/sin
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ $< $(LDFLAGS) $(TESTFLAGS) $(TANGLIBRARY)
 
-$(APP_DIR)/testGarbageCollected: test/testGarbageCollected.cpp include/garbageCollected.hpp include/singletonObjectPool.hpp $(APP_DIR)/$(TARGET)
+$(APP_DIR)/testGarbageCollected: test/testGarbageCollected.cpp include/macros.hpp include/garbageCollected.hpp include/singletonObjectPool.hpp $(APP_DIR)/$(TARGET)
 	@echo "\n### Compiling GarbageCollected Test ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ $< $(LDFLAGS) $(TESTFLAGS) $(TANGLIBRARY)

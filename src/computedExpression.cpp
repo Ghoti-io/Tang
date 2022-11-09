@@ -25,11 +25,11 @@ GarbageCollected ComputedExpression::makeCopy() const {
   return GarbageCollected::make<ComputedExpression>();
 }
 
-bool ComputedExpression::is_equal([[maybe_unused]] const int & val) const {
+bool ComputedExpression::is_equal([[maybe_unused]] const Tang::integer_t & val) const {
   return false;
 }
 
-bool ComputedExpression::is_equal([[maybe_unused]] const double & val) const {
+bool ComputedExpression::is_equal([[maybe_unused]] const Tang::float_t & val) const {
   return false;
 }
 

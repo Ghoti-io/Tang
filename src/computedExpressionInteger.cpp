@@ -12,7 +12,7 @@
 using namespace std;
 using namespace Tang;
 
-ComputedExpressionInteger::ComputedExpressionInteger(int64_t val) : val{val} {}
+ComputedExpressionInteger::ComputedExpressionInteger(integer_t val) : val{val} {}
 
 string ComputedExpressionInteger::dump() const {
   return to_string(this->val);
@@ -22,12 +22,12 @@ GarbageCollected ComputedExpressionInteger::makeCopy() const {
   return GarbageCollected::make<ComputedExpressionInteger>(this->val);
 }
 
-bool ComputedExpressionInteger::is_equal(const int & val) const {
+bool ComputedExpressionInteger::is_equal(const integer_t & val) const {
   return val == this->val;
 }
 
-bool ComputedExpressionInteger::is_equal(const double & val) const {
-  return val == (double)this->val;
+bool ComputedExpressionInteger::is_equal(const float_t & val) const {
+  return val == (float_t)this->val;
 }
 
 bool ComputedExpressionInteger::is_equal(const bool & val) const {
@@ -159,7 +159,7 @@ GarbageCollected ComputedExpressionInteger::__integer() const {
 }
 
 GarbageCollected ComputedExpressionInteger::__float() const {
-  return GarbageCollected::make<ComputedExpressionFloat>((double)this->val);
+  return GarbageCollected::make<ComputedExpressionFloat>((float_t)this->val);
 }
 
 GarbageCollected ComputedExpressionInteger::__boolean() const {

@@ -33,11 +33,11 @@ void AstNodeUnary::compile(Tang::Program & program) const {
   this->operand->compile(program);
   switch (this->op) {
     case Negative: {
-      program.addBytecode((uint64_t)Opcode::NEGATIVE);
+      program.addBytecode((uinteger_t)Opcode::NEGATIVE);
       break;
     }
     case Not: {
-      program.addBytecode((uint64_t)Opcode::NOT);
+      program.addBytecode((uinteger_t)Opcode::NOT);
       break;
     }
   }

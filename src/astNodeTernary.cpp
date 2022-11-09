@@ -28,7 +28,7 @@ void AstNodeTernary::compile(Tang::Program & program) const {
 
   // If condition is false, jump to the falseExpression.
   auto conditionFalseJump = program.getBytecode().size();
-  program.addBytecode((uint64_t)Opcode::JMPF_POP);
+  program.addBytecode((uinteger_t)Opcode::JMPF_POP);
   program.addBytecode(0);
 
   // Compile the then block, and jump past the else block.
@@ -36,7 +36,7 @@ void AstNodeTernary::compile(Tang::Program & program) const {
   
   // Jump past falseExpression.
   auto trueExpressionJump = program.getBytecode().size();
-  program.addBytecode((uint64_t)Opcode::JMP);
+  program.addBytecode((uinteger_t)Opcode::JMP);
   program.addBytecode(0);
 
   // Add the falseExpression.

@@ -26,11 +26,11 @@ void AstNodeIdentifier::collectIdentifiers(Program & program) const {
 void AstNodeIdentifier::compile(Tang::Program & program) const {
   auto & identifier = program.identifierStack.back();
   if (identifier.count(this->name)) {
-    program.addBytecode((uint64_t)Opcode::PEEK);
-    program.addBytecode((uint64_t)identifier[this->name]);
+    program.addBytecode((uinteger_t)Opcode::PEEK);
+    program.addBytecode((uinteger_t)identifier[this->name]);
   }
   else {
-    program.addBytecode((uint64_t)Opcode::NULLVAL);
+    program.addBytecode((uinteger_t)Opcode::NULLVAL);
   }
 }
 
