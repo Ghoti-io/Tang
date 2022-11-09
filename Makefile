@@ -7,7 +7,7 @@ GEN_DIR := $(BUILD)/generated
 APP_DIR := $(BUILD)/apps
 TARGET := libtang.so
 INCLUDE := -I include/ -I $(GEN_DIR)/
-LIBOBJECTS := $(OBJ_DIR)/astNode.o $(OBJ_DIR)/astNodeAssign.o $(OBJ_DIR)/astNodeBinary.o $(OBJ_DIR)/astNodeBlock.o $(OBJ_DIR)/astNodeBoolean.o $(OBJ_DIR)/astNodeCast.o $(OBJ_DIR)/astNodeDoWhile.o $(OBJ_DIR)/astNodeFor.o $(OBJ_DIR)/astNodeIfElse.o $(OBJ_DIR)/astNodeFloat.o $(OBJ_DIR)/astNodeIdentifier.o $(OBJ_DIR)/astNodeInteger.o $(OBJ_DIR)/astNodePrint.o $(OBJ_DIR)/astNodeString.o $(OBJ_DIR)/astNodeUnary.o $(OBJ_DIR)/astNodeWhile.o $(OBJ_DIR)/computedExpression.o $(OBJ_DIR)/computedExpressionBoolean.o $(OBJ_DIR)/computedExpressionFloat.o $(OBJ_DIR)/computedExpressionInteger.o $(OBJ_DIR)/computedExpressionError.o $(OBJ_DIR)/computedExpressionString.o $(OBJ_DIR)/error.o $(OBJ_DIR)/garbageCollected.o $(OBJ_DIR)/program.o $(OBJ_DIR)/program-dumpBytecode.o  $(OBJ_DIR)/program-execute.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o
+LIBOBJECTS := $(OBJ_DIR)/astNode.o $(OBJ_DIR)/astNodeAssign.o $(OBJ_DIR)/astNodeBinary.o $(OBJ_DIR)/astNodeBlock.o $(OBJ_DIR)/astNodeBoolean.o $(OBJ_DIR)/astNodeCast.o $(OBJ_DIR)/astNodeDoWhile.o $(OBJ_DIR)/astNodeFor.o $(OBJ_DIR)/astNodeIfElse.o $(OBJ_DIR)/astNodeFloat.o $(OBJ_DIR)/astNodeIdentifier.o $(OBJ_DIR)/astNodeInteger.o $(OBJ_DIR)/astNodePrint.o $(OBJ_DIR)/astNodeString.o $(OBJ_DIR)/astNodeTernary.o $(OBJ_DIR)/astNodeUnary.o $(OBJ_DIR)/astNodeWhile.o $(OBJ_DIR)/computedExpression.o $(OBJ_DIR)/computedExpressionBoolean.o $(OBJ_DIR)/computedExpressionFloat.o $(OBJ_DIR)/computedExpressionInteger.o $(OBJ_DIR)/computedExpressionError.o $(OBJ_DIR)/computedExpressionString.o $(OBJ_DIR)/error.o $(OBJ_DIR)/garbageCollected.o $(OBJ_DIR)/program.o $(OBJ_DIR)/program-dumpBytecode.o  $(OBJ_DIR)/program-execute.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o
 TESTFLAGS := `pkg-config --libs --cflags gtest`
 
 
@@ -90,6 +90,11 @@ $(OBJ_DIR)/astNodePrint.o: src/astNodePrint.cpp include/astNodePrint.hpp include
 
 $(OBJ_DIR)/astNodeString.o: src/astNodeString.cpp include/astNodeString.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling astNodeString.o ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
+
+$(OBJ_DIR)/astNodeTernary.o: src/astNodeTernary.cpp include/astNodeTernary.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+	@echo "\n### Compiling astNodeTernary.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 

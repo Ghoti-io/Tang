@@ -212,6 +212,12 @@ using namespace std;
   as {
     return Tang::TangParser::make_AS(Tang::location(location));
   }
+  \? {
+    return Tang::TangParser::make_QUESTIONMARK(Tang::location(location));
+  }
+  : {
+    return Tang::TangParser::make_COLON(Tang::location(location));
+  }
   ; {
     return Tang::TangParser::make_SEMICOLON(Tang::location(location));
   }

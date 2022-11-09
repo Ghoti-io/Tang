@@ -111,6 +111,8 @@
 %token CASTFLOAT "float"
 %token CASTBOOLEAN "boolean"
 %token PRINT "print"
+%token QUESTIONMARK "?"
+%token COLON ":"
 %token SEMICOLON ";"
 
 // Any %type declarations of non-terminals.
@@ -130,7 +132,7 @@
 // Notice that the order is reversed from:
 // https://en.cppreference.com/w/cpp/language/operator_precedence
 // Here, rules are in order of lowest to highest precedence.
-%right "="
+%right "=" "?" ":"
 %left "==" "!="
 %left "<" "<=" ">" ">="
 %left "+" "-"
@@ -163,6 +165,7 @@ namespace Tang {
 #include "astNodeInteger.hpp"
 #include "astNodeBoolean.hpp"
 #include "astNodeString.hpp"
+#include "astNodeTernary.hpp"
 #include "astNodeCast.hpp"
 #include "astNodeBlock.hpp"
 #include "astNodeIfElse.hpp"
@@ -404,6 +407,10 @@ expression
   | "print" "(" expression ")"
     {
       $$ = std::make_shared<AstNodePrint>(AstNodePrint::Default, $3, @1);
+    }
+  | expression "?" expression ":" expression
+    {
+      $$ = std::make_shared<AstNodeTernary>($1, $3, $5, @2);
     }
   ;
 

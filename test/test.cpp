@@ -547,6 +547,29 @@ TEST(Expression, Or) {
   EXPECT_EQ(*p12.execute().getResult(), true);
 }
 
+TEST(Expression, Ternary) {
+  auto p1 = TangBase().compileScript("true ? 3 : 5");
+  EXPECT_EQ(*p1.execute().getResult(), 3);
+  auto p2 = TangBase().compileScript("false ? 3 : 5");
+  EXPECT_EQ(*p2.execute().getResult(), 5);
+  auto p3 = TangBase().compileScript("false ? true ? 1 : 3 : 5");
+  EXPECT_EQ(*p3.execute().getResult(), 5);
+  auto p4 = TangBase().compileScript("false ? false ? 1 : 3 : 5");
+  EXPECT_EQ(*p4.execute().getResult(), 5);
+  auto p5 = TangBase().compileScript("true ? true ? 1 : 3 : 5");
+  EXPECT_EQ(*p5.execute().getResult(), 1);
+  auto p6 = TangBase().compileScript("true ? false ? 1 : 3 : 5");
+  EXPECT_EQ(*p6.execute().getResult(), 3);
+  auto p7 = TangBase().compileScript("false ? 1 : true ? 3 : 5");
+  EXPECT_EQ(*p7.execute().getResult(), 3);
+  auto p8 = TangBase().compileScript("false ? 1 : false ? 3 : 5");
+  EXPECT_EQ(*p8.execute().getResult(), 5);
+  auto p9 = TangBase().compileScript("true ? 1 : true ? 3 : 5");
+  EXPECT_EQ(*p9.execute().getResult(), 1);
+  auto p10 = TangBase().compileScript("true ? 1 : false ? 3 : 5");
+  EXPECT_EQ(*p10.execute().getResult(), 1);
+}
+
 TEST(CodeBlock, Statements) {
   auto p1 = TangBase().compileScript("2;");
   EXPECT_EQ(*p1.execute().getResult(), 2);
