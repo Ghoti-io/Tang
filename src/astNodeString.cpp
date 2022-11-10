@@ -19,10 +19,10 @@ string AstNodeString::dump(string indent) const {
 }
 
 void AstNodeString::compile(Tang::Program & program) const {
-  auto & strings = program.stringStack.back();
+  auto & strings = program.getStrings();
   if (strings.count(this->val)) {
     program.addBytecode((uinteger_t)Opcode::PEEK);
-    program.addBytecode((uinteger_t)(strings[this->val] + program.identifierStack.back().size()));
+    program.addBytecode((uinteger_t)(strings.at(this->val) + program.getIdentifiers().size()));
   }
   else {
     program.addBytecode((uinteger_t)Opcode::NULLVAL);
@@ -50,9 +50,6 @@ void AstNodeString::compileLiteral(Tang::Program & program) const {
 }
 
 void AstNodeString::collectStrings(Program & program) const {
-  auto & strings = program.stringStack.back();
-  if (strings.count(this->val) == 0) {
-    strings[this->val] = strings.size();
-  }
+  program.addString(this->val);
 }
 

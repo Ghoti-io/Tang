@@ -110,16 +110,20 @@
 %token CASTINT "int"
 %token CASTFLOAT "float"
 %token CASTBOOLEAN "boolean"
+%token FUNCTION "function"
+%token RETURN "return"
 %token PRINT "print"
 %token QUESTIONMARK "?"
 %token COLON ":"
 %token SEMICOLON ";"
+%token COMMA ","
 
 // Any %type declarations of non-terminals.
 // https://www.gnu.org/software/bison/manual/bison.html#index-_0025type
 %type <std::shared_ptr<Tang::AstNode>> program
 %type <std::shared_ptr<Tang::AstNode>> expression
 %type <std::vector<std::shared_ptr<Tang::AstNode>>> statements
+%type <std::vector<std::string>> functionDeclarationArguments
 %type <std::shared_ptr<Tang::AstNode>> statement
 %type <std::shared_ptr<Tang::AstNode>> codeBlock
 %type <std::shared_ptr<Tang::AstNode>> openStatement
@@ -175,6 +179,8 @@ namespace Tang {
 #include "astNodeDoWhile.hpp"
 #include "astNodeFor.hpp"
 #include "astNodePrint.hpp"
+#include "astNodeFunctionDeclaration.hpp"
+#include "astNodeReturn.hpp"
 
 // We must provide the yylex() function.
 // yylex() arguments are defined in the bison .y file.
@@ -214,6 +220,25 @@ program
   | EOF
     {}
   ;
+
+// `functionDeclarationArguments` is a comma-separated list of variable names
+// given as part of a function declaration.
+functionDeclarationArguments
+  : %empty
+    {
+      $$ = std::vector<std::string>{};
+    }
+  | IDENTIFIER
+    {
+      $$ = std::vector<std::string>{$1};
+    }
+  | functionDeclarationArguments "," IDENTIFIER
+    {
+      $1.push_back($3);
+      $$ = $1;
+    }
+  ;
+
 
 // `statements` represent a sequence of `statement` expressions.
 statements
@@ -257,7 +282,15 @@ closedStatement
     {
       $$ = std::make_shared<AstNodeFor>($3, $5, $7, $9, @1);
     }
+  | "function" IDENTIFIER "(" functionDeclarationArguments ")" codeBlock
+    {
+      $$ = std::make_shared<AstNodeFunctionDeclaration>($2, $4, $6, @1);
+    }
   | codeBlock
+  | "return" expression ";"
+    {
+      $$ = std::make_shared<AstNodeReturn>($2, @1);
+    }
   | expression ";"
   ;
 

@@ -18,6 +18,7 @@ namespace Tang {
     FLOAT,    ///< Push a floating point number onto the stack
     BOOLEAN,  ///< Push a boolean onto the stack
     STRING,   ///< Get len, char string: push string
+    FUNCTION, ///< Get PC#: push function at PC #
     ADD,      ///< Pop rhs, pop lhs, push lhs + rhs
     SUBTRACT, ///< Pop rhs, pop lhs, push lhs - rhs
     MULTIPLY, ///< Pop rhs, pop lhs, push lhs * rhs
@@ -34,6 +35,8 @@ namespace Tang {
     CASTINTEGER, ///< Pop a val, typecast to int, push
     CASTFLOAT,   ///< Pop a val, typecast to float, push
     CASTBOOLEAN, ///< Pop a val, typecast to boolean, push
+    RETURN,   ///< Get stack #, pop return val, pop (stack #) times,
+              ///< push val, restore fp, restore pc
     PRINT,    ///< Pop val, print(val), push error or NULL
   };
 }

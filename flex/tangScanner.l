@@ -141,6 +141,12 @@ using namespace std;
   false {
     return Tang::TangParser::make_BOOLEAN(false, Tang::location(location));
   }
+  function {
+    return Tang::TangParser::make_FUNCTION(Tang::location(location));
+  }
+  return {
+    return Tang::TangParser::make_RETURN(Tang::location(location));
+  }
   print {
     return Tang::TangParser::make_PRINT(Tang::location(location));
   }
@@ -220,6 +226,9 @@ using namespace std;
   }
   ; {
     return Tang::TangParser::make_SEMICOLON(Tang::location(location));
+  }
+  , {
+    return Tang::TangParser::make_COMMA(Tang::location(location));
   }
   [a-zA-Z_][a-zA-Z0-9_]* {
     return Tang::TangParser::make_IDENTIFIER(yytext, Tang::location(location));

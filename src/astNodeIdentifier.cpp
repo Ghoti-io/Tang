@@ -17,17 +17,14 @@ string AstNodeIdentifier::dump(string indent) const {
 }
 
 void AstNodeIdentifier::collectIdentifiers(Program & program) const {
-  auto & identifiers = program.identifierStack.back();
-  if (identifiers.count(this->name) == 0) {
-    identifiers[this->name] = identifiers.size();
-  }
+  program.addIdentifier(this->name);
 }
 
 void AstNodeIdentifier::compile(Tang::Program & program) const {
-  auto & identifier = program.identifierStack.back();
+  auto & identifier = program.getIdentifiers();
   if (identifier.count(this->name)) {
     program.addBytecode((uinteger_t)Opcode::PEEK);
-    program.addBytecode((uinteger_t)identifier[this->name]);
+    program.addBytecode((uinteger_t)identifier.at(this->name));
   }
   else {
     program.addBytecode((uinteger_t)Opcode::NULLVAL);

@@ -38,10 +38,10 @@ void AstNodeAssign::compile(Tang::Program & program) const {
   // Store the value if the lhs is an identifier.
   if (typeid(*this->lhs) == typeid(AstNodeIdentifier)) {
     auto & lhsConv = static_cast<AstNodeIdentifier&>(*this->lhs);
-    auto & identifier = program.identifierStack.back();
+    auto & identifier = program.getIdentifiers();
     if (identifier.count(lhsConv.name)) {
       program.addBytecode((uinteger_t)Opcode::POKE);
-      program.addBytecode((uinteger_t)identifier[lhsConv.name]);
+      program.addBytecode((uinteger_t)identifier.at(lhsConv.name));
     }
   }
 }

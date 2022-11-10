@@ -103,6 +103,62 @@ namespace Tang {
     Program & execute();
 
     /**
+     * Set the target address of a Jump opcode.
+     *
+     * @param opcodeAddress The location of the jump statement.
+     * @param jumpTarget The address to jump to.
+     * @return Whether or not the jumpTarget was set.
+     */
+    bool setJumpTarget(size_t opcodeAddress, Tang::uinteger_t jumpTarget);
+
+    /**
+     * Create a new compile/execute environment stack entry.
+     *
+     * @param ast The ast node from which this new environment will be formed.
+     */
+    void pushEnvironment(const std::shared_ptr<AstNode> & ast);
+
+    /**
+     * Remove a compile/execute environment stack entry.
+     */
+    void popEnvironment();
+
+    /**
+     * Add an identifier to the environment.
+     *
+     * @param name The variable to add to the environment.
+     * @param position If provided, the desired position to place the
+     *   identifier.
+     */
+    void addIdentifier(const std::string & name, std::optional<size_t> position = {});
+
+    /**
+     * Get the identifier map of the current environment.
+     *
+     * @return A map of each identifer name to its stack position within the
+     *   current environment.
+     */
+    const std::map<std::string, size_t>& getIdentifiers() const;
+
+    /**
+     * Add a string to the environment.
+     *
+     * @param name The variable to add to the environment.
+     * @param position If provided, the desired position to place the
+     *   identifier.
+     */
+    void addString(const std::string & name);
+
+    /**
+     * Get the string map of the current environment.
+     *
+     * @return A map of each identifer name to its stack position within the
+     *   current environment.
+     */
+    const std::map<std::string, size_t>& getStrings() const;
+
+  private:
+    /**
      * Stack of mappings of identifiers to their stack locations.
      */
     std::vector<std::map<std::string, size_t>> identifierStack;
@@ -112,16 +168,6 @@ namespace Tang {
      */
     std::vector<std::map<std::string, size_t>> stringStack;
 
-    /**
-     * Set the target address of a Jump opcode.
-     *
-     * @param opcodeAddress The location of the jump statement.
-     * @param jumpTarget The address to jump to.
-     * @return Whether or not the jumpTarget was set.
-     */
-    bool setJumpTarget(size_t opcodeAddress, Tang::uinteger_t jumpTarget);
-
-  private:
     /**
      * Parse the code into an AST.
      */
