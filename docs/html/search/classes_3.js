@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['garbagecollected_257',['GarbageCollected',['../classTang_1_1GarbageCollected.html',1,'Tang']]]
+  ['garbagecollected_282',['GarbageCollected',['../classTang_1_1GarbageCollected.html',1,'Tang']]]
 ];

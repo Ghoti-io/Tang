@@ -27,6 +27,12 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "astNodeFor.hpp", "astNodeFor_8hpp.html", [
       [ "AstNodeFor", "classTang_1_1AstNodeFor.html", "classTang_1_1AstNodeFor" ]
     ] ],
+    [ "astNodeFunctionCall.hpp", "astNodeFunctionCall_8hpp.html", [
+      [ "AstNodeFunctionCall", "classTang_1_1AstNodeFunctionCall.html", "classTang_1_1AstNodeFunctionCall" ]
+    ] ],
+    [ "astNodeFunctionDeclaration.hpp", "astNodeFunctionDeclaration_8hpp.html", [
+      [ "AstNodeFunctionDeclaration", "classTang_1_1AstNodeFunctionDeclaration.html", "classTang_1_1AstNodeFunctionDeclaration" ]
+    ] ],
     [ "astNodeIdentifier.hpp", "astNodeIdentifier_8hpp.html", [
       [ "AstNodeIdentifier", "classTang_1_1AstNodeIdentifier.html", "classTang_1_1AstNodeIdentifier" ]
     ] ],
@@ -38,6 +44,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     ] ],
     [ "astNodePrint.hpp", "astNodePrint_8hpp.html", [
       [ "AstNodePrint", "classTang_1_1AstNodePrint.html", "classTang_1_1AstNodePrint" ]
+    ] ],
+    [ "astNodeReturn.hpp", "astNodeReturn_8hpp.html", [
+      [ "AstNodeReturn", "classTang_1_1AstNodeReturn.html", "classTang_1_1AstNodeReturn" ]
     ] ],
     [ "astNodeString.hpp", "astNodeString_8hpp.html", [
       [ "AstNodeString", "classTang_1_1AstNodeString.html", "classTang_1_1AstNodeString" ]
@@ -56,6 +65,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     ] ],
     [ "computedExpressionBoolean.hpp", "computedExpressionBoolean_8hpp.html", [
       [ "ComputedExpressionBoolean", "classTang_1_1ComputedExpressionBoolean.html", "classTang_1_1ComputedExpressionBoolean" ]
+    ] ],
+    [ "computedExpressionCompiledFunction.hpp", "computedExpressionCompiledFunction_8hpp.html", [
+      [ "ComputedExpressionCompiledFunction", "classTang_1_1ComputedExpressionCompiledFunction.html", "classTang_1_1ComputedExpressionCompiledFunction" ]
     ] ],
     [ "computedExpressionError.hpp", "computedExpressionError_8hpp.html", [
       [ "ComputedExpressionError", "classTang_1_1ComputedExpressionError.html", "classTang_1_1ComputedExpressionError" ]

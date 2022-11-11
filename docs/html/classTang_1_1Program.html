@@ -102,11 +102,9 @@ Collaboration diagram for Tang::Program:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTang_1_1Program__coll__graph.png" border="0" usemap="#aTang_1_1Program_coll__map" alt="Collaboration graph"/></div>
 <map name="aTang_1_1Program_coll__map" id="aTang_1_1Program_coll__map">
-<area shape="rect" title="Represents a compiled script or template that may be executed." alt="" coords="17,408,132,435"/>
+<area shape="rect" title="Represents a compiled script or template that may be executed." alt="" coords="17,185,132,212"/>
 <area shape="rect" title=" " alt="" coords="31,96,118,123"/>
-<area shape="rect" title=" " alt="" coords="92,185,255,227"/>
 <area shape="rect" title=" " alt="" coords="5,5,144,47"/>
-<area shape="rect" title=" " alt="" coords="91,289,269,331"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -147,6 +145,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5da413efe8435cebd927a8be58dcb9be"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a5da413efe8435cebd927a8be58dcb9be">setJumpTarget</a> (size_t opcodeAddress, <a class="el" href="macros_8hpp.html#ac3ea9ca53071c2710a6034d60f61d76e">Tang::uinteger_t</a> jumpTarget)</td></tr>
 <tr class="memdesc:a5da413efe8435cebd927a8be58dcb9be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the target address of a Jump opcode.  <a href="classTang_1_1Program.html#a5da413efe8435cebd927a8be58dcb9be">More...</a><br /></td></tr>
 <tr class="separator:a5da413efe8435cebd927a8be58dcb9be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ed3e014d80138d61d545a3ef5fe0a2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a3ed3e014d80138d61d545a3ef5fe0a2e">pushEnvironment</a> (const std::shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt; &amp;ast)</td></tr>
+<tr class="memdesc:a3ed3e014d80138d61d545a3ef5fe0a2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new compile/execute environment stack entry.  <a href="classTang_1_1Program.html#a3ed3e014d80138d61d545a3ef5fe0a2e">More...</a><br /></td></tr>
+<tr class="separator:a3ed3e014d80138d61d545a3ef5fe0a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a655fefae4d0f0bcf92766d8918be89bd"><td class="memItemLeft" align="right" valign="top"><a id="a655fefae4d0f0bcf92766d8918be89bd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a655fefae4d0f0bcf92766d8918be89bd">popEnvironment</a> ()</td></tr>
+<tr class="memdesc:a655fefae4d0f0bcf92766d8918be89bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a compile/execute environment stack entry. <br /></td></tr>
+<tr class="separator:a655fefae4d0f0bcf92766d8918be89bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6ffaae61038ad76502d9fd5c26a69f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#ab6ffaae61038ad76502d9fd5c26a69f2">addIdentifier</a> (const std::string &amp;name, std::optional&lt; size_t &gt; <a class="el" href="classTang_1_1position.html">position</a>={})</td></tr>
+<tr class="memdesc:ab6ffaae61038ad76502d9fd5c26a69f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an identifier to the environment.  <a href="classTang_1_1Program.html#ab6ffaae61038ad76502d9fd5c26a69f2">More...</a><br /></td></tr>
+<tr class="separator:ab6ffaae61038ad76502d9fd5c26a69f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a788deba60696516b2019081afdead30c"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, size_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a788deba60696516b2019081afdead30c">getIdentifiers</a> () const</td></tr>
+<tr class="memdesc:a788deba60696516b2019081afdead30c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the identifier map of the current environment.  <a href="classTang_1_1Program.html#a788deba60696516b2019081afdead30c">More...</a><br /></td></tr>
+<tr class="separator:a788deba60696516b2019081afdead30c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d778367416fa5697086a89bece76696"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a7d778367416fa5697086a89bece76696">addString</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a7d778367416fa5697086a89bece76696"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a string to the environment.  <a href="classTang_1_1Program.html#a7d778367416fa5697086a89bece76696">More...</a><br /></td></tr>
+<tr class="separator:a7d778367416fa5697086a89bece76696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d8557e55dd1aeb9f6791c7c84528332"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, size_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a6d8557e55dd1aeb9f6791c7c84528332">getStrings</a> () const</td></tr>
+<tr class="memdesc:a6d8557e55dd1aeb9f6791c7c84528332"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the string map of the current environment.  <a href="classTang_1_1Program.html#a6d8557e55dd1aeb9f6791c7c84528332">More...</a><br /></td></tr>
+<tr class="separator:a6d8557e55dd1aeb9f6791c7c84528332"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -154,14 +171,6 @@ Public Attributes</h2></td></tr>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a81bee7c0545c053eee44d4381295e193">out</a></td></tr>
 <tr class="memdesc:a81bee7c0545c053eee44d4381295e193"><td class="mdescLeft">&#160;</td><td class="mdescRight">The output of the program, resulting from the program execution. <br /></td></tr>
 <tr class="separator:a81bee7c0545c053eee44d4381295e193"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a440bf2cdcd08fe6b2b0c2c19c22fa276"><td class="memItemLeft" align="right" valign="top"><a id="a440bf2cdcd08fe6b2b0c2c19c22fa276"></a>
-std::vector&lt; std::map&lt; std::string, size_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a440bf2cdcd08fe6b2b0c2c19c22fa276">identifierStack</a></td></tr>
-<tr class="memdesc:a440bf2cdcd08fe6b2b0c2c19c22fa276"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stack of mappings of identifiers to their stack locations. <br /></td></tr>
-<tr class="separator:a440bf2cdcd08fe6b2b0c2c19c22fa276"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae4297c7f590e95eadc98f3c09f9dae9"><td class="memItemLeft" align="right" valign="top"><a id="aae4297c7f590e95eadc98f3c09f9dae9"></a>
-std::vector&lt; std::map&lt; std::string, size_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#aae4297c7f590e95eadc98f3c09f9dae9">stringStack</a></td></tr>
-<tr class="memdesc:aae4297c7f590e95eadc98f3c09f9dae9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stack of mappings of strings to their stack locations. <br /></td></tr>
-<tr class="separator:aae4297c7f590e95eadc98f3c09f9dae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a compiled script or template that may be executed. </p>
@@ -254,6 +263,70 @@ std::vector&lt; std::map&lt; std::string, size_t &gt; &gt;&#160;</td><td class="
 
 </div>
 </div>
+<a id="ab6ffaae61038ad76502d9fd5c26a69f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6ffaae61038ad76502d9fd5c26a69f2">&#9670;&nbsp;</a></span>addIdentifier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Program::addIdentifier </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; size_t &gt;&#160;</td>
+          <td class="paramname"><em>position</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add an identifier to the environment. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The variable to add to the environment. </td></tr>
+    <tr><td class="paramname">position</td><td>If provided, the desired position to place the identifier. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7d778367416fa5697086a89bece76696"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d778367416fa5697086a89bece76696">&#9670;&nbsp;</a></span>addString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Program::addString </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a string to the environment. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The variable to add to the environment. </td></tr>
+    <tr><td class="paramname">position</td><td>If provided, the desired position to place the identifier. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aee5e79c40fac68e875c0d043f8fc2bc1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aee5e79c40fac68e875c0d043f8fc2bc1">&#9670;&nbsp;</a></span>dumpBytecode()</h2>
 
@@ -291,6 +364,15 @@ std::vector&lt; std::map&lt; std::string, size_t &gt; &gt;&#160;</td><td class="
 
 <p>Execute the program's Bytecode, and return the current <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Program</a> object. </p>
 <dl class="section return"><dt>Returns</dt><dd>The current <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Program</a> object. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTang_1_1Program_a68dc832846a651693dea5770d047d4a6_cgraph.png" border="0" usemap="#aclassTang_1_1Program_a68dc832846a651693dea5770d047d4a6_cgraph" alt=""/></div>
+<map name="aclassTang_1_1Program_a68dc832846a651693dea5770d047d4a6_cgraph" id="aclassTang_1_1Program_a68dc832846a651693dea5770d047d4a6_cgraph">
+<area shape="rect" title="Execute the program&#39;s Bytecode, and return the current Program object." alt="" coords="5,13,180,39"/>
+<area shape="rect" href="classTang_1_1ComputedExpressionCompiledFunction.html#a9f576e7603c38ff07d77c5511b96ab20" title="Get the bytecode target." alt="" coords="228,5,427,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -355,6 +437,26 @@ std::vector&lt; std::map&lt; std::string, size_t &gt; &gt;&#160;</td><td class="
 
 </div>
 </div>
+<a id="a788deba60696516b2019081afdead30c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a788deba60696516b2019081afdead30c">&#9670;&nbsp;</a></span>getIdentifiers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const map&lt; string, size_t &gt; &amp; Program::getIdentifiers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the identifier map of the current environment. </p>
+<dl class="section return"><dt>Returns</dt><dd>A map of each identifer name to its stack position within the current environment. </dd></dl>
+
+</div>
+</div>
 <a id="a84b2e5e25f57eea224d1c04f1f3741eb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a84b2e5e25f57eea224d1c04f1f3741eb">&#9670;&nbsp;</a></span>getResult()</h2>
 
@@ -372,6 +474,52 @@ std::vector&lt; std::map&lt; std::string, size_t &gt; &gt;&#160;</td><td class="
 
 <p>Get the result of the <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Program</a> execution, if it exists. </p>
 <dl class="section return"><dt>Returns</dt><dd>The result of the <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Program</a> execution, if it exists. </dd></dl>
+
+</div>
+</div>
+<a id="a6d8557e55dd1aeb9f6791c7c84528332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d8557e55dd1aeb9f6791c7c84528332">&#9670;&nbsp;</a></span>getStrings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const map&lt; string, size_t &gt; &amp; Program::getStrings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the string map of the current environment. </p>
+<dl class="section return"><dt>Returns</dt><dd>A map of each identifer name to its stack position within the current environment. </dd></dl>
+
+</div>
+</div>
+<a id="a3ed3e014d80138d61d545a3ef5fe0a2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ed3e014d80138d61d545a3ef5fe0a2e">&#9670;&nbsp;</a></span>pushEnvironment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Program::pushEnvironment </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ast</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new compile/execute environment stack entry. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ast</td><td>The ast node from which this new environment will be formed. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

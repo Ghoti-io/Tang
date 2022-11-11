@@ -1,0 +1,175 @@
+\hypertarget{classTang_1_1AstNodeFunctionDeclaration}{}\doxysection{Tang\+::Ast\+Node\+Function\+Declaration Class Reference}
+\label{classTang_1_1AstNodeFunctionDeclaration}\index{Tang::AstNodeFunctionDeclaration@{Tang::AstNodeFunctionDeclaration}}
+
+
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a function declaration.  
+
+
+
+
+{\ttfamily \#include $<$ast\+Node\+Function\+Declaration.\+hpp$>$}
+
+
+
+Inheritance diagram for Tang\+::Ast\+Node\+Function\+Declaration\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{classTang_1_1AstNodeFunctionDeclaration__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tang\+::Ast\+Node\+Function\+Declaration\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{classTang_1_1AstNodeFunctionDeclaration__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTang_1_1AstNodeFunctionDeclaration_a6b5d243bc4cbf7ea0f4a580da3250d8d}{Ast\+Node\+Function\+Declaration}} (std\+::string name, std\+::vector$<$ std\+::string $>$ arguments, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ code\+Block, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeFunctionDeclaration_afe5822a9032d387563a20e1dddba3b45}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
+\begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTang_1_1AstNodeFunctionDeclaration_aafeb71d30ea6fdec2871be49cd6166ca}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const override
+\begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTang_1_1AstNodeFunctionDeclaration_a4ee9c97d841a1b7cf0171162c2426924}{collect\+Identifiers}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program) const override
+\begin{DoxyCompactList}\small\item\em Compile a list of all variables in the scope. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTang_1_1AstNode_a32b4e64d2333d842b2004872336f5a81}{collect\+Strings}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program) const
+\begin{DoxyCompactList}\small\item\em Compile a list of all string constants in the scope. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a function declaration. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeFunctionDeclaration_a6b5d243bc4cbf7ea0f4a580da3250d8d}\label{classTang_1_1AstNodeFunctionDeclaration_a6b5d243bc4cbf7ea0f4a580da3250d8d}} 
+\index{Tang::AstNodeFunctionDeclaration@{Tang::AstNodeFunctionDeclaration}!AstNodeFunctionDeclaration@{AstNodeFunctionDeclaration}}
+\index{AstNodeFunctionDeclaration@{AstNodeFunctionDeclaration}!Tang::AstNodeFunctionDeclaration@{Tang::AstNodeFunctionDeclaration}}
+\doxysubsubsection{\texorpdfstring{AstNodeFunctionDeclaration()}{AstNodeFunctionDeclaration()}}
+{\footnotesize\ttfamily Ast\+Node\+Function\+Declaration\+::\+Ast\+Node\+Function\+Declaration (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::vector$<$ std\+::string $>$}]{arguments,  }\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$}]{code\+Block,  }\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{location }\end{DoxyParamCaption})}
+
+
+
+The constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the function. \\
+\hline
+{\em arguments} & The arguments expected to be provided. \\
+\hline
+{\em code\+Block} & The code executed as part of the function. \\
+\hline
+{\em location} & The location associated with the function declaration. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeFunctionDeclaration_a4ee9c97d841a1b7cf0171162c2426924}\label{classTang_1_1AstNodeFunctionDeclaration_a4ee9c97d841a1b7cf0171162c2426924}} 
+\index{Tang::AstNodeFunctionDeclaration@{Tang::AstNodeFunctionDeclaration}!collectIdentifiers@{collectIdentifiers}}
+\index{collectIdentifiers@{collectIdentifiers}!Tang::AstNodeFunctionDeclaration@{Tang::AstNodeFunctionDeclaration}}
+\doxysubsubsection{\texorpdfstring{collectIdentifiers()}{collectIdentifiers()}}
+{\footnotesize\ttfamily void Ast\+Node\+Function\+Declaration\+::collect\+Identifiers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1Program}{Program}} \&}]{program }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compile a list of all variables in the scope. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em program} & The \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} that is being compiled. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a804f9247f774f9444ee7e8db7e7d3e4e}{Tang\+::\+Ast\+Node}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTang_1_1AstNodeFunctionDeclaration_a4ee9c97d841a1b7cf0171162c2426924_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTang_1_1AstNode_a32b4e64d2333d842b2004872336f5a81}\label{classTang_1_1AstNode_a32b4e64d2333d842b2004872336f5a81}} 
+\index{Tang::AstNodeFunctionDeclaration@{Tang::AstNodeFunctionDeclaration}!collectStrings@{collectStrings}}
+\index{collectStrings@{collectStrings}!Tang::AstNodeFunctionDeclaration@{Tang::AstNodeFunctionDeclaration}}
+\doxysubsubsection{\texorpdfstring{collectStrings()}{collectStrings()}}
+{\footnotesize\ttfamily void Ast\+Node\+::collect\+Strings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1Program}{Program}} \&}]{program }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Compile a list of all string constants in the scope. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em program} & The \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} that is being compiled. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1AstNodeWhile_a0baaee7dc453accd9c51e9f8401738cf}{Tang\+::\+Ast\+Node\+While}}, \mbox{\hyperlink{classTang_1_1AstNodeUnary_a02ada9352882e49033c5976ee69841bc}{Tang\+::\+Ast\+Node\+Unary}}, \mbox{\hyperlink{classTang_1_1AstNodeTernary_a12c42f84e0092b4429efd58e39c5251f}{Tang\+::\+Ast\+Node\+Ternary}}, \mbox{\hyperlink{classTang_1_1AstNodeString_a584b62f7eeba55ba64b435f4d558a0ba}{Tang\+::\+Ast\+Node\+String}}, \mbox{\hyperlink{classTang_1_1AstNodeReturn_aabd44bb30b5f258d36b3602d2c7a2d11}{Tang\+::\+Ast\+Node\+Return}}, \mbox{\hyperlink{classTang_1_1AstNodePrint_ae6e73d17f0d5d3f41a1a65fd2af06a53}{Tang\+::\+Ast\+Node\+Print}}, \mbox{\hyperlink{classTang_1_1AstNodeIfElse_ad949ce7a347c694c311667e0a0b0fa09}{Tang\+::\+Ast\+Node\+If\+Else}}, \mbox{\hyperlink{classTang_1_1AstNodeFunctionCall_a831464ae350877df692a1a58edf12511}{Tang\+::\+Ast\+Node\+Function\+Call}}, \mbox{\hyperlink{classTang_1_1AstNodeFor_aca80086b3e29aa18e5987e87d13f0df0}{Tang\+::\+Ast\+Node\+For}}, \mbox{\hyperlink{classTang_1_1AstNodeDoWhile_aca63350b2cee971018185ad22de7a5d0}{Tang\+::\+Ast\+Node\+Do\+While}}, \mbox{\hyperlink{classTang_1_1AstNodeBlock_ad2d5aa49befa311c8c97898ee4d759a2}{Tang\+::\+Ast\+Node\+Block}}, \mbox{\hyperlink{classTang_1_1AstNodeBinary_a75b026d1b8c6b5791110832504f813a6}{Tang\+::\+Ast\+Node\+Binary}}, and \mbox{\hyperlink{classTang_1_1AstNodeAssign_a0c74ed996532ecf9888d80fd300c5c4f}{Tang\+::\+Ast\+Node\+Assign}}.
+
+\mbox{\Hypertarget{classTang_1_1AstNodeFunctionDeclaration_aafeb71d30ea6fdec2871be49cd6166ca}\label{classTang_1_1AstNodeFunctionDeclaration_aafeb71d30ea6fdec2871be49cd6166ca}} 
+\index{Tang::AstNodeFunctionDeclaration@{Tang::AstNodeFunctionDeclaration}!compile@{compile}}
+\index{compile@{compile}!Tang::AstNodeFunctionDeclaration@{Tang::AstNodeFunctionDeclaration}}
+\doxysubsubsection{\texorpdfstring{compile()}{compile()}}
+{\footnotesize\ttfamily void Ast\+Node\+Function\+Declaration\+::compile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&}]{program }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em program} & The \mbox{\hyperlink{classTang_1_1Program}{Program}} which will hold the generated Bytecode. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a390f8887c418f972d75e968f1274b2cb}{Tang\+::\+Ast\+Node}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTang_1_1AstNodeFunctionDeclaration_aafeb71d30ea6fdec2871be49cd6166ca_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTang_1_1AstNodeFunctionDeclaration_afe5822a9032d387563a20e1dddba3b45}\label{classTang_1_1AstNodeFunctionDeclaration_afe5822a9032d387563a20e1dddba3b45}} 
+\index{Tang::AstNodeFunctionDeclaration@{Tang::AstNodeFunctionDeclaration}!dump@{dump}}
+\index{dump@{dump}!Tang::AstNodeFunctionDeclaration@{Tang::AstNodeFunctionDeclaration}}
+\doxysubsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily string Ast\+Node\+Function\+Declaration\+::dump (\begin{DoxyParamCaption}\item[{std\+::string}]{indent = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return a string that describes the contents of the node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indent} & A string used to indent the dump. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value as a string. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a9884742e4b32db78c0257d0b0904d05f}{Tang\+::\+Ast\+Node}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{astNodeFunctionDeclaration_8hpp}{ast\+Node\+Function\+Declaration.\+hpp}}\item 
+src/\mbox{\hyperlink{astNodeFunctionDeclaration_8cpp}{ast\+Node\+Function\+Declaration.\+cpp}}\end{DoxyCompactItemize}
