@@ -17,15 +17,31 @@ namespace Tang {
       /**
        * Construct an CompiledFunction.
        *
+       * @param argc The count of arguments that this function expects.
        * @param pc The bytecode address of the start of the function.
        */
-      ComputedExpressionCompiledFunction(Tang::integer_t pc);
+      ComputedExpressionCompiledFunction(uint32_t argc, Tang::integer_t pc);
 
       virtual std::string dump() const override;
       GarbageCollected makeCopy() const override;
       virtual GarbageCollected __equal(const GarbageCollected & rhs) const override;
 
+      /**
+       * Get the `argc` value.
+       */
+      uint32_t getArgc() const;
+
+      /**
+       * Get the bytecode target.
+       */
+      Tang::integer_t getPc() const;
+
     private:
+      /**
+       * The count of arguments that this function expects.
+       */
+      uint32_t argc;
+
       /**
        * The bytecode addres of the start of the function.
        */

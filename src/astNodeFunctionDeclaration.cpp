@@ -43,6 +43,9 @@ void AstNodeFunctionDeclaration::compile(Tang::Program & program) const {
     program.addIdentifier(this->arguments[i], i);
   }
 
+  // Save the start position of the function.
+  auto functionStart = program.getBytecode().size();
+
   // Reserve stack positions for any variable in the body that is not in the
   // arguments.
   for (size_t i = this->arguments.size(); i < program.getIdentifiers().size(); ++i) {
@@ -63,22 +66,23 @@ void AstNodeFunctionDeclaration::compile(Tang::Program & program) const {
   }
 
   // Compile the program.
-  auto functionStart = program.getBytecode().size();
   this->codeBlock->compile(program);
+  program.addBytecode((uinteger_t)Opcode::POP);
 
   // Ensure that the function is cleaned up by calling `RETURN`
   program.addBytecode((uinteger_t)Opcode::RETURN);
   program.addBytecode((uinteger_t)program.getIdentifiers().size() + program.getStrings().size());
-
-  // Restore the environment because we have finished with the function.
-  program.popEnvironment();
 
   // Set the jump target, now that we are at the end of the function Bytecode.
   program.setJumpTarget(jumpPastFunction, program.getBytecode().size());
   
   // Push a ComputedExpressionCompiledFunction onto the stack.
   program.addBytecode((uinteger_t)Opcode::FUNCTION);
+  program.addBytecode(program.getIdentifiers().size() + program.getStrings().size());
   program.addBytecode(functionStart);
+
+  // Restore the environment because we have finished with the function.
+  program.popEnvironment();
 
   // Copy the ComputedExpressionCompiledFunction into the variable name that
   // was reserved for it.

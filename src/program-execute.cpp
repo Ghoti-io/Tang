@@ -12,6 +12,7 @@
 #include "computedExpressionFloat.hpp"
 #include "computedExpressionBoolean.hpp"
 #include "computedExpressionString.hpp"
+#include "computedExpressionCompiledFunction.hpp"
 
 using namespace std;
 using namespace Tang;
@@ -44,6 +45,8 @@ Program& Program::execute() {
   size_t pc{0};
   size_t fp{0};
   vector<GarbageCollected> stack;
+  vector<size_t> pcStack{};
+  vector<size_t> fpStack{};
 
   while (pc < this->bytecode.size()) {
     switch ((Opcode)this->bytecode[pc]) {
@@ -164,6 +167,14 @@ Program& Program::execute() {
         }
         stack.push_back(GarbageCollected::make<ComputedExpressionString>(temp));
         pc += bytes + 2;
+        break;
+      }
+      case Opcode::FUNCTION: {
+        EXECUTEPROGRAMCHECK(2);
+        auto argc = this->bytecode[pc + 1];
+        auto targetPc = this->bytecode[pc + 2];
+        stack.push_back(GarbageCollected::make<ComputedExpressionCompiledFunction>((uint32_t)argc, targetPc));
+        pc += 3;
         break;
       }
       case Opcode::ADD: {
@@ -314,6 +325,60 @@ Program& Program::execute() {
         stack.pop_back();
         stack.push_back(operand->__boolean());
         ++pc;
+        break;
+      }
+      case Opcode::CALLFUNC: {
+        EXECUTEPROGRAMCHECK(1);
+        auto function = stack.back();
+        stack.pop_back();
+        auto argc = this->bytecode[pc + 1];
+        STACKCHECK(argc);
+
+        // Compiled functions make use of the arguments on the stack.
+        // They will clean up the stack when they finish, via the RETURN
+        // opcode.
+        if (typeid(*function) == typeid(ComputedExpressionCompiledFunction)) {
+          // "Call" the function.
+          auto & funcConv = static_cast<ComputedExpressionCompiledFunction &>(*function);
+
+          // Save the current execution environment so that it can be restored
+          // when RETURNing from the function.
+          pcStack.push_back(pc);
+          fpStack.push_back(fp);
+
+          // Set the new pc and fp.
+          pc = funcConv.getPc();
+          fp = stack.size() - argc;
+
+          break;
+        }
+
+        // Error: We don't know what to do.
+        stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Function call on unrecognized type."}));
+        pc = this->bytecode.size();
+        break;
+      }
+      case Opcode::RETURN: {
+        EXECUTEPROGRAMCHECK(1);
+        size_t pop = this->bytecode[pc + 1];
+        STACKCHECK(pop + 1);
+
+        // Save the top of the stack as the return value.
+        auto returnVal = stack.back();
+
+        // Remove the stack down to the fp.
+        for (size_t i = 0; i <= pop; ++i) {
+          stack.pop_back();
+        }
+
+        // Put the return value back on the stack.
+        stack.push_back(returnVal);
+
+        // Restore the pc and fp.
+        pc = pcStack.back();
+        fp = fpStack.back();
+        pcStack.pop_back();
+        fpStack.pop_back();
         break;
       }
       case Opcode::PRINT: {

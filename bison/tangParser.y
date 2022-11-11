@@ -124,6 +124,7 @@
 %type <std::shared_ptr<Tang::AstNode>> expression
 %type <std::vector<std::shared_ptr<Tang::AstNode>>> statements
 %type <std::vector<std::string>> functionDeclarationArguments
+%type <std::vector<std::shared_ptr<Tang::AstNode>>> functionArguments
 %type <std::shared_ptr<Tang::AstNode>> statement
 %type <std::shared_ptr<Tang::AstNode>> codeBlock
 %type <std::shared_ptr<Tang::AstNode>> openStatement
@@ -180,6 +181,7 @@ namespace Tang {
 #include "astNodeFor.hpp"
 #include "astNodePrint.hpp"
 #include "astNodeFunctionDeclaration.hpp"
+#include "astNodeFunctionCall.hpp"
 #include "astNodeReturn.hpp"
 
 // We must provide the yylex() function.
@@ -239,6 +241,23 @@ functionDeclarationArguments
     }
   ;
 
+// `functionArguments` is a comma-separated list of expressions given as part
+// of a function call.
+functionArguments
+  : %empty
+    {
+      $$ = std::vector<std::shared_ptr<Tang::AstNode>>{};
+    }
+  | expression
+    {
+      $$ = std::vector<std::shared_ptr<Tang::AstNode>>{$1};
+    }
+  | functionArguments "," expression
+    {
+      $1.push_back($3);
+      $$ = $1;
+    }
+  ;
 
 // `statements` represent a sequence of `statement` expressions.
 statements
@@ -442,6 +461,10 @@ expression
   | "print" "(" expression ")"
     {
       $$ = std::make_shared<AstNodePrint>(AstNodePrint::Default, $3, @1);
+    }
+  | expression "(" functionArguments ")"
+    {
+      $$ = std::make_shared<AstNodeFunctionCall>($1, $3, @1);
     }
   | expression "?" expression ":" expression
     {

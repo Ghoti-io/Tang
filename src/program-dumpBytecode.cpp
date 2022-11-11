@@ -123,6 +123,12 @@ string Program::dumpBytecode() const {
         pc += bytes + 2;
         break;
       }
+      case Opcode::FUNCTION: {
+        DUMPPROGRAMCHECK(2);
+        out << "FUNCTION" << this->bytecode[pc + 1] << " " << this->bytecode[pc + 2];
+        pc += 3;
+        break;
+      }
       case Opcode::ADD: {
         out << "ADD";
         ++pc;
@@ -201,6 +207,18 @@ string Program::dumpBytecode() const {
       case Opcode::CASTBOOLEAN: {
         out << "CASTBOOLEAN";
         ++pc;
+        break;
+      }
+      case Opcode::CALLFUNC: {
+        DUMPPROGRAMCHECK(1);
+        out << "CALLFUNC" << this->bytecode[pc + 1];
+        pc += 2;
+        break;
+      }
+      case Opcode::RETURN: {
+        DUMPPROGRAMCHECK(1);
+        out << "RETURN" << this->bytecode[pc + 1];
+        pc += 2;
         break;
       }
       case Opcode::PRINT: {

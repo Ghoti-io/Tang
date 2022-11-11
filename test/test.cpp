@@ -732,6 +732,32 @@ TEST(Print, Default) {
   EXPECT_EQ(p11.execute().out, "----------");
 }
 
+TEST(Function, Compiled) {
+  auto p1 = TangBase().compileScript(R"(
+    function printHi() {
+      print("Hi");
+    }
+    printHi();
+  )");
+  EXPECT_EQ(p1.execute().out, "Hi");
+  auto p2 = TangBase().compileScript(R"(
+    function printTwice(str) {
+      print(str);
+      print(str);
+    }
+    printTwice("Hi");
+  )");
+  EXPECT_EQ(p2.execute().out, "HiHi");
+  auto p3 = TangBase().compileScript(R"(
+    function print2then1(str1, str2) {
+      print(str2);
+      print(str1);
+    }
+    print2then1("Hi", 3);
+  )");
+  EXPECT_EQ(p3.execute().out, "3Hi");
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
