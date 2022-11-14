@@ -43,7 +43,9 @@ virtual void \mbox{\hyperlink{classTang_1_1AstNodeIfElse_acfdd91afcec11f0cf8a853
 virtual void \mbox{\hyperlink{classTang_1_1AstNodeIfElse_a346c308f5064d274cb76a1d29e10608c}{collect\+Identifiers}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program) const override
 \begin{DoxyCompactList}\small\item\em Compile a list of all variables in the scope. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classTang_1_1AstNodeIfElse_ad949ce7a347c694c311667e0a0b0fa09}{collect\+Strings}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program) const override
-\begin{DoxyCompactList}\small\item\em Compile a list of all string constants in the scope. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Compile a list of all string constants in the scope. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTang_1_1AstNode_aa916bc4b23f481d2592b2971ad1084a8}{collect\+Function\+Declarations}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program) const
+\begin{DoxyCompactList}\small\item\em Compile a list of the names of functions that are declared in this scope. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -93,6 +95,25 @@ The constructor.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNode_aa916bc4b23f481d2592b2971ad1084a8}\label{classTang_1_1AstNode_aa916bc4b23f481d2592b2971ad1084a8}} 
+\index{Tang::AstNodeIfElse@{Tang::AstNodeIfElse}!collectFunctionDeclarations@{collectFunctionDeclarations}}
+\index{collectFunctionDeclarations@{collectFunctionDeclarations}!Tang::AstNodeIfElse@{Tang::AstNodeIfElse}}
+\doxysubsubsection{\texorpdfstring{collectFunctionDeclarations()}{collectFunctionDeclarations()}}
+{\footnotesize\ttfamily void Ast\+Node\+::collect\+Function\+Declarations (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1Program}{Program}} \&}]{program }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Compile a list of the names of functions that are declared in this scope. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em program} & The \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} that is being compiled. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1AstNodeFunctionDeclaration_a1eeccb165b5c8aef6e725390f372e59b}{Tang\+::\+Ast\+Node\+Function\+Declaration}}, and \mbox{\hyperlink{classTang_1_1AstNodeBlock_a848c7a6a09be0169c37ff82bf512f769}{Tang\+::\+Ast\+Node\+Block}}.
+
 \mbox{\Hypertarget{classTang_1_1AstNodeIfElse_a346c308f5064d274cb76a1d29e10608c}\label{classTang_1_1AstNodeIfElse_a346c308f5064d274cb76a1d29e10608c}} 
 \index{Tang::AstNodeIfElse@{Tang::AstNodeIfElse}!collectIdentifiers@{collectIdentifiers}}
 \index{collectIdentifiers@{collectIdentifiers}!Tang::AstNodeIfElse@{Tang::AstNodeIfElse}}

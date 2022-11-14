@@ -18,6 +18,10 @@ var classTang_1_1Program =
     [ "getStrings", "classTang_1_1Program.html#a6d8557e55dd1aeb9f6791c7c84528332", null ],
     [ "popEnvironment", "classTang_1_1Program.html#a655fefae4d0f0bcf92766d8918be89bd", null ],
     [ "pushEnvironment", "classTang_1_1Program.html#a3ed3e014d80138d61d545a3ef5fe0a2e", null ],
+    [ "setFunctionStackDeclaration", "classTang_1_1Program.html#aabcfee07409be5bc6bf1312f26b56a85", null ],
     [ "setJumpTarget", "classTang_1_1Program.html#a5da413efe8435cebd927a8be58dcb9be", null ],
+    [ "functionsCollected", "classTang_1_1Program.html#a7bf410d953206df63379a9c395f09bb2", null ],
+    [ "functionsDeclared", "classTang_1_1Program.html#acca9bf07cd3197fffc3d01ed73985740", null ],
+    [ "functionStackDeclarations", "classTang_1_1Program.html#a1eedd506786a238a8bcedc7b77fd01f9", null ],
     [ "out", "classTang_1_1Program.html#a81bee7c0545c053eee44d4381295e193", null ]
 ];

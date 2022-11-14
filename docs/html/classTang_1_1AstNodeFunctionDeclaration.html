@@ -128,6 +128,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4ee9c97d841a1b7cf0171162c2426924"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeFunctionDeclaration.html#a4ee9c97d841a1b7cf0171162c2426924">collectIdentifiers</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program) const override</td></tr>
 <tr class="memdesc:a4ee9c97d841a1b7cf0171162c2426924"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a list of all variables in the scope.  <a href="classTang_1_1AstNodeFunctionDeclaration.html#a4ee9c97d841a1b7cf0171162c2426924">More...</a><br /></td></tr>
 <tr class="separator:a4ee9c97d841a1b7cf0171162c2426924"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eeccb165b5c8aef6e725390f372e59b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeFunctionDeclaration.html#a1eeccb165b5c8aef6e725390f372e59b">collectFunctionDeclarations</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program) const override</td></tr>
+<tr class="memdesc:a1eeccb165b5c8aef6e725390f372e59b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a list of the names of functions that are declared in this scope.  <a href="classTang_1_1AstNodeFunctionDeclaration.html#a1eeccb165b5c8aef6e725390f372e59b">More...</a><br /></td></tr>
+<tr class="separator:a1eeccb165b5c8aef6e725390f372e59b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32b4e64d2333d842b2004872336f5a81"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a32b4e64d2333d842b2004872336f5a81">collectStrings</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program) const</td></tr>
 <tr class="memdesc:a32b4e64d2333d842b2004872336f5a81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a list of all string constants in the scope.  <a href="classTang_1_1AstNode.html#a32b4e64d2333d842b2004872336f5a81">More...</a><br /></td></tr>
 <tr class="separator:a32b4e64d2333d842b2004872336f5a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,6 +190,42 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1eeccb165b5c8aef6e725390f372e59b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1eeccb165b5c8aef6e725390f372e59b">&#9670;&nbsp;</a></span>collectFunctionDeclarations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AstNodeFunctionDeclaration::collectFunctionDeclarations </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classTang_1_1Program.html">Program</a> &amp;&#160;</td>
+          <td class="paramname"><em>program</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compile a list of the names of functions that are declared in this scope. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">program</td><td>The <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a> that is being compiled. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classTang_1_1AstNode.html#aa916bc4b23f481d2592b2971ad1084a8">Tang::AstNode</a>.</p>
+
+</div>
+</div>
 <a id="a4ee9c97d841a1b7cf0171162c2426924"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4ee9c97d841a1b7cf0171162c2426924">&#9670;&nbsp;</a></span>collectIdentifiers()</h2>
 
@@ -315,6 +354,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="classTang_1_1Program.html#a655fefae4d0f0bcf92766d8918be89bd" title="Remove a compile/execute environment stack entry." alt="" coords="302,259,533,285"/>
 <area shape="rect" href="classTang_1_1Program.html#a3ed3e014d80138d61d545a3ef5fe0a2e" title="Create a new compile/execute environment stack entry." alt="" coords="299,309,536,336"/>
 <area shape="rect" href="classTang_1_1Program.html#a5da413efe8435cebd927a8be58dcb9be" title="Set the target address of a Jump opcode." alt="" coords="309,360,525,387"/>
+<area shape="rect" href="classTang_1_1Program.html#aabcfee07409be5bc6bf1312f26b56a85" title="Set the stack details of a function declaration." alt="" coords="584,251,783,293"/>
 </map>
 </div>
 

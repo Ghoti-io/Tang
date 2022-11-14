@@ -102,9 +102,14 @@ Collaboration diagram for Tang::Program:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTang_1_1Program__coll__graph.png" border="0" usemap="#aTang_1_1Program_coll__map" alt="Collaboration graph"/></div>
 <map name="aTang_1_1Program_coll__map" id="aTang_1_1Program_coll__map">
-<area shape="rect" title="Represents a compiled script or template that may be executed." alt="" coords="17,185,132,212"/>
-<area shape="rect" title=" " alt="" coords="31,96,118,123"/>
-<area shape="rect" title=" " alt="" coords="5,5,144,47"/>
+<area shape="rect" title="Represents a compiled script or template that may be executed." alt="" coords="1255,129,1369,155"/>
+<area shape="rect" title=" " alt="" coords="719,146,881,202"/>
+<area shape="rect" title=" " alt="" coords="222,127,309,154"/>
+<area shape="rect" title=" " alt="" coords="451,33,695,75"/>
+<area shape="rect" title=" " alt="" coords="490,213,655,239"/>
+<area shape="rect" title=" " alt="" coords="5,120,144,161"/>
+<area shape="rect" title=" " alt="" coords="193,5,337,47"/>
+<area shape="rect" title=" " alt="" coords="916,216,1071,257"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -145,6 +150,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5da413efe8435cebd927a8be58dcb9be"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a5da413efe8435cebd927a8be58dcb9be">setJumpTarget</a> (size_t opcodeAddress, <a class="el" href="macros_8hpp.html#ac3ea9ca53071c2710a6034d60f61d76e">Tang::uinteger_t</a> jumpTarget)</td></tr>
 <tr class="memdesc:a5da413efe8435cebd927a8be58dcb9be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the target address of a Jump opcode.  <a href="classTang_1_1Program.html#a5da413efe8435cebd927a8be58dcb9be">More...</a><br /></td></tr>
 <tr class="separator:a5da413efe8435cebd927a8be58dcb9be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabcfee07409be5bc6bf1312f26b56a85"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#aabcfee07409be5bc6bf1312f26b56a85">setFunctionStackDeclaration</a> (size_t opcodeAddress, <a class="el" href="macros_8hpp.html#ac3ea9ca53071c2710a6034d60f61d76e">uinteger_t</a> argc, <a class="el" href="macros_8hpp.html#ac3ea9ca53071c2710a6034d60f61d76e">uinteger_t</a> targetPC)</td></tr>
+<tr class="memdesc:aabcfee07409be5bc6bf1312f26b56a85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the stack details of a function declaration.  <a href="classTang_1_1Program.html#aabcfee07409be5bc6bf1312f26b56a85">More...</a><br /></td></tr>
+<tr class="separator:aabcfee07409be5bc6bf1312f26b56a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ed3e014d80138d61d545a3ef5fe0a2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a3ed3e014d80138d61d545a3ef5fe0a2e">pushEnvironment</a> (const std::shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt; &amp;ast)</td></tr>
 <tr class="memdesc:a3ed3e014d80138d61d545a3ef5fe0a2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new compile/execute environment stack entry.  <a href="classTang_1_1Program.html#a3ed3e014d80138d61d545a3ef5fe0a2e">More...</a><br /></td></tr>
 <tr class="separator:a3ed3e014d80138d61d545a3ef5fe0a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,6 +179,17 @@ Public Attributes</h2></td></tr>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a81bee7c0545c053eee44d4381295e193">out</a></td></tr>
 <tr class="memdesc:a81bee7c0545c053eee44d4381295e193"><td class="mdescLeft">&#160;</td><td class="mdescRight">The output of the program, resulting from the program execution. <br /></td></tr>
 <tr class="separator:a81bee7c0545c053eee44d4381295e193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bf410d953206df63379a9c395f09bb2"><td class="memItemLeft" align="right" valign="top"><a id="a7bf410d953206df63379a9c395f09bb2"></a>
+std::vector&lt; std::set&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a7bf410d953206df63379a9c395f09bb2">functionsCollected</a></td></tr>
+<tr class="memdesc:a7bf410d953206df63379a9c395f09bb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Names of the functions that are declared in a previous or the current scope. <br /></td></tr>
+<tr class="separator:a7bf410d953206df63379a9c395f09bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acca9bf07cd3197fffc3d01ed73985740"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::pair&lt; <a class="el" href="macros_8hpp.html#ac3ea9ca53071c2710a6034d60f61d76e">uinteger_t</a>, <a class="el" href="macros_8hpp.html#ac3ea9ca53071c2710a6034d60f61d76e">uinteger_t</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#acca9bf07cd3197fffc3d01ed73985740">functionsDeclared</a></td></tr>
+<tr class="memdesc:acca9bf07cd3197fffc3d01ed73985740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key/value pair of the function declaration information.  <a href="classTang_1_1Program.html#acca9bf07cd3197fffc3d01ed73985740">More...</a><br /></td></tr>
+<tr class="separator:acca9bf07cd3197fffc3d01ed73985740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eedd506786a238a8bcedc7b77fd01f9"><td class="memItemLeft" align="right" valign="top"><a id="a1eedd506786a238a8bcedc7b77fd01f9"></a>
+std::map&lt; std::string, std::vector&lt; <a class="el" href="macros_8hpp.html#ac3ea9ca53071c2710a6034d60f61d76e">Tang::uinteger_t</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a1eedd506786a238a8bcedc7b77fd01f9">functionStackDeclarations</a></td></tr>
+<tr class="memdesc:a1eedd506786a238a8bcedc7b77fd01f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each function name, a list of Bytecode addresses that need to be replaced by a function definition. <br /></td></tr>
+<tr class="separator:a1eedd506786a238a8bcedc7b77fd01f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a compiled script or template that may be executed. </p>
@@ -523,6 +542,50 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="aabcfee07409be5bc6bf1312f26b56a85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabcfee07409be5bc6bf1312f26b56a85">&#9670;&nbsp;</a></span>setFunctionStackDeclaration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Program::setFunctionStackDeclaration </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>opcodeAddress</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macros_8hpp.html#ac3ea9ca53071c2710a6034d60f61d76e">uinteger_t</a>&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macros_8hpp.html#ac3ea9ca53071c2710a6034d60f61d76e">uinteger_t</a>&#160;</td>
+          <td class="paramname"><em>targetPC</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the stack details of a function declaration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">opcodeAddress</td><td>The location of the FUNCTION opcode. </td></tr>
+    <tr><td class="paramname">argc</td><td>The argument count to set. </td></tr>
+    <tr><td class="paramname">targetPC</td><td>The bytecode address of the start of the function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a5da413efe8435cebd927a8be58dcb9be"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5da413efe8435cebd927a8be58dcb9be">&#9670;&nbsp;</a></span>setJumpTarget()</h2>
 
@@ -558,6 +621,24 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether or not the jumpTarget was set. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="acca9bf07cd3197fffc3d01ed73985740"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acca9bf07cd3197fffc3d01ed73985740">&#9670;&nbsp;</a></span>functionsDeclared</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, std::pair&lt;<a class="el" href="macros_8hpp.html#ac3ea9ca53071c2710a6034d60f61d76e">uinteger_t</a>, <a class="el" href="macros_8hpp.html#ac3ea9ca53071c2710a6034d60f61d76e">uinteger_t</a>&gt; &gt; Tang::Program::functionsDeclared</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Key/value pair of the function declaration information. </p>
+<p>The key is the name of the function. The value is a <code>pair</code> of the <code>argc</code> value and the <code>targetPC</code> value. </p>
 
 </div>
 </div>
