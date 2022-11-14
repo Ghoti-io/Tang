@@ -35,8 +35,8 @@ void AstNodeIfElse::compile(Tang::Program & program) const {
   this->condition->compile(program);
 
   // If condition is false, jump to the end of the if..else statement.
+  auto conditionFalseJump = program.getBytecode().size();
   program.addBytecode((uinteger_t)Opcode::JMPF_POP);
-  auto conditionFalseJump = program.getBytecode().size() - 1;
   program.addBytecode(0);
 
   // Compile the then block, and jump past the else block.
@@ -44,12 +44,9 @@ void AstNodeIfElse::compile(Tang::Program & program) const {
   
   // Compile differently depending on whether or not there is an else block.
   if (this->elseBlock) {
-    // Clean up the stack from the then block.
-    program.addBytecode((uinteger_t)Opcode::POP);
-
     // We must tell the then block to jump past the else block.
+    auto thenBlockJump = program.getBytecode().size();
     program.addBytecode((uinteger_t)Opcode::JMP);
-    auto thenBlockJump = program.getBytecode().size() - 1;
     program.addBytecode(0);
 
     // Add the else Block.
@@ -58,11 +55,14 @@ void AstNodeIfElse::compile(Tang::Program & program) const {
 
     // Set jump locations.
     program.setJumpTarget(conditionFalseJump, elseBlockStart);
-    program.setJumpTarget(thenBlockJump, program.getBytecode().size() + 1);
+    program.setJumpTarget(thenBlockJump, program.getBytecode().size());
   }
   else {
     // The condition should jump past the then block.
-    program.setJumpTarget(conditionFalseJump, program.getBytecode().size() + 1);
+    program.setJumpTarget(conditionFalseJump, program.getBytecode().size());
+
+    // Leave something on the stack.
+    program.addBytecode((uinteger_t)Opcode::NULLVAL);
   }
 }
 
