@@ -9,6 +9,7 @@
 #include <string>
 #include <optional>
 #include <vector>
+#include <set>
 #include <map>
 #include "astNode.hpp"
 #include "error.hpp"
@@ -112,6 +113,15 @@ namespace Tang {
     bool setJumpTarget(size_t opcodeAddress, Tang::uinteger_t jumpTarget);
 
     /**
+     * Set the stack details of a function declaration.
+     *
+     * @param opcodeAddress The location of the FUNCTION opcode.
+     * @param argc The argument count to set.
+     * @param targetPC The bytecode address of the start of the function.
+     */
+    bool setFunctionStackDeclaration(size_t opcodeAddress, uinteger_t argc, uinteger_t targetPC);
+
+    /**
      * Create a new compile/execute environment stack entry.
      *
      * @param ast The ast node from which this new environment will be formed.
@@ -156,6 +166,26 @@ namespace Tang {
      *   current environment.
      */
     const std::map<std::string, size_t>& getStrings() const;
+
+    /**
+     * Names of the functions that are declared in a previous or the current
+     * scope.
+     */
+    std::vector<std::set<std::string>> functionsCollected;
+
+    /**
+     * Key/value pair of the function declaration information.
+     *
+     * The key is the name of the function.
+     * The value is a `pair` of the `argc` value and the `targetPC` value.
+     */
+    std::map<std::string, std::pair<uinteger_t, uinteger_t>> functionsDeclared;
+
+    /**
+     * For each function name, a list of Bytecode addresses that need to be
+     * replaced by a function definition.
+     */
+    std::map<std::string, std::vector<Tang::uinteger_t>> functionStackDeclarations;
 
   private:
     /**

@@ -37,3 +37,5 @@ void AstNode::collectIdentifiers([[maybe_unused]] Program & program) const {}
 
 void AstNode::collectStrings([[maybe_unused]] Program & program) const {}
 
+void AstNode::collectFunctionDeclarations([[maybe_unused]] Program & program) const {}
+

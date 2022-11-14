@@ -777,6 +777,55 @@ TEST(Function, Compiled) {
     a("Hi", 3);
   )");
   EXPECT_EQ(*p6.execute().getResult(), Error{"Function call on unrecognized type."});
+  auto p7 = TangBase().compileScript(R"(
+    function print2then1(str1, str2) {
+      print(str2);
+      print(str1);
+    }
+    a = print2then1;
+    a("Hi", 3);
+  )");
+  EXPECT_EQ(p7.execute().out, "3Hi");
+}
+
+TEST(Function, Recursion) {
+  auto p1 = TangBase().compileScript(R"(
+    function printNtimes(str, n) {
+      if (n > 0) {
+        printNtimes(str, n - 1);
+        print(str);
+      }
+    }
+    printNtimes("-", 3);
+  )");
+  //cout << p1.dumpBytecode();
+  EXPECT_EQ(p1.execute().out, "---");
+  auto p2 = TangBase().compileScript(R"(
+    function printNtimes(str, n) {
+      function inner(str, n) {
+        if (n > 0) {
+          printNtimes(str, n - 1);
+          print(str);
+        }
+      }
+      inner(str, n);
+    }
+    printNtimes("-", 3);
+  )");
+  EXPECT_EQ(p2.execute().out, "---");
+  auto p3 = TangBase().compileScript(R"(
+    function helper(str, n) {
+      printNtimes(str, n);
+    }
+    function printNtimes(str, n) {
+      if (n > 0) {
+        helper(str, n - 1);
+        print(str);
+      }
+    }
+    printNtimes("-", 3);
+  )");
+  EXPECT_EQ(p3.execute().out, "---");
 }
 
 int main(int argc, char** argv) {

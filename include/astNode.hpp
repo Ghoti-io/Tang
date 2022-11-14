@@ -65,6 +65,14 @@ namespace Tang {
      */
     virtual void collectStrings(Program & program) const;
 
+    /**
+     * Compile a list of the names of functions that are declared in this
+     * scope.
+     *
+     * @param program The Tang::Program that is being compiled.
+     */
+    virtual void collectFunctionDeclarations(Program & program) const;
+
   private:
     /**
      * The location associated with this node.

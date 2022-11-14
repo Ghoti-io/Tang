@@ -49,3 +49,9 @@ void AstNodeBlock::compile(Tang::Program & program) const {
   }
 }
 
+void AstNodeBlock::collectFunctionDeclarations(Program & program) const {
+  for (auto x : this->statements) {
+    x->collectFunctionDeclarations(program);
+  }
+}
+

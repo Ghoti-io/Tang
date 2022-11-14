@@ -48,8 +48,32 @@ void AstNodeFunctionDeclaration::compile(Tang::Program & program) const {
 
   // Reserve stack positions for any variable in the body that is not in the
   // arguments.
-  for (size_t i = this->arguments.size(); i < program.getIdentifiers().size(); ++i) {
-    program.addBytecode((uinteger_t)Opcode::NULLVAL);
+  // First, get a vector of stack names in the correct order.
+  vector<string> identifiers(program.getIdentifiers().size());
+  for (auto & i : program.getIdentifiers()) {
+    if (i.second < identifiers.size()) {
+      identifiers[i.second] = i.first;
+    }
+  }
+  // Second, add an entry for each identifier.  If the identifier is a
+  // function name, then leave enough room in the bytecode.
+  // The arguments will have already been placed on the stack by the calling
+  // code, so they can be skipped.
+  for (size_t i = this->arguments.size(); i < identifiers.size(); ++i) {
+    if (program.functionsCollected.back().count(identifiers[i])) {
+      // This is function.
+      auto opcodeLocation = program.getBytecode().size();
+      program.addBytecode((uinteger_t)Opcode::FUNCTION);
+      program.addBytecode(0);
+      program.addBytecode(0);
+      // Record the fact that this bytecode will need to be populated later,
+      // once the function details are known.
+      program.functionStackDeclarations[identifiers[i]].push_back(opcodeLocation);
+    }
+    else {
+      // This is just a standard value.
+      program.addBytecode((uinteger_t)Opcode::NULLVAL);
+    }
   }
 
   // Put the string literals on the stack.
@@ -78,8 +102,9 @@ void AstNodeFunctionDeclaration::compile(Tang::Program & program) const {
   program.setJumpTarget(jumpPastFunction, program.getBytecode().size());
   
   // Push a ComputedExpressionCompiledFunction onto the stack.
+  //auto functionDeclarationAddress = program.getBytecode().size();
   program.addBytecode((uinteger_t)Opcode::FUNCTION);
-  program.addBytecode(program.getIdentifiers().size() + program.getStrings().size());
+  program.addBytecode(this->arguments.size());
   program.addBytecode(functionStart);
 
   // Restore the environment because we have finished with the function.
@@ -92,9 +117,17 @@ void AstNodeFunctionDeclaration::compile(Tang::Program & program) const {
     program.addBytecode((uinteger_t)Opcode::POKE);
     program.addBytecode(identifier.at(this->name));
   }
+
+  // Record the information about this function in the functionsDeclared.
+  //program.setFunctionStackDeclaration(functionDeclarationAddress, this->arguments.size(), functionStart);
+  program.functionsDeclared[this->name] = {this->arguments.size(), functionStart};
 }
 
 void AstNodeFunctionDeclaration::collectIdentifiers(Program & program) const {
   program.addIdentifier(this->name);
+}
+
+void AstNodeFunctionDeclaration::collectFunctionDeclarations(Program & program) const {
+  program.functionsCollected.back().insert(this->name);
 }
 

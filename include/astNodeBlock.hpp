@@ -28,6 +28,7 @@ namespace Tang {
     virtual void compile(Tang::Program & program) const override;
     virtual void collectIdentifiers(Program & program) const override;
     virtual void collectStrings(Program & program) const override;
+    virtual void collectFunctionDeclarations(Program & program) const override;
 
   private:
     /**

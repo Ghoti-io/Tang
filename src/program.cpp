@@ -45,12 +45,42 @@ void Program::pushEnvironment(const shared_ptr<AstNode> & ast) {
 
   // Gather all of the strings in the current scope into the current map.
   ast->collectStrings(*this);
+
+  // Forward all of the previous function declarations, and gather any new ones
+  // in the new scope.
+  if (this->functionsCollected.size()) {
+    this->functionsCollected.push_back(this->functionsCollected.back());
+  }
+  else {
+    this->functionsCollected.push_back({});
+  }
+  ast->collectFunctionDeclarations(*this);
 }
 
 void Program::popEnvironment() {
   // Remove stack entries.
   this->identifierStack.pop_back();
   this->stringStack.pop_back();
+
+  // Try to "fill in" function stack declarations.
+  for (auto & declaration : this->functionStackDeclarations) {
+    // `declaration` is key/value pair of function name => vector of bytecodes.
+    auto & functionName = declaration.first;
+
+    if (this->functionsDeclared.count(functionName)) {
+      // The function was declared within this scope, so we can set the
+      // bytecodes to the correct values.
+      for (auto bytecode : declaration.second) {
+
+        this->setFunctionStackDeclaration(bytecode, this->functionsDeclared[functionName].first, this->functionsDeclared[functionName].second);
+      }
+      // Remove the bytecodes, because they have been filled in.
+      this->functionStackDeclarations[functionName].clear();
+    }
+  }
+
+  // Restore the `functionsCollected` stack to the previous scope state.
+  this->functionsCollected.pop_back();
 }
 
 void Program::compile() {
@@ -147,6 +177,23 @@ bool Program::setJumpTarget(size_t opcodeAddress, uinteger_t jumpTarget) {
 
   // Set the instruction.
   this->bytecode[opcodeAddress + 1] = jumpTarget;
+  return true;
+}
+
+bool Program::setFunctionStackDeclaration(size_t opcodeAddress, uinteger_t argc, uinteger_t targetPC) {
+  // Verify that the address is in scope.
+  if (opcodeAddress >= this->bytecode.size() - 2) {
+    return false;
+  }
+
+  // Verify that the opcodeAddress is, in fact, a function declaration.
+  if (this->bytecode[opcodeAddress] != (uinteger_t)Opcode::FUNCTION) {
+    return false;
+  }
+
+  // Set the instruction.
+  this->bytecode[opcodeAddress + 1] = argc;
+  this->bytecode[opcodeAddress + 2] = targetPC;
   return true;
 }
 
