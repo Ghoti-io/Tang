@@ -66,8 +66,9 @@ void AstNodeFunctionDeclaration::compile(Tang::Program & program) const {
   }
 
   // Compile the program.
+  // Do not pop the result.  It will be the "default" return value of the
+  // function, if a `return;` statement is not otherwise used.
   this->codeBlock->compile(program);
-  program.addBytecode((uinteger_t)Opcode::POP);
 
   // Ensure that the function is cleaned up by calling `RETURN`
   program.addBytecode((uinteger_t)Opcode::RETURN);

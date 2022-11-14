@@ -756,6 +756,23 @@ TEST(Function, Compiled) {
     print2then1("Hi", 3);
   )");
   EXPECT_EQ(p3.execute().out, "3Hi");
+  auto p4 = TangBase().compileScript(R"(
+    function printHi() {
+      print("Hi");
+    }
+    printHi();
+    printHi();
+  )");
+  EXPECT_EQ(p4.execute().out, "HiHi");
+  auto p5 = TangBase().compileScript(R"(
+    function print2then1(str1, str2) {
+      print(str2);
+      print(str1);
+    }
+    print2then1("Hi", 3);
+    print2then1("Hi", 2);
+  )");
+  EXPECT_EQ(p5.execute().out, "3Hi2Hi");
 }
 
 int main(int argc, char** argv) {

@@ -343,7 +343,7 @@ Program& Program::execute() {
 
           // Save the current execution environment so that it can be restored
           // when RETURNing from the function.
-          pcStack.push_back(pc);
+          pcStack.push_back(pc + 2);
           fpStack.push_back(fp);
 
           // Set the new pc and fp.
