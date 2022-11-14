@@ -773,6 +773,10 @@ TEST(Function, Compiled) {
     print2then1("Hi", 2);
   )");
   EXPECT_EQ(p5.execute().out, "3Hi2Hi");
+  auto p6 = TangBase().compileScript(R"(
+    a("Hi", 3);
+  )");
+  EXPECT_EQ(*p6.execute().getResult(), Error{"Function call on unrecognized type."});
 }
 
 int main(int argc, char** argv) {

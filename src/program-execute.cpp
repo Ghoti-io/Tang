@@ -329,6 +329,7 @@ Program& Program::execute() {
       }
       case Opcode::CALLFUNC: {
         EXECUTEPROGRAMCHECK(1);
+        STACKCHECK(1);
         auto function = stack.back();
         stack.pop_back();
         auto argc = this->bytecode[pc + 1];
@@ -354,6 +355,11 @@ Program& Program::execute() {
         }
 
         // Error: We don't know what to do.
+        // Clear the arguments from the stack.
+        for (uinteger_t i = 0; i < argc; ++i) {
+          stack.pop_back();
+        }
+
         stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Function call on unrecognized type."}));
         pc = this->bytecode.size();
         break;
