@@ -339,8 +339,22 @@ Program& Program::execute() {
         // They will clean up the stack when they finish, via the RETURN
         // opcode.
         if (typeid(*function) == typeid(ComputedExpressionCompiledFunction)) {
-          // "Call" the function.
           auto & funcConv = static_cast<ComputedExpressionCompiledFunction &>(*function);
+
+          // Verify that the correct number of arguments has been passed.
+          if (argc != (int)funcConv.getArgc()) {
+            // Incorrect number of arguments passed.
+            // Clear the arguments from the stack.
+            for (uinteger_t i = 0; i < argc; ++i) {
+              stack.pop_back();
+            }
+
+            // Push an error onto the stack.
+            stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments supplied at function call."}));
+
+            pc += 2;
+            break;
+          }
 
           // Save the current execution environment so that it can be restored
           // when RETURNing from the function.

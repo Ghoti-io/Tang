@@ -798,7 +798,6 @@ TEST(Function, Recursion) {
     }
     printNtimes("-", 3);
   )");
-  //cout << p1.dumpBytecode();
   EXPECT_EQ(p1.execute().out, "---");
   auto p2 = TangBase().compileScript(R"(
     function printNtimes(str, n) {
@@ -826,6 +825,14 @@ TEST(Function, Recursion) {
     printNtimes("-", 3);
   )");
   EXPECT_EQ(p3.execute().out, "---");
+}
+
+TEST(Function, FunctionCall) {
+  auto p1 = TangBase().compileScript(R"(
+    function a(b, c) {}
+    a(1);
+  )");
+  EXPECT_EQ(*p1.execute().getResult(), Error{"Incorrect number of arguments supplied at function call."});
 }
 
 int main(int argc, char** argv) {
