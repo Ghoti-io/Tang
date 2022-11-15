@@ -128,15 +128,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acfdd91afcec11f0cf8a8531eea591b16"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeIfElse.html#acfdd91afcec11f0cf8a8531eea591b16">compile</a> (<a class="el" href="classTang_1_1Program.html">Tang::Program</a> &amp;program) const override</td></tr>
 <tr class="memdesc:acfdd91afcec11f0cf8a8531eea591b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile the ast of the provided <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a>.  <a href="classTang_1_1AstNodeIfElse.html#acfdd91afcec11f0cf8a8531eea591b16">More...</a><br /></td></tr>
 <tr class="separator:acfdd91afcec11f0cf8a8531eea591b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a346c308f5064d274cb76a1d29e10608c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeIfElse.html#a346c308f5064d274cb76a1d29e10608c">collectIdentifiers</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program) const override</td></tr>
-<tr class="memdesc:a346c308f5064d274cb76a1d29e10608c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a list of all variables in the scope.  <a href="classTang_1_1AstNodeIfElse.html#a346c308f5064d274cb76a1d29e10608c">More...</a><br /></td></tr>
-<tr class="separator:a346c308f5064d274cb76a1d29e10608c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad949ce7a347c694c311667e0a0b0fa09"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeIfElse.html#ad949ce7a347c694c311667e0a0b0fa09">collectStrings</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program) const override</td></tr>
-<tr class="memdesc:ad949ce7a347c694c311667e0a0b0fa09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a list of all string constants in the scope.  <a href="classTang_1_1AstNodeIfElse.html#ad949ce7a347c694c311667e0a0b0fa09">More...</a><br /></td></tr>
-<tr class="separator:ad949ce7a347c694c311667e0a0b0fa09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa916bc4b23f481d2592b2971ad1084a8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#aa916bc4b23f481d2592b2971ad1084a8">collectFunctionDeclarations</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program) const</td></tr>
-<tr class="memdesc:aa916bc4b23f481d2592b2971ad1084a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a list of the names of functions that are declared in this scope.  <a href="classTang_1_1AstNode.html#aa916bc4b23f481d2592b2971ad1084a8">More...</a><br /></td></tr>
-<tr class="separator:aa916bc4b23f481d2592b2971ad1084a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e0c19940ac5494d61261f705d7cdfda"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeIfElse.html#a6e0c19940ac5494d61261f705d7cdfda">compilePreprocess</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program) const override</td></tr>
+<tr class="memdesc:a6e0c19940ac5494d61261f705d7cdfda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run any preprocess analysis needed before compilation.  <a href="classTang_1_1AstNodeIfElse.html#a6e0c19940ac5494d61261f705d7cdfda">More...</a><br /></td></tr>
+<tr class="separator:a6e0c19940ac5494d61261f705d7cdfda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that represents an if..else statement. </p>
@@ -237,114 +231,6 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa916bc4b23f481d2592b2971ad1084a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa916bc4b23f481d2592b2971ad1084a8">&#9670;&nbsp;</a></span>collectFunctionDeclarations()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AstNode::collectFunctionDeclarations </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classTang_1_1Program.html">Program</a> &amp;&#160;</td>
-          <td class="paramname"><em>program</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Compile a list of the names of functions that are declared in this scope. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">program</td><td>The <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a> that is being compiled. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented in <a class="el" href="classTang_1_1AstNodeFunctionDeclaration.html#a1eeccb165b5c8aef6e725390f372e59b">Tang::AstNodeFunctionDeclaration</a>, and <a class="el" href="classTang_1_1AstNodeBlock.html#a848c7a6a09be0169c37ff82bf512f769">Tang::AstNodeBlock</a>.</p>
-
-</div>
-</div>
-<a id="a346c308f5064d274cb76a1d29e10608c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a346c308f5064d274cb76a1d29e10608c">&#9670;&nbsp;</a></span>collectIdentifiers()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AstNodeIfElse::collectIdentifiers </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classTang_1_1Program.html">Program</a> &amp;&#160;</td>
-          <td class="paramname"><em>program</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Compile a list of all variables in the scope. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">program</td><td>The <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a> that is being compiled. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="classTang_1_1AstNode.html#a804f9247f774f9444ee7e8db7e7d3e4e">Tang::AstNode</a>.</p>
-
-</div>
-</div>
-<a id="ad949ce7a347c694c311667e0a0b0fa09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad949ce7a347c694c311667e0a0b0fa09">&#9670;&nbsp;</a></span>collectStrings()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AstNodeIfElse::collectStrings </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classTang_1_1Program.html">Program</a> &amp;&#160;</td>
-          <td class="paramname"><em>program</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Compile a list of all string constants in the scope. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">program</td><td>The <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a> that is being compiled. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="classTang_1_1AstNode.html#a32b4e64d2333d842b2004872336f5a81">Tang::AstNode</a>.</p>
-
-</div>
-</div>
 <a id="acfdd91afcec11f0cf8a8531eea591b16"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acfdd91afcec11f0cf8a8531eea591b16">&#9670;&nbsp;</a></span>compile()</h2>
 
@@ -389,6 +275,42 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="classTang_1_1Program.html#a5da413efe8435cebd927a8be58dcb9be" title="Set the target address of a Jump opcode." alt="" coords="204,107,420,133"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a6e0c19940ac5494d61261f705d7cdfda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e0c19940ac5494d61261f705d7cdfda">&#9670;&nbsp;</a></span>compilePreprocess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AstNodeIfElse::compilePreprocess </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classTang_1_1Program.html">Program</a> &amp;&#160;</td>
+          <td class="paramname"><em>program</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Run any preprocess analysis needed before compilation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">program</td><td>The <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a> that is being compiled. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classTang_1_1AstNode.html#a8430f4ca74662f17184b3107dfa7034b">Tang::AstNode</a>.</p>
 
 </div>
 </div>
