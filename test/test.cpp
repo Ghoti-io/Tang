@@ -835,6 +835,57 @@ TEST(Function, FunctionCall) {
   EXPECT_EQ(*p1.execute().getResult(), Error{"Incorrect number of arguments supplied at function call."});
 }
 
+TEST(Function, Return) {
+  auto p1 = TangBase().compileScript(R"(
+    function a(condition) {
+      return condition ? 1 : 2;
+    }
+    print(a(true));
+    print(a(false));
+    print(a(false));
+    print(a(true));
+  )");
+  EXPECT_EQ(p1.execute().out, "1221");
+  auto p2 = TangBase().compileScript(R"(
+    function a(condition) {
+      if (condition) {
+        return 1;
+      }
+    }
+    print(a(true));
+    print(a(false));
+    print(a(false));
+    print(a(true));
+  )");
+  EXPECT_EQ(p2.execute().out, "11");
+  auto p3 = TangBase().compileScript(R"(
+    function a(condition) {
+      if (condition) {
+        return 1;
+      }
+      print("Hi");
+    }
+    print(a(true));
+    print(a(false));
+    print(a(false));
+    print(a(true));
+  )");
+  EXPECT_EQ(p3.execute().out, "1HiHi1");
+  auto p4 = TangBase().compileScript(R"(
+    function a(condition) {
+      if (condition) {
+        return;
+      }
+      print("Hi");
+    }
+    print(a(true));
+    print(a(false));
+    print(a(false));
+    print(a(true));
+  )");
+  EXPECT_EQ(p4.execute().out, "HiHi");
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

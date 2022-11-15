@@ -306,6 +306,10 @@ closedStatement
       $$ = std::make_shared<AstNodeFunctionDeclaration>($2, $4, $6, @1);
     }
   | codeBlock
+  | "return" ";"
+    {
+      $$ = std::make_shared<AstNodeReturn>(std::make_shared<AstNode>(@1), @1);
+    }
   | "return" expression ";"
     {
       $$ = std::make_shared<AstNodeReturn>($2, @1);
