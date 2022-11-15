@@ -16,7 +16,7 @@ string AstNodeIdentifier::dump(string indent) const {
   return indent + "Identifier: " + this->name + "\n";
 }
 
-void AstNodeIdentifier::collectIdentifiers(Program & program) const {
+void AstNodeIdentifier::compilePreprocess(Program & program) const {
   program.addIdentifier(this->name);
 }
 

@@ -20,15 +20,9 @@ string AstNodeBlock::dump(string indent) const {
   return out;
 }
 
-void AstNodeBlock::collectIdentifiers(Program & program) const {
+void AstNodeBlock::compilePreprocess(Program & program) const {
   for (auto x : this->statements) {
-    x->collectIdentifiers(program);
-  }
-}
-
-void AstNodeBlock::collectStrings(Program & program) const {
-  for (auto x : this->statements) {
-    x->collectStrings(program);
+    x->compilePreprocess(program);
   }
 }
 
@@ -46,12 +40,6 @@ void AstNodeBlock::compile(Tang::Program & program) const {
   else {
     // This compile *must* leave something on the stack, so leave a NULL
     program.addBytecode((uinteger_t)Opcode::NULLVAL);
-  }
-}
-
-void AstNodeBlock::collectFunctionDeclarations(Program & program) const {
-  for (auto x : this->statements) {
-    x->collectFunctionDeclarations(program);
   }
 }
 

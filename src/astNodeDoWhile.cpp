@@ -38,13 +38,8 @@ void AstNodeDoWhile::compile(Tang::Program & program) const {
   program.addBytecode((uinteger_t)Opcode::NULLVAL);
 }
 
-void AstNodeDoWhile::collectIdentifiers(Program & program) const {
-  this->condition->collectIdentifiers(program);
-  this->codeBlock->collectIdentifiers(program);
-}
-
-void AstNodeDoWhile::collectStrings(Program & program) const {
-  this->condition->collectStrings(program);
-  this->codeBlock->collectStrings(program);
+void AstNodeDoWhile::compilePreprocess(Program & program) const {
+  this->condition->compilePreprocess(program);
+  this->codeBlock->compilePreprocess(program);
 }
 

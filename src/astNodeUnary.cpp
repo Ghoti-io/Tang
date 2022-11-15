@@ -21,12 +21,8 @@ string AstNodeUnary::dump(string indent) const {
   return indent + "Unary (" + description[this->op] + "):\n" + this->operand->dump(indent + "  ");
 }
 
-void AstNodeUnary::collectIdentifiers(Program & program) const {
-  this->operand->collectIdentifiers(program);
-}
-
-void AstNodeUnary::collectStrings(Program & program) const {
-  this->operand->collectStrings(program);
+void AstNodeUnary::compilePreprocess(Program & program) const {
+  this->operand->compilePreprocess(program);
 }
 
 void AstNodeUnary::compile(Tang::Program & program) const {

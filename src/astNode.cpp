@@ -33,9 +33,5 @@ void AstNode::compile(Tang::Program & program) const {
   }
 }
 
-void AstNode::collectIdentifiers([[maybe_unused]] Program & program) const {}
-
-void AstNode::collectStrings([[maybe_unused]] Program & program) const {}
-
-void AstNode::collectFunctionDeclarations([[maybe_unused]] Program & program) const {}
+void AstNode::compilePreprocess([[maybe_unused]] Program & program) const {}
 

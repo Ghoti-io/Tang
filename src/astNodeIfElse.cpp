@@ -66,19 +66,11 @@ void AstNodeIfElse::compile(Tang::Program & program) const {
   }
 }
 
-void AstNodeIfElse::collectIdentifiers(Program & program) const {
-  this->condition->collectIdentifiers(program);
-  this->thenBlock->collectIdentifiers(program);
+void AstNodeIfElse::compilePreprocess(Program & program) const {
+  this->condition->compilePreprocess(program);
+  this->thenBlock->compilePreprocess(program);
   if (this->elseBlock) {
-    this->elseBlock->collectIdentifiers(program);
-  }
-}
-
-void AstNodeIfElse::collectStrings(Program & program) const {
-  this->condition->collectStrings(program);
-  this->thenBlock->collectStrings(program);
-  if (this->elseBlock) {
-    this->elseBlock->collectStrings(program);
+    this->elseBlock->compilePreprocess(program);
   }
 }
 

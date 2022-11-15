@@ -21,6 +21,10 @@ string AstNodeCast::dump(string indent) const {
   return indent + "Cast to " + description[this->targetType] + ":\n" + this->expression->dump(indent + "  ");
 }
 
+void AstNodeCast::compilePreprocess(Program & program) const {
+  this->expression->compilePreprocess(program);
+}
+
 void AstNodeCast::compile(Tang::Program & program) const {
   this->expression->compile(program);
   switch (this->targetType) {

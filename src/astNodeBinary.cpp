@@ -36,14 +36,9 @@ string AstNodeBinary::dump(string indent) const {
     + this->rhs->dump(indent + "    ");
 }
 
-void AstNodeBinary::collectIdentifiers(Program & program) const {
-  this->lhs->collectIdentifiers(program);
-  this->rhs->collectIdentifiers(program);
-}
-
-void AstNodeBinary::collectStrings(Program & program) const {
-  this->lhs->collectStrings(program);
-  this->rhs->collectStrings(program);
+void AstNodeBinary::compilePreprocess(Program & program) const {
+  this->lhs->compilePreprocess(program);
+  this->rhs->compilePreprocess(program);
 }
 
 void AstNodeBinary::compile(Tang::Program & program) const {

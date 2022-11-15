@@ -123,11 +123,8 @@ void AstNodeFunctionDeclaration::compile(Tang::Program & program) const {
   program.functionsDeclared[this->name] = {this->arguments.size(), functionStart};
 }
 
-void AstNodeFunctionDeclaration::collectIdentifiers(Program & program) const {
+void AstNodeFunctionDeclaration::compilePreprocess(Program & program) const {
   program.addIdentifier(this->name);
-}
-
-void AstNodeFunctionDeclaration::collectFunctionDeclarations(Program & program) const {
   program.functionsCollected.back().insert(this->name);
 }
 

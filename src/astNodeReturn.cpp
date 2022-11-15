@@ -17,12 +17,8 @@ string AstNodeReturn::dump(string indent) const {
   return indent + "Return:\n" + this->expression->dump(indent + "  ");
 }
 
-void AstNodeReturn::collectIdentifiers(Program & program) const {
-  this->expression->collectIdentifiers(program);
-}
-
-void AstNodeReturn::collectStrings(Program & program) const {
-  this->expression->collectStrings(program);
+void AstNodeReturn::compilePreprocess(Program & program) const {
+  this->expression->compilePreprocess(program);
 }
 
 void AstNodeReturn::compile(Tang::Program & program) const {

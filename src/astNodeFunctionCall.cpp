@@ -23,17 +23,10 @@ string AstNodeFunctionCall::dump(string indent) const {
   return out;
 }
 
-void AstNodeFunctionCall::collectIdentifiers(Program & program) const {
-  this->function->collectIdentifiers(program);
+void AstNodeFunctionCall::compilePreprocess(Program & program) const {
+  this->function->compilePreprocess(program);
   for (auto & arg : this->argv) {
-    arg->collectIdentifiers(program);
-  }
-}
-
-void AstNodeFunctionCall::collectStrings(Program & program) const {
-  this->function->collectStrings(program);
-  for (auto & arg : this->argv) {
-    arg->collectStrings(program);
+    arg->compilePreprocess(program);
   }
 }
 

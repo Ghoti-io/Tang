@@ -52,26 +52,11 @@ namespace Tang {
     virtual void compile(Tang::Program & program) const;
 
     /**
-     * Compile a list of all variables in the scope.
+     * Run any preprocess analysis needed before compilation.
      *
      * @param program The Tang::Program that is being compiled.
      */
-    virtual void collectIdentifiers(Program & program) const;
-
-    /**
-     * Compile a list of all string constants in the scope.
-     *
-     * @param program The Tang::Program that is being compiled.
-     */
-    virtual void collectStrings(Program & program) const;
-
-    /**
-     * Compile a list of the names of functions that are declared in this
-     * scope.
-     *
-     * @param program The Tang::Program that is being compiled.
-     */
-    virtual void collectFunctionDeclarations(Program & program) const;
+    virtual void compilePreprocess(Program & program) const;
 
   private:
     /**

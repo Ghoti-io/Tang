@@ -40,12 +40,6 @@ void Program::pushEnvironment(const shared_ptr<AstNode> & ast) {
   // Prepare the string mapping stack with an empty map.
   this->stringStack.push_back(map<string,size_t>{});
 
-  // Gather all of the identifiers in the current scope into the current map.
-  ast->collectIdentifiers(*this);
-
-  // Gather all of the strings in the current scope into the current map.
-  ast->collectStrings(*this);
-
   // Forward all of the previous function declarations, and gather any new ones
   // in the new scope.
   if (this->functionsCollected.size()) {
@@ -54,7 +48,9 @@ void Program::pushEnvironment(const shared_ptr<AstNode> & ast) {
   else {
     this->functionsCollected.push_back({});
   }
-  ast->collectFunctionDeclarations(*this);
+
+  // Preprocess the AST
+  ast->compilePreprocess(*this);
 }
 
 void Program::popEnvironment() {
