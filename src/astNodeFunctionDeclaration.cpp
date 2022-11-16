@@ -94,6 +94,30 @@ void AstNodeFunctionDeclaration::compile(Tang::Program & program) const {
   // function, if a `return;` statement is not otherwise used.
   this->codeBlock->compile(program);
 
+  // At this point, we need to account for any stray `continue` or `break`
+  // statements.  However, `RETURN` expects there to be a return value on the
+  // stack, something that `continue` and `break` do not provide.  Therefore,
+  // we must provide a "dummy" value that will only be evaluated in the case
+  // that a stray `continue` or `break` is being evaluated.
+  //
+  // The simple solution is to, at this moment of execution jump over a command
+  // to add the "dummy" value, but make the stray `continue` and `break`
+  // statements jump *to* the "dummy" value.
+  program.addBytecode((uinteger_t)Opcode::JMP);
+  program.addBytecode((uinteger_t)program.getBytecode().size() + 2);
+  program.addBytecode((uinteger_t)Opcode::NULLVAL);
+
+  // Now, make all of the stray `continue` and `break` statements jump to the
+  // NULLVAL opcode.
+  program.popBreakStack(program.getBytecode().size() - 1);
+  program.popContinueStack(program.getBytecode().size() - 1);
+
+  // We just popped the `break` and `continue` stacks, but they will be popped
+  // again when the function has completed compiling.  So, push the stacks
+  // so that the push/pop symmetry is maintained.
+  program.pushBreakStack();
+  program.pushContinueStack();
+
   // Ensure that the function is cleaned up by calling `RETURN`
   program.addBytecode((uinteger_t)Opcode::RETURN);
   program.addBytecode((uinteger_t)program.getIdentifiers().size() + program.getStrings().size());

@@ -112,6 +112,8 @@
 %token CASTBOOLEAN "boolean"
 %token FUNCTION "function"
 %token RETURN "return"
+%token BREAK "break"
+%token CONTINUE "continue"
 %token PRINT "print"
 %token QUESTIONMARK "?"
 %token COLON ":"
@@ -145,6 +147,7 @@
 %left "+" "-"
 %left "*" "/" "%"
 %right UMINUS AS "!"
+%left "(" ")"
 
 // Code sections.
 // https://www.gnu.org/software/bison/manual/bison.html#g_t_0025code-Summary
@@ -167,6 +170,8 @@ namespace Tang {
 #include "astNodeUnary.hpp"
 #include "astNodeAssign.hpp"
 #include "astNodeBinary.hpp"
+#include "astNodeBreak.hpp"
+#include "astNodeContinue.hpp"
 #include "astNodeFloat.hpp"
 #include "astNodeIdentifier.hpp"
 #include "astNodeInteger.hpp"
@@ -313,6 +318,14 @@ closedStatement
   | "return" expression ";"
     {
       $$ = std::make_shared<AstNodeReturn>($2, @1);
+    }
+  | "break" ";"
+    {
+      $$ = std::make_shared<AstNodeBreak>(@1);
+    }
+  | "continue" ";"
+    {
+      $$ = std::make_shared<AstNodeContinue>(@1);
     }
   | expression ";"
   ;

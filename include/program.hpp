@@ -187,6 +187,52 @@ namespace Tang {
      */
     std::map<std::string, std::vector<Tang::uinteger_t>> functionStackDeclarations;
 
+    /**
+     * Increase the `break` environment stack, so that we can handle nested
+     * break-supporting structures.
+     */
+    void pushBreakStack();
+
+    /**
+     * Add the Bytecode location of a `break` statement, to be set when the
+     * final target is known at a later time.
+     *
+     * @param location The offset location of the `break` bytecode.
+     */
+    void addBreak(size_t location);
+
+    /**
+     * For all `continue` bytecode locations collected by Tang::addContinue,
+     * set the target pc to `target`.
+     *
+     * @param target The target bytecode offset that the `continue` should
+     *   jump to.
+     */
+    void popBreakStack(size_t target);
+
+    /**
+     * Increase the `continue` environment stack, so that we can handle nested
+     * continue-supporting structures.
+     */
+    void pushContinueStack();
+
+    /**
+     * Add the Bytecode location of a `continue` statement, to be set when the
+     * final target is known at a later time.
+     *
+     * @param location The offset location of the `continue` bytecode.
+     */
+    void addContinue(size_t location);
+
+    /**
+     * For all `continue` bytecode locations collected by Tang::addContinue,
+     * set the target pc to `target`.
+     *
+     * @param target The target bytecode offset that the `continue` should
+     *   jump to.
+     */
+    void popContinueStack(size_t target);
+
   private:
     /**
      * Stack of mappings of identifiers to their stack locations.
@@ -197,6 +243,16 @@ namespace Tang {
      * Stack of mappings of strings to their stack locations.
      */
     std::vector<std::map<std::string, size_t>> stringStack;
+
+    /**
+     * Stack of a collection of `break` statement locations.
+     */
+    std::vector<std::set<size_t>> breakStack;
+
+    /**
+     * Stack of a collection of `continue` statement locations.
+     */
+    std::vector<std::set<size_t>> continueStack;
 
     /**
      * Parse the code into an AST.

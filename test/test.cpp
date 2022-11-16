@@ -640,6 +640,127 @@ TEST(ControlFlow, While) {
   EXPECT_EQ(*p5.execute().getResult(), nullptr);
 }
 
+TEST(ControlFlow, Break) {
+  auto p1 = TangBase().compileScript(R"(
+    a = 0;
+    while (a < 10) {
+      a = a + 1;
+      if (a > 5)
+        break;
+      print(a);
+    }
+    print("Hi");
+  )");
+  EXPECT_EQ(p1.execute().out, "12345Hi");
+  auto p2 = TangBase().compileScript(R"(
+    for (b = 0; b < 2; b = b + 1) {
+      a = 0;
+      while (a < 4) {
+        a = a + 1;
+        if (b % 2) {
+          print("Even");
+          break;
+        }
+        else {
+          print("Odd");
+          break;
+        }
+        print(a);
+      }
+    }
+    print("Hi");
+  )");
+  EXPECT_EQ(p2.execute().out, "OddEvenHi");
+  auto p3 = TangBase().compileScript(R"(
+    for (a = 1; a < 10; a = a + 1) {
+      if (a > 5)
+        break;
+      print(a);
+    }
+    print("Hi");
+  )");
+  EXPECT_EQ(p3.execute().out, "12345Hi");
+  auto p4 = TangBase().compileScript(R"(
+    print("Hi");
+    break;
+    print("Hi");
+  )");
+  EXPECT_EQ(p4.execute().out, "Hi");
+  auto p5 = TangBase().compileScript(R"(
+    function a() {
+      print(1);
+      break;
+      print(2);
+    }
+    a();
+    print(3);
+  )");
+  EXPECT_EQ(p5.execute().out, "13");
+}
+
+TEST(ControlFlow, Continue) {
+  auto p1 = TangBase().compileScript(R"(
+    a = 0;
+    while (a < 10) {
+      a = a + 1;
+      if (a > 5)
+        continue;
+      print(a);
+    }
+    print("Hi");
+  )");
+  EXPECT_EQ(p1.execute().out, "12345Hi");
+  auto p2 = TangBase().compileScript(R"(
+    a = 0;
+    while (a < 10) {
+      a = a + 1;
+      if (a < 3)
+        continue;
+      if (a > 7)
+        continue;
+      print(a);
+    }
+    print("Hi");
+  )");
+  EXPECT_EQ(p2.execute().out, "34567Hi");
+  auto p3 = TangBase().compileScript(R"(
+    for (a = 1; a < 10; a = a + 1) {
+      if (a > 5)
+        continue;
+      print(a);
+    }
+    print("Hi");
+  )");
+  EXPECT_EQ(p3.execute().out, "12345Hi");
+  auto p4 = TangBase().compileScript(R"(
+    for (a = 1; a < 10; a = a + 1) {
+      if (a < 3)
+        continue;
+      if (a > 7)
+        continue;
+      print(a);
+    }
+    print("Hi");
+  )");
+  EXPECT_EQ(p4.execute().out, "34567Hi");
+  auto p5 = TangBase().compileScript(R"(
+    print("Hi");
+    continue;
+    print("Hi");
+  )");
+  EXPECT_EQ(p5.execute().out, "Hi");
+  auto p6 = TangBase().compileScript(R"(
+    function a() {
+      print(1);
+      continue;
+      print(2);
+    }
+    a();
+    print(3);
+  )");
+  EXPECT_EQ(p6.execute().out, "13");
+}
+
 TEST(ControlFlow, DoWhile) {
   auto p1 = TangBase().compileScript("a = 1; do b = a = a + 1; while (a < 10); b;");
   EXPECT_EQ(*p1.execute().getResult(), (integer_t)10);

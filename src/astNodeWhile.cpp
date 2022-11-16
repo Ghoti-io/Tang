@@ -22,6 +22,11 @@ string AstNodeWhile::dump(string indent) const {
 }
 
 void AstNodeWhile::compile(Tang::Program & program) const {
+  // Start new environments for `break` and `continue` statements.
+  program.pushBreakStack();
+  program.pushContinueStack();
+
+  // Start compiling the `while` statement.
   auto conditionStart = program.getBytecode().size();
   this->condition->compile(program);
 
@@ -41,6 +46,13 @@ void AstNodeWhile::compile(Tang::Program & program) const {
   // We now know where the code after the while statement will be.
   // The parent will add a POP instruction, so account for that by using "+ 1".
   program.setJumpTarget(conditionFalseJump, program.getBytecode().size() + 1);
+
+  // We now know where a `break` statement should jump to.
+  // The parent will add a POP instruction, so account for that by using "+ 1".
+  program.popBreakStack(program.getBytecode().size() + 1);
+
+  // We now know where a `continue` statement should jump to.
+  program.popContinueStack(conditionStart);
 }
 
 void AstNodeWhile::compilePreprocess(Program & program) const {

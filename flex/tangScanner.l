@@ -147,6 +147,12 @@ using namespace std;
   return {
     return Tang::TangParser::make_RETURN(Tang::location(location));
   }
+  break {
+    return Tang::TangParser::make_BREAK(Tang::location(location));
+  }
+  continue {
+    return Tang::TangParser::make_CONTINUE(Tang::location(location));
+  }
   print {
     return Tang::TangParser::make_PRINT(Tang::location(location));
   }

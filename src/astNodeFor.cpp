@@ -26,6 +26,10 @@ string AstNodeFor::dump(string indent) const {
 }
 
 void AstNodeFor::compile(Tang::Program & program) const {
+  // Start new environments for `break` and `continue` statements.
+  program.pushBreakStack();
+  program.pushContinueStack();
+
   // Compile the Initialization expression.
   this->initialization->compile(program);
   program.addBytecode((uinteger_t)Opcode::POP);
@@ -35,8 +39,8 @@ void AstNodeFor::compile(Tang::Program & program) const {
   this->condition->compile(program);
 
   // If condition is false, jump to the end of the if..else statement.
+  auto conditionFalseJump = program.getBytecode().size();
   program.addBytecode((uinteger_t)Opcode::JMPF_POP);
-  auto conditionFalseJump = program.getBytecode().size() - 1;
   program.addBytecode(0);
 
   // Compile the code block and clean up the stack afterwards.
@@ -44,6 +48,7 @@ void AstNodeFor::compile(Tang::Program & program) const {
   program.addBytecode((uinteger_t)Opcode::POP);
 
   // Compile the increment expression.
+  auto incrementStart = program.getBytecode().size();
   this->increment->compile(program);
   program.addBytecode((uinteger_t)Opcode::POP);
 
@@ -54,6 +59,13 @@ void AstNodeFor::compile(Tang::Program & program) const {
   // We now know where the code after the while statement will be.
   // The parent will add a POP instruction, so account for that by using "+ 1".
   program.setJumpTarget(conditionFalseJump, program.getBytecode().size() + 1);
+
+  // We now know where a `break` statement should jump to.
+  // The parent will add a POP instruction, so account for that by using "+ 1".
+  program.popBreakStack(program.getBytecode().size() + 1);
+
+  // We now know where a `continue` statement should jump to.
+  program.popContinueStack(incrementStart);
 }
 
 void AstNodeFor::compilePreprocess(Program & program) const {

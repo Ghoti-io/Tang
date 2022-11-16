@@ -49,6 +49,12 @@ void Program::pushEnvironment(const shared_ptr<AstNode> & ast) {
     this->functionsCollected.push_back({});
   }
 
+  // Prepare the break stack.
+  this->pushBreakStack();
+
+  // Prepare the continue stack.
+  this->pushContinueStack();
+
   // Preprocess the AST
   ast->compilePreprocess(*this);
 }
@@ -77,6 +83,12 @@ void Program::popEnvironment() {
 
   // Restore the `functionsCollected` stack to the previous scope state.
   this->functionsCollected.pop_back();
+
+  // Try to "fill in" break opcodes.
+  this->popBreakStack(this->bytecode.size());
+
+  // Try to "fill in" continue opcodes.
+  this->popContinueStack(this->bytecode.size());
 }
 
 void Program::compile() {
@@ -191,5 +203,35 @@ bool Program::setFunctionStackDeclaration(size_t opcodeAddress, uinteger_t argc,
   this->bytecode[opcodeAddress + 1] = argc;
   this->bytecode[opcodeAddress + 2] = targetPC;
   return true;
+}
+
+void Program::pushBreakStack() {
+  this->breakStack.push_back({});
+}
+
+void Program::addBreak(size_t location) {
+  this->breakStack.back().insert(location);
+}
+
+void Program::popBreakStack(size_t target) {
+  for (auto i : this->breakStack.back()) {
+    this->setJumpTarget(i, target);
+  }
+  this->breakStack.pop_back();
+}
+
+void Program::pushContinueStack() {
+  this->continueStack.push_back({});
+}
+
+void Program::addContinue(size_t location) {
+  this->continueStack.back().insert(location);
+}
+
+void Program::popContinueStack(size_t target) {
+  for (auto i : this->continueStack.back()) {
+    this->setJumpTarget(i, target);
+  }
+  this->continueStack.pop_back();
 }
 
