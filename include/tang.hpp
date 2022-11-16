@@ -31,7 +31,6 @@
 //
 //
 // TODO What's next:
-// * function declaration (ast) and calling
 // * continue and break
 // * TangString
 //   * ICU compiling in
@@ -41,7 +40,6 @@
 //   * percent encode
 //   * percent decode
 // * Convert ComputedExpressionString to use TangString
-// * ternary operator
 // * print!()
 // * print%()
 // * print<>()
