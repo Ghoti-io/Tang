@@ -61,7 +61,21 @@ const std\+::map$<$ std\+::string, size\+\_\+t $>$ \& \mbox{\hyperlink{classTang
 void \mbox{\hyperlink{classTang_1_1Program_a7d778367416fa5697086a89bece76696}{add\+String}} (const std\+::string \&name)
 \begin{DoxyCompactList}\small\item\em Add a string to the environment. \end{DoxyCompactList}\item 
 const std\+::map$<$ std\+::string, size\+\_\+t $>$ \& \mbox{\hyperlink{classTang_1_1Program_a6d8557e55dd1aeb9f6791c7c84528332}{get\+Strings}} () const
-\begin{DoxyCompactList}\small\item\em Get the string map of the current environment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the string map of the current environment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1Program_a5c12ec99486118295496695b50750da9}\label{classTang_1_1Program_a5c12ec99486118295496695b50750da9}} 
+void \mbox{\hyperlink{classTang_1_1Program_a5c12ec99486118295496695b50750da9}{push\+Break\+Stack}} ()
+\begin{DoxyCompactList}\small\item\em Increase the {\ttfamily break} environment stack, so that we can handle nested break-\/supporting structures. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTang_1_1Program_ae4a0290af40e77c489286303ef73dae3}{add\+Break}} (size\+\_\+t \mbox{\hyperlink{classTang_1_1location}{location}})
+\begin{DoxyCompactList}\small\item\em Add the Bytecode location of a {\ttfamily break} statement, to be set when the final target is known at a later time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTang_1_1Program_ab170cc8217af1ed518b89cf445508d18}{pop\+Break\+Stack}} (size\+\_\+t target)
+\begin{DoxyCompactList}\small\item\em For all {\ttfamily continue} bytecode locations collected by Tang\+::add\+Continue, set the target pc to {\ttfamily target}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1Program_af5d2ae23991475e3c8776de0d0a01123}\label{classTang_1_1Program_af5d2ae23991475e3c8776de0d0a01123}} 
+void \mbox{\hyperlink{classTang_1_1Program_af5d2ae23991475e3c8776de0d0a01123}{push\+Continue\+Stack}} ()
+\begin{DoxyCompactList}\small\item\em Increase the {\ttfamily continue} environment stack, so that we can handle nested continue-\/supporting structures. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTang_1_1Program_ad95d0be274c087ea9361d4b758ae26c2}{add\+Continue}} (size\+\_\+t \mbox{\hyperlink{classTang_1_1location}{location}})
+\begin{DoxyCompactList}\small\item\em Add the Bytecode location of a {\ttfamily continue} statement, to be set when the final target is known at a later time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTang_1_1Program_a0a824ad2a83896854f4e528f6c3cc630}{pop\+Continue\+Stack}} (size\+\_\+t target)
+\begin{DoxyCompactList}\small\item\em For all {\ttfamily continue} bytecode locations collected by Tang\+::add\+Continue, set the target pc to {\ttfamily target}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -125,6 +139,21 @@ Create a compiled program using the provided code.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1Program_ae4a0290af40e77c489286303ef73dae3}\label{classTang_1_1Program_ae4a0290af40e77c489286303ef73dae3}} 
+\index{Tang::Program@{Tang::Program}!addBreak@{addBreak}}
+\index{addBreak@{addBreak}!Tang::Program@{Tang::Program}}
+\doxysubsubsection{\texorpdfstring{addBreak()}{addBreak()}}
+{\footnotesize\ttfamily void Program\+::add\+Break (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{location }\end{DoxyParamCaption})}
+
+
+
+Add the Bytecode location of a {\ttfamily break} statement, to be set when the final target is known at a later time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & The offset location of the {\ttfamily break} bytecode. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classTang_1_1Program_a1067d000db48378fa37ff569ffdf7329}\label{classTang_1_1Program_a1067d000db48378fa37ff569ffdf7329}} 
 \index{Tang::Program@{Tang::Program}!addBytecode@{addBytecode}}
 \index{addBytecode@{addBytecode}!Tang::Program@{Tang::Program}}
@@ -143,6 +172,21 @@ Add a Tang\+::uinteger\+\_\+t to the Bytecode.
 \begin{DoxyReturn}{Returns}
 The size of the bytecode structure. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1Program_ad95d0be274c087ea9361d4b758ae26c2}\label{classTang_1_1Program_ad95d0be274c087ea9361d4b758ae26c2}} 
+\index{Tang::Program@{Tang::Program}!addContinue@{addContinue}}
+\index{addContinue@{addContinue}!Tang::Program@{Tang::Program}}
+\doxysubsubsection{\texorpdfstring{addContinue()}{addContinue()}}
+{\footnotesize\ttfamily void Program\+::add\+Continue (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{location }\end{DoxyParamCaption})}
+
+
+
+Add the Bytecode location of a {\ttfamily continue} statement, to be set when the final target is known at a later time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & The offset location of the {\ttfamily continue} bytecode. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classTang_1_1Program_ab6ffaae61038ad76502d9fd5c26a69f2}\label{classTang_1_1Program_ab6ffaae61038ad76502d9fd5c26a69f2}} 
 \index{Tang::Program@{Tang::Program}!addIdentifier@{addIdentifier}}
 \index{addIdentifier@{addIdentifier}!Tang::Program@{Tang::Program}}
@@ -291,6 +335,52 @@ Get the string map of the current environment.
 \begin{DoxyReturn}{Returns}
 A map of each identifer name to its stack position within the current environment. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1Program_ab170cc8217af1ed518b89cf445508d18}\label{classTang_1_1Program_ab170cc8217af1ed518b89cf445508d18}} 
+\index{Tang::Program@{Tang::Program}!popBreakStack@{popBreakStack}}
+\index{popBreakStack@{popBreakStack}!Tang::Program@{Tang::Program}}
+\doxysubsubsection{\texorpdfstring{popBreakStack()}{popBreakStack()}}
+{\footnotesize\ttfamily void Program\+::pop\+Break\+Stack (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{target }\end{DoxyParamCaption})}
+
+
+
+For all {\ttfamily continue} bytecode locations collected by Tang\+::add\+Continue, set the target pc to {\ttfamily target}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The target bytecode offset that the {\ttfamily continue} should jump to. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTang_1_1Program_ab170cc8217af1ed518b89cf445508d18_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTang_1_1Program_a0a824ad2a83896854f4e528f6c3cc630}\label{classTang_1_1Program_a0a824ad2a83896854f4e528f6c3cc630}} 
+\index{Tang::Program@{Tang::Program}!popContinueStack@{popContinueStack}}
+\index{popContinueStack@{popContinueStack}!Tang::Program@{Tang::Program}}
+\doxysubsubsection{\texorpdfstring{popContinueStack()}{popContinueStack()}}
+{\footnotesize\ttfamily void Program\+::pop\+Continue\+Stack (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{target }\end{DoxyParamCaption})}
+
+
+
+For all {\ttfamily continue} bytecode locations collected by Tang\+::add\+Continue, set the target pc to {\ttfamily target}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The target bytecode offset that the {\ttfamily continue} should jump to. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTang_1_1Program_a0a824ad2a83896854f4e528f6c3cc630_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classTang_1_1Program_a3ed3e014d80138d61d545a3ef5fe0a2e}\label{classTang_1_1Program_a3ed3e014d80138d61d545a3ef5fe0a2e}} 
 \index{Tang::Program@{Tang::Program}!pushEnvironment@{pushEnvironment}}
 \index{pushEnvironment@{pushEnvironment}!Tang::Program@{Tang::Program}}
@@ -306,6 +396,14 @@ Create a new compile/execute environment stack entry.
 {\em ast} & The ast node from which this new environment will be formed. \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTang_1_1Program_a3ed3e014d80138d61d545a3ef5fe0a2e_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classTang_1_1Program_aabcfee07409be5bc6bf1312f26b56a85}\label{classTang_1_1Program_aabcfee07409be5bc6bf1312f26b56a85}} 
 \index{Tang::Program@{Tang::Program}!setFunctionStackDeclaration@{setFunctionStackDeclaration}}
 \index{setFunctionStackDeclaration@{setFunctionStackDeclaration}!Tang::Program@{Tang::Program}}

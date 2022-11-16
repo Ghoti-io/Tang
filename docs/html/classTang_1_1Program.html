@@ -172,6 +172,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a6d8557e55dd1aeb9f6791c7c84528332"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, size_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a6d8557e55dd1aeb9f6791c7c84528332">getStrings</a> () const</td></tr>
 <tr class="memdesc:a6d8557e55dd1aeb9f6791c7c84528332"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the string map of the current environment.  <a href="classTang_1_1Program.html#a6d8557e55dd1aeb9f6791c7c84528332">More...</a><br /></td></tr>
 <tr class="separator:a6d8557e55dd1aeb9f6791c7c84528332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c12ec99486118295496695b50750da9"><td class="memItemLeft" align="right" valign="top"><a id="a5c12ec99486118295496695b50750da9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a5c12ec99486118295496695b50750da9">pushBreakStack</a> ()</td></tr>
+<tr class="memdesc:a5c12ec99486118295496695b50750da9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the <code>break</code> environment stack, so that we can handle nested break-supporting structures. <br /></td></tr>
+<tr class="separator:a5c12ec99486118295496695b50750da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4a0290af40e77c489286303ef73dae3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#ae4a0290af40e77c489286303ef73dae3">addBreak</a> (size_t <a class="el" href="classTang_1_1location.html">location</a>)</td></tr>
+<tr class="memdesc:ae4a0290af40e77c489286303ef73dae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the Bytecode location of a <code>break</code> statement, to be set when the final target is known at a later time.  <a href="classTang_1_1Program.html#ae4a0290af40e77c489286303ef73dae3">More...</a><br /></td></tr>
+<tr class="separator:ae4a0290af40e77c489286303ef73dae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab170cc8217af1ed518b89cf445508d18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#ab170cc8217af1ed518b89cf445508d18">popBreakStack</a> (size_t target)</td></tr>
+<tr class="memdesc:ab170cc8217af1ed518b89cf445508d18"><td class="mdescLeft">&#160;</td><td class="mdescRight">For all <code>continue</code> bytecode locations collected by Tang::addContinue, set the target pc to <code>target</code>.  <a href="classTang_1_1Program.html#ab170cc8217af1ed518b89cf445508d18">More...</a><br /></td></tr>
+<tr class="separator:ab170cc8217af1ed518b89cf445508d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5d2ae23991475e3c8776de0d0a01123"><td class="memItemLeft" align="right" valign="top"><a id="af5d2ae23991475e3c8776de0d0a01123"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#af5d2ae23991475e3c8776de0d0a01123">pushContinueStack</a> ()</td></tr>
+<tr class="memdesc:af5d2ae23991475e3c8776de0d0a01123"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the <code>continue</code> environment stack, so that we can handle nested continue-supporting structures. <br /></td></tr>
+<tr class="separator:af5d2ae23991475e3c8776de0d0a01123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad95d0be274c087ea9361d4b758ae26c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#ad95d0be274c087ea9361d4b758ae26c2">addContinue</a> (size_t <a class="el" href="classTang_1_1location.html">location</a>)</td></tr>
+<tr class="memdesc:ad95d0be274c087ea9361d4b758ae26c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the Bytecode location of a <code>continue</code> statement, to be set when the final target is known at a later time.  <a href="classTang_1_1Program.html#ad95d0be274c087ea9361d4b758ae26c2">More...</a><br /></td></tr>
+<tr class="separator:ad95d0be274c087ea9361d4b758ae26c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a824ad2a83896854f4e528f6c3cc630"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a0a824ad2a83896854f4e528f6c3cc630">popContinueStack</a> (size_t target)</td></tr>
+<tr class="memdesc:a0a824ad2a83896854f4e528f6c3cc630"><td class="mdescLeft">&#160;</td><td class="mdescRight">For all <code>continue</code> bytecode locations collected by Tang::addContinue, set the target pc to <code>target</code>.  <a href="classTang_1_1Program.html#a0a824ad2a83896854f4e528f6c3cc630">More...</a><br /></td></tr>
+<tr class="separator:a0a824ad2a83896854f4e528f6c3cc630"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -255,6 +275,32 @@ std::map&lt; std::string, std::vector&lt; <a class="el" href="macros_8hpp.html#a
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae4a0290af40e77c489286303ef73dae3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4a0290af40e77c489286303ef73dae3">&#9670;&nbsp;</a></span>addBreak()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Program::addBreak </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>location</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add the Bytecode location of a <code>break</code> statement, to be set when the final target is known at a later time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">location</td><td>The offset location of the <code>break</code> bytecode. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a1067d000db48378fa37ff569ffdf7329"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1067d000db48378fa37ff569ffdf7329">&#9670;&nbsp;</a></span>addBytecode()</h2>
 
@@ -279,6 +325,32 @@ std::map&lt; std::string, std::vector&lt; <a class="el" href="macros_8hpp.html#a
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The size of the bytecode structure. </dd></dl>
+
+</div>
+</div>
+<a id="ad95d0be274c087ea9361d4b758ae26c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad95d0be274c087ea9361d4b758ae26c2">&#9670;&nbsp;</a></span>addContinue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Program::addContinue </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>location</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add the Bytecode location of a <code>continue</code> statement, to be set when the final target is known at a later time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">location</td><td>The offset location of the <code>continue</code> bytecode. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -516,6 +588,76 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="ab170cc8217af1ed518b89cf445508d18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab170cc8217af1ed518b89cf445508d18">&#9670;&nbsp;</a></span>popBreakStack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Program::popBreakStack </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>target</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For all <code>continue</code> bytecode locations collected by Tang::addContinue, set the target pc to <code>target</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>The target bytecode offset that the <code>continue</code> should jump to. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTang_1_1Program_ab170cc8217af1ed518b89cf445508d18_cgraph.png" border="0" usemap="#aclassTang_1_1Program_ab170cc8217af1ed518b89cf445508d18_cgraph" alt=""/></div>
+<map name="aclassTang_1_1Program_ab170cc8217af1ed518b89cf445508d18_cgraph" id="aclassTang_1_1Program_ab170cc8217af1ed518b89cf445508d18_cgraph">
+<area shape="rect" title="For all continue bytecode locations collected by Tang::addContinue, set the target pc to target." alt="" coords="5,5,227,32"/>
+<area shape="rect" href="classTang_1_1Program.html#a5da413efe8435cebd927a8be58dcb9be" title="Set the target address of a Jump opcode." alt="" coords="275,5,491,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0a824ad2a83896854f4e528f6c3cc630"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a824ad2a83896854f4e528f6c3cc630">&#9670;&nbsp;</a></span>popContinueStack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Program::popContinueStack </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>target</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For all <code>continue</code> bytecode locations collected by Tang::addContinue, set the target pc to <code>target</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>The target bytecode offset that the <code>continue</code> should jump to. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTang_1_1Program_a0a824ad2a83896854f4e528f6c3cc630_cgraph.png" border="0" usemap="#aclassTang_1_1Program_a0a824ad2a83896854f4e528f6c3cc630_cgraph" alt=""/></div>
+<map name="aclassTang_1_1Program_a0a824ad2a83896854f4e528f6c3cc630_cgraph" id="aclassTang_1_1Program_a0a824ad2a83896854f4e528f6c3cc630_cgraph">
+<area shape="rect" title="For all continue bytecode locations collected by Tang::addContinue, set the target pc to target." alt="" coords="5,5,211,47"/>
+<area shape="rect" href="classTang_1_1Program.html#a5da413efe8435cebd927a8be58dcb9be" title="Set the target address of a Jump opcode." alt="" coords="259,13,475,39"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a3ed3e014d80138d61d545a3ef5fe0a2e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3ed3e014d80138d61d545a3ef5fe0a2e">&#9670;&nbsp;</a></span>pushEnvironment()</h2>
 
@@ -539,6 +681,16 @@ Here is the call graph for this function:</div>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTang_1_1Program_a3ed3e014d80138d61d545a3ef5fe0a2e_cgraph.png" border="0" usemap="#aclassTang_1_1Program_a3ed3e014d80138d61d545a3ef5fe0a2e_cgraph" alt=""/></div>
+<map name="aclassTang_1_1Program_a3ed3e014d80138d61d545a3ef5fe0a2e_cgraph" id="aclassTang_1_1Program_a3ed3e014d80138d61d545a3ef5fe0a2e_cgraph">
+<area shape="rect" title="Create a new compile/execute environment stack entry." alt="" coords="5,46,243,73"/>
+<area shape="rect" href="classTang_1_1Program.html#a5c12ec99486118295496695b50750da9" title="Increase the break environment stack, so that we can handle nested break&#45;supporting structures." alt="" coords="301,5,493,47"/>
+<area shape="rect" href="classTang_1_1Program.html#af5d2ae23991475e3c8776de0d0a01123" title="Increase the continue environment stack, so that we can handle nested continue&#45;supporting structures." alt="" coords="291,71,503,112"/>
+</map>
+</div>
 
 </div>
 </div>

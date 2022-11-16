@@ -15,8 +15,14 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "astNodeBoolean.hpp", "astNodeBoolean_8hpp.html", [
       [ "AstNodeBoolean", "classTang_1_1AstNodeBoolean.html", "classTang_1_1AstNodeBoolean" ]
     ] ],
+    [ "astNodeBreak.hpp", "astNodeBreak_8hpp.html", [
+      [ "AstNodeBreak", "classTang_1_1AstNodeBreak.html", "classTang_1_1AstNodeBreak" ]
+    ] ],
     [ "astNodeCast.hpp", "astNodeCast_8hpp.html", [
       [ "AstNodeCast", "classTang_1_1AstNodeCast.html", "classTang_1_1AstNodeCast" ]
+    ] ],
+    [ "astNodeContinue.hpp", "astNodeContinue_8hpp.html", [
+      [ "AstNodeContinue", "classTang_1_1AstNodeContinue.html", "classTang_1_1AstNodeContinue" ]
     ] ],
     [ "astNodeDoWhile.hpp", "astNodeDoWhile_8hpp.html", [
       [ "AstNodeDoWhile", "classTang_1_1AstNodeDoWhile.html", "classTang_1_1AstNodeDoWhile" ]
