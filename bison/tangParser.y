@@ -100,6 +100,8 @@
 %token OR "||"
 %token LBRACE "{"
 %token RBRACE "}"
+%token LBRACKET "["
+%token RBRACKET "]"
 %token IF "if"
 %token ELSE "else"
 %token DO "do"
@@ -126,7 +128,7 @@
 %type <std::shared_ptr<Tang::AstNode>> expression
 %type <std::vector<std::shared_ptr<Tang::AstNode>>> statements
 %type <std::vector<std::string>> functionDeclarationArguments
-%type <std::vector<std::shared_ptr<Tang::AstNode>>> functionArguments
+%type <std::vector<std::shared_ptr<Tang::AstNode>>> expressionList
 %type <std::shared_ptr<Tang::AstNode>> statement
 %type <std::shared_ptr<Tang::AstNode>> codeBlock
 %type <std::shared_ptr<Tang::AstNode>> openStatement
@@ -147,7 +149,7 @@
 %left "+" "-"
 %left "*" "/" "%"
 %right UMINUS AS "!"
-%left "(" ")"
+%left "(" ")" "[" "]"
 
 // Code sections.
 // https://www.gnu.org/software/bison/manual/bison.html#g_t_0025code-Summary
@@ -168,12 +170,14 @@ namespace Tang {
 #include "tangParser.hpp"
 #include "location.hh"
 #include "astNodeUnary.hpp"
+#include "astNodeArray.hpp"
 #include "astNodeAssign.hpp"
 #include "astNodeBinary.hpp"
 #include "astNodeBreak.hpp"
 #include "astNodeContinue.hpp"
 #include "astNodeFloat.hpp"
 #include "astNodeIdentifier.hpp"
+#include "astNodeIndex.hpp"
 #include "astNodeInteger.hpp"
 #include "astNodeBoolean.hpp"
 #include "astNodeString.hpp"
@@ -248,7 +252,7 @@ functionDeclarationArguments
 
 // `functionArguments` is a comma-separated list of expressions given as part
 // of a function call.
-functionArguments
+expressionList
   : %empty
     {
       $$ = std::vector<std::shared_ptr<Tang::AstNode>>{};
@@ -257,7 +261,7 @@ functionArguments
     {
       $$ = std::vector<std::shared_ptr<Tang::AstNode>>{$1};
     }
-  | functionArguments "," expression
+  | expressionList "," expression
     {
       $1.push_back($3);
       $$ = $1;
@@ -479,7 +483,15 @@ expression
     {
       $$ = std::make_shared<AstNodePrint>(AstNodePrint::Default, $3, @1);
     }
-  | expression "(" functionArguments ")"
+  |  "[" expressionList "]"
+    {
+      $$ = std::make_shared<AstNodeArray>($2, @1);
+    }
+  | expression "[" expression "]"
+    {
+      $$ = std::make_shared<AstNodeIndex>($1, $3, @1);
+    }
+  | expression "(" expressionList ")"
     {
       $$ = std::make_shared<AstNodeFunctionCall>($1, $3, @1);
     }

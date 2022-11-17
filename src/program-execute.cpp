@@ -12,6 +12,7 @@
 #include "computedExpressionFloat.hpp"
 #include "computedExpressionBoolean.hpp"
 #include "computedExpressionString.hpp"
+#include "computedExpressionArray.hpp"
 #include "computedExpressionCompiledFunction.hpp"
 
 using namespace std;
@@ -169,6 +170,22 @@ Program& Program::execute() {
         pc += bytes + 2;
         break;
       }
+      case Opcode::ARRAY: {
+        EXECUTEPROGRAMCHECK(1);
+        auto size = this->bytecode[pc + 1];
+        STACKCHECK(size);
+        vector<GarbageCollected> contents;
+        contents.reserve(size);
+        for (uinteger_t i = 0; i < size; ++i) {
+          contents.push_back(stack[stack.size() - size + i]);
+        }
+        for (uinteger_t i = 0; i < size; ++i) {
+          stack.pop_back();
+        }
+        stack.push_back(GarbageCollected::make<ComputedExpressionArray>(contents));
+        pc += 2;
+        break;
+      }
       case Opcode::FUNCTION: {
         EXECUTEPROGRAMCHECK(2);
         auto argc = this->bytecode[pc + 1];
@@ -300,6 +317,16 @@ Program& Program::execute() {
         auto lhs = stack.back();
         stack.pop_back();
         stack.push_back(lhs != rhs);
+        ++pc;
+        break;
+      }
+      case Opcode::INDEX: {
+        STACKCHECK(2);
+        auto index = stack.back();
+        stack.pop_back();
+        auto container = stack.back();
+        stack.pop_back();
+        stack.push_back(container->__index(index));
         ++pc;
         break;
       }

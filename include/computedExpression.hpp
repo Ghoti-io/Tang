@@ -156,12 +156,20 @@ namespace Tang {
       virtual GarbageCollected __lessThan(const GarbageCollected & rhs) const;
 
       /**
-       * Perform an equalit test.
+       * Perform an equality test.
        *
        * @param rhs The GarbageCollected value to compare against.
        * @return The result of the the operation.
        */
       virtual GarbageCollected __equal(const GarbageCollected & rhs) const;
+
+      /**
+       * Perform an index operation.
+       *
+       * @param index The index expression provided by the script.
+       * @return The result of the operation.
+       */
+      virtual GarbageCollected __index(const GarbageCollected & index) const;
 
       /**
        * Perform a type cast to integer.

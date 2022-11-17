@@ -7,7 +7,7 @@ GEN_DIR := $(BUILD)/generated
 APP_DIR := $(BUILD)/apps
 TARGET := libtang.so
 INCLUDE := -I include/ -I $(GEN_DIR)/
-LIBOBJECTS := $(OBJ_DIR)/astNode.o $(OBJ_DIR)/astNodeAssign.o $(OBJ_DIR)/astNodeBinary.o $(OBJ_DIR)/astNodeBlock.o $(OBJ_DIR)/astNodeBoolean.o $(OBJ_DIR)/astNodeBreak.o $(OBJ_DIR)/astNodeCast.o $(OBJ_DIR)/astNodeContinue.o $(OBJ_DIR)/astNodeDoWhile.o $(OBJ_DIR)/astNodeFor.o $(OBJ_DIR)/astNodeFunctionCall.o $(OBJ_DIR)/astNodeFunctionDeclaration.o $(OBJ_DIR)/astNodeIfElse.o $(OBJ_DIR)/astNodeFloat.o $(OBJ_DIR)/astNodeIdentifier.o $(OBJ_DIR)/astNodeInteger.o $(OBJ_DIR)/astNodePrint.o $(OBJ_DIR)/astNodeReturn.o $(OBJ_DIR)/astNodeString.o $(OBJ_DIR)/astNodeTernary.o $(OBJ_DIR)/astNodeUnary.o $(OBJ_DIR)/astNodeWhile.o $(OBJ_DIR)/computedExpression.o $(OBJ_DIR)/computedExpressionBoolean.o $(OBJ_DIR)/computedExpressionCompiledFunction.o $(OBJ_DIR)/computedExpressionFloat.o $(OBJ_DIR)/computedExpressionInteger.o $(OBJ_DIR)/computedExpressionError.o $(OBJ_DIR)/computedExpressionString.o $(OBJ_DIR)/error.o $(OBJ_DIR)/garbageCollected.o $(OBJ_DIR)/program.o $(OBJ_DIR)/program-dumpBytecode.o  $(OBJ_DIR)/program-execute.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o
+LIBOBJECTS := $(OBJ_DIR)/astNode.o $(OBJ_DIR)/astNodeArray.o $(OBJ_DIR)/astNodeAssign.o $(OBJ_DIR)/astNodeBinary.o $(OBJ_DIR)/astNodeBlock.o $(OBJ_DIR)/astNodeBoolean.o $(OBJ_DIR)/astNodeBreak.o $(OBJ_DIR)/astNodeCast.o $(OBJ_DIR)/astNodeContinue.o $(OBJ_DIR)/astNodeDoWhile.o $(OBJ_DIR)/astNodeFor.o $(OBJ_DIR)/astNodeFunctionCall.o $(OBJ_DIR)/astNodeFunctionDeclaration.o $(OBJ_DIR)/astNodeIfElse.o $(OBJ_DIR)/astNodeIndex.o $(OBJ_DIR)/astNodeFloat.o $(OBJ_DIR)/astNodeIdentifier.o $(OBJ_DIR)/astNodeInteger.o $(OBJ_DIR)/astNodePrint.o $(OBJ_DIR)/astNodeReturn.o $(OBJ_DIR)/astNodeString.o $(OBJ_DIR)/astNodeTernary.o $(OBJ_DIR)/astNodeUnary.o $(OBJ_DIR)/astNodeWhile.o $(OBJ_DIR)/computedExpression.o $(OBJ_DIR)/computedExpressionArray.o $(OBJ_DIR)/computedExpressionBoolean.o $(OBJ_DIR)/computedExpressionCompiledFunction.o $(OBJ_DIR)/computedExpressionFloat.o $(OBJ_DIR)/computedExpressionInteger.o $(OBJ_DIR)/computedExpressionError.o $(OBJ_DIR)/computedExpressionString.o $(OBJ_DIR)/error.o $(OBJ_DIR)/garbageCollected.o $(OBJ_DIR)/program.o $(OBJ_DIR)/program-dumpBytecode.o  $(OBJ_DIR)/program-execute.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o
 TESTFLAGS := `pkg-config --libs --cflags gtest`
 
 
@@ -48,6 +48,11 @@ $(OBJ_DIR)/astNode.o: src/astNode.cpp include/macros.hpp include/astNode.hpp inc
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
+$(OBJ_DIR)/astNodeArray.o: src/astNodeArray.cpp include/macros.hpp include/astNodeArray.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+	@echo "\n### Compiling astNodeArray.o ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
+
 $(OBJ_DIR)/astNodeAssign.o: src/astNodeAssign.cpp include/macros.hpp include/astNodeAssign.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling astNodeAssign.o ###"
 	@mkdir -p $(@D)
@@ -70,6 +75,11 @@ $(OBJ_DIR)/astNodeBoolean.o: src/astNodeBoolean.cpp include/macros.hpp include/a
 
 $(OBJ_DIR)/astNodeBreak.o: src/astNodeBreak.cpp include/macros.hpp include/astNodeBreak.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling astNodeBreak.o ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
+
+$(OBJ_DIR)/astNodeIndex.o: src/astNodeIndex.cpp include/macros.hpp include/astNodeIndex.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+	@echo "\n### Compiling astNodeIndex.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
@@ -155,6 +165,11 @@ $(OBJ_DIR)/astNodeIfElse.o: src/astNodeIfElse.cpp include/macros.hpp include/ast
 
 $(OBJ_DIR)/computedExpression.o: src/computedExpression.cpp include/macros.hpp include/computedExpression.hpp include/garbageCollected.hpp
 	@echo "\n### Compiling computedExpression.o ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
+
+$(OBJ_DIR)/computedExpressionArray.o: src/computedExpressionArray.cpp include/macros.hpp include/computedExpressionArray.hpp include/computedExpression.hpp include/error.hpp include/garbageCollected.hpp
+	@echo "\n### Compiling computedExpressionArray.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 

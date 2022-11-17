@@ -41,6 +41,7 @@ namespace Tang {
       virtual GarbageCollected __string() const override;
 
       friend class ComputedExpressionFloat;
+      friend class ComputedExpressionArray;
 
     private:
       /**

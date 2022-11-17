@@ -18,6 +18,8 @@ namespace Tang {
     FLOAT,    ///< Push a floating point number onto the stack
     BOOLEAN,  ///< Push a boolean onto the stack
     STRING,   ///< Get len, char string: push string
+    ARRAY,    ///< Get len, pop `len` items, putting them into an array
+              ///<   with the last array item popped first
     FUNCTION, ///< Get argc, PC#: push function(argc, PC #)
     ADD,      ///< Pop rhs, pop lhs, push lhs + rhs
     SUBTRACT, ///< Pop rhs, pop lhs, push lhs - rhs
@@ -32,6 +34,7 @@ namespace Tang {
     GTE,      ///< Pop rhs, pop lhs, push lhs >= rhs
     EQ,       ///< Pop rhs, pop lhs, push lhs == rhs
     NEQ,      ///< Pop rhs, pop lhs, push lhs != rhs
+    INDEX,    ///< Pop index, pop collection, push collection[index]
     CASTINTEGER, ///< Pop a val, typecast to int, push
     CASTFLOAT,   ///< Pop a val, typecast to float, push
     CASTBOOLEAN, ///< Pop a val, typecast to boolean, push

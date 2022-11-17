@@ -101,6 +101,10 @@ GarbageCollected ComputedExpression::__equal([[maybe_unused]] const GarbageColle
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to compare these values."});
 }
 
+GarbageCollected ComputedExpression::__index([[maybe_unused]] const GarbageCollected & index) const {
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to index this expression."});
+}
+
 GarbageCollected ComputedExpression::__integer() const {
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to cast this value to an integer."});
 }

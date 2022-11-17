@@ -570,6 +570,38 @@ TEST(Expression, Ternary) {
   EXPECT_EQ(*p10.execute().getResult(), (integer_t)1);
 }
 
+TEST(Expression, ArrayIndex) {
+  auto p1 = TangBase().compileScript(R"(
+    a = [1,2,3];
+    print(a[1]);
+  )");
+  EXPECT_EQ(p1.execute().out, "2");
+  auto p2 = TangBase().compileScript(R"(
+    a = [1,2,3];
+    print(a[2]);
+  )");
+  EXPECT_EQ(p2.execute().out, "3");
+  auto p3 = TangBase().compileScript(R"(
+    [1,2,3][1]
+  )");
+  EXPECT_EQ(*p3.execute().getResult(), 2);
+  auto p4 = TangBase().compileScript(R"(
+    [1,2,3][4]
+  )");
+  EXPECT_EQ(*p4.execute().getResult(), Error{"Index out of range."});
+  auto p5 = TangBase().compileScript(R"(
+    [1,2,3][-3]
+  )");
+  EXPECT_EQ(*p5.execute().getResult(), Error{"Index out of range."});
+  auto p6 = TangBase().compileScript(R"(
+    a = [1,"a",1.5];
+    print(a[0]);
+    print(a[1]);
+    print(a[2]);
+  )");
+  EXPECT_EQ(p6.execute().out, "1a1.500000");
+}
+
 TEST(CodeBlock, Statements) {
   auto p1 = TangBase().compileScript("2;");
   EXPECT_EQ(*p1.execute().getResult(), (integer_t)2);

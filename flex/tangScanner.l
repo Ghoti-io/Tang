@@ -194,6 +194,12 @@ using namespace std;
   \} {
     return Tang::TangParser::make_RBRACE(Tang::location(location));
   }
+  \[ {
+    return Tang::TangParser::make_LBRACKET(Tang::location(location));
+  }
+  \] {
+    return Tang::TangParser::make_RBRACKET(Tang::location(location));
+  }
   \! {
     return Tang::TangParser::make_EXCLAMATIONPOINT(Tang::location(location));
   }
