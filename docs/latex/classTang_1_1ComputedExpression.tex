@@ -58,7 +58,9 @@ virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mb
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_a7ac5773e7e1c7f4b7c7f8dcd29bfa00b}{\+\_\+\+\_\+less\+Than}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const
 \begin{DoxyCompactList}\small\item\em Compute the \char`\"{}less than\char`\"{} comparison. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_aa6e3a065c2d0dfcde5e2eaefa26f7606}{\+\_\+\+\_\+equal}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const
-\begin{DoxyCompactList}\small\item\em Perform an equalit test. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Perform an equality test. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_abb6defbdb303825687da1bd1468e6133}{\+\_\+\+\_\+index}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&index) const
+\begin{DoxyCompactList}\small\item\em Perform an index operation. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_aa9bebad41df630a98cec2565b0aeda89}{\+\_\+\+\_\+integer}} () const
 \begin{DoxyCompactList}\small\item\em Perform a type cast to integer. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_aa91f27a9f03b9a7fb9aa5a79efc3039f}{\+\_\+\+\_\+float}} () const
@@ -144,7 +146,7 @@ Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_aeca0b7
 
 
 
-Perform an equalit test. 
+Perform an equality test. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -174,6 +176,28 @@ The result of the the operation.
 
 
 Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a4bbe91963e21fd8319b94a7b43a1e26e}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a891a448c4b19eb52499f4be7d02b663a}{Tang\+::\+Computed\+Expression\+Float}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a62c448dad7b0e05a7a2d8a1b00f8b5e8}{Tang\+::\+Computed\+Expression\+Error}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionBoolean_ad9d88a48be735d59258c989399b143c7}{Tang\+::\+Computed\+Expression\+Boolean}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_abb6defbdb303825687da1bd1468e6133}\label{classTang_1_1ComputedExpression_abb6defbdb303825687da1bd1468e6133}} 
+\index{Tang::ComputedExpression@{Tang::ComputedExpression}!\_\_index@{\_\_index}}
+\index{\_\_index@{\_\_index}!Tang::ComputedExpression@{Tang::ComputedExpression}}
+\doxysubsubsection{\texorpdfstring{\_\_index()}{\_\_index()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Perform an index operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index expression provided by the script. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_abbaae671ad9e9bb47b0b0925828b2b6b}{Tang\+::\+Computed\+Expression\+Array}}.
 
 \mbox{\Hypertarget{classTang_1_1ComputedExpression_aa9bebad41df630a98cec2565b0aeda89}\label{classTang_1_1ComputedExpression_aa9bebad41df630a98cec2565b0aeda89}} 
 \index{Tang::ComputedExpression@{Tang::ComputedExpression}!\_\_integer@{\_\_integer}}
@@ -346,7 +370,7 @@ A string representation of the computed expression.
 \end{DoxyReturn}
 
 
-Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionString_a97bdb82b5f4cf5b99a2819b93d7ac047}{Tang\+::\+Computed\+Expression\+String}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a02e4a8bba8b37bf02e5ec3fd1e25f094}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a327db49914ba138b70c2403ebf609635}{Tang\+::\+Computed\+Expression\+Float}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionError_aac021c475141ea7155f7576d2ffba906}{Tang\+::\+Computed\+Expression\+Error}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionCompiledFunction_a4e05ff27919a036d48e1433cacf6fabd}{Tang\+::\+Computed\+Expression\+Compiled\+Function}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionBoolean_a0910cd4800443ec70f6888cf563fbe57}{Tang\+::\+Computed\+Expression\+Boolean}}.
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionString_a97bdb82b5f4cf5b99a2819b93d7ac047}{Tang\+::\+Computed\+Expression\+String}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a02e4a8bba8b37bf02e5ec3fd1e25f094}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a327db49914ba138b70c2403ebf609635}{Tang\+::\+Computed\+Expression\+Float}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionError_aac021c475141ea7155f7576d2ffba906}{Tang\+::\+Computed\+Expression\+Error}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionCompiledFunction_a4e05ff27919a036d48e1433cacf6fabd}{Tang\+::\+Computed\+Expression\+Compiled\+Function}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionBoolean_a0910cd4800443ec70f6888cf563fbe57}{Tang\+::\+Computed\+Expression\+Boolean}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_ad357fa1d16656eabe1593ba2a1bfd410}{Tang\+::\+Computed\+Expression\+Array}}.
 
 \mbox{\Hypertarget{classTang_1_1ComputedExpression_a907104a9d090d21e9bcc487b696738c4}\label{classTang_1_1ComputedExpression_a907104a9d090d21e9bcc487b696738c4}} 
 \index{Tang::ComputedExpression@{Tang::ComputedExpression}!is\_equal@{is\_equal}}
@@ -491,7 +515,7 @@ A \mbox{\hyperlink{classTang_1_1GarbageCollected}{Tang\+::\+Garbage\+Collected}}
 \end{DoxyReturn}
 
 
-Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionString_aa424ab2f196af728a8810fc7ed188f7c}{Tang\+::\+Computed\+Expression\+String}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a9e1b2e88d3c6574177f291563dd45262}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a40135f884be9c81a5163b2c45024b498}{Tang\+::\+Computed\+Expression\+Float}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a3600a4bb5e62c5599abe8226fe06d887}{Tang\+::\+Computed\+Expression\+Error}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionCompiledFunction_a31488d210df3af50b359261405438d4c}{Tang\+::\+Computed\+Expression\+Compiled\+Function}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionBoolean_aaddd6846e22a48cc1531731cef64a678}{Tang\+::\+Computed\+Expression\+Boolean}}.
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionString_aa424ab2f196af728a8810fc7ed188f7c}{Tang\+::\+Computed\+Expression\+String}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a9e1b2e88d3c6574177f291563dd45262}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a40135f884be9c81a5163b2c45024b498}{Tang\+::\+Computed\+Expression\+Float}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a3600a4bb5e62c5599abe8226fe06d887}{Tang\+::\+Computed\+Expression\+Error}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionCompiledFunction_a31488d210df3af50b359261405438d4c}{Tang\+::\+Computed\+Expression\+Compiled\+Function}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionBoolean_aaddd6846e22a48cc1531731cef64a678}{Tang\+::\+Computed\+Expression\+Boolean}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_a0497225dfbc07a35cfec251a37b902d5}{Tang\+::\+Computed\+Expression\+Array}}.
 
 
 

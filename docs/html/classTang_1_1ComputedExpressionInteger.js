@@ -6,6 +6,7 @@ var classTang_1_1ComputedExpressionInteger =
     [ "__divide", "classTang_1_1ComputedExpressionInteger.html#aeca0b7af9ecd1c64f0e72afb7bbd4ff7", null ],
     [ "__equal", "classTang_1_1ComputedExpressionInteger.html#a482daf778794d505964d7adb24bc97e3", null ],
     [ "__float", "classTang_1_1ComputedExpressionInteger.html#a4bbe91963e21fd8319b94a7b43a1e26e", null ],
+    [ "__index", "classTang_1_1ComputedExpressionInteger.html#abb6defbdb303825687da1bd1468e6133", null ],
     [ "__integer", "classTang_1_1ComputedExpressionInteger.html#ac8f2123e3efec72df3dc6d62b74c78b6", null ],
     [ "__lessThan", "classTang_1_1ComputedExpressionInteger.html#a6ca18e4d07780ca7d8d1568f59cf358c", null ],
     [ "__modulo", "classTang_1_1ComputedExpressionInteger.html#a959280a4da43a81276ef8ab658eb9015", null ],
@@ -22,5 +23,6 @@ var classTang_1_1ComputedExpressionInteger =
     [ "is_equal", "classTang_1_1ComputedExpressionInteger.html#a651bd760d2ee60e63455fb5944ad4f14", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionInteger.html#ac39abf9bc79248b475d2e865331b6453", null ],
     [ "makeCopy", "classTang_1_1ComputedExpressionInteger.html#a9e1b2e88d3c6574177f291563dd45262", null ],
+    [ "ComputedExpressionArray", "classTang_1_1ComputedExpressionInteger.html#aec75e4d586e9025ffefa6f1f55616203", null ],
     [ "ComputedExpressionFloat", "classTang_1_1ComputedExpressionInteger.html#a70c09fb5e8df4b7f242567bd7d085785", null ]
 ];

@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "Tang::AstNode", "classTang_1_1AstNode.html", [
+      [ "Tang::AstNodeArray", "classTang_1_1AstNodeArray.html", null ],
       [ "Tang::AstNodeAssign", "classTang_1_1AstNodeAssign.html", null ],
       [ "Tang::AstNodeBinary", "classTang_1_1AstNodeBinary.html", null ],
       [ "Tang::AstNodeBlock", "classTang_1_1AstNodeBlock.html", null ],
@@ -15,6 +16,7 @@ var hierarchy =
       [ "Tang::AstNodeFunctionDeclaration", "classTang_1_1AstNodeFunctionDeclaration.html", null ],
       [ "Tang::AstNodeIdentifier", "classTang_1_1AstNodeIdentifier.html", null ],
       [ "Tang::AstNodeIfElse", "classTang_1_1AstNodeIfElse.html", null ],
+      [ "Tang::AstNodeIndex", "classTang_1_1AstNodeIndex.html", null ],
       [ "Tang::AstNodeInteger", "classTang_1_1AstNodeInteger.html", null ],
       [ "Tang::AstNodePrint", "classTang_1_1AstNodePrint.html", null ],
       [ "Tang::AstNodeReturn", "classTang_1_1AstNodeReturn.html", null ],
@@ -24,6 +26,7 @@ var hierarchy =
       [ "Tang::AstNodeWhile", "classTang_1_1AstNodeWhile.html", null ]
     ] ],
     [ "Tang::ComputedExpression", "classTang_1_1ComputedExpression.html", [
+      [ "Tang::ComputedExpressionArray", "classTang_1_1ComputedExpressionArray.html", null ],
       [ "Tang::ComputedExpressionBoolean", "classTang_1_1ComputedExpressionBoolean.html", null ],
       [ "Tang::ComputedExpressionCompiledFunction", "classTang_1_1ComputedExpressionCompiledFunction.html", null ],
       [ "Tang::ComputedExpressionError", "classTang_1_1ComputedExpressionError.html", null ],

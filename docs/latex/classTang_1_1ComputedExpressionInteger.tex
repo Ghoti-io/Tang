@@ -61,7 +61,7 @@ virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mb
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a6ca18e4d07780ca7d8d1568f59cf358c}{\+\_\+\+\_\+less\+Than}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const override
 \begin{DoxyCompactList}\small\item\em Compute the \char`\"{}less than\char`\"{} comparison. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a482daf778794d505964d7adb24bc97e3}{\+\_\+\+\_\+equal}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const override
-\begin{DoxyCompactList}\small\item\em Perform an equalit test. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Perform an equality test. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ac8f2123e3efec72df3dc6d62b74c78b6}{\+\_\+\+\_\+integer}} () const override
 \begin{DoxyCompactList}\small\item\em Perform a type cast to integer. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a4bbe91963e21fd8319b94a7b43a1e26e}{\+\_\+\+\_\+float}} () const override
@@ -75,12 +75,17 @@ virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a726aea52e0773883f
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a5ce6d4bc0128f6aadf72c2f63a70275a}{is\+\_\+equal}} (const \mbox{\hyperlink{classTang_1_1Error}{Error}} \&val) const
 \begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a5287fabf86f19613afb04d5e285c0231}{is\+\_\+equal}} (const std\+::nullptr\+\_\+t \&val) const
-\begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_abb6defbdb303825687da1bd1468e6133}{\+\_\+\+\_\+index}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&index) const
+\begin{DoxyCompactList}\small\item\em Perform an index operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a70c09fb5e8df4b7f242567bd7d085785}\label{classTang_1_1ComputedExpressionInteger_a70c09fb5e8df4b7f242567bd7d085785}} 
 class {\bfseries Computed\+Expression\+Float}
+\item 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_aec75e4d586e9025ffefa6f1f55616203}\label{classTang_1_1ComputedExpressionInteger_aec75e4d586e9025ffefa6f1f55616203}} 
+class {\bfseries Computed\+Expression\+Array}
 \end{DoxyCompactItemize}
 
 
@@ -175,7 +180,7 @@ Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_abb35e0328da
 
 
 
-Perform an equalit test. 
+Perform an equality test. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -205,6 +210,28 @@ The result of the the operation.
 
 
 Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_aa91f27a9f03b9a7fb9aa5a79efc3039f}{Tang\+::\+Computed\+Expression}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_abb6defbdb303825687da1bd1468e6133}\label{classTang_1_1ComputedExpression_abb6defbdb303825687da1bd1468e6133}} 
+\index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_index@{\_\_index}}
+\index{\_\_index@{\_\_index}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
+\doxysubsubsection{\texorpdfstring{\_\_index()}{\_\_index()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Perform an index operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index expression provided by the script. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_abbaae671ad9e9bb47b0b0925828b2b6b}{Tang\+::\+Computed\+Expression\+Array}}.
 
 \mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_ac8f2123e3efec72df3dc6d62b74c78b6}\label{classTang_1_1ComputedExpressionInteger_ac8f2123e3efec72df3dc6d62b74c78b6}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_integer@{\_\_integer}}

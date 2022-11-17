@@ -153,7 +153,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a5789d84d94cacf70ed9c2bf350549b67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the "less than" comparison.  <a href="classTang_1_1ComputedExpressionError.html#a5789d84d94cacf70ed9c2bf350549b67">More...</a><br /></td></tr>
 <tr class="separator:a5789d84d94cacf70ed9c2bf350549b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fd54da21ee14fd6368721685e1ecb51"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionError.html#a5fd54da21ee14fd6368721685e1ecb51">__equal</a> (const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;rhs) const override</td></tr>
-<tr class="memdesc:a5fd54da21ee14fd6368721685e1ecb51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform an equalit test.  <a href="classTang_1_1ComputedExpressionError.html#a5fd54da21ee14fd6368721685e1ecb51">More...</a><br /></td></tr>
+<tr class="memdesc:a5fd54da21ee14fd6368721685e1ecb51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform an equality test.  <a href="classTang_1_1ComputedExpressionError.html#a5fd54da21ee14fd6368721685e1ecb51">More...</a><br /></td></tr>
 <tr class="separator:a5fd54da21ee14fd6368721685e1ecb51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70ad36b76c0ec73b98e50ed9738d0646"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionError.html#a70ad36b76c0ec73b98e50ed9738d0646">__integer</a> () const override</td></tr>
 <tr class="memdesc:a70ad36b76c0ec73b98e50ed9738d0646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a type cast to integer.  <a href="classTang_1_1ComputedExpressionError.html#a70ad36b76c0ec73b98e50ed9738d0646">More...</a><br /></td></tr>
@@ -182,6 +182,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5287fabf86f19613afb04d5e285c0231"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpression.html#a5287fabf86f19613afb04d5e285c0231">is_equal</a> (const std::nullptr_t &amp;val) const</td></tr>
 <tr class="memdesc:a5287fabf86f19613afb04d5e285c0231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether or not the computed expression is equal to another value.  <a href="classTang_1_1ComputedExpression.html#a5287fabf86f19613afb04d5e285c0231">More...</a><br /></td></tr>
 <tr class="separator:a5287fabf86f19613afb04d5e285c0231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb6defbdb303825687da1bd1468e6133"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpression.html#abb6defbdb303825687da1bd1468e6133">__index</a> (const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;index) const</td></tr>
+<tr class="memdesc:abb6defbdb303825687da1bd1468e6133"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform an index operation.  <a href="classTang_1_1ComputedExpression.html#abb6defbdb303825687da1bd1468e6133">More...</a><br /></td></tr>
+<tr class="separator:abb6defbdb303825687da1bd1468e6133"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a Runtime <a class="el" href="classTang_1_1Error.html" title="The Error class is used to report any error of the system, whether a syntax (parsing) error or a runt...">Error</a>. </p>
@@ -341,7 +344,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Perform an equalit test. </p>
+<p>Perform an equality test. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rhs</td><td>The <a class="el" href="classTang_1_1GarbageCollected.html" title="A container that acts as a resource-counting garbage collector for the specified type.">GarbageCollected</a> value to compare against. </td></tr>
@@ -381,6 +384,43 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The result of the the operation. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#aa91f27a9f03b9a7fb9aa5a79efc3039f">Tang::ComputedExpression</a>.</p>
+
+</div>
+</div>
+<a id="abb6defbdb303825687da1bd1468e6133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb6defbdb303825687da1bd1468e6133">&#9670;&nbsp;</a></span>__index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> ComputedExpression::__index </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Perform an index operation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The index expression provided by the script. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result of the operation. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classTang_1_1ComputedExpressionArray.html#abbaae671ad9e9bb47b0b0925828b2b6b">Tang::ComputedExpressionArray</a>.</p>
 
 </div>
 </div>
