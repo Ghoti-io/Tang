@@ -31,7 +31,6 @@
 //
 //
 // TODO What's next:
-// * continue and break
 // * TangString
 //   * ICU compiling in
 //   * Graphemes & string length
