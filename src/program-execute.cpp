@@ -194,6 +194,18 @@ Program& Program::execute() {
         pc += 3;
         break;
       }
+      case Opcode::ASSIGNINDEX: {
+        STACKCHECK(3);
+        auto index = stack.back();
+        stack.pop_back();
+        auto collection = stack.back();
+        stack.pop_back();
+        auto value = stack.back();
+        stack.pop_back();
+        stack.push_back(collection->__assign_index(index, value));
+        ++pc;
+        break;
+      }
       case Opcode::ADD: {
         STACKCHECK(2);
         auto rhs = stack.back();

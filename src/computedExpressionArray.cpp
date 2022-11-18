@@ -45,3 +45,15 @@ GarbageCollected ComputedExpressionArray::__index(const GarbageCollected & index
   return GarbageCollected::make<ComputedExpressionError>(Error{"Invalid index value."});
 }
 
+GarbageCollected ComputedExpressionArray::__assign_index(const GarbageCollected & index, const GarbageCollected & value) {
+  if (typeid(*index) == typeid(ComputedExpressionInteger)) {
+    auto & indexConv = static_cast<ComputedExpressionInteger&>(*index);
+    auto i = indexConv.val;
+    return (i >= 0) && (i < (integer_t)this->contents.size())
+      ? (this->contents[i] = value)
+      : GarbageCollected::make<ComputedExpressionError>(Error{"Index out of range."});
+  }
+
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to assign this value to the index location."});
+}
+

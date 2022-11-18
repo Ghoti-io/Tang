@@ -21,6 +21,8 @@ namespace Tang {
     ARRAY,    ///< Get len, pop `len` items, putting them into an array
               ///<   with the last array item popped first
     FUNCTION, ///< Get argc, PC#: push function(argc, PC #)
+    ASSIGNINDEX, ///< Pop index, pop collection, pop value,
+                 ///<   push (collection[index] = value)
     ADD,      ///< Pop rhs, pop lhs, push lhs + rhs
     SUBTRACT, ///< Pop rhs, pop lhs, push lhs - rhs
     MULTIPLY, ///< Pop rhs, pop lhs, push lhs * rhs

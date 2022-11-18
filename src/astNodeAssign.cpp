@@ -6,6 +6,7 @@
 #include <string>
 #include "astNodeAssign.hpp"
 #include "astNodeIdentifier.hpp"
+#include "astNodeIndex.hpp"
 #include "opcode.hpp"
 
 using namespace std;
@@ -38,6 +39,12 @@ void AstNodeAssign::compile(Tang::Program & program) const {
       program.addBytecode((uinteger_t)Opcode::POKE);
       program.addBytecode((uinteger_t)identifier.at(lhsConv.name));
     }
+  }
+  if (typeid(*this->lhs) == typeid(AstNodeIndex)) {
+    auto & lhsConv = static_cast<AstNodeIndex&>(*this->lhs);
+    lhsConv.getCollection()->compile(program);
+    lhsConv.getIndex()->compile(program);
+    program.addBytecode((uinteger_t)Opcode::ASSIGNINDEX);
   }
 }
 

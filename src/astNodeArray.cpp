@@ -16,7 +16,7 @@ string AstNodeArray::dump(string indent) const {
   string s = indent + "Array (" + to_string(this->contents.size()) + " items):\n";
   int i = 0; 
   for (auto & item : this->contents) {
-    s += item->dump(indent + to_string(i++) + " ");
+    s += item->dump(indent + "  " + to_string(i++) + " ");
   }
   return s; 
 }

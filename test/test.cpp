@@ -620,6 +620,42 @@ TEST(Assign, Identifier) {
   EXPECT_EQ(*p3.execute().getResult(), (integer_t)2);
 }
 
+TEST(Assign, Index) {
+  {
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3];
+      a[4] = "foo";
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), Error{"Index out of range."});
+  }
+  {
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3];
+      print(a[0]);
+      print(a[1]);
+      print(a[2]);
+      a[1] = "foo";
+      print(a[0]);
+      print(a[1]);
+      print(a[2]);
+    )");
+    EXPECT_EQ(p1.execute().out, "1231foo3");
+  }
+  {
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3];
+      print(a[0]);
+      print(a[1]);
+      print(a[2]);
+      a[4] = "foo";
+      print(a[0]);
+      print(a[1]);
+      print(a[2]);
+    )");
+    EXPECT_EQ(p1.execute().out, "123123");
+  }
+}
+
 TEST(ControlFlow, IfElse) {
   auto p1 = TangBase().compileScript("a = 1; if (true) a = 2; a;");
   EXPECT_EQ(*p1.execute().getResult(), (integer_t)2);

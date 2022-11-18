@@ -56,6 +56,10 @@ bool ComputedExpression::is_equal([[maybe_unused]] const Error & val) const {
   return false;
 }
 
+GarbageCollected ComputedExpression::__assign_index([[maybe_unused]] const GarbageCollected & index, [[maybe_unused]] const GarbageCollected & value) {
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to assign this value to the index location."});
+}
+
 GarbageCollected ComputedExpression::__add([[maybe_unused]] const GarbageCollected & rhs) const {
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to add these values."});
 }

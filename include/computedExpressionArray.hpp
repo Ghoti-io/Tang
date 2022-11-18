@@ -25,6 +25,7 @@ namespace Tang {
       virtual std::string dump() const override;
       GarbageCollected makeCopy() const override;
       virtual GarbageCollected __index(const GarbageCollected & index) const override;
+      virtual GarbageCollected __assign_index(const GarbageCollected & index, const GarbageCollected & value) override;
 
     private:
       /**

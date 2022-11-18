@@ -32,3 +32,11 @@ void AstNodeIndex::compile(Tang::Program & program) const {
   program.addBytecode((uinteger_t)Opcode::INDEX);
 }
 
+const std::shared_ptr<const AstNode> AstNodeIndex::getCollection() const {
+  return this->collection;
+}
+
+const std::shared_ptr<const AstNode> AstNodeIndex::getIndex() const {
+  return this->index;
+}
+

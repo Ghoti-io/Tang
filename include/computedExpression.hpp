@@ -94,6 +94,15 @@ namespace Tang {
       virtual bool is_equal(const std::nullptr_t & val) const;
 
       /**
+       * Perform an index assignment to the supplied value.
+       *
+       * @param index The index to which the value should be applied.
+       * @param value The value to store.
+       * @return The result of the operation.
+       */
+      virtual GarbageCollected __assign_index(const GarbageCollected & index, const GarbageCollected & value);
+
+      /**
        * Compute the result of adding this value and the supplied value.
        *
        * @param rhs The GarbageCollected value to add to this.

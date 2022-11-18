@@ -135,6 +135,11 @@ string Program::dumpBytecode() const {
         pc += 3;
         break;
       }
+      case Opcode::ASSIGNINDEX: {
+        out << "ASSIGNINDEX";
+        ++pc;
+        break;
+      }
       case Opcode::ADD: {
         out << "ADD";
         ++pc;

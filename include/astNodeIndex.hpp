@@ -27,16 +27,30 @@ namespace Tang {
     virtual void compile(Tang::Program & program) const override;
     virtual void compilePreprocess(Program & program) const override;
 
+    /**
+     * Return a shared pointer to the AstNode serving as the Collection.
+     *
+     * @return The collection into which we will index.
+     */
+    const std::shared_ptr<const AstNode> getCollection() const;
+
+    /**
+     * Return a shared pointer to the AstNode serving as the Index.
+     *
+     * @return The index expression.
+     */
+    const std::shared_ptr<const AstNode> getIndex() const;
+
   private:
     /**
      * The collection into which we will index.
      */
-    shared_ptr<AstNode> collection;
+    std::shared_ptr<AstNode> collection;
 
     /**
      * The index expression.
      */
-    shared_ptr<AstNode> index;
+    std::shared_ptr<AstNode> index;
   };
 }
 
