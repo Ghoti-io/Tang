@@ -128,6 +128,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aef22566a0be856eec3bf77ad89c59551"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeIndex.html#aef22566a0be856eec3bf77ad89c59551">compilePreprocess</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program) const override</td></tr>
 <tr class="memdesc:aef22566a0be856eec3bf77ad89c59551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run any preprocess analysis needed before compilation.  <a href="classTang_1_1AstNodeIndex.html#aef22566a0be856eec3bf77ad89c59551">More...</a><br /></td></tr>
 <tr class="separator:aef22566a0be856eec3bf77ad89c59551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a798f4511e81f99f7236ee5dc3e5dbdf6"><td class="memItemLeft" align="right" valign="top">const std::shared_ptr&lt; const <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeIndex.html#a798f4511e81f99f7236ee5dc3e5dbdf6">getCollection</a> () const</td></tr>
+<tr class="memdesc:a798f4511e81f99f7236ee5dc3e5dbdf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a shared pointer to the <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> serving as the Collection.  <a href="classTang_1_1AstNodeIndex.html#a798f4511e81f99f7236ee5dc3e5dbdf6">More...</a><br /></td></tr>
+<tr class="separator:a798f4511e81f99f7236ee5dc3e5dbdf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a406a2bf01f4aaae88bbeef58bc420f2a"><td class="memItemLeft" align="right" valign="top">const std::shared_ptr&lt; const <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeIndex.html#a406a2bf01f4aaae88bbeef58bc420f2a">getIndex</a> () const</td></tr>
+<tr class="memdesc:a406a2bf01f4aaae88bbeef58bc420f2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a shared pointer to the <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> serving as the Index.  <a href="classTang_1_1AstNodeIndex.html#a406a2bf01f4aaae88bbeef58bc420f2a">More...</a><br /></td></tr>
+<tr class="separator:a406a2bf01f4aaae88bbeef58bc420f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that represents an index into a collection. </p>
@@ -292,6 +298,46 @@ Here is the call graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>The value as a string. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classTang_1_1AstNode.html#a9884742e4b32db78c0257d0b0904d05f">Tang::AstNode</a>.</p>
+
+</div>
+</div>
+<a id="a798f4511e81f99f7236ee5dc3e5dbdf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a798f4511e81f99f7236ee5dc3e5dbdf6">&#9670;&nbsp;</a></span>getCollection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::shared_ptr&lt; const <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt; AstNodeIndex::getCollection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return a shared pointer to the <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> serving as the Collection. </p>
+<dl class="section return"><dt>Returns</dt><dd>The collection into which we will index. </dd></dl>
+
+</div>
+</div>
+<a id="a406a2bf01f4aaae88bbeef58bc420f2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a406a2bf01f4aaae88bbeef58bc420f2a">&#9670;&nbsp;</a></span>getIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::shared_ptr&lt; const <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt; AstNodeIndex::getIndex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return a shared pointer to the <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> serving as the Index. </p>
+<dl class="section return"><dt>Returns</dt><dd>The index expression. </dd></dl>
 
 </div>
 </div>

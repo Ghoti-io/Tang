@@ -16,6 +16,7 @@ var opcode_8hpp =
       [ "STRING", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a63b588d5559f64f89a416e656880b949", null ],
       [ "ARRAY", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acb4fb1757fb37c43cded35d3eb857c43", null ],
       [ "FUNCTION", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a6a72a6a776662a244f82d31e9274a07b", null ],
+      [ "ASSIGNINDEX", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ad841b7b2c8fba802dc3425c697d2ee11", null ],
       [ "ADD", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a9eeb52badb613229884838847294b90d", null ],
       [ "SUBTRACT", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a23ebcc4776b613af25dfbe7c8ce4813e", null ],
       [ "MULTIPLY", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a080aaf8d817ada96fca7096b7b55bd30", null ],

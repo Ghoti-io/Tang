@@ -2,6 +2,7 @@ var classTang_1_1ComputedExpressionError =
 [
     [ "ComputedExpressionError", "classTang_1_1ComputedExpressionError.html#a7b664898c4c24b08c22006d2c83d6a73", null ],
     [ "__add", "classTang_1_1ComputedExpressionError.html#a8b592c106cd121e5891d1a1688bc3f5d", null ],
+    [ "__assign_index", "classTang_1_1ComputedExpressionError.html#a011d86ce9b04fca4bef67b4c5bb3324c", null ],
     [ "__boolean", "classTang_1_1ComputedExpressionError.html#abf96315891e13c20cde5ec2767ced85a", null ],
     [ "__divide", "classTang_1_1ComputedExpressionError.html#adc4c05c96d2e53b0e0dbf12381e96848", null ],
     [ "__equal", "classTang_1_1ComputedExpressionError.html#a5fd54da21ee14fd6368721685e1ecb51", null ],
