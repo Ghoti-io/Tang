@@ -28,12 +28,18 @@ string ComputedExpressionArray::dump() const {
   return s;
 }
 
+bool ComputedExpressionArray::isCopyNeeded() const {
+  return true;
+}
+
 GarbageCollected ComputedExpressionArray::makeCopy() const {
   // Make a deep copy of all array elements.
   vector<GarbageCollected> newContents;
   newContents.reserve(this->contents.size());
   for (auto const & item : this->contents) {
-    newContents.push_back(item->makeCopy());
+    newContents.push_back(item->isCopyNeeded()
+      ? item->makeCopy()
+      : item);
   }
   return GarbageCollected::make<ComputedExpressionArray>(newContents);
 }

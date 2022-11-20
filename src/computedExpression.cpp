@@ -21,6 +21,11 @@ string ComputedExpression::dump() const {
     : "UNKNOWN";
 }
 
+bool ComputedExpression::isCopyNeeded() const {
+  // By default, we will not request a copy of this ComputedExpression.
+  return false;
+}
+
 GarbageCollected ComputedExpression::makeCopy() const {
   return GarbageCollected::make<ComputedExpression>();
 }

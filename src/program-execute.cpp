@@ -77,7 +77,10 @@ Program& Program::execute() {
         EXECUTEPROGRAMCHECK(1);
         auto position = this->bytecode[pc + 1];
         STACKCHECK(position);
-        stack[fp + position] = stack[fp + position].makeCopy();
+        auto targetPosition = fp + position;
+        if (stack[targetPosition].isCopyNeeded()) {
+          stack[targetPosition] = stack[targetPosition].makeCopy();
+        }
         pc += 2;
         break;
       }

@@ -82,6 +82,14 @@ namespace Tang {
     ~GarbageCollected();
 
     /**
+     * Determine whether or not a copy is needed as determined by the
+     * referenced ComputedExpression.
+     *
+     * @return Whether or not a copy is needed.
+     */
+    bool isCopyNeeded() const;
+
+    /**
      * Create a separate copy of the original GarbageCollected value.
      *
      * @return A GarbageCollected copy of the original value.

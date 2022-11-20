@@ -39,6 +39,17 @@ namespace Tang {
       virtual std::string dump() const;
 
       /**
+       * Determine whether or not a copy is needed.
+       *
+       * Copying is only required for ComputedExpressions which serve as
+       * containers, such as ComputedExpressionArray and
+       * ComputedExpressionObject.
+       *
+       * @return Whether or not a copy is needed.
+       */
+      virtual bool isCopyNeeded() const;
+
+      /**
        * Make a copy of the ComputedExpression (recursively, if appropriate).
        *
        * @return A Tang::GarbageCollected value for the new ComputedExpression.

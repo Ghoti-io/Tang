@@ -62,6 +62,10 @@ GarbageCollected::~GarbageCollected() {
   }
 }
 
+bool GarbageCollected::isCopyNeeded() const {
+  return this->ref->isCopyNeeded();
+}
+
 GarbageCollected GarbageCollected::makeCopy() const {
   return this->ref->makeCopy();
 }
