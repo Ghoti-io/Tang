@@ -25,5 +25,6 @@ var classTang_1_1ComputedExpressionCompiledFunction =
     [ "is_equal", "classTang_1_1ComputedExpressionCompiledFunction.html#a726aea52e0773883fe628f7d97b608cb", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionCompiledFunction.html#a7265d530e9b32f55d2485a326ab353aa", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionCompiledFunction.html#a76aaf726b67cedb54b6b3c75c834645f", null ],
+    [ "isCopyNeeded", "classTang_1_1ComputedExpressionCompiledFunction.html#a493f58bd7f51ca4d6b9b1ef1860b4370", null ],
     [ "makeCopy", "classTang_1_1ComputedExpressionCompiledFunction.html#a31488d210df3af50b359261405438d4c", null ]
 ];

@@ -21,16 +21,18 @@ Collaboration diagram for Tang\+::Garbage\+Collected\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTang_1_1GarbageCollected_abd846da9657c5dd62841918b27167c66}{Garbage\+Collected}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&other)
+\mbox{\hyperlink{classTang_1_1GarbageCollected_a042b7fed14748d92ae1b41918d06c940}{Garbage\+Collected}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&other)
 \begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classTang_1_1GarbageCollected_af7c251e58e9179e1ca4a3f9b876561be}{Garbage\+Collected}} (\mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&\&other)
+\mbox{\hyperlink{classTang_1_1GarbageCollected_a70fa3f033d243f795d58b1fda5f22549}{Garbage\+Collected}} (\mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&\&other)
 \begin{DoxyCompactList}\small\item\em Move Constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \& \mbox{\hyperlink{classTang_1_1GarbageCollected_ae3c11ed5cee365f7cb47aac9d4094482}{operator=}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&other)
+\mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \& \mbox{\hyperlink{classTang_1_1GarbageCollected_a2736795d97b3e8f540df23fb8b875f91}{operator=}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&other)
 \begin{DoxyCompactList}\small\item\em Copy Assignment. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \& \mbox{\hyperlink{classTang_1_1GarbageCollected_a6354db39b643c1828754ff1fe8856b1a}{operator=}} (\mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&\&other)
+\mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \& \mbox{\hyperlink{classTang_1_1GarbageCollected_a8f63aa5effa5808e68c9c93b495e8b0c}{operator=}} (\mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&\&other)
 \begin{DoxyCompactList}\small\item\em Move Assignment. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classTang_1_1GarbageCollected_a353748f997d200432d22c0ba93ebde6e}{$\sim$\+Garbage\+Collected}} ()
+\mbox{\hyperlink{classTang_1_1GarbageCollected_a5d72132e9f3e34013ca628c0d4b75d82}{$\sim$\+Garbage\+Collected}} ()
 \begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTang_1_1GarbageCollected_a6adade6757881ddcae62271e857d8caf}{is\+Copy\+Needed}} () const
+\begin{DoxyCompactList}\small\item\em Determine whether or not a copy is needed as determined by the referenced \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1GarbageCollected_a638f17396cd75d4110aec78f4b8f63bd}{make\+Copy}} () const
 \begin{DoxyCompactList}\small\item\em Create a separate copy of the original \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} $\ast$ \mbox{\hyperlink{classTang_1_1GarbageCollected_a860ba802006dc8cf8b907f055455597f}{operator-\/$>$}} () const
@@ -112,11 +114,11 @@ A container that acts as a resource-\/counting garbage collector for the specifi
 Uses the \mbox{\hyperlink{classTang_1_1SingletonObjectPool}{Singleton\+Object\+Pool}} to created and recycle object memory. The container is not thread-\/safe. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classTang_1_1GarbageCollected_abd846da9657c5dd62841918b27167c66}\label{classTang_1_1GarbageCollected_abd846da9657c5dd62841918b27167c66}} 
+\mbox{\Hypertarget{classTang_1_1GarbageCollected_a042b7fed14748d92ae1b41918d06c940}\label{classTang_1_1GarbageCollected_a042b7fed14748d92ae1b41918d06c940}} 
 \index{Tang::GarbageCollected@{Tang::GarbageCollected}!GarbageCollected@{GarbageCollected}}
 \index{GarbageCollected@{GarbageCollected}!Tang::GarbageCollected@{Tang::GarbageCollected}}
 \doxysubsubsection{\texorpdfstring{GarbageCollected()}{GarbageCollected()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily Tang\+::\+Garbage\+Collected\+::\+Garbage\+Collected (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Garbage\+Collected\+::\+Garbage\+Collected (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{other }\end{DoxyParamCaption})}
 
 
 
@@ -127,11 +129,11 @@ Copy Constructor.
 {\em The} & other \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} object to copy. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classTang_1_1GarbageCollected_af7c251e58e9179e1ca4a3f9b876561be}\label{classTang_1_1GarbageCollected_af7c251e58e9179e1ca4a3f9b876561be}} 
+\mbox{\Hypertarget{classTang_1_1GarbageCollected_a70fa3f033d243f795d58b1fda5f22549}\label{classTang_1_1GarbageCollected_a70fa3f033d243f795d58b1fda5f22549}} 
 \index{Tang::GarbageCollected@{Tang::GarbageCollected}!GarbageCollected@{GarbageCollected}}
 \index{GarbageCollected@{GarbageCollected}!Tang::GarbageCollected@{Tang::GarbageCollected}}
 \doxysubsubsection{\texorpdfstring{GarbageCollected()}{GarbageCollected()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily Tang\+::\+Garbage\+Collected\+::\+Garbage\+Collected (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Garbage\+Collected\+::\+Garbage\+Collected (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&\&}]{other }\end{DoxyParamCaption})}
 
 
 
@@ -142,11 +144,11 @@ Move Constructor.
 {\em The} & other \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} object to move. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classTang_1_1GarbageCollected_a353748f997d200432d22c0ba93ebde6e}\label{classTang_1_1GarbageCollected_a353748f997d200432d22c0ba93ebde6e}} 
+\mbox{\Hypertarget{classTang_1_1GarbageCollected_a5d72132e9f3e34013ca628c0d4b75d82}\label{classTang_1_1GarbageCollected_a5d72132e9f3e34013ca628c0d4b75d82}} 
 \index{Tang::GarbageCollected@{Tang::GarbageCollected}!````~GarbageCollected@{$\sim$GarbageCollected}}
 \index{````~GarbageCollected@{$\sim$GarbageCollected}!Tang::GarbageCollected@{Tang::GarbageCollected}}
 \doxysubsubsection{\texorpdfstring{$\sim$GarbageCollected()}{~GarbageCollected()}}
-{\footnotesize\ttfamily Tang\+::\+Garbage\+Collected\+::$\sim$\+Garbage\+Collected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Garbage\+Collected\+::$\sim$\+Garbage\+Collected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -172,6 +174,19 @@ It is private so that a \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1GarbageCollected_a6adade6757881ddcae62271e857d8caf}\label{classTang_1_1GarbageCollected_a6adade6757881ddcae62271e857d8caf}} 
+\index{Tang::GarbageCollected@{Tang::GarbageCollected}!isCopyNeeded@{isCopyNeeded}}
+\index{isCopyNeeded@{isCopyNeeded}!Tang::GarbageCollected@{Tang::GarbageCollected}}
+\doxysubsubsection{\texorpdfstring{isCopyNeeded()}{isCopyNeeded()}}
+{\footnotesize\ttfamily bool Garbage\+Collected\+::is\+Copy\+Needed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Determine whether or not a copy is needed as determined by the referenced \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}}. 
+
+\begin{DoxyReturn}{Returns}
+Whether or not a copy is needed. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classTang_1_1GarbageCollected_acb3de1421025af18d948dfae7dad5fb0}\label{classTang_1_1GarbageCollected_acb3de1421025af18d948dfae7dad5fb0}} 
 \index{Tang::GarbageCollected@{Tang::GarbageCollected}!make@{make}}
 \index{make@{make}!Tang::GarbageCollected@{Tang::GarbageCollected}}
@@ -211,8 +226,7 @@ Create a separate copy of the original \mbox{\hyperlink{classTang_1_1GarbageColl
 \begin{DoxyReturn}{Returns}
 A \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} copy of the original value. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -478,11 +492,11 @@ Perform a $<$= between two \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garba
 \begin{DoxyReturn}{Returns}
 The result of the operation. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classTang_1_1GarbageCollected_ae3c11ed5cee365f7cb47aac9d4094482}\label{classTang_1_1GarbageCollected_ae3c11ed5cee365f7cb47aac9d4094482}} 
+\mbox{\Hypertarget{classTang_1_1GarbageCollected_a2736795d97b3e8f540df23fb8b875f91}\label{classTang_1_1GarbageCollected_a2736795d97b3e8f540df23fb8b875f91}} 
 \index{Tang::GarbageCollected@{Tang::GarbageCollected}!operator=@{operator=}}
 \index{operator=@{operator=}!Tang::GarbageCollected@{Tang::GarbageCollected}}
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}}\& Tang\+::\+Garbage\+Collected\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \& Garbage\+Collected\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{other }\end{DoxyParamCaption})}
 
 
 
@@ -493,18 +507,11 @@ Copy Assignment.
 {\em The} & other \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} object. \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classTang_1_1GarbageCollected_ae3c11ed5cee365f7cb47aac9d4094482_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{classTang_1_1GarbageCollected_a6354db39b643c1828754ff1fe8856b1a}\label{classTang_1_1GarbageCollected_a6354db39b643c1828754ff1fe8856b1a}} 
+\mbox{\Hypertarget{classTang_1_1GarbageCollected_a8f63aa5effa5808e68c9c93b495e8b0c}\label{classTang_1_1GarbageCollected_a8f63aa5effa5808e68c9c93b495e8b0c}} 
 \index{Tang::GarbageCollected@{Tang::GarbageCollected}!operator=@{operator=}}
 \index{operator=@{operator=}!Tang::GarbageCollected@{Tang::GarbageCollected}}
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}}\& Tang\+::\+Garbage\+Collected\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \& Garbage\+Collected\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&\&}]{other }\end{DoxyParamCaption})}
 
 
 
@@ -515,13 +522,6 @@ Move Assignment.
 {\em The} & other \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} object. \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classTang_1_1GarbageCollected_a6354db39b643c1828754ff1fe8856b1a_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{classTang_1_1GarbageCollected_a233b98cbedb6d8b63ab5285516c6aef4}\label{classTang_1_1GarbageCollected_a233b98cbedb6d8b63ab5285516c6aef4}} 
 \index{Tang::GarbageCollected@{Tang::GarbageCollected}!operator==@{operator==}}
 \index{operator==@{operator==}!Tang::GarbageCollected@{Tang::GarbageCollected}}
@@ -673,8 +673,7 @@ Compare the \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}}
 \begin{DoxyReturn}{Returns}
 True if they are equal, false otherwise. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

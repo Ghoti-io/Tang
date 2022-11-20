@@ -44,6 +44,8 @@ uint32\+\_\+t \mbox{\hyperlink{classTang_1_1ComputedExpressionCompiledFunction_a
 \mbox{\Hypertarget{classTang_1_1ComputedExpressionCompiledFunction_a9f576e7603c38ff07d77c5511b96ab20}\label{classTang_1_1ComputedExpressionCompiledFunction_a9f576e7603c38ff07d77c5511b96ab20}} 
 \mbox{\hyperlink{macros_8hpp_a48da4f54f29ec5b8a4dfd1a9234f7ee8}{Tang\+::integer\+\_\+t}} \mbox{\hyperlink{classTang_1_1ComputedExpressionCompiledFunction_a9f576e7603c38ff07d77c5511b96ab20}{get\+Pc}} () const
 \begin{DoxyCompactList}\small\item\em Get the bytecode target. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a493f58bd7f51ca4d6b9b1ef1860b4370}{is\+Copy\+Needed}} () const
+\begin{DoxyCompactList}\small\item\em Determine whether or not a copy is needed. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a76aaf726b67cedb54b6b3c75c834645f}{is\+\_\+equal}} (const \mbox{\hyperlink{macros_8hpp_a48da4f54f29ec5b8a4dfd1a9234f7ee8}{Tang\+::integer\+\_\+t}} \&val) const
 \begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a7265d530e9b32f55d2485a326ab353aa}{is\+\_\+equal}} (const \mbox{\hyperlink{macros_8hpp_a5fab10267a7a4379e7d3642508736ab8}{Tang\+::float\+\_\+t}} \&val) const
@@ -556,6 +558,25 @@ True if equal, false if not.
 
 
 Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ac39abf9bc79248b475d2e865331b6453}{Tang\+::\+Computed\+Expression\+Integer}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a12b3dece204793dc5a5f474e61ffa27f}{Tang\+::\+Computed\+Expression\+Float}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_a493f58bd7f51ca4d6b9b1ef1860b4370}\label{classTang_1_1ComputedExpression_a493f58bd7f51ca4d6b9b1ef1860b4370}} 
+\index{Tang::ComputedExpressionCompiledFunction@{Tang::ComputedExpressionCompiledFunction}!isCopyNeeded@{isCopyNeeded}}
+\index{isCopyNeeded@{isCopyNeeded}!Tang::ComputedExpressionCompiledFunction@{Tang::ComputedExpressionCompiledFunction}}
+\doxysubsubsection{\texorpdfstring{isCopyNeeded()}{isCopyNeeded()}}
+{\footnotesize\ttfamily bool Computed\+Expression\+::is\+Copy\+Needed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Determine whether or not a copy is needed. 
+
+Copying is only required for Computed\+Expressions which serve as containers, such as \mbox{\hyperlink{classTang_1_1ComputedExpressionArray}{Computed\+Expression\+Array}} and Computed\+Expression\+Object.
+
+\begin{DoxyReturn}{Returns}
+Whether or not a copy is needed. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_a3a72d20d7404d43efac207dc04afa2e1}{Tang\+::\+Computed\+Expression\+Array}}.
 
 \mbox{\Hypertarget{classTang_1_1ComputedExpressionCompiledFunction_a31488d210df3af50b359261405438d4c}\label{classTang_1_1ComputedExpressionCompiledFunction_a31488d210df3af50b359261405438d4c}} 
 \index{Tang::ComputedExpressionCompiledFunction@{Tang::ComputedExpressionCompiledFunction}!makeCopy@{makeCopy}}

@@ -122,6 +122,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad357fa1d16656eabe1593ba2a1bfd410"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionArray.html#ad357fa1d16656eabe1593ba2a1bfd410">dump</a> () const override</td></tr>
 <tr class="memdesc:ad357fa1d16656eabe1593ba2a1bfd410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output the contents of the <a class="el" href="classTang_1_1ComputedExpression.html" title="Represents the result of a computation that has been executed.">ComputedExpression</a> as a string.  <a href="classTang_1_1ComputedExpressionArray.html#ad357fa1d16656eabe1593ba2a1bfd410">More...</a><br /></td></tr>
 <tr class="separator:ad357fa1d16656eabe1593ba2a1bfd410"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a72d20d7404d43efac207dc04afa2e1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionArray.html#a3a72d20d7404d43efac207dc04afa2e1">isCopyNeeded</a> () const override</td></tr>
+<tr class="memdesc:a3a72d20d7404d43efac207dc04afa2e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether or not a copy is needed.  <a href="classTang_1_1ComputedExpressionArray.html#a3a72d20d7404d43efac207dc04afa2e1">More...</a><br /></td></tr>
+<tr class="separator:a3a72d20d7404d43efac207dc04afa2e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0497225dfbc07a35cfec251a37b902d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionArray.html#a0497225dfbc07a35cfec251a37b902d5">makeCopy</a> () const override</td></tr>
 <tr class="memdesc:a0497225dfbc07a35cfec251a37b902d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of the <a class="el" href="classTang_1_1ComputedExpression.html" title="Represents the result of a computation that has been executed.">ComputedExpression</a> (recursively, if appropriate).  <a href="classTang_1_1ComputedExpressionArray.html#a0497225dfbc07a35cfec251a37b902d5">More...</a><br /></td></tr>
 <tr class="separator:a0497225dfbc07a35cfec251a37b902d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -990,6 +993,37 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>True if equal, false if not. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classTang_1_1ComputedExpressionInteger.html#ac39abf9bc79248b475d2e865331b6453">Tang::ComputedExpressionInteger</a>, and <a class="el" href="classTang_1_1ComputedExpressionFloat.html#a12b3dece204793dc5a5f474e61ffa27f">Tang::ComputedExpressionFloat</a>.</p>
+
+</div>
+</div>
+<a id="a3a72d20d7404d43efac207dc04afa2e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a72d20d7404d43efac207dc04afa2e1">&#9670;&nbsp;</a></span>isCopyNeeded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ComputedExpressionArray::isCopyNeeded </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine whether or not a copy is needed. </p>
+<p>Copying is only required for ComputedExpressions which serve as containers, such as <a class="el" href="classTang_1_1ComputedExpressionArray.html" title="Represents an Array that is the result of a computation.">ComputedExpressionArray</a> and ComputedExpressionObject.</p>
+<dl class="section return"><dt>Returns</dt><dd>Whether or not a copy is needed. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#a493f58bd7f51ca4d6b9b1ef1860b4370">Tang::ComputedExpression</a>.</p>
 
 </div>
 </div>

@@ -23,5 +23,6 @@ var classTang_1_1ComputedExpressionBoolean =
     [ "is_equal", "classTang_1_1ComputedExpressionBoolean.html#a726aea52e0773883fe628f7d97b608cb", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionBoolean.html#a7265d530e9b32f55d2485a326ab353aa", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionBoolean.html#a76aaf726b67cedb54b6b3c75c834645f", null ],
+    [ "isCopyNeeded", "classTang_1_1ComputedExpressionBoolean.html#a493f58bd7f51ca4d6b9b1ef1860b4370", null ],
     [ "makeCopy", "classTang_1_1ComputedExpressionBoolean.html#aaddd6846e22a48cc1531731cef64a678", null ]
 ];

@@ -23,6 +23,7 @@ var classTang_1_1ComputedExpressionInteger =
     [ "is_equal", "classTang_1_1ComputedExpressionInteger.html#a726aea52e0773883fe628f7d97b608cb", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionInteger.html#a651bd760d2ee60e63455fb5944ad4f14", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionInteger.html#ac39abf9bc79248b475d2e865331b6453", null ],
+    [ "isCopyNeeded", "classTang_1_1ComputedExpressionInteger.html#a493f58bd7f51ca4d6b9b1ef1860b4370", null ],
     [ "makeCopy", "classTang_1_1ComputedExpressionInteger.html#a9e1b2e88d3c6574177f291563dd45262", null ],
     [ "ComputedExpressionArray", "classTang_1_1ComputedExpressionInteger.html#aec75e4d586e9025ffefa6f1f55616203", null ],
     [ "ComputedExpressionFloat", "classTang_1_1ComputedExpressionInteger.html#a70c09fb5e8df4b7f242567bd7d085785", null ]

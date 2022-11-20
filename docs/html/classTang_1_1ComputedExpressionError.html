@@ -167,6 +167,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7d5d18da408ab371e7360617760ac205"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionError.html#a7d5d18da408ab371e7360617760ac205">__string</a> () const override</td></tr>
 <tr class="memdesc:a7d5d18da408ab371e7360617760ac205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a type cast to string.  <a href="classTang_1_1ComputedExpressionError.html#a7d5d18da408ab371e7360617760ac205">More...</a><br /></td></tr>
 <tr class="separator:a7d5d18da408ab371e7360617760ac205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a493f58bd7f51ca4d6b9b1ef1860b4370"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpression.html#a493f58bd7f51ca4d6b9b1ef1860b4370">isCopyNeeded</a> () const</td></tr>
+<tr class="memdesc:a493f58bd7f51ca4d6b9b1ef1860b4370"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether or not a copy is needed.  <a href="classTang_1_1ComputedExpression.html#a493f58bd7f51ca4d6b9b1ef1860b4370">More...</a><br /></td></tr>
+<tr class="separator:a493f58bd7f51ca4d6b9b1ef1860b4370"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76aaf726b67cedb54b6b3c75c834645f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpression.html#a76aaf726b67cedb54b6b3c75c834645f">is_equal</a> (const <a class="el" href="macros_8hpp.html#a48da4f54f29ec5b8a4dfd1a9234f7ee8">Tang::integer_t</a> &amp;val) const</td></tr>
 <tr class="memdesc:a76aaf726b67cedb54b6b3c75c834645f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether or not the computed expression is equal to another value.  <a href="classTang_1_1ComputedExpression.html#a76aaf726b67cedb54b6b3c75c834645f">More...</a><br /></td></tr>
 <tr class="separator:a76aaf726b67cedb54b6b3c75c834645f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -990,6 +993,37 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>True if equal, false if not. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classTang_1_1ComputedExpressionInteger.html#ac39abf9bc79248b475d2e865331b6453">Tang::ComputedExpressionInteger</a>, and <a class="el" href="classTang_1_1ComputedExpressionFloat.html#a12b3dece204793dc5a5f474e61ffa27f">Tang::ComputedExpressionFloat</a>.</p>
+
+</div>
+</div>
+<a id="a493f58bd7f51ca4d6b9b1ef1860b4370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a493f58bd7f51ca4d6b9b1ef1860b4370">&#9670;&nbsp;</a></span>isCopyNeeded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ComputedExpression::isCopyNeeded </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine whether or not a copy is needed. </p>
+<p>Copying is only required for ComputedExpressions which serve as containers, such as <a class="el" href="classTang_1_1ComputedExpressionArray.html" title="Represents an Array that is the result of a computation.">ComputedExpressionArray</a> and ComputedExpressionObject.</p>
+<dl class="section return"><dt>Returns</dt><dd>Whether or not a copy is needed. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classTang_1_1ComputedExpressionArray.html#a3a72d20d7404d43efac207dc04afa2e1">Tang::ComputedExpressionArray</a>.</p>
 
 </div>
 </div>

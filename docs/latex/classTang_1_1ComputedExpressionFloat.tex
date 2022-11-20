@@ -66,6 +66,8 @@ virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mb
 \begin{DoxyCompactList}\small\item\em Perform a type cast to boolean. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a873e1a1bd0810ab622e4be3b60a4c77b}{\+\_\+\+\_\+string}} () const override
 \begin{DoxyCompactList}\small\item\em Perform a type cast to string. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a493f58bd7f51ca4d6b9b1ef1860b4370}{is\+Copy\+Needed}} () const
+\begin{DoxyCompactList}\small\item\em Determine whether or not a copy is needed. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a726aea52e0773883fe628f7d97b608cb}{is\+\_\+equal}} (const string \&val) const
 \begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a5ce6d4bc0128f6aadf72c2f63a70275a}{is\+\_\+equal}} (const \mbox{\hyperlink{classTang_1_1Error}{Error}} \&val) const
@@ -561,6 +563,25 @@ True if equal, false if not.
 
 
 Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a76aaf726b67cedb54b6b3c75c834645f}{Tang\+::\+Computed\+Expression}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_a493f58bd7f51ca4d6b9b1ef1860b4370}\label{classTang_1_1ComputedExpression_a493f58bd7f51ca4d6b9b1ef1860b4370}} 
+\index{Tang::ComputedExpressionFloat@{Tang::ComputedExpressionFloat}!isCopyNeeded@{isCopyNeeded}}
+\index{isCopyNeeded@{isCopyNeeded}!Tang::ComputedExpressionFloat@{Tang::ComputedExpressionFloat}}
+\doxysubsubsection{\texorpdfstring{isCopyNeeded()}{isCopyNeeded()}}
+{\footnotesize\ttfamily bool Computed\+Expression\+::is\+Copy\+Needed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Determine whether or not a copy is needed. 
+
+Copying is only required for Computed\+Expressions which serve as containers, such as \mbox{\hyperlink{classTang_1_1ComputedExpressionArray}{Computed\+Expression\+Array}} and Computed\+Expression\+Object.
+
+\begin{DoxyReturn}{Returns}
+Whether or not a copy is needed. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_a3a72d20d7404d43efac207dc04afa2e1}{Tang\+::\+Computed\+Expression\+Array}}.
 
 \mbox{\Hypertarget{classTang_1_1ComputedExpressionFloat_a40135f884be9c81a5163b2c45024b498}\label{classTang_1_1ComputedExpressionFloat_a40135f884be9c81a5163b2c45024b498}} 
 \index{Tang::ComputedExpressionFloat@{Tang::ComputedExpressionFloat}!makeCopy@{makeCopy}}

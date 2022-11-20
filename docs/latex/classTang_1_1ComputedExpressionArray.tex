@@ -34,6 +34,8 @@ Collaboration diagram for Tang\+::Computed\+Expression\+Array\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em Construct an Array result. \end{DoxyCompactList}\item 
 virtual std\+::string \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_ad357fa1d16656eabe1593ba2a1bfd410}{dump}} () const override
 \begin{DoxyCompactList}\small\item\em Output the contents of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} as a string. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_a3a72d20d7404d43efac207dc04afa2e1}{is\+Copy\+Needed}} () const override
+\begin{DoxyCompactList}\small\item\em Determine whether or not a copy is needed. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_a0497225dfbc07a35cfec251a37b902d5}{make\+Copy}} () const override
 \begin{DoxyCompactList}\small\item\em Make a copy of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} (recursively, if appropriate). \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_abbaae671ad9e9bb47b0b0925828b2b6b}{\+\_\+\+\_\+index}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&index) const override
@@ -548,6 +550,25 @@ True if equal, false if not.
 
 
 Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ac39abf9bc79248b475d2e865331b6453}{Tang\+::\+Computed\+Expression\+Integer}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a12b3dece204793dc5a5f474e61ffa27f}{Tang\+::\+Computed\+Expression\+Float}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionArray_a3a72d20d7404d43efac207dc04afa2e1}\label{classTang_1_1ComputedExpressionArray_a3a72d20d7404d43efac207dc04afa2e1}} 
+\index{Tang::ComputedExpressionArray@{Tang::ComputedExpressionArray}!isCopyNeeded@{isCopyNeeded}}
+\index{isCopyNeeded@{isCopyNeeded}!Tang::ComputedExpressionArray@{Tang::ComputedExpressionArray}}
+\doxysubsubsection{\texorpdfstring{isCopyNeeded()}{isCopyNeeded()}}
+{\footnotesize\ttfamily bool Computed\+Expression\+Array\+::is\+Copy\+Needed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Determine whether or not a copy is needed. 
+
+Copying is only required for Computed\+Expressions which serve as containers, such as \mbox{\hyperlink{classTang_1_1ComputedExpressionArray}{Computed\+Expression\+Array}} and Computed\+Expression\+Object.
+
+\begin{DoxyReturn}{Returns}
+Whether or not a copy is needed. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a493f58bd7f51ca4d6b9b1ef1860b4370}{Tang\+::\+Computed\+Expression}}.
 
 \mbox{\Hypertarget{classTang_1_1ComputedExpressionArray_a0497225dfbc07a35cfec251a37b902d5}\label{classTang_1_1ComputedExpressionArray_a0497225dfbc07a35cfec251a37b902d5}} 
 \index{Tang::ComputedExpressionArray@{Tang::ComputedExpressionArray}!makeCopy@{makeCopy}}
