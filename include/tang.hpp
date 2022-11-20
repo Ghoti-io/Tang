@@ -49,10 +49,7 @@
 //   * recycle should not call realloc.
 //   * recycled pointer space should be reserved when get() allocates object space.
 // * Better location tracking for bytecode and error reporting.
-// * Array []
-//   * [] access
-//   * [] assignment
-//   * Slice
+// * Array Slice
 // * String [] access
 // * String Slice
 // * Ranged for and iterators
