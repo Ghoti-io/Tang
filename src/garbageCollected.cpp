@@ -10,6 +10,58 @@ namespace Tang {
   }
 }
 
+GarbageCollected::GarbageCollected(const GarbageCollected & other) {
+  this->count = other.count;
+  ++*this->count;
+  this->ref = other.ref;
+  this->recycle = other.recycle;
+}
+
+GarbageCollected::GarbageCollected(GarbageCollected && other) {
+  // Move the other item's attributes.
+  this->ref = other.ref;
+  this->count = other.count;
+  ++*this->count;
+  this->recycle = std::move(other.recycle);
+}
+
+GarbageCollected & GarbageCollected::operator=(const GarbageCollected & other) {
+  // Remove references from the current object.
+  this->~GarbageCollected();
+
+  // Copy the other item's attributes.
+  this->ref = other.ref;
+  this->count = other.count;
+  ++*this->count;
+  this->recycle = other.recycle;
+
+  return *this;
+}
+
+GarbageCollected & GarbageCollected::operator=(GarbageCollected && other) {
+  // Remove references from the current object.
+  this->~GarbageCollected();
+
+  // Move the other item's attributes.
+  this->ref = other.ref;
+  this->count = other.count;
+  ++*this->count;
+  this->recycle = std::move(other.recycle);
+
+  return *this;
+}
+
+GarbageCollected::~GarbageCollected() {
+  if (--*this->count == 0) {
+    if (this->ref) {
+      this->recycle();
+    }
+    if (this->count) {
+      delete this->count;
+    }
+  }
+}
+
 GarbageCollected GarbageCollected::makeCopy() const {
   return this->ref->makeCopy();
 }

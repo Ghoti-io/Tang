@@ -53,75 +53,33 @@ namespace Tang {
      *
      * @param The other GarbageCollected object to copy.
      */
-    GarbageCollected(const GarbageCollected & other) {
-      this->count = other.count;
-      ++*this->count;
-      this->ref = other.ref;
-      this->recycle = other.recycle;
-    }
+    GarbageCollected(const GarbageCollected & other);
 
     /**
      * Move Constructor.
      *
      * @param The other GarbageCollected object to move.
      */
-    GarbageCollected(GarbageCollected && other) {
-      // Move the other item's attributes.
-      this->ref = other.ref;
-      this->count = other.count;
-      ++*this->count;
-      this->recycle = std::move(other.recycle);
-    }
+    GarbageCollected(GarbageCollected && other);
 
     /**
      * Copy Assignment.
      *
      * @param The other GarbageCollected object.
      */
-    GarbageCollected & operator=(const GarbageCollected & other) {
-      // Remove references from the current object.
-      this->~GarbageCollected();
-
-      // Copy the other item's attributes.
-      this->ref = other.ref;
-      this->count = other.count;
-      ++*this->count;
-      this->recycle = other.recycle;
-
-      return *this;
-    }
+    GarbageCollected & operator=(const GarbageCollected & other);
 
     /**
      * Move Assignment.
      *
      * @param The other GarbageCollected object.
      */
-    GarbageCollected & operator=(GarbageCollected && other) {
-      // Remove references from the current object.
-      this->~GarbageCollected();
-
-      // Move the other item's attributes.
-      this->ref = other.ref;
-      this->count = other.count;
-      ++*this->count;
-      this->recycle = std::move(other.recycle);
-
-      return *this;
-    }
+    GarbageCollected & operator=(GarbageCollected && other);
 
     /**
      * Destructor.  Clean up the tracked object, if appropriate.
      */
-    ~GarbageCollected() {
-      if (--*this->count == 0) {
-        if (this->ref) {
-          this->recycle();
-        }
-        if (this->count) {
-          delete this->count;
-        }
-      }
-    }
+    ~GarbageCollected();
 
     /**
      * Create a separate copy of the original GarbageCollected value.
