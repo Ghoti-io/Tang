@@ -1,5 +1,9 @@
 var classTang_1_1AstNodeCast =
 [
+    [ "PreprocessState", "classTang_1_1AstNodeCast.html#ae0f662cd990cd733c7d5447ea3a1e641", [
+      [ "Default", "classTang_1_1AstNodeCast.html#ae0f662cd990cd733c7d5447ea3a1e641a0936249b625085e3b4124ae378f9a1c1", null ],
+      [ "IsAssignment", "classTang_1_1AstNodeCast.html#ae0f662cd990cd733c7d5447ea3a1e641a586bda9718eca4db4d4afac8e298023a", null ]
+    ] ],
     [ "Type", "classTang_1_1AstNodeCast.html#a63a014eee9fd7d365d8177c4bab2c4e4", [
       [ "Integer", "classTang_1_1AstNodeCast.html#a63a014eee9fd7d365d8177c4bab2c4e4a12492d4efa5d84835d4e7cc31ae1a4ab", null ],
       [ "Float", "classTang_1_1AstNodeCast.html#a63a014eee9fd7d365d8177c4bab2c4e4a93f72af1ebc545c43fe366904a79dff5", null ],
@@ -7,6 +11,6 @@ var classTang_1_1AstNodeCast =
     ] ],
     [ "AstNodeCast", "classTang_1_1AstNodeCast.html#a36a56430aa8f8cd4facbf7df1fa50bdd", null ],
     [ "compile", "classTang_1_1AstNodeCast.html#af911e11e47869acdd1f6b8fabd9555e2", null ],
-    [ "compilePreprocess", "classTang_1_1AstNodeCast.html#ad170a91681b23c4c85dc79e601aa006a", null ],
+    [ "compilePreprocess", "classTang_1_1AstNodeCast.html#a057e3f5d1df130bdf1ea1c0a5464566a", null ],
     [ "dump", "classTang_1_1AstNodeCast.html#abc4a075ea319b747411aec57a61735eb", null ]
 ];

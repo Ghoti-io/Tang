@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('classTang_1_1AstNodeBreak.html',''); i
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classTang_1_1AstNodeBreak-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -114,6 +115,14 @@ Collaboration diagram for Tang::AstNodeBreak:</div>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ae0f662cd990cd733c7d5447ea3a1e641"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641">PreprocessState</a> : int { <a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641a0936249b625085e3b4124ae378f9a1c1">Default</a> = 0
+, <a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641a586bda9718eca4db4d4afac8e298023a">IsAssignment</a> = 1
+ }</td></tr>
+<tr class="memdesc:ae0f662cd990cd733c7d5447ea3a1e641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit flags to indicate the state of the preprocess scan as it recursively evaluates the AST.  <a href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641">More...</a><br /></td></tr>
+<tr class="separator:ae0f662cd990cd733c7d5447ea3a1e641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad9c846af60f9a77ce5dcb3213a899761"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeBreak.html#ad9c846af60f9a77ce5dcb3213a899761">AstNodeBreak</a> (<a class="el" href="classTang_1_1location.html">Tang::location</a> <a class="el" href="classTang_1_1location.html">location</a>)</td></tr>
@@ -125,13 +134,44 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a05eb111a675dfee0071ea8827c62a1fe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeBreak.html#a05eb111a675dfee0071ea8827c62a1fe">compile</a> (<a class="el" href="classTang_1_1Program.html">Tang::Program</a> &amp;program) const override</td></tr>
 <tr class="memdesc:a05eb111a675dfee0071ea8827c62a1fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile the ast of the provided <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a>.  <a href="classTang_1_1AstNodeBreak.html#a05eb111a675dfee0071ea8827c62a1fe">More...</a><br /></td></tr>
 <tr class="separator:a05eb111a675dfee0071ea8827c62a1fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8430f4ca74662f17184b3107dfa7034b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a8430f4ca74662f17184b3107dfa7034b">compilePreprocess</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program) const</td></tr>
-<tr class="memdesc:a8430f4ca74662f17184b3107dfa7034b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run any preprocess analysis needed before compilation.  <a href="classTang_1_1AstNode.html#a8430f4ca74662f17184b3107dfa7034b">More...</a><br /></td></tr>
-<tr class="separator:a8430f4ca74662f17184b3107dfa7034b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a269c37e41595e0338bf4653cdb32e9cb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a269c37e41595e0338bf4653cdb32e9cb">compilePreprocess</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program, <a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641">PreprocessState</a> state) const</td></tr>
+<tr class="memdesc:a269c37e41595e0338bf4653cdb32e9cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run any preprocess analysis needed before compilation.  <a href="classTang_1_1AstNode.html#a269c37e41595e0338bf4653cdb32e9cb">More...</a><br /></td></tr>
+<tr class="separator:a269c37e41595e0338bf4653cdb32e9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that represents a <code>break</code> statement. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="ae0f662cd990cd733c7d5447ea3a1e641"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0f662cd990cd733c7d5447ea3a1e641">&#9670;&nbsp;</a></span>PreprocessState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641">Tang::AstNode::PreprocessState</a> : int</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bit flags to indicate the state of the preprocess scan as it recursively evaluates the AST. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae0f662cd990cd733c7d5447ea3a1e641a0936249b625085e3b4124ae378f9a1c1"></a>Default&#160;</td><td class="fielddoc"><p>The default state. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae0f662cd990cd733c7d5447ea3a1e641a586bda9718eca4db4d4afac8e298023a"></a>IsAssignment&#160;</td><td class="fielddoc"><p><a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> is part of an assignment expression. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad9c846af60f9a77ce5dcb3213a899761"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad9c846af60f9a77ce5dcb3213a899761">&#9670;&nbsp;</a></span>AstNodeBreak()</h2>
 
@@ -206,8 +246,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a8430f4ca74662f17184b3107dfa7034b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8430f4ca74662f17184b3107dfa7034b">&#9670;&nbsp;</a></span>compilePreprocess()</h2>
+<a id="a269c37e41595e0338bf4653cdb32e9cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a269c37e41595e0338bf4653cdb32e9cb">&#9670;&nbsp;</a></span>compilePreprocess()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,8 +259,18 @@ Here is the call graph for this function:</div>
           <td class="memname">void AstNode::compilePreprocess </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classTang_1_1Program.html">Program</a> &amp;&#160;</td>
-          <td class="paramname"><em>program</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>program</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641">PreprocessState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -234,11 +284,12 @@ Here is the call graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">program</td><td>The <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a> that is being compiled. </td></tr>
+    <tr><td class="paramname">state</td><td>Any preprocess flags that need to be considered. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="classTang_1_1AstNodeWhile.html#a67e57a4a4dba492d48a4f4b709b680c0">Tang::AstNodeWhile</a>, <a class="el" href="classTang_1_1AstNodeUnary.html#a636ecd48add9173a1407c7bdb1539938">Tang::AstNodeUnary</a>, <a class="el" href="classTang_1_1AstNodeTernary.html#a5a31d51a5de7af39ab2dd0f9332827b9">Tang::AstNodeTernary</a>, <a class="el" href="classTang_1_1AstNodeString.html#a6bf3911f55465bc67c6ed7bb5429d0db">Tang::AstNodeString</a>, <a class="el" href="classTang_1_1AstNodeReturn.html#adf03bf34f557963424fae4f15b27b7ba">Tang::AstNodeReturn</a>, <a class="el" href="classTang_1_1AstNodePrint.html#abe79bf5b27db40b9e28c2c65678aecf4">Tang::AstNodePrint</a>, <a class="el" href="classTang_1_1AstNodeIndex.html#aef22566a0be856eec3bf77ad89c59551">Tang::AstNodeIndex</a>, <a class="el" href="classTang_1_1AstNodeIfElse.html#a6e0c19940ac5494d61261f705d7cdfda">Tang::AstNodeIfElse</a>, <a class="el" href="classTang_1_1AstNodeIdentifier.html#a4ff1086d00ee151cca6e68ed0971f62f">Tang::AstNodeIdentifier</a>, <a class="el" href="classTang_1_1AstNodeFunctionDeclaration.html#a70c47a9bd3b30601bc6b9647c8bb769b">Tang::AstNodeFunctionDeclaration</a>, <a class="el" href="classTang_1_1AstNodeFunctionCall.html#adf8310c4b076549ad957291a74ac9024">Tang::AstNodeFunctionCall</a>, <a class="el" href="classTang_1_1AstNodeFor.html#aaa6f402103515aaf506e125a85f1355e">Tang::AstNodeFor</a>, <a class="el" href="classTang_1_1AstNodeDoWhile.html#a95e4c69a5c8f7a72b4a1096290cfcf54">Tang::AstNodeDoWhile</a>, <a class="el" href="classTang_1_1AstNodeCast.html#ad170a91681b23c4c85dc79e601aa006a">Tang::AstNodeCast</a>, <a class="el" href="classTang_1_1AstNodeBlock.html#abf2833d8363e3e98ef27cd7359c936ab">Tang::AstNodeBlock</a>, <a class="el" href="classTang_1_1AstNodeBinary.html#a0379489bea93c1f926a9f88d400f36fc">Tang::AstNodeBinary</a>, <a class="el" href="classTang_1_1AstNodeAssign.html#af21285acd379f7d9c66ca5e6d225c19f">Tang::AstNodeAssign</a>, and <a class="el" href="classTang_1_1AstNodeArray.html#a41738b11a0f44f4ef8ec593acd4ae579">Tang::AstNodeArray</a>.</p>
+<p>Reimplemented in <a class="el" href="classTang_1_1AstNodeWhile.html#afb988ef9532d2c8052b3c3ba7686c912">Tang::AstNodeWhile</a>, <a class="el" href="classTang_1_1AstNodeUnary.html#adf619a1f08b076591e5361e31a9464e7">Tang::AstNodeUnary</a>, <a class="el" href="classTang_1_1AstNodeTernary.html#a8f563221dde44fbfa8bc3d3b43a3815c">Tang::AstNodeTernary</a>, <a class="el" href="classTang_1_1AstNodeString.html#ab4100d94863c1ed9873b8aa875745218">Tang::AstNodeString</a>, <a class="el" href="classTang_1_1AstNodeReturn.html#a8528e0fa76ccfaa1f0f6ebaf72fa63b1">Tang::AstNodeReturn</a>, <a class="el" href="classTang_1_1AstNodePrint.html#aaab3cce0bcf10695da318c79998cb296">Tang::AstNodePrint</a>, <a class="el" href="classTang_1_1AstNodeIndex.html#af8c1e7d09e52697ec4b3df1d92a3b479">Tang::AstNodeIndex</a>, <a class="el" href="classTang_1_1AstNodeIfElse.html#ae72ff9b9246efe30c7f919a1f1bdbd34">Tang::AstNodeIfElse</a>, <a class="el" href="classTang_1_1AstNodeIdentifier.html#a9146f63e68b1c991623aa7d51ffa24da">Tang::AstNodeIdentifier</a>, <a class="el" href="classTang_1_1AstNodeFunctionDeclaration.html#aa5067f4dfc34a538a858f3437fd063ef">Tang::AstNodeFunctionDeclaration</a>, <a class="el" href="classTang_1_1AstNodeFunctionCall.html#ae9334b90c4fe34944cd85744acf6fc9c">Tang::AstNodeFunctionCall</a>, <a class="el" href="classTang_1_1AstNodeFor.html#a8b1f5dcef3e04fc39f1047b2a2f5bd08">Tang::AstNodeFor</a>, <a class="el" href="classTang_1_1AstNodeDoWhile.html#a70790deb78eac79d5cd750d190e0e528">Tang::AstNodeDoWhile</a>, <a class="el" href="classTang_1_1AstNodeCast.html#a057e3f5d1df130bdf1ea1c0a5464566a">Tang::AstNodeCast</a>, <a class="el" href="classTang_1_1AstNodeBlock.html#af794c46afd91db2b974e7981777f8c53">Tang::AstNodeBlock</a>, <a class="el" href="classTang_1_1AstNodeBinary.html#ac0c895bc010e5ae9916c3f8bc49770ca">Tang::AstNodeBinary</a>, <a class="el" href="classTang_1_1AstNodeAssign.html#a058119ebf41115e0fff29270379ca7e2">Tang::AstNodeAssign</a>, and <a class="el" href="classTang_1_1AstNodeArray.html#a8d76227a09c69f232c0548486a179b4c">Tang::AstNodeArray</a>.</p>
 
 </div>
 </div>

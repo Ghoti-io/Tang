@@ -11,8 +11,7 @@ An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a typecast
 
 
 
-Inheritance diagram for Tang\+::Ast\+Node\+Cast\+:
-\nopagebreak
+Inheritance diagram for Tang\+::Ast\+Node\+Cast\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for Tang\+::Ast\+Node\+Cast\+:
 \end{figure}
 
 
-Collaboration diagram for Tang\+::Ast\+Node\+Cast\+:
-\nopagebreak
+Collaboration diagram for Tang\+::Ast\+Node\+Cast\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -36,7 +34,11 @@ enum \mbox{\hyperlink{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4
 , \mbox{\hyperlink{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4a93f72af1ebc545c43fe366904a79dff5}{Float}}
 , \mbox{\hyperlink{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4a85206fe18cb8ea971023050f86050b2a}{Boolean}}
  \}
-\begin{DoxyCompactList}\small\item\em The possible types that can be cast to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The possible types that can be cast to. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Preprocess\+State}} \+: int \{ \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641a0936249b625085e3b4124ae378f9a1c1}{Default}} = 0
+, \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641a586bda9718eca4db4d4afac8e298023a}{Is\+Assignment}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Bit flags to indicate the state of the preprocess scan as it recursively evaluates the AST. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,7 +48,7 @@ virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeCast_abc4a075ea319b74
 \begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classTang_1_1AstNodeCast_af911e11e47869acdd1f6b8fabd9555e2}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const override
 \begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classTang_1_1AstNodeCast_ad170a91681b23c4c85dc79e601aa006a}{compile\+Preprocess}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program) const override
+virtual void \mbox{\hyperlink{classTang_1_1AstNodeCast_a057e3f5d1df130bdf1ea1c0a5464566a}{compile\+Preprocess}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program, \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Preprocess\+State}} state) const override
 \begin{DoxyCompactList}\small\item\em Run any preprocess analysis needed before compilation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -54,6 +56,26 @@ virtual void \mbox{\hyperlink{classTang_1_1AstNodeCast_ad170a91681b23c4c85dc79e6
 An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a typecast of an expression. 
 
 \doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}\label{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}} 
+\index{Tang::AstNodeCast@{Tang::AstNodeCast}!PreprocessState@{PreprocessState}}
+\index{PreprocessState@{PreprocessState}!Tang::AstNodeCast@{Tang::AstNodeCast}}
+\doxysubsubsection{\texorpdfstring{PreprocessState}{PreprocessState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Tang\+::\+Ast\+Node\+::\+Preprocess\+State}} \+: int\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Bit flags to indicate the state of the preprocess scan as it recursively evaluates the AST. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Default@{Default}!Tang::AstNodeCast@{Tang::AstNodeCast}}\index{Tang::AstNodeCast@{Tang::AstNodeCast}!Default@{Default}}}\mbox{\Hypertarget{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641a0936249b625085e3b4124ae378f9a1c1}\label{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641a0936249b625085e3b4124ae378f9a1c1}} 
+Default&The default state. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IsAssignment@{IsAssignment}!Tang::AstNodeCast@{Tang::AstNodeCast}}\index{Tang::AstNodeCast@{Tang::AstNodeCast}!IsAssignment@{IsAssignment}}}\mbox{\Hypertarget{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641a586bda9718eca4db4d4afac8e298023a}\label{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641a586bda9718eca4db4d4afac8e298023a}} 
+Is\+Assignment&\mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} is part of an assignment expression. \\
+\hline
+
+\end{DoxyEnumFields}
 \mbox{\Hypertarget{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4}\label{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4}} 
 \index{Tang::AstNodeCast@{Tang::AstNodeCast}!Type@{Type}}
 \index{Type@{Type}!Tang::AstNodeCast@{Tang::AstNodeCast}}
@@ -122,19 +144,18 @@ Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\
 
 Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a390f8887c418f972d75e968f1274b2cb}{Tang\+::\+Ast\+Node}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classTang_1_1AstNodeCast_af911e11e47869acdd1f6b8fabd9555e2_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classTang_1_1AstNodeCast_ad170a91681b23c4c85dc79e601aa006a}\label{classTang_1_1AstNodeCast_ad170a91681b23c4c85dc79e601aa006a}} 
+\mbox{\Hypertarget{classTang_1_1AstNodeCast_a057e3f5d1df130bdf1ea1c0a5464566a}\label{classTang_1_1AstNodeCast_a057e3f5d1df130bdf1ea1c0a5464566a}} 
 \index{Tang::AstNodeCast@{Tang::AstNodeCast}!compilePreprocess@{compilePreprocess}}
 \index{compilePreprocess@{compilePreprocess}!Tang::AstNodeCast@{Tang::AstNodeCast}}
 \doxysubsubsection{\texorpdfstring{compilePreprocess()}{compilePreprocess()}}
-{\footnotesize\ttfamily void Ast\+Node\+Cast\+::compile\+Preprocess (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1Program}{Program}} \&}]{program }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Ast\+Node\+Cast\+::compile\+Preprocess (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1Program}{Program}} \&}]{program,  }\item[{\mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Preprocess\+State}}}]{state }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -144,10 +165,12 @@ Run any preprocess analysis needed before compilation.
 \begin{DoxyParams}{Parameters}
 {\em program} & The \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} that is being compiled. \\
 \hline
+{\em state} & Any preprocess flags that need to be considered. \\
+\hline
 \end{DoxyParams}
 
 
-Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a8430f4ca74662f17184b3107dfa7034b}{Tang\+::\+Ast\+Node}}.
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a269c37e41595e0338bf4653cdb32e9cb}{Tang\+::\+Ast\+Node}}.
 
 \mbox{\Hypertarget{classTang_1_1AstNodeCast_abc4a075ea319b747411aec57a61735eb}\label{classTang_1_1AstNodeCast_abc4a075ea319b747411aec57a61735eb}} 
 \index{Tang::AstNodeCast@{Tang::AstNodeCast}!dump@{dump}}

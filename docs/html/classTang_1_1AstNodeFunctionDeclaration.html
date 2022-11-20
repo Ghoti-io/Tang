@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('classTang_1_1AstNodeFunctionDeclaratio
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classTang_1_1AstNodeFunctionDeclaration-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -114,6 +115,14 @@ Collaboration diagram for Tang::AstNodeFunctionDeclaration:</div>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ae0f662cd990cd733c7d5447ea3a1e641"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641">PreprocessState</a> : int { <a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641a0936249b625085e3b4124ae378f9a1c1">Default</a> = 0
+, <a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641a586bda9718eca4db4d4afac8e298023a">IsAssignment</a> = 1
+ }</td></tr>
+<tr class="memdesc:ae0f662cd990cd733c7d5447ea3a1e641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit flags to indicate the state of the preprocess scan as it recursively evaluates the AST.  <a href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641">More...</a><br /></td></tr>
+<tr class="separator:ae0f662cd990cd733c7d5447ea3a1e641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6b5d243bc4cbf7ea0f4a580da3250d8d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeFunctionDeclaration.html#a6b5d243bc4cbf7ea0f4a580da3250d8d">AstNodeFunctionDeclaration</a> (std::string name, std::vector&lt; std::string &gt; arguments, shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt; codeBlock, <a class="el" href="classTang_1_1location.html">Tang::location</a> <a class="el" href="classTang_1_1location.html">location</a>)</td></tr>
@@ -125,13 +134,44 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aafeb71d30ea6fdec2871be49cd6166ca"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeFunctionDeclaration.html#aafeb71d30ea6fdec2871be49cd6166ca">compile</a> (<a class="el" href="classTang_1_1Program.html">Tang::Program</a> &amp;program) const override</td></tr>
 <tr class="memdesc:aafeb71d30ea6fdec2871be49cd6166ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile the ast of the provided <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a>.  <a href="classTang_1_1AstNodeFunctionDeclaration.html#aafeb71d30ea6fdec2871be49cd6166ca">More...</a><br /></td></tr>
 <tr class="separator:aafeb71d30ea6fdec2871be49cd6166ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70c47a9bd3b30601bc6b9647c8bb769b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeFunctionDeclaration.html#a70c47a9bd3b30601bc6b9647c8bb769b">compilePreprocess</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program) const override</td></tr>
-<tr class="memdesc:a70c47a9bd3b30601bc6b9647c8bb769b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run any preprocess analysis needed before compilation.  <a href="classTang_1_1AstNodeFunctionDeclaration.html#a70c47a9bd3b30601bc6b9647c8bb769b">More...</a><br /></td></tr>
-<tr class="separator:a70c47a9bd3b30601bc6b9647c8bb769b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5067f4dfc34a538a858f3437fd063ef"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeFunctionDeclaration.html#aa5067f4dfc34a538a858f3437fd063ef">compilePreprocess</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program, <a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641">PreprocessState</a> state) const override</td></tr>
+<tr class="memdesc:aa5067f4dfc34a538a858f3437fd063ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run any preprocess analysis needed before compilation.  <a href="classTang_1_1AstNodeFunctionDeclaration.html#aa5067f4dfc34a538a858f3437fd063ef">More...</a><br /></td></tr>
+<tr class="separator:aa5067f4dfc34a538a858f3437fd063ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that represents a function declaration. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="ae0f662cd990cd733c7d5447ea3a1e641"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0f662cd990cd733c7d5447ea3a1e641">&#9670;&nbsp;</a></span>PreprocessState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641">Tang::AstNode::PreprocessState</a> : int</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bit flags to indicate the state of the preprocess scan as it recursively evaluates the AST. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae0f662cd990cd733c7d5447ea3a1e641a0936249b625085e3b4124ae378f9a1c1"></a>Default&#160;</td><td class="fielddoc"><p>The default state. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae0f662cd990cd733c7d5447ea3a1e641a586bda9718eca4db4d4afac8e298023a"></a>IsAssignment&#160;</td><td class="fielddoc"><p><a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> is part of an assignment expression. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6b5d243bc4cbf7ea0f4a580da3250d8d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6b5d243bc4cbf7ea0f4a580da3250d8d">&#9670;&nbsp;</a></span>AstNodeFunctionDeclaration()</h2>
 
@@ -222,27 +262,28 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTang_1_1AstNodeFunctionDeclaration_aafeb71d30ea6fdec2871be49cd6166ca_cgraph.png" border="0" usemap="#aclassTang_1_1AstNodeFunctionDeclaration_aafeb71d30ea6fdec2871be49cd6166ca_cgraph" alt=""/></div>
 <map name="aclassTang_1_1AstNodeFunctionDeclaration_aafeb71d30ea6fdec2871be49cd6166ca_cgraph" id="aclassTang_1_1AstNodeFunctionDeclaration_aafeb71d30ea6fdec2871be49cd6166ca_cgraph">
-<area shape="rect" title="Compile the ast of the provided Tang::Program." alt="" coords="5,277,251,318"/>
+<area shape="rect" title="Compile the ast of the provided Tang::Program." alt="" coords="5,318,251,359"/>
 <area shape="rect" href="classTang_1_1Program.html#a1067d000db48378fa37ff569ffdf7329" title="Add a Tang::uinteger_t to the Bytecode." alt="" coords="313,5,521,32"/>
 <area shape="rect" href="classTang_1_1Program.html#ab6ffaae61038ad76502d9fd5c26a69f2" title="Add an identifier to the environment." alt="" coords="315,56,520,83"/>
 <area shape="rect" href="classTang_1_1Program.html#a742a5415a123a8a0cffa57476f74d55f" title="Get the Bytecode vector." alt="" coords="315,107,520,133"/>
 <area shape="rect" href="classTang_1_1Program.html#a788deba60696516b2019081afdead30c" title="Get the identifier map of the current environment." alt="" coords="313,157,522,184"/>
-<area shape="rect" href="classTang_1_1Program.html#a6d8557e55dd1aeb9f6791c7c84528332" title="Get the string map of the current environment." alt="" coords="323,208,512,235"/>
-<area shape="rect" href="classTang_1_1Program.html#ab170cc8217af1ed518b89cf445508d18" title="For all continue bytecode locations collected by Tang::addContinue, set the target pc to target." alt="" coords="584,309,805,336"/>
-<area shape="rect" href="classTang_1_1Program.html#a5da413efe8435cebd927a8be58dcb9be" title="Set the target address of a Jump opcode." alt="" coords="853,309,1069,336"/>
-<area shape="rect" href="classTang_1_1Program.html#a0a824ad2a83896854f4e528f6c3cc630" title="For all continue bytecode locations collected by Tang::addContinue, set the target pc to target." alt="" coords="592,426,797,467"/>
-<area shape="rect" href="classTang_1_1Program.html#a655fefae4d0f0bcf92766d8918be89bd" title="Remove a compile/execute environment stack entry." alt="" coords="302,360,533,387"/>
-<area shape="rect" href="classTang_1_1Program.html#a5c12ec99486118295496695b50750da9" title="Increase the break environment stack, so that we can handle nested break&#45;supporting structures." alt="" coords="599,491,791,533"/>
-<area shape="rect" href="classTang_1_1Program.html#af5d2ae23991475e3c8776de0d0a01123" title="Increase the continue environment stack, so that we can handle nested continue&#45;supporting structures." alt="" coords="589,557,801,598"/>
-<area shape="rect" href="classTang_1_1Program.html#a3ed3e014d80138d61d545a3ef5fe0a2e" title="Create a new compile/execute environment stack entry." alt="" coords="299,512,536,539"/>
-<area shape="rect" href="classTang_1_1Program.html#aabcfee07409be5bc6bf1312f26b56a85" title="Set the stack details of a function declaration." alt="" coords="595,361,794,402"/>
+<area shape="rect" href="classTang_1_1Program.html#a93e80b96547877bfb6ed1b01fd0a6b7c" title="Get the set of identifiers that will be assigned in the current scope." alt="" coords="313,209,522,250"/>
+<area shape="rect" href="classTang_1_1Program.html#a6d8557e55dd1aeb9f6791c7c84528332" title="Get the string map of the current environment." alt="" coords="323,275,512,301"/>
+<area shape="rect" href="classTang_1_1Program.html#ab170cc8217af1ed518b89cf445508d18" title="For all continue bytecode locations collected by Tang::addContinue, set the target pc to target." alt="" coords="584,376,805,403"/>
+<area shape="rect" href="classTang_1_1Program.html#a5da413efe8435cebd927a8be58dcb9be" title="Set the target address of a Jump opcode." alt="" coords="853,376,1069,403"/>
+<area shape="rect" href="classTang_1_1Program.html#a0a824ad2a83896854f4e528f6c3cc630" title="For all continue bytecode locations collected by Tang::addContinue, set the target pc to target." alt="" coords="592,493,797,534"/>
+<area shape="rect" href="classTang_1_1Program.html#a655fefae4d0f0bcf92766d8918be89bd" title="Remove a compile/execute environment stack entry." alt="" coords="302,427,533,453"/>
+<area shape="rect" href="classTang_1_1Program.html#a5c12ec99486118295496695b50750da9" title="Increase the break environment stack, so that we can handle nested break&#45;supporting structures." alt="" coords="599,558,791,599"/>
+<area shape="rect" href="classTang_1_1Program.html#af5d2ae23991475e3c8776de0d0a01123" title="Increase the continue environment stack, so that we can handle nested continue&#45;supporting structures." alt="" coords="589,623,801,665"/>
+<area shape="rect" href="classTang_1_1Program.html#a3ed3e014d80138d61d545a3ef5fe0a2e" title="Create a new compile/execute environment stack entry." alt="" coords="299,579,536,605"/>
+<area shape="rect" href="classTang_1_1Program.html#aabcfee07409be5bc6bf1312f26b56a85" title="Set the stack details of a function declaration." alt="" coords="595,427,794,469"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a70c47a9bd3b30601bc6b9647c8bb769b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70c47a9bd3b30601bc6b9647c8bb769b">&#9670;&nbsp;</a></span>compilePreprocess()</h2>
+<a id="aa5067f4dfc34a538a858f3437fd063ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5067f4dfc34a538a858f3437fd063ef">&#9670;&nbsp;</a></span>compilePreprocess()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -254,8 +295,18 @@ Here is the call graph for this function:</div>
           <td class="memname">void AstNodeFunctionDeclaration::compilePreprocess </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classTang_1_1Program.html">Program</a> &amp;&#160;</td>
-          <td class="paramname"><em>program</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>program</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641">PreprocessState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -269,16 +320,17 @@ Here is the call graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">program</td><td>The <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a> that is being compiled. </td></tr>
+    <tr><td class="paramname">state</td><td>Any preprocess flags that need to be considered. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="classTang_1_1AstNode.html#a8430f4ca74662f17184b3107dfa7034b">Tang::AstNode</a>.</p>
+<p>Reimplemented from <a class="el" href="classTang_1_1AstNode.html#a269c37e41595e0338bf4653cdb32e9cb">Tang::AstNode</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classTang_1_1AstNodeFunctionDeclaration_a70c47a9bd3b30601bc6b9647c8bb769b_cgraph.png" border="0" usemap="#aclassTang_1_1AstNodeFunctionDeclaration_a70c47a9bd3b30601bc6b9647c8bb769b_cgraph" alt=""/></div>
-<map name="aclassTang_1_1AstNodeFunctionDeclaration_a70c47a9bd3b30601bc6b9647c8bb769b_cgraph" id="aclassTang_1_1AstNodeFunctionDeclaration_a70c47a9bd3b30601bc6b9647c8bb769b_cgraph">
+<div class="center"><img src="classTang_1_1AstNodeFunctionDeclaration_aa5067f4dfc34a538a858f3437fd063ef_cgraph.png" border="0" usemap="#aclassTang_1_1AstNodeFunctionDeclaration_aa5067f4dfc34a538a858f3437fd063ef_cgraph" alt=""/></div>
+<map name="aclassTang_1_1AstNodeFunctionDeclaration_aa5067f4dfc34a538a858f3437fd063ef_cgraph" id="aclassTang_1_1AstNodeFunctionDeclaration_aa5067f4dfc34a538a858f3437fd063ef_cgraph">
 <area shape="rect" title="Run any preprocess analysis needed before compilation." alt="" coords="5,5,251,47"/>
 <area shape="rect" href="classTang_1_1Program.html#ab6ffaae61038ad76502d9fd5c26a69f2" title="Add an identifier to the environment." alt="" coords="299,13,504,39"/>
 </map>

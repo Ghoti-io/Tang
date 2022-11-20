@@ -11,8 +11,7 @@ Represents a compiled script or template that may be executed.
 
 
 
-Collaboration diagram for Tang\+::Program\+:
-\nopagebreak
+Collaboration diagram for Tang\+::Program\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -58,6 +57,10 @@ void \mbox{\hyperlink{classTang_1_1Program_ab6ffaae61038ad76502d9fd5c26a69f2}{ad
 \begin{DoxyCompactList}\small\item\em Add an identifier to the environment. \end{DoxyCompactList}\item 
 const std\+::map$<$ std\+::string, size\+\_\+t $>$ \& \mbox{\hyperlink{classTang_1_1Program_a788deba60696516b2019081afdead30c}{get\+Identifiers}} () const
 \begin{DoxyCompactList}\small\item\em Get the identifier map of the current environment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTang_1_1Program_a861d7d5ad832ea2865156c8517b58ad1}{add\+Identifier\+Assigned}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Indicate that an identifier will be altered within the associated scope. \end{DoxyCompactList}\item 
+const std\+::set$<$ std\+::string $>$ \& \mbox{\hyperlink{classTang_1_1Program_a93e80b96547877bfb6ed1b01fd0a6b7c}{get\+Identifiers\+Assigned}} () const
+\begin{DoxyCompactList}\small\item\em Get the set of identifiers that will be assigned in the current scope. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classTang_1_1Program_a7d778367416fa5697086a89bece76696}{add\+String}} (const std\+::string \&name)
 \begin{DoxyCompactList}\small\item\em Add a string to the environment. \end{DoxyCompactList}\item 
 const std\+::map$<$ std\+::string, size\+\_\+t $>$ \& \mbox{\hyperlink{classTang_1_1Program_a6d8557e55dd1aeb9f6791c7c84528332}{get\+Strings}} () const
@@ -204,6 +207,21 @@ Add an identifier to the environment.
 {\em position} & If provided, the desired position to place the identifier. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classTang_1_1Program_a861d7d5ad832ea2865156c8517b58ad1}\label{classTang_1_1Program_a861d7d5ad832ea2865156c8517b58ad1}} 
+\index{Tang::Program@{Tang::Program}!addIdentifierAssigned@{addIdentifierAssigned}}
+\index{addIdentifierAssigned@{addIdentifierAssigned}!Tang::Program@{Tang::Program}}
+\doxysubsubsection{\texorpdfstring{addIdentifierAssigned()}{addIdentifierAssigned()}}
+{\footnotesize\ttfamily void Program\+::add\+Identifier\+Assigned (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Indicate that an identifier will be altered within the associated scope. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The identifier name. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classTang_1_1Program_a7d778367416fa5697086a89bece76696}\label{classTang_1_1Program_a7d778367416fa5697086a89bece76696}} 
 \index{Tang::Program@{Tang::Program}!addString@{addString}}
 \index{addString@{addString}!Tang::Program@{Tang::Program}}
@@ -247,8 +265,7 @@ Execute the program\textquotesingle{}s Bytecode, and return the current \mbox{\h
 \begin{DoxyReturn}{Returns}
 The current \mbox{\hyperlink{classTang_1_1Program}{Program}} object. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -309,6 +326,19 @@ Get the identifier map of the current environment.
 \begin{DoxyReturn}{Returns}
 A map of each identifer name to its stack position within the current environment. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1Program_a93e80b96547877bfb6ed1b01fd0a6b7c}\label{classTang_1_1Program_a93e80b96547877bfb6ed1b01fd0a6b7c}} 
+\index{Tang::Program@{Tang::Program}!getIdentifiersAssigned@{getIdentifiersAssigned}}
+\index{getIdentifiersAssigned@{getIdentifiersAssigned}!Tang::Program@{Tang::Program}}
+\doxysubsubsection{\texorpdfstring{getIdentifiersAssigned()}{getIdentifiersAssigned()}}
+{\footnotesize\ttfamily const set$<$ string $>$ \& Program\+::get\+Identifiers\+Assigned (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the set of identifiers that will be assigned in the current scope. 
+
+\begin{DoxyReturn}{Returns}
+A set of identifier names that have been identified as the target of an assignment operator within the current scope. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classTang_1_1Program_a84b2e5e25f57eea224d1c04f1f3741eb}\label{classTang_1_1Program_a84b2e5e25f57eea224d1c04f1f3741eb}} 
 \index{Tang::Program@{Tang::Program}!getResult@{getResult}}
 \index{getResult@{getResult}!Tang::Program@{Tang::Program}}
@@ -350,8 +380,7 @@ For all {\ttfamily continue} bytecode locations collected by Tang\+::add\+Contin
 {\em target} & The target bytecode offset that the {\ttfamily continue} should jump to. \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -373,8 +402,7 @@ For all {\ttfamily continue} bytecode locations collected by Tang\+::add\+Contin
 {\em target} & The target bytecode offset that the {\ttfamily continue} should jump to. \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -396,8 +424,7 @@ Create a new compile/execute environment stack entry.
 {\em ast} & The ast node from which this new environment will be formed. \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

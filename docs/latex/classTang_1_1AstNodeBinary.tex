@@ -11,8 +11,7 @@ An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a binary e
 
 
 
-Inheritance diagram for Tang\+::Ast\+Node\+Binary\+:
-\nopagebreak
+Inheritance diagram for Tang\+::Ast\+Node\+Binary\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for Tang\+::Ast\+Node\+Binary\+:
 \end{figure}
 
 
-Collaboration diagram for Tang\+::Ast\+Node\+Binary\+:
-\nopagebreak
+Collaboration diagram for Tang\+::Ast\+Node\+Binary\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -50,7 +48,11 @@ enum \mbox{\hyperlink{classTang_1_1AstNodeBinary_a8fa249142e89a3ade59f2c7a98eb74
 , \newline
 \mbox{\hyperlink{classTang_1_1AstNodeBinary_a8fa249142e89a3ade59f2c7a98eb74f9a33a8dd4d74fbd7e16aebe58154fe4ccd}{Or}}
  \}
-\begin{DoxyCompactList}\small\item\em Indicates the type of binary expression that this node represents. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Indicates the type of binary expression that this node represents. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Preprocess\+State}} \+: int \{ \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641a0936249b625085e3b4124ae378f9a1c1}{Default}} = 0
+, \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641a586bda9718eca4db4d4afac8e298023a}{Is\+Assignment}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Bit flags to indicate the state of the preprocess scan as it recursively evaluates the AST. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -60,7 +62,7 @@ virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeBinary_a16506f66e9f45
 \begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classTang_1_1AstNodeBinary_a7955b76c5e7bdf92aa86f8c58ce10473}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const override
 \begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classTang_1_1AstNodeBinary_a0379489bea93c1f926a9f88d400f36fc}{compile\+Preprocess}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program) const override
+virtual void \mbox{\hyperlink{classTang_1_1AstNodeBinary_ac0c895bc010e5ae9916c3f8bc49770ca}{compile\+Preprocess}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program, \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Preprocess\+State}} state) const override
 \begin{DoxyCompactList}\small\item\em Run any preprocess analysis needed before compilation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -132,6 +134,26 @@ Or&Indicates lhs $\vert$$\vert$ rhs with short-\/circuit evaluation. \\
 \hline
 
 \end{DoxyEnumFields}
+\mbox{\Hypertarget{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}\label{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}} 
+\index{Tang::AstNodeBinary@{Tang::AstNodeBinary}!PreprocessState@{PreprocessState}}
+\index{PreprocessState@{PreprocessState}!Tang::AstNodeBinary@{Tang::AstNodeBinary}}
+\doxysubsubsection{\texorpdfstring{PreprocessState}{PreprocessState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Tang\+::\+Ast\+Node\+::\+Preprocess\+State}} \+: int\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Bit flags to indicate the state of the preprocess scan as it recursively evaluates the AST. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Default@{Default}!Tang::AstNodeBinary@{Tang::AstNodeBinary}}\index{Tang::AstNodeBinary@{Tang::AstNodeBinary}!Default@{Default}}}\mbox{\Hypertarget{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641a0936249b625085e3b4124ae378f9a1c1}\label{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641a0936249b625085e3b4124ae378f9a1c1}} 
+Default&The default state. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IsAssignment@{IsAssignment}!Tang::AstNodeBinary@{Tang::AstNodeBinary}}\index{Tang::AstNodeBinary@{Tang::AstNodeBinary}!IsAssignment@{IsAssignment}}}\mbox{\Hypertarget{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641a586bda9718eca4db4d4afac8e298023a}\label{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641a586bda9718eca4db4d4afac8e298023a}} 
+Is\+Assignment&\mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} is part of an assignment expression. \\
+\hline
+
+\end{DoxyEnumFields}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -178,19 +200,18 @@ Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\
 
 Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a390f8887c418f972d75e968f1274b2cb}{Tang\+::\+Ast\+Node}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classTang_1_1AstNodeBinary_a7955b76c5e7bdf92aa86f8c58ce10473_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classTang_1_1AstNodeBinary_a0379489bea93c1f926a9f88d400f36fc}\label{classTang_1_1AstNodeBinary_a0379489bea93c1f926a9f88d400f36fc}} 
+\mbox{\Hypertarget{classTang_1_1AstNodeBinary_ac0c895bc010e5ae9916c3f8bc49770ca}\label{classTang_1_1AstNodeBinary_ac0c895bc010e5ae9916c3f8bc49770ca}} 
 \index{Tang::AstNodeBinary@{Tang::AstNodeBinary}!compilePreprocess@{compilePreprocess}}
 \index{compilePreprocess@{compilePreprocess}!Tang::AstNodeBinary@{Tang::AstNodeBinary}}
 \doxysubsubsection{\texorpdfstring{compilePreprocess()}{compilePreprocess()}}
-{\footnotesize\ttfamily void Ast\+Node\+Binary\+::compile\+Preprocess (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1Program}{Program}} \&}]{program }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Ast\+Node\+Binary\+::compile\+Preprocess (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1Program}{Program}} \&}]{program,  }\item[{\mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Preprocess\+State}}}]{state }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -200,10 +221,12 @@ Run any preprocess analysis needed before compilation.
 \begin{DoxyParams}{Parameters}
 {\em program} & The \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} that is being compiled. \\
 \hline
+{\em state} & Any preprocess flags that need to be considered. \\
+\hline
 \end{DoxyParams}
 
 
-Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a8430f4ca74662f17184b3107dfa7034b}{Tang\+::\+Ast\+Node}}.
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a269c37e41595e0338bf4653cdb32e9cb}{Tang\+::\+Ast\+Node}}.
 
 \mbox{\Hypertarget{classTang_1_1AstNodeBinary_a16506f66e9f45c069d6a280ba176e2a7}\label{classTang_1_1AstNodeBinary_a16506f66e9f45c069d6a280ba176e2a7}} 
 \index{Tang::AstNodeBinary@{Tang::AstNodeBinary}!dump@{dump}}

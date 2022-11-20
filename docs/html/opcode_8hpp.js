@@ -4,6 +4,7 @@ var opcode_8hpp =
       [ "POP", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04aefdb39a4c7286afcecf0e8a7435fce6a", null ],
       [ "PEEK", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a422982ae154d01bf45c66c601981e6c2", null ],
       [ "POKE", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af0e166c6fa2443a133f77d263161b11f", null ],
+      [ "COPY", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ae8606d021da140a92c7eba8d9b8af84f", null ],
       [ "JMP", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a152b9af76a9e7dd95d9da277b69fdd95", null ],
       [ "JMPF", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a13c24ba31a2f9be1455950325eadcae6", null ],
       [ "JMPF_POP", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a58d52e0bb8076b5b59f991df9f515adc", null ],

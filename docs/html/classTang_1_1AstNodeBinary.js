@@ -15,8 +15,12 @@ var classTang_1_1AstNodeBinary =
       [ "And", "classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9af2d352022a9f92608a9c92b9f44c13d3", null ],
       [ "Or", "classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9a33a8dd4d74fbd7e16aebe58154fe4ccd", null ]
     ] ],
+    [ "PreprocessState", "classTang_1_1AstNodeBinary.html#ae0f662cd990cd733c7d5447ea3a1e641", [
+      [ "Default", "classTang_1_1AstNodeBinary.html#ae0f662cd990cd733c7d5447ea3a1e641a0936249b625085e3b4124ae378f9a1c1", null ],
+      [ "IsAssignment", "classTang_1_1AstNodeBinary.html#ae0f662cd990cd733c7d5447ea3a1e641a586bda9718eca4db4d4afac8e298023a", null ]
+    ] ],
     [ "AstNodeBinary", "classTang_1_1AstNodeBinary.html#adedfe569adbdc47097f8129b95c000dd", null ],
     [ "compile", "classTang_1_1AstNodeBinary.html#a7955b76c5e7bdf92aa86f8c58ce10473", null ],
-    [ "compilePreprocess", "classTang_1_1AstNodeBinary.html#a0379489bea93c1f926a9f88d400f36fc", null ],
+    [ "compilePreprocess", "classTang_1_1AstNodeBinary.html#ac0c895bc010e5ae9916c3f8bc49770ca", null ],
     [ "dump", "classTang_1_1AstNodeBinary.html#a16506f66e9f45c069d6a280ba176e2a7", null ]
 ];

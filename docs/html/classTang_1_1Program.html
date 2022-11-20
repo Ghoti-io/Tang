@@ -166,6 +166,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a788deba60696516b2019081afdead30c"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, size_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a788deba60696516b2019081afdead30c">getIdentifiers</a> () const</td></tr>
 <tr class="memdesc:a788deba60696516b2019081afdead30c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the identifier map of the current environment.  <a href="classTang_1_1Program.html#a788deba60696516b2019081afdead30c">More...</a><br /></td></tr>
 <tr class="separator:a788deba60696516b2019081afdead30c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a861d7d5ad832ea2865156c8517b58ad1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a861d7d5ad832ea2865156c8517b58ad1">addIdentifierAssigned</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a861d7d5ad832ea2865156c8517b58ad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate that an identifier will be altered within the associated scope.  <a href="classTang_1_1Program.html#a861d7d5ad832ea2865156c8517b58ad1">More...</a><br /></td></tr>
+<tr class="separator:a861d7d5ad832ea2865156c8517b58ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93e80b96547877bfb6ed1b01fd0a6b7c"><td class="memItemLeft" align="right" valign="top">const std::set&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a93e80b96547877bfb6ed1b01fd0a6b7c">getIdentifiersAssigned</a> () const</td></tr>
+<tr class="memdesc:a93e80b96547877bfb6ed1b01fd0a6b7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of identifiers that will be assigned in the current scope.  <a href="classTang_1_1Program.html#a93e80b96547877bfb6ed1b01fd0a6b7c">More...</a><br /></td></tr>
+<tr class="separator:a93e80b96547877bfb6ed1b01fd0a6b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d778367416fa5697086a89bece76696"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a7d778367416fa5697086a89bece76696">addString</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:a7d778367416fa5697086a89bece76696"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a string to the environment.  <a href="classTang_1_1Program.html#a7d778367416fa5697086a89bece76696">More...</a><br /></td></tr>
 <tr class="separator:a7d778367416fa5697086a89bece76696"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -391,6 +397,32 @@ std::map&lt; std::string, std::vector&lt; <a class="el" href="macros_8hpp.html#a
 
 </div>
 </div>
+<a id="a861d7d5ad832ea2865156c8517b58ad1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a861d7d5ad832ea2865156c8517b58ad1">&#9670;&nbsp;</a></span>addIdentifierAssigned()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Program::addIdentifierAssigned </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indicate that an identifier will be altered within the associated scope. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The identifier name. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a7d778367416fa5697086a89bece76696"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7d778367416fa5697086a89bece76696">&#9670;&nbsp;</a></span>addString()</h2>
 
@@ -545,6 +577,26 @@ Here is the call graph for this function:</div>
 
 <p>Get the identifier map of the current environment. </p>
 <dl class="section return"><dt>Returns</dt><dd>A map of each identifer name to its stack position within the current environment. </dd></dl>
+
+</div>
+</div>
+<a id="a93e80b96547877bfb6ed1b01fd0a6b7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93e80b96547877bfb6ed1b01fd0a6b7c">&#9670;&nbsp;</a></span>getIdentifiersAssigned()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const set&lt; string &gt; &amp; Program::getIdentifiersAssigned </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the set of identifiers that will be assigned in the current scope. </p>
+<dl class="section return"><dt>Returns</dt><dd>A set of identifier names that have been identified as the target of an assignment operator within the current scope. </dd></dl>
 
 </div>
 </div>

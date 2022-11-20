@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('classTang_1_1AstNodeAssign.html',''); 
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classTang_1_1AstNodeAssign-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -114,6 +115,14 @@ Collaboration diagram for Tang::AstNodeAssign:</div>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ae0f662cd990cd733c7d5447ea3a1e641"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641">PreprocessState</a> : int { <a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641a0936249b625085e3b4124ae378f9a1c1">Default</a> = 0
+, <a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641a586bda9718eca4db4d4afac8e298023a">IsAssignment</a> = 1
+ }</td></tr>
+<tr class="memdesc:ae0f662cd990cd733c7d5447ea3a1e641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit flags to indicate the state of the preprocess scan as it recursively evaluates the AST.  <a href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641">More...</a><br /></td></tr>
+<tr class="separator:ae0f662cd990cd733c7d5447ea3a1e641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a894882b8a492d4615f04a27ba239b92c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeAssign.html#a894882b8a492d4615f04a27ba239b92c">AstNodeAssign</a> (std::shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt; lhs, std::shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt; rhs, <a class="el" href="classTang_1_1location.html">Tang::location</a> <a class="el" href="classTang_1_1location.html">location</a>)</td></tr>
@@ -125,13 +134,44 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab721ec873be1d57e8e61c1703f2a4506"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeAssign.html#ab721ec873be1d57e8e61c1703f2a4506">compile</a> (<a class="el" href="classTang_1_1Program.html">Tang::Program</a> &amp;program) const override</td></tr>
 <tr class="memdesc:ab721ec873be1d57e8e61c1703f2a4506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile the ast of the provided <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a>.  <a href="classTang_1_1AstNodeAssign.html#ab721ec873be1d57e8e61c1703f2a4506">More...</a><br /></td></tr>
 <tr class="separator:ab721ec873be1d57e8e61c1703f2a4506"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af21285acd379f7d9c66ca5e6d225c19f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeAssign.html#af21285acd379f7d9c66ca5e6d225c19f">compilePreprocess</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program) const override</td></tr>
-<tr class="memdesc:af21285acd379f7d9c66ca5e6d225c19f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run any preprocess analysis needed before compilation.  <a href="classTang_1_1AstNodeAssign.html#af21285acd379f7d9c66ca5e6d225c19f">More...</a><br /></td></tr>
-<tr class="separator:af21285acd379f7d9c66ca5e6d225c19f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a058119ebf41115e0fff29270379ca7e2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeAssign.html#a058119ebf41115e0fff29270379ca7e2">compilePreprocess</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program, <a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641">PreprocessState</a> state) const override</td></tr>
+<tr class="memdesc:a058119ebf41115e0fff29270379ca7e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run any preprocess analysis needed before compilation.  <a href="classTang_1_1AstNodeAssign.html#a058119ebf41115e0fff29270379ca7e2">More...</a><br /></td></tr>
+<tr class="separator:a058119ebf41115e0fff29270379ca7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that represents a binary expression. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="ae0f662cd990cd733c7d5447ea3a1e641"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0f662cd990cd733c7d5447ea3a1e641">&#9670;&nbsp;</a></span>PreprocessState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641">Tang::AstNode::PreprocessState</a> : int</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bit flags to indicate the state of the preprocess scan as it recursively evaluates the AST. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae0f662cd990cd733c7d5447ea3a1e641a0936249b625085e3b4124ae378f9a1c1"></a>Default&#160;</td><td class="fielddoc"><p>The default state. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae0f662cd990cd733c7d5447ea3a1e641a586bda9718eca4db4d4afac8e298023a"></a>IsAssignment&#160;</td><td class="fielddoc"><p><a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> is part of an assignment expression. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a894882b8a492d4615f04a27ba239b92c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a894882b8a492d4615f04a27ba239b92c">&#9670;&nbsp;</a></span>AstNodeAssign()</h2>
 
@@ -224,8 +264,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="af21285acd379f7d9c66ca5e6d225c19f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af21285acd379f7d9c66ca5e6d225c19f">&#9670;&nbsp;</a></span>compilePreprocess()</h2>
+<a id="a058119ebf41115e0fff29270379ca7e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a058119ebf41115e0fff29270379ca7e2">&#9670;&nbsp;</a></span>compilePreprocess()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -237,8 +277,18 @@ Here is the call graph for this function:</div>
           <td class="memname">void AstNodeAssign::compilePreprocess </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classTang_1_1Program.html">Program</a> &amp;&#160;</td>
-          <td class="paramname"><em>program</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>program</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641">PreprocessState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -252,11 +302,12 @@ Here is the call graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">program</td><td>The <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a> that is being compiled. </td></tr>
+    <tr><td class="paramname">state</td><td>Any preprocess flags that need to be considered. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="classTang_1_1AstNode.html#a8430f4ca74662f17184b3107dfa7034b">Tang::AstNode</a>.</p>
+<p>Reimplemented from <a class="el" href="classTang_1_1AstNode.html#a269c37e41595e0338bf4653cdb32e9cb">Tang::AstNode</a>.</p>
 
 </div>
 </div>

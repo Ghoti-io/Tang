@@ -11,8 +11,7 @@ A container that acts as a resource-\/counting garbage collector for the specifi
 
 
 
-Collaboration diagram for Tang\+::Garbage\+Collected\+:
-\nopagebreak
+Collaboration diagram for Tang\+::Garbage\+Collected\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -32,9 +31,11 @@ Collaboration diagram for Tang\+::Garbage\+Collected\+:
 \begin{DoxyCompactList}\small\item\em Move Assignment. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTang_1_1GarbageCollected_a353748f997d200432d22c0ba93ebde6e}{$\sim$\+Garbage\+Collected}} ()
 \begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} $\ast$ \mbox{\hyperlink{classTang_1_1GarbageCollected_ae9f5eb28dec34650dd8f74f0dc4f2e3c}{operator-\/$>$}} () const
+\mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1GarbageCollected_a638f17396cd75d4110aec78f4b8f63bd}{make\+Copy}} () const
+\begin{DoxyCompactList}\small\item\em Create a separate copy of the original \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} $\ast$ \mbox{\hyperlink{classTang_1_1GarbageCollected_a860ba802006dc8cf8b907f055455597f}{operator-\/$>$}} () const
 \begin{DoxyCompactList}\small\item\em Access the tracked object as a pointer. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} \& \mbox{\hyperlink{classTang_1_1GarbageCollected_aff040291d71e55358cf0656c9876d3c8}{operator$\ast$}} () const
+\mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} \& \mbox{\hyperlink{classTang_1_1GarbageCollected_a8d4ce50415cc7973e96d2f46d9daf5c2}{operator$\ast$}} () const
 \begin{DoxyCompactList}\small\item\em Access the tracked object. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classTang_1_1GarbageCollected_aef46a8b50df6126a32f754b7456cf15b}{operator==}} (const \mbox{\hyperlink{macros_8hpp_a48da4f54f29ec5b8a4dfd1a9234f7ee8}{Tang\+::integer\+\_\+t}} \&val) const
 \begin{DoxyCompactList}\small\item\em Compare the \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} tracked object with a supplied value. \end{DoxyCompactList}\item 
@@ -190,12 +191,32 @@ Creates a garbage-\/collected object of the specified type.
 \begin{DoxyReturn}{Returns}
 A \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} object. 
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTang_1_1GarbageCollected_acb3de1421025af18d948dfae7dad5fb0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTang_1_1GarbageCollected_a638f17396cd75d4110aec78f4b8f63bd}\label{classTang_1_1GarbageCollected_a638f17396cd75d4110aec78f4b8f63bd}} 
+\index{Tang::GarbageCollected@{Tang::GarbageCollected}!makeCopy@{makeCopy}}
+\index{makeCopy@{makeCopy}!Tang::GarbageCollected@{Tang::GarbageCollected}}
+\doxysubsubsection{\texorpdfstring{makeCopy()}{makeCopy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Garbage\+Collected\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Create a separate copy of the original \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value. 
+
+\begin{DoxyReturn}{Returns}
+A \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} copy of the original value. 
+\end{DoxyReturn}
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classTang_1_1GarbageCollected_acb3de1421025af18d948dfae7dad5fb0_cgraph}
+\includegraphics[width=350pt]{classTang_1_1GarbageCollected_a638f17396cd75d4110aec78f4b8f63bd_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classTang_1_1GarbageCollected_a3683ebb77cfca1a8ac1aaf26c41d3666}\label{classTang_1_1GarbageCollected_a3683ebb77cfca1a8ac1aaf26c41d3666}} 
@@ -211,8 +232,7 @@ Perform a logical not on the \mbox{\hyperlink{classTang_1_1GarbageCollected}{Gar
 \begin{DoxyReturn}{Returns}
 The result of the operation. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -237,8 +257,7 @@ Perform a != between two \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage
 \begin{DoxyReturn}{Returns}
 The result of the operation. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -263,19 +282,18 @@ Perform a modulo between two \mbox{\hyperlink{classTang_1_1GarbageCollected}{Gar
 \begin{DoxyReturn}{Returns}
 The result of the operation. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classTang_1_1GarbageCollected_a4acf35c0dd46b2c14b4bccb7152fe918_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classTang_1_1GarbageCollected_aff040291d71e55358cf0656c9876d3c8}\label{classTang_1_1GarbageCollected_aff040291d71e55358cf0656c9876d3c8}} 
+\mbox{\Hypertarget{classTang_1_1GarbageCollected_a8d4ce50415cc7973e96d2f46d9daf5c2}\label{classTang_1_1GarbageCollected_a8d4ce50415cc7973e96d2f46d9daf5c2}} 
 \index{Tang::GarbageCollected@{Tang::GarbageCollected}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!Tang::GarbageCollected@{Tang::GarbageCollected}}
 \doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}}\& Tang\+::\+Garbage\+Collected\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} \& Garbage\+Collected\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -302,8 +320,7 @@ Perform a multiplication between two \mbox{\hyperlink{classTang_1_1GarbageCollec
 \begin{DoxyReturn}{Returns}
 The result of the operation. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -328,8 +345,7 @@ Perform an addition between two \mbox{\hyperlink{classTang_1_1GarbageCollected}{
 \begin{DoxyReturn}{Returns}
 The result of the operation. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -349,8 +365,7 @@ Perform a negation on the \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbag
 \begin{DoxyReturn}{Returns}
 The result of the operation. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -375,19 +390,18 @@ Perform a subtraction between two \mbox{\hyperlink{classTang_1_1GarbageCollected
 \begin{DoxyReturn}{Returns}
 The result of the operation. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classTang_1_1GarbageCollected_ab07b787947ec0f4451b14bf631d489a5_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classTang_1_1GarbageCollected_ae9f5eb28dec34650dd8f74f0dc4f2e3c}\label{classTang_1_1GarbageCollected_ae9f5eb28dec34650dd8f74f0dc4f2e3c}} 
+\mbox{\Hypertarget{classTang_1_1GarbageCollected_a860ba802006dc8cf8b907f055455597f}\label{classTang_1_1GarbageCollected_a860ba802006dc8cf8b907f055455597f}} 
 \index{Tang::GarbageCollected@{Tang::GarbageCollected}!operator-\/$>$@{operator-\/$>$}}
 \index{operator-\/$>$@{operator-\/$>$}!Tang::GarbageCollected@{Tang::GarbageCollected}}
 \doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}}$\ast$ Tang\+::\+Garbage\+Collected\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} $\ast$ Garbage\+Collected\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -414,8 +428,7 @@ Perform a division between two \mbox{\hyperlink{classTang_1_1GarbageCollected}{G
 \begin{DoxyReturn}{Returns}
 The result of the operation. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -440,8 +453,7 @@ Perform a $<$ between two \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbag
 \begin{DoxyReturn}{Returns}
 The result of the operation. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -481,8 +493,7 @@ Copy Assignment.
 {\em The} & other \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} object. \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -504,8 +515,7 @@ Move Assignment.
 {\em The} & other \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} object. \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -584,8 +594,7 @@ Perform a == between two \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage
 \begin{DoxyReturn}{Returns}
 The result of the operation. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -664,6 +673,14 @@ Compare the \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}}
 \begin{DoxyReturn}{Returns}
 True if they are equal, false otherwise. 
 \end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTang_1_1GarbageCollected_aef46a8b50df6126a32f754b7456cf15b_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classTang_1_1GarbageCollected_a0b6b70718e72c749ec89d194dbec6c9d}\label{classTang_1_1GarbageCollected_a0b6b70718e72c749ec89d194dbec6c9d}} 
 \index{Tang::GarbageCollected@{Tang::GarbageCollected}!operator$>$@{operator$>$}}
 \index{operator$>$@{operator$>$}!Tang::GarbageCollected@{Tang::GarbageCollected}}
@@ -700,8 +717,7 @@ Perform a $>$= between two \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garba
 \begin{DoxyReturn}{Returns}
 The result of the operation. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
