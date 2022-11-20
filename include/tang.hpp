@@ -45,9 +45,6 @@
 // * !"" - raw string
 // * default print() on ComputedExpressionString
 //   * What to do when combining strings?
-// * GarbageCollected refactor
-//   * recycle should not call realloc.
-//   * recycled pointer space should be reserved when get() allocates object space.
 // * Better location tracking for bytecode and error reporting.
 // * Array Slice
 // * String [] access

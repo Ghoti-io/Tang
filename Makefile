@@ -261,10 +261,10 @@ $(APP_DIR)/test: test/test.cpp include/singletonObjectPool.hpp include/macros.hp
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ $< $(LDFLAGS) $(TESTFLAGS) $(TANGLIBRARY)
 
-$(APP_DIR)/testSingletonObjectPool: test/testSingletonObjectPool.cpp include/singletonObjectPool.hpp $(APP_DIR)/$(TARGET)
+$(APP_DIR)/testSingletonObjectPool: test/testSingletonObjectPool.cpp include/singletonObjectPool.hpp
 	@echo "\n### Compiling SingletonObjectPool Test ###"
 	@mkdir -p $(@D)
-	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ $< $(LDFLAGS) $(TESTFLAGS) $(TANGLIBRARY)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ $< $(LDFLAGS) $(TESTFLAGS)
 
 $(APP_DIR)/testGarbageCollected: test/testGarbageCollected.cpp include/macros.hpp include/garbageCollected.hpp include/singletonObjectPool.hpp $(APP_DIR)/$(TARGET)
 	@echo "\n### Compiling GarbageCollected Test ###"

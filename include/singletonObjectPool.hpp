@@ -41,8 +41,18 @@ namespace Tang {
       this->lock.lock();
 
       // If there is a recycled object available, return it first.
-      if (this->recycledOpen) {
-        T* tmp = this->recycled[--this->recycledOpen];
+      if (this->currentRecycledAllocation != -1) {
+        // Get the block of recycled pointers.
+        T** recycled = (T**)&this->allocations[this->currentRecycledAllocation][GROW];
+
+        // Get the pointer to be returned.
+        T* tmp = recycled[this->currentRecycledIndex--];
+
+        // Decrement the `currentRecycledIndex` and adjust if necessary.
+        if (this->currentRecycledIndex < 0) {
+          --this->currentRecycledAllocation;
+          this->currentRecycledIndex = GROW - 1;
+        }
         this->lock.unlock();
         return tmp;
       }
@@ -58,7 +68,7 @@ namespace Tang {
 
       // There's not any allocation pool memory available, so we need to
       // allocate more.
-      T* newBlock = (T*)malloc(sizeof(T) * GROW);
+      T* newBlock = (T*)malloc((sizeof(T) * GROW) + (sizeof(T*) * GROW));
       if (!newBlock) {
         // The malloc() failed.
         this->lock.unlock();
@@ -90,23 +100,18 @@ namespace Tang {
     void recycle(T* obj) {
       this->lock.lock();
 
-      // Verify that there is room in the current recycled block.
-      if (this->recycledOpen == this->recycledSize) {
-        // Make room for more recycled.
-        T** newRecycled = (T**)realloc(this->recycled, sizeof(T*) * (this->recycledSize + GROW));
-        if (!newRecycled) {
-          // The realloc() failed.
-          this->lock.unlock();
-          throw std::bad_alloc();
-        }
+      // TODO: Verify that there is room in the current recycled block.
+      // ASSERT(this->currentRecycledAllocation != -1);
 
-        // The realloc() succeeded.
-        this->recycled = newRecycled;
-        this->recycledSize += GROW;
+      if (++this->currentRecycledIndex == GROW) {
+        this->currentRecycledIndex = 0;
+        ++this->currentRecycledAllocation;
       }
 
-      // Recycle the pointer.
-      this->recycled[this->recycledOpen++] = obj;
+      // Get the block of recycled pointers.
+      T** recycled = (T**)&this->allocations[this->currentRecycledAllocation][GROW];
+      recycled[this->currentRecycledIndex] = obj;
+
       this->lock.unlock();
     }
 
@@ -124,16 +129,13 @@ namespace Tang {
         }
         free (this->allocations);
       }
-      if (this->recycled) {
-        free (this->recycled);
-      }
     }
 
   private:
     /**
      * The constructor, hidden from being directly called.
      */
-    SingletonObjectPool() : allocations{nullptr}, recycled{nullptr}, currentAllocation{-1}, currentIndex{GROW}, recycledSize{0}, recycledOpen{0} {}
+    SingletonObjectPool() : allocations{nullptr}, /*recycled{nullptr},*/ currentAllocation{-1}, currentIndex{GROW}, currentRecycledAllocation{-1}, currentRecycledIndex{GROW - 1} {}
 
     /**
      * The copy constructor, hidden from being called.
@@ -144,11 +146,6 @@ namespace Tang {
      * C-array of allocated blocks, each block contains `GROW` objects.
      */
     T** allocations;
-
-    /**
-     * C-array of recycled pointers to objects.
-     */
-    T** recycled;
 
     /**
      * Index into `allocations`, representing the current block supplying
@@ -164,15 +161,17 @@ namespace Tang {
     size_t currentIndex;
 
     /**
-     * Size of the `recycled` array.
+     * Index into `allocations`, representing the current block tracking the
+     * recycled memory addresses.
      */
-    size_t recycledSize;
+    int currentRecycledAllocation;
 
     /**
-     * Index into the `recycled` array of the first open slot.  If
-     * `recycledOpen` == `recycledSize`, then `recycled` needs to grow.
+     * Current location (within the `currentRecycledAllocation` block) of the
+     * last available T*.  If currentRecycledIndex == GROW, then we must move
+     * to the next currentRecycledAllocation.
      */
-    size_t recycledOpen;
+    int currentRecycledIndex;
 
     /**
      * A mutex for thread-safety.
