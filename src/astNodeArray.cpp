@@ -21,9 +21,9 @@ string AstNodeArray::dump(string indent) const {
   return s; 
 }
 
-void AstNodeArray::compilePreprocess(Program & program) const {
+void AstNodeArray::compilePreprocess(Program & program, PreprocessState state) const {
   for (auto & item : this->contents) {
-    item->compilePreprocess(program);
+    item->compilePreprocess(program, state);
   }
 }
 

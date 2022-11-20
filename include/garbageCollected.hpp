@@ -124,22 +124,25 @@ namespace Tang {
     }
 
     /**
+     * Create a separate copy of the original GarbageCollected value.
+     *
+     * @return A GarbageCollected copy of the original value.
+     */
+    GarbageCollected makeCopy() const;
+
+    /**
      * Access the tracked object as a pointer.
      *
      * @return A pointer to the tracked object.
      */
-    ComputedExpression* operator->() const {
-      return this->ref;
-    }
+    ComputedExpression* operator->() const;
 
     /**
      * Access the tracked object.
      *
      * @return A reference to the tracked object.
      */
-    ComputedExpression& operator*() const {
-      return *this->ref;
-    }
+    ComputedExpression& operator*() const;
 
     /**
      * Compare the GarbageCollected tracked object with a supplied value.

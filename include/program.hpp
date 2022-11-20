@@ -151,6 +151,21 @@ namespace Tang {
     const std::map<std::string, size_t>& getIdentifiers() const;
 
     /**
+     * Indicate that an identifier will be altered within the associated scope.
+     *
+     * @param name The identifier name.
+     */
+    void addIdentifierAssigned(const std::string & name);
+
+    /**
+     * Get the set of identifiers that will be assigned in the current scope.
+     *
+     * @return A set of identifier names that have been identified as the
+     *   target of an assignment operator within the current scope.
+     */
+    const std::set<std::string>& getIdentifiersAssigned() const;
+
+    /**
      * Add a string to the environment.
      *
      * @param name The variable to add to the environment.
@@ -238,6 +253,12 @@ namespace Tang {
      * Stack of mappings of identifiers to their stack locations.
      */
     std::vector<std::map<std::string, size_t>> identifierStack;
+
+    /**
+     * Stack of sets of identifiers that are the target of an assignment
+     * statement within the associated scope.
+     */
+    std::vector<std::set<std::string>> identifiersAssignedStack;
 
     /**
      * Stack of mappings of strings to their stack locations.

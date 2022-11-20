@@ -25,6 +25,15 @@ namespace Tang {
   class AstNode {
   public:
     /**
+     * Bit flags to indicate the state of the preprocess scan as it recursively
+     * evaluates the AST.
+     */
+    enum PreprocessState : int {
+      Default = 0,      ///< The default state.
+      IsAssignment = 1, ///< AstNode is part of an assignment expression.
+    };
+
+    /**
      * The generic constructor.  It should never be called on its own.
      *
      * @param location The location associated with this node.
@@ -55,8 +64,9 @@ namespace Tang {
      * Run any preprocess analysis needed before compilation.
      *
      * @param program The Tang::Program that is being compiled.
+     * @param state Any preprocess flags that need to be considered.
      */
-    virtual void compilePreprocess(Program & program) const;
+    virtual void compilePreprocess(Program & program, PreprocessState state) const;
 
   private:
     /**

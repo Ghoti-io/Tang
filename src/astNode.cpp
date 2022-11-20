@@ -33,5 +33,5 @@ void AstNode::compile(Tang::Program & program) const {
   }
 }
 
-void AstNode::compilePreprocess([[maybe_unused]] Program & program) const {}
+void AstNode::compilePreprocess([[maybe_unused]] Program & program, [[maybe_unused]] PreprocessState state) const {}
 

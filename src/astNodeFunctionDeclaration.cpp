@@ -89,6 +89,19 @@ void AstNodeFunctionDeclaration::compile(Tang::Program & program) const {
     AstNodeString(literal, Tang::location{}).compileLiteral(program);
   }
 
+  // If any argument will be altered within the function body, then create a
+  // copy of the argument so that the value is not changed outside the scope
+  // of the function.
+  for (auto const & name : this->arguments) {
+    if (program.getIdentifiersAssigned().count(name)) {
+      // The argument will be modified in this function.  Create a copy of it
+      // so that the changes will not leak into the calling scope.
+      program.addBytecode((uinteger_t)Opcode::COPY);
+      program.addBytecode(program.getIdentifiers().at(name));
+    }
+  }
+  
+
   // Compile the program.
   // Do not pop the result.  It will be the "default" return value of the
   // function, if a `return;` statement is not otherwise used.
@@ -147,7 +160,7 @@ void AstNodeFunctionDeclaration::compile(Tang::Program & program) const {
   program.functionsDeclared[this->name] = {this->arguments.size(), functionStart};
 }
 
-void AstNodeFunctionDeclaration::compilePreprocess(Program & program) const {
+void AstNodeFunctionDeclaration::compilePreprocess(Program & program, [[maybe_unused]] PreprocessState state) const {
   program.addIdentifier(this->name);
   program.functionsCollected.back().insert(this->name);
 }

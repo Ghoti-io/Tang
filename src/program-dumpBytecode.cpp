@@ -53,6 +53,12 @@ string Program::dumpBytecode() const {
         pc += 2;
         break;
       }
+      case Opcode::COPY: {
+        DUMPPROGRAMCHECK(1);
+        out << "COPY" << this->bytecode[pc + 1];
+        pc += 2;
+        break;
+      }
       case Opcode::JMP: {
         DUMPPROGRAMCHECK(1);
         out << "JMP" << this->bytecode[pc + 1];

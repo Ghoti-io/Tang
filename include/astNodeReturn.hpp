@@ -24,7 +24,7 @@ namespace Tang {
 
     virtual std::string dump(std::string indent = "") const override;
     virtual void compile(Tang::Program & program) const override;
-    virtual void compilePreprocess(Program & program) const override;
+    virtual void compilePreprocess(Program & program, PreprocessState state) const override;
 
   private:
     /**

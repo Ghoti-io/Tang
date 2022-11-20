@@ -22,9 +22,9 @@ string AstNodeAssign::dump(string indent) const {
     + this->rhs->dump(indent + "    ");
 }
 
-void AstNodeAssign::compilePreprocess(Program & program) const {
-  this->lhs->compilePreprocess(program);
-  this->rhs->compilePreprocess(program);
+void AstNodeAssign::compilePreprocess(Program & program, PreprocessState state) const {
+  this->lhs->compilePreprocess(program, (PreprocessState)(state | AstNode::IsAssignment));
+  this->rhs->compilePreprocess(program, state);
 }
 
 void AstNodeAssign::compile(Tang::Program & program) const {

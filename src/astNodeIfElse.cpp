@@ -66,11 +66,11 @@ void AstNodeIfElse::compile(Tang::Program & program) const {
   }
 }
 
-void AstNodeIfElse::compilePreprocess(Program & program) const {
-  this->condition->compilePreprocess(program);
-  this->thenBlock->compilePreprocess(program);
+void AstNodeIfElse::compilePreprocess(Program & program, PreprocessState state) const {
+  this->condition->compilePreprocess(program, state);
+  this->thenBlock->compilePreprocess(program, state);
   if (this->elseBlock) {
-    this->elseBlock->compilePreprocess(program);
+    this->elseBlock->compilePreprocess(program, state);
   }
 }
 

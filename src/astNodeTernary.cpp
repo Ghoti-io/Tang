@@ -48,9 +48,9 @@ void AstNodeTernary::compile(Tang::Program & program) const {
   program.setJumpTarget(trueExpressionJump, program.getBytecode().size());
 }
 
-void AstNodeTernary::compilePreprocess(Program & program) const {
-  this->condition->compilePreprocess(program);
-  this->trueExpression->compilePreprocess(program);
-  this->falseExpression->compilePreprocess(program);
+void AstNodeTernary::compilePreprocess(Program & program, PreprocessState state) const {
+  this->condition->compilePreprocess(program, state);
+  this->trueExpression->compilePreprocess(program, state);
+  this->falseExpression->compilePreprocess(program, state);
 }
 

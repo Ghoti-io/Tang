@@ -1075,6 +1075,51 @@ TEST(Function, Return) {
   EXPECT_EQ(p4.execute().out, "HiHi");
 }
 
+TEST(Function, PassByValueVsRef) {
+  {
+    // Test shows:
+    //   1. array argument is correctly copied
+    //   2. argument does not modify outside scope
+    auto p1 = TangBase().compileScript(R"(
+      function change(val) {
+        val[1] = "foo";
+        print(val[0]);
+        print(val[1]);
+        print(val[2]);
+      }
+      a = [1,2,3];
+      print(a[0]);
+      print(a[1]);
+      print(a[2]);
+      change(a);
+      print(a[0]);
+      print(a[1]);
+      print(a[2]);
+    )");
+    EXPECT_EQ(p1.execute().out, "1231foo3123");
+  }
+  {
+    // Test shows:
+    //   1. argument produces COPY opcode.
+    auto p1 = TangBase().compileScript(R"(
+      function a(a) {
+        a = 1;
+      }
+    )");
+    EXPECT_EQ(p1.getBytecode().at(3), (uinteger_t)Opcode::COPY);
+  }
+  {
+    // Test shows:
+    //   1. argument does not produce COPY opcode.
+    auto p1 = TangBase().compileScript(R"(
+      function a(a) {
+        b = 1;
+      }
+    )");
+    EXPECT_NE(p1.getBytecode().at(4), (uinteger_t)Opcode::COPY);
+  }
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

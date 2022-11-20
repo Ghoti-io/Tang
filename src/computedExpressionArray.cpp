@@ -29,8 +29,13 @@ string ComputedExpressionArray::dump() const {
 }
 
 GarbageCollected ComputedExpressionArray::makeCopy() const {
-  // TODO Should this be a deep copy?
-  return GarbageCollected::make<ComputedExpressionArray>(this->contents);
+  // Make a deep copy of all array elements.
+  vector<GarbageCollected> newContents;
+  newContents.reserve(this->contents.size());
+  for (auto const & item : this->contents) {
+    newContents.push_back(item->makeCopy());
+  }
+  return GarbageCollected::make<ComputedExpressionArray>(newContents);
 }
 
 GarbageCollected ComputedExpressionArray::__index(const GarbageCollected & index) const {

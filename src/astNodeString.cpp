@@ -49,7 +49,7 @@ void AstNodeString::compileLiteral(Tang::Program & program) const {
   }
 }
 
-void AstNodeString::compilePreprocess(Program & program) const {
+void AstNodeString::compilePreprocess(Program & program, [[maybe_unused]] PreprocessState state) const {
   program.addString(this->val);
 }
 

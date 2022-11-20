@@ -20,9 +20,9 @@ string AstNodeBlock::dump(string indent) const {
   return out;
 }
 
-void AstNodeBlock::compilePreprocess(Program & program) const {
+void AstNodeBlock::compilePreprocess(Program & program, PreprocessState state) const {
   for (auto x : this->statements) {
-    x->compilePreprocess(program);
+    x->compilePreprocess(program, state);
   }
 }
 

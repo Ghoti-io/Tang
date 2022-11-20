@@ -36,9 +36,9 @@ string AstNodeBinary::dump(string indent) const {
     + this->rhs->dump(indent + "    ");
 }
 
-void AstNodeBinary::compilePreprocess(Program & program) const {
-  this->lhs->compilePreprocess(program);
-  this->rhs->compilePreprocess(program);
+void AstNodeBinary::compilePreprocess(Program & program, PreprocessState state) const {
+  this->lhs->compilePreprocess(program, state);
+  this->rhs->compilePreprocess(program, state);
 }
 
 void AstNodeBinary::compile(Tang::Program & program) const {

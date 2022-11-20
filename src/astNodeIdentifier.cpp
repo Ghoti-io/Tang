@@ -16,8 +16,13 @@ string AstNodeIdentifier::dump(string indent) const {
   return indent + "Identifier: " + this->name + "\n";
 }
 
-void AstNodeIdentifier::compilePreprocess(Program & program) const {
+void AstNodeIdentifier::compilePreprocess(Program & program, PreprocessState state) const {
   program.addIdentifier(this->name);
+  if (state & AstNode::IsAssignment) {
+    // This identifier appears on the LHS of an assignment expression, so
+    // inform the current scope so that any necessary actions are taken.
+    program.addIdentifierAssigned(this->name);
+  }
 }
 
 void AstNodeIdentifier::compile(Tang::Program & program) const {

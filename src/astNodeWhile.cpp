@@ -55,8 +55,8 @@ void AstNodeWhile::compile(Tang::Program & program) const {
   program.popContinueStack(conditionStart);
 }
 
-void AstNodeWhile::compilePreprocess(Program & program) const {
-  this->condition->compilePreprocess(program);
-  this->codeBlock->compilePreprocess(program);
+void AstNodeWhile::compilePreprocess(Program & program, PreprocessState state) const {
+  this->condition->compilePreprocess(program, state);
+  this->codeBlock->compilePreprocess(program, state);
 }
 

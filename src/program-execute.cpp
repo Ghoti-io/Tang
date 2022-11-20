@@ -73,6 +73,14 @@ Program& Program::execute() {
         pc += 2;
         break;
       }
+      case Opcode::COPY: {
+        EXECUTEPROGRAMCHECK(1);
+        auto position = this->bytecode[pc + 1];
+        STACKCHECK(position);
+        stack[fp + position] = stack[fp + position].makeCopy();
+        pc += 2;
+        break;
+      }
       case Opcode::JMP: {
         EXECUTEPROGRAMCHECK(1);
         pc = this->bytecode[pc + 1];

@@ -88,6 +88,7 @@
 #include "error.hpp"
 #include "garbageCollected.hpp"
 #include "program.hpp"
+#include "opcode.hpp"
 
 #endif // TANG_HPP
 

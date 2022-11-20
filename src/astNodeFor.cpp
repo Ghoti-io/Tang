@@ -68,10 +68,10 @@ void AstNodeFor::compile(Tang::Program & program) const {
   program.popContinueStack(incrementStart);
 }
 
-void AstNodeFor::compilePreprocess(Program & program) const {
-  this->initialization->compilePreprocess(program);
-  this->condition->compilePreprocess(program);
-  this->increment->compilePreprocess(program);
-  this->codeBlock->compilePreprocess(program);
+void AstNodeFor::compilePreprocess(Program & program, PreprocessState state) const {
+  this->initialization->compilePreprocess(program, state);
+  this->condition->compilePreprocess(program, state);
+  this->increment->compilePreprocess(program, state);
+  this->codeBlock->compilePreprocess(program, state);
 }
 

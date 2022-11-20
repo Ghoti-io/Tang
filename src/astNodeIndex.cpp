@@ -21,9 +21,9 @@ string AstNodeIndex::dump(string indent) const {
     + this->index->dump(indent + "    ");
 }
 
-void AstNodeIndex::compilePreprocess(Program & program) const {
-  this->collection->compilePreprocess(program);
-  this->index->compilePreprocess(program);
+void AstNodeIndex::compilePreprocess(Program & program, PreprocessState state) const {
+  this->collection->compilePreprocess(program, state);
+  this->index->compilePreprocess(program, state);
 }
 
 void AstNodeIndex::compile(Tang::Program & program) const {

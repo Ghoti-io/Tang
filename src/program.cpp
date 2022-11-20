@@ -55,8 +55,11 @@ void Program::pushEnvironment(const shared_ptr<AstNode> & ast) {
   // Prepare the continue stack.
   this->pushContinueStack();
 
+  // Prepare the identifierAssigned stack.
+  this->identifiersAssignedStack.push_back({});
+
   // Preprocess the AST
-  ast->compilePreprocess(*this);
+  ast->compilePreprocess(*this, AstNode::Default);
 }
 
 void Program::popEnvironment() {
@@ -89,6 +92,9 @@ void Program::popEnvironment() {
 
   // Try to "fill in" continue opcodes.
   this->popContinueStack(this->bytecode.size());
+
+  // Pop the identifierAssigned stack.
+  this->identifiersAssignedStack.pop_back();
 }
 
 void Program::compile() {
@@ -138,6 +144,14 @@ void Program::addIdentifier(const string & name, optional<size_t> position) {
 
 const map<string, size_t>& Program::getIdentifiers() const {
   return this->identifierStack.back();
+}
+
+void Program::addIdentifierAssigned(const string & name) {
+  this->identifiersAssignedStack.back().insert(name);
+}
+
+const set<string>& Program::getIdentifiersAssigned() const {
+  return this->identifiersAssignedStack.back();
 }
 
 void Program::addString(const string & val) {

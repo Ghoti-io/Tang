@@ -38,8 +38,8 @@ void AstNodeDoWhile::compile(Tang::Program & program) const {
   program.addBytecode((uinteger_t)Opcode::NULLVAL);
 }
 
-void AstNodeDoWhile::compilePreprocess(Program & program) const {
-  this->condition->compilePreprocess(program);
-  this->codeBlock->compilePreprocess(program);
+void AstNodeDoWhile::compilePreprocess(Program & program, PreprocessState state) const {
+  this->condition->compilePreprocess(program, state);
+  this->codeBlock->compilePreprocess(program, state);
 }
 

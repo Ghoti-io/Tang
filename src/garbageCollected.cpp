@@ -10,6 +10,18 @@ namespace Tang {
   }
 }
 
+GarbageCollected GarbageCollected::makeCopy() const {
+  return this->ref->makeCopy();
+}
+
+ComputedExpression* GarbageCollected::operator->() const {
+  return this->ref;
+}
+
+ComputedExpression& GarbageCollected::operator*() const {
+  return *this->ref;
+}
+
 bool GarbageCollected::operator==(const integer_t & val) const {
   return this->ref && this->ref->is_equal(val);
 }

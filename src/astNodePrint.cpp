@@ -20,8 +20,8 @@ string AstNodePrint::dump(string indent) const {
     + this->expression->dump(indent + "  ");
 }
 
-void AstNodePrint::compilePreprocess(Program & program) const {
-  this->expression->compilePreprocess(program);
+void AstNodePrint::compilePreprocess(Program & program, PreprocessState state) const {
+  this->expression->compilePreprocess(program, state);
 }
 
 void AstNodePrint::compile(Tang::Program & program) const {
