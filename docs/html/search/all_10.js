@@ -8,6 +8,7 @@ var searchData=
   ['stackcheck_269',['STACKCHECK',['../program-execute_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38',1,'program-execute.cpp']]],
   ['step_270',['step',['../classTang_1_1location.html#a70b844bdcf7d6113ac3d6b074b976246',1,'Tang::location']]],
   ['string_271',['STRING',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a63b588d5559f64f89a416e656880b949',1,'Tang']]],
-  ['subtract_272',['Subtract',['../classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9aa99c8c7c2de680bb7cb914e59a82c3e9',1,'Tang::AstNodeBinary']]],
-  ['subtract_273',['SUBTRACT',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a23ebcc4776b613af25dfbe7c8ce4813e',1,'Tang']]]
+  ['substr_272',['substr',['../classTang_1_1UnicodeString.html#acb7732c024ed48a58b13b95bf00ba749',1,'Tang::UnicodeString']]],
+  ['subtract_273',['Subtract',['../classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9aa99c8c7c2de680bb7cb914e59a82c3e9',1,'Tang::AstNodeBinary']]],
+  ['subtract_274',['SUBTRACT',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a23ebcc4776b613af25dfbe7c8ce4813e',1,'Tang']]]
 ];

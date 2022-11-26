@@ -36,5 +36,6 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "program-dumpBytecode.cpp", "program-dumpBytecode_8cpp.html", "program-dumpBytecode_8cpp" ],
     [ "program-execute.cpp", "program-execute_8cpp.html", "program-execute_8cpp" ],
     [ "program.cpp", "program_8cpp.html", null ],
-    [ "tangBase.cpp", "tangBase_8cpp.html", null ]
+    [ "tangBase.cpp", "tangBase_8cpp.html", null ],
+    [ "unicodeString.cpp", "unicodeString_8cpp.html", null ]
 ];

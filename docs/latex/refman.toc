@@ -583,6 +583,11 @@
 \contentsline {subsubsection}{\numberline {5.40.2.1}TangScanner()}{222}{subsubsection.5.40.2.1}%
 \contentsline {subsection}{\numberline {5.40.3}Member Function Documentation}{222}{subsection.5.40.3}%
 \contentsline {subsubsection}{\numberline {5.40.3.1}get\_next\_token()}{222}{subsubsection.5.40.3.1}%
+\contentsline {section}{\numberline {5.41}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Unicode\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}String Class Reference}{223}{section.5.41}%
+\contentsline {subsection}{\numberline {5.41.1}Constructor \& Destructor Documentation}{223}{subsection.5.41.1}%
+\contentsline {subsubsection}{\numberline {5.41.1.1}UnicodeString()}{223}{subsubsection.5.41.1.1}%
+\contentsline {subsection}{\numberline {5.41.2}Member Function Documentation}{223}{subsection.5.41.2}%
+\contentsline {subsubsection}{\numberline {5.41.2.1}substr()}{223}{subsubsection.5.41.2.1}%
 \contentsline {chapter}{\numberline {6}File Documentation}{225}{chapter.6}%
 \contentsline {section}{\numberline {6.1}build/generated/location.hh File Reference}{225}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}Detailed Description}{226}{subsection.6.1.1}%
@@ -673,91 +678,97 @@
 \contentsline {subsection}{\numberline {6.41.1}Detailed Description}{266}{subsection.6.41.1}%
 \contentsline {section}{\numberline {6.42}include/tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scanner.hpp File Reference}{267}{section.6.42}%
 \contentsline {subsection}{\numberline {6.42.1}Detailed Description}{268}{subsection.6.42.1}%
-\contentsline {section}{\numberline {6.43}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node.cpp File Reference}{268}{section.6.43}%
+\contentsline {section}{\numberline {6.43}include/unicode\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}String.hpp File Reference}{268}{section.6.43}%
 \contentsline {subsection}{\numberline {6.43.1}Detailed Description}{268}{subsection.6.43.1}%
-\contentsline {section}{\numberline {6.44}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Array.cpp File Reference}{268}{section.6.44}%
+\contentsline {section}{\numberline {6.44}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node.cpp File Reference}{269}{section.6.44}%
 \contentsline {subsection}{\numberline {6.44.1}Detailed Description}{269}{subsection.6.44.1}%
-\contentsline {section}{\numberline {6.45}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Assign.cpp File Reference}{269}{section.6.45}%
+\contentsline {section}{\numberline {6.45}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Array.cpp File Reference}{269}{section.6.45}%
 \contentsline {subsection}{\numberline {6.45.1}Detailed Description}{270}{subsection.6.45.1}%
-\contentsline {section}{\numberline {6.46}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Binary.cpp File Reference}{270}{section.6.46}%
+\contentsline {section}{\numberline {6.46}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Assign.cpp File Reference}{270}{section.6.46}%
 \contentsline {subsection}{\numberline {6.46.1}Detailed Description}{271}{subsection.6.46.1}%
-\contentsline {section}{\numberline {6.47}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Block.cpp File Reference}{271}{section.6.47}%
-\contentsline {subsection}{\numberline {6.47.1}Detailed Description}{271}{subsection.6.47.1}%
-\contentsline {section}{\numberline {6.48}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Boolean.cpp File Reference}{271}{section.6.48}%
+\contentsline {section}{\numberline {6.47}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Binary.cpp File Reference}{271}{section.6.47}%
+\contentsline {subsection}{\numberline {6.47.1}Detailed Description}{272}{subsection.6.47.1}%
+\contentsline {section}{\numberline {6.48}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Block.cpp File Reference}{272}{section.6.48}%
 \contentsline {subsection}{\numberline {6.48.1}Detailed Description}{272}{subsection.6.48.1}%
-\contentsline {section}{\numberline {6.49}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Break.cpp File Reference}{272}{section.6.49}%
+\contentsline {section}{\numberline {6.49}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Boolean.cpp File Reference}{272}{section.6.49}%
 \contentsline {subsection}{\numberline {6.49.1}Detailed Description}{273}{subsection.6.49.1}%
-\contentsline {section}{\numberline {6.50}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cast.cpp File Reference}{273}{section.6.50}%
-\contentsline {subsection}{\numberline {6.50.1}Detailed Description}{273}{subsection.6.50.1}%
-\contentsline {section}{\numberline {6.51}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Continue.cpp File Reference}{273}{section.6.51}%
+\contentsline {section}{\numberline {6.50}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Break.cpp File Reference}{273}{section.6.50}%
+\contentsline {subsection}{\numberline {6.50.1}Detailed Description}{274}{subsection.6.50.1}%
+\contentsline {section}{\numberline {6.51}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cast.cpp File Reference}{274}{section.6.51}%
 \contentsline {subsection}{\numberline {6.51.1}Detailed Description}{274}{subsection.6.51.1}%
-\contentsline {section}{\numberline {6.52}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Do\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}While.cpp File Reference}{274}{section.6.52}%
+\contentsline {section}{\numberline {6.52}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Continue.cpp File Reference}{274}{section.6.52}%
 \contentsline {subsection}{\numberline {6.52.1}Detailed Description}{275}{subsection.6.52.1}%
-\contentsline {section}{\numberline {6.53}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Float.cpp File Reference}{275}{section.6.53}%
+\contentsline {section}{\numberline {6.53}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Do\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}While.cpp File Reference}{275}{section.6.53}%
 \contentsline {subsection}{\numberline {6.53.1}Detailed Description}{276}{subsection.6.53.1}%
-\contentsline {section}{\numberline {6.54}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}For.cpp File Reference}{276}{section.6.54}%
-\contentsline {subsection}{\numberline {6.54.1}Detailed Description}{276}{subsection.6.54.1}%
-\contentsline {section}{\numberline {6.55}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Function\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Call.cpp File Reference}{276}{section.6.55}%
+\contentsline {section}{\numberline {6.54}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Float.cpp File Reference}{276}{section.6.54}%
+\contentsline {subsection}{\numberline {6.54.1}Detailed Description}{277}{subsection.6.54.1}%
+\contentsline {section}{\numberline {6.55}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}For.cpp File Reference}{277}{section.6.55}%
 \contentsline {subsection}{\numberline {6.55.1}Detailed Description}{277}{subsection.6.55.1}%
-\contentsline {section}{\numberline {6.56}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Function\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Declaration.cpp File Reference}{277}{section.6.56}%
+\contentsline {section}{\numberline {6.56}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Function\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Call.cpp File Reference}{277}{section.6.56}%
 \contentsline {subsection}{\numberline {6.56.1}Detailed Description}{278}{subsection.6.56.1}%
-\contentsline {section}{\numberline {6.57}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Identifier.cpp File Reference}{278}{section.6.57}%
+\contentsline {section}{\numberline {6.57}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Function\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Declaration.cpp File Reference}{278}{section.6.57}%
 \contentsline {subsection}{\numberline {6.57.1}Detailed Description}{279}{subsection.6.57.1}%
-\contentsline {section}{\numberline {6.58}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}If\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Else.cpp File Reference}{279}{section.6.58}%
-\contentsline {subsection}{\numberline {6.58.1}Detailed Description}{279}{subsection.6.58.1}%
-\contentsline {section}{\numberline {6.59}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Index.cpp File Reference}{279}{section.6.59}%
+\contentsline {section}{\numberline {6.58}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Identifier.cpp File Reference}{279}{section.6.58}%
+\contentsline {subsection}{\numberline {6.58.1}Detailed Description}{280}{subsection.6.58.1}%
+\contentsline {section}{\numberline {6.59}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}If\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Else.cpp File Reference}{280}{section.6.59}%
 \contentsline {subsection}{\numberline {6.59.1}Detailed Description}{280}{subsection.6.59.1}%
-\contentsline {section}{\numberline {6.60}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Integer.cpp File Reference}{280}{section.6.60}%
+\contentsline {section}{\numberline {6.60}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Index.cpp File Reference}{280}{section.6.60}%
 \contentsline {subsection}{\numberline {6.60.1}Detailed Description}{281}{subsection.6.60.1}%
-\contentsline {section}{\numberline {6.61}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Print.cpp File Reference}{281}{section.6.61}%
-\contentsline {subsection}{\numberline {6.61.1}Detailed Description}{281}{subsection.6.61.1}%
-\contentsline {section}{\numberline {6.62}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Return.cpp File Reference}{281}{section.6.62}%
+\contentsline {section}{\numberline {6.61}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Integer.cpp File Reference}{281}{section.6.61}%
+\contentsline {subsection}{\numberline {6.61.1}Detailed Description}{282}{subsection.6.61.1}%
+\contentsline {section}{\numberline {6.62}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Print.cpp File Reference}{282}{section.6.62}%
 \contentsline {subsection}{\numberline {6.62.1}Detailed Description}{282}{subsection.6.62.1}%
-\contentsline {section}{\numberline {6.63}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}String.cpp File Reference}{282}{section.6.63}%
+\contentsline {section}{\numberline {6.63}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Return.cpp File Reference}{282}{section.6.63}%
 \contentsline {subsection}{\numberline {6.63.1}Detailed Description}{283}{subsection.6.63.1}%
-\contentsline {section}{\numberline {6.64}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ternary.cpp File Reference}{283}{section.6.64}%
+\contentsline {section}{\numberline {6.64}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}String.cpp File Reference}{283}{section.6.64}%
 \contentsline {subsection}{\numberline {6.64.1}Detailed Description}{284}{subsection.6.64.1}%
-\contentsline {section}{\numberline {6.65}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Unary.cpp File Reference}{284}{section.6.65}%
-\contentsline {subsection}{\numberline {6.65.1}Detailed Description}{284}{subsection.6.65.1}%
-\contentsline {section}{\numberline {6.66}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}While.cpp File Reference}{284}{section.6.66}%
+\contentsline {section}{\numberline {6.65}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ternary.cpp File Reference}{284}{section.6.65}%
+\contentsline {subsection}{\numberline {6.65.1}Detailed Description}{285}{subsection.6.65.1}%
+\contentsline {section}{\numberline {6.66}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Unary.cpp File Reference}{285}{section.6.66}%
 \contentsline {subsection}{\numberline {6.66.1}Detailed Description}{285}{subsection.6.66.1}%
-\contentsline {section}{\numberline {6.67}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression.cpp File Reference}{285}{section.6.67}%
+\contentsline {section}{\numberline {6.67}src/ast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}While.cpp File Reference}{285}{section.6.67}%
 \contentsline {subsection}{\numberline {6.67.1}Detailed Description}{286}{subsection.6.67.1}%
-\contentsline {section}{\numberline {6.68}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Array.cpp File Reference}{286}{section.6.68}%
+\contentsline {section}{\numberline {6.68}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression.cpp File Reference}{286}{section.6.68}%
 \contentsline {subsection}{\numberline {6.68.1}Detailed Description}{287}{subsection.6.68.1}%
-\contentsline {section}{\numberline {6.69}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Boolean.cpp File Reference}{287}{section.6.69}%
-\contentsline {subsection}{\numberline {6.69.1}Detailed Description}{287}{subsection.6.69.1}%
-\contentsline {section}{\numberline {6.70}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Compiled\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Function.cpp File Reference}{287}{section.6.70}%
+\contentsline {section}{\numberline {6.69}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Array.cpp File Reference}{287}{section.6.69}%
+\contentsline {subsection}{\numberline {6.69.1}Detailed Description}{288}{subsection.6.69.1}%
+\contentsline {section}{\numberline {6.70}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Boolean.cpp File Reference}{288}{section.6.70}%
 \contentsline {subsection}{\numberline {6.70.1}Detailed Description}{288}{subsection.6.70.1}%
-\contentsline {section}{\numberline {6.71}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Error.cpp File Reference}{288}{section.6.71}%
+\contentsline {section}{\numberline {6.71}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Compiled\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Function.cpp File Reference}{288}{section.6.71}%
 \contentsline {subsection}{\numberline {6.71.1}Detailed Description}{289}{subsection.6.71.1}%
-\contentsline {section}{\numberline {6.72}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Float.cpp File Reference}{289}{section.6.72}%
-\contentsline {subsection}{\numberline {6.72.1}Detailed Description}{289}{subsection.6.72.1}%
-\contentsline {section}{\numberline {6.73}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Integer.cpp File Reference}{289}{section.6.73}%
+\contentsline {section}{\numberline {6.72}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Error.cpp File Reference}{289}{section.6.72}%
+\contentsline {subsection}{\numberline {6.72.1}Detailed Description}{290}{subsection.6.72.1}%
+\contentsline {section}{\numberline {6.73}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Float.cpp File Reference}{290}{section.6.73}%
 \contentsline {subsection}{\numberline {6.73.1}Detailed Description}{290}{subsection.6.73.1}%
-\contentsline {section}{\numberline {6.74}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}String.cpp File Reference}{290}{section.6.74}%
+\contentsline {section}{\numberline {6.74}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Integer.cpp File Reference}{290}{section.6.74}%
 \contentsline {subsection}{\numberline {6.74.1}Detailed Description}{291}{subsection.6.74.1}%
-\contentsline {section}{\numberline {6.75}src/error.cpp File Reference}{291}{section.6.75}%
-\contentsline {subsection}{\numberline {6.75.1}Detailed Description}{291}{subsection.6.75.1}%
-\contentsline {subsection}{\numberline {6.75.2}Function Documentation}{291}{subsection.6.75.2}%
-\contentsline {subsubsection}{\numberline {6.75.2.1}operator$<$$<$()}{291}{subsubsection.6.75.2.1}%
-\contentsline {section}{\numberline {6.76}src/program-\/dump\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bytecode.cpp File Reference}{292}{section.6.76}%
+\contentsline {section}{\numberline {6.75}src/computed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}String.cpp File Reference}{291}{section.6.75}%
+\contentsline {subsection}{\numberline {6.75.1}Detailed Description}{292}{subsection.6.75.1}%
+\contentsline {section}{\numberline {6.76}src/error.cpp File Reference}{292}{section.6.76}%
 \contentsline {subsection}{\numberline {6.76.1}Detailed Description}{292}{subsection.6.76.1}%
-\contentsline {subsection}{\numberline {6.76.2}Macro Definition Documentation}{292}{subsection.6.76.2}%
-\contentsline {subsubsection}{\numberline {6.76.2.1}DUMPPROGRAMCHECK}{293}{subsubsection.6.76.2.1}%
-\contentsline {section}{\numberline {6.77}src/program-\/execute.cpp File Reference}{293}{section.6.77}%
-\contentsline {subsection}{\numberline {6.77.1}Detailed Description}{294}{subsection.6.77.1}%
-\contentsline {subsection}{\numberline {6.77.2}Macro Definition Documentation}{294}{subsection.6.77.2}%
-\contentsline {subsubsection}{\numberline {6.77.2.1}EXECUTEPROGRAMCHECK}{294}{subsubsection.6.77.2.1}%
-\contentsline {subsubsection}{\numberline {6.77.2.2}STACKCHECK}{294}{subsubsection.6.77.2.2}%
-\contentsline {section}{\numberline {6.78}src/program.cpp File Reference}{294}{section.6.78}%
+\contentsline {subsection}{\numberline {6.76.2}Function Documentation}{292}{subsection.6.76.2}%
+\contentsline {subsubsection}{\numberline {6.76.2.1}operator$<$$<$()}{292}{subsubsection.6.76.2.1}%
+\contentsline {section}{\numberline {6.77}src/program-\/dump\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bytecode.cpp File Reference}{293}{section.6.77}%
+\contentsline {subsection}{\numberline {6.77.1}Detailed Description}{293}{subsection.6.77.1}%
+\contentsline {subsection}{\numberline {6.77.2}Macro Definition Documentation}{293}{subsection.6.77.2}%
+\contentsline {subsubsection}{\numberline {6.77.2.1}DUMPPROGRAMCHECK}{294}{subsubsection.6.77.2.1}%
+\contentsline {section}{\numberline {6.78}src/program-\/execute.cpp File Reference}{294}{section.6.78}%
 \contentsline {subsection}{\numberline {6.78.1}Detailed Description}{295}{subsection.6.78.1}%
-\contentsline {section}{\numberline {6.79}src/tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base.cpp File Reference}{295}{section.6.79}%
+\contentsline {subsection}{\numberline {6.78.2}Macro Definition Documentation}{295}{subsection.6.78.2}%
+\contentsline {subsubsection}{\numberline {6.78.2.1}EXECUTEPROGRAMCHECK}{295}{subsubsection.6.78.2.1}%
+\contentsline {subsubsection}{\numberline {6.78.2.2}STACKCHECK}{295}{subsubsection.6.78.2.2}%
+\contentsline {section}{\numberline {6.79}src/program.cpp File Reference}{295}{section.6.79}%
 \contentsline {subsection}{\numberline {6.79.1}Detailed Description}{296}{subsection.6.79.1}%
-\contentsline {section}{\numberline {6.80}test/test.cpp File Reference}{296}{section.6.80}%
+\contentsline {section}{\numberline {6.80}src/tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base.cpp File Reference}{296}{section.6.80}%
 \contentsline {subsection}{\numberline {6.80.1}Detailed Description}{297}{subsection.6.80.1}%
-\contentsline {section}{\numberline {6.81}test/test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Garbage\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Collected.cpp File Reference}{297}{section.6.81}%
-\contentsline {subsection}{\numberline {6.81.1}Detailed Description}{298}{subsection.6.81.1}%
-\contentsline {section}{\numberline {6.82}test/test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Singleton\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pool.cpp File Reference}{298}{section.6.82}%
-\contentsline {subsection}{\numberline {6.82.1}Detailed Description}{298}{subsection.6.82.1}%
-\contentsline {chapter}{Index}{299}{section*.374}%
+\contentsline {section}{\numberline {6.81}src/unicode\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}String.cpp File Reference}{297}{section.6.81}%
+\contentsline {subsection}{\numberline {6.81.1}Detailed Description}{297}{subsection.6.81.1}%
+\contentsline {section}{\numberline {6.82}test/test.cpp File Reference}{297}{section.6.82}%
+\contentsline {subsection}{\numberline {6.82.1}Detailed Description}{299}{subsection.6.82.1}%
+\contentsline {section}{\numberline {6.83}test/test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Garbage\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Collected.cpp File Reference}{299}{section.6.83}%
+\contentsline {subsection}{\numberline {6.83.1}Detailed Description}{300}{subsection.6.83.1}%
+\contentsline {section}{\numberline {6.84}test/test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Singleton\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pool.cpp File Reference}{300}{section.6.84}%
+\contentsline {subsection}{\numberline {6.84.1}Detailed Description}{300}{subsection.6.84.1}%
+\contentsline {section}{\numberline {6.85}test/test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Unicode\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}String.cpp File Reference}{301}{section.6.85}%
+\contentsline {subsection}{\numberline {6.85.1}Detailed Description}{301}{subsection.6.85.1}%
+\contentsline {chapter}{Index}{303}{section*.381}%

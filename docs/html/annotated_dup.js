@@ -39,6 +39,7 @@ var annotated_dup =
       [ "SingletonObjectPool", "classTang_1_1SingletonObjectPool.html", "classTang_1_1SingletonObjectPool" ],
       [ "TangBase", "classTang_1_1TangBase.html", "classTang_1_1TangBase" ],
       [ "TangScanner", "classTang_1_1TangScanner.html", "classTang_1_1TangScanner" ],
+      [ "UnicodeString", "classTang_1_1UnicodeString.html", "classTang_1_1UnicodeString" ],
       [ "position", "classTang_1_1position.html", "classTang_1_1position" ],
       [ "location", "classTang_1_1location.html", "classTang_1_1location" ]
     ] ]

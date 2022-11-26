@@ -43,5 +43,6 @@ var hierarchy =
     [ "Tang::TangBase", "classTang_1_1TangBase.html", null ],
     [ "TangTangFlexLexer", null, [
       [ "Tang::TangScanner", "classTang_1_1TangScanner.html", null ]
-    ] ]
+    ] ],
+    [ "Tang::UnicodeString", "classTang_1_1UnicodeString.html", null ]
 ];

@@ -1,0 +1,56 @@
+\hypertarget{classTang_1_1UnicodeString}{}\doxysection{Tang\+::Unicode\+String Class Reference}
+\label{classTang_1_1UnicodeString}\index{Tang::UnicodeString@{Tang::UnicodeString}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTang_1_1UnicodeString_ae9396cce6078fb0ab2986e3ea2910b36}{Unicode\+String}} (const std\+::string \&src)
+\begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{classTang_1_1UnicodeString}{Tang\+::\+Unicode\+String}} object, which acts as the interface to the ICU library. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTang_1_1UnicodeString_acb7732c024ed48a58b13b95bf00ba749}{substr}} (size\+\_\+t \mbox{\hyperlink{classTang_1_1position}{position}}, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Return a Unicode grapheme-\/aware substring. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTang_1_1UnicodeString_ae9396cce6078fb0ab2986e3ea2910b36}\label{classTang_1_1UnicodeString_ae9396cce6078fb0ab2986e3ea2910b36}} 
+\index{Tang::UnicodeString@{Tang::UnicodeString}!UnicodeString@{UnicodeString}}
+\index{UnicodeString@{UnicodeString}!Tang::UnicodeString@{Tang::UnicodeString}}
+\doxysubsubsection{\texorpdfstring{UnicodeString()}{UnicodeString()}}
+{\footnotesize\ttfamily Unicode\+String\+::\+Unicode\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{src }\end{DoxyParamCaption})}
+
+
+
+Construct a \mbox{\hyperlink{classTang_1_1UnicodeString}{Tang\+::\+Unicode\+String}} object, which acts as the interface to the ICU library. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & A UTF-\/8 encoded string. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1UnicodeString_acb7732c024ed48a58b13b95bf00ba749}\label{classTang_1_1UnicodeString_acb7732c024ed48a58b13b95bf00ba749}} 
+\index{Tang::UnicodeString@{Tang::UnicodeString}!substr@{substr}}
+\index{substr@{substr}!Tang::UnicodeString@{Tang::UnicodeString}}
+\doxysubsubsection{\texorpdfstring{substr()}{substr()}}
+{\footnotesize\ttfamily std\+::string Unicode\+String\+::substr (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{position,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Return a Unicode grapheme-\/aware substring. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The 0-\/based position of the first grapheme. \\
+\hline
+{\em length} & The maximum number of graphemes to return. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The requested substring. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{unicodeString_8hpp}{unicode\+String.\+hpp}}\item 
+src/\mbox{\hyperlink{unicodeString_8cpp}{unicode\+String.\+cpp}}\end{DoxyCompactItemize}

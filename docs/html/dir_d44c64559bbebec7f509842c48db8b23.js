@@ -110,5 +110,8 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "tangBase.hpp", "tangBase_8hpp.html", [
       [ "TangBase", "classTang_1_1TangBase.html", "classTang_1_1TangBase" ]
     ] ],
-    [ "tangScanner.hpp", "tangScanner_8hpp.html", "tangScanner_8hpp" ]
+    [ "tangScanner.hpp", "tangScanner_8hpp.html", "tangScanner_8hpp" ],
+    [ "unicodeString.hpp", "unicodeString_8hpp.html", [
+      [ "UnicodeString", "classTang_1_1UnicodeString.html", "classTang_1_1UnicodeString" ]
+    ] ]
 ];
