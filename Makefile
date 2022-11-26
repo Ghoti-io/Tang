@@ -1,13 +1,14 @@
 CXX := g++
 CXXFLAGS := -pedantic-errors -Wall -Wextra -Werror -Wno-error=unused-function -std=c++20 -Og -g
-LDFLAGS := -L /usr/lib -lstdc++ -lm
+LDFLAGS := -L /usr/lib -lstdc++ -lm `pkg-config --libs --cflags icu-io icu-i18n icu-uc`
 BUILD := ./build
 OBJ_DIR := $(BUILD)/objects
 GEN_DIR := $(BUILD)/generated
 APP_DIR := $(BUILD)/apps
 TARGET := libtang.so
 INCLUDE := -I include/ -I $(GEN_DIR)/
-LIBOBJECTS := $(OBJ_DIR)/astNode.o $(OBJ_DIR)/astNodeArray.o $(OBJ_DIR)/astNodeAssign.o $(OBJ_DIR)/astNodeBinary.o $(OBJ_DIR)/astNodeBlock.o $(OBJ_DIR)/astNodeBoolean.o $(OBJ_DIR)/astNodeBreak.o $(OBJ_DIR)/astNodeCast.o $(OBJ_DIR)/astNodeContinue.o $(OBJ_DIR)/astNodeDoWhile.o $(OBJ_DIR)/astNodeFor.o $(OBJ_DIR)/astNodeFunctionCall.o $(OBJ_DIR)/astNodeFunctionDeclaration.o $(OBJ_DIR)/astNodeIfElse.o $(OBJ_DIR)/astNodeIndex.o $(OBJ_DIR)/astNodeFloat.o $(OBJ_DIR)/astNodeIdentifier.o $(OBJ_DIR)/astNodeInteger.o $(OBJ_DIR)/astNodePrint.o $(OBJ_DIR)/astNodeReturn.o $(OBJ_DIR)/astNodeString.o $(OBJ_DIR)/astNodeTernary.o $(OBJ_DIR)/astNodeUnary.o $(OBJ_DIR)/astNodeWhile.o $(OBJ_DIR)/computedExpression.o $(OBJ_DIR)/computedExpressionArray.o $(OBJ_DIR)/computedExpressionBoolean.o $(OBJ_DIR)/computedExpressionCompiledFunction.o $(OBJ_DIR)/computedExpressionFloat.o $(OBJ_DIR)/computedExpressionInteger.o $(OBJ_DIR)/computedExpressionError.o $(OBJ_DIR)/computedExpressionString.o $(OBJ_DIR)/error.o $(OBJ_DIR)/garbageCollected.o $(OBJ_DIR)/program.o $(OBJ_DIR)/program-dumpBytecode.o  $(OBJ_DIR)/program-execute.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o
+LIBOBJECTS := $(OBJ_DIR)/astNode.o $(OBJ_DIR)/astNodeArray.o $(OBJ_DIR)/astNodeAssign.o $(OBJ_DIR)/astNodeBinary.o $(OBJ_DIR)/astNodeBlock.o $(OBJ_DIR)/astNodeBoolean.o $(OBJ_DIR)/astNodeBreak.o $(OBJ_DIR)/astNodeCast.o $(OBJ_DIR)/astNodeContinue.o $(OBJ_DIR)/astNodeDoWhile.o $(OBJ_DIR)/astNodeFor.o $(OBJ_DIR)/astNodeFunctionCall.o $(OBJ_DIR)/astNodeFunctionDeclaration.o $(OBJ_DIR)/astNodeIfElse.o $(OBJ_DIR)/astNodeIndex.o $(OBJ_DIR)/astNodeFloat.o $(OBJ_DIR)/astNodeIdentifier.o $(OBJ_DIR)/astNodeInteger.o $(OBJ_DIR)/astNodePrint.o $(OBJ_DIR)/astNodeReturn.o $(OBJ_DIR)/astNodeString.o $(OBJ_DIR)/astNodeTernary.o $(OBJ_DIR)/astNodeUnary.o $(OBJ_DIR)/astNodeWhile.o $(OBJ_DIR)/computedExpression.o $(OBJ_DIR)/computedExpressionArray.o $(OBJ_DIR)/computedExpressionBoolean.o $(OBJ_DIR)/computedExpressionCompiledFunction.o $(OBJ_DIR)/computedExpressionFloat.o $(OBJ_DIR)/computedExpressionInteger.o $(OBJ_DIR)/computedExpressionError.o $(OBJ_DIR)/computedExpressionString.o $(OBJ_DIR)/error.o $(OBJ_DIR)/garbageCollected.o $(OBJ_DIR)/program.o $(OBJ_DIR)/program-dumpBytecode.o  $(OBJ_DIR)/program-execute.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o $(OBJ_DIR)/unicodeString.o
+
 TESTFLAGS := `pkg-config --libs --cflags gtest`
 
 
@@ -243,6 +244,11 @@ $(OBJ_DIR)/tangScanner.o: $(GEN_DIR)/tangScanner.cpp
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
+$(OBJ_DIR)/unicodeString.o: src/unicodeString.cpp include/unicodeString.hpp
+	@echo "\n### Compiling unicodeString.o ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
+
 ####################################################################
 # Shared Library
 ####################################################################
@@ -255,6 +261,11 @@ $(APP_DIR)/$(TARGET): $(LIBOBJECTS)
 ####################################################################
 # Unit Tests
 ####################################################################
+
+$(APP_DIR)/testUnicodeString: test/testUnicodeString.cpp $(OBJ_DIR)/unicodeString.o
+	@echo "\n### Compiling Tang Test ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ $< $(OBJ_DIR)/unicodeString.o $(LDFLAGS) $(TESTFLAGS)
 
 $(APP_DIR)/test: test/test.cpp include/singletonObjectPool.hpp include/macros.hpp $(APP_DIR)/$(TARGET)
 	@echo "\n### Compiling Tang Test ###"
@@ -299,13 +310,13 @@ test-watch: ## Watch the file directory for changes and run the unit tests
 					inotifywait -qr -e modify -e create -e delete -e move src include bison flex test Makefile --exclude '/\.'; \
 					done
 
-test: $(APP_DIR)/test $(APP_DIR)/testSingletonObjectPool $(APP_DIR)/testGarbageCollected ## Make and run the Unit tests
+test: $(APP_DIR)/testUnicodeString $(APP_DIR)/test $(APP_DIR)/testSingletonObjectPool $(APP_DIR)/testGarbageCollected ## Make and run the Unit tests
 	@echo "\033[0;32m"
 	@echo "############################"
-	@echo "### Running normal tests ###"
+	@echo "### Running string tests ###"
 	@echo "############################"
 	@echo "\033[0m"
-	$(APP_DIR)/test --gtest_brief=1
+	$(APP_DIR)/testUnicodeString --gtest_brief=1
 	@echo "\033[0;32m"
 	@echo "#########################################"
 	@echo "### Running SingletonObjectPool Tests ###"
@@ -318,6 +329,12 @@ test: $(APP_DIR)/test $(APP_DIR)/testSingletonObjectPool $(APP_DIR)/testGarbageC
 	@echo "#########################################"
 	@echo "\033[0m"
 	$(APP_DIR)/testGarbageCollected --gtest_brief=1
+	@echo "\033[0;32m"
+	@echo "############################"
+	@echo "### Running normal tests ###"
+	@echo "############################"
+	@echo "\033[0m"
+	$(APP_DIR)/test --gtest_brief=1
 
 clean: ## Remove all contents of the build directories.
 	-@rm -rvf $(OBJ_DIR)/*
