@@ -17,8 +17,12 @@ string ComputedExpression::dump() const {
   // actually ComputedExpression, and not a derived type that forgot to
   // override the virtual method.
   return typeid(*this) == typeid(ComputedExpression)
-    ? "NULL"
+    ? "null"
     : "UNKNOWN";
+}
+
+string ComputedExpression::__asCode() const {
+  return this->dump();
 }
 
 bool ComputedExpression::isCopyNeeded() const {

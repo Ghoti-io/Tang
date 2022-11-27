@@ -19,9 +19,9 @@ string ComputedExpressionArray::dump() const {
   bool isFirst = true;
   for (auto & item : this->contents) {
     if (!isFirst) {
-      s += ", ";
+      s += ",";
     }
-    s += item->dump();
+    s += item->__asCode();
     isFirst = false;
   }
   s += "]";
@@ -78,5 +78,9 @@ GarbageCollected ComputedExpressionArray::__assign_index(const GarbageCollected 
   }
 
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to assign this value to the index location."});
+}
+
+GarbageCollected ComputedExpressionArray::__string() const {
+  return GarbageCollected::make<ComputedExpressionString>(this->__asCode());
 }
 

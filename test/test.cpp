@@ -1022,6 +1022,26 @@ TEST(Print, Default) {
   EXPECT_EQ(p11.execute().out, "----------");
 }
 
+TEST(Print, Array) {
+  {
+    // Print out an empty array.
+    auto p1 = TangBase().compileScript("print([]);");
+    EXPECT_EQ(p1.execute().out, "[]");
+  }
+  {
+    // Print out an array of numbers, with comma separated values and no spaces
+    // after the commas.
+    auto p1 = TangBase().compileScript("print([0,1,2]);");
+    EXPECT_EQ(p1.execute().out, "[0,1,2]");
+  }
+  {
+    // Print out an array that contains a string, where the string is enclosed
+    // in double quotes.
+    auto p1 = TangBase().compileScript("print([0,\"a\",2]);");
+    EXPECT_EQ(p1.execute().out, "[0,\"a\",2]");
+  }
+}
+
 TEST(Function, Compiled) {
   auto p1 = TangBase().compileScript(R"(
     function printHi() {

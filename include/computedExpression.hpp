@@ -39,6 +39,14 @@ namespace Tang {
       virtual std::string dump() const;
 
       /**
+       * Output the contents of the ComputedExpression as a string similar to
+       * how it would be represented as code.
+       *
+       * @returns A code-string representation of the computed expression.
+       */
+      virtual std::string __asCode() const;
+
+      /**
        * Determine whether or not a copy is needed.
        *
        * Copying is only required for ComputedExpressions which serve as
