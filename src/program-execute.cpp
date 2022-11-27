@@ -353,6 +353,20 @@ Program& Program::execute() {
         ++pc;
         break;
       }
+      case Opcode::SLICE: {
+        STACKCHECK(4);
+        auto skip = stack.back();
+        stack.pop_back();
+        auto end = stack.back();
+        stack.pop_back();
+        auto begin = stack.back();
+        stack.pop_back();
+        auto container = stack.back();
+        stack.pop_back();
+        stack.push_back(container->__slice(begin, end, skip));
+        ++pc;
+        break;
+      }
       case Opcode::CASTINTEGER: {
         STACKCHECK(1);
         auto operand = stack.back();

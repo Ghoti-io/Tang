@@ -216,6 +216,11 @@ string Program::dumpBytecode() const {
         ++pc;
         break;
       }
+      case Opcode::SLICE: {
+        out << "SLICE";
+        ++pc;
+        break;
+      }
       case Opcode::CASTINTEGER: {
         out << "CASTINTEGER";
         ++pc;

@@ -38,6 +38,8 @@ namespace Tang {
     EQ,       ///< Pop rhs, pop lhs, push lhs == rhs
     NEQ,      ///< Pop rhs, pop lhs, push lhs != rhs
     INDEX,    ///< Pop index, pop collection, push collection[index]
+    SLICE,    ///< Pop skip, pop end, pop begin, pop collection,
+              ///<   push collection[begin:end:skip]
     CASTINTEGER, ///< Pop a val, typecast to int, push
     CASTFLOAT,   ///< Pop a val, typecast to float, push
     CASTBOOLEAN, ///< Pop a val, typecast to boolean, push
