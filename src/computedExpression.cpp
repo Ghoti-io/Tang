@@ -118,6 +118,10 @@ GarbageCollected ComputedExpression::__index([[maybe_unused]] const GarbageColle
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to index this expression."});
 }
 
+GarbageCollected ComputedExpression::__slice([[maybe_unused]] const GarbageCollected & begin, [[maybe_unused]] const GarbageCollected & end, [[maybe_unused]] const GarbageCollected & skip) const {
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to slice this expression."});
+}
+
 GarbageCollected ComputedExpression::__integer() const {
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to cast this value to an integer."});
 }

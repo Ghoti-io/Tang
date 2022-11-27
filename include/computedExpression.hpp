@@ -200,6 +200,21 @@ namespace Tang {
       virtual GarbageCollected __index(const GarbageCollected & index) const;
 
       /**
+       * Perform a slice operation.
+       *
+       * Convention will follow Python semantics, in which a slice will start
+       * at the provided index position, and go up to but not including the end
+       * index.  The slice will default to an index increment of 1, but can be
+       * defined as another integer value.
+       *
+       * @param begin The begin index expression provided by the script.
+       * @param end The end index expression provided by the script.
+       * @param skip The skip index expression provided by the script.
+       * @return The result of the operation.
+       */
+      virtual GarbageCollected __slice(const GarbageCollected & begin, const GarbageCollected & end, const GarbageCollected & skip) const;
+
+      /**
        * Perform a type cast to integer.
        *
        * @return The result of the the operation.
