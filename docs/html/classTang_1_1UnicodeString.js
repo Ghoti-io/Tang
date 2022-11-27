@@ -7,5 +7,5 @@ var classTang_1_1UnicodeString =
     [ "operator+", "classTang_1_1UnicodeString.html#a1801e6b4cd159a065fb77ce1a8bcd827", null ],
     [ "operator<", "classTang_1_1UnicodeString.html#ad22c4f14673523cd3bcd5c56fa70286f", null ],
     [ "operator==", "classTang_1_1UnicodeString.html#a7ec9ba3ea2b640435e31a61865c97ffd", null ],
-    [ "substr", "classTang_1_1UnicodeString.html#acb7732c024ed48a58b13b95bf00ba749", null ]
+    [ "substr", "classTang_1_1UnicodeString.html#a7bda91d3c0efba9f5e70d915a665ba18", null ]
 ];

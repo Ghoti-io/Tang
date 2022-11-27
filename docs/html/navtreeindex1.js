@@ -208,6 +208,7 @@ var NAVTREEINDEX1 =
 "classTang_1_1ComputedExpressionInteger.html#a02e4a8bba8b37bf02e5ec3fd1e25f094":[1,0,0,30,16],
 "classTang_1_1ComputedExpressionInteger.html#a0c87432e8b46594ca2b89ff6787de1d3":[1,0,0,30,3],
 "classTang_1_1ComputedExpressionInteger.html#a12f9abfc8fc324d491453f8c6bbb3e1d":[1,0,0,30,13],
+"classTang_1_1ComputedExpressionInteger.html#a29155275d5db4f53dc715e47dd15803e":[1,0,0,30,27],
 "classTang_1_1ComputedExpressionInteger.html#a482daf778794d505964d7adb24bc97e3":[1,0,0,30,5],
 "classTang_1_1ComputedExpressionInteger.html#a493f58bd7f51ca4d6b9b1ef1860b4370":[1,0,0,30,23],
 "classTang_1_1ComputedExpressionInteger.html#a4bbe91963e21fd8319b94a7b43a1e26e":[1,0,0,30,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "classTang_1_1ComputedExpressionString.html#a8e779d014cbb877f078d61a2ff91603d":[1,0,0,31,12],
 "classTang_1_1ComputedExpressionString.html#a91b777a2aa5bc6748cdceca5cbabf6c5":[1,0,0,31,20],
 "classTang_1_1ComputedExpressionString.html#a92af6f9ea5e1809e206d96d8fb31c30f":[1,0,0,31,14],
-"classTang_1_1ComputedExpressionString.html#a97bdb82b5f4cf5b99a2819b93d7ac047":[1,0,0,31,16],
-"classTang_1_1ComputedExpressionString.html#aa424ab2f196af728a8810fc7ed188f7c":[1,0,0,31,24]
+"classTang_1_1ComputedExpressionString.html#a97bdb82b5f4cf5b99a2819b93d7ac047":[1,0,0,31,16]
 };
