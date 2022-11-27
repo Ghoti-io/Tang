@@ -571,35 +571,59 @@ TEST(Expression, Ternary) {
 }
 
 TEST(Expression, ArrayIndex) {
-  auto p1 = TangBase().compileScript(R"(
-    a = [1,2,3];
-    print(a[1]);
-  )");
-  EXPECT_EQ(p1.execute().out, "2");
-  auto p2 = TangBase().compileScript(R"(
-    a = [1,2,3];
-    print(a[2]);
-  )");
-  EXPECT_EQ(p2.execute().out, "3");
-  auto p3 = TangBase().compileScript(R"(
-    [1,2,3][1]
-  )");
-  EXPECT_EQ(*p3.execute().getResult(), 2);
-  auto p4 = TangBase().compileScript(R"(
-    [1,2,3][4]
-  )");
-  EXPECT_EQ(*p4.execute().getResult(), Error{"Index out of range."});
-  auto p5 = TangBase().compileScript(R"(
-    [1,2,3][-3]
-  )");
-  EXPECT_EQ(*p5.execute().getResult(), Error{"Index out of range."});
-  auto p6 = TangBase().compileScript(R"(
-    a = [1,"a",1.5];
-    print(a[0]);
-    print(a[1]);
-    print(a[2]);
-  )");
-  EXPECT_EQ(p6.execute().out, "1a1.500000");
+  {
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3];
+      print(a[1]);
+    )");
+    EXPECT_EQ(p1.execute().out, "2");
+  }
+  {
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3];
+      print(a[2]);
+    )");
+    EXPECT_EQ(p1.execute().out, "3");
+  }
+  {
+    auto p1 = TangBase().compileScript(R"(
+      [1,2,3][1]
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), 2);
+  }
+  {
+    auto p1 = TangBase().compileScript(R"(
+      [1,2,3][4]
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), Error{"Index out of range."});
+  }
+  {
+    auto p1 = TangBase().compileScript(R"(
+      [1,2,3][-1]
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), 3);
+  }
+  {
+    auto p1 = TangBase().compileScript(R"(
+      [1,2,3][-3]
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), 1);
+  }
+  {
+    auto p1 = TangBase().compileScript(R"(
+      [1,2,3][-4]
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), Error{"Index out of range."});
+  }
+  {
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,"a",1.5];
+      print(a[0]);
+      print(a[1]);
+      print(a[2]);
+    )");
+    EXPECT_EQ(p1.execute().out, "1a1.500000");
+  }
 }
 
 TEST(CodeBlock, Statements) {
@@ -653,6 +677,32 @@ TEST(Assign, Index) {
       print(a[2]);
     )");
     EXPECT_EQ(p1.execute().out, "123123");
+  }
+  {
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3];
+      print(a[0]);
+      print(a[1]);
+      print(a[2]);
+      a[-3] = "foo";
+      print(a[0]);
+      print(a[1]);
+      print(a[2]);
+    )");
+    EXPECT_EQ(p1.execute().out, "123foo23");
+  }
+  {
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3];
+      print(a[0]);
+      print(a[1]);
+      print(a[2]);
+      a[-1] = "foo";
+      print(a[0]);
+      print(a[1]);
+      print(a[2]);
+    )");
+    EXPECT_EQ(p1.execute().out, "12312foo");
   }
 }
 
