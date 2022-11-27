@@ -757,6 +757,145 @@ TEST(Assign, Index) {
   }
 }
 
+TEST(Expression, ArraySlice) {
+  {
+    // Slice with all default values.
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3][::];
+      print(a);
+    )");
+    EXPECT_EQ(p1.execute().out, "[1,2,3]");
+  }
+  {
+    // Slice with default begin and end, but -1 skip.
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3][::-1];
+      print(a);
+    )");
+    EXPECT_EQ(p1.execute().out, "[3,2,1]");
+  }
+  {
+    // Slice with a positive value.
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3,4,5,6,7,8,9][::1];
+      print(a);
+    )");
+    EXPECT_EQ(p1.execute().out, "[1,2,3,4,5,6,7,8,9]");
+  }
+  {
+    // Slice with a positive value.
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3,4,5,6,7,8,9][::2];
+      print(a);
+    )");
+    EXPECT_EQ(p1.execute().out, "[1,3,5,7,9]");
+  }
+  {
+    // Slice with a positive value.
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3,4,5,6,7,8,9][1::2];
+      print(a);
+    )");
+    EXPECT_EQ(p1.execute().out, "[2,4,6,8]");
+  }
+  {
+    // Slice with a positive value and non-default begin & end.
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3,4,5,6,7,8,9][1:7:2];
+      print(a);
+    )");
+    EXPECT_EQ(p1.execute().out, "[2,4,6]");
+  }
+  {
+    // Slice with a negative value.
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3,4,5,6,7,8,9][::-1];
+      print(a);
+    )");
+    EXPECT_EQ(p1.execute().out, "[9,8,7,6,5,4,3,2,1]");
+  }
+  {
+    // Slice with a negative value.
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3,4,5,6,7,8,9][::-2];
+      print(a);
+    )");
+    EXPECT_EQ(p1.execute().out, "[9,7,5,3,1]");
+  }
+  {
+    // Slice with a negative value.
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3,4,5,6,7,8,9][-2::-2];
+      print(a);
+    )");
+    EXPECT_EQ(p1.execute().out, "[8,6,4,2]");
+  }
+  {
+    // Slice with a negative value and non-default begin & end.
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3,4,5,6,7,8,9][-1:-7:-2];
+      print(a);
+    )");
+    EXPECT_EQ(p1.execute().out, "[9,7,5]");
+  }
+  {
+    // Slice with a begin & end out of range, should produce copy of array.
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3,4,5,6,7,8,9][-300:300:1];
+      print(a);
+    )");
+    EXPECT_EQ(p1.execute().out, "[1,2,3,4,5,6,7,8,9]");
+  }
+  {
+    // Slice with a begin & end out of range, should produce and empty array.
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3,4,5,6,7,8,9][300:-300:1];
+      print(a);
+    )");
+    EXPECT_EQ(p1.execute().out, "[]");
+  }
+  {
+    // Slice with a begin & end out of range, should produce copy of array,
+    // but reversed.
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3,4,5,6,7,8,9][300:-300:-1];
+      print(a);
+    )");
+    EXPECT_EQ(p1.execute().out, "[9,8,7,6,5,4,3,2,1]");
+  }
+  {
+    // Slice with a begin & end out of range, should produce and empty array.
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3,4,5,6,7,8,9][-300:300:-1];
+      print(a);
+    )");
+    EXPECT_EQ(p1.execute().out, "[]");
+  }
+  {
+    // Slice with a skip value of 0.
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3,4,5,6,7,8,9][::0];
+      print(a);
+    )");
+    EXPECT_EQ(p1.execute().out, "");
+  }
+  {
+    // Slice with a skip value of 0, should return error.
+    auto p1 = TangBase().compileScript(R"(
+      [1,2,3,4,5,6,7,8,9][::0]
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), Error{"Don't know how to slice this expression."});
+  }
+  {
+    // Double slice, proof of concept.
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20][::2][-3::-1];
+      print(a);
+    )");
+    EXPECT_EQ(p1.execute().out, "[15,13,11,9,7,5,3,1]");
+  }
+}
+
 TEST(ControlFlow, IfElse) {
   auto p1 = TangBase().compileScript("a = 1; if (true) a = 2; a;");
   EXPECT_EQ(*p1.execute().getResult(), (integer_t)2);
