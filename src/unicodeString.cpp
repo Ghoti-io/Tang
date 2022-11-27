@@ -63,3 +63,28 @@ std::string UnicodeString::substr(size_t position, size_t length) {
   return uString.tempSubString(offsets[position], offsets[min(position + length, offsets.size() - 1)] - offsets[position]).toUTF8String(out);
 }
 
+bool UnicodeString::operator==(const UnicodeString & rhs) const {
+  return this->src == rhs.src;
+}
+
+bool UnicodeString::operator<(const UnicodeString & rhs) const {
+  return this->src < rhs.src;
+}
+
+UnicodeString UnicodeString::operator+(const UnicodeString & rhs) const {
+  return this->src + rhs.src;
+}
+
+UnicodeString::operator std::string() const {
+  return this->src;
+}
+
+size_t UnicodeString::length() const {
+  auto offsets = getGraphemeOffsets(icu::UnicodeString::fromUTF8(this->src));
+  return offsets.size() - 1;
+}
+
+size_t UnicodeString::bytesLength() const {
+  return this->src.length();
+}
+

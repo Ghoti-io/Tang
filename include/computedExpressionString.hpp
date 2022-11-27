@@ -7,6 +7,7 @@
 #define TANG_COMPUTEDEXPRESSIONSTRING_HPP
 
 #include "computedExpression.hpp"
+#include "unicodeString.hpp"
 
 namespace Tang {
   /**
@@ -36,7 +37,7 @@ namespace Tang {
       /**
        * The string value.
        */
-      std::string val;
+      UnicodeString val;
   };
 }
 

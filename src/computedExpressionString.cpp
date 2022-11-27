@@ -21,7 +21,7 @@ GarbageCollected ComputedExpressionString::makeCopy() const {
 }
 
 bool ComputedExpressionString::is_equal(const bool & val) const {
-  return val == (bool)this->val.length();
+  return val == (bool)this->val.bytesLength();
 }
 
 bool ComputedExpressionString::is_equal(const string & val) const {
@@ -39,7 +39,7 @@ GarbageCollected ComputedExpressionString::__add(const GarbageCollected & rhs) c
 }
 
 GarbageCollected ComputedExpressionString::__not() const {
-  return GarbageCollected::make<ComputedExpressionBoolean>(!this->val.length());
+  return GarbageCollected::make<ComputedExpressionBoolean>(!this->val.bytesLength());
 }
 
 GarbageCollected ComputedExpressionString::__lessThan(const GarbageCollected & rhs) const {
@@ -66,7 +66,7 @@ GarbageCollected ComputedExpressionString::__equal(const GarbageCollected & rhs)
 }
 
 GarbageCollected ComputedExpressionString::__boolean() const {
-  return GarbageCollected::make<ComputedExpressionBoolean>((bool)this->val.length());
+  return GarbageCollected::make<ComputedExpressionBoolean>((bool)this->val.bytesLength());
 }
 
 GarbageCollected ComputedExpressionString::__string() const {

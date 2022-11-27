@@ -32,13 +32,9 @@
 //
 // TODO What's next:
 // * TangString
-//   * ICU compiling in
-//   * Graphemes & string length
-//   * substring
 //   * html encode
 //   * percent encode
 //   * percent decode
-// * Convert ComputedExpressionString to use TangString
 // * print!()
 // * print%()
 // * print<>()
