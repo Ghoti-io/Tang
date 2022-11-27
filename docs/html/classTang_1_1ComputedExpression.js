@@ -2,6 +2,7 @@ var classTang_1_1ComputedExpression =
 [
     [ "~ComputedExpression", "classTang_1_1ComputedExpression.html#a50c2cde30b438e1e0de251c33af8a764", null ],
     [ "__add", "classTang_1_1ComputedExpression.html#a7265dda9f1e6db478f0c1cd9c3e37aa9", null ],
+    [ "__asCode", "classTang_1_1ComputedExpression.html#a6d0c01f57a6a2b6b8ec701202b16af94", null ],
     [ "__assign_index", "classTang_1_1ComputedExpression.html#a011d86ce9b04fca4bef67b4c5bb3324c", null ],
     [ "__boolean", "classTang_1_1ComputedExpression.html#ac38862531c17e25636ca68c7e74ba487", null ],
     [ "__divide", "classTang_1_1ComputedExpression.html#abb35e0328da2a96128de725ff1402192", null ],
@@ -14,6 +15,7 @@ var classTang_1_1ComputedExpression =
     [ "__multiply", "classTang_1_1ComputedExpression.html#a39df4abc066123ec2d634e921be40d21", null ],
     [ "__negative", "classTang_1_1ComputedExpression.html#a8e779d014cbb877f078d61a2ff91603d", null ],
     [ "__not", "classTang_1_1ComputedExpression.html#ac21f9e07c9d1f0a98b60bb1d75d8e87d", null ],
+    [ "__slice", "classTang_1_1ComputedExpression.html#aa7a262384220a86eb273284f8990ca84", null ],
     [ "__string", "classTang_1_1ComputedExpression.html#a14a57cffe9fb44b0d5f34d06afd0db1b", null ],
     [ "__subtract", "classTang_1_1ComputedExpression.html#ab0d79debcd475a5063e574c10f1715ff", null ],
     [ "dump", "classTang_1_1ComputedExpression.html#ab5df8f689f9fe515a2299d8cef332f4c", null ],

@@ -32,6 +32,7 @@ var opcode_8hpp =
       [ "EQ", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a2dcbad7477fd40561e8b8198f173bd47", null ],
       [ "NEQ", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a375b332cf2e0c6d522baf007ef7cb554", null ],
       [ "INDEX", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acb4ae3b37047fb4b2c0d16f8bf84f076", null ],
+      [ "SLICE", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a0a1031e189c0c5e08d55c44fc02a4b26", null ],
       [ "CASTINTEGER", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a0a109fb07a3a6984f50ffe52dd2c213b", null ],
       [ "CASTFLOAT", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af721c36554a56d3695dda4af2863efbb", null ],
       [ "CASTBOOLEAN", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620", null ],

@@ -18,6 +18,7 @@ var test_8cpp =
     [ "TEST", "test_8cpp.html#a3b881dd4395be5cf3d29776234a5a7c1", null ],
     [ "TEST", "test_8cpp.html#a5f47bbd32281615a3cfecc5c1569f894", null ],
     [ "TEST", "test_8cpp.html#aba120ecfca02fa02583bbc48736bf095", null ],
+    [ "TEST", "test_8cpp.html#a376ace23cbc4681fcc847cb8c66406b4", null ],
     [ "TEST", "test_8cpp.html#adb02d720c8f42d88d8da3df40c9c3297", null ],
     [ "TEST", "test_8cpp.html#aad27caede74c48ba324a881e02ccf5f5", null ],
     [ "TEST", "test_8cpp.html#ae5a20d57b8a97cbe2b88aab3e94a8667", null ],
@@ -40,5 +41,6 @@ var test_8cpp =
     [ "TEST", "test_8cpp.html#ad268871a8b264685864b54dd6800f9d0", null ],
     [ "TEST", "test_8cpp.html#a5f70845c17a2f11bd3b449a94daa565d", null ],
     [ "TEST", "test_8cpp.html#ab545fa6a902e1a203e5ed8ae7a5453c2", null ],
+    [ "TEST", "test_8cpp.html#a9106488e687574c0a5935c5db96656b0", null ],
     [ "TEST", "test_8cpp.html#ad65ddc9a832334aa4f13550cf4b0d645", null ]
 ];

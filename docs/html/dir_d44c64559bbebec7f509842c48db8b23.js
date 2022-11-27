@@ -60,6 +60,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "astNodeReturn.hpp", "astNodeReturn_8hpp.html", [
       [ "AstNodeReturn", "classTang_1_1AstNodeReturn.html", "classTang_1_1AstNodeReturn" ]
     ] ],
+    [ "astNodeSlice.hpp", "astNodeSlice_8hpp.html", [
+      [ "AstNodeSlice", "classTang_1_1AstNodeSlice.html", "classTang_1_1AstNodeSlice" ]
+    ] ],
     [ "astNodeString.hpp", "astNodeString_8hpp.html", [
       [ "AstNodeString", "classTang_1_1AstNodeString.html", "classTang_1_1AstNodeString" ]
     ] ],

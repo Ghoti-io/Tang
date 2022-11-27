@@ -48,6 +48,8 @@ virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mb
 \begin{DoxyCompactList}\small\item\em Perform a type cast to float. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionBoolean_a423b841ea817eebc701ad26e82b50f0e}{\+\_\+\+\_\+boolean}} () const override
 \begin{DoxyCompactList}\small\item\em Perform a type cast to boolean. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classTang_1_1ComputedExpression_a6d0c01f57a6a2b6b8ec701202b16af94}{\+\_\+\+\_\+as\+Code}} () const
+\begin{DoxyCompactList}\small\item\em Output the contents of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} as a string similar to how it would be represented as code. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a493f58bd7f51ca4d6b9b1ef1860b4370}{is\+Copy\+Needed}} () const
 \begin{DoxyCompactList}\small\item\em Determine whether or not a copy is needed. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a76aaf726b67cedb54b6b3c75c834645f}{is\+\_\+equal}} (const \mbox{\hyperlink{macros_8hpp_a48da4f54f29ec5b8a4dfd1a9234f7ee8}{Tang\+::integer\+\_\+t}} \&val) const
@@ -78,6 +80,8 @@ virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mb
 \begin{DoxyCompactList}\small\item\em Compute the \char`\"{}less than\char`\"{} comparison. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_abb6defbdb303825687da1bd1468e6133}{\+\_\+\+\_\+index}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&index) const
 \begin{DoxyCompactList}\small\item\em Perform an index operation. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_aa7a262384220a86eb273284f8990ca84}{\+\_\+\+\_\+slice}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&begin, const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&end, const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&skip) const
+\begin{DoxyCompactList}\small\item\em Perform a slice operation. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_a14a57cffe9fb44b0d5f34d06afd0db1b}{\+\_\+\+\_\+string}} () const
 \begin{DoxyCompactList}\small\item\em Perform a type cast to string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -125,6 +129,23 @@ The result of the operation.
 
 
 Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionString_ae2b11008518d5e5bb1ab842dea1eb435}{Tang\+::\+Computed\+Expression\+String}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ab9c7c7ad34978c127b92ad7a24cbb717}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a024d709f222a059b2c70c7e84aec6ec4}{Tang\+::\+Computed\+Expression\+Float}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a8b592c106cd121e5891d1a1688bc3f5d}{Tang\+::\+Computed\+Expression\+Error}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_a6d0c01f57a6a2b6b8ec701202b16af94}\label{classTang_1_1ComputedExpression_a6d0c01f57a6a2b6b8ec701202b16af94}} 
+\index{Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}!\_\_asCode@{\_\_asCode}}
+\index{\_\_asCode@{\_\_asCode}!Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}}
+\doxysubsubsection{\texorpdfstring{\_\_asCode()}{\_\_asCode()}}
+{\footnotesize\ttfamily string Computed\+Expression\+::\+\_\+\+\_\+as\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Output the contents of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} as a string similar to how it would be represented as code. 
+
+\begin{DoxyReturn}{Returns}
+A code-\/string representation of the computed expression. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionString_ae3a29af91b6dd6828f85acae7329b377}{Tang\+::\+Computed\+Expression\+String}}.
 
 \mbox{\Hypertarget{classTang_1_1ComputedExpression_a011d86ce9b04fca4bef67b4c5bb3324c}\label{classTang_1_1ComputedExpression_a011d86ce9b04fca4bef67b4c5bb3324c}} 
 \index{Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}!\_\_assign\_index@{\_\_assign\_index}}
@@ -367,6 +388,34 @@ The result of the operation.
 
 Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_ac21f9e07c9d1f0a98b60bb1d75d8e87d}{Tang\+::\+Computed\+Expression}}.
 
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_aa7a262384220a86eb273284f8990ca84}\label{classTang_1_1ComputedExpression_aa7a262384220a86eb273284f8990ca84}} 
+\index{Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}!\_\_slice@{\_\_slice}}
+\index{\_\_slice@{\_\_slice}!Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}}
+\doxysubsubsection{\texorpdfstring{\_\_slice()}{\_\_slice()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+slice (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{begin,  }\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{end,  }\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{skip }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Perform a slice operation. 
+
+Convention will follow Python semantics, in which a slice will start at the provided index position, and go up to but not including the end index. The slice will default to an index increment of 1, but can be defined as another integer value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin} & The begin index expression provided by the script. \\
+\hline
+{\em end} & The end index expression provided by the script. \\
+\hline
+{\em skip} & The skip index expression provided by the script. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_a67ecf8a85bec9293943b990761bab2c8}{Tang\+::\+Computed\+Expression\+Array}}.
+
 \mbox{\Hypertarget{classTang_1_1ComputedExpression_a14a57cffe9fb44b0d5f34d06afd0db1b}\label{classTang_1_1ComputedExpression_a14a57cffe9fb44b0d5f34d06afd0db1b}} 
 \index{Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}!\_\_string@{\_\_string}}
 \index{\_\_string@{\_\_string}!Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}}
@@ -382,7 +431,7 @@ The result of the the operation.
 \end{DoxyReturn}
 
 
-Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionString_a92af6f9ea5e1809e206d96d8fb31c30f}{Tang\+::\+Computed\+Expression\+String}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a70d1079d4d4d8ff14725e435680a1a8a}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a873e1a1bd0810ab622e4be3b60a4c77b}{Tang\+::\+Computed\+Expression\+Float}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a7d5d18da408ab371e7360617760ac205}{Tang\+::\+Computed\+Expression\+Error}}.
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionString_a92af6f9ea5e1809e206d96d8fb31c30f}{Tang\+::\+Computed\+Expression\+String}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a70d1079d4d4d8ff14725e435680a1a8a}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a873e1a1bd0810ab622e4be3b60a4c77b}{Tang\+::\+Computed\+Expression\+Float}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a7d5d18da408ab371e7360617760ac205}{Tang\+::\+Computed\+Expression\+Error}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_a67259f44cd68ccac6ca858fca4823b27}{Tang\+::\+Computed\+Expression\+Array}}.
 
 \mbox{\Hypertarget{classTang_1_1ComputedExpression_ab0d79debcd475a5063e574c10f1715ff}\label{classTang_1_1ComputedExpression_ab0d79debcd475a5063e574c10f1715ff}} 
 \index{Tang::ComputedExpressionBoolean@{Tang::ComputedExpressionBoolean}!\_\_subtract@{\_\_subtract}}

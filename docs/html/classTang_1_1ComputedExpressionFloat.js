@@ -2,6 +2,7 @@ var classTang_1_1ComputedExpressionFloat =
 [
     [ "ComputedExpressionFloat", "classTang_1_1ComputedExpressionFloat.html#a3e13d043149412e6d71a3a335e852140", null ],
     [ "__add", "classTang_1_1ComputedExpressionFloat.html#a024d709f222a059b2c70c7e84aec6ec4", null ],
+    [ "__asCode", "classTang_1_1ComputedExpressionFloat.html#a6d0c01f57a6a2b6b8ec701202b16af94", null ],
     [ "__assign_index", "classTang_1_1ComputedExpressionFloat.html#a011d86ce9b04fca4bef67b4c5bb3324c", null ],
     [ "__boolean", "classTang_1_1ComputedExpressionFloat.html#ac8082fbd5e14a66226278fc93ff8c977", null ],
     [ "__divide", "classTang_1_1ComputedExpressionFloat.html#af6bebf05fe3c59c46b4e7471317a3511", null ],
@@ -14,6 +15,7 @@ var classTang_1_1ComputedExpressionFloat =
     [ "__multiply", "classTang_1_1ComputedExpressionFloat.html#af041a3a4e933ebe4e043cddd29e0f56b", null ],
     [ "__negative", "classTang_1_1ComputedExpressionFloat.html#a203faa00cd83e6746084287b0e2ac778", null ],
     [ "__not", "classTang_1_1ComputedExpressionFloat.html#ad85ce3aa542b81649d4756d84de09ea2", null ],
+    [ "__slice", "classTang_1_1ComputedExpressionFloat.html#aa7a262384220a86eb273284f8990ca84", null ],
     [ "__string", "classTang_1_1ComputedExpressionFloat.html#a873e1a1bd0810ab622e4be3b60a4c77b", null ],
     [ "__subtract", "classTang_1_1ComputedExpressionFloat.html#aa6e605b26eb90dbd2002be8215f754cf", null ],
     [ "dump", "classTang_1_1ComputedExpressionFloat.html#a327db49914ba138b70c2403ebf609635", null ],
