@@ -133,7 +133,8 @@
 %type <std::shared_ptr<Tang::AstNode>> codeBlock
 %type <std::shared_ptr<Tang::AstNode>> openStatement
 %type <std::shared_ptr<Tang::AstNode>> closedStatement
-%type <std::shared_ptr<Tang::AstNode>> forExpression
+%type <std::shared_ptr<Tang::AstNode>> optionalExpression
+%type <std::shared_ptr<Tang::AstNode>> slice
 
 // Precedence rules.
 // For guidance, see:
@@ -192,6 +193,7 @@ namespace Tang {
 #include "astNodeFunctionDeclaration.hpp"
 #include "astNodeFunctionCall.hpp"
 #include "astNodeReturn.hpp"
+#include "astNodeSlice.hpp"
 
 // We must provide the yylex() function.
 // yylex() arguments are defined in the bison .y file.
@@ -306,7 +308,7 @@ closedStatement
     {
       $$ = std::make_shared<AstNodeDoWhile>($5, $2, @1);
     }
-  | "for" "(" forExpression ";" forExpression ";" forExpression ")" closedStatement
+  | "for" "(" optionalExpression ";" optionalExpression ";" optionalExpression ")" closedStatement
     {
       $$ = std::make_shared<AstNodeFor>($3, $5, $7, $9, @1);
     }
@@ -348,19 +350,32 @@ openStatement
     {
       $$ = std::make_shared<AstNodeWhile>($3, $5, @1);
     }
-  | "for" "(" forExpression ";" forExpression ";" forExpression ")" openStatement
+  | "for" "(" optionalExpression ";" optionalExpression ";" optionalExpression ")" openStatement
     {
       $$ = std::make_shared<AstNodeFor>($3, $5, $7, $9, @1);
     }
   ;
 
-// `forExpression` is an optional expression.
-forExpression
+// `optionalExpression` is an expression that, if not present, will default to
+// a null value.
+optionalExpression
   : %empty
     {
       $$ = std::make_shared<AstNode>(Tang::location{});
     }
   | expression
+  ;
+
+// `slice` represents a slice operation on a container.
+slice
+  : expression "[" optionalExpression ":" optionalExpression ":" optionalExpression "]"
+    {
+      $$ = std::make_shared<AstNodeSlice>($1, $3, $5, $7, @1);
+    }
+  | expression "[" optionalExpression ":" optionalExpression "]"
+    {
+      $$ = std::make_shared<AstNodeSlice>($1, $3, $5, std::make_shared<AstNode>(Tang::location{}), @1);
+    }
   ;
 
 // `codeBlock` represents a series of statements.
@@ -463,6 +478,7 @@ expression
     {
       $$ = std::make_shared<AstNodeBinary>(AstNodeBinary::Or, $1, $3, @2);
     }
+  | slice
   | "(" expression ")"
     {
       $$ = $2;
