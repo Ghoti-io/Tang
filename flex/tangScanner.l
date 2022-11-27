@@ -271,6 +271,23 @@ using namespace std;
     }
     stringBuffer += result;
   }
+  \\x[a-fA-F0-9]{1,2} {
+    // Match a hexadecimal char.
+    unsigned char result{0};
+    for (int i = 2; i < yyleng; ++i) {
+      result <<= 4;
+      if (yytext[i] >= 'a' && yytext[i] <= 'f') {
+        result += 10 + yytext[i] - 'a';
+      }
+      else if (yytext[i] >= 'A' && yytext[i] <= 'F') {
+        result += 10 + yytext[i] - 'A';
+      }
+      else {
+        result += yytext[i] - '0';
+      }
+    }
+    stringBuffer += result;
+  }
   \\[0-9]+ {
     // Generate Error - Bad escape sequence.
     // Something like "\48" or "\07777777"
