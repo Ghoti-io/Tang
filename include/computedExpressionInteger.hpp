@@ -42,6 +42,7 @@ namespace Tang {
 
       friend class ComputedExpressionFloat;
       friend class ComputedExpressionArray;
+      friend class ComputedExpressionString;
 
     private:
       /**

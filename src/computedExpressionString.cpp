@@ -6,6 +6,7 @@
 #include "computedExpressionString.hpp"
 #include "computedExpressionBoolean.hpp"
 #include "computedExpressionError.hpp"
+#include "computedExpressionInteger.hpp"
 
 using namespace std;
 using namespace Tang;
@@ -26,6 +27,24 @@ bool ComputedExpressionString::is_equal(const bool & val) const {
 
 bool ComputedExpressionString::is_equal(const string & val) const {
   return val == this->val;
+}
+
+GarbageCollected ComputedExpressionString::__index(const GarbageCollected & index) const {
+  if (typeid(*index) == typeid(ComputedExpressionInteger)) {
+    auto & indexConv = static_cast<ComputedExpressionInteger&>(*index);
+    auto i = indexConv.val;
+    return (i >= 0)
+      // index >= 0
+      ? i < (integer_t)this->val.length()
+        ? GarbageCollected::make<ComputedExpressionString>(this->val.substr(i, 1))
+        : GarbageCollected::make<ComputedExpressionError>(Error{"Index out of range."})
+      // index < 0
+      : -i <= (integer_t)this->val.length()
+        ? GarbageCollected::make<ComputedExpressionString>(this->val.substr(this->val.length() + i, 1))
+        : GarbageCollected::make<ComputedExpressionError>(Error{"Index out of range."});
+  }
+
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Invalid index value."});
 }
 
 GarbageCollected ComputedExpressionString::__add(const GarbageCollected & rhs) const {

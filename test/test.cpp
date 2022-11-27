@@ -570,6 +570,57 @@ TEST(Expression, Ternary) {
   EXPECT_EQ(*p10.execute().getResult(), (integer_t)1);
 }
 
+TEST(Expression, StringIndex) {
+  {
+    // Tests positive and negative indexes.
+    auto p1 = TangBase().compileScript(R"(
+      a = "abc";
+      print(a[2]);
+      print(a[1]);
+      print(a[0]);
+      print(a[-3]);
+      print(a[-2]);
+      print(a[-1]);
+    )");
+    EXPECT_EQ(p1.execute().out, "cbaabc");
+  }
+  {
+    // Tests positive and negative indexes with multi-codepoint content.
+    // The 3 code points are: `.`, the Scottish Flag, and `$`
+    auto p1 = TangBase().compileScript(R"(
+      a = "$\xF0\x9F\x8F\xB4\xF3\xA0\x81\xA7\xF3\xA0\x81\xA2\xF3\xA0\x81\xB3\xF3\xA0\x81\xA3\xF3\xA0\x81\xB4\xF3\xA0\x81\xBF.";
+      print(a[2]);
+      print(a[1]);
+      print(a[0]);
+      print(a[-3]);
+      print(a[-2]);
+      print(a[-1]);
+    )");
+    EXPECT_EQ(p1.execute().out, ".\xF0\x9F\x8F\xB4\xF3\xA0\x81\xA7\xF3\xA0\x81\xA2\xF3\xA0\x81\xB3\xF3\xA0\x81\xA3\xF3\xA0\x81\xB4\xF3\xA0\x81\xBF$$\xF0\x9F\x8F\xB4\xF3\xA0\x81\xA7\xF3\xA0\x81\xA2\xF3\xA0\x81\xB3\xF3\xA0\x81\xA3\xF3\xA0\x81\xB4\xF3\xA0\x81\xBF.");
+  }
+  {
+    // Index out of range
+    auto p1 = TangBase().compileScript(R"(
+      "$\xF0\x9F\x8F\xB4\xF3\xA0\x81\xA7\xF3\xA0\x81\xA2\xF3\xA0\x81\xB3\xF3\xA0\x81\xA3\xF3\xA0\x81\xB4\xF3\xA0\x81\xBF."[-4]
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), Error{"Index out of range."});
+  }
+  {
+    // Index out of range
+    auto p1 = TangBase().compileScript(R"(
+      "$\xF0\x9F\x8F\xB4\xF3\xA0\x81\xA7\xF3\xA0\x81\xA2\xF3\xA0\x81\xB3\xF3\xA0\x81\xA3\xF3\xA0\x81\xB4\xF3\xA0\x81\xBF."[3]
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), Error{"Index out of range."});
+  }
+  {
+    // Printing when index out of range
+    auto p1 = TangBase().compileScript(R"(
+      print("$\xF0\x9F\x8F\xB4\xF3\xA0\x81\xA7\xF3\xA0\x81\xA2\xF3\xA0\x81\xB3\xF3\xA0\x81\xA3\xF3\xA0\x81\xB4\xF3\xA0\x81\xBF."[3]);
+    )");
+    EXPECT_EQ(p1.execute().out, "");
+  }
+}
+
 TEST(Expression, ArrayIndex) {
   {
     auto p1 = TangBase().compileScript(R"(
