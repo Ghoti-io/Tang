@@ -36,7 +36,10 @@ void AstNodeString::compileLiteral(Tang::Program & program) const {
   uinteger_t temp = 0;
   for (size_t i = 0; i < this->val.length(); ++i) {
     temp <<= 8;
-    temp |= (uinteger_t)this->val[i];
+    // In order to handle UTF-8 encodings as well as ASCII values larger than
+    // 127, we ***must*** cast the string character as a uint8_t first, then
+    // to the uinteger_t.
+    temp |= (uinteger_t)(uint8_t)this->val[i];
     if ((i % sizeof(uinteger_t)) == (sizeof(uinteger_t) - 1)) {
       program.addBytecode(temp);
       temp = 0;
