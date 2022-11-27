@@ -27,7 +27,7 @@ namespace Tang {
      * @param length The maximum number of graphemes to return.
      * @return The requested substring.
      */
-    std::string substr(size_t position, size_t length);
+    std::string substr(size_t position, size_t length) const;
 
     /**
      * Compare two UnicodeStrings.

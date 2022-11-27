@@ -43,7 +43,7 @@ static std::vector<size_t> getGraphemeOffsets(const icu::UnicodeString &str) {
 
 UnicodeString::UnicodeString(const string & src) : src{src} {}
 
-std::string UnicodeString::substr(size_t position, size_t length) {
+std::string UnicodeString::substr(size_t position, size_t length) const {
   // First sanity check.
   if (length < 1) {
     return "";
