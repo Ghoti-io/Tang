@@ -5,8 +5,20 @@
 \item 
 \mbox{\hyperlink{classTang_1_1UnicodeString_ae9396cce6078fb0ab2986e3ea2910b36}{Unicode\+String}} (const std\+::string \&src)
 \begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{classTang_1_1UnicodeString}{Tang\+::\+Unicode\+String}} object, which acts as the interface to the ICU library. \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{classTang_1_1UnicodeString_acb7732c024ed48a58b13b95bf00ba749}{substr}} (size\+\_\+t \mbox{\hyperlink{classTang_1_1position}{position}}, size\+\_\+t length)
-\begin{DoxyCompactList}\small\item\em Return a Unicode grapheme-\/aware substring. \end{DoxyCompactList}\end{DoxyCompactItemize}
+std\+::string \mbox{\hyperlink{classTang_1_1UnicodeString_acb7732c024ed48a58b13b95bf00ba749}{substr}} (size\+\_\+t \mbox{\hyperlink{classTang_1_1position}{position}}, size\+\_\+t \mbox{\hyperlink{classTang_1_1UnicodeString_aacfef070a2f6de639e050822c94263f5}{length}})
+\begin{DoxyCompactList}\small\item\em Return a Unicode grapheme-\/aware substring. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTang_1_1UnicodeString_a7ec9ba3ea2b640435e31a61865c97ffd}{operator==}} (const \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Compare two Unicode\+Strings. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTang_1_1UnicodeString_ad22c4f14673523cd3bcd5c56fa70286f}{operator$<$}} (const \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Compare two Unicode\+Strings. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} \mbox{\hyperlink{classTang_1_1UnicodeString_a1801e6b4cd159a065fb77ce1a8bcd827}{operator+}} (const \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} that is the concatenation of two Unicode\+Strings. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTang_1_1UnicodeString_aecf5faef826f6f708b5d95c1e240c8c0}{operator std\+::string}} () const
+\begin{DoxyCompactList}\small\item\em Cast the current \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} object to a std\+::string, UTF-\/8 encoded. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classTang_1_1UnicodeString_aacfef070a2f6de639e050822c94263f5}{length}} () const
+\begin{DoxyCompactList}\small\item\em Return the length of the \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} in graphemes. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classTang_1_1UnicodeString_ac4f534c284a4edfc89887e7c6234e35e}{bytes\+Length}} () const
+\begin{DoxyCompactList}\small\item\em Return the length of the \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} in bytes. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -28,6 +40,103 @@ Construct a \mbox{\hyperlink{classTang_1_1UnicodeString}{Tang\+::\+Unicode\+Stri
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1UnicodeString_ac4f534c284a4edfc89887e7c6234e35e}\label{classTang_1_1UnicodeString_ac4f534c284a4edfc89887e7c6234e35e}} 
+\index{Tang::UnicodeString@{Tang::UnicodeString}!bytesLength@{bytesLength}}
+\index{bytesLength@{bytesLength}!Tang::UnicodeString@{Tang::UnicodeString}}
+\doxysubsubsection{\texorpdfstring{bytesLength()}{bytesLength()}}
+{\footnotesize\ttfamily size\+\_\+t Unicode\+String\+::bytes\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return the length of the \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} in bytes. 
+
+Note\+: this is {\itshape not} the number of codepoints or graphemes, but is the acutal number of bytes in memory.
+
+\begin{DoxyReturn}{Returns}
+Returns the length of the \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} in bytes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1UnicodeString_aacfef070a2f6de639e050822c94263f5}\label{classTang_1_1UnicodeString_aacfef070a2f6de639e050822c94263f5}} 
+\index{Tang::UnicodeString@{Tang::UnicodeString}!length@{length}}
+\index{length@{length}!Tang::UnicodeString@{Tang::UnicodeString}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily size\+\_\+t Unicode\+String\+::length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return the length of the \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} in graphemes. 
+
+Note\+: this is {\itshape not} the number of bytes, chars, or codepoints, but is the length in graphemes, as defined by ICU.
+
+\begin{DoxyReturn}{Returns}
+Returns the length of the \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} in graphemes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1UnicodeString_aecf5faef826f6f708b5d95c1e240c8c0}\label{classTang_1_1UnicodeString_aecf5faef826f6f708b5d95c1e240c8c0}} 
+\index{Tang::UnicodeString@{Tang::UnicodeString}!operator std::string@{operator std::string}}
+\index{operator std::string@{operator std::string}!Tang::UnicodeString@{Tang::UnicodeString}}
+\doxysubsubsection{\texorpdfstring{operator std::string()}{operator std::string()}}
+{\footnotesize\ttfamily Unicode\+String\+::operator std\+::string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Cast the current \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} object to a std\+::string, UTF-\/8 encoded. 
+
+\begin{DoxyReturn}{Returns}
+Returns the std\+::string version of the \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1UnicodeString_a1801e6b4cd159a065fb77ce1a8bcd827}\label{classTang_1_1UnicodeString_a1801e6b4cd159a065fb77ce1a8bcd827}} 
+\index{Tang::UnicodeString@{Tang::UnicodeString}!operator+@{operator+}}
+\index{operator+@{operator+}!Tang::UnicodeString@{Tang::UnicodeString}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} Unicode\+String\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Create a new \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} that is the concatenation of two Unicode\+Strings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The string to append to the current object string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the result of the concatenation. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1UnicodeString_ad22c4f14673523cd3bcd5c56fa70286f}\label{classTang_1_1UnicodeString_ad22c4f14673523cd3bcd5c56fa70286f}} 
+\index{Tang::UnicodeString@{Tang::UnicodeString}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Tang::UnicodeString@{Tang::UnicodeString}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Unicode\+String\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Compare two Unicode\+Strings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The string to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the rhs string is greater than or equal to the object string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1UnicodeString_a7ec9ba3ea2b640435e31a61865c97ffd}\label{classTang_1_1UnicodeString_a7ec9ba3ea2b640435e31a61865c97ffd}} 
+\index{Tang::UnicodeString@{Tang::UnicodeString}!operator==@{operator==}}
+\index{operator==@{operator==}!Tang::UnicodeString@{Tang::UnicodeString}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Unicode\+String\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Compare two Unicode\+Strings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The string to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the two strings are equal. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classTang_1_1UnicodeString_acb7732c024ed48a58b13b95bf00ba749}\label{classTang_1_1UnicodeString_acb7732c024ed48a58b13b95bf00ba749}} 
 \index{Tang::UnicodeString@{Tang::UnicodeString}!substr@{substr}}
 \index{substr@{substr}!Tang::UnicodeString@{Tang::UnicodeString}}
@@ -48,6 +157,14 @@ Return a Unicode grapheme-\/aware substring.
 \begin{DoxyReturn}{Returns}
 The requested substring. 
 \end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classTang_1_1UnicodeString_acb7732c024ed48a58b13b95bf00ba749_cgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
