@@ -515,8 +515,8 @@
   \item {include/computedExpressionFloat.hpp}, \hyperpage{273}
   \item {include/computedExpressionInteger.hpp}, \hyperpage{274}
   \item {include/computedExpressionString.hpp}, \hyperpage{275}
-  \item {include/error.hpp}, \hyperpage{276}
-  \item {include/garbageCollected.hpp}, \hyperpage{277}
+  \item {include/error.hpp}, \hyperpage{275}
+  \item {include/garbageCollected.hpp}, \hyperpage{276}
   \item {include/macros.hpp}, \hyperpage{277}
   \item {include/opcode.hpp}, \hyperpage{278}
   \item {include/program.hpp}, \hyperpage{279}
@@ -540,7 +540,7 @@
     \subitem {Tang::ComputedExpressionError}, \hyperpage{162--164}
     \subitem {Tang::ComputedExpressionFloat}, \hyperpage{174--176}
     \subitem {Tang::ComputedExpressionInteger}, \hyperpage{186--188}
-    \subitem {Tang::ComputedExpressionString}, \hyperpage{197--199}
+    \subitem {Tang::ComputedExpressionString}, \hyperpage{198--200}
   \item {IsAssignment}
     \subitem {Tang::AstNode}, \hyperpage{13}
     \subitem {Tang::AstNodeArray}, \hyperpage{17}
@@ -1261,7 +1261,7 @@
     \subitem {\_\_subtract}, \hyperpage{197}
     \subitem {ComputedExpressionString}, \hyperpage{191}
     \subitem {dump}, \hyperpage{197}
-    \subitem {is\_equal}, \hyperpage{197--199}
+    \subitem {is\_equal}, \hyperpage{198--200}
     \subitem {isCopyNeeded}, \hyperpage{200}
     \subitem {makeCopy}, \hyperpage{200}
   \item {Tang::Error}, \hyperpage{201}
