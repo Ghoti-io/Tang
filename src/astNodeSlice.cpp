@@ -35,6 +35,7 @@ void AstNodeSlice::compile(Tang::Program & program) const {
 }
 
 void AstNodeSlice::compilePreprocess(Program & program, PreprocessState state) const {
+  this->collection->compilePreprocess(program, state);
   this->begin->compilePreprocess(program, state);
   this->end->compilePreprocess(program, state);
   this->skip->compilePreprocess(program, state);
