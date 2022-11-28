@@ -204,7 +204,7 @@ $(OBJ_DIR)/computedExpressionInteger.o: src/computedExpressionInteger.cpp includ
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/computedExpressionString.o: src/computedExpressionString.cpp include/macros.hpp include/computedExpressionString.hpp include/computedExpression.hpp include/error.hpp include/garbageCollected.hpp
+$(OBJ_DIR)/computedExpressionString.o: src/computedExpressionString.cpp include/macros.hpp include/computedExpressionString.hpp include/computedExpression.hpp include/error.hpp include/garbageCollected.hpp include/unicodeString.hpp
 	@echo "\n### Compiling computedExpressionString.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
