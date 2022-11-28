@@ -28,6 +28,7 @@ namespace Tang {
       virtual bool is_equal(const bool & val) const override;
       virtual bool is_equal(const string & val) const override;
       virtual GarbageCollected __index(const GarbageCollected & index) const override;
+      virtual GarbageCollected __slice(const GarbageCollected & begin, const GarbageCollected & end, const GarbageCollected & skip) const override;
       virtual GarbageCollected __add(const GarbageCollected & rhs) const override;
       virtual GarbageCollected __not() const override;
       virtual GarbageCollected __lessThan(const GarbageCollected & rhs) const override;

@@ -621,6 +621,131 @@ TEST(Expression, StringIndex) {
   }
 }
 
+TEST(Expression, StringSlice) {
+  {
+    // Slice with all default values.
+    // Will create a copy of the string.
+    auto p1 = TangBase().compileScript(R"(
+      print("$\xF0\x9F\x8F\xB4\xF3\xA0\x81\xA7\xF3\xA0\x81\xA2\xF3\xA0\x81\xB3\xF3\xA0\x81\xA3\xF3\xA0\x81\xB4\xF3\xA0\x81\xBF."[::]);
+    )");
+    EXPECT_EQ(p1.execute().out, "$\xF0\x9F\x8F\xB4\xF3\xA0\x81\xA7\xF3\xA0\x81\xA2\xF3\xA0\x81\xB3\xF3\xA0\x81\xA3\xF3\xA0\x81\xB4\xF3\xA0\x81\xBF.");
+  }
+  {
+    // Slice with default begin and end, but -1 skip.
+    // Will reverse the string, keeping multi-codepoints in the correct order.
+    auto p1 = TangBase().compileScript(R"(
+      print("$\xF0\x9F\x8F\xB4\xF3\xA0\x81\xA7\xF3\xA0\x81\xA2\xF3\xA0\x81\xB3\xF3\xA0\x81\xA3\xF3\xA0\x81\xB4\xF3\xA0\x81\xBF."[::-1]);
+    )");
+    EXPECT_EQ(p1.execute().out, ".\xF0\x9F\x8F\xB4\xF3\xA0\x81\xA7\xF3\xA0\x81\xA2\xF3\xA0\x81\xB3\xF3\xA0\x81\xA3\xF3\xA0\x81\xB4\xF3\xA0\x81\xBF$");
+  }
+  {
+    // Slice with a positive value.
+    auto p1 = TangBase().compileScript(R"(
+      print("abcdefghijklmnopqrstuvwxyz"[::1]);
+    )");
+    EXPECT_EQ(p1.execute().out, "abcdefghijklmnopqrstuvwxyz");
+  }
+  {
+    // Slice with a positive value.
+    auto p1 = TangBase().compileScript(R"(
+      print("abcdefghijklmnopqrstuvwxyz"[::2]);
+    )");
+    EXPECT_EQ(p1.execute().out, "acegikmoqsuwy");
+  }
+  {
+    // Slice with a positive value.
+    auto p1 = TangBase().compileScript(R"(
+      print("abcdefghijklmnopqrstuvwxyz"[1::2]);
+    )");
+    EXPECT_EQ(p1.execute().out, "bdfhjlnprtvxz");
+  }
+  {
+    // Slice with a positive value and non-default begin & end.
+    auto p1 = TangBase().compileScript(R"(
+      print("abcdefghijklmnopqrstuvwxyz"[1:17:2]);
+    )");
+    EXPECT_EQ(p1.execute().out, "bdfhjlnp");
+  }
+  {
+    // Slice with a negative value.
+    auto p1 = TangBase().compileScript(R"(
+      print("abcdefghijklmnopqrstuvwxyz"[::-1]);
+    )");
+    EXPECT_EQ(p1.execute().out, "zyxwvutsrqponmlkjihgfedcba");
+  }
+  {
+    // Slice with a negative value.
+    auto p1 = TangBase().compileScript(R"(
+      print("abcdefghijklmnopqrstuvwxyz"[::-2]);
+    )");
+    EXPECT_EQ(p1.execute().out, "zxvtrpnljhfdb");
+  }
+  {
+    // Slice with a negative value.
+    auto p1 = TangBase().compileScript(R"(
+      print("abcdefghijklmnopqrstuvwxyz"[-2::-2]);
+    )");
+    EXPECT_EQ(p1.execute().out, "ywusqomkigeca");
+  }
+  {
+    // Slice with a negative value and non-default begin & end.
+    auto p1 = TangBase().compileScript(R"(
+      print("abcdefghijklmnopqrstuvwxyz"[-1:-17:-2]);
+    )");
+    EXPECT_EQ(p1.execute().out, "zxvtrpnl");
+  }
+  {
+    // Slice with a begin & end out of range, should produce copy of array.
+    auto p1 = TangBase().compileScript(R"(
+      print("abcdefghijklmnopqrstuvwxyz"[-300:300]);
+    )");
+    EXPECT_EQ(p1.execute().out, "abcdefghijklmnopqrstuvwxyz");
+  }
+  {
+    // Slice with a begin & end out of range, should produce and empty array.
+    auto p1 = TangBase().compileScript(R"(
+      print("abcdefghijklmnopqrstuvwxyz"[300:-300]);
+    )");
+    EXPECT_EQ(p1.execute().out, "");
+  }
+  {
+    // Slice with a begin & end out of range, should produce copy of array,
+    // but reversed.
+    auto p1 = TangBase().compileScript(R"(
+      print("abcdefghijklmnopqrstuvwxyz"[300:-300:-1]);
+    )");
+    EXPECT_EQ(p1.execute().out, "zyxwvutsrqponmlkjihgfedcba");
+  }
+  {
+    // Slice with a begin & end out of range, should produce and empty array.
+    auto p1 = TangBase().compileScript(R"(
+      print("abcdefghijklmnopqrstuvwxyz"[-300:300:-1]);
+    )");
+    EXPECT_EQ(p1.execute().out, "");
+  }
+  {
+    // Slice with a skip value of 0.
+    auto p1 = TangBase().compileScript(R"(
+      print("abcdefghijklmnopqrstuvwxyz"[::0]);
+    )");
+    EXPECT_EQ(p1.execute().out, "");
+  }
+  {
+    // Slice with a skip value of 0, should return error.
+    auto p1 = TangBase().compileScript(R"(
+      print("abcdefghijklmnopqrstuvwxyz"[::0]);
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), Error{"Don't know how to slice this expression."});
+  }
+  {
+    // Double slice, proof of concept.
+    auto p1 = TangBase().compileScript(R"(
+      print("abcdefghijklmnopqrstuvwxyz"[::2][-3::-1]);
+    )");
+    EXPECT_EQ(p1.execute().out, "usqomkigeca");
+  }
+}
+
 TEST(Expression, ArrayIndex) {
   {
     auto p1 = TangBase().compileScript(R"(

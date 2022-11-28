@@ -51,6 +51,78 @@ GarbageCollected ComputedExpressionString::__index(const GarbageCollected & inde
   return GarbageCollected::make<ComputedExpressionError>(Error{"Invalid index value."});
 }
 
+GarbageCollected ComputedExpressionString::__slice(const GarbageCollected & begin, const GarbageCollected & end, const GarbageCollected & skip) const {
+  int convBegin, convEnd, convSkip;
+
+  // Verify that the skip is either default or an integer.
+  if (typeid(*skip) == typeid(ComputedExpression)) {
+    // Skip is a default value.
+    convSkip = 1;
+  }
+  else if (typeid(*skip) == typeid(ComputedExpressionInteger)) {
+    // Skip is an integer.
+    convSkip = static_cast<ComputedExpressionInteger&>(*skip).val;
+  }
+  else {
+    return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to slice this expression."});
+  }
+  // Verify that the skip is not 0.
+  if (!convSkip) {
+    return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to slice this expression."});
+  }
+
+  // Verify that the begin is either default or an integer.
+  if (typeid(*begin) == typeid(ComputedExpression)) {
+    // Begin is a default value.
+    convBegin = convSkip > 0 ? 0 : this->val.length() - 1;
+   }
+  else if (typeid(*begin) == typeid(ComputedExpressionInteger)) {
+    // Begin is an integer.
+    convBegin = static_cast<ComputedExpressionInteger&>(*begin).val;
+    convBegin = (convBegin >= 0)
+      ? convBegin
+      : this->val.length() + convBegin;
+  }
+  else {
+    return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to slice this expression."});
+  }
+
+  // Verify that the end is either default or an integer.
+  if (typeid(*end) == typeid(ComputedExpression)) {
+    // End is a default value.
+    convEnd = convSkip > 0 ? this->val.length() : -1;
+   }
+  else if (typeid(*end) == typeid(ComputedExpressionInteger)) {
+    // End is an integer.
+    convEnd = static_cast<ComputedExpressionInteger&>(*end).val;
+    convEnd = (convEnd >= 0)
+      ? convEnd
+      : this->val.length() + convEnd;
+  }
+  else {
+    return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to slice this expression."});
+  }
+
+  // The new target container.
+  string newString;
+
+  // Skip is positive.
+  if (convSkip > 0) {
+    for (int i = max(0, convBegin); i < (int)this->val.length() && i < convEnd; i += convSkip) {
+      newString += this->val.substr(i, 1);
+    }
+    return GarbageCollected::make<ComputedExpressionString>(newString);
+  }
+
+  // Skip is negative.
+  for (int i = min((int)this->val.length() - 1, convBegin); i >= 0 && i > convEnd; i += convSkip) {
+    newString += this->val.substr(i, 1);
+  }
+  return GarbageCollected::make<ComputedExpressionString>(newString);
+
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to slice this expression."});
+}
+
 GarbageCollected ComputedExpressionString::__add(const GarbageCollected & rhs) const {
   if (typeid(*rhs) == typeid(ComputedExpressionString)) {
     auto & rhsConv = static_cast<ComputedExpressionString&>(*rhs);
