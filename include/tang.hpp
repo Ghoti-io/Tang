@@ -42,9 +42,6 @@
 // * default print() on ComputedExpressionString
 //   * What to do when combining strings?
 // * Better location tracking for bytecode and error reporting.
-// * Array Slice
-// * String [] access
-// * String Slice
 // * Ranged for and iterators
 //   * Arrays
 //   * strings
