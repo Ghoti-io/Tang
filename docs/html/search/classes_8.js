@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['unicodestring_346',['UnicodeString',['../classTang_1_1UnicodeString.html',1,'Tang']]]
+  ['unescape_349',['Unescape',['../classTang_1_1Unescape.html',1,'Tang']]],
+  ['unicodestring_350',['UnicodeString',['../classTang_1_1UnicodeString.html',1,'Tang']]]
 ];

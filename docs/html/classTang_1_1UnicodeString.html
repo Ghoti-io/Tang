@@ -90,11 +90,16 @@ $(document).ready(function(){initNavTree('classTang_1_1UnicodeString.html',''); 
 <div class="title">Tang::UnicodeString Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents a UTF-8 encoded string that is Unicode-aware.  
+ <a href="classTang_1_1UnicodeString.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="unicodeString_8hpp_source.html">unicodeString.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae9396cce6078fb0ab2986e3ea2910b36"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#ae9396cce6078fb0ab2986e3ea2910b36">UnicodeString</a> (const std::string &amp;src)</td></tr>
-<tr class="memdesc:ae9396cce6078fb0ab2986e3ea2910b36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classTang_1_1UnicodeString.html">Tang::UnicodeString</a> object, which acts as the interface to the ICU library.  <a href="classTang_1_1UnicodeString.html#ae9396cce6078fb0ab2986e3ea2910b36">More...</a><br /></td></tr>
+<tr class="memdesc:ae9396cce6078fb0ab2986e3ea2910b36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classTang_1_1UnicodeString.html" title="Represents a UTF-8 encoded string that is Unicode-aware.">Tang::UnicodeString</a> object, which acts as the interface to the ICU library.  <a href="classTang_1_1UnicodeString.html#ae9396cce6078fb0ab2986e3ea2910b36">More...</a><br /></td></tr>
 <tr class="separator:ae9396cce6078fb0ab2986e3ea2910b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bda91d3c0efba9f5e70d915a665ba18"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#a7bda91d3c0efba9f5e70d915a665ba18">substr</a> (size_t <a class="el" href="classTang_1_1position.html">position</a>, size_t <a class="el" href="classTang_1_1UnicodeString.html#aacfef070a2f6de639e050822c94263f5">length</a>) const</td></tr>
 <tr class="memdesc:a7bda91d3c0efba9f5e70d915a665ba18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a Unicode grapheme-aware substring.  <a href="classTang_1_1UnicodeString.html#a7bda91d3c0efba9f5e70d915a665ba18">More...</a><br /></td></tr>
@@ -106,19 +111,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad22c4f14673523cd3bcd5c56fa70286f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two UnicodeStrings.  <a href="classTang_1_1UnicodeString.html#ad22c4f14673523cd3bcd5c56fa70286f">More...</a><br /></td></tr>
 <tr class="separator:ad22c4f14673523cd3bcd5c56fa70286f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1801e6b4cd159a065fb77ce1a8bcd827"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTang_1_1UnicodeString.html">UnicodeString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#a1801e6b4cd159a065fb77ce1a8bcd827">operator+</a> (const <a class="el" href="classTang_1_1UnicodeString.html">UnicodeString</a> &amp;rhs) const</td></tr>
-<tr class="memdesc:a1801e6b4cd159a065fb77ce1a8bcd827"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new <a class="el" href="classTang_1_1UnicodeString.html">UnicodeString</a> that is the concatenation of two UnicodeStrings.  <a href="classTang_1_1UnicodeString.html#a1801e6b4cd159a065fb77ce1a8bcd827">More...</a><br /></td></tr>
+<tr class="memdesc:a1801e6b4cd159a065fb77ce1a8bcd827"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new <a class="el" href="classTang_1_1UnicodeString.html" title="Represents a UTF-8 encoded string that is Unicode-aware.">UnicodeString</a> that is the concatenation of two UnicodeStrings.  <a href="classTang_1_1UnicodeString.html#a1801e6b4cd159a065fb77ce1a8bcd827">More...</a><br /></td></tr>
 <tr class="separator:a1801e6b4cd159a065fb77ce1a8bcd827"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecf5faef826f6f708b5d95c1e240c8c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#aecf5faef826f6f708b5d95c1e240c8c0">operator std::string</a> () const</td></tr>
-<tr class="memdesc:aecf5faef826f6f708b5d95c1e240c8c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cast the current <a class="el" href="classTang_1_1UnicodeString.html">UnicodeString</a> object to a std::string, UTF-8 encoded.  <a href="classTang_1_1UnicodeString.html#aecf5faef826f6f708b5d95c1e240c8c0">More...</a><br /></td></tr>
+<tr class="memdesc:aecf5faef826f6f708b5d95c1e240c8c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cast the current <a class="el" href="classTang_1_1UnicodeString.html" title="Represents a UTF-8 encoded string that is Unicode-aware.">UnicodeString</a> object to a std::string, UTF-8 encoded.  <a href="classTang_1_1UnicodeString.html#aecf5faef826f6f708b5d95c1e240c8c0">More...</a><br /></td></tr>
 <tr class="separator:aecf5faef826f6f708b5d95c1e240c8c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacfef070a2f6de639e050822c94263f5"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#aacfef070a2f6de639e050822c94263f5">length</a> () const</td></tr>
-<tr class="memdesc:aacfef070a2f6de639e050822c94263f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the length of the <a class="el" href="classTang_1_1UnicodeString.html">UnicodeString</a> in graphemes.  <a href="classTang_1_1UnicodeString.html#aacfef070a2f6de639e050822c94263f5">More...</a><br /></td></tr>
+<tr class="memdesc:aacfef070a2f6de639e050822c94263f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the length of the <a class="el" href="classTang_1_1UnicodeString.html" title="Represents a UTF-8 encoded string that is Unicode-aware.">UnicodeString</a> in graphemes.  <a href="classTang_1_1UnicodeString.html#aacfef070a2f6de639e050822c94263f5">More...</a><br /></td></tr>
 <tr class="separator:aacfef070a2f6de639e050822c94263f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4f534c284a4edfc89887e7c6234e35e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#ac4f534c284a4edfc89887e7c6234e35e">bytesLength</a> () const</td></tr>
-<tr class="memdesc:ac4f534c284a4edfc89887e7c6234e35e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the length of the <a class="el" href="classTang_1_1UnicodeString.html">UnicodeString</a> in bytes.  <a href="classTang_1_1UnicodeString.html#ac4f534c284a4edfc89887e7c6234e35e">More...</a><br /></td></tr>
+<tr class="memdesc:ac4f534c284a4edfc89887e7c6234e35e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the length of the <a class="el" href="classTang_1_1UnicodeString.html" title="Represents a UTF-8 encoded string that is Unicode-aware.">UnicodeString</a> in bytes.  <a href="classTang_1_1UnicodeString.html#ac4f534c284a4edfc89887e7c6234e35e">More...</a><br /></td></tr>
 <tr class="separator:ac4f534c284a4edfc89887e7c6234e35e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a UTF-8 encoded string that is Unicode-aware. </p>
+<p>This class serves as the interface between the Tang language and the ICU library. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae9396cce6078fb0ab2986e3ea2910b36"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae9396cce6078fb0ab2986e3ea2910b36">&#9670;&nbsp;</a></span>UnicodeString()</h2>
 
@@ -135,7 +143,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a <a class="el" href="classTang_1_1UnicodeString.html">Tang::UnicodeString</a> object, which acts as the interface to the ICU library. </p>
+<p>Construct a <a class="el" href="classTang_1_1UnicodeString.html" title="Represents a UTF-8 encoded string that is Unicode-aware.">Tang::UnicodeString</a> object, which acts as the interface to the ICU library. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">src</td><td>A UTF-8 encoded string. </td></tr>
@@ -161,9 +169,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Return the length of the <a class="el" href="classTang_1_1UnicodeString.html">UnicodeString</a> in bytes. </p>
+<p>Return the length of the <a class="el" href="classTang_1_1UnicodeString.html" title="Represents a UTF-8 encoded string that is Unicode-aware.">UnicodeString</a> in bytes. </p>
 <p>Note: this is <em>not</em> the number of codepoints or graphemes, but is the acutal number of bytes in memory.</p>
-<dl class="section return"><dt>Returns</dt><dd>Returns the length of the <a class="el" href="classTang_1_1UnicodeString.html">UnicodeString</a> in bytes. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the length of the <a class="el" href="classTang_1_1UnicodeString.html" title="Represents a UTF-8 encoded string that is Unicode-aware.">UnicodeString</a> in bytes. </dd></dl>
 
 </div>
 </div>
@@ -182,9 +190,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Return the length of the <a class="el" href="classTang_1_1UnicodeString.html">UnicodeString</a> in graphemes. </p>
+<p>Return the length of the <a class="el" href="classTang_1_1UnicodeString.html" title="Represents a UTF-8 encoded string that is Unicode-aware.">UnicodeString</a> in graphemes. </p>
 <p>Note: this is <em>not</em> the number of bytes, chars, or codepoints, but is the length in graphemes, as defined by ICU.</p>
-<dl class="section return"><dt>Returns</dt><dd>Returns the length of the <a class="el" href="classTang_1_1UnicodeString.html">UnicodeString</a> in graphemes. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the length of the <a class="el" href="classTang_1_1UnicodeString.html" title="Represents a UTF-8 encoded string that is Unicode-aware.">UnicodeString</a> in graphemes. </dd></dl>
 
 </div>
 </div>
@@ -203,8 +211,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Cast the current <a class="el" href="classTang_1_1UnicodeString.html">UnicodeString</a> object to a std::string, UTF-8 encoded. </p>
-<dl class="section return"><dt>Returns</dt><dd>Returns the std::string version of the <a class="el" href="classTang_1_1UnicodeString.html">UnicodeString</a>. </dd></dl>
+<p>Cast the current <a class="el" href="classTang_1_1UnicodeString.html" title="Represents a UTF-8 encoded string that is Unicode-aware.">UnicodeString</a> object to a std::string, UTF-8 encoded. </p>
+<dl class="section return"><dt>Returns</dt><dd>Returns the std::string version of the <a class="el" href="classTang_1_1UnicodeString.html" title="Represents a UTF-8 encoded string that is Unicode-aware.">UnicodeString</a>. </dd></dl>
 
 </div>
 </div>
@@ -224,7 +232,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create a new <a class="el" href="classTang_1_1UnicodeString.html">UnicodeString</a> that is the concatenation of two UnicodeStrings. </p>
+<p>Create a new <a class="el" href="classTang_1_1UnicodeString.html" title="Represents a UTF-8 encoded string that is Unicode-aware.">UnicodeString</a> that is the concatenation of two UnicodeStrings. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rhs</td><td>The string to append to the current object string. </td></tr>

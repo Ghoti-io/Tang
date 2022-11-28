@@ -8,8 +8,7 @@ Contains the code to interface with the ICU library.
 {\ttfamily \#include $<$string$>$}\newline
 {\ttfamily \#include $<$memory$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
-Include dependency graph for unicode\+String.\+hpp\+:
-\nopagebreak
+Include dependency graph for unicode\+String.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -27,9 +26,43 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classTang_1_1UnicodeString}{Tang\+::\+Unicode\+String}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Represents a UTF-\/8 encoded string that is Unicode-\/aware. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{unicodeString_8hpp_af1528e54f4a6e664d30f4e6557e0f84c}{Tang\+::unescape}} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Return an \char`\"{}unescaped\char`\"{} version of the provided string, which, when interpreted by Tang, should result in a representation equivalent to the original source string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Contains the code to interface with the ICU library. 
 
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{unicodeString_8hpp_af1528e54f4a6e664d30f4e6557e0f84c}\label{unicodeString_8hpp_af1528e54f4a6e664d30f4e6557e0f84c}} 
+\index{unicodeString.hpp@{unicodeString.hpp}!unescape@{unescape}}
+\index{unescape@{unescape}!unicodeString.hpp@{unicodeString.hpp}}
+\doxysubsubsection{\texorpdfstring{unescape()}{unescape()}}
+{\footnotesize\ttfamily string Tang\+::unescape (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Return an \char`\"{}unescaped\char`\"{} version of the provided string, which, when interpreted by Tang, should result in a representation equivalent to the original source string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to be unescaped. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \char`\"{}unescaped\char`\"{} version of the provided string. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{unicodeString_8hpp_af1528e54f4a6e664d30f4e6557e0f84c_cgraph}
+\end{center}
+\end{figure}
