@@ -49,18 +49,17 @@ std::string UnicodeString::substr(size_t position, size_t length) const {
     return "";
   }
 
-  // Compute the offsets.
-  auto uString = icu::UnicodeString::fromUTF8(this->src);
-  auto offsets = getGraphemeOffsets(uString);
+  // Compute the grapheme offsets
+  this->generateCachedValues();
 
   // Second sanity check.
-  if (position >= offsets.size()) {
+  if (position >= this->graphemeOffsets->size()) {
     return "";
   }
 
   // Perform the substring.
   string out;
-  return uString.tempSubString(offsets[position], offsets[min(position + length, offsets.size() - 1)] - offsets[position]).toUTF8String(out);
+  return static_pointer_cast<icu::UnicodeString>(this->uString)->tempSubString(this->graphemeOffsets->at(position), this->graphemeOffsets->at(min(position + length, this->graphemeOffsets->size() - 1)) - this->graphemeOffsets->at(position)).toUTF8String(out);
 }
 
 bool UnicodeString::operator==(const UnicodeString & rhs) const {
@@ -80,11 +79,20 @@ UnicodeString::operator std::string() const {
 }
 
 size_t UnicodeString::length() const {
-  auto offsets = getGraphemeOffsets(icu::UnicodeString::fromUTF8(this->src));
-  return offsets.size() - 1;
+  this->generateCachedValues();
+  return this->graphemeOffsets->size() - 1;
 }
 
 size_t UnicodeString::bytesLength() const {
   return this->src.length();
+}
+
+void UnicodeString::generateCachedValues() const {
+  if (!this->uString) {
+    this->uString = make_shared<icu::UnicodeString>(icu::UnicodeString::fromUTF8(this->src));
+  }
+  if (!this->graphemeOffsets) {
+    this->graphemeOffsets = make_shared<vector<size_t>>(getGraphemeOffsets(*static_pointer_cast<icu::UnicodeString>(this->uString)));
+  }
 }
 

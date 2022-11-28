@@ -8,6 +8,8 @@
 #define TANG_UNICODESTRING_HPP
 
 #include <string>
+#include <memory>
+#include <vector>
 
 namespace Tang {
   class UnicodeString {
@@ -87,6 +89,21 @@ namespace Tang {
      * The UTF-8 encoded string.
      */
     std::string src;
+
+    /**
+     * Cache of the grapheme offsets, if they happen to be calculated.
+     */
+    mutable std::shared_ptr<std::vector<size_t>> graphemeOffsets;
+
+    /**
+     * Cache of the ICU Unicode string.
+     */
+    mutable std::shared_ptr<void> uString;
+
+    /**
+     * Calculate cachable values for the object.
+     */
+    void generateCachedValues() const;
   };
 }
 
