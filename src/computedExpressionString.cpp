@@ -18,7 +18,7 @@ string ComputedExpressionString::dump() const {
 }
 
 string ComputedExpressionString::__asCode() const {
-  return (UnicodeString)"\"" + this->val + (UnicodeString)"\"";
+  return (UnicodeString)"\"" + unescape(this->val) + (UnicodeString)"\"";
 }
 
 GarbageCollected ComputedExpressionString::makeCopy() const {

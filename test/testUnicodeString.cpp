@@ -11,6 +11,24 @@
 using namespace std;
 using namespace Tang;
 
+TEST(Core, Unescape) {
+  EXPECT_EQ(unescape(""), R"()");
+  EXPECT_EQ(unescape("bacdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()`~[]{}|;:',.<>? "), R"(bacdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()`~[]{}|;:',.<>? )");
+  EXPECT_EQ(unescape("\""), R"(\")");
+  EXPECT_EQ(unescape("\a"), R"(\a)");
+  EXPECT_EQ(unescape("\b"), R"(\b)");
+  EXPECT_EQ(unescape("\f"), R"(\f)");
+  EXPECT_EQ(unescape("\n"), R"(\n)");
+  EXPECT_EQ(unescape("\r"), R"(\r)");
+  EXPECT_EQ(unescape("\t"), R"(\t)");
+  EXPECT_EQ(unescape("\v"), R"(\v)");
+  EXPECT_EQ(unescape("\xAA"), R"(\xAA)");
+  EXPECT_EQ(unescape("\xFF"), R"(\xFF)");
+  EXPECT_EQ(unescape(string("\x00", 1)), R"(\x00)");
+  EXPECT_EQ(unescape("\x01"), R"(\x01)");
+  EXPECT_EQ(unescape(""), R"()");
+}
+
 TEST(UnicodeString, SubString) {
   {
     // Testing an empty string.

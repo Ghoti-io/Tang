@@ -7,7 +7,7 @@ GEN_DIR := $(BUILD)/generated
 APP_DIR := $(BUILD)/apps
 TARGET := libtang.so
 INCLUDE := -I include/ -I $(GEN_DIR)/
-LIBOBJECTS := $(OBJ_DIR)/astNode.o $(OBJ_DIR)/astNodeArray.o $(OBJ_DIR)/astNodeAssign.o $(OBJ_DIR)/astNodeBinary.o $(OBJ_DIR)/astNodeBlock.o $(OBJ_DIR)/astNodeBoolean.o $(OBJ_DIR)/astNodeBreak.o $(OBJ_DIR)/astNodeCast.o $(OBJ_DIR)/astNodeContinue.o $(OBJ_DIR)/astNodeDoWhile.o $(OBJ_DIR)/astNodeFor.o $(OBJ_DIR)/astNodeFunctionCall.o $(OBJ_DIR)/astNodeFunctionDeclaration.o $(OBJ_DIR)/astNodeIfElse.o $(OBJ_DIR)/astNodeIndex.o $(OBJ_DIR)/astNodeFloat.o $(OBJ_DIR)/astNodeIdentifier.o $(OBJ_DIR)/astNodeInteger.o $(OBJ_DIR)/astNodePrint.o $(OBJ_DIR)/astNodeReturn.o $(OBJ_DIR)/astNodeSlice.o $(OBJ_DIR)/astNodeString.o $(OBJ_DIR)/astNodeTernary.o $(OBJ_DIR)/astNodeUnary.o $(OBJ_DIR)/astNodeWhile.o $(OBJ_DIR)/computedExpression.o $(OBJ_DIR)/computedExpressionArray.o $(OBJ_DIR)/computedExpressionBoolean.o $(OBJ_DIR)/computedExpressionCompiledFunction.o $(OBJ_DIR)/computedExpressionFloat.o $(OBJ_DIR)/computedExpressionInteger.o $(OBJ_DIR)/computedExpressionError.o $(OBJ_DIR)/computedExpressionString.o $(OBJ_DIR)/error.o $(OBJ_DIR)/garbageCollected.o $(OBJ_DIR)/program.o $(OBJ_DIR)/program-dumpBytecode.o  $(OBJ_DIR)/program-execute.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o $(OBJ_DIR)/unicodeString.o
+LIBOBJECTS := $(OBJ_DIR)/astNode.o $(OBJ_DIR)/astNodeArray.o $(OBJ_DIR)/astNodeAssign.o $(OBJ_DIR)/astNodeBinary.o $(OBJ_DIR)/astNodeBlock.o $(OBJ_DIR)/astNodeBoolean.o $(OBJ_DIR)/astNodeBreak.o $(OBJ_DIR)/astNodeCast.o $(OBJ_DIR)/astNodeContinue.o $(OBJ_DIR)/astNodeDoWhile.o $(OBJ_DIR)/astNodeFor.o $(OBJ_DIR)/astNodeFunctionCall.o $(OBJ_DIR)/astNodeFunctionDeclaration.o $(OBJ_DIR)/astNodeIfElse.o $(OBJ_DIR)/astNodeIndex.o $(OBJ_DIR)/astNodeFloat.o $(OBJ_DIR)/astNodeIdentifier.o $(OBJ_DIR)/astNodeInteger.o $(OBJ_DIR)/astNodePrint.o $(OBJ_DIR)/astNodeReturn.o $(OBJ_DIR)/astNodeSlice.o $(OBJ_DIR)/astNodeString.o $(OBJ_DIR)/astNodeTernary.o $(OBJ_DIR)/astNodeUnary.o $(OBJ_DIR)/astNodeWhile.o $(OBJ_DIR)/computedExpression.o $(OBJ_DIR)/computedExpressionArray.o $(OBJ_DIR)/computedExpressionBoolean.o $(OBJ_DIR)/computedExpressionCompiledFunction.o $(OBJ_DIR)/computedExpressionFloat.o $(OBJ_DIR)/computedExpressionInteger.o $(OBJ_DIR)/computedExpressionError.o $(OBJ_DIR)/computedExpressionString.o $(OBJ_DIR)/error.o $(OBJ_DIR)/garbageCollected.o $(OBJ_DIR)/program.o $(OBJ_DIR)/program-dumpBytecode.o  $(OBJ_DIR)/program-execute.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o $(OBJ_DIR)/unescape.o $(OBJ_DIR)/unicodeString.o
 
 TESTFLAGS := `pkg-config --libs --cflags gtest`
 
@@ -33,10 +33,17 @@ $(GEN_DIR)/tangScanner.cpp: flex/tangScanner.l
 	@mkdir -p $(@D)
 	flex -o $@ $<
 
+$(GEN_DIR)/unescape.cpp: flex/unescape.l
+	@echo "\n### Generating The Unescape Scanner ###"
+	@mkdir -p $(@D)
+	flex -o $@ $<
+
 ####################################################################
 # Special Rule 
 ####################################################################
-$(GEN_DIR)/tangScanner.hpp: $(GEN_DIR)/tangScanner.cpp
+#$(GEN_DIR)/tangScanner.hpp: $(GEN_DIR)/tangScanner.cpp
+
+#$(GEN_DIR)/unescape.hpp: $(GEN_DIR)/unescape.cpp
 
 $(GEN_DIR)/location.hh: $(GEN_DIR)/tangParser.hpp
 
@@ -244,12 +251,17 @@ $(OBJ_DIR)/tangParser.o: $(GEN_DIR)/tangParser.cpp include/macros.hpp include/ta
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/tangScanner.o: $(GEN_DIR)/tangScanner.cpp
+$(OBJ_DIR)/tangScanner.o: $(GEN_DIR)/tangScanner.cpp include/tangScanner.hpp
 	@echo "\n### Compiling tangScanner.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/unicodeString.o: src/unicodeString.cpp include/unicodeString.hpp
+$(OBJ_DIR)/unescape.o: $(GEN_DIR)/unescape.cpp include/unescape.hpp
+	@echo "\n### Compiling unescape.o ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
+
+$(OBJ_DIR)/unicodeString.o: src/unicodeString.cpp include/unicodeString.hpp include/unescape.hpp
 	@echo "\n### Compiling unicodeString.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
@@ -267,10 +279,10 @@ $(APP_DIR)/$(TARGET): $(LIBOBJECTS)
 # Unit Tests
 ####################################################################
 
-$(APP_DIR)/testUnicodeString: test/testUnicodeString.cpp $(OBJ_DIR)/unicodeString.o
-	@echo "\n### Compiling Tang Test ###"
+$(APP_DIR)/testUnicodeString: test/testUnicodeString.cpp $(OBJ_DIR)/unicodeString.o $(OBJ_DIR)/unescape.o
+	@echo "\n### Compiling UnicodeString Test ###"
 	@mkdir -p $(@D)
-	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ $< $(OBJ_DIR)/unicodeString.o $(LDFLAGS) $(TESTFLAGS)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ $< $(OBJ_DIR)/unicodeString.o $(OBJ_DIR)/unescape.o $(LDFLAGS) $(TESTFLAGS)
 
 $(APP_DIR)/test: test/test.cpp include/singletonObjectPool.hpp include/macros.hpp $(APP_DIR)/$(TARGET)
 	@echo "\n### Compiling Tang Test ###"

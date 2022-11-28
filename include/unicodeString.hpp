@@ -12,6 +12,22 @@
 #include <vector>
 
 namespace Tang {
+  /**
+   * Return an "unescaped" version of the provided string, which, when
+   * interpreted by Tang, should result in a representation equivalent to the
+   * original source string.
+   *
+   * @param str The string to be unescaped.
+   * @return An "unescaped" version of the provided string.
+   */
+  std::string unescape(const std::string & str);
+
+  /**
+   * Represents a UTF-8 encoded string that is Unicode-aware.
+   *
+   * This class serves as the interface between the Tang language and the ICU
+   * library.
+   */
   class UnicodeString {
   public:
     /**

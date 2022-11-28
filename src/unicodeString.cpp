@@ -9,10 +9,12 @@
 #include <vector>
 #include <memory>
 #include <algorithm>
+#include <sstream>
 #include <unicode/uconfig.h>
 #include <unicode/ustring.h>
 #include <unicode/brkiter.h>
 #include "unicodeString.hpp"
+#include "unescape.hpp"
 
 using namespace std;
 using namespace Tang;
@@ -39,6 +41,16 @@ static std::vector<size_t> getGraphemeOffsets(const icu::UnicodeString &str) {
   offsets.push_back(current);
 
   return offsets;
+}
+
+string Tang::unescape(const string & str) {
+  stringstream ss{str};
+  Unescape u{ss, cout};
+  string out{}, next;
+  while ((next = u.get_next_token()).length()) {
+    out += next;
+  }
+  return out;
 }
 
 UnicodeString::UnicodeString(const string & src) : src{src} {}

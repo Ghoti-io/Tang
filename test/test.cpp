@@ -1304,6 +1304,12 @@ TEST(Print, Array) {
     auto p1 = TangBase().compileScript("print([0,\"a\",2]);");
     EXPECT_EQ(p1.execute().out, "[0,\"a\",2]");
   }
+  {
+    // Print out an array that contains a string, with contents that must be
+    // escaped.
+    auto p1 = TangBase().compileScript("print([\"\\\"a\nb\"]);");
+    EXPECT_EQ(p1.execute().out, R"(["\"a\nb"])");
+  }
 }
 
 TEST(Function, Compiled) {
