@@ -15,6 +15,7 @@
 #include <unicode/brkiter.h>
 #include "unicodeString.hpp"
 #include "unescape.hpp"
+#include "htmlEscape.hpp"
 
 using namespace std;
 using namespace Tang;
@@ -48,6 +49,16 @@ string Tang::unescape(const string & str) {
   Unescape u{ss, cout};
   string out{}, next;
   while ((next = u.get_next_token()).length()) {
+    out += next;
+  }
+  return out;
+}
+
+string Tang::htmlEscape(const string & str) {
+  stringstream ss{str};
+  HtmlEscape h{ss, cout};
+  string out{}, next;
+  while ((next = h.get_next_token()).length()) {
     out += next;
   }
   return out;

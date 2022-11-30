@@ -1,0 +1,199 @@
+https://datatracker.ietf.org/doc/html/rfc3629
+
+   The table below summarizes the format of these different octet types.
+   The letter x indicates bits available for encoding bits of the
+   character number.
+
+   Char. number range  |        UTF-8 octet sequence
+      (hexadecimal)    |              (binary)
+   --------------------+---------------------------------------------
+   0000 0000-0000 007F | 0xxxxxxx
+   0000 0080-0000 07FF | 110xxxxx 10xxxxxx
+   0000 0800-0000 FFFF | 1110xxxx 10xxxxxx 10xxxxxx
+   0001 0000-0010 FFFF | 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
+
+Observations:
+1. 0x00    -     0x7f 1 byte
+2. 0x80    -    0x7FF 2 bytes
+3. 0x800   -   0xFFFF 3 bytes
+4. 0x10000 - 0x10FFFF 4 bytes
+
+5. Largest unicode valid to represent is 0x10FFFF
+     4 byte sequence:
+     11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
+     F   4    8   F    B   F    B   F
+     11110100 10001111 10111111 10111111
+          100   001111   111111   111111
+          10      F      F   F      F
+
+   Anything larger is invalid, even though it matches the pattern:
+     F4       90-BF    10xxxxxx 10xxxxxx is invalid
+     F5-F7    10xxxxxx 10xxxxxx 10xxxxxx is invalid
+
+6. Surrogate pair codepoints from UTF-16 are forbidden.
+   U+D800 thru U+DFFF
+   U+D800 is a 3-byte sequence
+     E   D    A   0    8   0
+     1110xxxx 10xxxxxx 10xxxxxx
+         1101   100000   000000
+         D      8   0      0
+   
+   U+DFFF is a 3-byte sequence
+     E   D    B   F    B   F
+     1110xxxx 10xxxxxx 10xxxxxx
+         1101   111111   111111
+         D      F   F      F
+   
+7. Overlongs are not permitted.  Codepoints must be encoded in the smallest
+possible byte length.  If a longer than necessary byte length is used, then
+this is an "overlong" UTF-8 sequence, and is invalid.
+
+Example: Code point 0 could be encoded as:
+  a. 1 byte : 00000000
+  b. 2 bytes: 11000000 10000000
+  c. 3 bytes: 11100000 10000000 10000000
+  d. 4 bytes: 11110000 10000000 10000000 10000000
+
+Only (a) is valid.  The others are "overlong".
+
+==============================================
+Enumerating valid/invalid states:
+==============================================
+1 byte: 0xxxxxxx
+  00-7f valid
+  80-BF invalid, 1st byte can't start with b10xxxxxxx
+  (Note: C0-F7 are covered by rules below)
+  F8-FF invalid
+  
+2 bytes:
+  110xxxxx 10xxxxxx
+  C0-DF    80-BF 
+  maybe valid, can't be overlong
+  -----------------------------
+    C0-C1 80-BF invalid, overlong.
+    C2-DF 80-BF valid
+  C0-DF 00-79 invalid 2nd byte (don't process last byte)
+  C0-DF C0-FF invalid 2nd byte (don't process last byte)
+
+3 bytes:
+  1110xxxx 10xxxxxx 10xxxxxx
+  E0-EF    80-BF    80-BF
+  maybe valid, can't be overlong or surrogate pairs:
+  -----------------------------
+    E0    80-9F 80-BF invalid, overlong
+    E0    A0-BF 80-BF valid
+    E1-EC 80-BF 80-BF valid
+    ED    80-9F 80-BF valid
+    ED    A0-BF 80-BF invalid, surrogate
+	EF    80-BF 80-BF valid
+  E0-EF 00-79       invalid 2nd byte (don't process last byte)
+  E0-EF C0-FF       invalid 2nd byte (don't process last byte)
+  E0-EF 80-BF 00-79 invalid 3rd byte (don't process last byte)
+  E0-EF 80-BF C0-FF invalid 3rd byte (don't process last byte)
+  
+4 bytes:
+  11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
+  F0-F7    80-BF    80-BF    80-BF
+  maybe valid, can't be overlong or too big.
+  -----------------------------
+    F0    80-8F 80-BF 80-BF invalid, overlong
+    F0    90-BF 80-BF 80-BF valid
+    F1-F3 80-BF 80-BF 80-BF valid
+    F4    80-8F 80-BF 80-BF valid
+    F4    90-BF 80-BF 80-BF invalid, too high
+    F5-F7 80-BF 80-BF 80-BF invalid, too high
+  F0-F7 00-79             invalid 2nd byte (don't process last byte)
+  F0-F7 C0-FF             invalid 2nd byte (don't process last byte)
+  F0-F7 80-BF 00-79       invalid 3rd byte (don't process last byte)
+  F0-F7 80-BF C0-FF       invalid 3rd byte (don't process last byte)
+  F0-F7 80-BF 80-BF 00-79 invalid 4th byte (don't process last byte)
+  F0-F7 80-BF 80-BF C0-FF invalid 4th byte (don't process last byte)
+
+
+Errors: Unicode recommends providing a replacement character (U+FFFD) when
+encountering an error, but the error should end as soon as the invalid
+character is found.  In other words, the error should not cut off the start
+of a valid character sequence.
+See: https://www.unicode.org/versions/Unicode13.0.0/ch03.pdf
+
+==============================================
+Condense rules.
+==============================================
+Flex tries to match the longest string that it can.  In the case of
+overlapping rules, Flex takes the 1st defined rule.
+
+validByte [\x80-\xBF]
+
+[\x00-\x7f] {
+  // Valid, 1 byte.
+}
+{validByte} {
+  // Invalid, 1st byte cannot start with b10xxxxxx
+}
+[\xF8-\xFF] {
+  // Invalid, unrecognized 1st byte.
+}
+
+[\xC0-\xC1]{validByte} {
+  // Invalid, 2-byte overlong.
+}
+[\xC2-\xDF]{validByte} {
+  // Valid, 2 bytes.
+}
+[\xC0-\xDF] {
+  // Invalid, incomplete.
+}
+
+\xE0[\x80-\x9F]{validByte} {
+  // Invalid, 3-byte overlong.
+}
+\xE0[\A0-\xBF]{validByte} {
+  // Valid, 3 bytes.
+}
+[\xE1-\xEC]{validByte}{validByte} {
+  // Valid, 3 bytes.
+}
+\xED[\x80-\x9F]{validByte} {
+  // Valid, 3 bytes.
+}
+\xED[\xA0-\xBF]{validByte} {
+  // Invalid, surrogate.
+}
+[\xEE-\xEF]{validByte}{validByte} {
+  // Valid, 3 bytes.
+}
+[\xE0-\xEF] {
+  // Invalid, incomplete.
+}
+[\xE0-\xEF]{validByte} {
+  // Invalid, incomplete.
+}
+
+\xF0[\x80-\x8F]{validByte}{validByte} {
+  // Invalid, overlong.
+}
+\xF0[\x90-\xBF]{validByte}{validByte} {
+  // Valid, 4 bytes.
+}
+[\xF1-\xF3]{validByte}{validByte}{validByte} {
+  // Valid, 4 bytes.
+}
+\xF4[\x80-\x8F]{validByte}{validByte} {
+  // Valid, 4 bytes.
+}
+\xF4[\x90-\xBF]{validByte}{validByte} {
+  // Invalid, too high.
+}
+[\xF5-\xF7]{validByte}{validByte}{validByte} {
+  // Invalid, too high.
+}
+[\xF0-\xF7] {
+  // Invalid, incomplete.
+}
+[\xF0-\xF7]{validByte} {
+  // Invalid, incomplete.
+}
+[\xF0-\xF7]{validByte}{validByte} {
+  // Invalid, incomplete.
+}
+

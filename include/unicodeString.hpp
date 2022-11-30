@@ -23,6 +23,19 @@ namespace Tang {
   std::string unescape(const std::string & str);
 
   /**
+   * Return an "html escaped" version of the provided string.
+   *
+   * Only "critical" characters `<`, `>`, `&`, `"`, and `'` will be escaped.
+   * All other characters will be allowed through unaltered.  The result is a
+   * UTF-8 encoded string that is safe for inclusion in an HTML template
+   * without disturbing the HTML structure.
+   *
+   * @param str The string to be escaped.
+   * @return An "escaped" version of the provided string.
+   */
+  std::string htmlEscape(const std::string & str);
+
+  /**
    * Represents a UTF-8 encoded string that is Unicode-aware.
    *
    * This class serves as the interface between the Tang language and the ICU
