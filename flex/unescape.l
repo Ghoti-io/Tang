@@ -106,19 +106,20 @@ using namespace std;
 
 . {
   char buff[] = "\\x00";
-  char ch;
+  uint8_t ch;
+
   // Upper 4 bits
-  ch = (yytext[0] & (15 << 4)) >> 4;
-  ch = ch > 9
+  ch = (uint8_t)yytext[0] >> 4;
+  buff[2] = ch > 9
     ? 'A' + ch - 10
     : '0' + ch;
-  buff[2] = ch;
+
   // Lower 4 bits
-  ch = yytext[0] & 15;
-  ch = ch > 9
+  ch = (uint8_t)yytext[0] & 15;
+  buff[3] = ch > 9
     ? 'A' + ch - 10
     : '0' + ch;
-  buff[3] = ch;
+
   return buff;
 }
 
