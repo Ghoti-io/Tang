@@ -1,16 +1,15 @@
 var searchData=
 [
-  ['tang_2ehpp_284',['tang.hpp',['../tang_8hpp.html',1,'']]],
-  ['tang_3a_20a_20template_20language_285',['Tang: A Template Language',['../index.html',1,'']]],
-  ['tangbase_286',['TangBase',['../classTang_1_1TangBase.html',1,'Tang::TangBase'],['../classTang_1_1TangBase.html#a6aa1668d0232e39e60d01fbce2419ef4',1,'Tang::TangBase::TangBase()']]],
-  ['tangbase_2ecpp_287',['tangBase.cpp',['../tangBase_8cpp.html',1,'']]],
-  ['tangbase_2ehpp_288',['tangBase.hpp',['../tangBase_8hpp.html',1,'']]],
-  ['tangscanner_289',['TangScanner',['../classTang_1_1TangScanner.html',1,'Tang::TangScanner'],['../classTang_1_1TangScanner.html#a138cb48b8162798aa40a44f9af26a7d7',1,'Tang::TangScanner::TangScanner()']]],
-  ['tangscanner_2ehpp_290',['tangScanner.hpp',['../tangScanner_8hpp.html',1,'']]],
-  ['template_291',['Template',['../classTang_1_1Program.html#ad99e214562094e21f38b6a453163041bacfade8685b2abd2b062a2367158ce2f3',1,'Tang::Program']]],
-  ['test_2ecpp_292',['test.cpp',['../test_8cpp.html',1,'']]],
-  ['testgarbagecollected_2ecpp_293',['testGarbageCollected.cpp',['../testGarbageCollected_8cpp.html',1,'']]],
-  ['testsingletonobjectpool_2ecpp_294',['testSingletonObjectPool.cpp',['../testSingletonObjectPool_8cpp.html',1,'']]],
-  ['testunicodestring_2ecpp_295',['testUnicodeString.cpp',['../testUnicodeString_8cpp.html',1,'']]],
-  ['type_296',['Type',['../classTang_1_1AstNodeCast.html#a63a014eee9fd7d365d8177c4bab2c4e4',1,'Tang::AstNodeCast::Type()'],['../classTang_1_1AstNodePrint.html#a0259ac566debde77389fbfa4c2e18ea1',1,'Tang::AstNodePrint::Type()']]]
+  ['script_276',['Script',['../classTang_1_1Program.html#ad99e214562094e21f38b6a453163041ba38b647d35ef85ffa1affec5c7fcb7ac1',1,'Tang::Program']]],
+  ['setfunctionstackdeclaration_277',['setFunctionStackDeclaration',['../classTang_1_1Program.html#aabcfee07409be5bc6bf1312f26b56a85',1,'Tang::Program']]],
+  ['setjumptarget_278',['setJumpTarget',['../classTang_1_1Program.html#a5da413efe8435cebd927a8be58dcb9be',1,'Tang::Program']]],
+  ['singletonobjectpool_279',['SingletonObjectPool',['../classTang_1_1SingletonObjectPool.html',1,'Tang']]],
+  ['singletonobjectpool_2ehpp_280',['singletonObjectPool.hpp',['../singletonObjectPool_8hpp.html',1,'']]],
+  ['slice_281',['SLICE',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a0a1031e189c0c5e08d55c44fc02a4b26',1,'Tang']]],
+  ['stackcheck_282',['STACKCHECK',['../program-execute_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38',1,'program-execute.cpp']]],
+  ['step_283',['step',['../classTang_1_1location.html#a70b844bdcf7d6113ac3d6b074b976246',1,'Tang::location']]],
+  ['string_284',['STRING',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a63b588d5559f64f89a416e656880b949',1,'Tang']]],
+  ['substr_285',['substr',['../classTang_1_1UnicodeString.html#a7bda91d3c0efba9f5e70d915a665ba18',1,'Tang::UnicodeString']]],
+  ['subtract_286',['Subtract',['../classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9aa99c8c7c2de680bb7cb914e59a82c3e9',1,'Tang::AstNodeBinary']]],
+  ['subtract_287',['SUBTRACT',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a23ebcc4776b613af25dfbe7c8ce4813e',1,'Tang']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['location_343',['location',['../classTang_1_1location.html',1,'Tang']]]
+  ['htmlescape_347',['HtmlEscape',['../classTang_1_1HtmlEscape.html',1,'Tang']]]
 ];

@@ -138,10 +138,49 @@ Functions</h2></td></tr>
 <tr class="memitem:af1528e54f4a6e664d30f4e6557e0f84c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unicodeString_8hpp.html#af1528e54f4a6e664d30f4e6557e0f84c">Tang::unescape</a> (const std::string &amp;str)</td></tr>
 <tr class="memdesc:af1528e54f4a6e664d30f4e6557e0f84c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an "unescaped" version of the provided string, which, when interpreted by Tang, should result in a representation equivalent to the original source string.  <a href="unicodeString_8hpp.html#af1528e54f4a6e664d30f4e6557e0f84c">More...</a><br /></td></tr>
 <tr class="separator:af1528e54f4a6e664d30f4e6557e0f84c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98c3c850e57d173ab148e54ece83a671"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unicodeString_8hpp.html#a98c3c850e57d173ab148e54ece83a671">Tang::htmlEscape</a> (const std::string &amp;str)</td></tr>
+<tr class="memdesc:a98c3c850e57d173ab148e54ece83a671"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an "html escaped" version of the provided string.  <a href="unicodeString_8hpp.html#a98c3c850e57d173ab148e54ece83a671">More...</a><br /></td></tr>
+<tr class="separator:a98c3c850e57d173ab148e54ece83a671"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains the code to interface with the ICU library. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a98c3c850e57d173ab148e54ece83a671"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98c3c850e57d173ab148e54ece83a671">&#9670;&nbsp;</a></span>htmlEscape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Tang::htmlEscape </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return an "html escaped" version of the provided string. </p>
+<p>Only "critical" characters <code>&lt;</code>, <code>&gt;</code>, <code>&amp;</code>, <code>"</code>, and &lsquo;&rsquo;` will be escaped. All other characters will be allowed through unaltered. The result is a UTF-8 encoded string that is safe for inclusion in an HTML template without disturbing the HTML structure.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The string to be escaped. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An "escaped" version of the provided string. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="unicodeString_8hpp_a98c3c850e57d173ab148e54ece83a671_cgraph.png" border="0" usemap="#aunicodeString_8hpp_a98c3c850e57d173ab148e54ece83a671_cgraph" alt=""/></div>
+<map name="aunicodeString_8hpp_a98c3c850e57d173ab148e54ece83a671_cgraph" id="aunicodeString_8hpp_a98c3c850e57d173ab148e54ece83a671_cgraph">
+<area shape="rect" title="Return an &quot;html escaped&quot; version of the provided string." alt="" coords="5,29,141,56"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="af1528e54f4a6e664d30f4e6557e0f84c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af1528e54f4a6e664d30f4e6557e0f84c">&#9670;&nbsp;</a></span>unescape()</h2>
 

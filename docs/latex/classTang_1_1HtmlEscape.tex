@@ -1,0 +1,88 @@
+\hypertarget{classTang_1_1HtmlEscape}{}\doxysection{Tang\+::Html\+Escape Class Reference}
+\label{classTang_1_1HtmlEscape}\index{Tang::HtmlEscape@{Tang::HtmlEscape}}
+
+
+The Flex lexer class for the main Tang language.  
+
+
+
+
+{\ttfamily \#include $<$html\+Escape.\+hpp$>$}
+
+
+
+Inheritance diagram for Tang\+::Html\+Escape\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{classTang_1_1HtmlEscape__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tang\+::Html\+Escape\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{classTang_1_1HtmlEscape__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTang_1_1HtmlEscape_a9299993ef574922c3835283683b83590}{Html\+Escape}} (std\+::istream \&arg\+\_\+yyin, std\+::ostream \&arg\+\_\+yyout)
+\begin{DoxyCompactList}\small\item\em The constructor for the Scanner. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classTang_1_1HtmlEscape_a11758727329084862492938a8cf7ac21}{get\+\_\+next\+\_\+token}} ()
+\begin{DoxyCompactList}\small\item\em Extract the next token from the input string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The Flex lexer class for the main Tang language. 
+
+Flex requires that our lexer class inherit from yy\+Flex\+Lexer, an \char`\"{}intermediate\char`\"{} class whose real name is \char`\"{}\+Tang\+Tang\+Flex\+Lexer\char`\"{}. We are subclassing it so that we can override the return type of \mbox{\hyperlink{classTang_1_1HtmlEscape_a11758727329084862492938a8cf7ac21}{get\+\_\+next\+\_\+token()}}, for compatibility with Bison 3 tokens. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTang_1_1HtmlEscape_a9299993ef574922c3835283683b83590}\label{classTang_1_1HtmlEscape_a9299993ef574922c3835283683b83590}} 
+\index{Tang::HtmlEscape@{Tang::HtmlEscape}!HtmlEscape@{HtmlEscape}}
+\index{HtmlEscape@{HtmlEscape}!Tang::HtmlEscape@{Tang::HtmlEscape}}
+\doxysubsubsection{\texorpdfstring{HtmlEscape()}{HtmlEscape()}}
+{\footnotesize\ttfamily Tang\+::\+Html\+Escape\+::\+Html\+Escape (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{arg\+\_\+yyin,  }\item[{std\+::ostream \&}]{arg\+\_\+yyout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The constructor for the Scanner. 
+
+The design of the Flex lexer is to tokenize the contents of an input stream, and to write any error messages to an output stream. In our implementation, however, errors are returned differently, so the output stream is never used. It\textquotesingle{}s presence is retained, however, in case it is needed in the future.
+
+For now, the general approach should be to supply the input as a string stream, and to use std\+::cout as the output.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg\+\_\+yyin} & The input stream to be tokenized \\
+\hline
+{\em arg\+\_\+yyout} & The output stream (not currently used) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1HtmlEscape_a11758727329084862492938a8cf7ac21}\label{classTang_1_1HtmlEscape_a11758727329084862492938a8cf7ac21}} 
+\index{Tang::HtmlEscape@{Tang::HtmlEscape}!get\_next\_token@{get\_next\_token}}
+\index{get\_next\_token@{get\_next\_token}!Tang::HtmlEscape@{Tang::HtmlEscape}}
+\doxysubsubsection{\texorpdfstring{get\_next\_token()}{get\_next\_token()}}
+{\footnotesize\ttfamily virtual std\+::string Tang\+::\+Html\+Escape\+::get\+\_\+next\+\_\+token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Extract the next token from the input string. 
+
+\begin{DoxyReturn}{Returns}
+The next unescaped character. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{htmlEscape_8hpp}{html\+Escape.\+hpp}}\end{DoxyCompactItemize}

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['unescape_560',['Unescape',['../classTang_1_1Unescape.html#a6e975167b48b2eb2b7450d33e6bc60e0',1,'Tang::Unescape']]],
-  ['unescape_561',['unescape',['../unicodeString_8hpp.html#af1528e54f4a6e664d30f4e6557e0f84c',1,'Tang']]],
-  ['unicodestring_562',['UnicodeString',['../classTang_1_1UnicodeString.html#ae9396cce6078fb0ab2986e3ea2910b36',1,'Tang::UnicodeString']]]
+  ['tangbase_566',['TangBase',['../classTang_1_1TangBase.html#a6aa1668d0232e39e60d01fbce2419ef4',1,'Tang::TangBase']]],
+  ['tangscanner_567',['TangScanner',['../classTang_1_1TangScanner.html#a138cb48b8162798aa40a44f9af26a7d7',1,'Tang::TangScanner']]]
 ];
