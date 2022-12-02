@@ -36,6 +36,20 @@ namespace Tang {
   std::string htmlEscape(const std::string & str);
 
   /**
+   * Return an Ascii-only, "html escaped" version of the provided string.
+   *
+   * This function will convert all characters into an Ascii-only
+   * representation of the provided UTF-8 encoded string.  Visible, standard
+   * Ascii characters will pass through unaltered, but all others will be
+   * replaced by their HTML escape sequence (if it exists), or the appropriate
+   * hexadecimal escape code.
+   *
+   * @param str The string to be escaped.
+   * @return An "escaped" version of the provided string.
+   */
+  std::string htmlEscapeAscii(const std::string & str);
+
+  /**
    * Represents a UTF-8 encoded string that is Unicode-aware.
    *
    * This class serves as the interface between the Tang language and the ICU

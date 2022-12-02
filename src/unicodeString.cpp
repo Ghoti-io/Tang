@@ -16,6 +16,7 @@
 #include "unicodeString.hpp"
 #include "unescape.hpp"
 #include "htmlEscape.hpp"
+#include "htmlEscapeAscii.hpp"
 
 using namespace std;
 using namespace Tang;
@@ -57,6 +58,16 @@ string Tang::unescape(const string & str) {
 string Tang::htmlEscape(const string & str) {
   stringstream ss{str};
   HtmlEscape h{ss, cout};
+  string out{}, next;
+  while ((next = h.get_next_token()).length()) {
+    out += next;
+  }
+  return out;
+}
+
+string Tang::htmlEscapeAscii(const string & str) {
+  stringstream ss{str};
+  HtmlEscapeAscii h{ss, cout};
   string out{}, next;
   while ((next = h.get_next_token()).length()) {
     out += next;

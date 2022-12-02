@@ -51,6 +51,33 @@ TEST(Core, HtmlEscape) {
   EXPECT_EQ(htmlEscape(s), "$\xF0\x9F\x8F\xB4\xF3\xA0\x81\xA7\xF3\xA0\x81\xA2\xF3\xA0\x81\xB3\xF3\xA0\x81\xA3\xF3\xA0\x81\xB4\xF3\xA0\x81\xBF.");
 }
 
+TEST(Core, HtmlEscapeAscii) {
+  UnicodeString s{"$\xF0\x9F\x8F\xB4\xF3\xA0\x81\xA7\xF3\xA0\x81\xA2\xF3\xA0\x81\xB3\xF3\xA0\x81\xA3\xF3\xA0\x81\xB4\xF3\xA0\x81\xBF."};
+  EXPECT_EQ(htmlEscapeAscii(""), R"()");
+  EXPECT_EQ(htmlEscapeAscii("<"), "&lt;");
+  EXPECT_EQ(htmlEscapeAscii(">"), "&gt;");
+  EXPECT_EQ(htmlEscapeAscii("&"), "&amp;");
+  EXPECT_EQ(htmlEscapeAscii("\""), "&quot;");
+  EXPECT_EQ(htmlEscapeAscii("'"), "&apos;");
+  EXPECT_EQ(htmlEscapeAscii("bacdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()`~[]{}|;:',.<>? \""), R"(bacdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&excl;&commat;&num;&dollar;&percnt;&Hat;&amp;&ast;&lpar;&rpar;&grave;~&lsqb;&rsqb;&lcub;&rcub;&verbar;&semi;&colon;&apos;&comma;&period;&lt;&gt;&quest; &quot;)");
+  EXPECT_EQ(htmlEscapeAscii("\a"), "&#x7;");
+  EXPECT_EQ(htmlEscapeAscii("\b"), "&#x8;");
+  EXPECT_EQ(htmlEscapeAscii("\f"), "&#xC;");
+  EXPECT_EQ(htmlEscapeAscii("\n"), "&NewLine;");
+  EXPECT_EQ(htmlEscapeAscii("\r"), "&#xD;");
+  EXPECT_EQ(htmlEscapeAscii("\t"), "&Tab;");
+  EXPECT_EQ(htmlEscapeAscii("\v"), "&#xB;");
+  EXPECT_EQ(htmlEscapeAscii("\xAA"), "&xFFFD;");
+  EXPECT_EQ(htmlEscapeAscii("\xFF"), "&xFFFD;");
+  EXPECT_EQ(htmlEscapeAscii(string("\x00", 1)), "&#x0;");
+  EXPECT_EQ(htmlEscapeAscii("\x01"), "&#x1;");
+  EXPECT_EQ(htmlEscapeAscii(s), "&dollar;&#x1F3F4;&#xE0067;&#xE0062;&#xE0073;&#xE0063;&#xE0074;&#xE007F;&period;");
+  // 2-byte Unicode character, Pound Sign (currency)
+  EXPECT_EQ(htmlEscapeAscii("\xc2\xa3"), "&pound;");
+  // 3-byte Unicode character, Japanese word "yen" (currency)
+  EXPECT_EQ(htmlEscapeAscii("\xe5\x86\x86"), "&#x5186;");
+}
+
 TEST(UnicodeString, SubString) {
   {
     // Testing an empty string.
