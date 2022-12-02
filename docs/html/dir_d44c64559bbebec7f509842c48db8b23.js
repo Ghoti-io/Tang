@@ -106,6 +106,7 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
       [ "GarbageCollected", "classTang_1_1GarbageCollected.html", "classTang_1_1GarbageCollected" ]
     ] ],
     [ "htmlEscape.hpp", "htmlEscape_8hpp.html", "htmlEscape_8hpp" ],
+    [ "htmlEscapeAscii.hpp", "htmlEscapeAscii_8hpp.html", "htmlEscapeAscii_8hpp" ],
     [ "macros.hpp", "macros_8hpp.html", "macros_8hpp" ],
     [ "opcode.hpp", "opcode_8hpp.html", "opcode_8hpp" ],
     [ "program.hpp", "program_8hpp.html", "program_8hpp" ],

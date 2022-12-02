@@ -141,6 +141,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a98c3c850e57d173ab148e54ece83a671"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unicodeString_8hpp.html#a98c3c850e57d173ab148e54ece83a671">Tang::htmlEscape</a> (const std::string &amp;str)</td></tr>
 <tr class="memdesc:a98c3c850e57d173ab148e54ece83a671"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an "html escaped" version of the provided string.  <a href="unicodeString_8hpp.html#a98c3c850e57d173ab148e54ece83a671">More...</a><br /></td></tr>
 <tr class="separator:a98c3c850e57d173ab148e54ece83a671"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25d8c6a386e276a165656ad79b322b64"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unicodeString_8hpp.html#a25d8c6a386e276a165656ad79b322b64">Tang::htmlEscapeAscii</a> (const std::string &amp;str)</td></tr>
+<tr class="memdesc:a25d8c6a386e276a165656ad79b322b64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an Ascii-only, "html escaped" version of the provided string.  <a href="unicodeString_8hpp.html#a25d8c6a386e276a165656ad79b322b64">More...</a><br /></td></tr>
+<tr class="separator:a25d8c6a386e276a165656ad79b322b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains the code to interface with the ICU library. </p>
@@ -176,6 +179,42 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="unicodeString_8hpp_a98c3c850e57d173ab148e54ece83a671_cgraph.png" border="0" usemap="#aunicodeString_8hpp_a98c3c850e57d173ab148e54ece83a671_cgraph" alt=""/></div>
 <map name="aunicodeString_8hpp_a98c3c850e57d173ab148e54ece83a671_cgraph" id="aunicodeString_8hpp_a98c3c850e57d173ab148e54ece83a671_cgraph">
 <area shape="rect" title="Return an &quot;html escaped&quot; version of the provided string." alt="" coords="5,29,141,56"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a25d8c6a386e276a165656ad79b322b64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25d8c6a386e276a165656ad79b322b64">&#9670;&nbsp;</a></span>htmlEscapeAscii()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Tang::htmlEscapeAscii </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return an Ascii-only, "html escaped" version of the provided string. </p>
+<p>This function will convert all characters into an Ascii-only representation of the provided UTF-8 encoded string. Visible, standard Ascii characters will pass through unaltered, but all others will be replaced by their HTML escape sequence (if it exists), or the appropriate hexadecimal escape code.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The string to be escaped. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An "escaped" version of the provided string. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="unicodeString_8hpp_a25d8c6a386e276a165656ad79b322b64_cgraph.png" border="0" usemap="#aunicodeString_8hpp_a25d8c6a386e276a165656ad79b322b64_cgraph" alt=""/></div>
+<map name="aunicodeString_8hpp_a25d8c6a386e276a165656ad79b322b64_cgraph" id="aunicodeString_8hpp_a25d8c6a386e276a165656ad79b322b64_cgraph">
+<area shape="rect" title="Return an Ascii&#45;only, &quot;html escaped&quot; version of the provided string." alt="" coords="5,29,172,56"/>
 </map>
 </div>
 

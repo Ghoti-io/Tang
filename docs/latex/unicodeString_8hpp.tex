@@ -33,7 +33,9 @@ class \mbox{\hyperlink{classTang_1_1UnicodeString}{Tang\+::\+Unicode\+String}}
 std\+::string \mbox{\hyperlink{unicodeString_8hpp_af1528e54f4a6e664d30f4e6557e0f84c}{Tang\+::unescape}} (const std\+::string \&str)
 \begin{DoxyCompactList}\small\item\em Return an \char`\"{}unescaped\char`\"{} version of the provided string, which, when interpreted by Tang, should result in a representation equivalent to the original source string. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{unicodeString_8hpp_a98c3c850e57d173ab148e54ece83a671}{Tang\+::html\+Escape}} (const std\+::string \&str)
-\begin{DoxyCompactList}\small\item\em Return an \char`\"{}html escaped\char`\"{} version of the provided string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Return an \char`\"{}html escaped\char`\"{} version of the provided string. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{unicodeString_8hpp_a25d8c6a386e276a165656ad79b322b64}{Tang\+::html\+Escape\+Ascii}} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Return an Ascii-\/only, \char`\"{}html escaped\char`\"{} version of the provided string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -62,12 +64,39 @@ Only \char`\"{}critical\char`\"{} characters {\ttfamily $<$}, {\ttfamily $>$}, {
 \begin{DoxyReturn}{Returns}
 An \char`\"{}escaped\char`\"{} version of the provided string. 
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{unicodeString_8hpp_a98c3c850e57d173ab148e54ece83a671_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{unicodeString_8hpp_a25d8c6a386e276a165656ad79b322b64}\label{unicodeString_8hpp_a25d8c6a386e276a165656ad79b322b64}} 
+\index{unicodeString.hpp@{unicodeString.hpp}!htmlEscapeAscii@{htmlEscapeAscii}}
+\index{htmlEscapeAscii@{htmlEscapeAscii}!unicodeString.hpp@{unicodeString.hpp}}
+\doxysubsubsection{\texorpdfstring{htmlEscapeAscii()}{htmlEscapeAscii()}}
+{\footnotesize\ttfamily string Tang\+::html\+Escape\+Ascii (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Return an Ascii-\/only, \char`\"{}html escaped\char`\"{} version of the provided string. 
+
+This function will convert all characters into an Ascii-\/only representation of the provided UTF-\/8 encoded string. Visible, standard Ascii characters will pass through unaltered, but all others will be replaced by their HTML escape sequence (if it exists), or the appropriate hexadecimal escape code.
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to be escaped. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \char`\"{}escaped\char`\"{} version of the provided string. 
+\end{DoxyReturn}
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=182pt]{unicodeString_8hpp_a98c3c850e57d173ab148e54ece83a671_cgraph}
+\includegraphics[width=205pt]{unicodeString_8hpp_a25d8c6a386e276a165656ad79b322b64_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{unicodeString_8hpp_af1528e54f4a6e664d30f4e6557e0f84c}\label{unicodeString_8hpp_af1528e54f4a6e664d30f4e6557e0f84c}} 

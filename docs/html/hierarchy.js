@@ -42,6 +42,9 @@ var hierarchy =
     [ "Tang::Program", "classTang_1_1Program.html", null ],
     [ "Tang::SingletonObjectPool< T >", "classTang_1_1SingletonObjectPool.html", null ],
     [ "Tang::TangBase", "classTang_1_1TangBase.html", null ],
+    [ "TangHtmlEscapeAsciiFlexLexer", null, [
+      [ "Tang::HtmlEscapeAscii", "classTang_1_1HtmlEscapeAscii.html", null ]
+    ] ],
     [ "TangHtmlEscapeFlexLexer", null, [
       [ "Tang::HtmlEscape", "classTang_1_1HtmlEscape.html", null ]
     ] ],
