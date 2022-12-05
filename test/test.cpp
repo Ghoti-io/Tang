@@ -1254,6 +1254,73 @@ TEST(ControlFlow, For) {
   EXPECT_EQ(*p6.execute().getResult(), (float_t)100.);
 }
 
+TEST(ControlFlow, RangedFor) {
+  {
+    // Simple iterator through an array.
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3];
+      for (num : a) {
+        print(num);
+      }
+    )");
+    EXPECT_EQ(p1.execute().out, "123");
+  }
+  {
+    // Simple iterator through an temporary array.
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3,4,5,6,7,8,9];
+      for (num : a[::2]) {
+        print(num);
+      }
+    )");
+    EXPECT_EQ(p1.execute().out, "13579");
+  }
+  {
+    // Simple iterator through a 2-dimensional array.
+    auto p1 = TangBase().compileScript(R"(
+      a = [[1,2,3],[4,5,6],[7,8,9,10]];
+      for (outer : a) {
+        for (inner : outer) {
+          print(inner);
+        }
+      }
+    )");
+    EXPECT_EQ(p1.execute().out, "12345678910");
+  }
+  {
+    // Attempt to iterate through a non-collection.
+    auto p1 = TangBase().compileScript(R"(
+      a = 3;
+      for (num: a) {
+        print(num);
+      }
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), Error{"Don't know how to iterate over this expression."});
+  }
+  {
+    // Break
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3,4,5,6,7,8,9];
+      for (num : a) {
+        if (num > 5) break;
+        print(num);
+      }
+    )");
+    EXPECT_EQ(p1.execute().out, "12345");
+  }
+  {
+    // Continue
+    auto p1 = TangBase().compileScript(R"(
+      a = [1,2,3,4,5,6,7,8,9];
+      for (num : a) {
+        if (num < 5) continue;
+        print(num);
+      }
+    )");
+    EXPECT_EQ(p1.execute().out, "56789");
+  }
+}
+
 TEST(Print, Default) {
   auto p1 = TangBase().compileScript("print(\"\");");
   EXPECT_EQ(p1.out, "");

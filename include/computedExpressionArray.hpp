@@ -27,6 +27,8 @@ namespace Tang {
       GarbageCollected makeCopy() const override;
       virtual GarbageCollected __index(const GarbageCollected & index) const override;
       virtual GarbageCollected __slice(const GarbageCollected & begin, const GarbageCollected & end, const GarbageCollected & skip) const override;
+      virtual GarbageCollected __getIterator(const GarbageCollected & collection) const override;
+      virtual GarbageCollected __iteratorNext(size_t index) const override;
       virtual GarbageCollected __assign_index(const GarbageCollected & index, const GarbageCollected & value) override;
       virtual GarbageCollected __string() const override;
 

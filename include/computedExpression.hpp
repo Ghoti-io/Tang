@@ -215,6 +215,21 @@ namespace Tang {
       virtual GarbageCollected __slice(const GarbageCollected & begin, const GarbageCollected & end, const GarbageCollected & skip) const;
 
       /**
+       * Get an iterator for the expression.
+       *
+       * @param collection The GarbageCollected value that will serve as the
+       *   collection through which to iterate.
+       */
+      virtual GarbageCollected __getIterator(const GarbageCollected & collection) const;
+
+      /**
+       * Get the next iterative value.
+       *
+       * @param index The desired index value.
+       */
+      virtual GarbageCollected __iteratorNext(size_t index = 0) const;
+
+      /**
        * Perform a type cast to integer.
        *
        * @return The result of the the operation.

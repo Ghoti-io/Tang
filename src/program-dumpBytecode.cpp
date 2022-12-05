@@ -221,6 +221,21 @@ string Program::dumpBytecode() const {
         ++pc;
         break;
       }
+      case Opcode::GETITERATOR: {
+        out << "GETITERATOR";
+        ++pc;
+        break;
+      }
+      case Opcode::ITERATORNEXT: {
+        out << "ITERATORNEXT";
+        ++pc;
+        break;
+      }
+      case Opcode::ISITERATOREND: {
+        out << "ISITERATOREND";
+        ++pc;
+        break;
+      }
       case Opcode::CASTINTEGER: {
         out << "CASTINTEGER";
         ++pc;

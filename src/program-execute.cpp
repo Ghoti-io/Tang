@@ -14,6 +14,7 @@
 #include "computedExpressionString.hpp"
 #include "computedExpressionArray.hpp"
 #include "computedExpressionCompiledFunction.hpp"
+#include "computedExpressionIteratorEnd.hpp"
 
 using namespace std;
 using namespace Tang;
@@ -364,6 +365,30 @@ Program& Program::execute() {
         auto container = stack.back();
         stack.pop_back();
         stack.push_back(container->__slice(begin, end, skip));
+        ++pc;
+        break;
+      }
+      case Opcode::GETITERATOR: {
+        STACKCHECK(1);
+        auto collection = stack.back();
+        stack.pop_back();
+        stack.push_back(collection->__getIterator(collection));
+        ++pc;
+        break;
+      }
+      case Opcode::ITERATORNEXT: {
+        STACKCHECK(1);
+        auto iterator = stack.back();
+        stack.pop_back();
+        stack.push_back(iterator->__iteratorNext());
+        ++pc;
+        break;
+      }
+      case Opcode::ISITERATOREND: {
+        STACKCHECK(1);
+        auto val = stack.back();
+        stack.pop_back();
+        stack.push_back(GarbageCollected::make<ComputedExpressionBoolean>((typeid(*val) == typeid(ComputedExpressionIteratorEnd)) || (typeid(*val) == typeid(ComputedExpressionError))));
         ++pc;
         break;
       }

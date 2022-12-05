@@ -122,6 +122,14 @@ GarbageCollected ComputedExpression::__slice([[maybe_unused]] const GarbageColle
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to slice this expression."});
 }
 
+GarbageCollected ComputedExpression::__getIterator([[maybe_unused]] const GarbageCollected & collection) const {
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to iterate over this expression."});
+}
+
+GarbageCollected ComputedExpression::__iteratorNext([[maybe_unused]] size_t index) const {
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to iterate over this expression."});
+}
+
 GarbageCollected ComputedExpression::__integer() const {
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to cast this value to an integer."});
 }

@@ -7,6 +7,8 @@
 #include "computedExpressionInteger.hpp"
 #include "computedExpressionBoolean.hpp"
 #include "computedExpressionString.hpp"
+#include "computedExpressionIterator.hpp"
+#include "computedExpressionIteratorEnd.hpp"
 #include "computedExpressionError.hpp"
 
 using namespace std;
@@ -134,6 +136,17 @@ GarbageCollected ComputedExpressionArray::__slice(const GarbageCollected & begin
   return GarbageCollected::make<ComputedExpressionArray>(newContents);
 
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to slice this expression."});
+}
+
+GarbageCollected ComputedExpressionArray::__getIterator(const GarbageCollected & collection) const {
+  return GarbageCollected::make<ComputedExpressionIterator>(collection);
+}
+
+GarbageCollected ComputedExpressionArray::__iteratorNext(size_t index) const {
+  if (index >= this->contents.size()) {
+    return GarbageCollected::make<ComputedExpressionIteratorEnd>();
+  }
+  return this->contents[index];
 }
 
 GarbageCollected ComputedExpressionArray::__assign_index(const GarbageCollected & index, const GarbageCollected & value) {

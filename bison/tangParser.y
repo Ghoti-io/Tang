@@ -192,6 +192,7 @@ namespace Tang {
 #include "astNodePrint.hpp"
 #include "astNodeFunctionDeclaration.hpp"
 #include "astNodeFunctionCall.hpp"
+#include "astNodeRangedFor.hpp"
 #include "astNodeReturn.hpp"
 #include "astNodeSlice.hpp"
 
@@ -312,6 +313,10 @@ closedStatement
     {
       $$ = std::make_shared<AstNodeFor>($3, $5, $7, $9, @1);
     }
+  | "for" "(" IDENTIFIER ":" expression ")" closedStatement
+    {
+      $$ = std::make_shared<AstNodeRangedFor>(std::make_shared<AstNodeIdentifier>($3, @3), $5, $7, @1);
+    }
   | "function" IDENTIFIER "(" functionDeclarationArguments ")" codeBlock
     {
       $$ = std::make_shared<AstNodeFunctionDeclaration>($2, $4, $6, @1);
@@ -353,6 +358,10 @@ openStatement
   | "for" "(" optionalExpression ";" optionalExpression ";" optionalExpression ")" openStatement
     {
       $$ = std::make_shared<AstNodeFor>($3, $5, $7, $9, @1);
+    }
+  | "for" "(" IDENTIFIER ":" expression ")" openStatement
+    {
+      $$ = std::make_shared<AstNodeRangedFor>(std::make_shared<AstNodeIdentifier>($3, @3), $5, $7, @1);
     }
   ;
 

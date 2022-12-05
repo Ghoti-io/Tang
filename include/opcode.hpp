@@ -40,6 +40,9 @@ namespace Tang {
     INDEX,    ///< Pop index, pop collection, push collection[index]
     SLICE,    ///< Pop skip, pop end, pop begin, pop collection,
               ///<   push collection[begin:end:skip]
+    GETITERATOR, ///< Pop a collection, push the collection iterator
+    ITERATORNEXT,///< Pop an iterator, push the next iterator value
+    ISITERATOREND,///< Pop a val, push bool(is val == iterator end)
     CASTINTEGER, ///< Pop a val, typecast to int, push
     CASTFLOAT,   ///< Pop a val, typecast to float, push
     CASTBOOLEAN, ///< Pop a val, typecast to boolean, push
