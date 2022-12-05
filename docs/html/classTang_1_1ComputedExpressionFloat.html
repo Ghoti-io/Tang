@@ -198,6 +198,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa7a262384220a86eb273284f8990ca84"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpression.html#aa7a262384220a86eb273284f8990ca84">__slice</a> (const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;begin, const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;end, const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;skip) const</td></tr>
 <tr class="memdesc:aa7a262384220a86eb273284f8990ca84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a slice operation.  <a href="classTang_1_1ComputedExpression.html#aa7a262384220a86eb273284f8990ca84">More...</a><br /></td></tr>
 <tr class="separator:aa7a262384220a86eb273284f8990ca84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89d0a492646d5493e138ee22bcd6dad7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpression.html#a89d0a492646d5493e138ee22bcd6dad7">__getIterator</a> (const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;collection) const</td></tr>
+<tr class="memdesc:a89d0a492646d5493e138ee22bcd6dad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an iterator for the expression.  <a href="classTang_1_1ComputedExpression.html#a89d0a492646d5493e138ee22bcd6dad7">More...</a><br /></td></tr>
+<tr class="separator:a89d0a492646d5493e138ee22bcd6dad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8f0013e447b6004846dbb9d92b2b29f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpression.html#ae8f0013e447b6004846dbb9d92b2b29f">__iteratorNext</a> (size_t index=0) const</td></tr>
+<tr class="memdesc:ae8f0013e447b6004846dbb9d92b2b29f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the next iterative value.  <a href="classTang_1_1ComputedExpression.html#ae8f0013e447b6004846dbb9d92b2b29f">More...</a><br /></td></tr>
+<tr class="separator:ae8f0013e447b6004846dbb9d92b2b29f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -484,6 +490,42 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>ComputedExpressionIn
 
 </div>
 </div>
+<a id="a89d0a492646d5493e138ee22bcd6dad7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89d0a492646d5493e138ee22bcd6dad7">&#9670;&nbsp;</a></span>__getIterator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> ComputedExpression::__getIterator </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;&#160;</td>
+          <td class="paramname"><em>collection</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get an iterator for the expression. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">collection</td><td>The <a class="el" href="classTang_1_1GarbageCollected.html" title="A container that acts as a resource-counting garbage collector for the specified type.">GarbageCollected</a> value that will serve as the collection through which to iterate. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="classTang_1_1ComputedExpressionArray.html#ad66e2566f4dd550a7e9954522071a1ed">Tang::ComputedExpressionArray</a>.</p>
+
+</div>
+</div>
 <a id="abb6defbdb303825687da1bd1468e6133"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb6defbdb303825687da1bd1468e6133">&#9670;&nbsp;</a></span>__index()</h2>
 
@@ -548,6 +590,42 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>ComputedExpressionIn
 <dl class="section return"><dt>Returns</dt><dd>The result of the the operation. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#aa9bebad41df630a98cec2565b0aeda89">Tang::ComputedExpression</a>.</p>
+
+</div>
+</div>
+<a id="ae8f0013e447b6004846dbb9d92b2b29f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8f0013e447b6004846dbb9d92b2b29f">&#9670;&nbsp;</a></span>__iteratorNext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> ComputedExpression::__iteratorNext </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the next iterative value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The desired index value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="classTang_1_1ComputedExpressionIterator.html#aeb38af6d4cce0e526c09d62018d71460">Tang::ComputedExpressionIterator</a>, and <a class="el" href="classTang_1_1ComputedExpressionArray.html#a8f1c04c03b8c7b97ef2ea1efd2270b07">Tang::ComputedExpressionArray</a>.</p>
 
 </div>
 </div>

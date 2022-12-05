@@ -42,6 +42,10 @@ virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mb
 \begin{DoxyCompactList}\small\item\em Perform an index operation. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_a67ecf8a85bec9293943b990761bab2c8}{\+\_\+\+\_\+slice}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&begin, const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&end, const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&skip) const override
 \begin{DoxyCompactList}\small\item\em Perform a slice operation. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_ad66e2566f4dd550a7e9954522071a1ed}{\+\_\+\+\_\+get\+Iterator}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&collection) const override
+\begin{DoxyCompactList}\small\item\em Get an iterator for the expression. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_a8f1c04c03b8c7b97ef2ea1efd2270b07}{\+\_\+\+\_\+iterator\+Next}} (size\+\_\+t index) const override
+\begin{DoxyCompactList}\small\item\em Get the next iterative value. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_a7dc724830081b12709885b0c563d7eef}{\+\_\+\+\_\+assign\+\_\+index}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&index, const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&value) override
 \begin{DoxyCompactList}\small\item\em Perform an index assignment to the supplied value. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_a67259f44cd68ccac6ca858fca4823b27}{\+\_\+\+\_\+string}} () const override
@@ -249,6 +253,25 @@ The result of the the operation.
 
 Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a4bbe91963e21fd8319b94a7b43a1e26e}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_a891a448c4b19eb52499f4be7d02b663a}{Tang\+::\+Computed\+Expression\+Float}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a62c448dad7b0e05a7a2d8a1b00f8b5e8}{Tang\+::\+Computed\+Expression\+Error}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionBoolean_ad9d88a48be735d59258c989399b143c7}{Tang\+::\+Computed\+Expression\+Boolean}}.
 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionArray_ad66e2566f4dd550a7e9954522071a1ed}\label{classTang_1_1ComputedExpressionArray_ad66e2566f4dd550a7e9954522071a1ed}} 
+\index{Tang::ComputedExpressionArray@{Tang::ComputedExpressionArray}!\_\_getIterator@{\_\_getIterator}}
+\index{\_\_getIterator@{\_\_getIterator}!Tang::ComputedExpressionArray@{Tang::ComputedExpressionArray}}
+\doxysubsubsection{\texorpdfstring{\_\_getIterator()}{\_\_getIterator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Array\+::\+\_\+\+\_\+get\+Iterator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{collection }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get an iterator for the expression. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collection} & The \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value that will serve as the collection through which to iterate. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a89d0a492646d5493e138ee22bcd6dad7}{Tang\+::\+Computed\+Expression}}.
+
 \mbox{\Hypertarget{classTang_1_1ComputedExpressionArray_abbaae671ad9e9bb47b0b0925828b2b6b}\label{classTang_1_1ComputedExpressionArray_abbaae671ad9e9bb47b0b0925828b2b6b}} 
 \index{Tang::ComputedExpressionArray@{Tang::ComputedExpressionArray}!\_\_index@{\_\_index}}
 \index{\_\_index@{\_\_index}!Tang::ComputedExpressionArray@{Tang::ComputedExpressionArray}}
@@ -287,6 +310,25 @@ The result of the the operation.
 
 
 Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ac8f2123e3efec72df3dc6d62b74c78b6}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_aa08d3e8e26ab701d0e9b33cd201c8aaf}{Tang\+::\+Computed\+Expression\+Float}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a70ad36b76c0ec73b98e50ed9738d0646}{Tang\+::\+Computed\+Expression\+Error}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionBoolean_a8f0172e1257ad63c50d2e75361d5a5bd}{Tang\+::\+Computed\+Expression\+Boolean}}.
+
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionArray_a8f1c04c03b8c7b97ef2ea1efd2270b07}\label{classTang_1_1ComputedExpressionArray_a8f1c04c03b8c7b97ef2ea1efd2270b07}} 
+\index{Tang::ComputedExpressionArray@{Tang::ComputedExpressionArray}!\_\_iteratorNext@{\_\_iteratorNext}}
+\index{\_\_iteratorNext@{\_\_iteratorNext}!Tang::ComputedExpressionArray@{Tang::ComputedExpressionArray}}
+\doxysubsubsection{\texorpdfstring{\_\_iteratorNext()}{\_\_iteratorNext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Array\+::\+\_\+\+\_\+iterator\+Next (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the next iterative value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The desired index value. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_ae8f0013e447b6004846dbb9d92b2b29f}{Tang\+::\+Computed\+Expression}}.
 
 \mbox{\Hypertarget{classTang_1_1ComputedExpression_a7ac5773e7e1c7f4b7c7f8dcd29bfa00b}\label{classTang_1_1ComputedExpression_a7ac5773e7e1c7f4b7c7f8dcd29bfa00b}} 
 \index{Tang::ComputedExpressionArray@{Tang::ComputedExpressionArray}!\_\_lessThan@{\_\_lessThan}}
