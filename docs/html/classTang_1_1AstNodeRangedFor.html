@@ -86,6 +86,7 @@ $(document).ready(function(){initNavTree('classTang_1_1AstNodeRangedFor.html',''
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classTang_1_1AstNodeRangedFor-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tang::AstNodeRangedFor Class Reference</div>  </div>
@@ -110,8 +111,14 @@ Collaboration diagram for Tang::AstNodeRangedFor:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTang_1_1AstNodeRangedFor__coll__graph.png" border="0" usemap="#aTang_1_1AstNodeRangedFor_coll__map" alt="Collaboration graph"/></div>
 <map name="aTang_1_1AstNodeRangedFor_coll__map" id="aTang_1_1AstNodeRangedFor_coll__map">
-<area shape="rect" title="An AstNode that represents a ranged for() statement." alt="" coords="5,80,189,107"/>
-<area shape="rect" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="40,5,155,32"/>
+<area shape="rect" title="An AstNode that represents a ranged for() statement." alt="" coords="1125,89,1309,116"/>
+<area shape="rect" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="866,60,981,87"/>
+<area shape="rect" href="classTang_1_1location.html" title="Two points in a source file." alt="" coords="607,68,719,95"/>
+<area shape="rect" href="classTang_1_1position.html" title="A point in a source file." alt="" coords="389,60,501,87"/>
+<area shape="rect" title=" " alt="" coords="193,33,280,60"/>
+<area shape="rect" title=" " alt="" coords="5,26,144,67"/>
+<area shape="rect" title=" " alt="" coords="841,111,1005,153"/>
+<area shape="rect" title=" " alt="" coords="841,177,1005,218"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -125,7 +132,7 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a163c8930bc7b8286a76f5b34aef57cb3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeRangedFor.html#a163c8930bc7b8286a76f5b34aef57cb3">AstNodeRangedFor</a> (shared_ptr&lt; <a class="el" href="classTang_1_1AstNodeIdentifier.html">AstNodeIdentifier</a> &gt; target, shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt; collection, shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt; codeBlock, <a class="el" href="classTang_1_1location.html">Tang::location</a> <a class="el" href="classTang_1_1location.html">location</a>)</td></tr>
+<tr class="memitem:a163c8930bc7b8286a76f5b34aef57cb3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeRangedFor.html#a163c8930bc7b8286a76f5b34aef57cb3">AstNodeRangedFor</a> (shared_ptr&lt; <a class="el" href="classTang_1_1AstNodeIdentifier.html">AstNodeIdentifier</a> &gt; <a class="el" href="classTang_1_1AstNodeRangedFor.html#acfa46b602ca656b02bfa5bb5c9a6d34e">target</a>, shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt; <a class="el" href="classTang_1_1AstNodeRangedFor.html#aa8bc1833830b169ef0853163c16edd7a">collection</a>, shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt; <a class="el" href="classTang_1_1AstNodeRangedFor.html#a92189169998d6fe62b502dd7f0d707b7">codeBlock</a>, <a class="el" href="classTang_1_1location.html">Tang::location</a> <a class="el" href="classTang_1_1location.html">location</a>)</td></tr>
 <tr class="memdesc:a163c8930bc7b8286a76f5b34aef57cb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="classTang_1_1AstNodeRangedFor.html#a163c8930bc7b8286a76f5b34aef57cb3">More...</a><br /></td></tr>
 <tr class="separator:a163c8930bc7b8286a76f5b34aef57cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7953caf89ecf145bdd47c331fdc800d5"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeRangedFor.html#a7953caf89ecf145bdd47c331fdc800d5">dump</a> (std::string indent=&quot;&quot;) const override</td></tr>
@@ -137,6 +144,29 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab6eb9b7070ed3ec4d52246e2cafdd6f0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeRangedFor.html#ab6eb9b7070ed3ec4d52246e2cafdd6f0">compilePreprocess</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program, <a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641">PreprocessState</a> state) const override</td></tr>
 <tr class="memdesc:ab6eb9b7070ed3ec4d52246e2cafdd6f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run any preprocess analysis needed before compilation.  <a href="classTang_1_1AstNodeRangedFor.html#ab6eb9b7070ed3ec4d52246e2cafdd6f0">More...</a><br /></td></tr>
 <tr class="separator:ab6eb9b7070ed3ec4d52246e2cafdd6f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:acfa46b602ca656b02bfa5bb5c9a6d34e"><td class="memItemLeft" align="right" valign="top"><a id="acfa46b602ca656b02bfa5bb5c9a6d34e"></a>
+shared_ptr&lt; <a class="el" href="classTang_1_1AstNodeIdentifier.html">AstNodeIdentifier</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeRangedFor.html#acfa46b602ca656b02bfa5bb5c9a6d34e">target</a></td></tr>
+<tr class="memdesc:acfa46b602ca656b02bfa5bb5c9a6d34e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The target variable to hold the value for the current loop iteration. <br /></td></tr>
+<tr class="separator:acfa46b602ca656b02bfa5bb5c9a6d34e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8bc1833830b169ef0853163c16edd7a"><td class="memItemLeft" align="right" valign="top"><a id="aa8bc1833830b169ef0853163c16edd7a"></a>
+shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeRangedFor.html#aa8bc1833830b169ef0853163c16edd7a">collection</a></td></tr>
+<tr class="memdesc:aa8bc1833830b169ef0853163c16edd7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The collection through which to iterate. <br /></td></tr>
+<tr class="separator:aa8bc1833830b169ef0853163c16edd7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92189169998d6fe62b502dd7f0d707b7"><td class="memItemLeft" align="right" valign="top"><a id="a92189169998d6fe62b502dd7f0d707b7"></a>
+shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeRangedFor.html#a92189169998d6fe62b502dd7f0d707b7">codeBlock</a></td></tr>
+<tr class="memdesc:a92189169998d6fe62b502dd7f0d707b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The code block executed when the condition is true. <br /></td></tr>
+<tr class="separator:a92189169998d6fe62b502dd7f0d707b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae503002a89177184dfaf809d3ab1cc04"><td class="memItemLeft" align="right" valign="top"><a id="ae503002a89177184dfaf809d3ab1cc04"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeRangedFor.html#ae503002a89177184dfaf809d3ab1cc04">iteratorVariableName</a></td></tr>
+<tr class="memdesc:ae503002a89177184dfaf809d3ab1cc04"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unique variable name that this iterator will use to persist its state on the stack. <br /></td></tr>
+<tr class="separator:ae503002a89177184dfaf809d3ab1cc04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="memItemLeft" align="right" valign="top"><a id="a41e8328d5a342163a5aabcc4cb8f1b5e"></a>
+<a class="el" href="classTang_1_1location.html">Tang::location</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a41e8328d5a342163a5aabcc4cb8f1b5e">location</a></td></tr>
+<tr class="memdesc:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The location associated with this node. <br /></td></tr>
+<tr class="separator:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that represents a ranged for() statement. </p>

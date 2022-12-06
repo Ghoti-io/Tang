@@ -11,12 +11,21 @@ Base class for representing nodes of an Abstract Syntax Tree (AST).
 
 
 
-Inheritance diagram for Tang\+::Ast\+Node\+:
-\nopagebreak
+Inheritance diagram for Tang\+::Ast\+Node\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=550pt]{classTang_1_1AstNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tang\+::Ast\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classTang_1_1AstNode__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Types}
@@ -40,6 +49,12 @@ virtual void \mbox{\hyperlink{classTang_1_1AstNode_a390f8887c418f972d75e968f1274
 \begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classTang_1_1AstNode_a269c37e41595e0338bf4653cdb32e9cb}{compile\+Preprocess}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program, \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Preprocess\+State}} state) const
 \begin{DoxyCompactList}\small\item\em Run any preprocess analysis needed before compilation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}\label{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}} 
+\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}{location}}
+\begin{DoxyCompactList}\small\item\em The location associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

@@ -7,5 +7,7 @@ var classTang_1_1AstNodeArray =
     [ "AstNodeArray", "classTang_1_1AstNodeArray.html#acd580c30bb24bccbe8354d28e09da296", null ],
     [ "compile", "classTang_1_1AstNodeArray.html#a579a48a6b05cfecc8f5489894bc10ec8", null ],
     [ "compilePreprocess", "classTang_1_1AstNodeArray.html#a8d76227a09c69f232c0548486a179b4c", null ],
-    [ "dump", "classTang_1_1AstNodeArray.html#ad935e1b1267b232927fa2c8fecfbc707", null ]
+    [ "dump", "classTang_1_1AstNodeArray.html#ad935e1b1267b232927fa2c8fecfbc707", null ],
+    [ "contents", "classTang_1_1AstNodeArray.html#ac9bd8b790320a86868e33182629ff700", null ],
+    [ "location", "classTang_1_1AstNodeArray.html#a41e8328d5a342163a5aabcc4cb8f1b5e", null ]
 ];

@@ -9,5 +9,8 @@ var classTang_1_1AstNodeIndex =
     [ "compilePreprocess", "classTang_1_1AstNodeIndex.html#af8c1e7d09e52697ec4b3df1d92a3b479", null ],
     [ "dump", "classTang_1_1AstNodeIndex.html#a036b98b4e5feb21f86b7a7d94015f9ec", null ],
     [ "getCollection", "classTang_1_1AstNodeIndex.html#a798f4511e81f99f7236ee5dc3e5dbdf6", null ],
-    [ "getIndex", "classTang_1_1AstNodeIndex.html#a406a2bf01f4aaae88bbeef58bc420f2a", null ]
+    [ "getIndex", "classTang_1_1AstNodeIndex.html#a406a2bf01f4aaae88bbeef58bc420f2a", null ],
+    [ "collection", "classTang_1_1AstNodeIndex.html#a63c5dd09d8aa0f3ff908cadfea1f6a5e", null ],
+    [ "index", "classTang_1_1AstNodeIndex.html#a662ba12b29adf377a1300f62a8f6f412", null ],
+    [ "location", "classTang_1_1AstNodeIndex.html#a41e8328d5a342163a5aabcc4cb8f1b5e", null ]
 ];

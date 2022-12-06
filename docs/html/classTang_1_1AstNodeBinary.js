@@ -22,5 +22,9 @@ var classTang_1_1AstNodeBinary =
     [ "AstNodeBinary", "classTang_1_1AstNodeBinary.html#adedfe569adbdc47097f8129b95c000dd", null ],
     [ "compile", "classTang_1_1AstNodeBinary.html#a7955b76c5e7bdf92aa86f8c58ce10473", null ],
     [ "compilePreprocess", "classTang_1_1AstNodeBinary.html#ac0c895bc010e5ae9916c3f8bc49770ca", null ],
-    [ "dump", "classTang_1_1AstNodeBinary.html#a16506f66e9f45c069d6a280ba176e2a7", null ]
+    [ "dump", "classTang_1_1AstNodeBinary.html#a16506f66e9f45c069d6a280ba176e2a7", null ],
+    [ "lhs", "classTang_1_1AstNodeBinary.html#ae0fd37da73486ef3902deecd2588e27c", null ],
+    [ "location", "classTang_1_1AstNodeBinary.html#a41e8328d5a342163a5aabcc4cb8f1b5e", null ],
+    [ "op", "classTang_1_1AstNodeBinary.html#ae882ddf080e0e0306081b0e0b2f04a6b", null ],
+    [ "rhs", "classTang_1_1AstNodeBinary.html#a187633d3a57800ce65de83051b14fb2c", null ]
 ];

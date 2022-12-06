@@ -7,5 +7,8 @@ var classTang_1_1AstNodeWhile =
     [ "AstNodeWhile", "classTang_1_1AstNodeWhile.html#a0c21ef27e39dae086b7329e8b70b58cc", null ],
     [ "compile", "classTang_1_1AstNodeWhile.html#a3ed8b79c2880c1bdc950dae1819cf3c2", null ],
     [ "compilePreprocess", "classTang_1_1AstNodeWhile.html#afb988ef9532d2c8052b3c3ba7686c912", null ],
-    [ "dump", "classTang_1_1AstNodeWhile.html#a60d4c3274a53ec9a7651a44263abe641", null ]
+    [ "dump", "classTang_1_1AstNodeWhile.html#a60d4c3274a53ec9a7651a44263abe641", null ],
+    [ "codeBlock", "classTang_1_1AstNodeWhile.html#ad78d40c71c21856315f79db78af0e081", null ],
+    [ "condition", "classTang_1_1AstNodeWhile.html#ae50eefee15b74713a5c0f51fe4efa94a", null ],
+    [ "location", "classTang_1_1AstNodeWhile.html#a41e8328d5a342163a5aabcc4cb8f1b5e", null ]
 ];

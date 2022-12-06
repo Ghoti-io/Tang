@@ -28,5 +28,7 @@ var classTang_1_1ComputedExpressionIterator =
     [ "is_equal", "classTang_1_1ComputedExpressionIterator.html#a7265d530e9b32f55d2485a326ab353aa", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionIterator.html#a76aaf726b67cedb54b6b3c75c834645f", null ],
     [ "isCopyNeeded", "classTang_1_1ComputedExpressionIterator.html#a493f58bd7f51ca4d6b9b1ef1860b4370", null ],
-    [ "makeCopy", "classTang_1_1ComputedExpressionIterator.html#a2c862b516b38bbb010677176f101eb19", null ]
+    [ "makeCopy", "classTang_1_1ComputedExpressionIterator.html#a2c862b516b38bbb010677176f101eb19", null ],
+    [ "collection", "classTang_1_1ComputedExpressionIterator.html#a4b97fba44a8253862fe40d85f8f4943d", null ],
+    [ "index", "classTang_1_1ComputedExpressionIterator.html#a54163bd177b2e746206784938379d52a", null ]
 ];

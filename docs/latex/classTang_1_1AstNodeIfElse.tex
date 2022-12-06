@@ -20,11 +20,12 @@ Inheritance diagram for Tang\+::Ast\+Node\+If\+Else\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Tang\+::Ast\+Node\+If\+Else\+:\nopagebreak
+Collaboration diagram for Tang\+::Ast\+Node\+If\+Else\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=193pt]{classTang_1_1AstNodeIfElse__coll__graph}
+\includegraphics[width=317pt]{classTang_1_1AstNodeIfElse__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Types}
@@ -37,9 +38,9 @@ enum \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Pr
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTang_1_1AstNodeIfElse_afdb4eaf64eab3cf234744b9b63641ef2}{Ast\+Node\+If\+Else}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ condition, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ then\+Block, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ else\+Block, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
+\mbox{\hyperlink{classTang_1_1AstNodeIfElse_afdb4eaf64eab3cf234744b9b63641ef2}{Ast\+Node\+If\+Else}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeIfElse_ae65a0ce138c7027fbdf9cff8c6d47b07}{condition}}, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeIfElse_a10ad47ce77003c7753a26890f3684ce7}{then\+Block}}, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeIfElse_a60cca4336f678bb10abf5ea473919ff4}{else\+Block}}, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
 \begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classTang_1_1AstNodeIfElse_a199f9cd6eb991ff25f79f5473864a163}{Ast\+Node\+If\+Else}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ condition, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ then\+Block, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
+\mbox{\hyperlink{classTang_1_1AstNodeIfElse_a199f9cd6eb991ff25f79f5473864a163}{Ast\+Node\+If\+Else}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeIfElse_ae65a0ce138c7027fbdf9cff8c6d47b07}{condition}}, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeIfElse_a10ad47ce77003c7753a26890f3684ce7}{then\+Block}}, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
 \begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
 virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeIfElse_a4d6ac0ee37277ee15bc00d76c8a0c739}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
 \begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
@@ -47,6 +48,21 @@ virtual void \mbox{\hyperlink{classTang_1_1AstNodeIfElse_acfdd91afcec11f0cf8a853
 \begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classTang_1_1AstNodeIfElse_ae72ff9b9246efe30c7f919a1f1bdbd34}{compile\+Preprocess}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program, \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Preprocess\+State}} state) const override
 \begin{DoxyCompactList}\small\item\em Run any preprocess analysis needed before compilation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeIfElse_ae65a0ce138c7027fbdf9cff8c6d47b07}\label{classTang_1_1AstNodeIfElse_ae65a0ce138c7027fbdf9cff8c6d47b07}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeIfElse_ae65a0ce138c7027fbdf9cff8c6d47b07}{condition}}
+\begin{DoxyCompactList}\small\item\em The expression which determines whether the then\+Block or else\+Block is executed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeIfElse_a10ad47ce77003c7753a26890f3684ce7}\label{classTang_1_1AstNodeIfElse_a10ad47ce77003c7753a26890f3684ce7}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeIfElse_a10ad47ce77003c7753a26890f3684ce7}{then\+Block}}
+\begin{DoxyCompactList}\small\item\em The statement executed when the condition is true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeIfElse_a60cca4336f678bb10abf5ea473919ff4}\label{classTang_1_1AstNodeIfElse_a60cca4336f678bb10abf5ea473919ff4}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeIfElse_a60cca4336f678bb10abf5ea473919ff4}{else\+Block}}
+\begin{DoxyCompactList}\small\item\em The statement executed when the condition is false. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}\label{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}} 
+\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}{location}}
+\begin{DoxyCompactList}\small\item\em The location associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

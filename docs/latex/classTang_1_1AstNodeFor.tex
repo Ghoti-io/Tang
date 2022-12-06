@@ -20,11 +20,12 @@ Inheritance diagram for Tang\+::Ast\+Node\+For\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Tang\+::Ast\+Node\+For\+:\nopagebreak
+Collaboration diagram for Tang\+::Ast\+Node\+For\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=181pt]{classTang_1_1AstNodeFor__coll__graph}
+\includegraphics[width=317pt]{classTang_1_1AstNodeFor__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Types}
@@ -37,7 +38,7 @@ enum \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Pr
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTang_1_1AstNodeFor_a31e07e4e686d9bd033e1d8ad117d4cb3}{Ast\+Node\+For}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ initialization, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ condition, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ increment, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ code\+Block, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
+\mbox{\hyperlink{classTang_1_1AstNodeFor_a31e07e4e686d9bd033e1d8ad117d4cb3}{Ast\+Node\+For}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeFor_a057d8914e9b19dd7904cff2e2d19403d}{initialization}}, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeFor_a6ff7923daf5a466c809983b674d9b41c}{condition}}, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeFor_a5dc8f597eaeb656a7c43d4b1bc7ed172}{increment}}, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeFor_a884b41d7c87a7307c633c20504e8795f}{code\+Block}}, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
 \begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
 virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeFor_ae90bac4d66394687615f93f50bfa4872}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
 \begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
@@ -45,6 +46,24 @@ virtual void \mbox{\hyperlink{classTang_1_1AstNodeFor_ab2da77ba66b9f359937e59920
 \begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classTang_1_1AstNodeFor_a8b1f5dcef3e04fc39f1047b2a2f5bd08}{compile\+Preprocess}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program, \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Preprocess\+State}} state) const override
 \begin{DoxyCompactList}\small\item\em Run any preprocess analysis needed before compilation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeFor_a057d8914e9b19dd7904cff2e2d19403d}\label{classTang_1_1AstNodeFor_a057d8914e9b19dd7904cff2e2d19403d}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeFor_a057d8914e9b19dd7904cff2e2d19403d}{initialization}}
+\begin{DoxyCompactList}\small\item\em The expression to be executed first to set up the for() loop. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeFor_a6ff7923daf5a466c809983b674d9b41c}\label{classTang_1_1AstNodeFor_a6ff7923daf5a466c809983b674d9b41c}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeFor_a6ff7923daf5a466c809983b674d9b41c}{condition}}
+\begin{DoxyCompactList}\small\item\em The expression which determines whether or not the code block will continue to be executed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeFor_a5dc8f597eaeb656a7c43d4b1bc7ed172}\label{classTang_1_1AstNodeFor_a5dc8f597eaeb656a7c43d4b1bc7ed172}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeFor_a5dc8f597eaeb656a7c43d4b1bc7ed172}{increment}}
+\begin{DoxyCompactList}\small\item\em The expression to be executed immediately after the code block. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeFor_a884b41d7c87a7307c633c20504e8795f}\label{classTang_1_1AstNodeFor_a884b41d7c87a7307c633c20504e8795f}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeFor_a884b41d7c87a7307c633c20504e8795f}{code\+Block}}
+\begin{DoxyCompactList}\small\item\em The code block executed when the condition is true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}\label{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}} 
+\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}{location}}
+\begin{DoxyCompactList}\small\item\em The location associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

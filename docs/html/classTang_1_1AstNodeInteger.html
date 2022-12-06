@@ -86,6 +86,7 @@ $(document).ready(function(){initNavTree('classTang_1_1AstNodeInteger.html','');
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classTang_1_1AstNodeInteger-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tang::AstNodeInteger Class Reference</div>  </div>
@@ -110,8 +111,12 @@ Collaboration diagram for Tang::AstNodeInteger:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTang_1_1AstNodeInteger__coll__graph.png" border="0" usemap="#aTang_1_1AstNodeInteger_coll__map" alt="Collaboration graph"/></div>
 <map name="aTang_1_1AstNodeInteger_coll__map" id="aTang_1_1AstNodeInteger_coll__map">
-<area shape="rect" title="An AstNode that represents an integer literal." alt="" coords="5,80,167,107"/>
-<area shape="rect" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="29,5,143,32"/>
+<area shape="rect" title="An AstNode that represents an integer literal." alt="" coords="5,455,167,481"/>
+<area shape="rect" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="29,379,143,405"/>
+<area shape="rect" href="classTang_1_1location.html" title="Two points in a source file." alt="" coords="30,289,142,316"/>
+<area shape="rect" href="classTang_1_1position.html" title="A point in a source file." alt="" coords="30,185,142,212"/>
+<area shape="rect" title=" " alt="" coords="43,96,129,123"/>
+<area shape="rect" title=" " alt="" coords="17,5,155,47"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -137,6 +142,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a269c37e41595e0338bf4653cdb32e9cb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a269c37e41595e0338bf4653cdb32e9cb">compilePreprocess</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program, <a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641">PreprocessState</a> state) const</td></tr>
 <tr class="memdesc:a269c37e41595e0338bf4653cdb32e9cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run any preprocess analysis needed before compilation.  <a href="classTang_1_1AstNode.html#a269c37e41595e0338bf4653cdb32e9cb">More...</a><br /></td></tr>
 <tr class="separator:a269c37e41595e0338bf4653cdb32e9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a949f75f238dfb5dd8f59de5045c8a177"><td class="memItemLeft" align="right" valign="top"><a id="a949f75f238dfb5dd8f59de5045c8a177"></a>
+<a class="el" href="macros_8hpp.html#a48da4f54f29ec5b8a4dfd1a9234f7ee8">Tang::integer_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeInteger.html#a949f75f238dfb5dd8f59de5045c8a177">val</a></td></tr>
+<tr class="memdesc:a949f75f238dfb5dd8f59de5045c8a177"><td class="mdescLeft">&#160;</td><td class="mdescRight">The integer value being stored. <br /></td></tr>
+<tr class="separator:a949f75f238dfb5dd8f59de5045c8a177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="memItemLeft" align="right" valign="top"><a id="a41e8328d5a342163a5aabcc4cb8f1b5e"></a>
+<a class="el" href="classTang_1_1location.html">Tang::location</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a41e8328d5a342163a5aabcc4cb8f1b5e">location</a></td></tr>
+<tr class="memdesc:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The location associated with this node. <br /></td></tr>
+<tr class="separator:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that represents an integer literal. </p>

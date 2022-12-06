@@ -20,11 +20,12 @@ Inheritance diagram for Tang\+::Ast\+Node\+Slice\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Tang\+::Ast\+Node\+Slice\+:\nopagebreak
+Collaboration diagram for Tang\+::Ast\+Node\+Slice\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=190pt]{classTang_1_1AstNodeSlice__coll__graph}
+\includegraphics[width=317pt]{classTang_1_1AstNodeSlice__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Types}
@@ -37,7 +38,7 @@ enum \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Pr
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTang_1_1AstNodeSlice_a5c50a246e5e3d72699e2d21508047be1}{Ast\+Node\+Slice}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ collection, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ begin, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ end, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ slice, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
+\mbox{\hyperlink{classTang_1_1AstNodeSlice_a5c50a246e5e3d72699e2d21508047be1}{Ast\+Node\+Slice}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeSlice_aaad310fa22d6302058b224b19699f11d}{collection}}, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeSlice_aa6bf68f98b8143ec6fbc86610e97bcff}{begin}}, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeSlice_ae9b72cb32eacd27648d57f9c5e54fbf6}{end}}, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ slice, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
 \begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
 virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeSlice_adde9727060d6e25749e0e579f76ba083}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
 \begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
@@ -45,6 +46,24 @@ virtual void \mbox{\hyperlink{classTang_1_1AstNodeSlice_a3157aa7f6c3fbb334b3b267
 \begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classTang_1_1AstNodeSlice_a903aa8324238d701ed2212cb729717b5}{compile\+Preprocess}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program, \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Preprocess\+State}} state) const override
 \begin{DoxyCompactList}\small\item\em Run any preprocess analysis needed before compilation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeSlice_aaad310fa22d6302058b224b19699f11d}\label{classTang_1_1AstNodeSlice_aaad310fa22d6302058b224b19699f11d}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeSlice_aaad310fa22d6302058b224b19699f11d}{collection}}
+\begin{DoxyCompactList}\small\item\em The collection which will be sliced. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeSlice_aa6bf68f98b8143ec6fbc86610e97bcff}\label{classTang_1_1AstNodeSlice_aa6bf68f98b8143ec6fbc86610e97bcff}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeSlice_aa6bf68f98b8143ec6fbc86610e97bcff}{begin}}
+\begin{DoxyCompactList}\small\item\em The begin index position of the slice. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeSlice_ae9b72cb32eacd27648d57f9c5e54fbf6}\label{classTang_1_1AstNodeSlice_ae9b72cb32eacd27648d57f9c5e54fbf6}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeSlice_ae9b72cb32eacd27648d57f9c5e54fbf6}{end}}
+\begin{DoxyCompactList}\small\item\em The end index position of the slice. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeSlice_a39b241fb09a905d8d02503dc8aa90e28}\label{classTang_1_1AstNodeSlice_a39b241fb09a905d8d02503dc8aa90e28}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeSlice_a39b241fb09a905d8d02503dc8aa90e28}{skip}}
+\begin{DoxyCompactList}\small\item\em The skip index position of the slice. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}\label{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}} 
+\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}{location}}
+\begin{DoxyCompactList}\small\item\em The location associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

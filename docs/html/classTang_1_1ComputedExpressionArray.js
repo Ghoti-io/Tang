@@ -28,5 +28,6 @@ var classTang_1_1ComputedExpressionArray =
     [ "is_equal", "classTang_1_1ComputedExpressionArray.html#a7265d530e9b32f55d2485a326ab353aa", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionArray.html#a76aaf726b67cedb54b6b3c75c834645f", null ],
     [ "isCopyNeeded", "classTang_1_1ComputedExpressionArray.html#a3a72d20d7404d43efac207dc04afa2e1", null ],
-    [ "makeCopy", "classTang_1_1ComputedExpressionArray.html#a0497225dfbc07a35cfec251a37b902d5", null ]
+    [ "makeCopy", "classTang_1_1ComputedExpressionArray.html#a0497225dfbc07a35cfec251a37b902d5", null ],
+    [ "contents", "classTang_1_1ComputedExpressionArray.html#aa13b85a91c9321388a62bef514bd1bf6", null ]
 ];

@@ -85,6 +85,7 @@ $(document).ready(function(){initNavTree('classTang_1_1TangScanner.html',''); in
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classTang_1_1TangScanner-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tang::TangScanner Class Reference</div>  </div>
@@ -109,8 +110,12 @@ Collaboration diagram for Tang::TangScanner:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTang_1_1TangScanner__coll__graph.png" border="0" usemap="#aTang_1_1TangScanner_coll__map" alt="Collaboration graph"/></div>
 <map name="aTang_1_1TangScanner_coll__map" id="aTang_1_1TangScanner_coll__map">
-<area shape="rect" title="The Flex lexer class for the main Tang language." alt="" coords="7,80,149,107"/>
-<area shape="rect" title=" " alt="" coords="5,5,151,32"/>
+<area shape="rect" title="The Flex lexer class for the main Tang language." alt="" coords="28,379,171,405"/>
+<area shape="rect" title=" " alt="" coords="5,289,151,316"/>
+<area shape="rect" href="classTang_1_1location.html" title="Two points in a source file." alt="" coords="175,289,287,316"/>
+<area shape="rect" href="classTang_1_1position.html" title="A point in a source file." alt="" coords="175,185,287,212"/>
+<area shape="rect" title=" " alt="" coords="188,96,275,123"/>
+<area shape="rect" title=" " alt="" coords="162,5,301,47"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -122,6 +127,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0109128f5ed60f03bf6ff76b6ce25b1d"><td class="memItemLeft" align="right" valign="top">virtual Tang::TangParser::symbol_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1TangScanner.html#a0109128f5ed60f03bf6ff76b6ce25b1d">get_next_token</a> ()</td></tr>
 <tr class="memdesc:a0109128f5ed60f03bf6ff76b6ce25b1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pass-through function that we supply so that we can provide a Bison 3 token return type instead of the <code>int</code> that is returned by the default class configuration.  <a href="classTang_1_1TangScanner.html#a0109128f5ed60f03bf6ff76b6ce25b1d">More...</a><br /></td></tr>
 <tr class="separator:a0109128f5ed60f03bf6ff76b6ce25b1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:af24dd2399a4f80b0bf9b002c2407f331"><td class="memItemLeft" align="right" valign="top"><a id="af24dd2399a4f80b0bf9b002c2407f331"></a>
+<a class="el" href="classTang_1_1location.html">Tang::location</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1TangScanner.html#af24dd2399a4f80b0bf9b002c2407f331">location</a></td></tr>
+<tr class="memdesc:af24dd2399a4f80b0bf9b002c2407f331"><td class="mdescLeft">&#160;</td><td class="mdescRight">The location information of the token that is identified. <br /></td></tr>
+<tr class="separator:af24dd2399a4f80b0bf9b002c2407f331"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The Flex lexer class for the main Tang language. </p>

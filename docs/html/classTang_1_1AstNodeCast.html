@@ -86,6 +86,7 @@ $(document).ready(function(){initNavTree('classTang_1_1AstNodeCast.html',''); in
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classTang_1_1AstNodeCast-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tang::AstNodeCast Class Reference</div>  </div>
@@ -110,8 +111,13 @@ Collaboration diagram for Tang::AstNodeCast:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTang_1_1AstNodeCast__coll__graph.png" border="0" usemap="#aTang_1_1AstNodeCast_coll__map" alt="Collaboration graph"/></div>
 <map name="aTang_1_1AstNodeCast_coll__map" id="aTang_1_1AstNodeCast_coll__map">
-<area shape="rect" title="An AstNode that represents a typecast of an expression." alt="" coords="5,80,149,107"/>
-<area shape="rect" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="20,5,135,32"/>
+<area shape="rect" title="An AstNode that represents a typecast of an expression." alt="" coords="84,483,228,509"/>
+<area shape="rect" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="17,386,132,413"/>
+<area shape="rect" href="classTang_1_1location.html" title="Two points in a source file." alt="" coords="19,289,131,316"/>
+<area shape="rect" href="classTang_1_1position.html" title="A point in a source file." alt="" coords="19,185,131,212"/>
+<area shape="rect" title=" " alt="" coords="31,96,118,123"/>
+<area shape="rect" title=" " alt="" coords="5,5,144,47"/>
+<area shape="rect" title=" " alt="" coords="157,379,321,420"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -131,7 +137,7 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a36a56430aa8f8cd4facbf7df1fa50bdd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeCast.html#a36a56430aa8f8cd4facbf7df1fa50bdd">AstNodeCast</a> (<a class="el" href="classTang_1_1AstNodeCast.html#a63a014eee9fd7d365d8177c4bab2c4e4">Type</a> targetType, shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt; expression, <a class="el" href="classTang_1_1location.html">Tang::location</a> <a class="el" href="classTang_1_1location.html">location</a>)</td></tr>
+<tr class="memitem:a36a56430aa8f8cd4facbf7df1fa50bdd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeCast.html#a36a56430aa8f8cd4facbf7df1fa50bdd">AstNodeCast</a> (<a class="el" href="classTang_1_1AstNodeCast.html#a63a014eee9fd7d365d8177c4bab2c4e4">Type</a> <a class="el" href="classTang_1_1AstNodeCast.html#a160d552dec1b8185899a1683fb229199">targetType</a>, shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt; <a class="el" href="classTang_1_1AstNodeCast.html#a317b9ddfd26f6e8ee15694a5b28a1c5b">expression</a>, <a class="el" href="classTang_1_1location.html">Tang::location</a> <a class="el" href="classTang_1_1location.html">location</a>)</td></tr>
 <tr class="memdesc:a36a56430aa8f8cd4facbf7df1fa50bdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="classTang_1_1AstNodeCast.html#a36a56430aa8f8cd4facbf7df1fa50bdd">More...</a><br /></td></tr>
 <tr class="separator:a36a56430aa8f8cd4facbf7df1fa50bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc4a075ea319b747411aec57a61735eb"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeCast.html#abc4a075ea319b747411aec57a61735eb">dump</a> (std::string indent=&quot;&quot;) const override</td></tr>
@@ -143,6 +149,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a057e3f5d1df130bdf1ea1c0a5464566a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeCast.html#a057e3f5d1df130bdf1ea1c0a5464566a">compilePreprocess</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program, <a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641">PreprocessState</a> state) const override</td></tr>
 <tr class="memdesc:a057e3f5d1df130bdf1ea1c0a5464566a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run any preprocess analysis needed before compilation.  <a href="classTang_1_1AstNodeCast.html#a057e3f5d1df130bdf1ea1c0a5464566a">More...</a><br /></td></tr>
 <tr class="separator:a057e3f5d1df130bdf1ea1c0a5464566a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a160d552dec1b8185899a1683fb229199"><td class="memItemLeft" align="right" valign="top"><a id="a160d552dec1b8185899a1683fb229199"></a>
+<a class="el" href="classTang_1_1AstNodeCast.html#a63a014eee9fd7d365d8177c4bab2c4e4">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeCast.html#a160d552dec1b8185899a1683fb229199">targetType</a></td></tr>
+<tr class="memdesc:a160d552dec1b8185899a1683fb229199"><td class="mdescLeft">&#160;</td><td class="mdescRight">The target type. <br /></td></tr>
+<tr class="separator:a160d552dec1b8185899a1683fb229199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a317b9ddfd26f6e8ee15694a5b28a1c5b"><td class="memItemLeft" align="right" valign="top"><a id="a317b9ddfd26f6e8ee15694a5b28a1c5b"></a>
+shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeCast.html#a317b9ddfd26f6e8ee15694a5b28a1c5b">expression</a></td></tr>
+<tr class="memdesc:a317b9ddfd26f6e8ee15694a5b28a1c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The expression being typecast. <br /></td></tr>
+<tr class="separator:a317b9ddfd26f6e8ee15694a5b28a1c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="memItemLeft" align="right" valign="top"><a id="a41e8328d5a342163a5aabcc4cb8f1b5e"></a>
+<a class="el" href="classTang_1_1location.html">Tang::location</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a41e8328d5a342163a5aabcc4cb8f1b5e">location</a></td></tr>
+<tr class="memdesc:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The location associated with this node. <br /></td></tr>
+<tr class="separator:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that represents a typecast of an expression. </p>

@@ -86,6 +86,7 @@ $(document).ready(function(){initNavTree('classTang_1_1AstNodeWhile.html',''); i
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classTang_1_1AstNodeWhile-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tang::AstNodeWhile Class Reference</div>  </div>
@@ -110,8 +111,13 @@ Collaboration diagram for Tang::AstNodeWhile:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTang_1_1AstNodeWhile__coll__graph.png" border="0" usemap="#aTang_1_1AstNodeWhile_coll__map" alt="Collaboration graph"/></div>
 <map name="aTang_1_1AstNodeWhile_coll__map" id="aTang_1_1AstNodeWhile_coll__map">
-<area shape="rect" title="An AstNode that represents a while statement." alt="" coords="5,80,157,107"/>
-<area shape="rect" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="24,5,139,32"/>
+<area shape="rect" title="An AstNode that represents a while statement." alt="" coords="80,497,232,524"/>
+<area shape="rect" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="17,386,132,413"/>
+<area shape="rect" href="classTang_1_1location.html" title="Two points in a source file." alt="" coords="19,289,131,316"/>
+<area shape="rect" href="classTang_1_1position.html" title="A point in a source file." alt="" coords="19,185,131,212"/>
+<area shape="rect" title=" " alt="" coords="31,96,118,123"/>
+<area shape="rect" title=" " alt="" coords="5,5,144,47"/>
+<area shape="rect" title=" " alt="" coords="157,379,321,420"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -125,7 +131,7 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0c21ef27e39dae086b7329e8b70b58cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeWhile.html#a0c21ef27e39dae086b7329e8b70b58cc">AstNodeWhile</a> (shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt; condition, shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt; codeBlock, <a class="el" href="classTang_1_1location.html">Tang::location</a> <a class="el" href="classTang_1_1location.html">location</a>)</td></tr>
+<tr class="memitem:a0c21ef27e39dae086b7329e8b70b58cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeWhile.html#a0c21ef27e39dae086b7329e8b70b58cc">AstNodeWhile</a> (shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt; <a class="el" href="classTang_1_1AstNodeWhile.html#ae50eefee15b74713a5c0f51fe4efa94a">condition</a>, shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt; <a class="el" href="classTang_1_1AstNodeWhile.html#ad78d40c71c21856315f79db78af0e081">codeBlock</a>, <a class="el" href="classTang_1_1location.html">Tang::location</a> <a class="el" href="classTang_1_1location.html">location</a>)</td></tr>
 <tr class="memdesc:a0c21ef27e39dae086b7329e8b70b58cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="classTang_1_1AstNodeWhile.html#a0c21ef27e39dae086b7329e8b70b58cc">More...</a><br /></td></tr>
 <tr class="separator:a0c21ef27e39dae086b7329e8b70b58cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60d4c3274a53ec9a7651a44263abe641"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeWhile.html#a60d4c3274a53ec9a7651a44263abe641">dump</a> (std::string indent=&quot;&quot;) const override</td></tr>
@@ -137,6 +143,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afb988ef9532d2c8052b3c3ba7686c912"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeWhile.html#afb988ef9532d2c8052b3c3ba7686c912">compilePreprocess</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program, <a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641">PreprocessState</a> state) const override</td></tr>
 <tr class="memdesc:afb988ef9532d2c8052b3c3ba7686c912"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run any preprocess analysis needed before compilation.  <a href="classTang_1_1AstNodeWhile.html#afb988ef9532d2c8052b3c3ba7686c912">More...</a><br /></td></tr>
 <tr class="separator:afb988ef9532d2c8052b3c3ba7686c912"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ae50eefee15b74713a5c0f51fe4efa94a"><td class="memItemLeft" align="right" valign="top"><a id="ae50eefee15b74713a5c0f51fe4efa94a"></a>
+shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeWhile.html#ae50eefee15b74713a5c0f51fe4efa94a">condition</a></td></tr>
+<tr class="memdesc:ae50eefee15b74713a5c0f51fe4efa94a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The expression which determines whether or not the code block will continue to be executed. <br /></td></tr>
+<tr class="separator:ae50eefee15b74713a5c0f51fe4efa94a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad78d40c71c21856315f79db78af0e081"><td class="memItemLeft" align="right" valign="top"><a id="ad78d40c71c21856315f79db78af0e081"></a>
+shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeWhile.html#ad78d40c71c21856315f79db78af0e081">codeBlock</a></td></tr>
+<tr class="memdesc:ad78d40c71c21856315f79db78af0e081"><td class="mdescLeft">&#160;</td><td class="mdescRight">The code block executed when the condition is true. <br /></td></tr>
+<tr class="separator:ad78d40c71c21856315f79db78af0e081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="memItemLeft" align="right" valign="top"><a id="a41e8328d5a342163a5aabcc4cb8f1b5e"></a>
+<a class="el" href="classTang_1_1location.html">Tang::location</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a41e8328d5a342163a5aabcc4cb8f1b5e">location</a></td></tr>
+<tr class="memdesc:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The location associated with this node. <br /></td></tr>
+<tr class="separator:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that represents a while statement. </p>

@@ -85,6 +85,7 @@ $(document).ready(function(){initNavTree('classTang_1_1ComputedExpressionArray.h
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classTang_1_1ComputedExpressionArray-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tang::ComputedExpressionArray Class Reference</div>  </div>
@@ -109,14 +110,16 @@ Collaboration diagram for Tang::ComputedExpressionArray:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTang_1_1ComputedExpressionArray__coll__graph.png" border="0" usemap="#aTang_1_1ComputedExpressionArray_coll__map" alt="Collaboration graph"/></div>
 <map name="aTang_1_1ComputedExpressionArray_coll__map" id="aTang_1_1ComputedExpressionArray_coll__map">
-<area shape="rect" title="Represents an Array that is the result of a computation." alt="" coords="5,80,204,121"/>
+<area shape="rect" title="Represents an Array that is the result of a computation." alt="" coords="5,288,204,329"/>
 <area shape="rect" href="classTang_1_1ComputedExpression.html" title="Represents the result of a computation that has been executed." alt="" coords="5,5,204,32"/>
+<area shape="rect" href="classTang_1_1GarbageCollected.html" title="A container that acts as a resource&#45;counting garbage collector for the specified type." alt="" coords="121,95,297,121"/>
+<area shape="rect" title=" " alt="" coords="127,184,280,225"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5b5f86dd151b45c5c3fad192e59840fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionArray.html#a5b5f86dd151b45c5c3fad192e59840fd">ComputedExpressionArray</a> (std::vector&lt; <a class="el" href="classTang_1_1GarbageCollected.html">Tang::GarbageCollected</a> &gt; contents)</td></tr>
+<tr class="memitem:a5b5f86dd151b45c5c3fad192e59840fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionArray.html#a5b5f86dd151b45c5c3fad192e59840fd">ComputedExpressionArray</a> (std::vector&lt; <a class="el" href="classTang_1_1GarbageCollected.html">Tang::GarbageCollected</a> &gt; <a class="el" href="classTang_1_1ComputedExpressionArray.html#aa13b85a91c9321388a62bef514bd1bf6">contents</a>)</td></tr>
 <tr class="memdesc:a5b5f86dd151b45c5c3fad192e59840fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an Array result.  <a href="classTang_1_1ComputedExpressionArray.html#a5b5f86dd151b45c5c3fad192e59840fd">More...</a><br /></td></tr>
 <tr class="separator:a5b5f86dd151b45c5c3fad192e59840fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad357fa1d16656eabe1593ba2a1bfd410"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionArray.html#ad357fa1d16656eabe1593ba2a1bfd410">dump</a> () const override</td></tr>
@@ -203,6 +206,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac38862531c17e25636ca68c7e74ba487"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpression.html#ac38862531c17e25636ca68c7e74ba487">__boolean</a> () const</td></tr>
 <tr class="memdesc:ac38862531c17e25636ca68c7e74ba487"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a type cast to boolean.  <a href="classTang_1_1ComputedExpression.html#ac38862531c17e25636ca68c7e74ba487">More...</a><br /></td></tr>
 <tr class="separator:ac38862531c17e25636ca68c7e74ba487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa13b85a91c9321388a62bef514bd1bf6"><td class="memItemLeft" align="right" valign="top"><a id="aa13b85a91c9321388a62bef514bd1bf6"></a>
+std::vector&lt; <a class="el" href="classTang_1_1GarbageCollected.html">Tang::GarbageCollected</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionArray.html#aa13b85a91c9321388a62bef514bd1bf6">contents</a></td></tr>
+<tr class="memdesc:aa13b85a91c9321388a62bef514bd1bf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The array contents. <br /></td></tr>
+<tr class="separator:aa13b85a91c9321388a62bef514bd1bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents an Array that is the result of a computation. </p>
@@ -346,6 +356,16 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The result of the operation. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#a011d86ce9b04fca4bef67b4c5bb3324c">Tang::ComputedExpression</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTang_1_1ComputedExpressionArray_a7dc724830081b12709885b0c563d7eef_cgraph.png" border="0" usemap="#aclassTang_1_1ComputedExpressionArray_a7dc724830081b12709885b0c563d7eef_cgraph" alt=""/></div>
+<map name="aclassTang_1_1ComputedExpressionArray_a7dc724830081b12709885b0c563d7eef_cgraph" id="aclassTang_1_1ComputedExpressionArray_a7dc724830081b12709885b0c563d7eef_cgraph">
+<area shape="rect" title="Perform an index assignment to the supplied value." alt="" coords="5,39,204,80"/>
+<area shape="rect" href="classTang_1_1ComputedExpression.html#a011d86ce9b04fca4bef67b4c5bb3324c" title="Perform an index assignment to the supplied value." alt="" coords="252,5,451,47"/>
+<area shape="rect" href="classTang_1_1ComputedExpressionInteger.html#a04c76a5ba8dbc3bfa4258c50c263b306" title="Helper function to get the value associated with this expression." alt="" coords="252,71,451,112"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -553,6 +573,16 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The result of the operation. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#abb6defbdb303825687da1bd1468e6133">Tang::ComputedExpression</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTang_1_1ComputedExpressionArray_abbaae671ad9e9bb47b0b0925828b2b6b_cgraph.png" border="0" usemap="#aclassTang_1_1ComputedExpressionArray_abbaae671ad9e9bb47b0b0925828b2b6b_cgraph" alt=""/></div>
+<map name="aclassTang_1_1ComputedExpressionArray_abbaae671ad9e9bb47b0b0925828b2b6b_cgraph" id="aclassTang_1_1ComputedExpressionArray_abbaae671ad9e9bb47b0b0925828b2b6b_cgraph">
+<area shape="rect" title="Perform an index operation." alt="" coords="5,39,204,80"/>
+<area shape="rect" href="classTang_1_1ComputedExpression.html#abb6defbdb303825687da1bd1468e6133" title="Perform an index operation." alt="" coords="252,5,451,47"/>
+<area shape="rect" href="classTang_1_1ComputedExpressionInteger.html#a04c76a5ba8dbc3bfa4258c50c263b306" title="Helper function to get the value associated with this expression." alt="" coords="252,71,451,112"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -846,6 +876,16 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The result of the operation. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#aa7a262384220a86eb273284f8990ca84">Tang::ComputedExpression</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTang_1_1ComputedExpressionArray_a67ecf8a85bec9293943b990761bab2c8_cgraph.png" border="0" usemap="#aclassTang_1_1ComputedExpressionArray_a67ecf8a85bec9293943b990761bab2c8_cgraph" alt=""/></div>
+<map name="aclassTang_1_1ComputedExpressionArray_a67ecf8a85bec9293943b990761bab2c8_cgraph" id="aclassTang_1_1ComputedExpressionArray_a67ecf8a85bec9293943b990761bab2c8_cgraph">
+<area shape="rect" title="Perform a slice operation." alt="" coords="5,39,204,80"/>
+<area shape="rect" href="classTang_1_1ComputedExpression.html#aa7a262384220a86eb273284f8990ca84" title="Perform a slice operation." alt="" coords="252,5,451,47"/>
+<area shape="rect" href="classTang_1_1ComputedExpressionInteger.html#a04c76a5ba8dbc3bfa4258c50c263b306" title="Helper function to get the value associated with this expression." alt="" coords="252,71,451,112"/>
+</map>
+</div>
 
 </div>
 </div>

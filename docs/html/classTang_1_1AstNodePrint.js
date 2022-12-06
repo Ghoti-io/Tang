@@ -10,5 +10,8 @@ var classTang_1_1AstNodePrint =
     [ "AstNodePrint", "classTang_1_1AstNodePrint.html#a67a2e1c119696dbd60b407302ae0331a", null ],
     [ "compile", "classTang_1_1AstNodePrint.html#ac7c6b31ecb1a72aeb1b3a7647ea1af7d", null ],
     [ "compilePreprocess", "classTang_1_1AstNodePrint.html#aaab3cce0bcf10695da318c79998cb296", null ],
-    [ "dump", "classTang_1_1AstNodePrint.html#adbe68764b8f0c6fc5c6740c0bbf34d2c", null ]
+    [ "dump", "classTang_1_1AstNodePrint.html#adbe68764b8f0c6fc5c6740c0bbf34d2c", null ],
+    [ "expression", "classTang_1_1AstNodePrint.html#ab66e23d025bff5e528a02ee43d2084de", null ],
+    [ "location", "classTang_1_1AstNodePrint.html#a41e8328d5a342163a5aabcc4cb8f1b5e", null ],
+    [ "type", "classTang_1_1AstNodePrint.html#a8b3aa67e544c90533473e1f9622f14f8", null ]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['message_621',['message',['../classTang_1_1Error.html#a03780cc93b440ae9964399989af02573',1,'Tang::Error']]]
+  ['graphemeoffsets_700',['graphemeOffsets',['../classTang_1_1UnicodeString.html#a0ad4f2ba93e84e3256af80c5750be410',1,'Tang::UnicodeString']]]
 ];

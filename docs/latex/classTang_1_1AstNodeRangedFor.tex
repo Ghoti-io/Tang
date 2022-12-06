@@ -11,8 +11,7 @@ An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a ranged f
 
 
 
-Inheritance diagram for Tang\+::Ast\+Node\+Ranged\+For\+:
-\nopagebreak
+Inheritance diagram for Tang\+::Ast\+Node\+Ranged\+For\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,7 +25,7 @@ Collaboration diagram for Tang\+::Ast\+Node\+Ranged\+For\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=218pt]{classTang_1_1AstNodeRangedFor__coll__graph}
+\includegraphics[width=350pt]{classTang_1_1AstNodeRangedFor__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Types}
@@ -39,7 +38,7 @@ enum \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Pr
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTang_1_1AstNodeRangedFor_a163c8930bc7b8286a76f5b34aef57cb3}{Ast\+Node\+Ranged\+For}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNodeIdentifier}{Ast\+Node\+Identifier}} $>$ target, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ collection, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ code\+Block, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
+\mbox{\hyperlink{classTang_1_1AstNodeRangedFor_a163c8930bc7b8286a76f5b34aef57cb3}{Ast\+Node\+Ranged\+For}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNodeIdentifier}{Ast\+Node\+Identifier}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeRangedFor_acfa46b602ca656b02bfa5bb5c9a6d34e}{target}}, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeRangedFor_aa8bc1833830b169ef0853163c16edd7a}{collection}}, shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeRangedFor_a92189169998d6fe62b502dd7f0d707b7}{code\+Block}}, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
 \begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
 virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeRangedFor_a7953caf89ecf145bdd47c331fdc800d5}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
 \begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
@@ -47,6 +46,24 @@ virtual void \mbox{\hyperlink{classTang_1_1AstNodeRangedFor_abc2dfd580bfced6607c
 \begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classTang_1_1AstNodeRangedFor_ab6eb9b7070ed3ec4d52246e2cafdd6f0}{compile\+Preprocess}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program, \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Preprocess\+State}} state) const override
 \begin{DoxyCompactList}\small\item\em Run any preprocess analysis needed before compilation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeRangedFor_acfa46b602ca656b02bfa5bb5c9a6d34e}\label{classTang_1_1AstNodeRangedFor_acfa46b602ca656b02bfa5bb5c9a6d34e}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNodeIdentifier}{Ast\+Node\+Identifier}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeRangedFor_acfa46b602ca656b02bfa5bb5c9a6d34e}{target}}
+\begin{DoxyCompactList}\small\item\em The target variable to hold the value for the current loop iteration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeRangedFor_aa8bc1833830b169ef0853163c16edd7a}\label{classTang_1_1AstNodeRangedFor_aa8bc1833830b169ef0853163c16edd7a}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeRangedFor_aa8bc1833830b169ef0853163c16edd7a}{collection}}
+\begin{DoxyCompactList}\small\item\em The collection through which to iterate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeRangedFor_a92189169998d6fe62b502dd7f0d707b7}\label{classTang_1_1AstNodeRangedFor_a92189169998d6fe62b502dd7f0d707b7}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeRangedFor_a92189169998d6fe62b502dd7f0d707b7}{code\+Block}}
+\begin{DoxyCompactList}\small\item\em The code block executed when the condition is true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeRangedFor_ae503002a89177184dfaf809d3ab1cc04}\label{classTang_1_1AstNodeRangedFor_ae503002a89177184dfaf809d3ab1cc04}} 
+string \mbox{\hyperlink{classTang_1_1AstNodeRangedFor_ae503002a89177184dfaf809d3ab1cc04}{iterator\+Variable\+Name}}
+\begin{DoxyCompactList}\small\item\em The unique variable name that this iterator will use to persist its state on the stack. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}\label{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}} 
+\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}{location}}
+\begin{DoxyCompactList}\small\item\em The location associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -119,8 +136,7 @@ Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\
 
 Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a390f8887c418f972d75e968f1274b2cb}{Tang\+::\+Ast\+Node}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -148,8 +164,7 @@ Run any preprocess analysis needed before compilation.
 
 Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a269c37e41595e0338bf4653cdb32e9cb}{Tang\+::\+Ast\+Node}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

@@ -20,7 +20,8 @@ Inheritance diagram for Tang\+::Ast\+Node\+Boolean\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Tang\+::Ast\+Node\+Boolean\+:\nopagebreak
+Collaboration diagram for Tang\+::Ast\+Node\+Boolean\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -37,7 +38,7 @@ enum \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Pr
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTang_1_1AstNodeBoolean_ac1b4c6097f8fe54425cdb6c0ef162129}{Ast\+Node\+Boolean}} (bool val, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
+\mbox{\hyperlink{classTang_1_1AstNodeBoolean_ac1b4c6097f8fe54425cdb6c0ef162129}{Ast\+Node\+Boolean}} (bool \mbox{\hyperlink{classTang_1_1AstNodeBoolean_a882ef3f0d8daa5320c22f00f72507227}{val}}, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
 \begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
 virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeBoolean_a17efb648820e70931ffc0b238efa27e9}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
 \begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
@@ -45,6 +46,15 @@ virtual void \mbox{\hyperlink{classTang_1_1AstNodeBoolean_a59b186598146a39d40460
 \begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classTang_1_1AstNode_a269c37e41595e0338bf4653cdb32e9cb}{compile\+Preprocess}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program, \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Preprocess\+State}} state) const
 \begin{DoxyCompactList}\small\item\em Run any preprocess analysis needed before compilation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeBoolean_a882ef3f0d8daa5320c22f00f72507227}\label{classTang_1_1AstNodeBoolean_a882ef3f0d8daa5320c22f00f72507227}} 
+bool \mbox{\hyperlink{classTang_1_1AstNodeBoolean_a882ef3f0d8daa5320c22f00f72507227}{val}}
+\begin{DoxyCompactList}\small\item\em The boolean value being stored. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}\label{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}} 
+\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}{location}}
+\begin{DoxyCompactList}\small\item\em The location associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

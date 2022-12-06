@@ -85,6 +85,7 @@ $(document).ready(function(){initNavTree('classTang_1_1ComputedExpressionCompile
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classTang_1_1ComputedExpressionCompiledFunction-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tang::ComputedExpressionCompiledFunction Class Reference</div>  </div>
@@ -116,7 +117,7 @@ Collaboration diagram for Tang::ComputedExpressionCompiledFunction:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1526d1a4459431be6d646ab649aec391"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionCompiledFunction.html#a1526d1a4459431be6d646ab649aec391">ComputedExpressionCompiledFunction</a> (uint32_t argc, <a class="el" href="macros_8hpp.html#a48da4f54f29ec5b8a4dfd1a9234f7ee8">Tang::integer_t</a> pc)</td></tr>
+<tr class="memitem:a1526d1a4459431be6d646ab649aec391"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionCompiledFunction.html#a1526d1a4459431be6d646ab649aec391">ComputedExpressionCompiledFunction</a> (uint32_t <a class="el" href="classTang_1_1ComputedExpressionCompiledFunction.html#a1c220a2e5e06b00a7628b97226e302dd">argc</a>, <a class="el" href="macros_8hpp.html#a48da4f54f29ec5b8a4dfd1a9234f7ee8">Tang::integer_t</a> <a class="el" href="classTang_1_1ComputedExpressionCompiledFunction.html#aea4dc76f164bd98f0627e2fc77b518fc">pc</a>)</td></tr>
 <tr class="memdesc:a1526d1a4459431be6d646ab649aec391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an CompiledFunction.  <a href="classTang_1_1ComputedExpressionCompiledFunction.html#a1526d1a4459431be6d646ab649aec391">More...</a><br /></td></tr>
 <tr class="separator:a1526d1a4459431be6d646ab649aec391"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e05ff27919a036d48e1433cacf6fabd"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionCompiledFunction.html#a4e05ff27919a036d48e1433cacf6fabd">dump</a> () const override</td></tr>
@@ -211,6 +212,17 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <tr class="memitem:a14a57cffe9fb44b0d5f34d06afd0db1b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpression.html#a14a57cffe9fb44b0d5f34d06afd0db1b">__string</a> () const</td></tr>
 <tr class="memdesc:a14a57cffe9fb44b0d5f34d06afd0db1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a type cast to string.  <a href="classTang_1_1ComputedExpression.html#a14a57cffe9fb44b0d5f34d06afd0db1b">More...</a><br /></td></tr>
 <tr class="separator:a14a57cffe9fb44b0d5f34d06afd0db1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a1c220a2e5e06b00a7628b97226e302dd"><td class="memItemLeft" align="right" valign="top"><a id="a1c220a2e5e06b00a7628b97226e302dd"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionCompiledFunction.html#a1c220a2e5e06b00a7628b97226e302dd">argc</a></td></tr>
+<tr class="memdesc:a1c220a2e5e06b00a7628b97226e302dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The count of arguments that this function expects. <br /></td></tr>
+<tr class="separator:a1c220a2e5e06b00a7628b97226e302dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea4dc76f164bd98f0627e2fc77b518fc"><td class="memItemLeft" align="right" valign="top"><a id="aea4dc76f164bd98f0627e2fc77b518fc"></a>
+<a class="el" href="macros_8hpp.html#a48da4f54f29ec5b8a4dfd1a9234f7ee8">Tang::integer_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionCompiledFunction.html#aea4dc76f164bd98f0627e2fc77b518fc">pc</a></td></tr>
+<tr class="memdesc:aea4dc76f164bd98f0627e2fc77b518fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The bytecode addres of the start of the function. <br /></td></tr>
+<tr class="separator:aea4dc76f164bd98f0627e2fc77b518fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a Compiled Function declared in the script. </p>
@@ -469,6 +481,15 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <dl class="section return"><dt>Returns</dt><dd>The result of the the operation. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#aa6e3a065c2d0dfcde5e2eaefa26f7606">Tang::ComputedExpression</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTang_1_1ComputedExpressionCompiledFunction_a5bbf899c779783039467c57eea8c2dc0_cgraph.png" border="0" usemap="#aclassTang_1_1ComputedExpressionCompiledFunction_a5bbf899c779783039467c57eea8c2dc0_cgraph" alt=""/></div>
+<map name="aclassTang_1_1ComputedExpressionCompiledFunction_a5bbf899c779783039467c57eea8c2dc0_cgraph" id="aclassTang_1_1ComputedExpressionCompiledFunction_a5bbf899c779783039467c57eea8c2dc0_cgraph">
+<area shape="rect" title="Perform an equality test." alt="" coords="5,5,204,47"/>
+<area shape="rect" href="classTang_1_1ComputedExpression.html#aa6e3a065c2d0dfcde5e2eaefa26f7606" title="Perform an equality test." alt="" coords="252,5,451,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -534,7 +555,7 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="classTang_1_1ComputedExpressionArray.html#ad66e2566f4dd550a7e9954522071a1ed">Tang::ComputedExpressionArray</a>.</p>
+<p>Reimplemented in <a class="el" href="classTang_1_1ComputedExpressionString.html#a1f670b31682d75c5b5e34a1537aea851">Tang::ComputedExpressionString</a>, and <a class="el" href="classTang_1_1ComputedExpressionArray.html#ad66e2566f4dd550a7e9954522071a1ed">Tang::ComputedExpressionArray</a>.</p>
 
 </div>
 </div>
@@ -637,7 +658,7 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="classTang_1_1ComputedExpressionIterator.html#aeb38af6d4cce0e526c09d62018d71460">Tang::ComputedExpressionIterator</a>, and <a class="el" href="classTang_1_1ComputedExpressionArray.html#a8f1c04c03b8c7b97ef2ea1efd2270b07">Tang::ComputedExpressionArray</a>.</p>
+<p>Reimplemented in <a class="el" href="classTang_1_1ComputedExpressionString.html#a9d96dedd8034031787b746f0f0cd227c">Tang::ComputedExpressionString</a>, <a class="el" href="classTang_1_1ComputedExpressionIterator.html#aeb38af6d4cce0e526c09d62018d71460">Tang::ComputedExpressionIterator</a>, and <a class="el" href="classTang_1_1ComputedExpressionArray.html#a8f1c04c03b8c7b97ef2ea1efd2270b07">Tang::ComputedExpressionArray</a>.</p>
 
 </div>
 </div>

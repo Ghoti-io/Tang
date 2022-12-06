@@ -86,6 +86,9 @@ $(document).ready(function(){initNavTree('classTang_1_1SingletonObjectPool.html'
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classTang_1_1SingletonObjectPool-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tang::SingletonObjectPool&lt; T &gt; Class Template Reference</div>  </div>
@@ -96,6 +99,15 @@ $(document).ready(function(){initNavTree('classTang_1_1SingletonObjectPool.html'
  <a href="classTang_1_1SingletonObjectPool.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="singletonObjectPool_8hpp_source.html">singletonObjectPool.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Tang::SingletonObjectPool&lt; T &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTang_1_1SingletonObjectPool__coll__graph.png" border="0" usemap="#aTang_1_1SingletonObjectPool_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="aTang_1_1SingletonObjectPool_3_01T_01_4_coll__map" id="aTang_1_1SingletonObjectPool_3_01T_01_4_coll__map">
+<area shape="rect" title="A thread&#45;safe, singleton object pool of the designated type." alt="" coords="5,95,235,121"/>
+<area shape="rect" title=" " alt="" coords="74,5,166,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -115,6 +127,45 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aaca7a22f2f2012d73d121241c227ab79"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classTang_1_1SingletonObjectPool.html">SingletonObjectPool</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1SingletonObjectPool.html#aaca7a22f2f2012d73d121241c227ab79">getInstance</a> ()</td></tr>
 <tr class="memdesc:aaca7a22f2f2012d73d121241c227ab79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the singleton instance of the object pool.  <a href="classTang_1_1SingletonObjectPool.html#aaca7a22f2f2012d73d121241c227ab79">More...</a><br /></td></tr>
 <tr class="separator:aaca7a22f2f2012d73d121241c227ab79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a0b836e6c39c2c9c4ddd033ef6c5d1395"><td class="memItemLeft" align="right" valign="top"><a id="a0b836e6c39c2c9c4ddd033ef6c5d1395"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1SingletonObjectPool.html#a0b836e6c39c2c9c4ddd033ef6c5d1395">SingletonObjectPool</a> ()</td></tr>
+<tr class="memdesc:a0b836e6c39c2c9c4ddd033ef6c5d1395"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor, hidden from being directly called. <br /></td></tr>
+<tr class="separator:a0b836e6c39c2c9c4ddd033ef6c5d1395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ebbf0afec6bf855021523dbdce97ac5"><td class="memItemLeft" align="right" valign="top"><a id="a3ebbf0afec6bf855021523dbdce97ac5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1SingletonObjectPool.html#a3ebbf0afec6bf855021523dbdce97ac5">SingletonObjectPool</a> (const <a class="el" href="classTang_1_1SingletonObjectPool.html">SingletonObjectPool</a> &amp;other)</td></tr>
+<tr class="memdesc:a3ebbf0afec6bf855021523dbdce97ac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The copy constructor, hidden from being called. <br /></td></tr>
+<tr class="separator:a3ebbf0afec6bf855021523dbdce97ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a63319cf03dfd242b90aa2866de5376d4"><td class="memItemLeft" align="right" valign="top"><a id="a63319cf03dfd242b90aa2866de5376d4"></a>
+T **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1SingletonObjectPool.html#a63319cf03dfd242b90aa2866de5376d4">allocations</a></td></tr>
+<tr class="memdesc:a63319cf03dfd242b90aa2866de5376d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">C-array of allocated blocks, each block contains <code>GROW</code> objects. <br /></td></tr>
+<tr class="separator:a63319cf03dfd242b90aa2866de5376d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac74dd3a410287874d1dd98bef3a5059"><td class="memItemLeft" align="right" valign="top"><a id="aac74dd3a410287874d1dd98bef3a5059"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1SingletonObjectPool.html#aac74dd3a410287874d1dd98bef3a5059">currentAllocation</a></td></tr>
+<tr class="memdesc:aac74dd3a410287874d1dd98bef3a5059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index into <code>allocations</code>, representing the current block supplying non-recycled memory addresses. <br /></td></tr>
+<tr class="separator:aac74dd3a410287874d1dd98bef3a5059"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a513f1bcde18478abadac77aeeba5ac73"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1SingletonObjectPool.html#a513f1bcde18478abadac77aeeba5ac73">currentIndex</a></td></tr>
+<tr class="memdesc:a513f1bcde18478abadac77aeeba5ac73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current location (within the most recently allocated block) of an available T*.  <a href="classTang_1_1SingletonObjectPool.html#a513f1bcde18478abadac77aeeba5ac73">More...</a><br /></td></tr>
+<tr class="separator:a513f1bcde18478abadac77aeeba5ac73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6d3bccb5db5f5e8d4d0492e99aa6243"><td class="memItemLeft" align="right" valign="top"><a id="ac6d3bccb5db5f5e8d4d0492e99aa6243"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1SingletonObjectPool.html#ac6d3bccb5db5f5e8d4d0492e99aa6243">currentRecycledAllocation</a></td></tr>
+<tr class="memdesc:ac6d3bccb5db5f5e8d4d0492e99aa6243"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index into <code>allocations</code>, representing the current block tracking the recycled memory addresses. <br /></td></tr>
+<tr class="separator:ac6d3bccb5db5f5e8d4d0492e99aa6243"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c973458307ae81943d55078c129e5ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1SingletonObjectPool.html#a3c973458307ae81943d55078c129e5ba">currentRecycledIndex</a></td></tr>
+<tr class="memdesc:a3c973458307ae81943d55078c129e5ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current location (within the <code>currentRecycledAllocation</code> block) of the last available T*.  <a href="classTang_1_1SingletonObjectPool.html#a3c973458307ae81943d55078c129e5ba">More...</a><br /></td></tr>
+<tr class="separator:a3c973458307ae81943d55078c129e5ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a1353f46ca1658afd6691730c3c198793"><td class="memItemLeft" align="right" valign="top"><a id="a1353f46ca1658afd6691730c3c198793"></a>
+static std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1SingletonObjectPool.html#a1353f46ca1658afd6691730c3c198793">lock</a></td></tr>
+<tr class="memdesc:a1353f46ca1658afd6691730c3c198793"><td class="mdescLeft">&#160;</td><td class="mdescRight">A mutex for thread-safety. <br /></td></tr>
+<tr class="separator:a1353f46ca1658afd6691730c3c198793"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class T&gt;<br />
@@ -215,6 +266,61 @@ template&lt;class T &gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a513f1bcde18478abadac77aeeba5ac73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a513f1bcde18478abadac77aeeba5ac73">&#9670;&nbsp;</a></span>currentIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="classTang_1_1SingletonObjectPool.html">Tang::SingletonObjectPool</a>&lt; T &gt;::currentIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Current location (within the most recently allocated block) of an available T*. </p>
+<p>If currentIndex == GROW, then a new block needs to be allocated. </p>
+
+</div>
+</div>
+<a id="a3c973458307ae81943d55078c129e5ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c973458307ae81943d55078c129e5ba">&#9670;&nbsp;</a></span>currentRecycledIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classTang_1_1SingletonObjectPool.html">Tang::SingletonObjectPool</a>&lt; T &gt;::currentRecycledIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Current location (within the <code>currentRecycledAllocation</code> block) of the last available T*. </p>
+<p>If currentRecycledIndex == GROW, then we must move to the next currentRecycledAllocation. </p>
 
 </div>
 </div>

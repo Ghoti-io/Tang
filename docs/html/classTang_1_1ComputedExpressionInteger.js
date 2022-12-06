@@ -21,6 +21,7 @@ var classTang_1_1ComputedExpressionInteger =
     [ "__string", "classTang_1_1ComputedExpressionInteger.html#a70d1079d4d4d8ff14725e435680a1a8a", null ],
     [ "__subtract", "classTang_1_1ComputedExpressionInteger.html#a8a792a5911f9d90a4ff4e8ba99f5a657", null ],
     [ "dump", "classTang_1_1ComputedExpressionInteger.html#a02e4a8bba8b37bf02e5ec3fd1e25f094", null ],
+    [ "getValue", "classTang_1_1ComputedExpressionInteger.html#a04c76a5ba8dbc3bfa4258c50c263b306", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionInteger.html#ae60addff932bb6221b83bfd987c0a843", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionInteger.html#a5ce6d4bc0128f6aadf72c2f63a70275a", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionInteger.html#a5287fabf86f19613afb04d5e285c0231", null ],
@@ -29,7 +30,5 @@ var classTang_1_1ComputedExpressionInteger =
     [ "is_equal", "classTang_1_1ComputedExpressionInteger.html#ac39abf9bc79248b475d2e865331b6453", null ],
     [ "isCopyNeeded", "classTang_1_1ComputedExpressionInteger.html#a493f58bd7f51ca4d6b9b1ef1860b4370", null ],
     [ "makeCopy", "classTang_1_1ComputedExpressionInteger.html#a9e1b2e88d3c6574177f291563dd45262", null ],
-    [ "ComputedExpressionArray", "classTang_1_1ComputedExpressionInteger.html#aec75e4d586e9025ffefa6f1f55616203", null ],
-    [ "ComputedExpressionFloat", "classTang_1_1ComputedExpressionInteger.html#a70c09fb5e8df4b7f242567bd7d085785", null ],
-    [ "ComputedExpressionString", "classTang_1_1ComputedExpressionInteger.html#a29155275d5db4f53dc715e47dd15803e", null ]
+    [ "val", "classTang_1_1ComputedExpressionInteger.html#adea4ba2af17d0a069d4c1abb92ce1a80", null ]
 ];

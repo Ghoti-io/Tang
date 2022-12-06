@@ -11,7 +11,8 @@ Represents a compiled script or template that may be executed.
 
 
 
-Collaboration diagram for Tang\+::Program\+:\nopagebreak
+Collaboration diagram for Tang\+::Program\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -28,7 +29,7 @@ enum \mbox{\hyperlink{classTang_1_1Program_ad99e214562094e21f38b6a453163041b}{Co
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTang_1_1Program_a4f704a5a0364c6d62330e15d6ee56219}{Program}} (std\+::string code, \mbox{\hyperlink{classTang_1_1Program_ad99e214562094e21f38b6a453163041b}{Code\+Type}} code\+Type)
+\mbox{\hyperlink{classTang_1_1Program_a4f704a5a0364c6d62330e15d6ee56219}{Program}} (std\+::string \mbox{\hyperlink{classTang_1_1Program_a747cd63b40c48f81d17a2501e4fdd0e5}{code}}, \mbox{\hyperlink{classTang_1_1Program_ad99e214562094e21f38b6a453163041b}{Code\+Type}} \mbox{\hyperlink{classTang_1_1Program_adc2c06ba6f616882bbf0876ceedfc328}{code\+Type}})
 \begin{DoxyCompactList}\small\item\em Create a compiled program using the provided code. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classTang_1_1Program_a75aff78d6b94472f4d8f93e6f79cfbe0}{get\+Code}} () const
 \begin{DoxyCompactList}\small\item\em Get the code that was provided when the \mbox{\hyperlink{classTang_1_1Program}{Program}} was created. \end{DoxyCompactList}\item 
@@ -48,7 +49,7 @@ bool \mbox{\hyperlink{classTang_1_1Program_a5da413efe8435cebd927a8be58dcb9be}{se
 \begin{DoxyCompactList}\small\item\em Set the target address of a Jump opcode. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classTang_1_1Program_aabcfee07409be5bc6bf1312f26b56a85}{set\+Function\+Stack\+Declaration}} (size\+\_\+t opcode\+Address, \mbox{\hyperlink{macros_8hpp_ac3ea9ca53071c2710a6034d60f61d76e}{uinteger\+\_\+t}} argc, \mbox{\hyperlink{macros_8hpp_ac3ea9ca53071c2710a6034d60f61d76e}{uinteger\+\_\+t}} target\+PC)
 \begin{DoxyCompactList}\small\item\em Set the stack details of a function declaration. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classTang_1_1Program_a3ed3e014d80138d61d545a3ef5fe0a2e}{push\+Environment}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \&ast)
+void \mbox{\hyperlink{classTang_1_1Program_a3ed3e014d80138d61d545a3ef5fe0a2e}{push\+Environment}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \&\mbox{\hyperlink{classTang_1_1Program_a198a64d60c39f219c74e89819f2afacf}{ast}})
 \begin{DoxyCompactList}\small\item\em Create a new compile/execute environment stack entry. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTang_1_1Program_a655fefae4d0f0bcf92766d8918be89bd}\label{classTang_1_1Program_a655fefae4d0f0bcf92766d8918be89bd}} 
 void \mbox{\hyperlink{classTang_1_1Program_a655fefae4d0f0bcf92766d8918be89bd}{pop\+Environment}} ()
@@ -93,6 +94,48 @@ std\+::map$<$ std\+::string, std\+::pair$<$ \mbox{\hyperlink{macros_8hpp_ac3ea9c
 \mbox{\Hypertarget{classTang_1_1Program_a1eedd506786a238a8bcedc7b77fd01f9}\label{classTang_1_1Program_a1eedd506786a238a8bcedc7b77fd01f9}} 
 std\+::map$<$ std\+::string, std\+::vector$<$ \mbox{\hyperlink{macros_8hpp_ac3ea9ca53071c2710a6034d60f61d76e}{Tang\+::uinteger\+\_\+t}} $>$ $>$ \mbox{\hyperlink{classTang_1_1Program_a1eedd506786a238a8bcedc7b77fd01f9}{function\+Stack\+Declarations}}
 \begin{DoxyCompactList}\small\item\em For each function name, a list of Bytecode addresses that need to be replaced by a function definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1Program_a7e845a6184bade97aead63d2e14c5040}\label{classTang_1_1Program_a7e845a6184bade97aead63d2e14c5040}} 
+void \mbox{\hyperlink{classTang_1_1Program_a7e845a6184bade97aead63d2e14c5040}{parse}} ()
+\begin{DoxyCompactList}\small\item\em Parse the code into an AST. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1Program_ac1fee8bf44ff31dd8a1131e9dbc47304}\label{classTang_1_1Program_ac1fee8bf44ff31dd8a1131e9dbc47304}} 
+void \mbox{\hyperlink{classTang_1_1Program_ac1fee8bf44ff31dd8a1131e9dbc47304}{compile}} ()
+\begin{DoxyCompactList}\small\item\em Compile the AST into Bytecode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1Program_a440bf2cdcd08fe6b2b0c2c19c22fa276}\label{classTang_1_1Program_a440bf2cdcd08fe6b2b0c2c19c22fa276}} 
+std\+::vector$<$ std\+::map$<$ std\+::string, size\+\_\+t $>$ $>$ \mbox{\hyperlink{classTang_1_1Program_a440bf2cdcd08fe6b2b0c2c19c22fa276}{identifier\+Stack}}
+\begin{DoxyCompactList}\small\item\em Stack of mappings of identifiers to their stack locations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1Program_afca51adb15fa6e650356dc003c50de8d}\label{classTang_1_1Program_afca51adb15fa6e650356dc003c50de8d}} 
+std\+::vector$<$ std\+::set$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classTang_1_1Program_afca51adb15fa6e650356dc003c50de8d}{identifiers\+Assigned\+Stack}}
+\begin{DoxyCompactList}\small\item\em Stack of sets of identifiers that are the target of an assignment statement within the associated scope. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1Program_aae4297c7f590e95eadc98f3c09f9dae9}\label{classTang_1_1Program_aae4297c7f590e95eadc98f3c09f9dae9}} 
+std\+::vector$<$ std\+::map$<$ std\+::string, size\+\_\+t $>$ $>$ \mbox{\hyperlink{classTang_1_1Program_aae4297c7f590e95eadc98f3c09f9dae9}{string\+Stack}}
+\begin{DoxyCompactList}\small\item\em Stack of mappings of strings to their stack locations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1Program_a7b046b69c9c937c8414214fa2ef813b2}\label{classTang_1_1Program_a7b046b69c9c937c8414214fa2ef813b2}} 
+std\+::vector$<$ std\+::set$<$ size\+\_\+t $>$ $>$ \mbox{\hyperlink{classTang_1_1Program_a7b046b69c9c937c8414214fa2ef813b2}{break\+Stack}}
+\begin{DoxyCompactList}\small\item\em Stack of a collection of {\ttfamily break} statement locations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1Program_a4b1113cf21e51270d685fb3c246ba3c3}\label{classTang_1_1Program_a4b1113cf21e51270d685fb3c246ba3c3}} 
+std\+::vector$<$ std\+::set$<$ size\+\_\+t $>$ $>$ \mbox{\hyperlink{classTang_1_1Program_a4b1113cf21e51270d685fb3c246ba3c3}{continue\+Stack}}
+\begin{DoxyCompactList}\small\item\em Stack of a collection of {\ttfamily continue} statement locations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1Program_a747cd63b40c48f81d17a2501e4fdd0e5}\label{classTang_1_1Program_a747cd63b40c48f81d17a2501e4fdd0e5}} 
+std\+::string \mbox{\hyperlink{classTang_1_1Program_a747cd63b40c48f81d17a2501e4fdd0e5}{code}}
+\begin{DoxyCompactList}\small\item\em The code supplied when the \mbox{\hyperlink{classTang_1_1Program}{Program}} was instantiated. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1Program_adc2c06ba6f616882bbf0876ceedfc328}\label{classTang_1_1Program_adc2c06ba6f616882bbf0876ceedfc328}} 
+\mbox{\hyperlink{classTang_1_1Program_ad99e214562094e21f38b6a453163041b}{Code\+Type}} \mbox{\hyperlink{classTang_1_1Program_adc2c06ba6f616882bbf0876ceedfc328}{code\+Type}}
+\begin{DoxyCompactList}\small\item\em The type of code that was supplied when the \mbox{\hyperlink{classTang_1_1Program}{Program}} was instantiated. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1Program_a198a64d60c39f219c74e89819f2afacf}\label{classTang_1_1Program_a198a64d60c39f219c74e89819f2afacf}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1Program_a198a64d60c39f219c74e89819f2afacf}{ast}}
+\begin{DoxyCompactList}\small\item\em A pointer to the AST, if parsing was successful. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1Program_a99f161953dfcc604f639fab842354262}\label{classTang_1_1Program_a99f161953dfcc604f639fab842354262}} 
+\mbox{\hyperlink{program_8hpp_a70114beec5ecf129f5367a4107442ca4}{Bytecode}} \mbox{\hyperlink{classTang_1_1Program_a99f161953dfcc604f639fab842354262}{bytecode}}
+\begin{DoxyCompactList}\small\item\em The Bytecode of the compiled program. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1Program_a60f4be3d576e81e6200167f2d910f259}\label{classTang_1_1Program_a60f4be3d576e81e6200167f2d910f259}} 
+std\+::optional$<$ \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} $>$ \mbox{\hyperlink{classTang_1_1Program_a60f4be3d576e81e6200167f2d910f259}{result}}
+\begin{DoxyCompactList}\small\item\em The result of the \mbox{\hyperlink{classTang_1_1Program}{Program}} execution. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -139,6 +182,14 @@ Create a compiled program using the provided code.
 {\em code\+Type} & Whether the code is a {\ttfamily Script} or {\ttfamily Template}. \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTang_1_1Program_a4f704a5a0364c6d62330e15d6ee56219_cgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Function Documentation}

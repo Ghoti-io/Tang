@@ -30,5 +30,7 @@ var classTang_1_1ComputedExpressionCompiledFunction =
     [ "is_equal", "classTang_1_1ComputedExpressionCompiledFunction.html#a7265d530e9b32f55d2485a326ab353aa", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionCompiledFunction.html#a76aaf726b67cedb54b6b3c75c834645f", null ],
     [ "isCopyNeeded", "classTang_1_1ComputedExpressionCompiledFunction.html#a493f58bd7f51ca4d6b9b1ef1860b4370", null ],
-    [ "makeCopy", "classTang_1_1ComputedExpressionCompiledFunction.html#a31488d210df3af50b359261405438d4c", null ]
+    [ "makeCopy", "classTang_1_1ComputedExpressionCompiledFunction.html#a31488d210df3af50b359261405438d4c", null ],
+    [ "argc", "classTang_1_1ComputedExpressionCompiledFunction.html#a1c220a2e5e06b00a7628b97226e302dd", null ],
+    [ "pc", "classTang_1_1ComputedExpressionCompiledFunction.html#aea4dc76f164bd98f0627e2fc77b518fc", null ]
 ];

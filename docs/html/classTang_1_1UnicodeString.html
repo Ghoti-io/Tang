@@ -85,6 +85,8 @@ $(document).ready(function(){initNavTree('classTang_1_1UnicodeString.html',''); 
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classTang_1_1UnicodeString-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tang::UnicodeString Class Reference</div>  </div>
@@ -95,10 +97,22 @@ $(document).ready(function(){initNavTree('classTang_1_1UnicodeString.html',''); 
  <a href="classTang_1_1UnicodeString.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="unicodeString_8hpp_source.html">unicodeString.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Tang::UnicodeString:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTang_1_1UnicodeString__coll__graph.png" border="0" usemap="#aTang_1_1UnicodeString_coll__map" alt="Collaboration graph"/></div>
+<map name="aTang_1_1UnicodeString_coll__map" id="aTang_1_1UnicodeString_coll__map">
+<area shape="rect" title="Represents a UTF&#45;8 encoded string that is Unicode&#45;aware." alt="" coords="209,200,360,227"/>
+<area shape="rect" title=" " alt="" coords="5,103,183,130"/>
+<area shape="rect" title=" " alt="" coords="207,96,362,137"/>
+<area shape="rect" title=" " alt="" coords="389,103,476,130"/>
+<area shape="rect" title=" " alt="" coords="363,5,502,47"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae9396cce6078fb0ab2986e3ea2910b36"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#ae9396cce6078fb0ab2986e3ea2910b36">UnicodeString</a> (const std::string &amp;src)</td></tr>
+<tr class="memitem:ae9396cce6078fb0ab2986e3ea2910b36"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#ae9396cce6078fb0ab2986e3ea2910b36">UnicodeString</a> (const std::string &amp;<a class="el" href="classTang_1_1UnicodeString.html#a18a9354b4d362a01193154b85ec250a7">src</a>)</td></tr>
 <tr class="memdesc:ae9396cce6078fb0ab2986e3ea2910b36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classTang_1_1UnicodeString.html" title="Represents a UTF-8 encoded string that is Unicode-aware.">Tang::UnicodeString</a> object, which acts as the interface to the ICU library.  <a href="classTang_1_1UnicodeString.html#ae9396cce6078fb0ab2986e3ea2910b36">More...</a><br /></td></tr>
 <tr class="separator:ae9396cce6078fb0ab2986e3ea2910b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bda91d3c0efba9f5e70d915a665ba18"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#a7bda91d3c0efba9f5e70d915a665ba18">substr</a> (size_t <a class="el" href="classTang_1_1position.html">position</a>, size_t <a class="el" href="classTang_1_1UnicodeString.html#aacfef070a2f6de639e050822c94263f5">length</a>) const</td></tr>
@@ -122,6 +136,28 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac4f534c284a4edfc89887e7c6234e35e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#ac4f534c284a4edfc89887e7c6234e35e">bytesLength</a> () const</td></tr>
 <tr class="memdesc:ac4f534c284a4edfc89887e7c6234e35e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the length of the <a class="el" href="classTang_1_1UnicodeString.html" title="Represents a UTF-8 encoded string that is Unicode-aware.">UnicodeString</a> in bytes.  <a href="classTang_1_1UnicodeString.html#ac4f534c284a4edfc89887e7c6234e35e">More...</a><br /></td></tr>
 <tr class="separator:ac4f534c284a4edfc89887e7c6234e35e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a4305d2e9ba94d11c36d904dd80a62e80"><td class="memItemLeft" align="right" valign="top"><a id="a4305d2e9ba94d11c36d904dd80a62e80"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#a4305d2e9ba94d11c36d904dd80a62e80">generateCachedValues</a> () const</td></tr>
+<tr class="memdesc:a4305d2e9ba94d11c36d904dd80a62e80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate cachable values for the object. <br /></td></tr>
+<tr class="separator:a4305d2e9ba94d11c36d904dd80a62e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a18a9354b4d362a01193154b85ec250a7"><td class="memItemLeft" align="right" valign="top"><a id="a18a9354b4d362a01193154b85ec250a7"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#a18a9354b4d362a01193154b85ec250a7">src</a></td></tr>
+<tr class="memdesc:a18a9354b4d362a01193154b85ec250a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The UTF-8 encoded string. <br /></td></tr>
+<tr class="separator:a18a9354b4d362a01193154b85ec250a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ad4f2ba93e84e3256af80c5750be410"><td class="memItemLeft" align="right" valign="top"><a id="a0ad4f2ba93e84e3256af80c5750be410"></a>
+std::shared_ptr&lt; std::vector&lt; size_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#a0ad4f2ba93e84e3256af80c5750be410">graphemeOffsets</a></td></tr>
+<tr class="memdesc:a0ad4f2ba93e84e3256af80c5750be410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache of the grapheme offsets, if they happen to be calculated. <br /></td></tr>
+<tr class="separator:a0ad4f2ba93e84e3256af80c5750be410"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94e1e6482a0e209dda89ad516f11c008"><td class="memItemLeft" align="right" valign="top"><a id="a94e1e6482a0e209dda89ad516f11c008"></a>
+std::shared_ptr&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#a94e1e6482a0e209dda89ad516f11c008">uString</a></td></tr>
+<tr class="memdesc:a94e1e6482a0e209dda89ad516f11c008"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache of the ICU Unicode string. <br /></td></tr>
+<tr class="separator:a94e1e6482a0e209dda89ad516f11c008"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a UTF-8 encoded string that is Unicode-aware. </p>
@@ -193,6 +229,15 @@ Public Member Functions</h2></td></tr>
 <p>Return the length of the <a class="el" href="classTang_1_1UnicodeString.html" title="Represents a UTF-8 encoded string that is Unicode-aware.">UnicodeString</a> in graphemes. </p>
 <p>Note: this is <em>not</em> the number of bytes, chars, or codepoints, but is the length in graphemes, as defined by ICU.</p>
 <dl class="section return"><dt>Returns</dt><dd>Returns the length of the <a class="el" href="classTang_1_1UnicodeString.html" title="Represents a UTF-8 encoded string that is Unicode-aware.">UnicodeString</a> in graphemes. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTang_1_1UnicodeString_aacfef070a2f6de639e050822c94263f5_cgraph.png" border="0" usemap="#aclassTang_1_1UnicodeString_aacfef070a2f6de639e050822c94263f5_cgraph" alt=""/></div>
+<map name="aclassTang_1_1UnicodeString_aacfef070a2f6de639e050822c94263f5_cgraph" id="aclassTang_1_1UnicodeString_aacfef070a2f6de639e050822c94263f5_cgraph">
+<area shape="rect" title="Return the length of the UnicodeString in graphemes." alt="" coords="5,5,156,47"/>
+<area shape="rect" href="classTang_1_1UnicodeString.html#a4305d2e9ba94d11c36d904dd80a62e80" title="Calculate cachable values for the object." alt="" coords="204,5,383,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -338,7 +383,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classTang_1_1UnicodeString_a7bda91d3c0efba9f5e70d915a665ba18_cgraph.png" border="0" usemap="#aclassTang_1_1UnicodeString_a7bda91d3c0efba9f5e70d915a665ba18_cgraph" alt=""/></div>
 <map name="aclassTang_1_1UnicodeString_a7bda91d3c0efba9f5e70d915a665ba18_cgraph" id="aclassTang_1_1UnicodeString_a7bda91d3c0efba9f5e70d915a665ba18_cgraph">
 <area shape="rect" title="Return a Unicode grapheme&#45;aware substring." alt="" coords="5,5,156,47"/>
-<area shape="rect" href="classTang_1_1UnicodeString.html#aacfef070a2f6de639e050822c94263f5" title="Return the length of the UnicodeString in graphemes." alt="" coords="204,5,355,47"/>
+<area shape="rect" href="classTang_1_1UnicodeString.html#a4305d2e9ba94d11c36d904dd80a62e80" title="Calculate cachable values for the object." alt="" coords="403,5,581,47"/>
+<area shape="rect" href="classTang_1_1UnicodeString.html#aacfef070a2f6de639e050822c94263f5" title="Return the length of the UnicodeString in graphemes." alt="" coords="204,35,355,76"/>
 </map>
 </div>
 

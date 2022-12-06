@@ -86,6 +86,7 @@ $(document).ready(function(){initNavTree('classTang_1_1AstNodeArray.html',''); i
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classTang_1_1AstNodeArray-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tang::AstNodeArray Class Reference</div>  </div>
@@ -110,8 +111,14 @@ Collaboration diagram for Tang::AstNodeArray:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTang_1_1AstNodeArray__coll__graph.png" border="0" usemap="#aTang_1_1AstNodeArray_coll__map" alt="Collaboration graph"/></div>
 <map name="aTang_1_1AstNodeArray_coll__map" id="aTang_1_1AstNodeArray_coll__map">
-<area shape="rect" title="An AstNode that represents an array literal." alt="" coords="5,80,156,107"/>
-<area shape="rect" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="23,5,138,32"/>
+<area shape="rect" title="An AstNode that represents an array literal." alt="" coords="86,497,237,524"/>
+<area shape="rect" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="17,401,132,427"/>
+<area shape="rect" href="classTang_1_1location.html" title="Two points in a source file." alt="" coords="19,297,131,323"/>
+<area shape="rect" href="classTang_1_1position.html" title="A point in a source file." alt="" coords="19,185,131,212"/>
+<area shape="rect" title=" " alt="" coords="31,96,118,123"/>
+<area shape="rect" title=" " alt="" coords="5,5,144,47"/>
+<area shape="rect" title=" " alt="" coords="157,393,342,435"/>
+<area shape="rect" title=" " alt="" coords="167,289,331,331"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -125,7 +132,7 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acd580c30bb24bccbe8354d28e09da296"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeArray.html#acd580c30bb24bccbe8354d28e09da296">AstNodeArray</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">Tang::AstNode</a> &gt;&gt; contents, <a class="el" href="classTang_1_1location.html">Tang::location</a> <a class="el" href="classTang_1_1location.html">location</a>)</td></tr>
+<tr class="memitem:acd580c30bb24bccbe8354d28e09da296"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeArray.html#acd580c30bb24bccbe8354d28e09da296">AstNodeArray</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">Tang::AstNode</a> &gt;&gt; <a class="el" href="classTang_1_1AstNodeArray.html#ac9bd8b790320a86868e33182629ff700">contents</a>, <a class="el" href="classTang_1_1location.html">Tang::location</a> <a class="el" href="classTang_1_1location.html">location</a>)</td></tr>
 <tr class="memdesc:acd580c30bb24bccbe8354d28e09da296"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="classTang_1_1AstNodeArray.html#acd580c30bb24bccbe8354d28e09da296">More...</a><br /></td></tr>
 <tr class="separator:acd580c30bb24bccbe8354d28e09da296"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad935e1b1267b232927fa2c8fecfbc707"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeArray.html#ad935e1b1267b232927fa2c8fecfbc707">dump</a> (std::string indent=&quot;&quot;) const override</td></tr>
@@ -137,6 +144,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8d76227a09c69f232c0548486a179b4c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeArray.html#a8d76227a09c69f232c0548486a179b4c">compilePreprocess</a> (<a class="el" href="classTang_1_1Program.html">Program</a> &amp;program, <a class="el" href="classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641">PreprocessState</a> state) const override</td></tr>
 <tr class="memdesc:a8d76227a09c69f232c0548486a179b4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run any preprocess analysis needed before compilation.  <a href="classTang_1_1AstNodeArray.html#a8d76227a09c69f232c0548486a179b4c">More...</a><br /></td></tr>
 <tr class="separator:a8d76227a09c69f232c0548486a179b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ac9bd8b790320a86868e33182629ff700"><td class="memItemLeft" align="right" valign="top"><a id="ac9bd8b790320a86868e33182629ff700"></a>
+std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">Tang::AstNode</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeArray.html#ac9bd8b790320a86868e33182629ff700">contents</a></td></tr>
+<tr class="memdesc:ac9bd8b790320a86868e33182629ff700"><td class="mdescLeft">&#160;</td><td class="mdescRight">The contents of the array. <br /></td></tr>
+<tr class="separator:ac9bd8b790320a86868e33182629ff700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="memItemLeft" align="right" valign="top"><a id="a41e8328d5a342163a5aabcc4cb8f1b5e"></a>
+<a class="el" href="classTang_1_1location.html">Tang::location</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a41e8328d5a342163a5aabcc4cb8f1b5e">location</a></td></tr>
+<tr class="memdesc:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The location associated with this node. <br /></td></tr>
+<tr class="separator:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that represents an array literal. </p>

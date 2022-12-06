@@ -9,6 +9,16 @@ A thread-\/safe, singleton object pool of the designated type.
 
 {\ttfamily \#include $<$singleton\+Object\+Pool.\+hpp$>$}
 
+
+
+Collaboration diagram for Tang\+::Singleton\+Object\+Pool$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{classTang_1_1SingletonObjectPool__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -24,6 +34,37 @@ void \mbox{\hyperlink{classTang_1_1SingletonObjectPool_ae03f03120231023e4ce7af51
 \item 
 static \mbox{\hyperlink{classTang_1_1SingletonObjectPool}{Singleton\+Object\+Pool}}$<$ T $>$ \& \mbox{\hyperlink{classTang_1_1SingletonObjectPool_aaca7a22f2f2012d73d121241c227ab79}{get\+Instance}} ()
 \begin{DoxyCompactList}\small\item\em Get the singleton instance of the object pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1SingletonObjectPool_a0b836e6c39c2c9c4ddd033ef6c5d1395}\label{classTang_1_1SingletonObjectPool_a0b836e6c39c2c9c4ddd033ef6c5d1395}} 
+\mbox{\hyperlink{classTang_1_1SingletonObjectPool_a0b836e6c39c2c9c4ddd033ef6c5d1395}{Singleton\+Object\+Pool}} ()
+\begin{DoxyCompactList}\small\item\em The constructor, hidden from being directly called. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1SingletonObjectPool_a3ebbf0afec6bf855021523dbdce97ac5}\label{classTang_1_1SingletonObjectPool_a3ebbf0afec6bf855021523dbdce97ac5}} 
+\mbox{\hyperlink{classTang_1_1SingletonObjectPool_a3ebbf0afec6bf855021523dbdce97ac5}{Singleton\+Object\+Pool}} (const \mbox{\hyperlink{classTang_1_1SingletonObjectPool}{Singleton\+Object\+Pool}} \&other)
+\begin{DoxyCompactList}\small\item\em The copy constructor, hidden from being called. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1SingletonObjectPool_a63319cf03dfd242b90aa2866de5376d4}\label{classTang_1_1SingletonObjectPool_a63319cf03dfd242b90aa2866de5376d4}} 
+T $\ast$$\ast$ \mbox{\hyperlink{classTang_1_1SingletonObjectPool_a63319cf03dfd242b90aa2866de5376d4}{allocations}}
+\begin{DoxyCompactList}\small\item\em C-\/array of allocated blocks, each block contains {\ttfamily GROW} objects. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1SingletonObjectPool_aac74dd3a410287874d1dd98bef3a5059}\label{classTang_1_1SingletonObjectPool_aac74dd3a410287874d1dd98bef3a5059}} 
+int \mbox{\hyperlink{classTang_1_1SingletonObjectPool_aac74dd3a410287874d1dd98bef3a5059}{current\+Allocation}}
+\begin{DoxyCompactList}\small\item\em Index into {\ttfamily allocations}, representing the current block supplying non-\/recycled memory addresses. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classTang_1_1SingletonObjectPool_a513f1bcde18478abadac77aeeba5ac73}{current\+Index}}
+\begin{DoxyCompactList}\small\item\em Current location (within the most recently allocated block) of an available T$\ast$. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1SingletonObjectPool_ac6d3bccb5db5f5e8d4d0492e99aa6243}\label{classTang_1_1SingletonObjectPool_ac6d3bccb5db5f5e8d4d0492e99aa6243}} 
+int \mbox{\hyperlink{classTang_1_1SingletonObjectPool_ac6d3bccb5db5f5e8d4d0492e99aa6243}{current\+Recycled\+Allocation}}
+\begin{DoxyCompactList}\small\item\em Index into {\ttfamily allocations}, representing the current block tracking the recycled memory addresses. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTang_1_1SingletonObjectPool_a3c973458307ae81943d55078c129e5ba}{current\+Recycled\+Index}}
+\begin{DoxyCompactList}\small\item\em Current location (within the {\ttfamily current\+Recycled\+Allocation} block) of the last available T$\ast$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1SingletonObjectPool_a1353f46ca1658afd6691730c3c198793}\label{classTang_1_1SingletonObjectPool_a1353f46ca1658afd6691730c3c198793}} 
+static std\+::mutex \mbox{\hyperlink{classTang_1_1SingletonObjectPool_a1353f46ca1658afd6691730c3c198793}{lock}}
+\begin{DoxyCompactList}\small\item\em A mutex for thread-\/safety. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -78,6 +119,31 @@ Recycle a memory location for an object T.
 \hline
 \end{DoxyParams}
 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTang_1_1SingletonObjectPool_a513f1bcde18478abadac77aeeba5ac73}\label{classTang_1_1SingletonObjectPool_a513f1bcde18478abadac77aeeba5ac73}} 
+\index{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}!currentIndex@{currentIndex}}
+\index{currentIndex@{currentIndex}!Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{currentIndex}{currentIndex}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classTang_1_1SingletonObjectPool}{Tang\+::\+Singleton\+Object\+Pool}}$<$ T $>$\+::current\+Index\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Current location (within the most recently allocated block) of an available T$\ast$. 
+
+If current\+Index == GROW, then a new block needs to be allocated. \mbox{\Hypertarget{classTang_1_1SingletonObjectPool_a3c973458307ae81943d55078c129e5ba}\label{classTang_1_1SingletonObjectPool_a3c973458307ae81943d55078c129e5ba}} 
+\index{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}!currentRecycledIndex@{currentRecycledIndex}}
+\index{currentRecycledIndex@{currentRecycledIndex}!Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{currentRecycledIndex}{currentRecycledIndex}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{classTang_1_1SingletonObjectPool}{Tang\+::\+Singleton\+Object\+Pool}}$<$ T $>$\+::current\+Recycled\+Index\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Current location (within the {\ttfamily current\+Recycled\+Allocation} block) of the last available T$\ast$. 
+
+If current\+Recycled\+Index == GROW, then we must move to the next current\+Recycled\+Allocation. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

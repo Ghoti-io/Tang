@@ -7,5 +7,7 @@ var classTang_1_1AstNodeBoolean =
     [ "AstNodeBoolean", "classTang_1_1AstNodeBoolean.html#ac1b4c6097f8fe54425cdb6c0ef162129", null ],
     [ "compile", "classTang_1_1AstNodeBoolean.html#a59b186598146a39d40460ea4574a4f74", null ],
     [ "compilePreprocess", "classTang_1_1AstNodeBoolean.html#a269c37e41595e0338bf4653cdb32e9cb", null ],
-    [ "dump", "classTang_1_1AstNodeBoolean.html#a17efb648820e70931ffc0b238efa27e9", null ]
+    [ "dump", "classTang_1_1AstNodeBoolean.html#a17efb648820e70931ffc0b238efa27e9", null ],
+    [ "location", "classTang_1_1AstNodeBoolean.html#a41e8328d5a342163a5aabcc4cb8f1b5e", null ],
+    [ "val", "classTang_1_1AstNodeBoolean.html#a882ef3f0d8daa5320c22f00f72507227", null ]
 ];

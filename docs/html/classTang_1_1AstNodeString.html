@@ -86,6 +86,7 @@ $(document).ready(function(){initNavTree('classTang_1_1AstNodeString.html',''); 
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classTang_1_1AstNodeString-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tang::AstNodeString Class Reference</div>  </div>
@@ -110,8 +111,12 @@ Collaboration diagram for Tang::AstNodeString:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTang_1_1AstNodeString__coll__graph.png" border="0" usemap="#aTang_1_1AstNodeString_coll__map" alt="Collaboration graph"/></div>
 <map name="aTang_1_1AstNodeString_coll__map" id="aTang_1_1AstNodeString_coll__map">
-<area shape="rect" title="An AstNode that represents a string literal." alt="" coords="5,80,159,107"/>
-<area shape="rect" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="25,5,139,32"/>
+<area shape="rect" title="An AstNode that represents a string literal." alt="" coords="5,455,159,481"/>
+<area shape="rect" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="109,379,223,405"/>
+<area shape="rect" href="classTang_1_1location.html" title="Two points in a source file." alt="" coords="115,289,227,316"/>
+<area shape="rect" href="classTang_1_1position.html" title="A point in a source file." alt="" coords="106,185,218,212"/>
+<area shape="rect" title=" " alt="" coords="44,96,131,123"/>
+<area shape="rect" title=" " alt="" coords="18,5,157,47"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -140,6 +145,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acbd2f4395d767befc624b5bfaf69eaf0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeString.html#acbd2f4395d767befc624b5bfaf69eaf0">compileLiteral</a> (<a class="el" href="classTang_1_1Program.html">Tang::Program</a> &amp;program) const</td></tr>
 <tr class="memdesc:acbd2f4395d767befc624b5bfaf69eaf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile the string and push it onto the stack.  <a href="classTang_1_1AstNodeString.html#acbd2f4395d767befc624b5bfaf69eaf0">More...</a><br /></td></tr>
 <tr class="separator:acbd2f4395d767befc624b5bfaf69eaf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a7ba606ce6a264d2f9f027b7d81fe5522"><td class="memItemLeft" align="right" valign="top"><a id="a7ba606ce6a264d2f9f027b7d81fe5522"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNodeString.html#a7ba606ce6a264d2f9f027b7d81fe5522">val</a></td></tr>
+<tr class="memdesc:a7ba606ce6a264d2f9f027b7d81fe5522"><td class="mdescLeft">&#160;</td><td class="mdescRight">The string value being stored. <br /></td></tr>
+<tr class="separator:a7ba606ce6a264d2f9f027b7d81fe5522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="memItemLeft" align="right" valign="top"><a id="a41e8328d5a342163a5aabcc4cb8f1b5e"></a>
+<a class="el" href="classTang_1_1location.html">Tang::location</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1AstNode.html#a41e8328d5a342163a5aabcc4cb8f1b5e">location</a></td></tr>
+<tr class="memdesc:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The location associated with this node. <br /></td></tr>
+<tr class="separator:a41e8328d5a342163a5aabcc4cb8f1b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An <a class="el" href="classTang_1_1AstNode.html" title="Base class for representing nodes of an Abstract Syntax Tree (AST).">AstNode</a> that represents a string literal. </p>

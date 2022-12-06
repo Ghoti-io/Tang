@@ -7,5 +7,6 @@ var classTang_1_1AstNodeContinue =
     [ "AstNodeContinue", "classTang_1_1AstNodeContinue.html#a399b54c10431a549378963f67e6e609a", null ],
     [ "compile", "classTang_1_1AstNodeContinue.html#af61c99b0968e621c67483c44573af43a", null ],
     [ "compilePreprocess", "classTang_1_1AstNodeContinue.html#a269c37e41595e0338bf4653cdb32e9cb", null ],
-    [ "dump", "classTang_1_1AstNodeContinue.html#ae320a34164271c54c577a3b51a31cb1d", null ]
+    [ "dump", "classTang_1_1AstNodeContinue.html#ae320a34164271c54c577a3b51a31cb1d", null ],
+    [ "location", "classTang_1_1AstNodeContinue.html#a41e8328d5a342163a5aabcc4cb8f1b5e", null ]
 ];

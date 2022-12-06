@@ -9,10 +9,20 @@ Represents a UTF-\/8 encoded string that is Unicode-\/aware.
 
 {\ttfamily \#include $<$unicode\+String.\+hpp$>$}
 
+
+
+Collaboration diagram for Tang\+::Unicode\+String\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTang_1_1UnicodeString__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTang_1_1UnicodeString_ae9396cce6078fb0ab2986e3ea2910b36}{Unicode\+String}} (const std\+::string \&src)
+\mbox{\hyperlink{classTang_1_1UnicodeString_ae9396cce6078fb0ab2986e3ea2910b36}{Unicode\+String}} (const std\+::string \&\mbox{\hyperlink{classTang_1_1UnicodeString_a18a9354b4d362a01193154b85ec250a7}{src}})
 \begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{classTang_1_1UnicodeString}{Tang\+::\+Unicode\+String}} object, which acts as the interface to the ICU library. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classTang_1_1UnicodeString_a7bda91d3c0efba9f5e70d915a665ba18}{substr}} (size\+\_\+t \mbox{\hyperlink{classTang_1_1position}{position}}, size\+\_\+t \mbox{\hyperlink{classTang_1_1UnicodeString_aacfef070a2f6de639e050822c94263f5}{length}}) const
 \begin{DoxyCompactList}\small\item\em Return a Unicode grapheme-\/aware substring. \end{DoxyCompactList}\item 
@@ -28,6 +38,24 @@ size\+\_\+t \mbox{\hyperlink{classTang_1_1UnicodeString_aacfef070a2f6de639e05082
 \begin{DoxyCompactList}\small\item\em Return the length of the \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} in graphemes. \end{DoxyCompactList}\item 
 size\+\_\+t \mbox{\hyperlink{classTang_1_1UnicodeString_ac4f534c284a4edfc89887e7c6234e35e}{bytes\+Length}} () const
 \begin{DoxyCompactList}\small\item\em Return the length of the \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} in bytes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1UnicodeString_a4305d2e9ba94d11c36d904dd80a62e80}\label{classTang_1_1UnicodeString_a4305d2e9ba94d11c36d904dd80a62e80}} 
+void \mbox{\hyperlink{classTang_1_1UnicodeString_a4305d2e9ba94d11c36d904dd80a62e80}{generate\+Cached\+Values}} () const
+\begin{DoxyCompactList}\small\item\em Calculate cachable values for the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1UnicodeString_a18a9354b4d362a01193154b85ec250a7}\label{classTang_1_1UnicodeString_a18a9354b4d362a01193154b85ec250a7}} 
+std\+::string \mbox{\hyperlink{classTang_1_1UnicodeString_a18a9354b4d362a01193154b85ec250a7}{src}}
+\begin{DoxyCompactList}\small\item\em The UTF-\/8 encoded string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1UnicodeString_a0ad4f2ba93e84e3256af80c5750be410}\label{classTang_1_1UnicodeString_a0ad4f2ba93e84e3256af80c5750be410}} 
+std\+::shared\+\_\+ptr$<$ std\+::vector$<$ size\+\_\+t $>$ $>$ \mbox{\hyperlink{classTang_1_1UnicodeString_a0ad4f2ba93e84e3256af80c5750be410}{grapheme\+Offsets}}
+\begin{DoxyCompactList}\small\item\em Cache of the grapheme offsets, if they happen to be calculated. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1UnicodeString_a94e1e6482a0e209dda89ad516f11c008}\label{classTang_1_1UnicodeString_a94e1e6482a0e209dda89ad516f11c008}} 
+std\+::shared\+\_\+ptr$<$ void $>$ \mbox{\hyperlink{classTang_1_1UnicodeString_a94e1e6482a0e209dda89ad516f11c008}{u\+String}}
+\begin{DoxyCompactList}\small\item\em Cache of the ICU Unicode string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -84,6 +112,14 @@ Note\+: this is {\itshape not} the number of bytes, chars, or codepoints, but is
 \begin{DoxyReturn}{Returns}
 Returns the length of the \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} in graphemes. 
 \end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTang_1_1UnicodeString_aacfef070a2f6de639e050822c94263f5_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classTang_1_1UnicodeString_aecf5faef826f6f708b5d95c1e240c8c0}\label{classTang_1_1UnicodeString_aecf5faef826f6f708b5d95c1e240c8c0}} 
 \index{Tang::UnicodeString@{Tang::UnicodeString}!operator std::string@{operator std::string}}
 \index{operator std::string@{operator std::string}!Tang::UnicodeString@{Tang::UnicodeString}}
@@ -171,11 +207,12 @@ Return a Unicode grapheme-\/aware substring.
 \begin{DoxyReturn}{Returns}
 The requested substring. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=342pt]{classTang_1_1UnicodeString_a7bda91d3c0efba9f5e70d915a665ba18_cgraph}
+\includegraphics[width=350pt]{classTang_1_1UnicodeString_a7bda91d3c0efba9f5e70d915a665ba18_cgraph}
 \end{center}
 \end{figure}
 

@@ -87,6 +87,8 @@ $(document).ready(function(){initNavTree('classTang_1_1Program.html',''); initRe
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classTang_1_1Program-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tang::Program Class Reference</div>  </div>
@@ -102,14 +104,19 @@ Collaboration diagram for Tang::Program:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTang_1_1Program__coll__graph.png" border="0" usemap="#aTang_1_1Program_coll__map" alt="Collaboration graph"/></div>
 <map name="aTang_1_1Program_coll__map" id="aTang_1_1Program_coll__map">
-<area shape="rect" title="Represents a compiled script or template that may be executed." alt="" coords="1255,129,1369,155"/>
-<area shape="rect" title=" " alt="" coords="719,146,881,202"/>
-<area shape="rect" title=" " alt="" coords="222,127,309,154"/>
-<area shape="rect" title=" " alt="" coords="451,33,695,75"/>
-<area shape="rect" title=" " alt="" coords="490,213,655,239"/>
-<area shape="rect" title=" " alt="" coords="5,120,144,161"/>
-<area shape="rect" title=" " alt="" coords="193,5,337,47"/>
-<area shape="rect" title=" " alt="" coords="916,216,1071,257"/>
+<area shape="rect" title="Represents a compiled script or template that may be executed." alt="" coords="1207,243,1321,269"/>
+<area shape="rect" title=" " alt="" coords="783,23,938,65"/>
+<area shape="rect" title=" " alt="" coords="376,31,515,57"/>
+<area shape="rect" title=" " alt="" coords="552,263,715,319"/>
+<area shape="rect" title=" " alt="" coords="193,283,280,309"/>
+<area shape="rect" title=" " alt="" coords="739,205,983,246"/>
+<area shape="rect" title=" " alt="" coords="363,337,528,364"/>
+<area shape="rect" title=" " alt="" coords="364,390,527,431"/>
+<area shape="rect" title=" " alt="" coords="5,275,144,317"/>
+<area shape="rect" title=" " alt="" coords="373,147,517,189"/>
+<area shape="rect" title=" " alt="" coords="779,465,943,506"/>
+<area shape="rect" title=" " alt="" coords="783,334,938,375"/>
+<area shape="rect" title=" " alt="" coords="771,399,950,441"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -123,7 +130,7 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4f704a5a0364c6d62330e15d6ee56219"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a4f704a5a0364c6d62330e15d6ee56219">Program</a> (std::string code, <a class="el" href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041b">CodeType</a> codeType)</td></tr>
+<tr class="memitem:a4f704a5a0364c6d62330e15d6ee56219"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a4f704a5a0364c6d62330e15d6ee56219">Program</a> (std::string <a class="el" href="classTang_1_1Program.html#a747cd63b40c48f81d17a2501e4fdd0e5">code</a>, <a class="el" href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041b">CodeType</a> <a class="el" href="classTang_1_1Program.html#adc2c06ba6f616882bbf0876ceedfc328">codeType</a>)</td></tr>
 <tr class="memdesc:a4f704a5a0364c6d62330e15d6ee56219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a compiled program using the provided code.  <a href="classTang_1_1Program.html#a4f704a5a0364c6d62330e15d6ee56219">More...</a><br /></td></tr>
 <tr class="separator:a4f704a5a0364c6d62330e15d6ee56219"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75aff78d6b94472f4d8f93e6f79cfbe0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a75aff78d6b94472f4d8f93e6f79cfbe0">getCode</a> () const</td></tr>
@@ -153,7 +160,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aabcfee07409be5bc6bf1312f26b56a85"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#aabcfee07409be5bc6bf1312f26b56a85">setFunctionStackDeclaration</a> (size_t opcodeAddress, <a class="el" href="macros_8hpp.html#ac3ea9ca53071c2710a6034d60f61d76e">uinteger_t</a> argc, <a class="el" href="macros_8hpp.html#ac3ea9ca53071c2710a6034d60f61d76e">uinteger_t</a> targetPC)</td></tr>
 <tr class="memdesc:aabcfee07409be5bc6bf1312f26b56a85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the stack details of a function declaration.  <a href="classTang_1_1Program.html#aabcfee07409be5bc6bf1312f26b56a85">More...</a><br /></td></tr>
 <tr class="separator:aabcfee07409be5bc6bf1312f26b56a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ed3e014d80138d61d545a3ef5fe0a2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a3ed3e014d80138d61d545a3ef5fe0a2e">pushEnvironment</a> (const std::shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt; &amp;ast)</td></tr>
+<tr class="memitem:a3ed3e014d80138d61d545a3ef5fe0a2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a3ed3e014d80138d61d545a3ef5fe0a2e">pushEnvironment</a> (const std::shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt; &amp;<a class="el" href="classTang_1_1Program.html#a198a64d60c39f219c74e89819f2afacf">ast</a>)</td></tr>
 <tr class="memdesc:a3ed3e014d80138d61d545a3ef5fe0a2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new compile/execute environment stack entry.  <a href="classTang_1_1Program.html#a3ed3e014d80138d61d545a3ef5fe0a2e">More...</a><br /></td></tr>
 <tr class="separator:a3ed3e014d80138d61d545a3ef5fe0a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a655fefae4d0f0bcf92766d8918be89bd"><td class="memItemLeft" align="right" valign="top"><a id="a655fefae4d0f0bcf92766d8918be89bd"></a>
@@ -216,6 +223,60 @@ std::vector&lt; std::set&lt; std::string &gt; &gt;&#160;</td><td class="memItemR
 std::map&lt; std::string, std::vector&lt; <a class="el" href="macros_8hpp.html#ac3ea9ca53071c2710a6034d60f61d76e">Tang::uinteger_t</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a1eedd506786a238a8bcedc7b77fd01f9">functionStackDeclarations</a></td></tr>
 <tr class="memdesc:a1eedd506786a238a8bcedc7b77fd01f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each function name, a list of Bytecode addresses that need to be replaced by a function definition. <br /></td></tr>
 <tr class="separator:a1eedd506786a238a8bcedc7b77fd01f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a7e845a6184bade97aead63d2e14c5040"><td class="memItemLeft" align="right" valign="top"><a id="a7e845a6184bade97aead63d2e14c5040"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a7e845a6184bade97aead63d2e14c5040">parse</a> ()</td></tr>
+<tr class="memdesc:a7e845a6184bade97aead63d2e14c5040"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the code into an AST. <br /></td></tr>
+<tr class="separator:a7e845a6184bade97aead63d2e14c5040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1fee8bf44ff31dd8a1131e9dbc47304"><td class="memItemLeft" align="right" valign="top"><a id="ac1fee8bf44ff31dd8a1131e9dbc47304"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#ac1fee8bf44ff31dd8a1131e9dbc47304">compile</a> ()</td></tr>
+<tr class="memdesc:ac1fee8bf44ff31dd8a1131e9dbc47304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile the AST into Bytecode. <br /></td></tr>
+<tr class="separator:ac1fee8bf44ff31dd8a1131e9dbc47304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a440bf2cdcd08fe6b2b0c2c19c22fa276"><td class="memItemLeft" align="right" valign="top"><a id="a440bf2cdcd08fe6b2b0c2c19c22fa276"></a>
+std::vector&lt; std::map&lt; std::string, size_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a440bf2cdcd08fe6b2b0c2c19c22fa276">identifierStack</a></td></tr>
+<tr class="memdesc:a440bf2cdcd08fe6b2b0c2c19c22fa276"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stack of mappings of identifiers to their stack locations. <br /></td></tr>
+<tr class="separator:a440bf2cdcd08fe6b2b0c2c19c22fa276"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afca51adb15fa6e650356dc003c50de8d"><td class="memItemLeft" align="right" valign="top"><a id="afca51adb15fa6e650356dc003c50de8d"></a>
+std::vector&lt; std::set&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#afca51adb15fa6e650356dc003c50de8d">identifiersAssignedStack</a></td></tr>
+<tr class="memdesc:afca51adb15fa6e650356dc003c50de8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stack of sets of identifiers that are the target of an assignment statement within the associated scope. <br /></td></tr>
+<tr class="separator:afca51adb15fa6e650356dc003c50de8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae4297c7f590e95eadc98f3c09f9dae9"><td class="memItemLeft" align="right" valign="top"><a id="aae4297c7f590e95eadc98f3c09f9dae9"></a>
+std::vector&lt; std::map&lt; std::string, size_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#aae4297c7f590e95eadc98f3c09f9dae9">stringStack</a></td></tr>
+<tr class="memdesc:aae4297c7f590e95eadc98f3c09f9dae9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stack of mappings of strings to their stack locations. <br /></td></tr>
+<tr class="separator:aae4297c7f590e95eadc98f3c09f9dae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b046b69c9c937c8414214fa2ef813b2"><td class="memItemLeft" align="right" valign="top"><a id="a7b046b69c9c937c8414214fa2ef813b2"></a>
+std::vector&lt; std::set&lt; size_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a7b046b69c9c937c8414214fa2ef813b2">breakStack</a></td></tr>
+<tr class="memdesc:a7b046b69c9c937c8414214fa2ef813b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stack of a collection of <code>break</code> statement locations. <br /></td></tr>
+<tr class="separator:a7b046b69c9c937c8414214fa2ef813b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b1113cf21e51270d685fb3c246ba3c3"><td class="memItemLeft" align="right" valign="top"><a id="a4b1113cf21e51270d685fb3c246ba3c3"></a>
+std::vector&lt; std::set&lt; size_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a4b1113cf21e51270d685fb3c246ba3c3">continueStack</a></td></tr>
+<tr class="memdesc:a4b1113cf21e51270d685fb3c246ba3c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stack of a collection of <code>continue</code> statement locations. <br /></td></tr>
+<tr class="separator:a4b1113cf21e51270d685fb3c246ba3c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a747cd63b40c48f81d17a2501e4fdd0e5"><td class="memItemLeft" align="right" valign="top"><a id="a747cd63b40c48f81d17a2501e4fdd0e5"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a747cd63b40c48f81d17a2501e4fdd0e5">code</a></td></tr>
+<tr class="memdesc:a747cd63b40c48f81d17a2501e4fdd0e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The code supplied when the <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Program</a> was instantiated. <br /></td></tr>
+<tr class="separator:a747cd63b40c48f81d17a2501e4fdd0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc2c06ba6f616882bbf0876ceedfc328"><td class="memItemLeft" align="right" valign="top"><a id="adc2c06ba6f616882bbf0876ceedfc328"></a>
+<a class="el" href="classTang_1_1Program.html#ad99e214562094e21f38b6a453163041b">CodeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#adc2c06ba6f616882bbf0876ceedfc328">codeType</a></td></tr>
+<tr class="memdesc:adc2c06ba6f616882bbf0876ceedfc328"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of code that was supplied when the <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Program</a> was instantiated. <br /></td></tr>
+<tr class="separator:adc2c06ba6f616882bbf0876ceedfc328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a198a64d60c39f219c74e89819f2afacf"><td class="memItemLeft" align="right" valign="top"><a id="a198a64d60c39f219c74e89819f2afacf"></a>
+shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a198a64d60c39f219c74e89819f2afacf">ast</a></td></tr>
+<tr class="memdesc:a198a64d60c39f219c74e89819f2afacf"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to the AST, if parsing was successful. <br /></td></tr>
+<tr class="separator:a198a64d60c39f219c74e89819f2afacf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99f161953dfcc604f639fab842354262"><td class="memItemLeft" align="right" valign="top"><a id="a99f161953dfcc604f639fab842354262"></a>
+<a class="el" href="program_8hpp.html#a70114beec5ecf129f5367a4107442ca4">Bytecode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a99f161953dfcc604f639fab842354262">bytecode</a></td></tr>
+<tr class="memdesc:a99f161953dfcc604f639fab842354262"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Bytecode of the compiled program. <br /></td></tr>
+<tr class="separator:a99f161953dfcc604f639fab842354262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60f4be3d576e81e6200167f2d910f259"><td class="memItemLeft" align="right" valign="top"><a id="a60f4be3d576e81e6200167f2d910f259"></a>
+std::optional&lt; <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a60f4be3d576e81e6200167f2d910f259">result</a></td></tr>
+<tr class="memdesc:a60f4be3d576e81e6200167f2d910f259"><td class="mdescLeft">&#160;</td><td class="mdescRight">The result of the <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Program</a> execution. <br /></td></tr>
+<tr class="separator:a60f4be3d576e81e6200167f2d910f259"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a compiled script or template that may be executed. </p>
@@ -277,6 +338,25 @@ std::map&lt; std::string, std::vector&lt; <a class="el" href="macros_8hpp.html#a
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTang_1_1Program_a4f704a5a0364c6d62330e15d6ee56219_cgraph.png" border="0" usemap="#aclassTang_1_1Program_a4f704a5a0364c6d62330e15d6ee56219_cgraph" alt=""/></div>
+<map name="aclassTang_1_1Program_a4f704a5a0364c6d62330e15d6ee56219_cgraph" id="aclassTang_1_1Program_a4f704a5a0364c6d62330e15d6ee56219_cgraph">
+<area shape="rect" title="Create a compiled program using the provided code." alt="" coords="5,123,184,149"/>
+<area shape="rect" href="classTang_1_1Program.html#ac1fee8bf44ff31dd8a1131e9dbc47304" title="Compile the AST into Bytecode." alt="" coords="232,97,407,124"/>
+<area shape="rect" href="classTang_1_1Program.html#a7e845a6184bade97aead63d2e14c5040" title="Parse the code into an AST." alt="" coords="240,148,399,175"/>
+<area shape="rect" href="classTang_1_1Program.html#a788deba60696516b2019081afdead30c" title="Get the identifier map of the current environment." alt="" coords="469,47,678,73"/>
+<area shape="rect" href="classTang_1_1Program.html#a655fefae4d0f0bcf92766d8918be89bd" title="Remove a compile/execute environment stack entry." alt="" coords="458,97,689,124"/>
+<area shape="rect" href="classTang_1_1Program.html#a3ed3e014d80138d61d545a3ef5fe0a2e" title="Create a new compile/execute environment stack entry." alt="" coords="455,195,692,221"/>
+<area shape="rect" href="classTang_1_1Program.html#ab170cc8217af1ed518b89cf445508d18" title="For all continue bytecode locations collected by Tang::addContinue, set the target pc to target." alt="" coords="740,5,961,32"/>
+<area shape="rect" href="classTang_1_1Program.html#a0a824ad2a83896854f4e528f6c3cc630" title="For all continue bytecode locations collected by Tang::addContinue, set the target pc to target." alt="" coords="748,57,953,98"/>
+<area shape="rect" href="classTang_1_1Program.html#aabcfee07409be5bc6bf1312f26b56a85" title="Set the stack details of a function declaration." alt="" coords="751,122,950,163"/>
+<area shape="rect" href="classTang_1_1Program.html#a5da413efe8435cebd927a8be58dcb9be" title="Set the target address of a Jump opcode." alt="" coords="1009,35,1225,61"/>
+<area shape="rect" href="classTang_1_1Program.html#a5c12ec99486118295496695b50750da9" title="Increase the break environment stack, so that we can handle nested break&#45;supporting structures." alt="" coords="755,187,947,229"/>
+<area shape="rect" href="classTang_1_1Program.html#af5d2ae23991475e3c8776de0d0a01123" title="Increase the continue environment stack, so that we can handle nested continue&#45;supporting structures." alt="" coords="745,253,957,294"/>
+</map>
+</div>
 
 </div>
 </div>

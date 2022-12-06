@@ -20,11 +20,12 @@ Inheritance diagram for Tang\+::Ast\+Node\+Index\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Tang\+::Ast\+Node\+Index\+:\nopagebreak
+Collaboration diagram for Tang\+::Ast\+Node\+Index\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=193pt]{classTang_1_1AstNodeIndex__coll__graph}
+\includegraphics[width=317pt]{classTang_1_1AstNodeIndex__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Types}
@@ -37,7 +38,7 @@ enum \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Pr
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTang_1_1AstNodeIndex_aeaab653a33c7189100961e5d5a138292}{Ast\+Node\+Index}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ collection, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ index, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
+\mbox{\hyperlink{classTang_1_1AstNodeIndex_aeaab653a33c7189100961e5d5a138292}{Ast\+Node\+Index}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeIndex_a63c5dd09d8aa0f3ff908cadfea1f6a5e}{collection}}, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeIndex_a662ba12b29adf377a1300f62a8f6f412}{index}}, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
 \begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
 virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeIndex_a036b98b4e5feb21f86b7a7d94015f9ec}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
 \begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
@@ -49,6 +50,18 @@ const std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classTang_1_1AstNode}{Ast
 \begin{DoxyCompactList}\small\item\em Return a shared pointer to the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} serving as the Collection. \end{DoxyCompactList}\item 
 const std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeIndex_a406a2bf01f4aaae88bbeef58bc420f2a}{get\+Index}} () const
 \begin{DoxyCompactList}\small\item\em Return a shared pointer to the \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} serving as the Index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeIndex_a63c5dd09d8aa0f3ff908cadfea1f6a5e}\label{classTang_1_1AstNodeIndex_a63c5dd09d8aa0f3ff908cadfea1f6a5e}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeIndex_a63c5dd09d8aa0f3ff908cadfea1f6a5e}{collection}}
+\begin{DoxyCompactList}\small\item\em The collection into which we will index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeIndex_a662ba12b29adf377a1300f62a8f6f412}\label{classTang_1_1AstNodeIndex_a662ba12b29adf377a1300f62a8f6f412}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeIndex_a662ba12b29adf377a1300f62a8f6f412}{index}}
+\begin{DoxyCompactList}\small\item\em The index expression. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}\label{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}} 
+\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}{location}}
+\begin{DoxyCompactList}\small\item\em The location associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

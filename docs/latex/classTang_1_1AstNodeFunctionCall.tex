@@ -20,11 +20,12 @@ Inheritance diagram for Tang\+::Ast\+Node\+Function\+Call\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Tang\+::Ast\+Node\+Function\+Call\+:\nopagebreak
+Collaboration diagram for Tang\+::Ast\+Node\+Function\+Call\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=226pt]{classTang_1_1AstNodeFunctionCall__coll__graph}
+\includegraphics[width=350pt]{classTang_1_1AstNodeFunctionCall__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Types}
@@ -37,7 +38,7 @@ enum \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Pr
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTang_1_1AstNodeFunctionCall_a213742fc9aae6dc2ccda8766d72be613}{Ast\+Node\+Function\+Call}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ function, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$$>$ argv, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
+\mbox{\hyperlink{classTang_1_1AstNodeFunctionCall_a213742fc9aae6dc2ccda8766d72be613}{Ast\+Node\+Function\+Call}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeFunctionCall_acb37ea535b0ad660dffb7d0843e3721e}{function}}, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$$>$ \mbox{\hyperlink{classTang_1_1AstNodeFunctionCall_a8ffab9fa512aefe17d1857e5f69c1c98}{argv}}, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
 \begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
 virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeFunctionCall_ae9d85fcadc7bffb2799c89ea8938c24f}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
 \begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
@@ -45,6 +46,18 @@ virtual void \mbox{\hyperlink{classTang_1_1AstNodeFunctionCall_a76a0acbc7a198060
 \begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classTang_1_1AstNodeFunctionCall_ae9334b90c4fe34944cd85744acf6fc9c}{compile\+Preprocess}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program, \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Preprocess\+State}} state) const override
 \begin{DoxyCompactList}\small\item\em Run any preprocess analysis needed before compilation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeFunctionCall_acb37ea535b0ad660dffb7d0843e3721e}\label{classTang_1_1AstNodeFunctionCall_acb37ea535b0ad660dffb7d0843e3721e}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeFunctionCall_acb37ea535b0ad660dffb7d0843e3721e}{function}}
+\begin{DoxyCompactList}\small\item\em The function being invoked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeFunctionCall_a8ffab9fa512aefe17d1857e5f69c1c98}\label{classTang_1_1AstNodeFunctionCall_a8ffab9fa512aefe17d1857e5f69c1c98}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ $>$ \mbox{\hyperlink{classTang_1_1AstNodeFunctionCall_a8ffab9fa512aefe17d1857e5f69c1c98}{argv}}
+\begin{DoxyCompactList}\small\item\em The list of arguments provided to the function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}\label{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}} 
+\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}{location}}
+\begin{DoxyCompactList}\small\item\em The location associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

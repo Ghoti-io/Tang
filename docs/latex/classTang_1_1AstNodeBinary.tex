@@ -20,11 +20,12 @@ Inheritance diagram for Tang\+::Ast\+Node\+Binary\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Tang\+::Ast\+Node\+Binary\+:\nopagebreak
+Collaboration diagram for Tang\+::Ast\+Node\+Binary\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=198pt]{classTang_1_1AstNodeBinary__coll__graph}
+\includegraphics[width=317pt]{classTang_1_1AstNodeBinary__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Types}
@@ -56,7 +57,7 @@ enum \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Pr
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTang_1_1AstNodeBinary_adedfe569adbdc47097f8129b95c000dd}{Ast\+Node\+Binary}} (\mbox{\hyperlink{classTang_1_1AstNodeBinary_a8fa249142e89a3ade59f2c7a98eb74f9}{Operation}} op, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ lhs, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ rhs, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
+\mbox{\hyperlink{classTang_1_1AstNodeBinary_adedfe569adbdc47097f8129b95c000dd}{Ast\+Node\+Binary}} (\mbox{\hyperlink{classTang_1_1AstNodeBinary_a8fa249142e89a3ade59f2c7a98eb74f9}{Operation}} \mbox{\hyperlink{classTang_1_1AstNodeBinary_ae882ddf080e0e0306081b0e0b2f04a6b}{op}}, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeBinary_ae0fd37da73486ef3902deecd2588e27c}{lhs}}, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeBinary_a187633d3a57800ce65de83051b14fb2c}{rhs}}, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
 \begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
 virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeBinary_a16506f66e9f45c069d6a280ba176e2a7}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
 \begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
@@ -64,6 +65,21 @@ virtual void \mbox{\hyperlink{classTang_1_1AstNodeBinary_a7955b76c5e7bdf92aa86f8
 \begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classTang_1_1AstNodeBinary_ac0c895bc010e5ae9916c3f8bc49770ca}{compile\+Preprocess}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program, \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Preprocess\+State}} state) const override
 \begin{DoxyCompactList}\small\item\em Run any preprocess analysis needed before compilation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeBinary_ae882ddf080e0e0306081b0e0b2f04a6b}\label{classTang_1_1AstNodeBinary_ae882ddf080e0e0306081b0e0b2f04a6b}} 
+\mbox{\hyperlink{classTang_1_1AstNodeBinary_a8fa249142e89a3ade59f2c7a98eb74f9}{Operation}} \mbox{\hyperlink{classTang_1_1AstNodeBinary_ae882ddf080e0e0306081b0e0b2f04a6b}{op}}
+\begin{DoxyCompactList}\small\item\em The binary operation performed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeBinary_ae0fd37da73486ef3902deecd2588e27c}\label{classTang_1_1AstNodeBinary_ae0fd37da73486ef3902deecd2588e27c}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeBinary_ae0fd37da73486ef3902deecd2588e27c}{lhs}}
+\begin{DoxyCompactList}\small\item\em The left hand side expression. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeBinary_a187633d3a57800ce65de83051b14fb2c}\label{classTang_1_1AstNodeBinary_a187633d3a57800ce65de83051b14fb2c}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeBinary_a187633d3a57800ce65de83051b14fb2c}{rhs}}
+\begin{DoxyCompactList}\small\item\em The right hand side expression. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}\label{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}} 
+\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}{location}}
+\begin{DoxyCompactList}\small\item\em The location associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
