@@ -29,6 +29,8 @@ namespace Tang {
       virtual bool is_equal(const string & val) const override;
       virtual GarbageCollected __index(const GarbageCollected & index) const override;
       virtual GarbageCollected __slice(const GarbageCollected & begin, const GarbageCollected & end, const GarbageCollected & skip) const override;
+      virtual GarbageCollected __getIterator(const GarbageCollected & collection) const override;
+      virtual GarbageCollected __iteratorNext(size_t index) const override;
       virtual GarbageCollected __add(const GarbageCollected & rhs) const override;
       virtual GarbageCollected __not() const override;
       virtual GarbageCollected __lessThan(const GarbageCollected & rhs) const override;

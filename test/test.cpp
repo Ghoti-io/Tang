@@ -1319,6 +1319,39 @@ TEST(ControlFlow, RangedFor) {
     )");
     EXPECT_EQ(p1.execute().out, "56789");
   }
+  {
+    // Iterate through a string.
+    auto p1 = TangBase().compileScript(R"(
+      a = "abcde";
+      for (char : a) {
+        print(char);
+        print("-");
+      }
+    )");
+    EXPECT_EQ(p1.execute().out, "a-b-c-d-e-");
+  }
+  {
+    // Iterate through a temporary string.
+    auto p1 = TangBase().compileScript(R"(
+      a = "abcdefghijklmnopqrstuvwxyz";
+      for (char : a[::3]) {
+        print(char);
+        print("-");
+      }
+    )");
+    EXPECT_EQ(p1.execute().out, "a-d-g-j-m-p-s-v-y-");
+  }
+  {
+    // Iterate through an empty string.
+    auto p1 = TangBase().compileScript(R"(
+      a = "";
+      for (char : a) {
+        print(char);
+        print("-");
+      }
+    )");
+    EXPECT_EQ(p1.execute().out, "");
+  }
 }
 
 TEST(Print, Default) {

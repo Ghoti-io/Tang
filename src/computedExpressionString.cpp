@@ -7,6 +7,8 @@
 #include "computedExpressionBoolean.hpp"
 #include "computedExpressionError.hpp"
 #include "computedExpressionInteger.hpp"
+#include "computedExpressionIterator.hpp"
+#include "computedExpressionIteratorEnd.hpp"
 
 using namespace std;
 using namespace Tang;
@@ -121,6 +123,17 @@ GarbageCollected ComputedExpressionString::__slice(const GarbageCollected & begi
   return GarbageCollected::make<ComputedExpressionString>(newString);
 
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to slice this expression."});
+}
+
+GarbageCollected ComputedExpressionString::__getIterator(const GarbageCollected & collection) const {
+  return GarbageCollected::make<ComputedExpressionIterator>(collection);
+}
+
+GarbageCollected ComputedExpressionString::__iteratorNext(size_t index) const {
+  if (index >= this->val.length()) {
+    return GarbageCollected::make<ComputedExpressionIteratorEnd>();
+  }
+  return GarbageCollected::make<ComputedExpressionString>(this->val.substr(index, 1));
 }
 
 GarbageCollected ComputedExpressionString::__add(const GarbageCollected & rhs) const {
