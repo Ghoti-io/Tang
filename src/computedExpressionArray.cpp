@@ -61,7 +61,8 @@ GarbageCollected ComputedExpressionArray::__index(const GarbageCollected & index
         : GarbageCollected::make<ComputedExpressionError>(Error{"Index out of range."});
   }
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Invalid index value."});
+  // Return the default error.
+  return ComputedExpression::__index(index);
 }
 
 GarbageCollected ComputedExpressionArray::__slice(const GarbageCollected & begin, const GarbageCollected & end, const GarbageCollected & skip) const {
@@ -77,11 +78,13 @@ GarbageCollected ComputedExpressionArray::__slice(const GarbageCollected & begin
     convSkip = static_cast<ComputedExpressionInteger&>(*skip).getValue();
   }
   else {
-    return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to slice this expression."});
+    // Return the default error.
+    return ComputedExpression::__slice(begin, end, skip);
   }
   // Verify that the skip is not 0.
   if (!convSkip) {
-    return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to slice this expression."});
+    // Return the default error.
+    return ComputedExpression::__slice(begin, end, skip);
   }
 
   // Verify that the begin is either default or an integer.
@@ -97,7 +100,8 @@ GarbageCollected ComputedExpressionArray::__slice(const GarbageCollected & begin
       : this->contents.size() + convBegin;
   }
   else {
-    return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to slice this expression."});
+    // Return the default error.
+    return ComputedExpression::__slice(begin, end, skip);
   }
 
   // Verify that the end is either default or an integer.
@@ -113,7 +117,8 @@ GarbageCollected ComputedExpressionArray::__slice(const GarbageCollected & begin
       : this->contents.size() + convEnd;
   }
   else {
-    return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to slice this expression."});
+    // Return the default error.
+    return ComputedExpression::__slice(begin, end, skip);
   }
 
   // The new target container.
@@ -133,9 +138,8 @@ GarbageCollected ComputedExpressionArray::__slice(const GarbageCollected & begin
     auto & item = this->contents.at(i);
     newContents.push_back(item->isCopyNeeded() ? item->makeCopy() : item);
   }
-  return GarbageCollected::make<ComputedExpressionArray>(newContents);
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to slice this expression."});
+  return GarbageCollected::make<ComputedExpressionArray>(newContents);
 }
 
 GarbageCollected ComputedExpressionArray::__getIterator(const GarbageCollected & collection) const {
@@ -164,7 +168,8 @@ GarbageCollected ComputedExpressionArray::__assign_index(const GarbageCollected 
         : GarbageCollected::make<ComputedExpressionError>(Error{"Index out of range."});
   }
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to assign this value to the index location."});
+  // Return the default error.
+  return ComputedExpression::__assign_index(index, value);
 }
 
 GarbageCollected ComputedExpressionArray::__string() const {

@@ -28,7 +28,8 @@ GarbageCollected ComputedExpressionCompiledFunction::__equal(const GarbageCollec
     return GarbageCollected::make<ComputedExpressionBoolean>((this->argc == rhsConv.argc) && (this->pc == rhsConv.pc));
   }
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to compare these values."});
+  // Return the default error.
+  return ComputedExpression::__equal(rhs);
 }
 
 uint32_t ComputedExpressionCompiledFunction::getArgc() const {

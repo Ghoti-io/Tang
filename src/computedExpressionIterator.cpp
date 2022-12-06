@@ -8,7 +8,6 @@
 #include "computedExpressionInteger.hpp"
 #include "computedExpressionBoolean.hpp"
 #include "computedExpressionString.hpp"
-#include "computedExpressionError.hpp"
 
 using namespace std;
 using namespace Tang;

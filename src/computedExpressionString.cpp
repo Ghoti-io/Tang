@@ -50,7 +50,8 @@ GarbageCollected ComputedExpressionString::__index(const GarbageCollected & inde
         : GarbageCollected::make<ComputedExpressionError>(Error{"Index out of range."});
   }
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Invalid index value."});
+  // Return the default error.
+  return ComputedExpression::__index(index);
 }
 
 GarbageCollected ComputedExpressionString::__slice(const GarbageCollected & begin, const GarbageCollected & end, const GarbageCollected & skip) const {
@@ -66,11 +67,13 @@ GarbageCollected ComputedExpressionString::__slice(const GarbageCollected & begi
     convSkip = static_cast<ComputedExpressionInteger&>(*skip).getValue();
   }
   else {
-    return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to slice this expression."});
+    // Return the default error.
+    return ComputedExpression::__slice(begin, end, skip);
   }
   // Verify that the skip is not 0.
   if (!convSkip) {
-    return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to slice this expression."});
+    // Return the default error.
+    return ComputedExpression::__slice(begin, end, skip);
   }
 
   // Verify that the begin is either default or an integer.
@@ -86,7 +89,8 @@ GarbageCollected ComputedExpressionString::__slice(const GarbageCollected & begi
       : this->val.length() + convBegin;
   }
   else {
-    return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to slice this expression."});
+    // Return the default error.
+    return ComputedExpression::__slice(begin, end, skip);
   }
 
   // Verify that the end is either default or an integer.
@@ -102,7 +106,8 @@ GarbageCollected ComputedExpressionString::__slice(const GarbageCollected & begi
       : this->val.length() + convEnd;
   }
   else {
-    return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to slice this expression."});
+    // Return the default error.
+    return ComputedExpression::__slice(begin, end, skip);
   }
 
   // The new target container.
@@ -122,7 +127,8 @@ GarbageCollected ComputedExpressionString::__slice(const GarbageCollected & begi
   }
   return GarbageCollected::make<ComputedExpressionString>(newString);
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to slice this expression."});
+  // Return the default error.
+  return ComputedExpression::__slice(begin, end, skip);
 }
 
 GarbageCollected ComputedExpressionString::__getIterator(const GarbageCollected & collection) const {
@@ -143,7 +149,8 @@ GarbageCollected ComputedExpressionString::__add(const GarbageCollected & rhs) c
         this->val + rhsConv.val);
   }
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to add these values."});
+  // Return the default error.
+  return ComputedExpression::__add(rhs);
 }
 
 GarbageCollected ComputedExpressionString::__not() const {
@@ -157,7 +164,8 @@ GarbageCollected ComputedExpressionString::__lessThan(const GarbageCollected & r
         this->val < rhsConv.val);
   }
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to compare these values."});
+  // Return the default error.
+  return ComputedExpression::__lessThan(rhs);
 }
 
 GarbageCollected ComputedExpressionString::__equal(const GarbageCollected & rhs) const {
@@ -170,7 +178,8 @@ GarbageCollected ComputedExpressionString::__equal(const GarbageCollected & rhs)
     return GarbageCollected::make<ComputedExpressionBoolean>(false);
   }
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to compare these values."});
+  // Return the default error.
+  return ComputedExpression::__equal(rhs);
 }
 
 GarbageCollected ComputedExpressionString::__boolean() const {

@@ -46,7 +46,8 @@ GarbageCollected ComputedExpressionFloat::__add(const GarbageCollected & rhs) co
         this->val + rhsConv.getValue());
   }
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to add these values."});
+  // Return the default error.
+  return ComputedExpression::__add(rhs);
 }
 
 GarbageCollected ComputedExpressionFloat::__subtract(const GarbageCollected & rhs) const {
@@ -61,7 +62,8 @@ GarbageCollected ComputedExpressionFloat::__subtract(const GarbageCollected & rh
         this->val - rhsConv.getValue());
   }
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to subtract these values."});
+  // Return the default error.
+  return ComputedExpression::__subtract(rhs);
 }
 
 GarbageCollected ComputedExpressionFloat::__multiply(const GarbageCollected & rhs) const {
@@ -76,7 +78,8 @@ GarbageCollected ComputedExpressionFloat::__multiply(const GarbageCollected & rh
         this->val * rhsConv.getValue());
   }
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to multiply these values."});
+  // Return the default error.
+  return ComputedExpression::__multiply(rhs);
 }
 
 GarbageCollected ComputedExpressionFloat::__divide(const GarbageCollected & rhs) const {
@@ -97,7 +100,8 @@ GarbageCollected ComputedExpressionFloat::__divide(const GarbageCollected & rhs)
         this->val / rhsConv.getValue());
   }
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to divide these values."});
+  // Return the default error.
+  return ComputedExpression::__divide(rhs);
 }
 
 GarbageCollected ComputedExpressionFloat::__negative() const {
@@ -120,7 +124,8 @@ GarbageCollected ComputedExpressionFloat::__lessThan(const GarbageCollected & rh
         this->val < rhsConv.getValue());
   }
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to compare these values."});
+  // Return the default error.
+  return ComputedExpression::__lessThan(rhs);
 }
 
 GarbageCollected ComputedExpressionFloat::__equal(const GarbageCollected & rhs) const {
@@ -139,7 +144,8 @@ GarbageCollected ComputedExpressionFloat::__equal(const GarbageCollected & rhs) 
     return GarbageCollected::make<ComputedExpressionBoolean>(false);
   }
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to compare these values."});
+  // Return the default error.
+  return ComputedExpression::__equal(rhs);
 }
 
 GarbageCollected ComputedExpressionFloat::__integer() const {

@@ -46,7 +46,8 @@ GarbageCollected ComputedExpressionInteger::__add(const GarbageCollected & rhs) 
         this->val + rhsConv.getValue());
   }
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to add these values."});
+  // Return the default error.
+  return ComputedExpression::__add(rhs);
 }
 
 GarbageCollected ComputedExpressionInteger::__subtract(const GarbageCollected & rhs) const {
@@ -61,7 +62,8 @@ GarbageCollected ComputedExpressionInteger::__subtract(const GarbageCollected & 
         this->val - rhsConv.getValue());
   }
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to add these values."});
+  // Return the default error.
+  return ComputedExpression::__subtract(rhs);
 }
 
 GarbageCollected ComputedExpressionInteger::__multiply(const GarbageCollected & rhs) const {
@@ -76,7 +78,8 @@ GarbageCollected ComputedExpressionInteger::__multiply(const GarbageCollected & 
         this->val * rhsConv.getValue());
   }
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to multiply these values."});
+  // Return the default error.
+  return ComputedExpression::__multiply(rhs);
 }
 
 GarbageCollected ComputedExpressionInteger::__divide(const GarbageCollected & rhs) const {
@@ -97,7 +100,8 @@ GarbageCollected ComputedExpressionInteger::__divide(const GarbageCollected & rh
         this->val / rhsConv.getValue());
   }
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to divide these values."});
+  // Return the default error.
+  return ComputedExpression::__divide(rhs);
 }
 
 GarbageCollected ComputedExpressionInteger::__modulo(const GarbageCollected & rhs) const {
@@ -109,7 +113,9 @@ GarbageCollected ComputedExpressionInteger::__modulo(const GarbageCollected & rh
     return GarbageCollected::make<ComputedExpressionInteger>(
         this->val % rhsConv.val);
   }
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to modulo these values."});
+
+  // Return the default error.
+  return ComputedExpression::__modulo(rhs);
 }
 
 GarbageCollected ComputedExpressionInteger::__negative() const {
@@ -132,7 +138,8 @@ GarbageCollected ComputedExpressionInteger::__lessThan(const GarbageCollected & 
         this->val < rhsConv.getValue());
   }
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to compare these values."});
+  // Return the default error.
+  return ComputedExpression::__lessThan(rhs);
 }
 
 GarbageCollected ComputedExpressionInteger::__equal(const GarbageCollected & rhs) const {
@@ -151,7 +158,8 @@ GarbageCollected ComputedExpressionInteger::__equal(const GarbageCollected & rhs
     return GarbageCollected::make<ComputedExpressionBoolean>(false);
   }
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to compare these values."});
+  // Return the default error.
+  return ComputedExpression::__equal(rhs);
 }
 
 GarbageCollected ComputedExpressionInteger::__integer() const {

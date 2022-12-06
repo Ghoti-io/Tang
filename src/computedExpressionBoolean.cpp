@@ -39,7 +39,8 @@ GarbageCollected ComputedExpressionBoolean::__equal(const GarbageCollected & rhs
     return GarbageCollected::make<ComputedExpressionBoolean>(false);
   }
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to compare these values."});
+  // Return the default error.
+  return ComputedExpression::__equal(rhs);
 }
 
 GarbageCollected ComputedExpressionBoolean::__integer() const {
