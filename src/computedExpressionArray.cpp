@@ -49,7 +49,7 @@ GarbageCollected ComputedExpressionArray::makeCopy() const {
 GarbageCollected ComputedExpressionArray::__index(const GarbageCollected & index) const {
   if (typeid(*index) == typeid(ComputedExpressionInteger)) {
     auto & indexConv = static_cast<ComputedExpressionInteger&>(*index);
-    auto i = indexConv.val;
+    auto i = indexConv.getValue();
     return (i >= 0)
       // index >= 0
       ? i < (integer_t)this->contents.size()
@@ -74,7 +74,7 @@ GarbageCollected ComputedExpressionArray::__slice(const GarbageCollected & begin
   }
   else if (typeid(*skip) == typeid(ComputedExpressionInteger)) {
     // Skip is an integer.
-    convSkip = static_cast<ComputedExpressionInteger&>(*skip).val;
+    convSkip = static_cast<ComputedExpressionInteger&>(*skip).getValue();
   }
   else {
     return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to slice this expression."});
@@ -91,7 +91,7 @@ GarbageCollected ComputedExpressionArray::__slice(const GarbageCollected & begin
    }
   else if (typeid(*begin) == typeid(ComputedExpressionInteger)) {
     // Begin is an integer.
-    convBegin = static_cast<ComputedExpressionInteger&>(*begin).val;
+    convBegin = static_cast<ComputedExpressionInteger&>(*begin).getValue();
     convBegin = (convBegin >= 0)
       ? convBegin
       : this->contents.size() + convBegin;
@@ -107,7 +107,7 @@ GarbageCollected ComputedExpressionArray::__slice(const GarbageCollected & begin
    }
   else if (typeid(*end) == typeid(ComputedExpressionInteger)) {
     // End is an integer.
-    convEnd = static_cast<ComputedExpressionInteger&>(*end).val;
+    convEnd = static_cast<ComputedExpressionInteger&>(*end).getValue();
     convEnd = (convEnd >= 0)
       ? convEnd
       : this->contents.size() + convEnd;
@@ -152,7 +152,7 @@ GarbageCollected ComputedExpressionArray::__iteratorNext(size_t index) const {
 GarbageCollected ComputedExpressionArray::__assign_index(const GarbageCollected & index, const GarbageCollected & value) {
   if (typeid(*index) == typeid(ComputedExpressionInteger)) {
     auto & indexConv = static_cast<ComputedExpressionInteger&>(*index);
-    auto i = indexConv.val;
+    auto i = indexConv.getValue();
     return (i >= 0)
       // index >= 0
       ? i < (integer_t)this->contents.size()

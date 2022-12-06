@@ -39,7 +39,12 @@ namespace Tang {
       virtual GarbageCollected __boolean() const override;
       virtual GarbageCollected __string() const override;
 
-      friend class ComputedExpressionInteger;
+      /**
+       * Helper function to get the value associated with this expression.
+       *
+       * @return The value associated with this expression.
+       */
+      Tang::float_t getValue() const;
 
     private:
       /**

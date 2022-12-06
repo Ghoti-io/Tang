@@ -43,7 +43,7 @@ GarbageCollected ComputedExpressionFloat::__add(const GarbageCollected & rhs) co
   if (typeid(*rhs) == typeid(ComputedExpressionInteger)) {
     auto & rhsConv = static_cast<ComputedExpressionInteger&>(*rhs);
     return GarbageCollected::make<ComputedExpressionFloat>(
-        this->val + rhsConv.val);
+        this->val + rhsConv.getValue());
   }
 
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to add these values."});
@@ -58,7 +58,7 @@ GarbageCollected ComputedExpressionFloat::__subtract(const GarbageCollected & rh
   if (typeid(*rhs) == typeid(ComputedExpressionInteger)) {
     auto & rhsConv = static_cast<ComputedExpressionInteger&>(*rhs);
     return GarbageCollected::make<ComputedExpressionFloat>(
-        this->val - rhsConv.val);
+        this->val - rhsConv.getValue());
   }
 
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to subtract these values."});
@@ -73,7 +73,7 @@ GarbageCollected ComputedExpressionFloat::__multiply(const GarbageCollected & rh
   if (typeid(*rhs) == typeid(ComputedExpressionInteger)) {
     auto & rhsConv = static_cast<ComputedExpressionInteger&>(*rhs);
     return GarbageCollected::make<ComputedExpressionFloat>(
-        this->val * rhsConv.val);
+        this->val * rhsConv.getValue());
   }
 
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to multiply these values."});
@@ -90,11 +90,11 @@ GarbageCollected ComputedExpressionFloat::__divide(const GarbageCollected & rhs)
   }
   if (typeid(*rhs) == typeid(ComputedExpressionInteger)) {
     auto & rhsConv = static_cast<ComputedExpressionInteger&>(*rhs);
-    if (rhsConv.val == 0) {
+    if (rhsConv.getValue() == 0) {
       return GarbageCollected::make<ComputedExpressionError>(Error{"Cannot divide by zero."});
     }
     return GarbageCollected::make<ComputedExpressionFloat>(
-        this->val / rhsConv.val);
+        this->val / rhsConv.getValue());
   }
 
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to divide these values."});
@@ -117,7 +117,7 @@ GarbageCollected ComputedExpressionFloat::__lessThan(const GarbageCollected & rh
   if (typeid(*rhs) == typeid(ComputedExpressionInteger)) {
     auto & rhsConv = static_cast<ComputedExpressionInteger&>(*rhs);
     return GarbageCollected::make<ComputedExpressionBoolean>(
-        this->val < rhsConv.val);
+        this->val < rhsConv.getValue());
   }
 
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to compare these values."});
@@ -132,7 +132,7 @@ GarbageCollected ComputedExpressionFloat::__equal(const GarbageCollected & rhs) 
   if (typeid(*rhs) == typeid(ComputedExpressionInteger)) {
     auto & rhsConv = static_cast<ComputedExpressionInteger&>(*rhs);
     return GarbageCollected::make<ComputedExpressionBoolean>(
-        this->val == rhsConv.val);
+        this->val == rhsConv.getValue());
   }
 
   if (typeid(*rhs) == typeid(ComputedExpression)) {
@@ -156,5 +156,9 @@ GarbageCollected ComputedExpressionFloat::__boolean() const {
 
 GarbageCollected ComputedExpressionFloat::__string() const {
   return GarbageCollected::make<ComputedExpressionString>(this->dump());
+}
+
+Tang::float_t ComputedExpressionFloat::getValue() const {
+  return this->val;
 }
 
