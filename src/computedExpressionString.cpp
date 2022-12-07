@@ -190,3 +190,7 @@ GarbageCollected ComputedExpressionString::__string() const {
   return GarbageCollected::make<ComputedExpressionString>(this->val);
 }
 
+UnicodeString ComputedExpressionString::getValue() const {
+  return this->val;
+}
+

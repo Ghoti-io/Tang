@@ -38,6 +38,8 @@ namespace Tang {
       virtual GarbageCollected __boolean() const override;
       virtual GarbageCollected __string() const override;
 
+      UnicodeString getValue() const;
+
     private:
       /**
        * The string value.
