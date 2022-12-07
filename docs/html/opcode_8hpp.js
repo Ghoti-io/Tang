@@ -16,6 +16,7 @@ var opcode_8hpp =
       [ "BOOLEAN", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ac48d5da12d702e73d6966069f2687376", null ],
       [ "STRING", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a63b588d5559f64f89a416e656880b949", null ],
       [ "ARRAY", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acb4fb1757fb37c43cded35d3eb857c43", null ],
+      [ "MAP", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a5af1a3a285c2bdee4192223e31e1f833", null ],
       [ "FUNCTION", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a6a72a6a776662a244f82d31e9274a07b", null ],
       [ "ASSIGNINDEX", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ad841b7b2c8fba802dc3425c697d2ee11", null ],
       [ "ADD", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a9eeb52badb613229884838847294b90d", null ],
@@ -39,6 +40,7 @@ var opcode_8hpp =
       [ "CASTINTEGER", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a0a109fb07a3a6984f50ffe52dd2c213b", null ],
       [ "CASTFLOAT", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af721c36554a56d3695dda4af2863efbb", null ],
       [ "CASTBOOLEAN", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620", null ],
+      [ "CASTSTRING", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a68c788d6865114079a3fdad808204a83", null ],
       [ "CALLFUNC", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a8fbd21f6a619e33ff038cdf5a69a14d8", null ],
       [ "RETURN", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04aa2bec276a54439fe011eb523b845dac5", null ],
       [ "PRINT", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af96eee4e48ee90430f17fb3a8388507b", null ]

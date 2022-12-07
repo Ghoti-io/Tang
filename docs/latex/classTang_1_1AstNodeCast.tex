@@ -20,8 +20,7 @@ Inheritance diagram for Tang\+::Ast\+Node\+Cast\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Tang\+::Ast\+Node\+Cast\+:
-\nopagebreak
+Collaboration diagram for Tang\+::Ast\+Node\+Cast\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -34,6 +33,7 @@ Collaboration diagram for Tang\+::Ast\+Node\+Cast\+:
 enum \mbox{\hyperlink{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4}{Type}} \{ \mbox{\hyperlink{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4a12492d4efa5d84835d4e7cc31ae1a4ab}{Integer}}
 , \mbox{\hyperlink{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4a93f72af1ebc545c43fe366904a79dff5}{Float}}
 , \mbox{\hyperlink{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4a85206fe18cb8ea971023050f86050b2a}{Boolean}}
+, \mbox{\hyperlink{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4afe7d1c33151ae06a769df045e5430824}{String}}
  \}
 \begin{DoxyCompactList}\small\item\em The possible types that can be cast to. \end{DoxyCompactList}\item 
 enum \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Preprocess\+State}} \+: int \{ \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641a0936249b625085e3b4124ae378f9a1c1}{Default}} = 0
@@ -51,6 +51,12 @@ virtual void \mbox{\hyperlink{classTang_1_1AstNodeCast_af911e11e47869acdd1f6b8fa
 \begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classTang_1_1AstNodeCast_a057e3f5d1df130bdf1ea1c0a5464566a}{compile\+Preprocess}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program, \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Preprocess\+State}} state) const override
 \begin{DoxyCompactList}\small\item\em Run any preprocess analysis needed before compilation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}\label{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}} 
+\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}{location}}
+\begin{DoxyCompactList}\small\item\em The location associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -59,10 +65,7 @@ virtual void \mbox{\hyperlink{classTang_1_1AstNodeCast_a057e3f5d1df130bdf1ea1c0a
 \begin{DoxyCompactList}\small\item\em The target type. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTang_1_1AstNodeCast_a317b9ddfd26f6e8ee15694a5b28a1c5b}\label{classTang_1_1AstNodeCast_a317b9ddfd26f6e8ee15694a5b28a1c5b}} 
 shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeCast_a317b9ddfd26f6e8ee15694a5b28a1c5b}{expression}}
-\begin{DoxyCompactList}\small\item\em The expression being typecast. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}\label{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}} 
-\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}{location}}
-\begin{DoxyCompactList}\small\item\em The location associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The expression being typecast. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -110,6 +113,10 @@ Float&Cast to a \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat}{Tang\+::\
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{Boolean@{Boolean}!Tang::AstNodeCast@{Tang::AstNodeCast}}\index{Tang::AstNodeCast@{Tang::AstNodeCast}!Boolean@{Boolean}}}\mbox{\Hypertarget{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4a85206fe18cb8ea971023050f86050b2a}\label{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4a85206fe18cb8ea971023050f86050b2a}} 
 Boolean&Cast to a \mbox{\hyperlink{classTang_1_1ComputedExpressionBoolean}{Tang\+::\+Computed\+Expression\+Boolean}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{String@{String}!Tang::AstNodeCast@{Tang::AstNodeCast}}\index{Tang::AstNodeCast@{Tang::AstNodeCast}!String@{String}}}\mbox{\Hypertarget{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4afe7d1c33151ae06a769df045e5430824}\label{classTang_1_1AstNodeCast_a63a014eee9fd7d365d8177c4bab2c4e4afe7d1c33151ae06a769df045e5430824}} 
+String&Cast to a \mbox{\hyperlink{classTang_1_1ComputedExpressionString}{Tang\+::\+Computed\+Expression\+String}}. \\
 \hline
 
 \end{DoxyEnumFields}

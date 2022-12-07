@@ -21,6 +21,7 @@ var classTang_1_1ComputedExpressionString =
     [ "__string", "classTang_1_1ComputedExpressionString.html#a92af6f9ea5e1809e206d96d8fb31c30f", null ],
     [ "__subtract", "classTang_1_1ComputedExpressionString.html#ab0d79debcd475a5063e574c10f1715ff", null ],
     [ "dump", "classTang_1_1ComputedExpressionString.html#a97bdb82b5f4cf5b99a2819b93d7ac047", null ],
+    [ "getValue", "classTang_1_1ComputedExpressionString.html#a2d53950a859ebd6bce32e61c1124f7b2", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionString.html#a30aa173d92fe72fbe171a3f2808a8773", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionString.html#a5ce6d4bc0128f6aadf72c2f63a70275a", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionString.html#a5287fabf86f19613afb04d5e285c0231", null ],

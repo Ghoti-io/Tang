@@ -18,6 +18,7 @@ var hierarchy =
       [ "Tang::AstNodeIfElse", "classTang_1_1AstNodeIfElse.html", null ],
       [ "Tang::AstNodeIndex", "classTang_1_1AstNodeIndex.html", null ],
       [ "Tang::AstNodeInteger", "classTang_1_1AstNodeInteger.html", null ],
+      [ "Tang::AstNodeMap", "classTang_1_1AstNodeMap.html", null ],
       [ "Tang::AstNodePrint", "classTang_1_1AstNodePrint.html", null ],
       [ "Tang::AstNodeRangedFor", "classTang_1_1AstNodeRangedFor.html", null ],
       [ "Tang::AstNodeReturn", "classTang_1_1AstNodeReturn.html", null ],
@@ -36,6 +37,7 @@ var hierarchy =
       [ "Tang::ComputedExpressionInteger", "classTang_1_1ComputedExpressionInteger.html", null ],
       [ "Tang::ComputedExpressionIterator", "classTang_1_1ComputedExpressionIterator.html", null ],
       [ "Tang::ComputedExpressionIteratorEnd", "classTang_1_1ComputedExpressionIteratorEnd.html", null ],
+      [ "Tang::ComputedExpressionMap", "classTang_1_1ComputedExpressionMap.html", null ],
       [ "Tang::ComputedExpressionString", "classTang_1_1ComputedExpressionString.html", null ]
     ] ],
     [ "Tang::Error", "classTang_1_1Error.html", null ],

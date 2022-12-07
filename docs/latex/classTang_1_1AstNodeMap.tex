@@ -1,0 +1,196 @@
+\hypertarget{classTang_1_1AstNodeMap}{}\doxysection{Tang\+::Ast\+Node\+Map Class Reference}
+\label{classTang_1_1AstNodeMap}\index{Tang::AstNodeMap@{Tang::AstNodeMap}}
+
+
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a map literal.  
+
+
+
+
+{\ttfamily \#include $<$ast\+Node\+Map.\+hpp$>$}
+
+
+
+Inheritance diagram for Tang\+::Ast\+Node\+Map\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classTang_1_1AstNodeMap__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tang\+::Ast\+Node\+Map\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTang_1_1AstNodeMap__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Preprocess\+State}} \+: int \{ \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641a0936249b625085e3b4124ae378f9a1c1}{Default}} = 0
+, \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641a586bda9718eca4db4d4afac8e298023a}{Is\+Assignment}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Bit flags to indicate the state of the preprocess scan as it recursively evaluates the AST. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTang_1_1AstNodeMap_aa5f28bb97cb209be63ee3fb2dc1724a4}{Ast\+Node\+Map}} (std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Tang\+::\+Ast\+Node}} $>$$>$$>$ \mbox{\hyperlink{classTang_1_1AstNodeMap_ad3378f51abe0e19f1d014be1cb27dc5e}{contents}}, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeMap_a0c92c4cb4fd662d671a6f0521b79d241}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
+\begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTang_1_1AstNodeMap_a6515465a181db3d25526e79922cf1bfc}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const override
+\begin{DoxyCompactList}\small\item\em Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTang_1_1AstNodeMap_a0eaf623faf4ab380aedbff23a15b11c7}{compile\+Preprocess}} (\mbox{\hyperlink{classTang_1_1Program}{Program}} \&program, \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Preprocess\+State}} state) const override
+\begin{DoxyCompactList}\small\item\em Run any preprocess analysis needed before compilation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}\label{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}} 
+\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1AstNode_a41e8328d5a342163a5aabcc4cb8f1b5e}{location}}
+\begin{DoxyCompactList}\small\item\em The location associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeMap_ad3378f51abe0e19f1d014be1cb27dc5e}\label{classTang_1_1AstNodeMap_ad3378f51abe0e19f1d014be1cb27dc5e}} 
+std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Tang\+::\+Ast\+Node}} $>$ $>$ $>$ \mbox{\hyperlink{classTang_1_1AstNodeMap_ad3378f51abe0e19f1d014be1cb27dc5e}{contents}}
+\begin{DoxyCompactList}\small\item\em The contents of the array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents a map literal. 
+
+Keys can only be strings. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}\label{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}} 
+\index{Tang::AstNodeMap@{Tang::AstNodeMap}!PreprocessState@{PreprocessState}}
+\index{PreprocessState@{PreprocessState}!Tang::AstNodeMap@{Tang::AstNodeMap}}
+\doxysubsubsection{\texorpdfstring{PreprocessState}{PreprocessState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Tang\+::\+Ast\+Node\+::\+Preprocess\+State}} \+: int\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Bit flags to indicate the state of the preprocess scan as it recursively evaluates the AST. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Default@{Default}!Tang::AstNodeMap@{Tang::AstNodeMap}}\index{Tang::AstNodeMap@{Tang::AstNodeMap}!Default@{Default}}}\mbox{\Hypertarget{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641a0936249b625085e3b4124ae378f9a1c1}\label{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641a0936249b625085e3b4124ae378f9a1c1}} 
+Default&The default state. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IsAssignment@{IsAssignment}!Tang::AstNodeMap@{Tang::AstNodeMap}}\index{Tang::AstNodeMap@{Tang::AstNodeMap}!IsAssignment@{IsAssignment}}}\mbox{\Hypertarget{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641a586bda9718eca4db4d4afac8e298023a}\label{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641a586bda9718eca4db4d4afac8e298023a}} 
+Is\+Assignment&\mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} is part of an assignment expression. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeMap_aa5f28bb97cb209be63ee3fb2dc1724a4}\label{classTang_1_1AstNodeMap_aa5f28bb97cb209be63ee3fb2dc1724a4}} 
+\index{Tang::AstNodeMap@{Tang::AstNodeMap}!AstNodeMap@{AstNodeMap}}
+\index{AstNodeMap@{AstNodeMap}!Tang::AstNodeMap@{Tang::AstNodeMap}}
+\doxysubsubsection{\texorpdfstring{AstNodeMap()}{AstNodeMap()}}
+{\footnotesize\ttfamily Ast\+Node\+Map\+::\+Ast\+Node\+Map (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Tang\+::\+Ast\+Node}} $>$$>$$>$}]{contents,  }\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{location }\end{DoxyParamCaption})}
+
+
+
+The constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contents} & The contents of the map. \\
+\hline
+{\em location} & The location associated with the expression. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTang_1_1AstNodeMap_a6515465a181db3d25526e79922cf1bfc}\label{classTang_1_1AstNodeMap_a6515465a181db3d25526e79922cf1bfc}} 
+\index{Tang::AstNodeMap@{Tang::AstNodeMap}!compile@{compile}}
+\index{compile@{compile}!Tang::AstNodeMap@{Tang::AstNodeMap}}
+\doxysubsubsection{\texorpdfstring{compile()}{compile()}}
+{\footnotesize\ttfamily void Ast\+Node\+Map\+::compile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&}]{program }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em program} & The \mbox{\hyperlink{classTang_1_1Program}{Program}} which will hold the generated Bytecode. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a390f8887c418f972d75e968f1274b2cb}{Tang\+::\+Ast\+Node}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTang_1_1AstNodeMap_a6515465a181db3d25526e79922cf1bfc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTang_1_1AstNodeMap_a0eaf623faf4ab380aedbff23a15b11c7}\label{classTang_1_1AstNodeMap_a0eaf623faf4ab380aedbff23a15b11c7}} 
+\index{Tang::AstNodeMap@{Tang::AstNodeMap}!compilePreprocess@{compilePreprocess}}
+\index{compilePreprocess@{compilePreprocess}!Tang::AstNodeMap@{Tang::AstNodeMap}}
+\doxysubsubsection{\texorpdfstring{compilePreprocess()}{compilePreprocess()}}
+{\footnotesize\ttfamily void Ast\+Node\+Map\+::compile\+Preprocess (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTang_1_1Program}{Program}} \&}]{program,  }\item[{\mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Preprocess\+State}}}]{state }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Run any preprocess analysis needed before compilation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em program} & The \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} that is being compiled. \\
+\hline
+{\em state} & Any preprocess flags that need to be considered. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a269c37e41595e0338bf4653cdb32e9cb}{Tang\+::\+Ast\+Node}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTang_1_1AstNodeMap_a0eaf623faf4ab380aedbff23a15b11c7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTang_1_1AstNodeMap_a0c92c4cb4fd662d671a6f0521b79d241}\label{classTang_1_1AstNodeMap_a0c92c4cb4fd662d671a6f0521b79d241}} 
+\index{Tang::AstNodeMap@{Tang::AstNodeMap}!dump@{dump}}
+\index{dump@{dump}!Tang::AstNodeMap@{Tang::AstNodeMap}}
+\doxysubsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily string Ast\+Node\+Map\+::dump (\begin{DoxyParamCaption}\item[{std\+::string}]{indent = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return a string that describes the contents of the node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indent} & A string used to indent the dump. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value as a string. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a9884742e4b32db78c0257d0b0904d05f}{Tang\+::\+Ast\+Node}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{astNodeMap_8hpp}{ast\+Node\+Map.\+hpp}}\item 
+src/\mbox{\hyperlink{astNodeMap_8cpp}{ast\+Node\+Map.\+cpp}}\end{DoxyCompactItemize}
