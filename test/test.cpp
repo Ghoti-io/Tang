@@ -802,6 +802,74 @@ TEST(Expression, ArrayIndex) {
   }
 }
 
+TEST(Expression, Map) {
+  {
+    // An empty object can be created.
+    auto p1 = TangBase().compileScript(R"(
+      {:} as string
+    )");
+    // TODO: Add support for testing the ComputedExpression value.
+    EXPECT_EQ(*p1.execute().getResult(), "{}");
+  }
+  {
+    // An empty object should be false
+    auto p1 = TangBase().compileScript(R"(
+      {:} as bool
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), false);
+  }
+  {
+    // A non-empty object should be true
+    auto p1 = TangBase().compileScript(R"(
+      {foo:5} as bool
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), true);
+  }
+  {
+    // A non-empty object cast to a string.
+    auto p1 = TangBase().compileScript(R"(
+      {foo:5} as string
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), "{foo:5}");
+  }
+  {
+    // A value can be set and retrieved via a key.
+    auto p1 = TangBase().compileScript(R"(
+      a = {foo:5};
+      print(a["foo"]);
+    )");
+    EXPECT_EQ(p1.execute().out, "5");
+  }
+  {
+    // Multiple values can be set and retrieved via a key.
+    auto p1 = TangBase().compileScript(R"(
+      a = {foo:5, bar:3};
+      print(a["bar"]);
+      print(a["foo"]);
+    )");
+    EXPECT_EQ(p1.execute().out, "35");
+  }
+  {
+    // Multiple values can be set and retrieved via a key.
+    // Only one key is referenced.
+    auto p1 = TangBase().compileScript(R"(
+      a = {foo:5, bar:3};
+      print(a["bar"]);
+    )");
+    EXPECT_EQ(p1.execute().out, "3");
+  }
+  {
+    // Unassigned values return nothing.
+    auto p1 = TangBase().compileScript(R"(
+      a = {foo:5, bar:3};
+      print(a["baz"]);
+      a["baz"];
+    )");
+    EXPECT_EQ(p1.execute().out, "");
+    EXPECT_EQ(*p1.getResult(), Error{"Index does not exist in map"});
+  }
+}
+
 TEST(CodeBlock, Statements) {
   auto p1 = TangBase().compileScript("2;");
   EXPECT_EQ(*p1.execute().getResult(), (integer_t)2);

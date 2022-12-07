@@ -135,6 +135,9 @@ using namespace std;
   bool {
     return Tang::TangParser::make_CASTBOOLEAN(Tang::location(location));
   }
+  string {
+    return Tang::TangParser::make_CASTSTRING(Tang::location(location));
+  }
   true {
     return Tang::TangParser::make_BOOLEAN(true, Tang::location(location));
   }

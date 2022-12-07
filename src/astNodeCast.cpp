@@ -17,6 +17,7 @@ string AstNodeCast::dump(string indent) const {
     "Integer",
     "Float",
     "Boolean",
+    "String",
   };
   return indent + "Cast to " + description[this->targetType] + ":\n" + this->expression->dump(indent + "  ");
 }
@@ -38,6 +39,10 @@ void AstNodeCast::compile(Tang::Program & program) const {
     }
     case Boolean: {
       program.addBytecode((uinteger_t)Opcode::CASTBOOLEAN);
+      break;
+    }
+    case String: {
+      program.addBytecode((uinteger_t)Opcode::CASTSTRING);
       break;
     }
   }

@@ -21,6 +21,7 @@ namespace Tang {
       Integer,  ///< Cast to a Tang::ComputedExpressionInteger.
       Float,    ///< Cast to a Tang::ComputedExpressionFloat.
       Boolean,  ///< Cast to a Tang::ComputedExpressionBoolean.
+      String,   ///< Cast to a Tang::ComputedExpressionString.
     };
 
     /**

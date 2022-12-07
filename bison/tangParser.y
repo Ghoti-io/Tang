@@ -78,7 +78,7 @@
 %token <int64_t> INTEGER "integer literal"
 %token <long double> FLOAT "float literal"
 %token <bool> BOOLEAN "boolean literal"
-%token <std::string> STRING "string"
+%token <std::string> STRING "string literal"
 %token STRINGERROR "Malformed String"
 %token <std::string> IDENTIFIER "identifier"
 %token ASSIGN "="
@@ -112,6 +112,7 @@
 %token CASTINT "int"
 %token CASTFLOAT "float"
 %token CASTBOOLEAN "boolean"
+%token CASTSTRING "string"
 %token FUNCTION "function"
 %token RETURN "return"
 %token BREAK "break"
@@ -129,6 +130,7 @@
 %type <std::vector<std::shared_ptr<Tang::AstNode>>> statements
 %type <std::vector<std::string>> functionDeclarationArguments
 %type <std::vector<std::shared_ptr<Tang::AstNode>>> expressionList
+%type <std::vector<std::pair<std::string, std::shared_ptr<Tang::AstNode>>>> mapList
 %type <std::shared_ptr<Tang::AstNode>> statement
 %type <std::shared_ptr<Tang::AstNode>> codeBlock
 %type <std::shared_ptr<Tang::AstNode>> openStatement
@@ -186,6 +188,7 @@ namespace Tang {
 #include "astNodeCast.hpp"
 #include "astNodeBlock.hpp"
 #include "astNodeIfElse.hpp"
+#include "astNodeMap.hpp"
 #include "astNodeWhile.hpp"
 #include "astNodeDoWhile.hpp"
 #include "astNodeFor.hpp"
@@ -253,8 +256,8 @@ functionDeclarationArguments
     }
   ;
 
-// `functionArguments` is a comma-separated list of expressions given as part
-// of a function call.
+// `expressionList` is a comma-separated list of expressions given as part
+// of a function call or an array declaration.
 expressionList
   : %empty
     {
@@ -269,6 +272,21 @@ expressionList
       $1.push_back($3);
       $$ = $1;
     }
+  ;
+
+// `mapList` is a comma-separated list of expressions given as part of a
+// map declaration.
+mapList
+  : IDENTIFIER ":" expression
+    {
+      $$ = std::vector<std::pair<std::string, std::shared_ptr<Tang::AstNode>>>{{$1, $3}};
+    }
+  | mapList "," IDENTIFIER ":" expression
+    {
+      $1.push_back({$3, $5});
+      $$ = $1;
+    }
+  | mapList ","
   ;
 
 // `statements` represent a sequence of `statement` expressions.
@@ -504,6 +522,10 @@ expression
     {
       $$ = std::make_shared<AstNodeCast>(AstNodeCast::Boolean, $1, @2);
     }
+  | expression "as" "string"
+    {
+      $$ = std::make_shared<AstNodeCast>(AstNodeCast::String, $1, @2);
+    }
   | "print" "(" expression ")"
     {
       $$ = std::make_shared<AstNodePrint>(AstNodePrint::Default, $3, @1);
@@ -511,6 +533,14 @@ expression
   |  "[" expressionList "]"
     {
       $$ = std::make_shared<AstNodeArray>($2, @1);
+    }
+  | "{" ":" "}"
+    {
+      $$ = std::make_shared<AstNodeMap>(std::vector<std::pair<std::string, std::shared_ptr<Tang::AstNode>>>{}, @1);
+    }
+  | "{" mapList "}"
+    {
+      $$ = std::make_shared<AstNodeMap>($2, @1);
     }
   | expression "[" expression "]"
     {

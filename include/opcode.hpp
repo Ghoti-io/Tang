@@ -21,6 +21,8 @@ namespace Tang {
     STRING,   ///< Get len, char string: push string
     ARRAY,    ///< Get len, pop `len` items, putting them into an array
               ///<   with the last array item popped first
+    MAP,      ///< Get len, pop `len` value then key pairs, putting them into
+              ///<   a map
     FUNCTION, ///< Get argc, PC#: push function(argc, PC #)
     ASSIGNINDEX, ///< Pop index, pop collection, pop value,
                  ///<   push (collection[index] = value)
@@ -46,6 +48,7 @@ namespace Tang {
     CASTINTEGER, ///< Pop a val, typecast to int, push
     CASTFLOAT,   ///< Pop a val, typecast to float, push
     CASTBOOLEAN, ///< Pop a val, typecast to boolean, push
+    CASTSTRING,  ///< Pop a val, typecast to string, push
     CALLFUNC, ///< Get argc, Pop a function, execute function if argc matches.
     RETURN,   ///< Get stack #, pop return val, pop (stack #) times,
               ///< push val, restore fp, restore pc

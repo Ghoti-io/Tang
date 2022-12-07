@@ -13,6 +13,7 @@
 #include "computedExpressionBoolean.hpp"
 #include "computedExpressionString.hpp"
 #include "computedExpressionArray.hpp"
+#include "computedExpressionMap.hpp"
 #include "computedExpressionCompiledFunction.hpp"
 #include "computedExpressionIteratorEnd.hpp"
 
@@ -195,6 +196,24 @@ Program& Program::execute() {
           stack.pop_back();
         }
         stack.push_back(GarbageCollected::make<ComputedExpressionArray>(contents));
+        pc += 2;
+        break;
+      }
+      case Opcode::MAP: {
+        EXECUTEPROGRAMCHECK(1);
+        auto size = this->bytecode[pc + 1];
+        STACKCHECK(size * 2);
+        map<string, GarbageCollected> contents;
+        for (uinteger_t i = 0; i < size; ++i) {
+          auto value = stack.back();
+          stack.pop_back();
+          auto key = stack.back();
+          stack.pop_back();
+          if (typeid(*key) == typeid(ComputedExpressionString)) {
+            contents.insert({static_cast<ComputedExpressionString &>(*key).getValue(), value});
+          }
+        }
+        stack.push_back(GarbageCollected::make<ComputedExpressionMap>(contents));
         pc += 2;
         break;
       }
@@ -413,6 +432,14 @@ Program& Program::execute() {
         auto operand = stack.back();
         stack.pop_back();
         stack.push_back(operand->__boolean());
+        ++pc;
+        break;
+      }
+      case Opcode::CASTSTRING: {
+        STACKCHECK(1);
+        auto operand = stack.back();
+        stack.pop_back();
+        stack.push_back(operand->__string());
         ++pc;
         break;
       }
