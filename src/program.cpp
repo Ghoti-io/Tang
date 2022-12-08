@@ -14,7 +14,7 @@
 using namespace std;
 using namespace Tang;
 
-Program::Program(string code, Program::CodeType codeType) : code{code}, codeType{codeType}, ast{nullptr} {
+Program::Program(string code, Program::CodeType codeType, std::shared_ptr<Tang::TangBase> tang) : tang{tang}, code{code}, codeType{codeType}, ast{nullptr} {
   this->parse();
   if (this->ast) {
     this->compile();

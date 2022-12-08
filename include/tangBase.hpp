@@ -3,9 +3,14 @@
  * Declare the Tang::TangBase class used to interact with Tang.
  */
 
+namespace Tang {
+  class TangBase;
+}
+
 #ifndef TANG_TANGBASE_HPP
 #define TANG_TANGBASE_HPP
 
+#include <memory>
 #include <string>
 #include "program.hpp"
 
@@ -55,12 +60,15 @@ namespace Tang {
    * 3. The \ref Program object may then be executed, providing
    *    instance-specific context information (*i.e.*, state).
    */
-  class TangBase {
+  class TangBase: public std::enable_shared_from_this<TangBase> {
   public:
     /**
-     * The constructor.  Isn't it glorious.
+     * Create an instance of Tang and return a reference to it as a shared
+     * pointer.
+     *
+     * @return A shared pointer to the base Tang object.
      */
-    TangBase();
+    static std::shared_ptr<TangBase> make_shared();
 
     /**
      * Compile the provided source code as a script and return a Program.
@@ -69,6 +77,15 @@ namespace Tang {
      * @return The Program object representing the compiled script.
      */
     Program compileScript(std::string script);
+
+    /**
+     * The constructor.
+     *
+     * This function should never be called directly.  Rather, always use the
+     * Tang::TangBase() static method, which supplies the shared pointer
+     * necessary for creation of Program objects.
+     */
+    TangBase();
   };
 }
 

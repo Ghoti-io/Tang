@@ -3,6 +3,10 @@
  * Declare the Tang::Program class used to compile and execute source code.
  */
 
+namespace Tang {
+  class Program;
+}
+
 #ifndef TANG_PROGRAM_HPP
 #define TANG_PROGRAM_HPP
 
@@ -13,6 +17,7 @@
 #include <map>
 #include "astNode.hpp"
 #include "error.hpp"
+#include "tangBase.hpp"
 #include "computedExpression.hpp"
 #include "garbageCollected.hpp"
 
@@ -42,8 +47,9 @@ namespace Tang {
      *
      * @param code The code to be compiled.
      * @param codeType Whether the code is a `Script` or `Template`.
+     * @param tang A pointer to the base Tang class.
      */
-    Program(std::string code, CodeType codeType);
+    Program(std::string code, CodeType codeType, std::shared_ptr<Tang::TangBase> tang);
 
     /**
      * Get the code that was provided when the Program was created.
@@ -249,6 +255,11 @@ namespace Tang {
     void popContinueStack(size_t target);
 
   private:
+    /**
+     * A pointer to the base Tang class.
+     */
+    std::shared_ptr<Tang::TangBase> tang;
+
     /**
      * Stack of mappings of identifiers to their stack locations.
      */
