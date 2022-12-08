@@ -12,7 +12,9 @@ namespace Tang {
 
 #include <memory>
 #include <string>
+#include <typeindex>
 #include "program.hpp"
+#include "computedExpression.hpp"
 
 /**
  * \mainpage Tang: A Template Language
@@ -86,6 +88,19 @@ namespace Tang {
      * necessary for creation of Program objects.
      */
     TangBase();
+
+    /**
+     * Get the object methods available to this instance of the base language
+     * object.
+     */
+    map<std::type_index, std::map<std::string, Tang::NativeBoundFunction>> & getObjectMethods();
+
+
+  private:
+    /**
+     * Store the available object methods.
+     */
+    map<std::type_index, std::map<std::string, Tang::NativeBoundFunction>> objectMethods;
   };
 }
 

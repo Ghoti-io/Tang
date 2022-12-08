@@ -39,6 +39,7 @@ namespace Tang {
     GTE,      ///< Pop rhs, pop lhs, push lhs >= rhs
     EQ,       ///< Pop rhs, pop lhs, push lhs == rhs
     NEQ,      ///< Pop rhs, pop lhs, push lhs != rhs
+    PERIOD,   ///< Pop rhs, pop lhs, push lhs.rhs
     INDEX,    ///< Pop index, pop collection, push collection[index]
     SLICE,    ///< Pop skip, pop end, pop begin, pop collection,
               ///<   push collection[begin:end:skip]

@@ -14,11 +14,15 @@ namespace Tang {
 
 #include <cstdint>
 #include <string>
+#include <vector>
+#include <memory>
 #include "macros.hpp"
 #include "garbageCollected.hpp"
 #include "error.hpp"
 
 namespace Tang {
+  class TangBase;
+
   /**
    * Represents the result of a computation that has been executed.
    *
@@ -190,6 +194,14 @@ namespace Tang {
        * @return The result of the the operation.
        */
       virtual GarbageCollected __equal(const GarbageCollected & rhs) const;
+
+      /**
+       * Perform a member access (period) operation.
+       *
+       * @param member The member expression provided by the script.
+       * @return The result of the operation.
+       */
+      virtual GarbageCollected __period(const GarbageCollected & member, std::shared_ptr<TangBase> & tang) const;
 
       /**
        * Perform an index operation.

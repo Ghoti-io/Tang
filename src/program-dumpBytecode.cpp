@@ -217,6 +217,11 @@ string Program::dumpBytecode() const {
         ++pc;
         break;
       }
+      case Opcode::PERIOD: {
+        out << "PERIOD";
+        ++pc;
+        break;
+      }
       case Opcode::INDEX: {
         out << "INDEX";
         ++pc;

@@ -1680,6 +1680,37 @@ TEST(Function, PassByValueVsRef) {
   }
 }
 
+TEST(ClassFunctions, String) {
+  {
+    // Bound function call
+    auto p1 = tang->compileScript(R"(
+      a = "Hello World";
+      print(a.length());
+    )");
+    EXPECT_EQ(p1.execute().out, "11");
+  }
+  {
+    // Bound function assignment
+    auto p1 = tang->compileScript(R"(
+      a = "Hello World";
+      b = a.length;
+      print(b());
+    )");
+    EXPECT_EQ(p1.execute().out, "11");
+  }
+  {
+    // Bound function assignment does not change
+    auto p1 = tang->compileScript(R"(
+      a = "Hello World";
+      b = a.length;
+      a = "Goodbye";
+      print(b());
+      print(a.length());
+    )");
+    EXPECT_EQ(p1.execute().out, "117");
+  }
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

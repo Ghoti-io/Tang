@@ -248,6 +248,9 @@ using namespace std;
   [a-zA-Z_][a-zA-Z0-9_]* {
     return Tang::TangParser::make_IDENTIFIER(yytext, Tang::location(location));
   }
+  \. {
+    return Tang::TangParser::make_PERIOD(Tang::location(location));
+  }
   . {}
   \n {}
   <<EOF>> {

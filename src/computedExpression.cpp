@@ -3,9 +3,13 @@
  * Define the Tang::ComputedExpression class.
  */
 
+#include <typeinfo>
 #include "computedExpression.hpp"
 #include "computedExpressionBoolean.hpp"
+#include "computedExpressionString.hpp"
+#include "computedExpressionNativeBoundFunction.hpp"
 #include "computedExpressionError.hpp"
+#include "tangBase.hpp"
 
 using namespace std;
 using namespace Tang;
@@ -112,6 +116,22 @@ GarbageCollected ComputedExpression::__equal([[maybe_unused]] const GarbageColle
     return GarbageCollected::make<ComputedExpressionBoolean>(false);
   }
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to compare these values."});
+}
+
+GarbageCollected ComputedExpression::__period([[maybe_unused]] const GarbageCollected & member, [[maybe_unused]] shared_ptr<TangBase> & tang) const {
+  if (typeid(*member) == typeid(ComputedExpressionString)) {
+    auto & objectMethods = tang->getObjectMethods();
+    auto thisType = type_index(typeid(*this));
+    if (objectMethods.count(thisType)) {
+      auto & methods = objectMethods.at(thisType);
+      string name = static_cast<ComputedExpressionString &>(*member).getValue();
+      if (methods.count(name)) {
+        return GarbageCollected::make<ComputedExpressionNativeBoundFunction>(methods.at(name));
+      }
+    }
+  }
+
+  return GarbageCollected::make<ComputedExpressionError>(Error{"Member not found."});
 }
 
 GarbageCollected ComputedExpression::__index([[maybe_unused]] const GarbageCollected & index) const {

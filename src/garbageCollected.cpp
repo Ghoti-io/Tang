@@ -1,3 +1,7 @@
+/**
+ * @file
+ */
+
 #include "garbageCollected.hpp"
 #include "computedExpressionError.hpp"
 

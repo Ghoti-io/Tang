@@ -15,6 +15,7 @@
 #include "computedExpressionArray.hpp"
 #include "computedExpressionMap.hpp"
 #include "computedExpressionCompiledFunction.hpp"
+#include "computedExpressionNativeBoundFunction.hpp"
 #include "computedExpressionIteratorEnd.hpp"
 
 using namespace std;
@@ -363,6 +364,20 @@ Program& Program::execute() {
         ++pc;
         break;
       }
+      case Opcode::PERIOD: {
+        STACKCHECK(2);
+        auto rhs = stack.back();
+        stack.pop_back();
+        auto lhs = stack.back();
+        stack.pop_back();
+        auto tmp = lhs->__period(rhs, this->tang);
+        if (typeid(*tmp) == typeid(ComputedExpressionNativeBoundFunction)) {
+          static_cast<ComputedExpressionNativeBoundFunction &>(*tmp).target = lhs;
+        }
+        stack.push_back(tmp);
+        ++pc;
+        break;
+      }
       case Opcode::INDEX: {
         STACKCHECK(2);
         auto index = stack.back();
@@ -482,6 +497,35 @@ Program& Program::execute() {
           fp = stack.size() - argc;
 
           break;
+        }
+
+        // Compiled functions make use of the arguments on the stack.
+        // They will clean up the stack when they finish, via the RETURN
+        // opcode.
+        if (typeid(*function) == typeid(ComputedExpressionNativeBoundFunction)) {
+          auto & funcConv = static_cast<ComputedExpressionNativeBoundFunction &>(*function);
+
+          // Populate argv to use when calling the function.
+          vector<GarbageCollected> argv{};
+          argv.reserve(argc);
+          auto iter = stack.end() - argc;
+          while (iter != stack.end()) {
+            argv.push_back(*iter);
+            ++iter;
+          }
+
+          // Remove the arguments from the stack.
+          for (int i = 0; i < argc; ++i) {
+            stack.pop_back();
+          }
+
+          // Make sure that there is an object that was bound to the function.
+          if (funcConv.target) {
+            stack.push_back(funcConv.nativeBoundFunction(*funcConv.target, argv));
+
+            pc += 2;
+            break;
+          }
         }
 
         // Error: We don't know what to do.

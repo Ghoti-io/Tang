@@ -122,6 +122,7 @@
 %token COLON ":"
 %token SEMICOLON ";"
 %token COMMA ","
+%token PERIOD "."
 
 // Any %type declarations of non-terminals.
 // https://www.gnu.org/software/bison/manual/bison.html#index-_0025type
@@ -152,7 +153,7 @@
 %left "+" "-"
 %left "*" "/" "%"
 %right UMINUS AS "!"
-%left "(" ")" "[" "]"
+%left "(" ")" "[" "]" "."
 
 // Code sections.
 // https://www.gnu.org/software/bison/manual/bison.html#g_t_0025code-Summary
@@ -180,6 +181,7 @@ namespace Tang {
 #include "astNodeContinue.hpp"
 #include "astNodeFloat.hpp"
 #include "astNodeIdentifier.hpp"
+#include "astNodePeriod.hpp"
 #include "astNodeIndex.hpp"
 #include "astNodeInteger.hpp"
 #include "astNodeBoolean.hpp"
@@ -529,6 +531,10 @@ expression
   | "print" "(" expression ")"
     {
       $$ = std::make_shared<AstNodePrint>(AstNodePrint::Default, $3, @1);
+    }
+  | expression "." IDENTIFIER
+    {
+      $$ = std::make_shared<AstNodePeriod>($1, $3, @1);
     }
   |  "[" expressionList "]"
     {
