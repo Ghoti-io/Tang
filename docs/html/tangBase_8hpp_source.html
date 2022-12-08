@@ -88,27 +88,46 @@ $(document).ready(function(){initNavTree('tangBase_8hpp_source.html',''); initRe
 </div><!--header-->
 <div class="contents">
 <a href="tangBase_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef TANG_TANGBASE_HPP</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define TANG_TANGBASE_HPP</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="program_8hpp.html">program.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">namespace </span>Tang {</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classTang_1_1TangBase.html">   58</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classTang_1_1TangBase.html">TangBase</a> {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classTang_1_1TangBase.html#a6aa1668d0232e39e60d01fbce2419ef4">TangBase</a>();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="classTang_1_1Program.html">Program</a> <a class="code" href="classTang_1_1TangBase.html#a3c1ad8653a52f5a90fee20c385be7540">compileScript</a>(std::string script);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  };</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>Tang {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keyword">class </span>TangBase;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef TANG_TANGBASE_HPP</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define TANG_TANGBASE_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;typeindex&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="program_8hpp.html">program.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="computedExpression_8hpp.html">computedExpression.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">namespace </span>Tang {</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classTang_1_1TangBase.html">   65</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classTang_1_1TangBase.html">TangBase</a>: <span class="keyword">public</span> std::enable_shared_from_this&lt;TangBase&gt; {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">static</span> std::shared_ptr&lt;TangBase&gt; <a class="code" href="classTang_1_1TangBase.html#a7501b115ed8b6c60b3e5dfbe01d7aa5b">make_shared</a>();</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// TANG_TANGBASE_HPP</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="ttc" id="aclassTang_1_1Program_html"><div class="ttname"><a href="classTang_1_1Program.html">Tang::Program</a></div><div class="ttdoc">Represents a compiled script or template that may be executed.</div><div class="ttdef"><b>Definition:</b> program.hpp:30</div></div>
-<div class="ttc" id="aclassTang_1_1TangBase_html"><div class="ttname"><a href="classTang_1_1TangBase.html">Tang::TangBase</a></div><div class="ttdoc">The base class for the Tang programming language.</div><div class="ttdef"><b>Definition:</b> tangBase.hpp:58</div></div>
-<div class="ttc" id="aclassTang_1_1TangBase_html_a3c1ad8653a52f5a90fee20c385be7540"><div class="ttname"><a href="classTang_1_1TangBase.html#a3c1ad8653a52f5a90fee20c385be7540">Tang::TangBase::compileScript</a></div><div class="ttdeci">Program compileScript(std::string script)</div><div class="ttdoc">Compile the provided source code as a script and return a Program.</div><div class="ttdef"><b>Definition:</b> tangBase.cpp:13</div></div>
-<div class="ttc" id="aclassTang_1_1TangBase_html_a6aa1668d0232e39e60d01fbce2419ef4"><div class="ttname"><a href="classTang_1_1TangBase.html#a6aa1668d0232e39e60d01fbce2419ef4">Tang::TangBase::TangBase</a></div><div class="ttdeci">TangBase()</div><div class="ttdoc">The constructor.</div><div class="ttdef"><b>Definition:</b> tangBase.cpp:11</div></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classTang_1_1Program.html">Program</a> <a class="code" href="classTang_1_1TangBase.html#a3c1ad8653a52f5a90fee20c385be7540">compileScript</a>(std::string script);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="classTang_1_1TangBase.html#a6aa1668d0232e39e60d01fbce2419ef4">TangBase</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    map&lt;std::type_index, std::map&lt;std::string, Tang::NativeBoundFunction&gt;&gt; &amp; <a class="code" href="classTang_1_1TangBase.html#ade2e19b3c78cb4fcd4f8b945383118cb">getObjectMethods</a>();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classTang_1_1TangBase.html#a89c4162ba7b1e2766f93957324684e32">  103</a></span>&#160;    map&lt;std::type_index, std::map&lt;std::string, Tang::NativeBoundFunction&gt;&gt; <a class="code" href="classTang_1_1TangBase.html#a89c4162ba7b1e2766f93957324684e32">objectMethods</a>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  };</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// TANG_TANGBASE_HPP</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="ttc" id="aclassTang_1_1Program_html"><div class="ttname"><a href="classTang_1_1Program.html">Tang::Program</a></div><div class="ttdoc">Represents a compiled script or template that may be executed.</div><div class="ttdef"><b>Definition:</b> program.hpp:35</div></div>
+<div class="ttc" id="aclassTang_1_1TangBase_html"><div class="ttname"><a href="classTang_1_1TangBase.html">Tang::TangBase</a></div><div class="ttdoc">The base class for the Tang programming language.</div><div class="ttdef"><b>Definition:</b> tangBase.hpp:65</div></div>
+<div class="ttc" id="aclassTang_1_1TangBase_html_a3c1ad8653a52f5a90fee20c385be7540"><div class="ttname"><a href="classTang_1_1TangBase.html#a3c1ad8653a52f5a90fee20c385be7540">Tang::TangBase::compileScript</a></div><div class="ttdeci">Program compileScript(std::string script)</div><div class="ttdoc">Compile the provided source code as a script and return a Program.</div><div class="ttdef"><b>Definition:</b> tangBase.cpp:27</div></div>
+<div class="ttc" id="aclassTang_1_1TangBase_html_a6aa1668d0232e39e60d01fbce2419ef4"><div class="ttname"><a href="classTang_1_1TangBase.html#a6aa1668d0232e39e60d01fbce2419ef4">Tang::TangBase::TangBase</a></div><div class="ttdeci">TangBase()</div><div class="ttdoc">The constructor.</div><div class="ttdef"><b>Definition:</b> tangBase.cpp:14</div></div>
+<div class="ttc" id="aclassTang_1_1TangBase_html_a7501b115ed8b6c60b3e5dfbe01d7aa5b"><div class="ttname"><a href="classTang_1_1TangBase.html#a7501b115ed8b6c60b3e5dfbe01d7aa5b">Tang::TangBase::make_shared</a></div><div class="ttdeci">static std::shared_ptr&lt; TangBase &gt; make_shared()</div><div class="ttdoc">Create an instance of Tang and return a reference to it as a shared pointer.</div><div class="ttdef"><b>Definition:</b> tangBase.cpp:31</div></div>
+<div class="ttc" id="aclassTang_1_1TangBase_html_a89c4162ba7b1e2766f93957324684e32"><div class="ttname"><a href="classTang_1_1TangBase.html#a89c4162ba7b1e2766f93957324684e32">Tang::TangBase::objectMethods</a></div><div class="ttdeci">map&lt; std::type_index, std::map&lt; std::string, Tang::NativeBoundFunction &gt; &gt; objectMethods</div><div class="ttdoc">Store the available object methods.</div><div class="ttdef"><b>Definition:</b> tangBase.hpp:103</div></div>
+<div class="ttc" id="aclassTang_1_1TangBase_html_ade2e19b3c78cb4fcd4f8b945383118cb"><div class="ttname"><a href="classTang_1_1TangBase.html#ade2e19b3c78cb4fcd4f8b945383118cb">Tang::TangBase::getObjectMethods</a></div><div class="ttdeci">map&lt; std::type_index, std::map&lt; std::string, Tang::NativeBoundFunction &gt; &gt; &amp; getObjectMethods()</div><div class="ttdoc">Get the object methods available to this instance of the base language object.</div><div class="ttdef"><b>Definition:</b> tangBase.cpp:35</div></div>
+<div class="ttc" id="acomputedExpression_8hpp_html"><div class="ttname"><a href="computedExpression_8hpp.html">computedExpression.hpp</a></div><div class="ttdoc">Declare the Tang::ComputedExpression base class.</div></div>
 <div class="ttc" id="aprogram_8hpp_html"><div class="ttname"><a href="program_8hpp.html">program.hpp</a></div><div class="ttdoc">Declare the Tang::Program class used to compile and execute source code.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

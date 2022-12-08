@@ -78,6 +78,8 @@ virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mb
 \begin{DoxyCompactList}\small\item\em Compute the logical not of this value. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_a7ac5773e7e1c7f4b7c7f8dcd29bfa00b}{\+\_\+\+\_\+less\+Than}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const
 \begin{DoxyCompactList}\small\item\em Compute the \char`\"{}less than\char`\"{} comparison. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_a5d83d6e7243a7af7aae63e77c8fd680a}{\+\_\+\+\_\+period}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&member, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+Base}} $>$ \&tang) const
+\begin{DoxyCompactList}\small\item\em Perform a member access (period) operation. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_abb6defbdb303825687da1bd1468e6133}{\+\_\+\+\_\+index}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&index) const
 \begin{DoxyCompactList}\small\item\em Perform an index operation. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_aa7a262384220a86eb273284f8990ca84}{\+\_\+\+\_\+slice}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&begin, const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&end, const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&skip) const
@@ -454,6 +456,24 @@ The result of the operation.
 
 Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionString_a6a774d8cd860ad4c17806ac710fe9161}{Tang\+::\+Computed\+Expression\+String}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a12f9abfc8fc324d491453f8c6bbb3e1d}{Tang\+::\+Computed\+Expression\+Integer}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionFloat_ad85ce3aa542b81649d4756d84de09ea2}{Tang\+::\+Computed\+Expression\+Float}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionError_a6656ac155a4ecf3e51f7588a6af9dc18}{Tang\+::\+Computed\+Expression\+Error}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionBoolean_a920fe1b19024cf867179e4eada53ed32}{Tang\+::\+Computed\+Expression\+Boolean}}.
 
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_a5d83d6e7243a7af7aae63e77c8fd680a}\label{classTang_1_1ComputedExpression_a5d83d6e7243a7af7aae63e77c8fd680a}} 
+\index{Tang::ComputedExpressionCompiledFunction@{Tang::ComputedExpressionCompiledFunction}!\_\_period@{\_\_period}}
+\index{\_\_period@{\_\_period}!Tang::ComputedExpressionCompiledFunction@{Tang::ComputedExpressionCompiledFunction}}
+\doxysubsubsection{\texorpdfstring{\_\_period()}{\_\_period()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+period (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{member,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+Base}} $>$ \&}]{tang }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Perform a member access (period) operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em member} & The member expression provided by the script. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classTang_1_1ComputedExpression_aa7a262384220a86eb273284f8990ca84}\label{classTang_1_1ComputedExpression_aa7a262384220a86eb273284f8990ca84}} 
 \index{Tang::ComputedExpressionCompiledFunction@{Tang::ComputedExpressionCompiledFunction}!\_\_slice@{\_\_slice}}
 \index{\_\_slice@{\_\_slice}!Tang::ComputedExpressionCompiledFunction@{Tang::ComputedExpressionCompiledFunction}}

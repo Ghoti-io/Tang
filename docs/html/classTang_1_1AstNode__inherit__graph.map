@@ -1,5 +1,5 @@
 <map id="Tang::AstNode" name="Tang::AstNode">
-<area shape="rect" id="node1" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="5,639,120,665"/>
+<area shape="rect" id="node1" title="Base class for representing nodes of an Abstract Syntax Tree (AST)." alt="" coords="5,664,120,691"/>
 <area shape="rect" id="node2" href="$classTang_1_1AstNodeArray.html" title="An AstNode that represents an array literal." alt="" coords="215,5,366,32"/>
 <area shape="rect" id="node3" href="$classTang_1_1AstNodeAssign.html" title="An AstNode that represents a binary expression." alt="" coords="211,56,370,83"/>
 <area shape="rect" id="node4" href="$classTang_1_1AstNodeBinary.html" title="An AstNode that represents a binary expression." alt="" coords="212,107,369,133"/>
@@ -18,12 +18,13 @@
 <area shape="rect" id="node17" href="$classTang_1_1AstNodeIndex.html" title="An AstNode that represents an index into a collection." alt="" coords="215,765,366,792"/>
 <area shape="rect" id="node18" href="$classTang_1_1AstNodeInteger.html" title="An AstNode that represents an integer literal." alt="" coords="210,816,371,843"/>
 <area shape="rect" id="node19" href="$classTang_1_1AstNodeMap.html" title="An AstNode that represents a map literal." alt="" coords="219,867,362,893"/>
-<area shape="rect" id="node20" href="$classTang_1_1AstNodePrint.html" title="An AstNode that represents a print typeeration." alt="" coords="218,917,363,944"/>
-<area shape="rect" id="node21" href="$classTang_1_1AstNodeRangedFor.html" title="An AstNode that represents a ranged for() statement." alt="" coords="199,968,383,995"/>
-<area shape="rect" id="node22" href="$classTang_1_1AstNodeReturn.html" title="An AstNode that represents a return statement." alt="" coords="211,1019,370,1045"/>
-<area shape="rect" id="node23" href="$classTang_1_1AstNodeSlice.html" title="An AstNode that represents a ternary expression." alt="" coords="217,1069,364,1096"/>
-<area shape="rect" id="node24" href="$classTang_1_1AstNodeString.html" title="An AstNode that represents a string literal." alt="" coords="214,1120,367,1147"/>
-<area shape="rect" id="node25" href="$classTang_1_1AstNodeTernary.html" title="An AstNode that represents a ternary expression." alt="" coords="209,1171,372,1197"/>
-<area shape="rect" id="node26" href="$classTang_1_1AstNodeUnary.html" title="An AstNode that represents a unary negation." alt="" coords="213,1221,368,1248"/>
-<area shape="rect" id="node27" href="$classTang_1_1AstNodeWhile.html" title="An AstNode that represents a while statement." alt="" coords="215,1272,367,1299"/>
+<area shape="rect" id="node20" href="$classTang_1_1AstNodePeriod.html" title="An AstNode that represents a member access (period) into an object." alt="" coords="213,917,369,944"/>
+<area shape="rect" id="node21" href="$classTang_1_1AstNodePrint.html" title="An AstNode that represents a print typeeration." alt="" coords="218,968,363,995"/>
+<area shape="rect" id="node22" href="$classTang_1_1AstNodeRangedFor.html" title="An AstNode that represents a ranged for() statement." alt="" coords="199,1019,383,1045"/>
+<area shape="rect" id="node23" href="$classTang_1_1AstNodeReturn.html" title="An AstNode that represents a return statement." alt="" coords="211,1069,370,1096"/>
+<area shape="rect" id="node24" href="$classTang_1_1AstNodeSlice.html" title="An AstNode that represents a ternary expression." alt="" coords="217,1120,364,1147"/>
+<area shape="rect" id="node25" href="$classTang_1_1AstNodeString.html" title="An AstNode that represents a string literal." alt="" coords="214,1171,367,1197"/>
+<area shape="rect" id="node26" href="$classTang_1_1AstNodeTernary.html" title="An AstNode that represents a ternary expression." alt="" coords="209,1221,372,1248"/>
+<area shape="rect" id="node27" href="$classTang_1_1AstNodeUnary.html" title="An AstNode that represents a unary negation." alt="" coords="213,1272,368,1299"/>
+<area shape="rect" id="node28" href="$classTang_1_1AstNodeWhile.html" title="An AstNode that represents a while statement." alt="" coords="215,1323,367,1349"/>
 </map>

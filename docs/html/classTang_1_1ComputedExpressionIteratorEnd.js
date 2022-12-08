@@ -17,6 +17,7 @@ var classTang_1_1ComputedExpressionIteratorEnd =
     [ "__multiply", "classTang_1_1ComputedExpressionIteratorEnd.html#a39df4abc066123ec2d634e921be40d21", null ],
     [ "__negative", "classTang_1_1ComputedExpressionIteratorEnd.html#a8e779d014cbb877f078d61a2ff91603d", null ],
     [ "__not", "classTang_1_1ComputedExpressionIteratorEnd.html#ac21f9e07c9d1f0a98b60bb1d75d8e87d", null ],
+    [ "__period", "classTang_1_1ComputedExpressionIteratorEnd.html#a5d83d6e7243a7af7aae63e77c8fd680a", null ],
     [ "__slice", "classTang_1_1ComputedExpressionIteratorEnd.html#aa7a262384220a86eb273284f8990ca84", null ],
     [ "__string", "classTang_1_1ComputedExpressionIteratorEnd.html#a1f51315c0bbe6d8123651bc1ed290e8d", null ],
     [ "__subtract", "classTang_1_1ComputedExpressionIteratorEnd.html#ab0d79debcd475a5063e574c10f1715ff", null ],

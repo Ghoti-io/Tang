@@ -9,13 +9,47 @@ The base class for the Tang programming language.
 
 {\ttfamily \#include $<$tang\+Base.\+hpp$>$}
 
+
+
+Inheritance diagram for Tang\+::Tang\+Base\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classTang_1_1TangBase__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tang\+::Tang\+Base\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTang_1_1TangBase__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classTang_1_1Program}{Program}} \mbox{\hyperlink{classTang_1_1TangBase_a3c1ad8653a52f5a90fee20c385be7540}{compile\+Script}} (std\+::string script)
+\begin{DoxyCompactList}\small\item\em Compile the provided source code as a script and return a \mbox{\hyperlink{classTang_1_1Program}{Program}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTang_1_1TangBase_a6aa1668d0232e39e60d01fbce2419ef4}{Tang\+Base}} ()
 \begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classTang_1_1Program}{Program}} \mbox{\hyperlink{classTang_1_1TangBase_a3c1ad8653a52f5a90fee20c385be7540}{compile\+Script}} (std\+::string script)
-\begin{DoxyCompactList}\small\item\em Compile the provided source code as a script and return a \mbox{\hyperlink{classTang_1_1Program}{Program}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{classTang_1_1TangBase_ade2e19b3c78cb4fcd4f8b945383118cb}\label{classTang_1_1TangBase_ade2e19b3c78cb4fcd4f8b945383118cb}} 
+map$<$ std\+::type\+\_\+index, std\+::map$<$ std\+::string, \mbox{\hyperlink{macros_8hpp_a7c18603d0e934d5f83ec840355893411}{Tang\+::\+Native\+Bound\+Function}} $>$ $>$ \& \mbox{\hyperlink{classTang_1_1TangBase_ade2e19b3c78cb4fcd4f8b945383118cb}{get\+Object\+Methods}} ()
+\begin{DoxyCompactList}\small\item\em Get the object methods available to this instance of the base language object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+Base}} $>$ \mbox{\hyperlink{classTang_1_1TangBase_a7501b115ed8b6c60b3e5dfbe01d7aa5b}{make\+\_\+shared}} ()
+\begin{DoxyCompactList}\small\item\em Create an instance of Tang and return a reference to it as a shared pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1TangBase_a89c4162ba7b1e2766f93957324684e32}\label{classTang_1_1TangBase_a89c4162ba7b1e2766f93957324684e32}} 
+map$<$ std\+::type\+\_\+index, std\+::map$<$ std\+::string, \mbox{\hyperlink{macros_8hpp_a7c18603d0e934d5f83ec840355893411}{Tang\+::\+Native\+Bound\+Function}} $>$ $>$ \mbox{\hyperlink{classTang_1_1TangBase_a89c4162ba7b1e2766f93957324684e32}{object\+Methods}}
+\begin{DoxyCompactList}\small\item\em Store the available object methods. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -43,7 +77,15 @@ It is intentionally designed that each instance of \mbox{\hyperlink{classTang_1_
 
 The constructor. 
 
-Isn\textquotesingle{}t it glorious. 
+This function should never be called directly. Rather, always use the \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+::\+Tang\+Base()}} static method, which supplies the shared pointer necessary for creation of \mbox{\hyperlink{classTang_1_1Program}{Program}} objects. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTang_1_1TangBase_a6aa1668d0232e39e60d01fbce2419ef4_cgraph}
+\end{center}
+\end{figure}
+
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classTang_1_1TangBase_a3c1ad8653a52f5a90fee20c385be7540}\label{classTang_1_1TangBase_a3c1ad8653a52f5a90fee20c385be7540}} 
@@ -63,6 +105,19 @@ Compile the provided source code as a script and return a \mbox{\hyperlink{class
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 The \mbox{\hyperlink{classTang_1_1Program}{Program}} object representing the compiled script. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1TangBase_a7501b115ed8b6c60b3e5dfbe01d7aa5b}\label{classTang_1_1TangBase_a7501b115ed8b6c60b3e5dfbe01d7aa5b}} 
+\index{Tang::TangBase@{Tang::TangBase}!make\_shared@{make\_shared}}
+\index{make\_shared@{make\_shared}!Tang::TangBase@{Tang::TangBase}}
+\doxysubsubsection{\texorpdfstring{make\_shared()}{make\_shared()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+Base}} $>$ Tang\+Base\+::make\+\_\+shared (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create an instance of Tang and return a reference to it as a shared pointer. 
+
+\begin{DoxyReturn}{Returns}
+A shared pointer to the base Tang object. 
 \end{DoxyReturn}
 
 

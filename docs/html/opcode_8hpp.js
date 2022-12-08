@@ -32,6 +32,7 @@ var opcode_8hpp =
       [ "GTE", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a32d35312e8f24bc1669bd2b45c00d47c", null ],
       [ "EQ", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a2dcbad7477fd40561e8b8198f173bd47", null ],
       [ "NEQ", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a375b332cf2e0c6d522baf007ef7cb554", null ],
+      [ "PERIOD", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ade58a28573783fe95304a260ccd90362", null ],
       [ "INDEX", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acb4ae3b37047fb4b2c0d16f8bf84f076", null ],
       [ "SLICE", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a0a1031e189c0c5e08d55c44fc02a4b26", null ],
       [ "GETITERATOR", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a007663613f231d7bfcee9025e2d9f756", null ],

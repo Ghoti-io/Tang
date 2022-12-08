@@ -197,6 +197,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a011d86ce9b04fca4bef67b4c5bb3324c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpression.html#a011d86ce9b04fca4bef67b4c5bb3324c">__assign_index</a> (const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;index, const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;value)</td></tr>
 <tr class="memdesc:a011d86ce9b04fca4bef67b4c5bb3324c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform an index assignment to the supplied value.  <a href="classTang_1_1ComputedExpression.html#a011d86ce9b04fca4bef67b4c5bb3324c">More...</a><br /></td></tr>
 <tr class="separator:a011d86ce9b04fca4bef67b4c5bb3324c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d83d6e7243a7af7aae63e77c8fd680a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpression.html#a5d83d6e7243a7af7aae63e77c8fd680a">__period</a> (const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;member, std::shared_ptr&lt; <a class="el" href="classTang_1_1TangBase.html">TangBase</a> &gt; &amp;tang) const</td></tr>
+<tr class="memdesc:a5d83d6e7243a7af7aae63e77c8fd680a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a member access (period) operation.  <a href="classTang_1_1ComputedExpression.html#a5d83d6e7243a7af7aae63e77c8fd680a">More...</a><br /></td></tr>
+<tr class="separator:a5d83d6e7243a7af7aae63e77c8fd680a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb6defbdb303825687da1bd1468e6133"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpression.html#abb6defbdb303825687da1bd1468e6133">__index</a> (const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;index) const</td></tr>
 <tr class="memdesc:abb6defbdb303825687da1bd1468e6133"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform an index operation.  <a href="classTang_1_1ComputedExpression.html#abb6defbdb303825687da1bd1468e6133">More...</a><br /></td></tr>
 <tr class="separator:abb6defbdb303825687da1bd1468e6133"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -803,6 +806,51 @@ Private Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The result of the operation. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#ac21f9e07c9d1f0a98b60bb1d75d8e87d">Tang::ComputedExpression</a>.</p>
+
+</div>
+</div>
+<a id="a5d83d6e7243a7af7aae63e77c8fd680a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d83d6e7243a7af7aae63e77c8fd680a">&#9670;&nbsp;</a></span>__period()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> ComputedExpression::__period </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &amp;&#160;</td>
+          <td class="paramname"><em>member</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classTang_1_1TangBase.html">TangBase</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>tang</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Perform a member access (period) operation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">member</td><td>The member expression provided by the script. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result of the operation. </dd></dl>
 
 </div>
 </div>

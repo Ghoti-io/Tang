@@ -4,7 +4,7 @@ var classTang_1_1Program =
       [ "Script", "classTang_1_1Program.html#ad99e214562094e21f38b6a453163041ba38b647d35ef85ffa1affec5c7fcb7ac1", null ],
       [ "Template", "classTang_1_1Program.html#ad99e214562094e21f38b6a453163041bacfade8685b2abd2b062a2367158ce2f3", null ]
     ] ],
-    [ "Program", "classTang_1_1Program.html#a4f704a5a0364c6d62330e15d6ee56219", null ],
+    [ "Program", "classTang_1_1Program.html#a9e319b3f9fb276c281e1ad070462a8a3", null ],
     [ "addBreak", "classTang_1_1Program.html#ae4a0290af40e77c489286303ef73dae3", null ],
     [ "addBytecode", "classTang_1_1Program.html#a1067d000db48378fa37ff569ffdf7329", null ],
     [ "addContinue", "classTang_1_1Program.html#ad95d0be274c087ea9361d4b758ae26c2", null ],
@@ -43,5 +43,6 @@ var classTang_1_1Program =
     [ "identifierStack", "classTang_1_1Program.html#a440bf2cdcd08fe6b2b0c2c19c22fa276", null ],
     [ "out", "classTang_1_1Program.html#a81bee7c0545c053eee44d4381295e193", null ],
     [ "result", "classTang_1_1Program.html#a60f4be3d576e81e6200167f2d910f259", null ],
-    [ "stringStack", "classTang_1_1Program.html#aae4297c7f590e95eadc98f3c09f9dae9", null ]
+    [ "stringStack", "classTang_1_1Program.html#aae4297c7f590e95eadc98f3c09f9dae9", null ],
+    [ "tang", "classTang_1_1Program.html#ae1b7ad9e715c228225c69765a2904bf9", null ]
 ];

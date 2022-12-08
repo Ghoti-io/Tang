@@ -11,7 +11,8 @@ Represents a compiled script or template that may be executed.
 
 
 
-Collaboration diagram for Tang\+::Program\+:\nopagebreak
+Collaboration diagram for Tang\+::Program\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -28,7 +29,7 @@ enum \mbox{\hyperlink{classTang_1_1Program_ad99e214562094e21f38b6a453163041b}{Co
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTang_1_1Program_a4f704a5a0364c6d62330e15d6ee56219}{Program}} (std\+::string \mbox{\hyperlink{classTang_1_1Program_a747cd63b40c48f81d17a2501e4fdd0e5}{code}}, \mbox{\hyperlink{classTang_1_1Program_ad99e214562094e21f38b6a453163041b}{Code\+Type}} \mbox{\hyperlink{classTang_1_1Program_adc2c06ba6f616882bbf0876ceedfc328}{code\+Type}})
+\mbox{\hyperlink{classTang_1_1Program_a9e319b3f9fb276c281e1ad070462a8a3}{Program}} (std\+::string \mbox{\hyperlink{classTang_1_1Program_a747cd63b40c48f81d17a2501e4fdd0e5}{code}}, \mbox{\hyperlink{classTang_1_1Program_ad99e214562094e21f38b6a453163041b}{Code\+Type}} \mbox{\hyperlink{classTang_1_1Program_adc2c06ba6f616882bbf0876ceedfc328}{code\+Type}}, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+::\+Tang\+Base}} $>$ \mbox{\hyperlink{classTang_1_1Program_ae1b7ad9e715c228225c69765a2904bf9}{tang}})
 \begin{DoxyCompactList}\small\item\em Create a compiled program using the provided code. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classTang_1_1Program_a75aff78d6b94472f4d8f93e6f79cfbe0}{get\+Code}} () const
 \begin{DoxyCompactList}\small\item\em Get the code that was provided when the \mbox{\hyperlink{classTang_1_1Program}{Program}} was created. \end{DoxyCompactList}\item 
@@ -105,6 +106,9 @@ void \mbox{\hyperlink{classTang_1_1Program_ac1fee8bf44ff31dd8a1131e9dbc47304}{co
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classTang_1_1Program_ae1b7ad9e715c228225c69765a2904bf9}\label{classTang_1_1Program_ae1b7ad9e715c228225c69765a2904bf9}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+::\+Tang\+Base}} $>$ \mbox{\hyperlink{classTang_1_1Program_ae1b7ad9e715c228225c69765a2904bf9}{tang}}
+\begin{DoxyCompactList}\small\item\em A pointer to the base Tang class. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTang_1_1Program_a440bf2cdcd08fe6b2b0c2c19c22fa276}\label{classTang_1_1Program_a440bf2cdcd08fe6b2b0c2c19c22fa276}} 
 std\+::vector$<$ std\+::map$<$ std\+::string, size\+\_\+t $>$ $>$ \mbox{\hyperlink{classTang_1_1Program_a440bf2cdcd08fe6b2b0c2c19c22fa276}{identifier\+Stack}}
 \begin{DoxyCompactList}\small\item\em Stack of mappings of identifiers to their stack locations. \end{DoxyCompactList}\item 
@@ -164,11 +168,11 @@ Template&The code is a template. \\
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classTang_1_1Program_a4f704a5a0364c6d62330e15d6ee56219}\label{classTang_1_1Program_a4f704a5a0364c6d62330e15d6ee56219}} 
+\mbox{\Hypertarget{classTang_1_1Program_a9e319b3f9fb276c281e1ad070462a8a3}\label{classTang_1_1Program_a9e319b3f9fb276c281e1ad070462a8a3}} 
 \index{Tang::Program@{Tang::Program}!Program@{Program}}
 \index{Program@{Program}!Tang::Program@{Tang::Program}}
 \doxysubsubsection{\texorpdfstring{Program()}{Program()}}
-{\footnotesize\ttfamily Program\+::\+Program (\begin{DoxyParamCaption}\item[{std\+::string}]{code,  }\item[{\mbox{\hyperlink{classTang_1_1Program_ad99e214562094e21f38b6a453163041b}{Program\+::\+Code\+Type}}}]{code\+Type }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Program\+::\+Program (\begin{DoxyParamCaption}\item[{std\+::string}]{code,  }\item[{\mbox{\hyperlink{classTang_1_1Program_ad99e214562094e21f38b6a453163041b}{Program\+::\+Code\+Type}}}]{code\+Type,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+::\+Tang\+Base}} $>$}]{tang }\end{DoxyParamCaption})}
 
 
 
@@ -180,14 +184,9 @@ Create a compiled program using the provided code.
 \hline
 {\em code\+Type} & Whether the code is a {\ttfamily Script} or {\ttfamily Template}. \\
 \hline
+{\em tang} & A pointer to the base Tang class. \\
+\hline
 \end{DoxyParams}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classTang_1_1Program_a4f704a5a0364c6d62330e15d6ee56219_cgraph}
-\end{center}
-\end{figure}
 
 
 \doxysubsection{Member Function Documentation}
@@ -314,13 +313,6 @@ Execute the program\textquotesingle{}s Bytecode, and return the current \mbox{\h
 \begin{DoxyReturn}{Returns}
 The current \mbox{\hyperlink{classTang_1_1Program}{Program}} object. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classTang_1_1Program_a68dc832846a651693dea5770d047d4a6_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{classTang_1_1Program_a2dedf08e5d7f9f92179c4af2eea870ee}\label{classTang_1_1Program_a2dedf08e5d7f9f92179c4af2eea870ee}} 
 \index{Tang::Program@{Tang::Program}!getAst@{getAst}}
 \index{getAst@{getAst}!Tang::Program@{Tang::Program}}

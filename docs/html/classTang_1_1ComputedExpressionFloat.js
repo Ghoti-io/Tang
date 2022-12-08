@@ -17,6 +17,7 @@ var classTang_1_1ComputedExpressionFloat =
     [ "__multiply", "classTang_1_1ComputedExpressionFloat.html#af041a3a4e933ebe4e043cddd29e0f56b", null ],
     [ "__negative", "classTang_1_1ComputedExpressionFloat.html#a203faa00cd83e6746084287b0e2ac778", null ],
     [ "__not", "classTang_1_1ComputedExpressionFloat.html#ad85ce3aa542b81649d4756d84de09ea2", null ],
+    [ "__period", "classTang_1_1ComputedExpressionFloat.html#a5d83d6e7243a7af7aae63e77c8fd680a", null ],
     [ "__slice", "classTang_1_1ComputedExpressionFloat.html#aa7a262384220a86eb273284f8990ca84", null ],
     [ "__string", "classTang_1_1ComputedExpressionFloat.html#a873e1a1bd0810ab622e4be3b60a4c77b", null ],
     [ "__subtract", "classTang_1_1ComputedExpressionFloat.html#aa6e605b26eb90dbd2002be8215f754cf", null ],

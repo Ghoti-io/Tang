@@ -17,6 +17,7 @@ var classTang_1_1ComputedExpressionError =
     [ "__multiply", "classTang_1_1ComputedExpressionError.html#a9d28fdf8b7df2db9ffd2bd3790e97d45", null ],
     [ "__negative", "classTang_1_1ComputedExpressionError.html#a997df4c08b3af938d338bbcf6292594a", null ],
     [ "__not", "classTang_1_1ComputedExpressionError.html#a6656ac155a4ecf3e51f7588a6af9dc18", null ],
+    [ "__period", "classTang_1_1ComputedExpressionError.html#a5d83d6e7243a7af7aae63e77c8fd680a", null ],
     [ "__slice", "classTang_1_1ComputedExpressionError.html#aa7a262384220a86eb273284f8990ca84", null ],
     [ "__string", "classTang_1_1ComputedExpressionError.html#a7d5d18da408ab371e7360617760ac205", null ],
     [ "__subtract", "classTang_1_1ComputedExpressionError.html#a6a9b874ae80e6513ffafaf92b8845a28", null ],

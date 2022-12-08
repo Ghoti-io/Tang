@@ -19,6 +19,7 @@ var hierarchy =
       [ "Tang::AstNodeIndex", "classTang_1_1AstNodeIndex.html", null ],
       [ "Tang::AstNodeInteger", "classTang_1_1AstNodeInteger.html", null ],
       [ "Tang::AstNodeMap", "classTang_1_1AstNodeMap.html", null ],
+      [ "Tang::AstNodePeriod", "classTang_1_1AstNodePeriod.html", null ],
       [ "Tang::AstNodePrint", "classTang_1_1AstNodePrint.html", null ],
       [ "Tang::AstNodeRangedFor", "classTang_1_1AstNodeRangedFor.html", null ],
       [ "Tang::AstNodeReturn", "classTang_1_1AstNodeReturn.html", null ],
@@ -38,7 +39,11 @@ var hierarchy =
       [ "Tang::ComputedExpressionIterator", "classTang_1_1ComputedExpressionIterator.html", null ],
       [ "Tang::ComputedExpressionIteratorEnd", "classTang_1_1ComputedExpressionIteratorEnd.html", null ],
       [ "Tang::ComputedExpressionMap", "classTang_1_1ComputedExpressionMap.html", null ],
+      [ "Tang::ComputedExpressionNativeBoundFunction", "classTang_1_1ComputedExpressionNativeBoundFunction.html", null ],
       [ "Tang::ComputedExpressionString", "classTang_1_1ComputedExpressionString.html", null ]
+    ] ],
+    [ "std::enable_shared_from_this", null, [
+      [ "Tang::TangBase", "classTang_1_1TangBase.html", null ]
     ] ],
     [ "Tang::Error", "classTang_1_1Error.html", null ],
     [ "Tang::GarbageCollected", "classTang_1_1GarbageCollected.html", null ],
@@ -46,7 +51,6 @@ var hierarchy =
     [ "Tang::position", "classTang_1_1position.html", null ],
     [ "Tang::Program", "classTang_1_1Program.html", null ],
     [ "Tang::SingletonObjectPool< T >", "classTang_1_1SingletonObjectPool.html", null ],
-    [ "Tang::TangBase", "classTang_1_1TangBase.html", null ],
     [ "TangHtmlEscapeAsciiFlexLexer", null, [
       [ "Tang::HtmlEscapeAscii", "classTang_1_1HtmlEscapeAscii.html", null ]
     ] ],

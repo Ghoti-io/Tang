@@ -57,6 +57,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "astNodeMap.hpp", "astNodeMap_8hpp.html", [
       [ "AstNodeMap", "classTang_1_1AstNodeMap.html", "classTang_1_1AstNodeMap" ]
     ] ],
+    [ "astNodePeriod.hpp", "astNodePeriod_8hpp.html", [
+      [ "AstNodePeriod", "classTang_1_1AstNodePeriod.html", "classTang_1_1AstNodePeriod" ]
+    ] ],
     [ "astNodePrint.hpp", "astNodePrint_8hpp.html", [
       [ "AstNodePrint", "classTang_1_1AstNodePrint.html", "classTang_1_1AstNodePrint" ]
     ] ],
@@ -110,6 +113,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     ] ],
     [ "computedExpressionMap.hpp", "computedExpressionMap_8hpp.html", [
       [ "ComputedExpressionMap", "classTang_1_1ComputedExpressionMap.html", "classTang_1_1ComputedExpressionMap" ]
+    ] ],
+    [ "computedExpressionNativeBoundFunction.hpp", "computedExpressionNativeBoundFunction_8hpp.html", [
+      [ "ComputedExpressionNativeBoundFunction", "classTang_1_1ComputedExpressionNativeBoundFunction.html", "classTang_1_1ComputedExpressionNativeBoundFunction" ]
     ] ],
     [ "computedExpressionString.hpp", "computedExpressionString_8hpp.html", [
       [ "ComputedExpressionString", "classTang_1_1ComputedExpressionString.html", "classTang_1_1ComputedExpressionString" ]
