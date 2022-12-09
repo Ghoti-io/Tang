@@ -46,6 +46,14 @@ namespace Tang {
        */
       UnicodeString getValue() const;
 
+      /**
+       * Return the member functions implemented for this particular
+       * expression type.
+       *
+       * @return The member functions implemented.
+       */
+      static NativeBoundFunctionMap getMethods();
+
     private:
       /**
        * The string value.

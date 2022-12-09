@@ -194,3 +194,14 @@ UnicodeString ComputedExpressionString::getValue() const {
   return this->val;
 }
 
+NativeBoundFunctionMap ComputedExpressionString::getMethods() {
+  return {
+    {"length", [](GarbageCollected & target, [[maybe_unused]] vector<GarbageCollected>& args) {
+      if (typeid(*target) == typeid(ComputedExpressionString)) {
+        return GarbageCollected::make<ComputedExpressionInteger>((integer_t)static_cast<ComputedExpressionString &>(*target).getValue().length());
+      }
+      return GarbageCollected::make<ComputedExpressionError>(Error{""});
+    }},
+  };
+}
+
