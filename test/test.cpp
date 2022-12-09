@@ -1749,6 +1749,22 @@ TEST(ClassFunctions, Array) {
     )");
     EXPECT_EQ(p1.execute().out, "[1,2,3]3[1,2,3,\"foo\"]4");
   }
+  {
+    // Test the return value of append().
+    auto p1 = tang->compileScript(R"(
+      a = [1,2,3];
+      print(a.append("foo"));
+    )");
+    EXPECT_EQ(p1.execute().out, "[1,2,3,\"foo\"]");
+  }
+  {
+    // Test chained methods.
+    auto p1 = tang->compileScript(R"(
+      a = [1,2,3];
+      print(a.append("foo").length());
+    )");
+    EXPECT_EQ(p1.execute().out, "4");
+  }
 }
 
 int main(int argc, char** argv) {
