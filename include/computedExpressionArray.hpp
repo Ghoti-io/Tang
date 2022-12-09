@@ -40,6 +40,13 @@ namespace Tang {
       const std::vector<Tang::GarbageCollected> & getContents() const;
 
       /**
+       * Append an item to the contents of this array object.
+       *
+       * @param item The value to append to the this array.
+       */
+      void append(const Tang::GarbageCollected & item);
+
+      /**
        * Return the member functions implemented for this particular
        * expression type.
        *

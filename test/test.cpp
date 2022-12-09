@@ -1720,12 +1720,24 @@ TEST(ClassFunctions, String) {
 
 TEST(ClassFunctions, Array) {
   {
-    // Test append.
+    // Test length.
     auto p1 = tang->compileScript(R"(
       a = [1,2,3];
       print(a.length());
     )");
     EXPECT_EQ(p1.execute().out, "3");
+  }
+  {
+    // Test append.
+    auto p1 = tang->compileScript(R"(
+      a = [1,2,3];
+      print(a);
+      print(a.length());
+      a.append("foo");
+      print(a);
+      print(a.length());
+    )");
+    EXPECT_EQ(p1.execute().out, "[1,2,3]3[1,2,3,\"foo\"]4");
   }
 }
 

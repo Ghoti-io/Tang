@@ -180,11 +180,24 @@ const std::vector<Tang::GarbageCollected> & ComputedExpressionArray::getContents
   return this->contents;
 }
 
+void ComputedExpressionArray::append(const GarbageCollected & item) {
+  this->contents.push_back(item);
+}
+
 NativeBoundFunctionMap ComputedExpressionArray::getMethods() {
   return {
     {"length", [](GarbageCollected & target, [[maybe_unused]] vector<GarbageCollected>& args) {
       if (typeid(*target) == typeid(ComputedExpressionArray)) {
         return GarbageCollected::make<ComputedExpressionInteger>((integer_t)static_cast<ComputedExpressionArray&>(*target).getContents().size());
+      }
+      return ComputedExpression::nativeBoundTypeMismatchError();
+    }},
+    {"append", [](GarbageCollected & target, vector<GarbageCollected>& args) {
+      // Get the item to be added to the array.
+      auto & item = args.at(0);
+      if (typeid(*target) == typeid(ComputedExpressionArray)) {
+        static_cast<ComputedExpressionArray &>(*target).append(item);
+        return target;
       }
       return ComputedExpression::nativeBoundTypeMismatchError();
     }},
