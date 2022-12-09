@@ -6,6 +6,7 @@
 #ifndef TANG_COMPUTEDEXPRESSIONSTRING_HPP
 #define TANG_COMPUTEDEXPRESSIONSTRING_HPP
 
+#include "macros.hpp"
 #include "computedExpression.hpp"
 #include "unicodeString.hpp"
 
@@ -38,6 +39,11 @@ namespace Tang {
       virtual GarbageCollected __boolean() const override;
       virtual GarbageCollected __string() const override;
 
+      /**
+       * Return the string value that is stored in this object.
+       *
+       * @return The string value.
+       */
       UnicodeString getValue() const;
 
     private:
