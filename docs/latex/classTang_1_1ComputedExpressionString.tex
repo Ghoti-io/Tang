@@ -62,9 +62,8 @@ virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mb
 \begin{DoxyCompactList}\small\item\em Perform a type cast to boolean. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionString_a92af6f9ea5e1809e206d96d8fb31c30f}{\+\_\+\+\_\+string}} () const override
 \begin{DoxyCompactList}\small\item\em Perform a type cast to string. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTang_1_1ComputedExpressionString_a2d53950a859ebd6bce32e61c1124f7b2}\label{classTang_1_1ComputedExpressionString_a2d53950a859ebd6bce32e61c1124f7b2}} 
-\mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} {\bfseries get\+Value} () const
-\item 
+\mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} \mbox{\hyperlink{classTang_1_1ComputedExpressionString_a2d53950a859ebd6bce32e61c1124f7b2}{get\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Return the string value that is stored in this object. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a493f58bd7f51ca4d6b9b1ef1860b4370}{is\+Copy\+Needed}} () const
 \begin{DoxyCompactList}\small\item\em Determine whether or not a copy is needed. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a76aaf726b67cedb54b6b3c75c834645f}{is\+\_\+equal}} (const \mbox{\hyperlink{macros_8hpp_a48da4f54f29ec5b8a4dfd1a9234f7ee8}{Tang\+::integer\+\_\+t}} \&\mbox{\hyperlink{classTang_1_1ComputedExpressionString_a6e816aaa770ed66888707bb0aec9f6c8}{val}}) const
@@ -93,6 +92,17 @@ virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mb
 \begin{DoxyCompactList}\small\item\em Perform a type cast to integer. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_aa91f27a9f03b9a7fb9aa5a79efc3039f}{\+\_\+\+\_\+float}} () const
 \begin{DoxyCompactList}\small\item\em Perform a type cast to float. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{macros_8hpp_a81eb927deae7914a3eb0384952c96655}{Native\+Bound\+Function\+Map}} \mbox{\hyperlink{classTang_1_1ComputedExpressionString_a69cd522b2a8b1e3215eaa308d3b229ba}{get\+Methods}} ()
+\begin{DoxyCompactList}\small\item\em Return the member functions implemented for this particular expression type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_a5dc001c665a17143e255705d8f64327d}\label{classTang_1_1ComputedExpression_a5dc001c665a17143e255705d8f64327d}} 
+static \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_a5dc001c665a17143e255705d8f64327d}{native\+Bound\+Argument\+Count\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Provide a standard error message for an unexpected number of arguments provided to a Native\+Bound\+Function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_ad4ab003a77bdaf93d225269bdebb5248}\label{classTang_1_1ComputedExpression_ad4ab003a77bdaf93d225269bdebb5248}} 
+static \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_ad4ab003a77bdaf93d225269bdebb5248}{native\+Bound\+Type\+Mismatch\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Provide a standard error message for a type mismatch between a Native\+Bound\+Function to a \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -606,6 +616,40 @@ A string representation of the computed expression.
 
 Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_ab5df8f689f9fe515a2299d8cef332f4c}{Tang\+::\+Computed\+Expression}}.
 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionString_a69cd522b2a8b1e3215eaa308d3b229ba}\label{classTang_1_1ComputedExpressionString_a69cd522b2a8b1e3215eaa308d3b229ba}} 
+\index{Tang::ComputedExpressionString@{Tang::ComputedExpressionString}!getMethods@{getMethods}}
+\index{getMethods@{getMethods}!Tang::ComputedExpressionString@{Tang::ComputedExpressionString}}
+\doxysubsubsection{\texorpdfstring{getMethods()}{getMethods()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{macros_8hpp_a81eb927deae7914a3eb0384952c96655}{Native\+Bound\+Function\+Map}} Computed\+Expression\+String\+::get\+Methods (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return the member functions implemented for this particular expression type. 
+
+\begin{DoxyReturn}{Returns}
+The member functions implemented. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTang_1_1ComputedExpressionString_a69cd522b2a8b1e3215eaa308d3b229ba_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionString_a2d53950a859ebd6bce32e61c1124f7b2}\label{classTang_1_1ComputedExpressionString_a2d53950a859ebd6bce32e61c1124f7b2}} 
+\index{Tang::ComputedExpressionString@{Tang::ComputedExpressionString}!getValue@{getValue}}
+\index{getValue@{getValue}!Tang::ComputedExpressionString@{Tang::ComputedExpressionString}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} Computed\+Expression\+String\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return the string value that is stored in this object. 
+
+\begin{DoxyReturn}{Returns}
+The string value. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classTang_1_1ComputedExpressionString_a30aa173d92fe72fbe171a3f2808a8773}\label{classTang_1_1ComputedExpressionString_a30aa173d92fe72fbe171a3f2808a8773}} 
 \index{Tang::ComputedExpressionString@{Tang::ComputedExpressionString}!is\_equal@{is\_equal}}
 \index{is\_equal@{is\_equal}!Tang::ComputedExpressionString@{Tang::ComputedExpressionString}}

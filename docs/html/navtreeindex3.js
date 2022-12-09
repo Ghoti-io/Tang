@@ -1,5 +1,7 @@
 var NAVTREEINDEX3 =
 {
+"classTang_1_1ComputedExpressionNativeBoundFunction.html#a5287fabf86f19613afb04d5e285c0231":[1,0,0,38,24],
+"classTang_1_1ComputedExpressionNativeBoundFunction.html#a5ce6d4bc0128f6aadf72c2f63a70275a":[1,0,0,38,23],
 "classTang_1_1ComputedExpressionNativeBoundFunction.html#a5d83d6e7243a7af7aae63e77c8fd680a":[1,0,0,38,17],
 "classTang_1_1ComputedExpressionNativeBoundFunction.html#a5de45365dfcf4b9d01fb48662f9ec45b":[1,0,0,38,31],
 "classTang_1_1ComputedExpressionNativeBoundFunction.html#a6d0c01f57a6a2b6b8ec701202b16af94":[1,0,0,38,2],
@@ -163,9 +165,9 @@ var NAVTREEINDEX3 =
 "classTang_1_1SingletonObjectPool.html#ae03f03120231023e4ce7af518fc1bc19":[1,0,0,45,4],
 "classTang_1_1TangBase.html":[1,0,0,46],
 "classTang_1_1TangBase.html#a3c1ad8653a52f5a90fee20c385be7540":[1,0,0,46,1],
+"classTang_1_1TangBase.html#a62dfbf8c82da22d0c83d920c78c08eed":[1,0,0,46,2],
 "classTang_1_1TangBase.html#a6aa1668d0232e39e60d01fbce2419ef4":[1,0,0,46,0],
 "classTang_1_1TangBase.html#a89c4162ba7b1e2766f93957324684e32":[1,0,0,46,3],
-"classTang_1_1TangBase.html#ade2e19b3c78cb4fcd4f8b945383118cb":[1,0,0,46,2],
 "classTang_1_1TangScanner.html":[1,0,0,47],
 "classTang_1_1TangScanner.html#a0109128f5ed60f03bf6ff76b6ce25b1d":[1,0,0,47,1],
 "classTang_1_1TangScanner.html#a138cb48b8162798aa40a44f9af26a7d7":[1,0,0,47,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX3 =
 "computedExpression_8hpp_source.html":[2,0,1,28],
 "dir_13e138d54eb8818da29c3992edef070a.html":[2,0,3],
 "dir_2aa9c842178ff7eb167dc681d4da2670.html":[2,0,0,0],
-"dir_4fef79e7177ba769987a8da36c892c5f.html":[2,0,0],
-"dir_68267d1309a1af8e8297ef4c3efbcdba.html":[2,0,2],
-"dir_d44c64559bbebec7f509842c48db8b23.html":[2,0,1]
+"dir_4fef79e7177ba769987a8da36c892c5f.html":[2,0,0]
 };
