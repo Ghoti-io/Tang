@@ -1680,6 +1680,16 @@ TEST(Function, PassByValueVsRef) {
   }
 }
 
+TEST(ClassFunctions, General) {
+  {
+    // Bound function call
+    auto p1 = tang->compileScript(R"(
+      "Hello World".length(1)
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), Error{"Incorrect number of arguments provided to object method."});
+  }
+}
+
 TEST(ClassFunctions, String) {
   {
     // Bound function call
