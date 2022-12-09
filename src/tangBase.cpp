@@ -32,7 +32,7 @@ shared_ptr<TangBase> TangBase::make_shared() {
   return std::make_shared<TangBase>();
 };
 
-map<std::type_index, std::map<std::string, Tang::NativeBoundFunction>> & TangBase::getObjectMethods() {
+map<std::type_index, Tang::NativeBoundFunctionMap> & TangBase::getObjectMethods() {
   return this->objectMethods;
 }
 

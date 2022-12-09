@@ -7,6 +7,8 @@
 #define TANG_MACROS_HPP
 
 #include <vector>
+#include <map>
+#include <string>
 
 namespace Tang {
   /**
@@ -25,15 +27,18 @@ namespace Tang {
   using float_t = float;
 
   static_assert(sizeof(integer_t) == sizeof(float_t), "Integer and float sizes must be the same.");
-}
 
-namespace Tang {
   class GarbageCollected;
 
   /**
    * A function pointer that will be executed as bound to an object.
    */
   using NativeBoundFunction = GarbageCollected (*) (GarbageCollected &, std::vector<GarbageCollected> &);
+
+  /**
+   * A map of method names to NativeBoundFunction objects.
+   */
+  using NativeBoundFunctionMap = std::map<std::string, NativeBoundFunction>;
 }
 #endif // TANG_MACROS_HPP
 
