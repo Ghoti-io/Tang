@@ -4,6 +4,7 @@
  */
 
 #include "tangBase.hpp"
+#include "computedExpressionArray.hpp"
 #include "computedExpressionString.hpp"
 #include "computedExpressionError.hpp"
 
@@ -11,6 +12,7 @@ using namespace std;
 using namespace Tang;
 
 TangBase::TangBase() : objectMethods{
+    {type_index(typeid(ComputedExpressionArray)), ComputedExpressionArray::getMethods()},
     {type_index(typeid(ComputedExpressionString)), ComputedExpressionString::getMethods()},
   } {};
 

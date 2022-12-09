@@ -32,6 +32,21 @@ namespace Tang {
       virtual GarbageCollected __assign_index(const GarbageCollected & index, const GarbageCollected & value) override;
       virtual GarbageCollected __string() const override;
 
+      /**
+       * Return the contents of this object.
+       *
+       * @return The contents of this object.
+       */
+      const std::vector<Tang::GarbageCollected> & getContents() const;
+
+      /**
+       * Return the member functions implemented for this particular
+       * expression type.
+       *
+       * @return The member functions implemented.
+       */
+      static NativeBoundFunctionMap getMethods();
+
     private:
       /**
        * The array contents.

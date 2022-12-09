@@ -176,3 +176,18 @@ GarbageCollected ComputedExpressionArray::__string() const {
   return GarbageCollected::make<ComputedExpressionString>(this->__asCode());
 }
 
+const std::vector<Tang::GarbageCollected> & ComputedExpressionArray::getContents() const {
+  return this->contents;
+}
+
+NativeBoundFunctionMap ComputedExpressionArray::getMethods() {
+  return {
+    {"length", [](GarbageCollected & target, [[maybe_unused]] vector<GarbageCollected>& args) {
+      if (typeid(*target) == typeid(ComputedExpressionArray)) {
+        return GarbageCollected::make<ComputedExpressionInteger>((integer_t)static_cast<ComputedExpressionArray&>(*target).getContents().size());
+      }
+      return GarbageCollected::make<ComputedExpressionError>(Error{"Type mismatch of bound function to target object."});
+    }},
+  };
+}
+
