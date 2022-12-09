@@ -31,6 +31,7 @@
 //
 //
 // TODO What's next:
+// * Code Comments
 // * TangString
 //   * html encode
 //   * percent encode
@@ -42,18 +43,10 @@
 // * default print() on ComputedExpressionString
 //   * What to do when combining strings?
 // * Better location tracking for bytecode and error reporting.
-// * Ranged for and iterators
-//   * Arrays
-//   * strings
 // * "use" syntax to import libraries
 //   * native functions
 //     * Tang version
 //   * Execution Context
-// * Object {}
-//   * Type members
-//   * . access
-//   * . assignment
-// * functions on objects (bound)
 // * template scanning
 //   * short tags
 // * Library Extension
@@ -64,6 +57,7 @@
 // * Execution count timeout
 // * Stand-alone interpreter program
 // * Optimization
+// * Potential tail call optimization rather than loop & switch case for VM
 //
 
 #ifndef TANG_HPP
