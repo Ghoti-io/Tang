@@ -1709,6 +1709,13 @@ TEST(ClassFunctions, String) {
     )");
     EXPECT_EQ(p1.execute().out, "117");
   }
+  {
+    // Bound function works on directly instantiated object.
+    auto p1 = tang->compileScript(R"(
+      "Hello World!".length()
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), 12);
+  }
 }
 
 int main(int argc, char** argv) {
