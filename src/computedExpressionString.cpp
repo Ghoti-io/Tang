@@ -200,7 +200,7 @@ NativeBoundFunctionMap ComputedExpressionString::getMethods() {
       if (typeid(*target) == typeid(ComputedExpressionString)) {
         return GarbageCollected::make<ComputedExpressionInteger>((integer_t)static_cast<ComputedExpressionString &>(*target).getValue().length());
       }
-      return GarbageCollected::make<ComputedExpressionError>(Error{""});
+      return ComputedExpression::nativeBoundTypeMismatchError();
     }},
   };
 }

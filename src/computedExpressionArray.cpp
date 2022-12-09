@@ -186,7 +186,7 @@ NativeBoundFunctionMap ComputedExpressionArray::getMethods() {
       if (typeid(*target) == typeid(ComputedExpressionArray)) {
         return GarbageCollected::make<ComputedExpressionInteger>((integer_t)static_cast<ComputedExpressionArray&>(*target).getContents().size());
       }
-      return GarbageCollected::make<ComputedExpressionError>(Error{"Type mismatch of bound function to target object."});
+      return ComputedExpression::nativeBoundTypeMismatchError();
     }},
   };
 }
