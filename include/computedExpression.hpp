@@ -268,18 +268,6 @@ namespace Tang {
        * @return The result of the the operation.
        */
       virtual GarbageCollected __string() const;
-
-      /**
-       * Provide a standard error message for an unexpected number of arguments
-       * provided to a NativeBoundFunction.
-       */
-      static GarbageCollected nativeBoundArgumentCountError();
-
-      /**
-       * Provide a standard error message for a type mismatch between a
-       * NativeBoundFunction to a ComputedExpression.
-       */
-      static GarbageCollected nativeBoundTypeMismatchError();
   };
 }
 

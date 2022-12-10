@@ -196,16 +196,9 @@ UnicodeString ComputedExpressionString::getValue() const {
 
 NativeBoundFunctionMap ComputedExpressionString::getMethods() {
   return {
-    {"length", [](GarbageCollected & target, [[maybe_unused]] vector<GarbageCollected>& args) {
-      // Verify that the number of arguments is correct.
-      if (args.size() != 0) {
-        return ComputedExpression::nativeBoundArgumentCountError();
-      }
-      if (typeid(*target) == typeid(ComputedExpressionString)) {
-        return GarbageCollected::make<ComputedExpressionInteger>((integer_t)static_cast<ComputedExpressionString &>(*target).getValue().length());
-      }
-      return ComputedExpression::nativeBoundTypeMismatchError();
-    }},
+    {"length", {0, [](GarbageCollected & target, [[maybe_unused]] vector<GarbageCollected>& args) {
+      return GarbageCollected::make<ComputedExpressionInteger>((integer_t)static_cast<ComputedExpressionString &>(*target).getValue().length());
+    }}},
   };
 }
 

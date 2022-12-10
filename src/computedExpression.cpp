@@ -126,7 +126,8 @@ GarbageCollected ComputedExpression::__period([[maybe_unused]] const GarbageColl
       auto & methods = objectMethods.at(thisType);
       string name = static_cast<ComputedExpressionString &>(*member).getValue();
       if (methods.count(name)) {
-        return GarbageCollected::make<ComputedExpressionNativeBoundFunction>(methods.at(name));
+        auto & fn = methods.at(name);
+        return GarbageCollected::make<ComputedExpressionNativeBoundFunction>(fn.second, fn.first, type_index(typeid(*this)));
       }
     }
   }
@@ -164,13 +165,5 @@ GarbageCollected ComputedExpression::__boolean() const {
 
 GarbageCollected ComputedExpression::__string() const {
   return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to cast this value to a string."});
-}
-
-GarbageCollected ComputedExpression::nativeBoundArgumentCountError() {
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments provided to object method."});
-}
-
-GarbageCollected ComputedExpression::nativeBoundTypeMismatchError() {
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Type mismatch of object method to its target object."});
 }
 

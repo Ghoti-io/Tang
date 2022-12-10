@@ -38,7 +38,7 @@ namespace Tang {
   /**
    * A map of method names to NativeBoundFunction objects.
    */
-  using NativeBoundFunctionMap = std::map<std::string, NativeBoundFunction>;
+  using NativeBoundFunctionMap = std::map<std::string, std::pair<size_t, NativeBoundFunction>>;
 }
 #endif // TANG_MACROS_HPP
 

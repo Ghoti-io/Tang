@@ -519,13 +519,36 @@ Program& Program::execute() {
             stack.pop_back();
           }
 
-          // Make sure that there is an object that was bound to the function.
-          if (funcConv.target) {
-            stack.push_back(funcConv.nativeBoundFunction(*funcConv.target, argv));
+          // Verify that the number of arguments supplied matches the number
+          // of arguments expected.
+          if ((size_t)argc != funcConv.getArgc()) {
+            stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments provided to object method."}));
 
             pc += 2;
             break;
           }
+
+          // Make sure that there is an object that was bound to the function.
+          if (funcConv.target) {
+            // Verify that the target is the correct type.
+            // It is impossible for the target to not be the correct type under
+            // normal circumstances.  This is just a safety check.
+            if (type_index(typeid(**funcConv.target)) != funcConv.getTargetTypeIndex()) {
+              stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Type mismatch of object method to its target object."}));
+            }
+            else {
+              stack.push_back(funcConv.getFunction()(*funcConv.target, argv));
+            }
+
+            pc += 2;
+            break;
+          }
+
+          // There is no function target.  This is impossible under normal
+          // circumstances, but we must account for it, just in case.
+          stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Method is not bound to any object."}));
+          pc += 2;
+          break;
         }
 
         // Error: We don't know what to do.

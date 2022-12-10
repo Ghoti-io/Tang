@@ -13,6 +13,7 @@ namespace Tang {
 #include <memory>
 #include <string>
 #include <typeindex>
+#include <vector>
 #include "program.hpp"
 #include "computedExpression.hpp"
 
@@ -93,14 +94,14 @@ namespace Tang {
      * Get the object methods available to this instance of the base language
      * object.
      */
-    map<std::type_index, std::map<std::string, Tang::NativeBoundFunction>> & getObjectMethods();
+    std::map<std::type_index, std::map<std::string, std::pair<size_t, Tang::NativeBoundFunction>>> & getObjectMethods();
 
 
   private:
     /**
      * Store the available object methods.
      */
-    map<std::type_index, std::map<std::string, Tang::NativeBoundFunction>> objectMethods;
+    std::map<std::type_index, std::map<std::string, std::pair<size_t, Tang::NativeBoundFunction>>> objectMethods;
   };
 }
 
