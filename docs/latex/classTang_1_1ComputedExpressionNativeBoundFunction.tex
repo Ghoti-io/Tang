@@ -11,7 +11,8 @@ Represents a Native\+Bound Function declared in the script.
 
 
 
-Inheritance diagram for Tang\+::Computed\+Expression\+Native\+Bound\+Function\+:\nopagebreak
+Inheritance diagram for Tang\+::Computed\+Expression\+Native\+Bound\+Function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,7 +21,8 @@ Inheritance diagram for Tang\+::Computed\+Expression\+Native\+Bound\+Function\+:
 \end{figure}
 
 
-Collaboration diagram for Tang\+::Computed\+Expression\+Native\+Bound\+Function\+:\nopagebreak
+Collaboration diagram for Tang\+::Computed\+Expression\+Native\+Bound\+Function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,7 +32,7 @@ Collaboration diagram for Tang\+::Computed\+Expression\+Native\+Bound\+Function\
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTang_1_1ComputedExpressionNativeBoundFunction_ae98b85f06f8c97b27b8061742cb838ae}{Computed\+Expression\+Native\+Bound\+Function}} (\mbox{\hyperlink{macros_8hpp_a7c18603d0e934d5f83ec840355893411}{Native\+Bound\+Function}} \mbox{\hyperlink{classTang_1_1ComputedExpressionNativeBoundFunction_a249f94e59883c44c5f5e2c54820dd4b8}{native\+Bound\+Function}})
+\mbox{\hyperlink{classTang_1_1ComputedExpressionNativeBoundFunction_a2429d6b275028b95b6d362c31ef9182c}{Computed\+Expression\+Native\+Bound\+Function}} (\mbox{\hyperlink{macros_8hpp_a7c18603d0e934d5f83ec840355893411}{Native\+Bound\+Function}} \mbox{\hyperlink{classTang_1_1ComputedExpressionNativeBoundFunction_a249f94e59883c44c5f5e2c54820dd4b8}{native\+Bound\+Function}}, size\+\_\+t \mbox{\hyperlink{classTang_1_1ComputedExpressionNativeBoundFunction_afd13441fa5bc91dbabb2f31faffcb620}{argc}}, std\+::type\+\_\+index \mbox{\hyperlink{classTang_1_1ComputedExpressionNativeBoundFunction_ae49de962276370b305631612b2ea0430}{target\+Type\+Index}})
 \begin{DoxyCompactList}\small\item\em Construct an Native\+Bound\+Function. \end{DoxyCompactList}\item 
 virtual std\+::string \mbox{\hyperlink{classTang_1_1ComputedExpressionNativeBoundFunction_ab4e7694ff14c8aca9ef19457ef3a4ce2}{dump}} () const override
 \begin{DoxyCompactList}\small\item\em Output the contents of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} as a string. \end{DoxyCompactList}\item 
@@ -38,6 +40,12 @@ virtual std\+::string \mbox{\hyperlink{classTang_1_1ComputedExpressionNativeBoun
 \begin{DoxyCompactList}\small\item\em Make a copy of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} (recursively, if appropriate). \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionNativeBoundFunction_a4f7f3d09f1c71546dd6f2fb1f3da352e}{\+\_\+\+\_\+equal}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const override
 \begin{DoxyCompactList}\small\item\em Perform an equality test. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{macros_8hpp_a7c18603d0e934d5f83ec840355893411}{Native\+Bound\+Function}} \mbox{\hyperlink{classTang_1_1ComputedExpressionNativeBoundFunction_ad701ab66481051e13304367bb042966a}{get\+Function}} () const
+\begin{DoxyCompactList}\small\item\em Get the native bound function to be executed. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classTang_1_1ComputedExpressionNativeBoundFunction_a5ff126a86624ee4e72c39d8c2b49fa7f}{get\+Argc}} () const
+\begin{DoxyCompactList}\small\item\em Get the count of arguments that this function expects. \end{DoxyCompactList}\item 
+const std\+::type\+\_\+index \& \mbox{\hyperlink{classTang_1_1ComputedExpressionNativeBoundFunction_afd95e9e142bc00eefcd92689c26f538d}{get\+Target\+Type\+Index}} () const
+\begin{DoxyCompactList}\small\item\em Get the type of the value to which the function is bound. \end{DoxyCompactList}\item 
 virtual std\+::string \mbox{\hyperlink{classTang_1_1ComputedExpression_a6d0c01f57a6a2b6b8ec701202b16af94}{\+\_\+\+\_\+as\+Code}} () const
 \begin{DoxyCompactList}\small\item\em Output the contents of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} as a string similar to how it would be represented as code. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a493f58bd7f51ca4d6b9b1ef1860b4370}{is\+Copy\+Needed}} () const
@@ -90,45 +98,59 @@ virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mb
 \begin{DoxyCompactList}\small\item\em Perform a type cast to boolean. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_a14a57cffe9fb44b0d5f34d06afd0db1b}{\+\_\+\+\_\+string}} () const
 \begin{DoxyCompactList}\small\item\em Perform a type cast to string. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Static Public Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{classTang_1_1ComputedExpression_a5dc001c665a17143e255705d8f64327d}\label{classTang_1_1ComputedExpression_a5dc001c665a17143e255705d8f64327d}} 
-static \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_a5dc001c665a17143e255705d8f64327d}{native\+Bound\+Argument\+Count\+Error}} ()
-\begin{DoxyCompactList}\small\item\em Provide a standard error message for an unexpected number of arguments provided to a Native\+Bound\+Function. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTang_1_1ComputedExpression_ad4ab003a77bdaf93d225269bdebb5248}\label{classTang_1_1ComputedExpression_ad4ab003a77bdaf93d225269bdebb5248}} 
-static \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_ad4ab003a77bdaf93d225269bdebb5248}{native\+Bound\+Type\+Mismatch\+Error}} ()
-\begin{DoxyCompactList}\small\item\em Provide a standard error message for a type mismatch between a Native\+Bound\+Function to a \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classTang_1_1ComputedExpressionNativeBoundFunction_a5de45365dfcf4b9d01fb48662f9ec45b}\label{classTang_1_1ComputedExpressionNativeBoundFunction_a5de45365dfcf4b9d01fb48662f9ec45b}} 
 std\+::optional$<$ \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} $>$ \mbox{\hyperlink{classTang_1_1ComputedExpressionNativeBoundFunction_a5de45365dfcf4b9d01fb48662f9ec45b}{target}}
-\begin{DoxyCompactList}\small\item\em The target object that the function is bound to. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The target object that the function is bound to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
 \mbox{\Hypertarget{classTang_1_1ComputedExpressionNativeBoundFunction_a249f94e59883c44c5f5e2c54820dd4b8}\label{classTang_1_1ComputedExpressionNativeBoundFunction_a249f94e59883c44c5f5e2c54820dd4b8}} 
 \mbox{\hyperlink{macros_8hpp_a7c18603d0e934d5f83ec840355893411}{Native\+Bound\+Function}} \mbox{\hyperlink{classTang_1_1ComputedExpressionNativeBoundFunction_a249f94e59883c44c5f5e2c54820dd4b8}{native\+Bound\+Function}}
-\begin{DoxyCompactList}\small\item\em The native bound function to be executed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The native bound function to be executed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionNativeBoundFunction_afd13441fa5bc91dbabb2f31faffcb620}\label{classTang_1_1ComputedExpressionNativeBoundFunction_afd13441fa5bc91dbabb2f31faffcb620}} 
+size\+\_\+t \mbox{\hyperlink{classTang_1_1ComputedExpressionNativeBoundFunction_afd13441fa5bc91dbabb2f31faffcb620}{argc}}
+\begin{DoxyCompactList}\small\item\em The count of arguments that this function expects. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionNativeBoundFunction_ae49de962276370b305631612b2ea0430}\label{classTang_1_1ComputedExpressionNativeBoundFunction_ae49de962276370b305631612b2ea0430}} 
+std\+::type\+\_\+index \mbox{\hyperlink{classTang_1_1ComputedExpressionNativeBoundFunction_ae49de962276370b305631612b2ea0430}{target\+Type\+Index}}
+\begin{DoxyCompactList}\small\item\em The type of the value to which the function is bound. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Represents a Native\+Bound Function declared in the script. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classTang_1_1ComputedExpressionNativeBoundFunction_ae98b85f06f8c97b27b8061742cb838ae}\label{classTang_1_1ComputedExpressionNativeBoundFunction_ae98b85f06f8c97b27b8061742cb838ae}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionNativeBoundFunction_a2429d6b275028b95b6d362c31ef9182c}\label{classTang_1_1ComputedExpressionNativeBoundFunction_a2429d6b275028b95b6d362c31ef9182c}} 
 \index{Tang::ComputedExpressionNativeBoundFunction@{Tang::ComputedExpressionNativeBoundFunction}!ComputedExpressionNativeBoundFunction@{ComputedExpressionNativeBoundFunction}}
 \index{ComputedExpressionNativeBoundFunction@{ComputedExpressionNativeBoundFunction}!Tang::ComputedExpressionNativeBoundFunction@{Tang::ComputedExpressionNativeBoundFunction}}
 \doxysubsubsection{\texorpdfstring{ComputedExpressionNativeBoundFunction()}{ComputedExpressionNativeBoundFunction()}}
-{\footnotesize\ttfamily Computed\+Expression\+Native\+Bound\+Function\+::\+Computed\+Expression\+Native\+Bound\+Function (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{macros_8hpp_a7c18603d0e934d5f83ec840355893411}{Native\+Bound\+Function}}}]{native\+Bound\+Function }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Computed\+Expression\+Native\+Bound\+Function\+::\+Computed\+Expression\+Native\+Bound\+Function (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{macros_8hpp_a7c18603d0e934d5f83ec840355893411}{Native\+Bound\+Function}}}]{native\+Bound\+Function,  }\item[{size\+\_\+t}]{argc,  }\item[{std\+::type\+\_\+index}]{target\+Type\+Index }\end{DoxyParamCaption})}
 
 
 
 Construct an Native\+Bound\+Function. 
 
+The object itself is designed to be safe in that, once it is constructed, the method function pointer, argument count, and target type cannot be changed, but can only be accessible through a getter.
+
+The target value that the function is bound to, however, cannot be set when the object is created, due to the design of the compiler. It is therefore exposed, regardless of being made public or via a setter function.
+
+The current design of the VM will set the correct target, but because the target is exposed, it is possible that some bad actor could modify it. It is therefore necessary to verify that the type of the bound object and the type that was known when this object is created are, in fact, the same. That is why we store the target object type information and protect it behind a getter function.
+
+When the VM executes the bound method, it will perform a type check to verify that the bound object is of the same type as that of the method that is defined in \mbox{\hyperlink{classTang_1_1TangBase_a62dfbf8c82da22d0c83d920c78c08eed}{Tang\+Base\+::get\+Object\+Methods()}}.
+
+It should be safe, then, to assume that within a Native\+Bound\+Function, the type is the expected type. No \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} type, then, should \char`\"{}steal\char`\"{} a Native\+Bound\+Function from another \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} definition, as it is assumed that the bound target that is provided to any Native\+Bound\+Function is the same as the type on which it was originally defined.
+
+For example, a Native\+Bound\+Function declared in \mbox{\hyperlink{classTang_1_1ComputedExpressionString}{Computed\+Expression\+String}} may assume that the bound target is also a \mbox{\hyperlink{classTang_1_1ComputedExpressionString}{Computed\+Expression\+String}}. If another class, such as \mbox{\hyperlink{classTang_1_1ComputedExpressionArray}{Computed\+Expression\+Array}}, were to try to copy the Native\+Bound\+Function (as a pointer reference), the function will still expect that the bound target is a \mbox{\hyperlink{classTang_1_1ComputedExpressionString}{Computed\+Expression\+String}}, and will probably cause a segmentation fault. Just don\textquotesingle{}t do it.
+
 
 \begin{DoxyParams}{Parameters}
+{\em native\+Bound\+Function} & The native bound function to be executed. \\
+\hline
 {\em argc} & The count of arguments that this function expects. \\
 \hline
-{\em pc} & The bytecode address of the start of the function. \\
+{\em target\+Type\+Index} & The type of the value to which the function is bound. \\
 \hline
 \end{DoxyParams}
 
@@ -258,7 +280,8 @@ The result of the the operation.
 
 Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_aa6e3a065c2d0dfcde5e2eaefa26f7606}{Tang\+::\+Computed\+Expression}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -561,6 +584,45 @@ A string representation of the computed expression.
 
 Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_ab5df8f689f9fe515a2299d8cef332f4c}{Tang\+::\+Computed\+Expression}}.
 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionNativeBoundFunction_a5ff126a86624ee4e72c39d8c2b49fa7f}\label{classTang_1_1ComputedExpressionNativeBoundFunction_a5ff126a86624ee4e72c39d8c2b49fa7f}} 
+\index{Tang::ComputedExpressionNativeBoundFunction@{Tang::ComputedExpressionNativeBoundFunction}!getArgc@{getArgc}}
+\index{getArgc@{getArgc}!Tang::ComputedExpressionNativeBoundFunction@{Tang::ComputedExpressionNativeBoundFunction}}
+\doxysubsubsection{\texorpdfstring{getArgc()}{getArgc()}}
+{\footnotesize\ttfamily size\+\_\+t Computed\+Expression\+Native\+Bound\+Function\+::get\+Argc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the count of arguments that this function expects. 
+
+\begin{DoxyReturn}{Returns}
+The count of arguments that this function expects. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionNativeBoundFunction_ad701ab66481051e13304367bb042966a}\label{classTang_1_1ComputedExpressionNativeBoundFunction_ad701ab66481051e13304367bb042966a}} 
+\index{Tang::ComputedExpressionNativeBoundFunction@{Tang::ComputedExpressionNativeBoundFunction}!getFunction@{getFunction}}
+\index{getFunction@{getFunction}!Tang::ComputedExpressionNativeBoundFunction@{Tang::ComputedExpressionNativeBoundFunction}}
+\doxysubsubsection{\texorpdfstring{getFunction()}{getFunction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{macros_8hpp_a7c18603d0e934d5f83ec840355893411}{Native\+Bound\+Function}} Computed\+Expression\+Native\+Bound\+Function\+::get\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the native bound function to be executed. 
+
+\begin{DoxyReturn}{Returns}
+The native bound function to be executed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionNativeBoundFunction_afd95e9e142bc00eefcd92689c26f538d}\label{classTang_1_1ComputedExpressionNativeBoundFunction_afd95e9e142bc00eefcd92689c26f538d}} 
+\index{Tang::ComputedExpressionNativeBoundFunction@{Tang::ComputedExpressionNativeBoundFunction}!getTargetTypeIndex@{getTargetTypeIndex}}
+\index{getTargetTypeIndex@{getTargetTypeIndex}!Tang::ComputedExpressionNativeBoundFunction@{Tang::ComputedExpressionNativeBoundFunction}}
+\doxysubsubsection{\texorpdfstring{getTargetTypeIndex()}{getTargetTypeIndex()}}
+{\footnotesize\ttfamily const type\+\_\+index \& Computed\+Expression\+Native\+Bound\+Function\+::get\+Target\+Type\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the type of the value to which the function is bound. 
+
+\begin{DoxyReturn}{Returns}
+The type of the value to which the function is bound. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classTang_1_1ComputedExpression_a907104a9d090d21e9bcc487b696738c4}\label{classTang_1_1ComputedExpression_a907104a9d090d21e9bcc487b696738c4}} 
 \index{Tang::ComputedExpressionNativeBoundFunction@{Tang::ComputedExpressionNativeBoundFunction}!is\_equal@{is\_equal}}
 \index{is\_equal@{is\_equal}!Tang::ComputedExpressionNativeBoundFunction@{Tang::ComputedExpressionNativeBoundFunction}}

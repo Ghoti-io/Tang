@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['setfunctionstackdeclaration_709',['setFunctionStackDeclaration',['../classTang_1_1Program.html#aabcfee07409be5bc6bf1312f26b56a85',1,'Tang::Program']]],
-  ['setjumptarget_710',['setJumpTarget',['../classTang_1_1Program.html#a5da413efe8435cebd927a8be58dcb9be',1,'Tang::Program']]],
-  ['singletonobjectpool_711',['SingletonObjectPool',['../classTang_1_1SingletonObjectPool.html#a0b836e6c39c2c9c4ddd033ef6c5d1395',1,'Tang::SingletonObjectPool::SingletonObjectPool()'],['../classTang_1_1SingletonObjectPool.html#a3ebbf0afec6bf855021523dbdce97ac5',1,'Tang::SingletonObjectPool::SingletonObjectPool(const SingletonObjectPool &amp;other)']]],
-  ['step_712',['step',['../classTang_1_1location.html#a70b844bdcf7d6113ac3d6b074b976246',1,'Tang::location']]],
-  ['substr_713',['substr',['../classTang_1_1UnicodeString.html#a7bda91d3c0efba9f5e70d915a665ba18',1,'Tang::UnicodeString']]]
+  ['tangbase_716',['TangBase',['../classTang_1_1TangBase.html#a6aa1668d0232e39e60d01fbce2419ef4',1,'Tang::TangBase']]],
+  ['tangscanner_717',['TangScanner',['../classTang_1_1TangScanner.html#a138cb48b8162798aa40a44f9af26a7d7',1,'Tang::TangScanner']]]
 ];

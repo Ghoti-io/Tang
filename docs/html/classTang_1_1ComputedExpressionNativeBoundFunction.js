@@ -1,6 +1,6 @@
 var classTang_1_1ComputedExpressionNativeBoundFunction =
 [
-    [ "ComputedExpressionNativeBoundFunction", "classTang_1_1ComputedExpressionNativeBoundFunction.html#ae98b85f06f8c97b27b8061742cb838ae", null ],
+    [ "ComputedExpressionNativeBoundFunction", "classTang_1_1ComputedExpressionNativeBoundFunction.html#a2429d6b275028b95b6d362c31ef9182c", null ],
     [ "__add", "classTang_1_1ComputedExpressionNativeBoundFunction.html#a7265dda9f1e6db478f0c1cd9c3e37aa9", null ],
     [ "__asCode", "classTang_1_1ComputedExpressionNativeBoundFunction.html#a6d0c01f57a6a2b6b8ec701202b16af94", null ],
     [ "__assign_index", "classTang_1_1ComputedExpressionNativeBoundFunction.html#a011d86ce9b04fca4bef67b4c5bb3324c", null ],
@@ -22,6 +22,9 @@ var classTang_1_1ComputedExpressionNativeBoundFunction =
     [ "__string", "classTang_1_1ComputedExpressionNativeBoundFunction.html#a14a57cffe9fb44b0d5f34d06afd0db1b", null ],
     [ "__subtract", "classTang_1_1ComputedExpressionNativeBoundFunction.html#ab0d79debcd475a5063e574c10f1715ff", null ],
     [ "dump", "classTang_1_1ComputedExpressionNativeBoundFunction.html#ab4e7694ff14c8aca9ef19457ef3a4ce2", null ],
+    [ "getArgc", "classTang_1_1ComputedExpressionNativeBoundFunction.html#a5ff126a86624ee4e72c39d8c2b49fa7f", null ],
+    [ "getFunction", "classTang_1_1ComputedExpressionNativeBoundFunction.html#ad701ab66481051e13304367bb042966a", null ],
+    [ "getTargetTypeIndex", "classTang_1_1ComputedExpressionNativeBoundFunction.html#afd95e9e142bc00eefcd92689c26f538d", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionNativeBoundFunction.html#a907104a9d090d21e9bcc487b696738c4", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionNativeBoundFunction.html#a5ce6d4bc0128f6aadf72c2f63a70275a", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionNativeBoundFunction.html#a5287fabf86f19613afb04d5e285c0231", null ],
@@ -30,6 +33,8 @@ var classTang_1_1ComputedExpressionNativeBoundFunction =
     [ "is_equal", "classTang_1_1ComputedExpressionNativeBoundFunction.html#a76aaf726b67cedb54b6b3c75c834645f", null ],
     [ "isCopyNeeded", "classTang_1_1ComputedExpressionNativeBoundFunction.html#a493f58bd7f51ca4d6b9b1ef1860b4370", null ],
     [ "makeCopy", "classTang_1_1ComputedExpressionNativeBoundFunction.html#a8e2618e44a87744c9c476eb55380de6d", null ],
+    [ "argc", "classTang_1_1ComputedExpressionNativeBoundFunction.html#afd13441fa5bc91dbabb2f31faffcb620", null ],
     [ "nativeBoundFunction", "classTang_1_1ComputedExpressionNativeBoundFunction.html#a249f94e59883c44c5f5e2c54820dd4b8", null ],
-    [ "target", "classTang_1_1ComputedExpressionNativeBoundFunction.html#a5de45365dfcf4b9d01fb48662f9ec45b", null ]
+    [ "target", "classTang_1_1ComputedExpressionNativeBoundFunction.html#a5de45365dfcf4b9d01fb48662f9ec45b", null ],
+    [ "targetTypeIndex", "classTang_1_1ComputedExpressionNativeBoundFunction.html#ae49de962276370b305631612b2ea0430", null ]
 ];
