@@ -285,6 +285,9 @@ using namespace std;
 }
 
 <doubleQuoteString>{
+  <<EOF>> {
+    return Tang::TangParser::make_STRINGERROR(Tang::location(location));
+  }
   \" {
     // Found the end of a double-quoted string.
     yy_pop_state();

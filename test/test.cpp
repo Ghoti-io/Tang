@@ -58,13 +58,35 @@ TEST(Declare, Boolean) {
 }
 
 TEST(Declare, String) {
-  auto p1 = tang->compileScript("\"\"");
-  EXPECT_EQ(*p1.execute().getResult(), string(""));
-  EXPECT_EQ(*p1.execute().getResult(), "");
-  EXPECT_NE(*p1.execute().getResult(), nullptr);
-  auto p2 = tang->compileScript("\"Hello World!\"");
-  EXPECT_EQ(*p2.execute().getResult(), "Hello World!");
-  EXPECT_NE(*p2.execute().getResult(), nullptr);
+  {
+    // Construct an empty string.
+    auto p1 = tang->compileScript("\"\"");
+    EXPECT_EQ(*p1.execute().getResult(), string(""));
+    EXPECT_EQ(*p1.execute().getResult(), "");
+    EXPECT_NE(p1.execute().getResult(), nullopt);
+  }
+  {
+    // Construct a string that is not empty
+    auto p1 = tang->compileScript("\"Hello World!\"");
+    EXPECT_EQ(*p1.execute().getResult(), "Hello World!");
+    EXPECT_NE(p1.execute().getResult(), nullopt);
+  }
+  {
+    // String ending with EOF
+    auto p1 = tang->compileScript("\"Hello World!");
+    EXPECT_EQ(*p1.getResult(), Error{"syntax error, unexpected Malformed String"});
+  }
+  {
+    // String ending with EOF, as part of an expression
+    auto p1 = tang->compileScript("a = \"Hello World!");
+    EXPECT_EQ(*p1.getResult(), Error{"syntax error, unexpected Malformed String"});
+  }
+  {
+    // String ending with EOF, as part of an expression in a series of
+    // expressions.
+    auto p1 = tang->compileScript("a = 1; a = \"Hello World!");
+    EXPECT_EQ(*p1.getResult(), Error{"syntax error, unexpected Malformed String"});
+  }
 }
 
 TEST(Expression, Add) {
