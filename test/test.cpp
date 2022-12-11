@@ -1777,12 +1777,71 @@ TEST(Syntax, SingleLineComment) {
     EXPECT_EQ(*p1.execute().getResult(), 3);
   }
   {
+    // Single line comment containing code.
+    auto p1 = tang->compileScript(R"(
+      a = 3;
+      // a = 4;
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), 3);
+  }
+  {
     // Single line comment interrupting an expression.
     auto p1 = tang->compileScript(R"(
       a = // This is a test.
         5;
     )");
     EXPECT_EQ(*p1.execute().getResult(), 5);
+  }
+}
+
+TEST(Syntax, MultiLineComment) {
+  {
+    // Multi line comment on its own line.
+    auto p1 = tang->compileScript(R"(
+      /* This is a test. */
+      a = 3;
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), 3);
+  }
+  {
+    // Multi line comment across multiple lines.
+    auto p1 = tang->compileScript(R"(
+      /*
+       * This is a test.
+       */
+      a = 3;
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), 3);
+  }
+  {
+    // Multi line comment containing code.
+    auto p1 = tang->compileScript(R"(
+      a = 3;
+      /*
+       * a = 4;
+       */
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), 3);
+  }
+  {
+    // Multi line comment interrupting an expression.
+    auto p1 = tang->compileScript(R"(
+      a = /*
+           * This is a test.
+           */
+        8;
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), 8);
+  }
+  {
+    // Multi line comment with slashes that should be ignored.
+    auto p1 = tang->compileScript(R"(
+      a = /*
+           * / This is a test.
+           */
+        8;
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), 8);
   }
 }
 

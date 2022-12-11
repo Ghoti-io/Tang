@@ -92,7 +92,7 @@ using namespace std;
  *   (search for "C-style")
  * Also given here: https://www.cs.virginia.edu/~cr4bd/flex-manual/Start-Conditions.html
  */
-%x SCRIPT doubleQuoteString singleLineComment
+%x SCRIPT doubleQuoteString singleLineComment multiLineComment
 
 %%
   // Include any initialization code here.  These lines *must* be indented,
@@ -106,6 +106,10 @@ using namespace std;
   \/\/ {
     // Beginning of a single line comment.
     yy_push_state(singleLineComment);
+  }
+  \/\* {
+    // Beginning of a multi line comment.
+    yy_push_state(multiLineComment);
   }
   \" {
     // The start of a new, double-quoted string.
@@ -268,6 +272,15 @@ using namespace std;
   }
   .+ {}
 }
+
+<multiLineComment>{
+  \*\/ {
+    yy_pop_state();
+  }
+  [^*]+ {}
+  \* {}
+}
+
 <doubleQuoteString>{
   \" {
     // Found the end of a double-quoted string.
