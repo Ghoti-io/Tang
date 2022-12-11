@@ -1767,6 +1767,25 @@ TEST(ClassFunctions, Array) {
   }
 }
 
+TEST(Syntax, SingleLineComment) {
+  {
+    // Single line comment on its own line.
+    auto p1 = tang->compileScript(R"(
+      // This is a test.
+      a = 3;
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), 3);
+  }
+  {
+    // Single line comment interrupting an expression.
+    auto p1 = tang->compileScript(R"(
+      a = // This is a test.
+        5;
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), 5);
+  }
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
