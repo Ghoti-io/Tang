@@ -1792,6 +1792,19 @@ TEST(Syntax, SingleLineComment) {
     )");
     EXPECT_EQ(*p1.execute().getResult(), 5);
   }
+  {
+    // Single line comment as the only thing in the script.
+    auto p1 = tang->compileScript(R"(
+      // This is a test.
+    )");
+    EXPECT_EQ(p1.out, "");
+  }
+  {
+    // Single line comment not ending with a newline as the only thing in the
+    // script.
+    auto p1 = tang->compileScript("// This is a test.");
+    EXPECT_EQ(p1.execute().out, "");
+  }
 }
 
 TEST(Syntax, MultiLineComment) {
@@ -1842,6 +1855,23 @@ TEST(Syntax, MultiLineComment) {
         8;
     )");
     EXPECT_EQ(*p1.execute().getResult(), 8);
+  }
+  {
+    // Multi line comment without being closed.
+    auto p1 = tang->compileScript(R"(
+      a = /*
+           * This is a test.
+    )");
+    EXPECT_EQ(*p1.getResult(), Error{"syntax error, unexpected end of code"});
+  }
+  {
+    // Multi line comment without being closed.
+    auto p1 = tang->compileScript(R"(
+      a = 3/*
+            * This is a test.
+    )");
+    EXPECT_EQ(p1.getResult(), nullopt);
+    EXPECT_EQ(*p1.execute().getResult(), 3);
   }
 }
 

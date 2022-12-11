@@ -102,6 +102,12 @@ using namespace std;
   // Holds the contents of a double-quoted string as it is being parsed.
   std::string stringBuffer;
 
+<INITIAL,SCRIPT,singleLineComment,multiLineComment>{
+  <<EOF>> {
+    yyterminate();
+  }
+}
+
 <INITIAL,SCRIPT>{
   \/\/ {
     // Beginning of a single line comment.
@@ -261,9 +267,6 @@ using namespace std;
   }
   . {}
   \n {}
-  <<EOF>> {
-    yyterminate();
-  }
 }
 
 <singleLineComment>{
