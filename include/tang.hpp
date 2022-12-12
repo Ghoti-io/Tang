@@ -31,7 +31,6 @@
 //
 //
 // TODO What's next:
-// * Code Comments
 // * TangString
 //   * html encode
 //   * percent encode
