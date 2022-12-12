@@ -202,3 +202,8 @@ NativeBoundFunctionMap ComputedExpressionString::getMethods() {
   };
 }
 
+ComputedExpressionString & ComputedExpressionString::operator+=(const ComputedExpressionString &rhs) {
+  this->val += rhs.val;
+  return *this;
+}
+

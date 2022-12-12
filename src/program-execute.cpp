@@ -590,13 +590,19 @@ Program& Program::execute() {
         stack.pop_back();
         // Try to convert the expression to a string.
         auto result = expression->__string();
-        if (typeid(*result) != typeid(ComputedExpressionError)) {
-          this->out += result->dump();
+        if (typeid(*result) == typeid(ComputedExpressionString)) {
+          // We know that both our private member and `result` are a
+          // ComputedExpressionString, so combine them here.
+          static_cast<ComputedExpressionString &>(*this->computedExpressionOut) += static_cast<ComputedExpressionString &>(*result);
           // Push an empty value onto the stack.
           stack.push_back(GarbageCollected::make<ComputedExpression>());
         }
+        else if (typeid(*result) != typeid(ComputedExpressionError)) {
+          // __string returned neither a string nor an error, so report that.
+          stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Argument not recognized as a string or error type."}));
+        }
         else {
-          // Should be an error, pass that back to the stack.
+          // __string returned an error, pass that back to the stack.
           stack.push_back(result);
         }
         ++pc;
@@ -620,6 +626,9 @@ Program& Program::execute() {
   // Empty the stack, but save the top of the stack.
   this->result = stack.back();
   stack.clear();
+
+  // Render the output to `out`.
+  this->out = this->computedExpressionOut->dump();
 
   return *this;
 }

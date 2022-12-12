@@ -101,6 +101,14 @@ namespace Tang {
     UnicodeString operator+(const UnicodeString & rhs) const;
 
     /**
+     * Concatenate the `rhs` UnicodeString to the current UnicodeString.
+     *
+     * @param rhs The string to append to the current object string.
+     * @return Returns the result of the concatenation.
+     */
+    UnicodeString & operator+=(const UnicodeString & rhs);
+
+    /**
      * Cast the current UnicodeString object to a std::string, UTF-8 encoded.
      *
      * @return Returns the std::string version of the UnicodeString.

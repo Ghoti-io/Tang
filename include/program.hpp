@@ -317,6 +317,11 @@ namespace Tang {
     Bytecode bytecode;
 
     /**
+     * The output of the program, as a ComputedExpressionString.
+     */
+    GarbageCollected computedExpressionOut;
+
+    /**
      * The result of the Program execution.
      */
     std::optional<GarbageCollected> result;

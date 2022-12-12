@@ -108,6 +108,11 @@ UnicodeString UnicodeString::operator+(const UnicodeString & rhs) const {
   return this->src + rhs.src;
 }
 
+UnicodeString & UnicodeString::operator+=(const UnicodeString & rhs) {
+  this->src += rhs.src;
+  return *this;
+}
+
 UnicodeString::operator std::string() const {
   return this->src;
 }

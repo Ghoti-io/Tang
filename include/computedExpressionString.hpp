@@ -54,6 +54,15 @@ namespace Tang {
        */
       static NativeBoundFunctionMap getMethods();
 
+      /**
+       * Helper function to copy the contents of the rhs string into the
+       * current string.
+       *
+       * @param rhs The right hand side of the operation.
+       * @return The result of the operation.
+       */
+      ComputedExpressionString & operator+=(const ComputedExpressionString &rhs);
+
     private:
       /**
        * The string value.
