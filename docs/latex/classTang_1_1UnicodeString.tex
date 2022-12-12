@@ -31,6 +31,8 @@ bool \mbox{\hyperlink{classTang_1_1UnicodeString_ad22c4f14673523cd3bcd5c56fa7028
 \begin{DoxyCompactList}\small\item\em Compare two Unicode\+Strings. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} \mbox{\hyperlink{classTang_1_1UnicodeString_a1801e6b4cd159a065fb77ce1a8bcd827}{operator+}} (const \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} \&rhs) const
 \begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} that is the concatenation of two Unicode\+Strings. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} \& \mbox{\hyperlink{classTang_1_1UnicodeString_a02a8a76223159f3a5dd11c9875ebadb1}{operator+=}} (const \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Concatenate the {\ttfamily rhs} \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} to the current \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTang_1_1UnicodeString_aecf5faef826f6f708b5d95c1e240c8c0}{operator std\+::string}} () const
 \begin{DoxyCompactList}\small\item\em Cast the current \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} object to a std\+::string, UTF-\/8 encoded. \end{DoxyCompactList}\item 
 size\+\_\+t \mbox{\hyperlink{classTang_1_1UnicodeString_aacfef070a2f6de639e050822c94263f5}{length}} () const
@@ -140,6 +142,24 @@ Returns the std\+::string version of the \mbox{\hyperlink{classTang_1_1UnicodeSt
 
 
 Create a new \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} that is the concatenation of two Unicode\+Strings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The string to append to the current object string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the result of the concatenation. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1UnicodeString_a02a8a76223159f3a5dd11c9875ebadb1}\label{classTang_1_1UnicodeString_a02a8a76223159f3a5dd11c9875ebadb1}} 
+\index{Tang::UnicodeString@{Tang::UnicodeString}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Tang::UnicodeString@{Tang::UnicodeString}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} \& Unicode\+String\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Concatenate the {\ttfamily rhs} \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} to the current \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}}. 
 
 
 \begin{DoxyParams}{Parameters}

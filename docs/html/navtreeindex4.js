@@ -1,5 +1,8 @@
 var NAVTREEINDEX4 =
 {
+"computedExpressionString_8hpp.html":[2,0,1,39],
+"computedExpressionString_8hpp_source.html":[2,0,1,39],
+"computedExpression_8cpp.html":[2,0,2,28],
 "computedExpression_8hpp.html":[2,0,1,28],
 "computedExpression_8hpp_source.html":[2,0,1,28],
 "dir_13e138d54eb8818da29c3992edef070a.html":[2,0,3],
@@ -12,8 +15,8 @@ var NAVTREEINDEX4 =
 "error_8hpp.html":[2,0,1,40],
 "error_8hpp_source.html":[2,0,1,40],
 "files.html":[2,0],
-"functions.html":[1,3,0],
 "functions.html":[1,3,0,0],
+"functions.html":[1,3,0],
 "functions_a.html":[1,3,0,1],
 "functions_b.html":[1,3,0,2],
 "functions_c.html":[1,3,0,3],
@@ -22,8 +25,8 @@ var NAVTREEINDEX4 =
 "functions_enum.html":[1,3,4],
 "functions_eval.html":[1,3,5],
 "functions_f.html":[1,3,0,6],
-"functions_func.html":[1,3,1,0],
 "functions_func.html":[1,3,1],
+"functions_func.html":[1,3,1,0],
 "functions_func_a.html":[1,3,1,1],
 "functions_func_b.html":[1,3,1,2],
 "functions_func_c.html":[1,3,1,3],

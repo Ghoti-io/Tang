@@ -35,6 +35,7 @@ var classTang_1_1Program =
     [ "bytecode", "classTang_1_1Program.html#a99f161953dfcc604f639fab842354262", null ],
     [ "code", "classTang_1_1Program.html#a747cd63b40c48f81d17a2501e4fdd0e5", null ],
     [ "codeType", "classTang_1_1Program.html#adc2c06ba6f616882bbf0876ceedfc328", null ],
+    [ "computedExpressionOut", "classTang_1_1Program.html#aaea94478e88f196c18c76445858615dd", null ],
     [ "continueStack", "classTang_1_1Program.html#a4b1113cf21e51270d685fb3c246ba3c3", null ],
     [ "functionsCollected", "classTang_1_1Program.html#a7bf410d953206df63379a9c395f09bb2", null ],
     [ "functionsDeclared", "classTang_1_1Program.html#acca9bf07cd3197fffc3d01ed73985740", null ],

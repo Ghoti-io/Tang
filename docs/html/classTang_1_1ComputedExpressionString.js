@@ -31,5 +31,6 @@ var classTang_1_1ComputedExpressionString =
     [ "is_equal", "classTang_1_1ComputedExpressionString.html#a76aaf726b67cedb54b6b3c75c834645f", null ],
     [ "isCopyNeeded", "classTang_1_1ComputedExpressionString.html#a493f58bd7f51ca4d6b9b1ef1860b4370", null ],
     [ "makeCopy", "classTang_1_1ComputedExpressionString.html#aa424ab2f196af728a8810fc7ed188f7c", null ],
+    [ "operator+=", "classTang_1_1ComputedExpressionString.html#a0f9112a2bd0a0cdd2b060bfedd5a0b6d", null ],
     [ "val", "classTang_1_1ComputedExpressionString.html#a6e816aaa770ed66888707bb0aec9f6c8", null ]
 ];
