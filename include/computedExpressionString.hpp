@@ -21,7 +21,14 @@ namespace Tang {
        *
        * @param val The string value.
        */
-      ComputedExpressionString(std::string val);
+      ComputedExpressionString(const std::string & val);
+
+      /**
+       * Construct a String result from a vector of UnicodeString objects.
+       *
+       * @param stringParts The vector of UnicodeString objects.
+       */
+      ComputedExpressionString(const std::vector<UnicodeString> & stringParts);
 
       virtual std::string dump() const override;
       virtual std::string __asCode() const override;
@@ -40,11 +47,25 @@ namespace Tang {
       virtual GarbageCollected __string() const override;
 
       /**
-       * Return the string value that is stored in this object.
+       * Return the collection of string values that are stored in this object.
        *
-       * @return The string value.
+       * @return The collection of string values.
        */
-      UnicodeString getValue() const;
+      const std::vector<UnicodeString>& getValue() const;
+
+      /**
+       * Return the number of graphemes contained in the string.
+       *
+       * @return The number of graphemes contained in the string.
+       */
+      size_t length() const;
+
+      /**
+       * Return the number of bytes required by the string, stored as UTF-8.
+       *
+       * @return The number of bytes required by the string, stored as UTF-8.
+       */
+      size_t bytesLength() const;
 
       /**
        * Return the member functions implemented for this particular
@@ -67,7 +88,7 @@ namespace Tang {
       /**
        * The string value.
        */
-      UnicodeString val;
+      std::vector<UnicodeString> stringParts;
   };
 }
 

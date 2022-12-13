@@ -124,7 +124,7 @@ GarbageCollected ComputedExpression::__period([[maybe_unused]] const GarbageColl
     auto thisType = type_index(typeid(*this));
     if (objectMethods.count(thisType)) {
       auto & methods = objectMethods.at(thisType);
-      string name = static_cast<ComputedExpressionString &>(*member).getValue();
+      string name = static_cast<ComputedExpressionString &>(*member).dump();
       if (methods.count(name)) {
         auto & fn = methods.at(name);
         return GarbageCollected::make<ComputedExpressionNativeBoundFunction>(fn.second, fn.first, type_index(typeid(*this)));

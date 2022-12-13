@@ -3,6 +3,7 @@
  * Define the Tang::ComputedExpressionString class.
  */
 
+#include <algorithm>
 #include "computedExpressionString.hpp"
 #include "computedExpressionBoolean.hpp"
 #include "computedExpressionError.hpp"
@@ -13,41 +14,93 @@
 using namespace std;
 using namespace Tang;
 
-ComputedExpressionString::ComputedExpressionString(string val) : val{val} {}
+ComputedExpressionString::ComputedExpressionString(const string &val) {
+  this->stringParts.push_back(UnicodeString{val});
+}
+
+ComputedExpressionString::ComputedExpressionString(const vector<UnicodeString> & stringParts) : stringParts{stringParts} {}
 
 string ComputedExpressionString::dump() const {
-  return this->val;
+  string out{};
+  for (auto & part : this->stringParts) {
+    out += part;
+  }
+  return out;
 }
 
 string ComputedExpressionString::__asCode() const {
-  return (UnicodeString)"\"" + unescape(this->val) + (UnicodeString)"\"";
+  string out{};
+  for (auto & part : this->stringParts) {
+    out += part;
+  }
+  return (UnicodeString)"\"" + unescape(out) + (UnicodeString)"\"";
 }
 
 GarbageCollected ComputedExpressionString::makeCopy() const {
-  return GarbageCollected::make<ComputedExpressionString>(this->val);
+  return GarbageCollected::make<ComputedExpressionString>(*this);
 }
 
 bool ComputedExpressionString::is_equal(const bool & val) const {
-  return val == (bool)this->val.bytesLength();
+  bool fold = false;
+  for (auto & part : this->stringParts) {
+    fold |= (bool)part.bytesLength();
+  }
+  return val == fold;
 }
 
 bool ComputedExpressionString::is_equal(const string & val) const {
-  return val == this->val;
+  return val == this->dump();
 }
 
 GarbageCollected ComputedExpressionString::__index(const GarbageCollected & index) const {
   if (typeid(*index) == typeid(ComputedExpressionInteger)) {
     auto & indexConv = static_cast<ComputedExpressionInteger&>(*index);
     auto i = indexConv.getValue();
-    return (i >= 0)
-      // index >= 0
-      ? i < (integer_t)this->val.length()
-        ? GarbageCollected::make<ComputedExpressionString>(this->val.substr(i, 1))
-        : GarbageCollected::make<ComputedExpressionError>(Error{"Index out of range."})
-      // index < 0
-      : -i <= (integer_t)this->val.length()
-        ? GarbageCollected::make<ComputedExpressionString>(this->val.substr(this->val.length() + i, 1))
-        : GarbageCollected::make<ComputedExpressionError>(Error{"Index out of range."});
+    integer_t totalLength{0};
+    for (auto & part : this->stringParts) {
+      totalLength += part.length();
+    }
+
+    // Find the indexed grapheme.
+    if (i >= 0) {
+      // index >= 0.
+      if (i < totalLength) {
+        // Collect the string parts.
+        integer_t count{0};
+        for (auto & part : this->stringParts) {
+          if (count + (integer_t)part.length() > i) {
+            // The index grapheme is within the current part.
+            vector<UnicodeString> newParts{};
+            newParts.push_back(part.substr(i - count, 1));
+            return GarbageCollected::make<ComputedExpressionString>(newParts);
+          }
+          count += part.length();
+        }
+        // Impossible to get here.
+      }
+      return GarbageCollected::make<ComputedExpressionError>(Error{"Index out of range."});
+    }
+    else {
+      // index < 0.
+      // Convert to an index from the beginning.
+      i += totalLength;
+
+      if (i >= 0) {
+        // collect the string parts.
+        integer_t count{0};
+        for (auto & part : this->stringParts) {
+          if (count + (integer_t)part.length() > i) {
+            // The index grapheme is within the current part.
+            vector<UnicodeString> newParts{};
+            newParts.push_back(part.substr(i - count, 1));
+            return GarbageCollected::make<ComputedExpressionString>(newParts);
+          }
+          count += part.length();
+        }
+        // Impossible to get here.
+      }
+      return GarbageCollected::make<ComputedExpressionError>(Error{"Index out of range."});
+    }
   }
 
   // Return the default error.
@@ -76,17 +129,23 @@ GarbageCollected ComputedExpressionString::__slice(const GarbageCollected & begi
     return ComputedExpression::__slice(begin, end, skip);
   }
 
+  // Compute the total length.
+  integer_t totalLength{0};
+  for (auto & part : this->stringParts) {
+    totalLength += part.length();
+  }
+
   // Verify that the begin is either default or an integer.
   if (typeid(*begin) == typeid(ComputedExpression)) {
     // Begin is a default value.
-    convBegin = convSkip > 0 ? 0 : this->val.length() - 1;
+    convBegin = convSkip > 0 ? 0 : totalLength - 1;
    }
   else if (typeid(*begin) == typeid(ComputedExpressionInteger)) {
     // Begin is an integer.
     convBegin = static_cast<ComputedExpressionInteger&>(*begin).getValue();
     convBegin = (convBegin >= 0)
       ? convBegin
-      : this->val.length() + convBegin;
+      : totalLength + convBegin;
   }
   else {
     // Return the default error.
@@ -96,14 +155,14 @@ GarbageCollected ComputedExpressionString::__slice(const GarbageCollected & begi
   // Verify that the end is either default or an integer.
   if (typeid(*end) == typeid(ComputedExpression)) {
     // End is a default value.
-    convEnd = convSkip > 0 ? this->val.length() : -1;
+    convEnd = convSkip > 0 ? totalLength : -1;
    }
   else if (typeid(*end) == typeid(ComputedExpressionInteger)) {
     // End is an integer.
     convEnd = static_cast<ComputedExpressionInteger&>(*end).getValue();
     convEnd = (convEnd >= 0)
       ? convEnd
-      : this->val.length() + convEnd;
+      : totalLength + convEnd;
   }
   else {
     // Return the default error.
@@ -111,24 +170,96 @@ GarbageCollected ComputedExpressionString::__slice(const GarbageCollected & begi
   }
 
   // The new target container.
-  string newString;
+  vector<UnicodeString> newParts;
 
-  // Skip is positive.
-  if (convSkip > 0) {
-    for (int i = max(0, convBegin); i < (int)this->val.length() && i < convEnd; i += convSkip) {
-      newString += this->val.substr(i, 1);
+  // Special case: skip is 1.
+  if (convSkip == 1) {
+    // Copy chunks at a time.
+    // Collect the string parts.
+    integer_t count{0};
+    for (auto & part : this->stringParts) {
+      if (count >= convEnd) {
+        // There are no more parts to collect.
+        break;
+      }
+
+      if (count >= convBegin) {
+        // The beginning of this chunk will be included.
+        // All or part of this chunk should be collected.
+        if (count + (integer_t)part.length() <= convEnd) {
+          // All of the chunk should be collected.
+          newParts.push_back(part);
+        }
+        else {
+          // Only part of the chunk should be collected.
+          newParts.push_back(part.substr(0, convEnd - count));
+
+          // No more chunks will be added.
+          break;
+        }
+      }
+      else {
+        // The beginning of this chunk will *not* be included.
+        // This chunk may need to be skipped or only partially included.
+        if (count + (integer_t)part.length() < convBegin) {
+          // This chunk should be skipped entirely.
+          count += part.length();
+          continue;
+        }
+        // The slice is starting in this chunk.
+        newParts.push_back(part.substr(convBegin - count, convEnd - convBegin));
+        count += part.length();
+        continue;
+      }
+
+      count += part.length();
     }
-    return GarbageCollected::make<ComputedExpressionString>(newString);
+    return GarbageCollected::make<ComputedExpressionString>(newParts);
   }
 
-  // Skip is negative.
-  for (int i = min((int)this->val.length() - 1, convBegin); i >= 0 && i > convEnd; i += convSkip) {
-    newString += this->val.substr(i, 1);
-  }
-  return GarbageCollected::make<ComputedExpressionString>(newString);
+  // Flag to indicate that the final results should be reversed.
+  bool isReversed{convSkip < 0};
 
-  // Return the default error.
-  return ComputedExpression::__slice(begin, end, skip);
+  int actualBegin{convBegin};
+  int actualEnd{convEnd};
+  int actualSkip{convSkip};
+  if (isReversed) {
+    // Compute exact begin and end values which can be used by the forward
+    // algorithm and then later reversed.
+    // Ex: [5:1:-3] will become [2:6:3], giving elements (2, 5), to be reversed
+    // later.
+    // [::-1], when the string has 3 graphemes, is equivalent to
+    // [2:(0-1):-1], which is reversed to:
+    // [0:3:1], to be reversed later.
+    actualSkip = -actualSkip;
+    std::swap(actualBegin, actualEnd);
+    actualBegin = actualEnd - ((actualEnd - actualBegin - 1) / actualSkip * actualSkip);
+    ++actualEnd;
+  }
+
+  // Range Sanity Checks
+  actualBegin = max(actualBegin, 0);
+  actualEnd = min(actualEnd, totalLength);
+
+  // Perform the skip
+  integer_t count{0};
+  integer_t nextIndex{actualBegin};
+  for (auto & part : this->stringParts) {
+    while ((count + (integer_t)part.length() > nextIndex) && (nextIndex < actualEnd)) {
+      // nextIndex is within the current chunk.
+      newParts.push_back(part.substr(nextIndex - count, 1));
+      nextIndex += actualSkip;
+    }
+    count += part.length();
+  }
+
+  // Reverse the parts, if required.
+  if (isReversed) {
+    reverse(newParts.begin(), newParts.end());
+  }
+
+  // Create the new string.
+  return GarbageCollected::make<ComputedExpressionString>(newParts);
 }
 
 GarbageCollected ComputedExpressionString::__getIterator(const GarbageCollected & collection) const {
@@ -136,17 +267,28 @@ GarbageCollected ComputedExpressionString::__getIterator(const GarbageCollected 
 }
 
 GarbageCollected ComputedExpressionString::__iteratorNext(size_t index) const {
-  if (index >= this->val.length()) {
+  // Compute the total length.
+  size_t totalLength{0};
+  for (auto & part : this->stringParts) {
+    totalLength += part.length();
+  }
+
+  if (index >= totalLength) {
     return GarbageCollected::make<ComputedExpressionIteratorEnd>();
   }
-  return GarbageCollected::make<ComputedExpressionString>(this->val.substr(index, 1));
+  return this->__index(GarbageCollected::make<ComputedExpressionInteger>((integer_t)index));
 }
 
 GarbageCollected ComputedExpressionString::__add(const GarbageCollected & rhs) const {
   if (typeid(*rhs) == typeid(ComputedExpressionString)) {
     auto & rhsConv = static_cast<ComputedExpressionString&>(*rhs);
-    return GarbageCollected::make<ComputedExpressionString>(
-        this->val + rhsConv.val);
+
+    // Create a new vector to hold the concatenation.
+    vector<UnicodeString>newParts{};
+    newParts.reserve(this->stringParts.size() + rhsConv.stringParts.size());
+    newParts.insert(newParts.end(), this->stringParts.begin(), this->stringParts.end());
+    newParts.insert(newParts.end(), rhsConv.stringParts.begin(), rhsConv.stringParts.end());
+    return GarbageCollected::make<ComputedExpressionString>(newParts);
   }
 
   // Return the default error.
@@ -154,14 +296,20 @@ GarbageCollected ComputedExpressionString::__add(const GarbageCollected & rhs) c
 }
 
 GarbageCollected ComputedExpressionString::__not() const {
-  return GarbageCollected::make<ComputedExpressionBoolean>(!this->val.bytesLength());
+  // Compute the bytesLength
+  size_t totalLength{0};
+  for (auto & part : this->stringParts) {
+    totalLength += part.bytesLength();
+  }
+
+  return GarbageCollected::make<ComputedExpressionBoolean>(!totalLength);
 }
 
 GarbageCollected ComputedExpressionString::__lessThan(const GarbageCollected & rhs) const {
   if (typeid(*rhs) == typeid(ComputedExpressionString)) {
     auto & rhsConv = static_cast<ComputedExpressionString&>(*rhs);
     return GarbageCollected::make<ComputedExpressionBoolean>(
-        this->val < rhsConv.val);
+        this->dump() < rhsConv.dump());
   }
 
   // Return the default error.
@@ -172,7 +320,7 @@ GarbageCollected ComputedExpressionString::__equal(const GarbageCollected & rhs)
   if (typeid(*rhs) == typeid(ComputedExpressionString)) {
     auto & rhsConv = static_cast<ComputedExpressionString&>(*rhs);
     return GarbageCollected::make<ComputedExpressionBoolean>(
-        this->val == rhsConv.val);
+        this->dump() == rhsConv.dump());
   }
   if (typeid(*rhs) == typeid(ComputedExpression)) {
     return GarbageCollected::make<ComputedExpressionBoolean>(false);
@@ -183,27 +331,49 @@ GarbageCollected ComputedExpressionString::__equal(const GarbageCollected & rhs)
 }
 
 GarbageCollected ComputedExpressionString::__boolean() const {
-  return GarbageCollected::make<ComputedExpressionBoolean>((bool)this->val.bytesLength());
+  // Compute the bytesLength
+  size_t totalLength{0};
+  for (auto & part : this->stringParts) {
+    totalLength += part.bytesLength();
+  }
+
+  return GarbageCollected::make<ComputedExpressionBoolean>((bool)totalLength);
 }
 
 GarbageCollected ComputedExpressionString::__string() const {
-  return GarbageCollected::make<ComputedExpressionString>(this->val);
+  return GarbageCollected::make<ComputedExpressionString>(*this);
 }
 
-UnicodeString ComputedExpressionString::getValue() const {
-  return this->val;
+const vector<UnicodeString>& ComputedExpressionString::getValue() const {
+  return this->stringParts;
+}
+
+size_t ComputedExpressionString::length() const {
+  size_t count{0};
+  for (auto & item : this->stringParts) {
+    count += item.length();
+  }
+  return count;
+}
+
+size_t ComputedExpressionString::bytesLength() const {
+  size_t count{0};
+  for (auto & item : this->stringParts) {
+    count += item.bytesLength();
+  }
+  return count;
 }
 
 NativeBoundFunctionMap ComputedExpressionString::getMethods() {
   return {
     {"length", {0, [](GarbageCollected & target, [[maybe_unused]] vector<GarbageCollected>& args) {
-      return GarbageCollected::make<ComputedExpressionInteger>((integer_t)static_cast<ComputedExpressionString &>(*target).getValue().length());
+      return GarbageCollected::make<ComputedExpressionInteger>((integer_t)static_cast<ComputedExpressionString &>(*target).length());
     }}},
   };
 }
 
 ComputedExpressionString & ComputedExpressionString::operator+=(const ComputedExpressionString &rhs) {
-  this->val += rhs.val;
+  this->stringParts.insert(this->stringParts.end(), rhs.stringParts.begin(), rhs.stringParts.end());
   return *this;
 }
 

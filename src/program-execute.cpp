@@ -211,7 +211,7 @@ Program& Program::execute() {
           auto key = stack.back();
           stack.pop_back();
           if (typeid(*key) == typeid(ComputedExpressionString)) {
-            contents.insert({static_cast<ComputedExpressionString &>(*key).getValue(), value});
+            contents.insert({static_cast<ComputedExpressionString &>(*key).dump(), value});
           }
         }
         stack.push_back(GarbageCollected::make<ComputedExpressionMap>(contents));

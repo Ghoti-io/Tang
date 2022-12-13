@@ -72,8 +72,8 @@ GarbageCollected ComputedExpressionMap::__iteratorNext(size_t index) const {
 GarbageCollected ComputedExpressionMap::__index(const GarbageCollected & index) const {
   if (typeid(*index) == typeid(ComputedExpressionString)) {
     auto & indexConv = static_cast<ComputedExpressionString&>(*index);
-    auto s = indexConv.getValue();
-    if (s.bytesLength()) {
+    auto s = indexConv.dump();
+    if (indexConv.bytesLength()) {
       // index is not an empty string
       if (this->contents.count(s)) {
         return this->contents.at(s);
@@ -91,8 +91,8 @@ GarbageCollected ComputedExpressionMap::__index(const GarbageCollected & index) 
 GarbageCollected ComputedExpressionMap::__assign_index(const GarbageCollected & index, const GarbageCollected & value) {
   if (typeid(*index) == typeid(ComputedExpressionString)) {
     auto & indexConv = static_cast<ComputedExpressionString&>(*index);
-    auto s = indexConv.getValue();
-    if (s.bytesLength()) {
+    auto s = indexConv.dump();
+    if (indexConv.bytesLength()) {
       this->contents.insert({s, value});
       return value;
     }
