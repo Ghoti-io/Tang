@@ -6,5 +6,5 @@ var searchData=
   ['breakstack_125',['breakStack',['../classTang_1_1Program.html#a7b046b69c9c937c8414214fa2ef813b2',1,'Tang::Program']]],
   ['bytecode_126',['bytecode',['../classTang_1_1Program.html#a99f161953dfcc604f639fab842354262',1,'Tang::Program']]],
   ['bytecode_127',['Bytecode',['../program_8hpp.html#a70114beec5ecf129f5367a4107442ca4',1,'Tang']]],
-  ['byteslength_128',['bytesLength',['../classTang_1_1UnicodeString.html#ac4f534c284a4edfc89887e7c6234e35e',1,'Tang::UnicodeString']]]
+  ['byteslength_128',['bytesLength',['../classTang_1_1ComputedExpressionString.html#ad61d05dc78fc7e688307231700d854d3',1,'Tang::ComputedExpressionString::bytesLength()'],['../classTang_1_1UnicodeString.html#ac4f534c284a4edfc89887e7c6234e35e',1,'Tang::UnicodeString::bytesLength()']]]
 ];

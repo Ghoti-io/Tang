@@ -1,6 +1,7 @@
 var classTang_1_1ComputedExpressionString =
 [
-    [ "ComputedExpressionString", "classTang_1_1ComputedExpressionString.html#a7fae72a1f7c40400db253c0d464060c1", null ],
+    [ "ComputedExpressionString", "classTang_1_1ComputedExpressionString.html#ac4a845369c339960ab344ba494b04446", null ],
+    [ "ComputedExpressionString", "classTang_1_1ComputedExpressionString.html#a48bad8ec7e2c53a5b62246f95377e0bc", null ],
     [ "__add", "classTang_1_1ComputedExpressionString.html#ae2b11008518d5e5bb1ab842dea1eb435", null ],
     [ "__asCode", "classTang_1_1ComputedExpressionString.html#ae3a29af91b6dd6828f85acae7329b377", null ],
     [ "__assign_index", "classTang_1_1ComputedExpressionString.html#a011d86ce9b04fca4bef67b4c5bb3324c", null ],
@@ -21,8 +22,9 @@ var classTang_1_1ComputedExpressionString =
     [ "__slice", "classTang_1_1ComputedExpressionString.html#a70749fbc16aa0798272b359defce3bf8", null ],
     [ "__string", "classTang_1_1ComputedExpressionString.html#a92af6f9ea5e1809e206d96d8fb31c30f", null ],
     [ "__subtract", "classTang_1_1ComputedExpressionString.html#ab0d79debcd475a5063e574c10f1715ff", null ],
+    [ "bytesLength", "classTang_1_1ComputedExpressionString.html#ad61d05dc78fc7e688307231700d854d3", null ],
     [ "dump", "classTang_1_1ComputedExpressionString.html#a97bdb82b5f4cf5b99a2819b93d7ac047", null ],
-    [ "getValue", "classTang_1_1ComputedExpressionString.html#a2d53950a859ebd6bce32e61c1124f7b2", null ],
+    [ "getValue", "classTang_1_1ComputedExpressionString.html#a7d9f4db5aca646d6dfec35352ce80aad", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionString.html#a30aa173d92fe72fbe171a3f2808a8773", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionString.html#a5ce6d4bc0128f6aadf72c2f63a70275a", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionString.html#a5287fabf86f19613afb04d5e285c0231", null ],
@@ -30,7 +32,8 @@ var classTang_1_1ComputedExpressionString =
     [ "is_equal", "classTang_1_1ComputedExpressionString.html#a7265d530e9b32f55d2485a326ab353aa", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionString.html#a76aaf726b67cedb54b6b3c75c834645f", null ],
     [ "isCopyNeeded", "classTang_1_1ComputedExpressionString.html#a493f58bd7f51ca4d6b9b1ef1860b4370", null ],
+    [ "length", "classTang_1_1ComputedExpressionString.html#a07543a59d142a3a520834f4410ea1c45", null ],
     [ "makeCopy", "classTang_1_1ComputedExpressionString.html#aa424ab2f196af728a8810fc7ed188f7c", null ],
     [ "operator+=", "classTang_1_1ComputedExpressionString.html#a0f9112a2bd0a0cdd2b060bfedd5a0b6d", null ],
-    [ "val", "classTang_1_1ComputedExpressionString.html#a6e816aaa770ed66888707bb0aec9f6c8", null ]
+    [ "stringParts", "classTang_1_1ComputedExpressionString.html#a1eb20103509eee7de8c5aa2a7d3fd1e5", null ]
 ];

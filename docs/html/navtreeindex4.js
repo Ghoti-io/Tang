@@ -1,5 +1,8 @@
 var NAVTREEINDEX4 =
 {
+"computedExpressionNativeBoundFunction_8hpp.html":[2,0,1,38],
+"computedExpressionNativeBoundFunction_8hpp_source.html":[2,0,1,38],
+"computedExpressionString_8cpp.html":[2,0,2,39],
 "computedExpressionString_8hpp.html":[2,0,1,39],
 "computedExpressionString_8hpp_source.html":[2,0,1,39],
 "computedExpression_8cpp.html":[2,0,2,28],
@@ -25,8 +28,8 @@ var NAVTREEINDEX4 =
 "functions_enum.html":[1,3,4],
 "functions_eval.html":[1,3,5],
 "functions_f.html":[1,3,0,6],
-"functions_func.html":[1,3,1],
 "functions_func.html":[1,3,1,0],
+"functions_func.html":[1,3,1],
 "functions_func_a.html":[1,3,1,1],
 "functions_func_b.html":[1,3,1,2],
 "functions_func_c.html":[1,3,1,3],
@@ -246,6 +249,5 @@ var NAVTREEINDEX4 =
 "unicodeString_8hpp.html":[2,0,1,52],
 "unicodeString_8hpp.html#a25d8c6a386e276a165656ad79b322b64":[2,0,1,52,2],
 "unicodeString_8hpp.html#a98c3c850e57d173ab148e54ece83a671":[2,0,1,52,1],
-"unicodeString_8hpp.html#af1528e54f4a6e664d30f4e6557e0f84c":[2,0,1,52,3],
-"unicodeString_8hpp_source.html":[2,0,1,52]
+"unicodeString_8hpp.html#af1528e54f4a6e664d30f4e6557e0f84c":[2,0,1,52,3]
 };
