@@ -1769,6 +1769,13 @@ TEST(ClassFunctions, String) {
     )");
     EXPECT_EQ(*p1.execute().getResult(), 12);
   }
+  {
+    // Bound function works on concatenated object.
+    auto p1 = tang->compileScript(R"(
+      ("Hello" + " " + "World!!!").length()
+    )");
+    EXPECT_EQ(*p1.execute().getResult(), 14);
+  }
 }
 
 TEST(ClassFunctions, Array) {
