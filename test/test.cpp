@@ -767,6 +767,27 @@ TEST(Expression, StringSlice) {
     )");
     EXPECT_EQ(p1.execute().out, "usqomkigeca");
   }
+  {
+    // Slice across concatenated strings.
+    // Begin in partial chunk.
+    // Full chunk in middle.
+    // End with partial chunk.
+    auto p1 = tang->compileScript(R"(
+      print(("abc" + "def" + "ghi")[2:7]);
+    )");
+    EXPECT_EQ(p1.execute().out, "cdefg");
+  }
+  {
+    // Slice across concatenated strings.
+    // Skip chunk at start.
+    // Begin with full chunk.
+    // End with full chunk.
+    // Skip chunk at end.
+    auto p1 = tang->compileScript(R"(
+      print(("abc" + "def" + "ghi" + "jkl")[3:-3]);
+    )");
+    EXPECT_EQ(p1.execute().out, "defghi");
+  }
 }
 
 TEST(Expression, ArrayIndex) {
