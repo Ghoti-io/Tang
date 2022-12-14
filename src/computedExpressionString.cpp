@@ -41,11 +41,7 @@ GarbageCollected ComputedExpressionString::makeCopy() const {
 }
 
 bool ComputedExpressionString::is_equal(const bool & val) const {
-  bool fold = false;
-  for (auto & part : this->stringParts) {
-    fold |= (bool)part.bytesLength();
-  }
-  return val == fold;
+  return val == (bool)this->bytesLength();
 }
 
 bool ComputedExpressionString::is_equal(const string & val) const {
@@ -56,15 +52,12 @@ GarbageCollected ComputedExpressionString::__index(const GarbageCollected & inde
   if (typeid(*index) == typeid(ComputedExpressionInteger)) {
     auto & indexConv = static_cast<ComputedExpressionInteger&>(*index);
     auto i = indexConv.getValue();
-    integer_t totalLength{0};
-    for (auto & part : this->stringParts) {
-      totalLength += part.length();
-    }
+    auto totalLength{this->length()};
 
     // Find the indexed grapheme.
     if (i >= 0) {
       // index >= 0.
-      if (i < totalLength) {
+      if (i < (integer_t)totalLength) {
         // Collect the string parts.
         integer_t count{0};
         for (auto & part : this->stringParts) {
@@ -130,10 +123,7 @@ GarbageCollected ComputedExpressionString::__slice(const GarbageCollected & begi
   }
 
   // Compute the total length.
-  integer_t totalLength{0};
-  for (auto & part : this->stringParts) {
-    totalLength += part.length();
-  }
+  integer_t totalLength{(integer_t)this->length()};
 
   // Verify that the begin is either default or an integer.
   if (typeid(*begin) == typeid(ComputedExpression)) {
@@ -268,10 +258,7 @@ GarbageCollected ComputedExpressionString::__getIterator(const GarbageCollected 
 
 GarbageCollected ComputedExpressionString::__iteratorNext(size_t index) const {
   // Compute the total length.
-  size_t totalLength{0};
-  for (auto & part : this->stringParts) {
-    totalLength += part.length();
-  }
+  auto totalLength{this->length()};
 
   if (index >= totalLength) {
     return GarbageCollected::make<ComputedExpressionIteratorEnd>();
@@ -296,13 +283,7 @@ GarbageCollected ComputedExpressionString::__add(const GarbageCollected & rhs) c
 }
 
 GarbageCollected ComputedExpressionString::__not() const {
-  // Compute the bytesLength
-  size_t totalLength{0};
-  for (auto & part : this->stringParts) {
-    totalLength += part.bytesLength();
-  }
-
-  return GarbageCollected::make<ComputedExpressionBoolean>(!totalLength);
+  return GarbageCollected::make<ComputedExpressionBoolean>(!this->bytesLength());
 }
 
 GarbageCollected ComputedExpressionString::__lessThan(const GarbageCollected & rhs) const {
@@ -331,13 +312,7 @@ GarbageCollected ComputedExpressionString::__equal(const GarbageCollected & rhs)
 }
 
 GarbageCollected ComputedExpressionString::__boolean() const {
-  // Compute the bytesLength
-  size_t totalLength{0};
-  for (auto & part : this->stringParts) {
-    totalLength += part.bytesLength();
-  }
-
-  return GarbageCollected::make<ComputedExpressionBoolean>((bool)totalLength);
+  return GarbageCollected::make<ComputedExpressionBoolean>((bool)this->bytesLength());
 }
 
 GarbageCollected ComputedExpressionString::__string() const {
@@ -349,18 +324,34 @@ const vector<UnicodeString>& ComputedExpressionString::getValue() const {
 }
 
 size_t ComputedExpressionString::length() const {
+  // Return the cached length, if it exists.
+  if (this->cachedLength) {
+    return *this->cachedLength;
+  }
+
+  // Calculate the length and cache the results.
   size_t count{0};
   for (auto & item : this->stringParts) {
     count += item.length();
   }
+
+  this->cachedLength = count;
   return count;
 }
 
 size_t ComputedExpressionString::bytesLength() const {
+  // Return the cached length, if it exists.
+  if (this->cachedBytesLength) {
+    return *this->cachedBytesLength;
+  }
+
+  // Calculate the length and cache the results.
   size_t count{0};
   for (auto & item : this->stringParts) {
     count += item.bytesLength();
   }
+
+  this->cachedBytesLength = count;
   return count;
 }
 

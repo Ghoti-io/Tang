@@ -6,6 +6,7 @@
 #ifndef TANG_COMPUTEDEXPRESSIONSTRING_HPP
 #define TANG_COMPUTEDEXPRESSIONSTRING_HPP
 
+#include <optional>
 #include "macros.hpp"
 #include "computedExpression.hpp"
 #include "unicodeString.hpp"
@@ -89,6 +90,16 @@ namespace Tang {
        * The string value.
        */
       std::vector<UnicodeString> stringParts;
+
+      /**
+       * Cache of the string length in graphemes.
+       */
+      mutable std::optional<size_t> cachedLength;
+
+      /**
+       * Cache of the string length in bytes.
+       */
+      mutable std::optional<size_t> cachedBytesLength;
   };
 }
 
