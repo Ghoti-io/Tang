@@ -242,6 +242,14 @@ Private Attributes</h2></td></tr>
 std::vector&lt; <a class="el" href="classTang_1_1UnicodeString.html">UnicodeString</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionString.html#a1eb20103509eee7de8c5aa2a7d3fd1e5">stringParts</a></td></tr>
 <tr class="memdesc:a1eb20103509eee7de8c5aa2a7d3fd1e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The string value. <br /></td></tr>
 <tr class="separator:a1eb20103509eee7de8c5aa2a7d3fd1e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f19bdb8f21cbae91a25624a95d5e6e9"><td class="memItemLeft" align="right" valign="top"><a id="a4f19bdb8f21cbae91a25624a95d5e6e9"></a>
+std::optional&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionString.html#a4f19bdb8f21cbae91a25624a95d5e6e9">cachedLength</a></td></tr>
+<tr class="memdesc:a4f19bdb8f21cbae91a25624a95d5e6e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache of the string length in graphemes. <br /></td></tr>
+<tr class="separator:a4f19bdb8f21cbae91a25624a95d5e6e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e57454fff6f117242d453e629507fe1"><td class="memItemLeft" align="right" valign="top"><a id="a4e57454fff6f117242d453e629507fe1"></a>
+std::optional&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1ComputedExpressionString.html#a4e57454fff6f117242d453e629507fe1">cachedBytesLength</a></td></tr>
+<tr class="memdesc:a4e57454fff6f117242d453e629507fe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache of the string length in bytes. <br /></td></tr>
+<tr class="separator:a4e57454fff6f117242d453e629507fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a String that is the result of a computation. </p>
@@ -459,6 +467,15 @@ Here is the call graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>The result of the the operation. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#ac38862531c17e25636ca68c7e74ba487">Tang::ComputedExpression</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTang_1_1ComputedExpressionString_a866cf904c4fe5606454e321628d092f5_cgraph.png" border="0" usemap="#aclassTang_1_1ComputedExpressionString_a866cf904c4fe5606454e321628d092f5_cgraph" alt=""/></div>
+<map name="aclassTang_1_1ComputedExpressionString_a866cf904c4fe5606454e321628d092f5_cgraph" id="aclassTang_1_1ComputedExpressionString_a866cf904c4fe5606454e321628d092f5_cgraph">
+<area shape="rect" title="Perform a type cast to boolean." alt="" coords="5,5,204,47"/>
+<area shape="rect" href="classTang_1_1ComputedExpressionString.html#ad61d05dc78fc7e688307231700d854d3" title="Return the number of bytes required by the string, stored as UTF&#45;8." alt="" coords="252,5,451,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -651,9 +668,10 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTang_1_1ComputedExpressionString_afe336aaa76162ce7b17d83f25d80acd3_cgraph.png" border="0" usemap="#aclassTang_1_1ComputedExpressionString_afe336aaa76162ce7b17d83f25d80acd3_cgraph" alt=""/></div>
 <map name="aclassTang_1_1ComputedExpressionString_afe336aaa76162ce7b17d83f25d80acd3_cgraph" id="aclassTang_1_1ComputedExpressionString_afe336aaa76162ce7b17d83f25d80acd3_cgraph">
-<area shape="rect" title="Perform an index operation." alt="" coords="5,39,204,80"/>
+<area shape="rect" title="Perform an index operation." alt="" coords="5,71,204,112"/>
 <area shape="rect" href="classTang_1_1ComputedExpression.html#abb6defbdb303825687da1bd1468e6133" title="Perform an index operation." alt="" coords="252,5,451,47"/>
 <area shape="rect" href="classTang_1_1ComputedExpressionInteger.html#a04c76a5ba8dbc3bfa4258c50c263b306" title="Helper function to get the value associated with this expression." alt="" coords="252,71,451,112"/>
+<area shape="rect" href="classTang_1_1ComputedExpressionString.html#a07543a59d142a3a520834f4410ea1c45" title="Return the number of graphemes contained in the string." alt="" coords="252,136,451,177"/>
 </map>
 </div>
 
@@ -727,8 +745,9 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTang_1_1ComputedExpressionString_a9d96dedd8034031787b746f0f0cd227c_cgraph.png" border="0" usemap="#aclassTang_1_1ComputedExpressionString_a9d96dedd8034031787b746f0f0cd227c_cgraph" alt=""/></div>
 <map name="aclassTang_1_1ComputedExpressionString_a9d96dedd8034031787b746f0f0cd227c_cgraph" id="aclassTang_1_1ComputedExpressionString_a9d96dedd8034031787b746f0f0cd227c_cgraph">
-<area shape="rect" title="Get the next iterative value." alt="" coords="5,39,204,80"/>
-<area shape="rect" href="classTang_1_1ComputedExpressionString.html#afe336aaa76162ce7b17d83f25d80acd3" title="Perform an index operation." alt="" coords="252,39,451,80"/>
+<area shape="rect" title="Get the next iterative value." alt="" coords="5,104,204,145"/>
+<area shape="rect" href="classTang_1_1ComputedExpressionString.html#afe336aaa76162ce7b17d83f25d80acd3" title="Perform an index operation." alt="" coords="252,73,451,115"/>
+<area shape="rect" href="classTang_1_1ComputedExpressionString.html#a07543a59d142a3a520834f4410ea1c45" title="Return the number of graphemes contained in the string." alt="" coords="499,136,697,177"/>
 <area shape="rect" href="classTang_1_1ComputedExpression.html#abb6defbdb303825687da1bd1468e6133" title="Perform an index operation." alt="" coords="499,5,697,47"/>
 <area shape="rect" href="classTang_1_1ComputedExpressionInteger.html#a04c76a5ba8dbc3bfa4258c50c263b306" title="Helper function to get the value associated with this expression." alt="" coords="499,71,697,112"/>
 </map>
@@ -914,6 +933,15 @@ Here is the call graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>The result of the operation. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#ac21f9e07c9d1f0a98b60bb1d75d8e87d">Tang::ComputedExpression</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTang_1_1ComputedExpressionString_a6a774d8cd860ad4c17806ac710fe9161_cgraph.png" border="0" usemap="#aclassTang_1_1ComputedExpressionString_a6a774d8cd860ad4c17806ac710fe9161_cgraph" alt=""/></div>
+<map name="aclassTang_1_1ComputedExpressionString_a6a774d8cd860ad4c17806ac710fe9161_cgraph" id="aclassTang_1_1ComputedExpressionString_a6a774d8cd860ad4c17806ac710fe9161_cgraph">
+<area shape="rect" title="Compute the logical not of this value." alt="" coords="5,5,204,47"/>
+<area shape="rect" href="classTang_1_1ComputedExpressionString.html#ad61d05dc78fc7e688307231700d854d3" title="Return the number of bytes required by the string, stored as UTF&#45;8." alt="" coords="252,5,451,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -1020,9 +1048,10 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTang_1_1ComputedExpressionString_a70749fbc16aa0798272b359defce3bf8_cgraph.png" border="0" usemap="#aclassTang_1_1ComputedExpressionString_a70749fbc16aa0798272b359defce3bf8_cgraph" alt=""/></div>
 <map name="aclassTang_1_1ComputedExpressionString_a70749fbc16aa0798272b359defce3bf8_cgraph" id="aclassTang_1_1ComputedExpressionString_a70749fbc16aa0798272b359defce3bf8_cgraph">
-<area shape="rect" title="Perform a slice operation." alt="" coords="5,39,204,80"/>
+<area shape="rect" title="Perform a slice operation." alt="" coords="5,71,204,112"/>
 <area shape="rect" href="classTang_1_1ComputedExpression.html#aa7a262384220a86eb273284f8990ca84" title="Perform a slice operation." alt="" coords="252,5,451,47"/>
 <area shape="rect" href="classTang_1_1ComputedExpressionInteger.html#a04c76a5ba8dbc3bfa4258c50c263b306" title="Helper function to get the value associated with this expression." alt="" coords="252,71,451,112"/>
+<area shape="rect" href="classTang_1_1ComputedExpressionString.html#a07543a59d142a3a520834f4410ea1c45" title="Return the number of graphemes contained in the string." alt="" coords="252,136,451,177"/>
 </map>
 </div>
 
@@ -1236,6 +1265,15 @@ Here is the call graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>True if equal, false if not. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classTang_1_1ComputedExpression.html#a907104a9d090d21e9bcc487b696738c4">Tang::ComputedExpression</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTang_1_1ComputedExpressionString_a30aa173d92fe72fbe171a3f2808a8773_cgraph.png" border="0" usemap="#aclassTang_1_1ComputedExpressionString_a30aa173d92fe72fbe171a3f2808a8773_cgraph" alt=""/></div>
+<map name="aclassTang_1_1ComputedExpressionString_a30aa173d92fe72fbe171a3f2808a8773_cgraph" id="aclassTang_1_1ComputedExpressionString_a30aa173d92fe72fbe171a3f2808a8773_cgraph">
+<area shape="rect" title="Check whether or not the computed expression is equal to another value." alt="" coords="5,5,204,47"/>
+<area shape="rect" href="classTang_1_1ComputedExpressionString.html#ad61d05dc78fc7e688307231700d854d3" title="Return the number of bytes required by the string, stored as UTF&#45;8." alt="" coords="252,5,451,47"/>
+</map>
+</div>
 
 </div>
 </div>

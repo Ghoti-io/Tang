@@ -35,12 +35,14 @@ var NAVTREEINDEX3 =
 "classTang_1_1ComputedExpressionString.html#a011d86ce9b04fca4bef67b4c5bb3324c":[1,0,0,39,4],
 "classTang_1_1ComputedExpressionString.html#a07543a59d142a3a520834f4410ea1c45":[1,0,0,39,32],
 "classTang_1_1ComputedExpressionString.html#a0f9112a2bd0a0cdd2b060bfedd5a0b6d":[1,0,0,39,34],
-"classTang_1_1ComputedExpressionString.html#a1eb20103509eee7de8c5aa2a7d3fd1e5":[1,0,0,39,35],
+"classTang_1_1ComputedExpressionString.html#a1eb20103509eee7de8c5aa2a7d3fd1e5":[1,0,0,39,37],
 "classTang_1_1ComputedExpressionString.html#a1f670b31682d75c5b5e34a1537aea851":[1,0,0,39,9],
 "classTang_1_1ComputedExpressionString.html#a30aa173d92fe72fbe171a3f2808a8773":[1,0,0,39,25],
 "classTang_1_1ComputedExpressionString.html#a39df4abc066123ec2d634e921be40d21":[1,0,0,39,15],
 "classTang_1_1ComputedExpressionString.html#a48bad8ec7e2c53a5b62246f95377e0bc":[1,0,0,39,1],
 "classTang_1_1ComputedExpressionString.html#a493f58bd7f51ca4d6b9b1ef1860b4370":[1,0,0,39,31],
+"classTang_1_1ComputedExpressionString.html#a4e57454fff6f117242d453e629507fe1":[1,0,0,39,35],
+"classTang_1_1ComputedExpressionString.html#a4f19bdb8f21cbae91a25624a95d5e6e9":[1,0,0,39,36],
 "classTang_1_1ComputedExpressionString.html#a5287fabf86f19613afb04d5e285c0231":[1,0,0,39,27],
 "classTang_1_1ComputedExpressionString.html#a5ce6d4bc0128f6aadf72c2f63a70275a":[1,0,0,39,26],
 "classTang_1_1ComputedExpressionString.html#a5d83d6e7243a7af7aae63e77c8fd680a":[1,0,0,39,18],
@@ -247,7 +249,5 @@ var NAVTREEINDEX3 =
 "computedExpressionIterator_8hpp.html":[2,0,1,35],
 "computedExpressionIterator_8hpp_source.html":[2,0,1,35],
 "computedExpressionMap_8cpp.html":[2,0,2,37],
-"computedExpressionMap_8hpp.html":[2,0,1,37],
-"computedExpressionMap_8hpp_source.html":[2,0,1,37],
-"computedExpressionNativeBoundFunction_8cpp.html":[2,0,2,38]
+"computedExpressionMap_8hpp.html":[2,0,1,37]
 };

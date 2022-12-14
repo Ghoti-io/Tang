@@ -134,7 +134,7 @@
     \subitem {Tang::ComputedExpressionMap}, \hyperpage{272}
     \subitem {Tang::ComputedExpressionNativeBoundFunction}, 
 		\hyperpage{286}
-    \subitem {Tang::ComputedExpressionString}, \hyperpage{302}
+    \subitem {Tang::ComputedExpressionString}, \hyperpage{303}
   \item {\_\_integer}
     \subitem {Tang::ComputedExpression}, \hyperpage{146}
     \subitem {Tang::ComputedExpressionArray}, \hyperpage{160}
@@ -164,7 +164,7 @@
     \subitem {Tang::ComputedExpressionMap}, \hyperpage{272}
     \subitem {Tang::ComputedExpressionNativeBoundFunction}, 
 		\hyperpage{287}
-    \subitem {Tang::ComputedExpressionString}, \hyperpage{303}
+    \subitem {Tang::ComputedExpressionString}, \hyperpage{304}
   \item {\_\_lessThan}
     \subitem {Tang::ComputedExpression}, \hyperpage{146}
     \subitem {Tang::ComputedExpressionArray}, \hyperpage{160}
@@ -194,7 +194,7 @@
     \subitem {Tang::ComputedExpressionMap}, \hyperpage{273}
     \subitem {Tang::ComputedExpressionNativeBoundFunction}, 
 		\hyperpage{289}
-    \subitem {Tang::ComputedExpressionString}, \hyperpage{304}
+    \subitem {Tang::ComputedExpressionString}, \hyperpage{305}
   \item {\_\_multiply}
     \subitem {Tang::ComputedExpression}, \hyperpage{147}
     \subitem {Tang::ComputedExpressionArray}, \hyperpage{161}
@@ -224,7 +224,7 @@
     \subitem {Tang::ComputedExpressionMap}, \hyperpage{274}
     \subitem {Tang::ComputedExpressionNativeBoundFunction}, 
 		\hyperpage{289}
-    \subitem {Tang::ComputedExpressionString}, \hyperpage{305}
+    \subitem {Tang::ComputedExpressionString}, \hyperpage{306}
   \item {\_\_not}
     \subitem {Tang::ComputedExpression}, \hyperpage{148}
     \subitem {Tang::ComputedExpressionArray}, \hyperpage{162}
@@ -239,7 +239,7 @@
     \subitem {Tang::ComputedExpressionMap}, \hyperpage{274}
     \subitem {Tang::ComputedExpressionNativeBoundFunction}, 
 		\hyperpage{290}
-    \subitem {Tang::ComputedExpressionString}, \hyperpage{305}
+    \subitem {Tang::ComputedExpressionString}, \hyperpage{306}
   \item {\_\_period}
     \subitem {Tang::ComputedExpression}, \hyperpage{148}
     \subitem {Tang::ComputedExpressionArray}, \hyperpage{162}
@@ -269,7 +269,7 @@
     \subitem {Tang::ComputedExpressionMap}, \hyperpage{275}
     \subitem {Tang::ComputedExpressionNativeBoundFunction}, 
 		\hyperpage{290}
-    \subitem {Tang::ComputedExpressionString}, \hyperpage{306}
+    \subitem {Tang::ComputedExpressionString}, \hyperpage{307}
   \item {\_\_string}
     \subitem {Tang::ComputedExpression}, \hyperpage{149}
     \subitem {Tang::ComputedExpressionArray}, \hyperpage{163}
@@ -299,7 +299,7 @@
     \subitem {Tang::ComputedExpressionMap}, \hyperpage{276}
     \subitem {Tang::ComputedExpressionNativeBoundFunction}, 
 		\hyperpage{291}
-    \subitem {Tang::ComputedExpressionString}, \hyperpage{307}
+    \subitem {Tang::ComputedExpressionString}, \hyperpage{308}
   \item {$\sim$GarbageCollected}
     \subitem {Tang::GarbageCollected}, \hyperpage{319}
 
@@ -652,7 +652,7 @@
     \subitem {opcode.hpp}, \hyperpage{413}
   \item {getMethods}
     \subitem {Tang::ComputedExpressionArray}, \hyperpage{165}
-    \subitem {Tang::ComputedExpressionString}, \hyperpage{308}
+    \subitem {Tang::ComputedExpressionString}, \hyperpage{309}
   \item {getResult}
     \subitem {Tang::Program}, \hyperpage{346}
   \item {getStrings}
@@ -663,7 +663,7 @@
   \item {getValue}
     \subitem {Tang::ComputedExpressionFloat}, \hyperpage{220}
     \subitem {Tang::ComputedExpressionInteger}, \hyperpage{234}
-    \subitem {Tang::ComputedExpressionString}, \hyperpage{308}
+    \subitem {Tang::ComputedExpressionString}, \hyperpage{309}
   \item {GreaterThan}
     \subitem {Tang::AstNodeBinary}, \hyperpage{32}
   \item {GreaterThanEqual}
@@ -764,8 +764,7 @@
     \subitem {Tang::ComputedExpressionMap}, \hyperpage{276--278}
     \subitem {Tang::ComputedExpressionNativeBoundFunction}, 
 		\hyperpage{293--295}
-    \subitem {Tang::ComputedExpressionString}, \hyperpage{309, 310}, 
-		\hyperpage{312}
+    \subitem {Tang::ComputedExpressionString}, \hyperpage{309--312}
   \item {IsAssignment}
     \subitem {Tang::AstNode}, \hyperpage{18}
     \subitem {Tang::AstNodeArray}, \hyperpage{23}
@@ -1680,24 +1679,24 @@
     \subitem {\_\_equal}, \hyperpage{301}
     \subitem {\_\_float}, \hyperpage{302}
     \subitem {\_\_getIterator}, \hyperpage{302}
-    \subitem {\_\_index}, \hyperpage{302}
+    \subitem {\_\_index}, \hyperpage{303}
     \subitem {\_\_integer}, \hyperpage{303}
-    \subitem {\_\_iteratorNext}, \hyperpage{303}
+    \subitem {\_\_iteratorNext}, \hyperpage{304}
     \subitem {\_\_lessThan}, \hyperpage{304}
-    \subitem {\_\_modulo}, \hyperpage{304}
+    \subitem {\_\_modulo}, \hyperpage{305}
     \subitem {\_\_multiply}, \hyperpage{305}
-    \subitem {\_\_negative}, \hyperpage{305}
-    \subitem {\_\_not}, \hyperpage{305}
+    \subitem {\_\_negative}, \hyperpage{306}
+    \subitem {\_\_not}, \hyperpage{306}
     \subitem {\_\_period}, \hyperpage{306}
-    \subitem {\_\_slice}, \hyperpage{306}
+    \subitem {\_\_slice}, \hyperpage{307}
     \subitem {\_\_string}, \hyperpage{307}
-    \subitem {\_\_subtract}, \hyperpage{307}
+    \subitem {\_\_subtract}, \hyperpage{308}
     \subitem {bytesLength}, \hyperpage{308}
     \subitem {ComputedExpressionString}, \hyperpage{298, 299}
     \subitem {dump}, \hyperpage{308}
-    \subitem {getMethods}, \hyperpage{308}
-    \subitem {getValue}, \hyperpage{308}
-    \subitem {is\_equal}, \hyperpage{309, 310}, \hyperpage{312}
+    \subitem {getMethods}, \hyperpage{309}
+    \subitem {getValue}, \hyperpage{309}
+    \subitem {is\_equal}, \hyperpage{309--312}
     \subitem {isCopyNeeded}, \hyperpage{312}
     \subitem {length}, \hyperpage{312}
     \subitem {makeCopy}, \hyperpage{313}

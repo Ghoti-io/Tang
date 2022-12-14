@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['tangbase_464',['TangBase',['../classTang_1_1TangBase.html',1,'Tang']]],
-  ['tangscanner_465',['TangScanner',['../classTang_1_1TangScanner.html',1,'Tang']]]
+  ['tangbase_466',['TangBase',['../classTang_1_1TangBase.html',1,'Tang']]],
+  ['tangscanner_467',['TangScanner',['../classTang_1_1TangScanner.html',1,'Tang']]]
 ];
