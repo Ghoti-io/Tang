@@ -21,6 +21,11 @@ ComputedExpressionString::ComputedExpressionString(const string &val) {
 ComputedExpressionString::ComputedExpressionString(const vector<UnicodeString> & stringParts) : stringParts{stringParts} {}
 
 string ComputedExpressionString::dump() const {
+  // Sanity check because many strings will only have one chunk.
+  if (this->stringParts.size() == 1) {
+    return this->stringParts.at(0);
+  }
+
   string out{};
   for (auto & part : this->stringParts) {
     out += part;
@@ -257,10 +262,7 @@ GarbageCollected ComputedExpressionString::__getIterator(const GarbageCollected 
 }
 
 GarbageCollected ComputedExpressionString::__iteratorNext(size_t index) const {
-  // Compute the total length.
-  auto totalLength{this->length()};
-
-  if (index >= totalLength) {
+  if (index >= this->length()) {
     return GarbageCollected::make<ComputedExpressionIteratorEnd>();
   }
   return this->__index(GarbageCollected::make<ComputedExpressionInteger>((integer_t)index));
