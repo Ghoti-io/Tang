@@ -65,9 +65,9 @@ string Tang::htmlEscape(const string & str) {
   return out;
 }
 
-string Tang::htmlEscapeAscii(const string & str) {
+string Tang::htmlEscapeAscii(const string & str, UnicodeString::Type type) {
   stringstream ss{str};
-  HtmlEscapeAscii h{ss, cout};
+  HtmlEscapeAscii h{ss, cout, type};
   string out{}, next;
   while ((next = h.get_next_token()).length()) {
     out += next;
@@ -139,5 +139,9 @@ string UnicodeString::render() const {
   return (this->type == Type::Trusted)
     ? this->src
     : htmlEscape(this->src);
+}
+
+string UnicodeString::renderAscii() const {
+  return htmlEscapeAscii(this->src, this->type);
 }
 

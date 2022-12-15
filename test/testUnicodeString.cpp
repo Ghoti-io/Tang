@@ -140,6 +140,16 @@ TEST(UnicodeString, Types) {
     UnicodeString s{"<h1>", UnicodeString::Untrusted};
     EXPECT_EQ(s.render(), "&lt;h1&gt;");
   }
+  {
+    // Trusted string.
+    UnicodeString s{"<h1>Hello\nWorld!</h1>", UnicodeString::Trusted};
+    EXPECT_EQ(s.renderAscii(), "<h1>Hello&NewLine;World!</h1>");
+  }
+  {
+    // Untrusted string.
+    UnicodeString s{"<h1>Hello\nWorld!</h1>", UnicodeString::Untrusted};
+    EXPECT_EQ(s.renderAscii(), "&lt;h1&gt;Hello&NewLine;World&excl;&lt;&sol;h1&gt;");
+  }
 }
 
 int main(int argc, char** argv) {

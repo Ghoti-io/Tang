@@ -47,6 +47,7 @@
 
 #include <map>
 #include <string>
+#include "unicodeString.hpp"
 #include "htmlEscapeAscii.hpp"
 
 using namespace std;
@@ -1532,8 +1533,12 @@ static string getHexEscapeSequence(uint32_t num) {
   return buf;
 }
 
-static string decode1(const char * const &s) {
+static string decode1(const char * const &s, Tang::UnicodeString::Type type) {
   uint32_t num = s[0];
+  if ((type == Tang::UnicodeString::Type::Trusted) && (isprint(s[0]))) {
+    return s;
+  }
+
   // Use a known HTML escape sequence, if it exists.
   if (charMap.count(num)) {
     return charMap.at(num);
@@ -1584,7 +1589,7 @@ validByte [\x80-\xBF]
 
 [\x00-\x7f] {
   // Valid, 1 byte.
-  return decode1(yytext);
+  return decode1(yytext, this->type);
 }
 {validByte} {
   // Invalid, 1st byte cannot start with b10xxxxxx

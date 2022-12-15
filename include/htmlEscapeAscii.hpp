@@ -24,6 +24,7 @@
 #define YY_DECL std::string Tang::HtmlEscapeAscii::get_next_token()
 
 // Now, the normal header contents.
+#include "unicodeString.hpp"
 
 namespace Tang {
   /**
@@ -51,7 +52,7 @@ namespace Tang {
      * @param arg_yyin The input stream to be tokenized
      * @param arg_yyout The output stream (not currently used)
      */
-    HtmlEscapeAscii(std::istream& arg_yyin, std::ostream& arg_yyout) : yyFlexLexer(arg_yyin, arg_yyout) {}
+    HtmlEscapeAscii(std::istream& arg_yyin, std::ostream& arg_yyout, UnicodeString::Type type) : yyFlexLexer(arg_yyin, arg_yyout), type{type} {}
     
     /**
      * Extract the next token from the input string.
@@ -59,6 +60,12 @@ namespace Tang {
      * @return The next unescaped character.
      */
     virtual std::string get_next_token();
+
+  private:
+    /**
+     * The type of string that is being escaped.
+     */
+    UnicodeString::Type type;
   };
 }
 

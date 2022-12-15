@@ -13,43 +13,6 @@
 
 namespace Tang {
   /**
-   * Return an "unescaped" version of the provided string, which, when
-   * interpreted by Tang, should result in a representation equivalent to the
-   * original source string.
-   *
-   * @param str The string to be unescaped.
-   * @return An "unescaped" version of the provided string.
-   */
-  std::string unescape(const std::string & str);
-
-  /**
-   * Return an "html escaped" version of the provided string.
-   *
-   * Only "critical" characters `<`, `>`, `&`, `"`, and `'` will be escaped.
-   * All other characters will be allowed through unaltered.  The result is a
-   * UTF-8 encoded string that is safe for inclusion in an HTML template
-   * without disturbing the HTML structure.
-   *
-   * @param str The string to be escaped.
-   * @return An "escaped" version of the provided string.
-   */
-  std::string htmlEscape(const std::string & str);
-
-  /**
-   * Return an Ascii-only, "html escaped" version of the provided string.
-   *
-   * This function will convert all characters into an Ascii-only
-   * representation of the provided UTF-8 encoded string.  Visible, standard
-   * Ascii characters will pass through unaltered, but all others will be
-   * replaced by their HTML escape sequence (if it exists), or the appropriate
-   * hexadecimal escape code.
-   *
-   * @param str The string to be escaped.
-   * @return An "escaped" version of the provided string.
-   */
-  std::string htmlEscapeAscii(const std::string & str);
-
-  /**
    * Represents a UTF-8 encoded string that is Unicode-aware.
    *
    * This class serves as the interface between the Tang language and the ICU
@@ -151,6 +114,15 @@ namespace Tang {
      */
     std::string render() const;
 
+    /**
+     * Render the string in with all characters converted to an ASCII
+     * representation.  The dangerous characters will not be HTML encoded, if
+     * the string is UnicodeString::Type::Trusted.
+     *
+     * @return The rendered string, according to its type.
+     */
+    std::string renderAscii() const;
+
   private:
     /**
      * The UTF-8 encoded string.
@@ -177,6 +149,43 @@ namespace Tang {
      */
     void generateCachedValues() const;
   };
+
+  /**
+   * Return an "unescaped" version of the provided string, which, when
+   * interpreted by Tang, should result in a representation equivalent to the
+   * original source string.
+   *
+   * @param str The string to be unescaped.
+   * @return An "unescaped" version of the provided string.
+   */
+  std::string unescape(const std::string & str);
+
+  /**
+   * Return an "html escaped" version of the provided string.
+   *
+   * Only "critical" characters `<`, `>`, `&`, `"`, and `'` will be escaped.
+   * All other characters will be allowed through unaltered.  The result is a
+   * UTF-8 encoded string that is safe for inclusion in an HTML template
+   * without disturbing the HTML structure.
+   *
+   * @param str The string to be escaped.
+   * @return An "escaped" version of the provided string.
+   */
+  std::string htmlEscape(const std::string & str);
+
+  /**
+   * Return an Ascii-only, "html escaped" version of the provided string.
+   *
+   * This function will convert all characters into an Ascii-only
+   * representation of the provided UTF-8 encoded string.  Visible, standard
+   * Ascii characters will pass through unaltered, but all others will be
+   * replaced by their HTML escape sequence (if it exists), or the appropriate
+   * hexadecimal escape code.
+   *
+   * @param str The string to be escaped.
+   * @return An "escaped" version of the provided string.
+   */
+  std::string htmlEscapeAscii(const std::string & str, UnicodeString::Type type = UnicodeString::Type::Untrusted);
 }
 
 #endif // TANG_UNICODESTRING_HPP
