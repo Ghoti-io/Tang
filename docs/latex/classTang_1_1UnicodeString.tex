@@ -18,10 +18,17 @@ Collaboration diagram for Tang\+::Unicode\+String\+:\nopagebreak
 \includegraphics[width=350pt]{classTang_1_1UnicodeString__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aef}{Type}} \{ \mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aefa157a44b8159d35ee4e5cbb7e15b37b38}{Trusted}}
+, \mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aefa53ce5b480cb1df2a39d67a0af7b68bce}{Untrusted}}
+ \}
+\begin{DoxyCompactList}\small\item\em The types of string being created. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTang_1_1UnicodeString_ae9396cce6078fb0ab2986e3ea2910b36}{Unicode\+String}} (const std\+::string \&\mbox{\hyperlink{classTang_1_1UnicodeString_a18a9354b4d362a01193154b85ec250a7}{src}})
+\mbox{\hyperlink{classTang_1_1UnicodeString_a92d01ede537345e14040c4a15497444b}{Unicode\+String}} (const std\+::string \&\mbox{\hyperlink{classTang_1_1UnicodeString_a18a9354b4d362a01193154b85ec250a7}{src}}, \mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aef}{Unicode\+String\+::\+Type}} \mbox{\hyperlink{classTang_1_1UnicodeString_a358f099e989756e11bc355d1a0638289}{type}}=\mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aefa157a44b8159d35ee4e5cbb7e15b37b38}{Unicode\+String\+::\+Trusted}})
 \begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{classTang_1_1UnicodeString}{Tang\+::\+Unicode\+String}} object, which acts as the interface to the ICU library. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classTang_1_1UnicodeString_a7bda91d3c0efba9f5e70d915a665ba18}{substr}} (size\+\_\+t \mbox{\hyperlink{classTang_1_1position}{position}}, size\+\_\+t \mbox{\hyperlink{classTang_1_1UnicodeString_aacfef070a2f6de639e050822c94263f5}{length}}) const
 \begin{DoxyCompactList}\small\item\em Return a Unicode grapheme-\/aware substring. \end{DoxyCompactList}\item 
@@ -38,7 +45,11 @@ bool \mbox{\hyperlink{classTang_1_1UnicodeString_ad22c4f14673523cd3bcd5c56fa7028
 size\+\_\+t \mbox{\hyperlink{classTang_1_1UnicodeString_aacfef070a2f6de639e050822c94263f5}{length}} () const
 \begin{DoxyCompactList}\small\item\em Return the length of the \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} in graphemes. \end{DoxyCompactList}\item 
 size\+\_\+t \mbox{\hyperlink{classTang_1_1UnicodeString_ac4f534c284a4edfc89887e7c6234e35e}{bytes\+Length}} () const
-\begin{DoxyCompactList}\small\item\em Return the length of the \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} in bytes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Return the length of the \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} in bytes. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTang_1_1UnicodeString_a69305edbb266045c7a5032548d6fc8c9}{render}} () const
+\begin{DoxyCompactList}\small\item\em Render the string in with dangerous characters HTML encoded, if the string is Unicode\+String\+::\+Type\+::\+Untrusted. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTang_1_1UnicodeString_a9dca6ebd40e645d5eaf72f430ea7b541}{render\+Ascii}} () const
+\begin{DoxyCompactList}\small\item\em Render the string in with all characters converted to an ASCII representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -51,6 +62,9 @@ void \mbox{\hyperlink{classTang_1_1UnicodeString_a4305d2e9ba94d11c36d904dd80a62e
 \mbox{\Hypertarget{classTang_1_1UnicodeString_a18a9354b4d362a01193154b85ec250a7}\label{classTang_1_1UnicodeString_a18a9354b4d362a01193154b85ec250a7}} 
 std\+::string \mbox{\hyperlink{classTang_1_1UnicodeString_a18a9354b4d362a01193154b85ec250a7}{src}}
 \begin{DoxyCompactList}\small\item\em The UTF-\/8 encoded string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1UnicodeString_a358f099e989756e11bc355d1a0638289}\label{classTang_1_1UnicodeString_a358f099e989756e11bc355d1a0638289}} 
+\mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aef}{Unicode\+String\+::\+Type}} \mbox{\hyperlink{classTang_1_1UnicodeString_a358f099e989756e11bc355d1a0638289}{type}}
+\begin{DoxyCompactList}\small\item\em The type of string being stored. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTang_1_1UnicodeString_a0ad4f2ba93e84e3256af80c5750be410}\label{classTang_1_1UnicodeString_a0ad4f2ba93e84e3256af80c5750be410}} 
 std\+::shared\+\_\+ptr$<$ std\+::vector$<$ size\+\_\+t $>$ $>$ \mbox{\hyperlink{classTang_1_1UnicodeString_a0ad4f2ba93e84e3256af80c5750be410}{grapheme\+Offsets}}
 \begin{DoxyCompactList}\small\item\em Cache of the grapheme offsets, if they happen to be calculated. \end{DoxyCompactList}\item 
@@ -64,12 +78,35 @@ Represents a UTF-\/8 encoded string that is Unicode-\/aware.
 
 This class serves as the interface between the Tang language and the ICU library. 
 
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aef}\label{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aef}} 
+\index{Tang::UnicodeString@{Tang::UnicodeString}!Type@{Type}}
+\index{Type@{Type}!Tang::UnicodeString@{Tang::UnicodeString}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aef}{Tang\+::\+Unicode\+String\+::\+Type}}}
+
+
+
+The types of string being created. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Trusted@{Trusted}!Tang::UnicodeString@{Tang::UnicodeString}}\index{Tang::UnicodeString@{Tang::UnicodeString}!Trusted@{Trusted}}}\mbox{\Hypertarget{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aefa157a44b8159d35ee4e5cbb7e15b37b38}\label{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aefa157a44b8159d35ee4e5cbb7e15b37b38}} 
+Trusted&String is from a trusted source. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Untrusted@{Untrusted}!Tang::UnicodeString@{Tang::UnicodeString}}\index{Tang::UnicodeString@{Tang::UnicodeString}!Untrusted@{Untrusted}}}\mbox{\Hypertarget{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aefa53ce5b480cb1df2a39d67a0af7b68bce}\label{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aefa53ce5b480cb1df2a39d67a0af7b68bce}} 
+Untrusted&String is not from a trusted source. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classTang_1_1UnicodeString_ae9396cce6078fb0ab2986e3ea2910b36}\label{classTang_1_1UnicodeString_ae9396cce6078fb0ab2986e3ea2910b36}} 
+\mbox{\Hypertarget{classTang_1_1UnicodeString_a92d01ede537345e14040c4a15497444b}\label{classTang_1_1UnicodeString_a92d01ede537345e14040c4a15497444b}} 
 \index{Tang::UnicodeString@{Tang::UnicodeString}!UnicodeString@{UnicodeString}}
 \index{UnicodeString@{UnicodeString}!Tang::UnicodeString@{Tang::UnicodeString}}
 \doxysubsubsection{\texorpdfstring{UnicodeString()}{UnicodeString()}}
-{\footnotesize\ttfamily Unicode\+String\+::\+Unicode\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{src }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Unicode\+String\+::\+Unicode\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{src,  }\item[{\mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aef}{Unicode\+String\+::\+Type}}}]{type = {\ttfamily \mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aefa157a44b8159d35ee4e5cbb7e15b37b38}{Unicode\+String\+::\+Trusted}}} }\end{DoxyParamCaption})}
 
 
 
@@ -205,6 +242,50 @@ Compare two Unicode\+Strings.
 \begin{DoxyReturn}{Returns}
 Returns true if the two strings are equal. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1UnicodeString_a69305edbb266045c7a5032548d6fc8c9}\label{classTang_1_1UnicodeString_a69305edbb266045c7a5032548d6fc8c9}} 
+\index{Tang::UnicodeString@{Tang::UnicodeString}!render@{render}}
+\index{render@{render}!Tang::UnicodeString@{Tang::UnicodeString}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily string Unicode\+String\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Render the string in with dangerous characters HTML encoded, if the string is Unicode\+String\+::\+Type\+::\+Untrusted. 
+
+\begin{DoxyReturn}{Returns}
+The rendered string, according to its type. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{classTang_1_1UnicodeString_a69305edbb266045c7a5032548d6fc8c9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTang_1_1UnicodeString_a9dca6ebd40e645d5eaf72f430ea7b541}\label{classTang_1_1UnicodeString_a9dca6ebd40e645d5eaf72f430ea7b541}} 
+\index{Tang::UnicodeString@{Tang::UnicodeString}!renderAscii@{renderAscii}}
+\index{renderAscii@{renderAscii}!Tang::UnicodeString@{Tang::UnicodeString}}
+\doxysubsubsection{\texorpdfstring{renderAscii()}{renderAscii()}}
+{\footnotesize\ttfamily string Unicode\+String\+::render\+Ascii (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Render the string in with all characters converted to an ASCII representation. 
+
+The dangerous characters will not be HTML encoded, if the string is Unicode\+String\+::\+Type\+::\+Trusted.
+
+\begin{DoxyReturn}{Returns}
+The rendered string, according to its type. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTang_1_1UnicodeString_a9dca6ebd40e645d5eaf72f430ea7b541_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classTang_1_1UnicodeString_a7bda91d3c0efba9f5e70d915a665ba18}\label{classTang_1_1UnicodeString_a7bda91d3c0efba9f5e70d915a665ba18}} 
 \index{Tang::UnicodeString@{Tang::UnicodeString}!substr@{substr}}
 \index{substr@{substr}!Tang::UnicodeString@{Tang::UnicodeString}}

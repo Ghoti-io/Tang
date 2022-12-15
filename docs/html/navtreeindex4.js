@@ -1,5 +1,12 @@
 var NAVTREEINDEX4 =
 {
+"computedExpressionIteratorEnd_8hpp.html":[2,0,1,36],
+"computedExpressionIteratorEnd_8hpp_source.html":[2,0,1,36],
+"computedExpressionIterator_8cpp.html":[2,0,2,35],
+"computedExpressionIterator_8hpp.html":[2,0,1,35],
+"computedExpressionIterator_8hpp_source.html":[2,0,1,35],
+"computedExpressionMap_8cpp.html":[2,0,2,37],
+"computedExpressionMap_8hpp.html":[2,0,1,37],
 "computedExpressionMap_8hpp_source.html":[2,0,1,37],
 "computedExpressionNativeBoundFunction_8cpp.html":[2,0,2,38],
 "computedExpressionNativeBoundFunction_8hpp.html":[2,0,1,38],
@@ -20,8 +27,8 @@ var NAVTREEINDEX4 =
 "error_8hpp.html":[2,0,1,40],
 "error_8hpp_source.html":[2,0,1,40],
 "files.html":[2,0],
-"functions.html":[1,3,0,0],
 "functions.html":[1,3,0],
+"functions.html":[1,3,0,0],
 "functions_a.html":[1,3,0,1],
 "functions_b.html":[1,3,0,2],
 "functions_c.html":[1,3,0,3],
@@ -197,6 +204,7 @@ var NAVTREEINDEX4 =
 "testUnicodeString_8cpp.html#a5c2112452ac288044e735fff57be09b8":[2,0,3,3,3],
 "testUnicodeString_8cpp.html#a7db35c9dfe8fdec844dbaba6773a4d76":[2,0,3,3,4],
 "testUnicodeString_8cpp.html#aa454bcfb17215a41756bf28facfbde4a":[2,0,3,3,1],
+"testUnicodeString_8cpp.html#ab39f3a8e152363c026cf463b34a98bed":[2,0,3,3,5],
 "testUnicodeString_8cpp.html#aec626a46550788747f66df29bf68a186":[2,0,3,3,2],
 "test_8cpp.html":[2,0,3,0],
 "test_8cpp.html#a0951ebd990a22b14f491eb00c3e4a4dd":[2,0,3,0,7],
@@ -241,13 +249,5 @@ var NAVTREEINDEX4 =
 "test_8cpp.html#ae5a20d57b8a97cbe2b88aab3e94a8667":[2,0,3,0,22],
 "test_8cpp.html#af27e2aa9c37fdf020e88a69c7ef9bb62":[2,0,3,0,13],
 "test_8cpp.html#af3ecbfe94c2ef15cdc5db7e8cd0374e7":[2,0,3,0,35],
-"test_8cpp.html#afd36ee420a147f4e497046c0a0b036df":[2,0,3,0,33],
-"test_8cpp.html#aff1fae3abde9053518e916a421df3254":[2,0,3,0,30],
-"unescape_8hpp.html":[2,0,1,51],
-"unescape_8hpp.html#ae5b01ac2fa5a6ad5fb97559638abe686":[2,0,1,51,1],
-"unescape_8hpp.html#af699458ba5331ddec7e15a878f42f8f5":[2,0,1,51,2],
-"unescape_8hpp_source.html":[2,0,1,51],
-"unicodeString_8cpp.html":[2,0,2,46],
-"unicodeString_8hpp.html":[2,0,1,52],
-"unicodeString_8hpp.html#a25d8c6a386e276a165656ad79b322b64":[2,0,1,52,2]
+"test_8cpp.html#afd36ee420a147f4e497046c0a0b036df":[2,0,3,0,33]
 };

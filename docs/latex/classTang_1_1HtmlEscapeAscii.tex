@@ -30,10 +30,16 @@ Collaboration diagram for Tang\+::Html\+Escape\+Ascii\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTang_1_1HtmlEscapeAscii_aac476e6ea89077454df56d1ede9a2b91}{Html\+Escape\+Ascii}} (std\+::istream \&arg\+\_\+yyin, std\+::ostream \&arg\+\_\+yyout)
+\mbox{\hyperlink{classTang_1_1HtmlEscapeAscii_ab4692b181494966ba0d3eabbc3ab21ad}{Html\+Escape\+Ascii}} (std\+::istream \&arg\+\_\+yyin, std\+::ostream \&arg\+\_\+yyout, \mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aef}{Unicode\+String\+::\+Type}} \mbox{\hyperlink{classTang_1_1HtmlEscapeAscii_abed8a97197ee4869987c8fe80979112a}{type}})
 \begin{DoxyCompactList}\small\item\em The constructor for the Scanner. \end{DoxyCompactList}\item 
 virtual std\+::string \mbox{\hyperlink{classTang_1_1HtmlEscapeAscii_ad2d7763e1abe5aebcd4446f42db4f99d}{get\+\_\+next\+\_\+token}} ()
 \begin{DoxyCompactList}\small\item\em Extract the next token from the input string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTang_1_1HtmlEscapeAscii_abed8a97197ee4869987c8fe80979112a}\label{classTang_1_1HtmlEscapeAscii_abed8a97197ee4869987c8fe80979112a}} 
+\mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aef}{Unicode\+String\+::\+Type}} \mbox{\hyperlink{classTang_1_1HtmlEscapeAscii_abed8a97197ee4869987c8fe80979112a}{type}}
+\begin{DoxyCompactList}\small\item\em The type of string that is being escaped. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -42,11 +48,11 @@ The Flex lexer class for the main Tang language.
 Flex requires that our lexer class inherit from yy\+Flex\+Lexer, an \char`\"{}intermediate\char`\"{} class whose real name is \char`\"{}\+Tang\+Tang\+Flex\+Lexer\char`\"{}. We are subclassing it so that we can override the return type of \mbox{\hyperlink{classTang_1_1HtmlEscapeAscii_ad2d7763e1abe5aebcd4446f42db4f99d}{get\+\_\+next\+\_\+token()}}, for compatibility with Bison 3 tokens. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classTang_1_1HtmlEscapeAscii_aac476e6ea89077454df56d1ede9a2b91}\label{classTang_1_1HtmlEscapeAscii_aac476e6ea89077454df56d1ede9a2b91}} 
+\mbox{\Hypertarget{classTang_1_1HtmlEscapeAscii_ab4692b181494966ba0d3eabbc3ab21ad}\label{classTang_1_1HtmlEscapeAscii_ab4692b181494966ba0d3eabbc3ab21ad}} 
 \index{Tang::HtmlEscapeAscii@{Tang::HtmlEscapeAscii}!HtmlEscapeAscii@{HtmlEscapeAscii}}
 \index{HtmlEscapeAscii@{HtmlEscapeAscii}!Tang::HtmlEscapeAscii@{Tang::HtmlEscapeAscii}}
 \doxysubsubsection{\texorpdfstring{HtmlEscapeAscii()}{HtmlEscapeAscii()}}
-{\footnotesize\ttfamily Tang\+::\+Html\+Escape\+Ascii\+::\+Html\+Escape\+Ascii (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{arg\+\_\+yyin,  }\item[{std\+::ostream \&}]{arg\+\_\+yyout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Tang\+::\+Html\+Escape\+Ascii\+::\+Html\+Escape\+Ascii (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{arg\+\_\+yyin,  }\item[{std\+::ostream \&}]{arg\+\_\+yyout,  }\item[{\mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aef}{Unicode\+String\+::\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 

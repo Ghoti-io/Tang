@@ -85,6 +85,7 @@ $(document).ready(function(){initNavTree('classTang_1_1HtmlEscapeAscii.html','')
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classTang_1_1HtmlEscapeAscii-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tang::HtmlEscapeAscii Class Reference</div>  </div>
@@ -116,19 +117,26 @@ Collaboration diagram for Tang::HtmlEscapeAscii:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aac476e6ea89077454df56d1ede9a2b91"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1HtmlEscapeAscii.html#aac476e6ea89077454df56d1ede9a2b91">HtmlEscapeAscii</a> (std::istream &amp;arg_yyin, std::ostream &amp;arg_yyout)</td></tr>
-<tr class="memdesc:aac476e6ea89077454df56d1ede9a2b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor for the Scanner.  <a href="classTang_1_1HtmlEscapeAscii.html#aac476e6ea89077454df56d1ede9a2b91">More...</a><br /></td></tr>
-<tr class="separator:aac476e6ea89077454df56d1ede9a2b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4692b181494966ba0d3eabbc3ab21ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1HtmlEscapeAscii.html#ab4692b181494966ba0d3eabbc3ab21ad">HtmlEscapeAscii</a> (std::istream &amp;arg_yyin, std::ostream &amp;arg_yyout, <a class="el" href="classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aef">UnicodeString::Type</a> <a class="el" href="classTang_1_1HtmlEscapeAscii.html#abed8a97197ee4869987c8fe80979112a">type</a>)</td></tr>
+<tr class="memdesc:ab4692b181494966ba0d3eabbc3ab21ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor for the Scanner.  <a href="classTang_1_1HtmlEscapeAscii.html#ab4692b181494966ba0d3eabbc3ab21ad">More...</a><br /></td></tr>
+<tr class="separator:ab4692b181494966ba0d3eabbc3ab21ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2d7763e1abe5aebcd4446f42db4f99d"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1HtmlEscapeAscii.html#ad2d7763e1abe5aebcd4446f42db4f99d">get_next_token</a> ()</td></tr>
 <tr class="memdesc:ad2d7763e1abe5aebcd4446f42db4f99d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract the next token from the input string.  <a href="classTang_1_1HtmlEscapeAscii.html#ad2d7763e1abe5aebcd4446f42db4f99d">More...</a><br /></td></tr>
 <tr class="separator:ad2d7763e1abe5aebcd4446f42db4f99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:abed8a97197ee4869987c8fe80979112a"><td class="memItemLeft" align="right" valign="top"><a id="abed8a97197ee4869987c8fe80979112a"></a>
+<a class="el" href="classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aef">UnicodeString::Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1HtmlEscapeAscii.html#abed8a97197ee4869987c8fe80979112a">type</a></td></tr>
+<tr class="memdesc:abed8a97197ee4869987c8fe80979112a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of string that is being escaped. <br /></td></tr>
+<tr class="separator:abed8a97197ee4869987c8fe80979112a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The Flex lexer class for the main Tang language. </p>
 <p>Flex requires that our lexer class inherit from yyFlexLexer, an "intermediate" class whose real name is "TangTangFlexLexer". We are subclassing it so that we can override the return type of <a class="el" href="classTang_1_1HtmlEscapeAscii.html#ad2d7763e1abe5aebcd4446f42db4f99d" title="Extract the next token from the input string.">get_next_token()</a>, for compatibility with Bison 3 tokens. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aac476e6ea89077454df56d1ede9a2b91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac476e6ea89077454df56d1ede9a2b91">&#9670;&nbsp;</a></span>HtmlEscapeAscii()</h2>
+<a id="ab4692b181494966ba0d3eabbc3ab21ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4692b181494966ba0d3eabbc3ab21ad">&#9670;&nbsp;</a></span>HtmlEscapeAscii()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,7 +154,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>arg_yyout</em>&#160;</td>
+          <td class="paramname"><em>arg_yyout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aef">UnicodeString::Type</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

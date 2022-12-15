@@ -4,5 +4,6 @@ var testUnicodeString_8cpp =
     [ "TEST", "testUnicodeString_8cpp.html#aa454bcfb17215a41756bf28facfbde4a", null ],
     [ "TEST", "testUnicodeString_8cpp.html#aec626a46550788747f66df29bf68a186", null ],
     [ "TEST", "testUnicodeString_8cpp.html#a5c2112452ac288044e735fff57be09b8", null ],
-    [ "TEST", "testUnicodeString_8cpp.html#a7db35c9dfe8fdec844dbaba6773a4d76", null ]
+    [ "TEST", "testUnicodeString_8cpp.html#a7db35c9dfe8fdec844dbaba6773a4d76", null ],
+    [ "TEST", "testUnicodeString_8cpp.html#ab39f3a8e152363c026cf463b34a98bed", null ]
 ];

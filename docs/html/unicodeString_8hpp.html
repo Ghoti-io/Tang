@@ -112,10 +112,11 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="unicodeString_8hpp__dep__incl.png" border="0" usemap="#ainclude_2unicodeString_8hppdep" alt=""/></div>
 <map name="ainclude_2unicodeString_8hppdep" id="ainclude_2unicodeString_8hppdep">
-<area shape="rect" title="Contains the code to interface with the ICU library." alt="" coords="1823,5,2014,32"/>
-<area shape="rect" href="computedExpressionString_8hpp.html" title="Declare the Tang::ComputedExpressionString class." alt="" coords="1605,80,1814,121"/>
-<area shape="rect" href="unicodeString_8cpp.html" title="Contains the function declarations for the Tang::UnicodeString class and the interface to ICU." alt="" coords="1838,87,1999,114"/>
-<area shape="rect" href="testUnicodeString_8cpp.html" title="Contains tests for the Tang::UnicodeString class." alt="" coords="2024,87,2219,114"/>
+<area shape="rect" title="Contains the code to interface with the ICU library." alt="" coords="3057,5,3247,32"/>
+<area shape="rect" href="computedExpressionString_8hpp.html" title="Declare the Tang::ComputedExpressionString class." alt="" coords="1734,80,1943,121"/>
+<area shape="rect" href="htmlEscapeAscii_8hpp.html" title="Declare the Tang::HtmlEscapeAscii used to tokenize a Tang script." alt="" coords="2977,87,3185,114"/>
+<area shape="rect" href="unicodeString_8cpp.html" title="Contains the function declarations for the Tang::UnicodeString class and the interface to ICU." alt="" coords="3142,177,3303,203"/>
+<area shape="rect" href="testUnicodeString_8cpp.html" title="Contains tests for the Tang::UnicodeString class." alt="" coords="3260,87,3455,114"/>
 <area shape="rect" href="computedExpression_8cpp.html" title="Define the Tang::ComputedExpression class." alt="" coords="5,177,213,203"/>
 <area shape="rect" href="computedExpressionArray_8cpp.html" title="Define the Tang::ComputedExpressionArray class." alt="" coords="238,177,479,203"/>
 <area shape="rect" href="computedExpressionCompiledFunction_8cpp.html" title="Define the Tang::ComputedExpressionCompiledFunction class." alt="" coords="504,169,747,211"/>
@@ -148,9 +149,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a98c3c850e57d173ab148e54ece83a671"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unicodeString_8hpp.html#a98c3c850e57d173ab148e54ece83a671">Tang::htmlEscape</a> (const std::string &amp;str)</td></tr>
 <tr class="memdesc:a98c3c850e57d173ab148e54ece83a671"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an "html escaped" version of the provided string.  <a href="unicodeString_8hpp.html#a98c3c850e57d173ab148e54ece83a671">More...</a><br /></td></tr>
 <tr class="separator:a98c3c850e57d173ab148e54ece83a671"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25d8c6a386e276a165656ad79b322b64"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unicodeString_8hpp.html#a25d8c6a386e276a165656ad79b322b64">Tang::htmlEscapeAscii</a> (const std::string &amp;str)</td></tr>
-<tr class="memdesc:a25d8c6a386e276a165656ad79b322b64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an Ascii-only, "html escaped" version of the provided string.  <a href="unicodeString_8hpp.html#a25d8c6a386e276a165656ad79b322b64">More...</a><br /></td></tr>
-<tr class="separator:a25d8c6a386e276a165656ad79b322b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c67fbfd65105f2aa834593ee74cfe16"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unicodeString_8hpp.html#a7c67fbfd65105f2aa834593ee74cfe16">Tang::htmlEscapeAscii</a> (const std::string &amp;str, <a class="el" href="classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aef">UnicodeString::Type</a> type=UnicodeString::Type::Untrusted)</td></tr>
+<tr class="memdesc:a7c67fbfd65105f2aa834593ee74cfe16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an Ascii-only, "html escaped" version of the provided string.  <a href="unicodeString_8hpp.html#a7c67fbfd65105f2aa834593ee74cfe16">More...</a><br /></td></tr>
+<tr class="separator:a7c67fbfd65105f2aa834593ee74cfe16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains the code to interface with the ICU library. </p>
@@ -191,8 +192,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a25d8c6a386e276a165656ad79b322b64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25d8c6a386e276a165656ad79b322b64">&#9670;&nbsp;</a></span>htmlEscapeAscii()</h2>
+<a id="a7c67fbfd65105f2aa834593ee74cfe16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c67fbfd65105f2aa834593ee74cfe16">&#9670;&nbsp;</a></span>htmlEscapeAscii()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,8 +202,18 @@ Here is the call graph for this function:</div>
           <td class="memname">string Tang::htmlEscapeAscii </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aef">UnicodeString::Type</a>&#160;</td>
+          <td class="paramname"><em>type</em> = <code>UnicodeString::Type::Untrusted</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -219,8 +230,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="unicodeString_8hpp_a25d8c6a386e276a165656ad79b322b64_cgraph.png" border="0" usemap="#aunicodeString_8hpp_a25d8c6a386e276a165656ad79b322b64_cgraph" alt=""/></div>
-<map name="aunicodeString_8hpp_a25d8c6a386e276a165656ad79b322b64_cgraph" id="aunicodeString_8hpp_a25d8c6a386e276a165656ad79b322b64_cgraph">
+<div class="center"><img src="unicodeString_8hpp_a7c67fbfd65105f2aa834593ee74cfe16_cgraph.png" border="0" usemap="#aunicodeString_8hpp_a7c67fbfd65105f2aa834593ee74cfe16_cgraph" alt=""/></div>
+<map name="aunicodeString_8hpp_a7c67fbfd65105f2aa834593ee74cfe16_cgraph" id="aunicodeString_8hpp_a7c67fbfd65105f2aa834593ee74cfe16_cgraph">
 <area shape="rect" title="Return an Ascii&#45;only, &quot;html escaped&quot; version of the provided string." alt="" coords="5,29,172,56"/>
 </map>
 </div>

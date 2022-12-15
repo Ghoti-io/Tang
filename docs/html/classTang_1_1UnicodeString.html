@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('classTang_1_1UnicodeString.html',''); 
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
@@ -110,11 +111,19 @@ Collaboration diagram for Tang::UnicodeString:</div>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a58915a1dadac5cc71c6aea7169cd4aef"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aef">Type</a> { <a class="el" href="classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aefa157a44b8159d35ee4e5cbb7e15b37b38">Trusted</a>
+, <a class="el" href="classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aefa53ce5b480cb1df2a39d67a0af7b68bce">Untrusted</a>
+ }</td></tr>
+<tr class="memdesc:a58915a1dadac5cc71c6aea7169cd4aef"><td class="mdescLeft">&#160;</td><td class="mdescRight">The types of string being created.  <a href="classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aef">More...</a><br /></td></tr>
+<tr class="separator:a58915a1dadac5cc71c6aea7169cd4aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae9396cce6078fb0ab2986e3ea2910b36"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#ae9396cce6078fb0ab2986e3ea2910b36">UnicodeString</a> (const std::string &amp;<a class="el" href="classTang_1_1UnicodeString.html#a18a9354b4d362a01193154b85ec250a7">src</a>)</td></tr>
-<tr class="memdesc:ae9396cce6078fb0ab2986e3ea2910b36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classTang_1_1UnicodeString.html" title="Represents a UTF-8 encoded string that is Unicode-aware.">Tang::UnicodeString</a> object, which acts as the interface to the ICU library.  <a href="classTang_1_1UnicodeString.html#ae9396cce6078fb0ab2986e3ea2910b36">More...</a><br /></td></tr>
-<tr class="separator:ae9396cce6078fb0ab2986e3ea2910b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92d01ede537345e14040c4a15497444b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#a92d01ede537345e14040c4a15497444b">UnicodeString</a> (const std::string &amp;<a class="el" href="classTang_1_1UnicodeString.html#a18a9354b4d362a01193154b85ec250a7">src</a>, <a class="el" href="classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aef">UnicodeString::Type</a> <a class="el" href="classTang_1_1UnicodeString.html#a358f099e989756e11bc355d1a0638289">type</a>=<a class="el" href="classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aefa157a44b8159d35ee4e5cbb7e15b37b38">UnicodeString::Trusted</a>)</td></tr>
+<tr class="memdesc:a92d01ede537345e14040c4a15497444b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classTang_1_1UnicodeString.html" title="Represents a UTF-8 encoded string that is Unicode-aware.">Tang::UnicodeString</a> object, which acts as the interface to the ICU library.  <a href="classTang_1_1UnicodeString.html#a92d01ede537345e14040c4a15497444b">More...</a><br /></td></tr>
+<tr class="separator:a92d01ede537345e14040c4a15497444b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bda91d3c0efba9f5e70d915a665ba18"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#a7bda91d3c0efba9f5e70d915a665ba18">substr</a> (size_t <a class="el" href="classTang_1_1position.html">position</a>, size_t <a class="el" href="classTang_1_1UnicodeString.html#aacfef070a2f6de639e050822c94263f5">length</a>) const</td></tr>
 <tr class="memdesc:a7bda91d3c0efba9f5e70d915a665ba18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a Unicode grapheme-aware substring.  <a href="classTang_1_1UnicodeString.html#a7bda91d3c0efba9f5e70d915a665ba18">More...</a><br /></td></tr>
 <tr class="separator:a7bda91d3c0efba9f5e70d915a665ba18"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,6 +148,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac4f534c284a4edfc89887e7c6234e35e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#ac4f534c284a4edfc89887e7c6234e35e">bytesLength</a> () const</td></tr>
 <tr class="memdesc:ac4f534c284a4edfc89887e7c6234e35e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the length of the <a class="el" href="classTang_1_1UnicodeString.html" title="Represents a UTF-8 encoded string that is Unicode-aware.">UnicodeString</a> in bytes.  <a href="classTang_1_1UnicodeString.html#ac4f534c284a4edfc89887e7c6234e35e">More...</a><br /></td></tr>
 <tr class="separator:ac4f534c284a4edfc89887e7c6234e35e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69305edbb266045c7a5032548d6fc8c9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#a69305edbb266045c7a5032548d6fc8c9">render</a> () const</td></tr>
+<tr class="memdesc:a69305edbb266045c7a5032548d6fc8c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the string in with dangerous characters HTML encoded, if the string is UnicodeString::Type::Untrusted.  <a href="classTang_1_1UnicodeString.html#a69305edbb266045c7a5032548d6fc8c9">More...</a><br /></td></tr>
+<tr class="separator:a69305edbb266045c7a5032548d6fc8c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dca6ebd40e645d5eaf72f430ea7b541"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#a9dca6ebd40e645d5eaf72f430ea7b541">renderAscii</a> () const</td></tr>
+<tr class="memdesc:a9dca6ebd40e645d5eaf72f430ea7b541"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the string in with all characters converted to an ASCII representation.  <a href="classTang_1_1UnicodeString.html#a9dca6ebd40e645d5eaf72f430ea7b541">More...</a><br /></td></tr>
+<tr class="separator:a9dca6ebd40e645d5eaf72f430ea7b541"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -153,6 +168,10 @@ Private Attributes</h2></td></tr>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#a18a9354b4d362a01193154b85ec250a7">src</a></td></tr>
 <tr class="memdesc:a18a9354b4d362a01193154b85ec250a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The UTF-8 encoded string. <br /></td></tr>
 <tr class="separator:a18a9354b4d362a01193154b85ec250a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a358f099e989756e11bc355d1a0638289"><td class="memItemLeft" align="right" valign="top"><a id="a358f099e989756e11bc355d1a0638289"></a>
+<a class="el" href="classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aef">UnicodeString::Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#a358f099e989756e11bc355d1a0638289">type</a></td></tr>
+<tr class="memdesc:a358f099e989756e11bc355d1a0638289"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of string being stored. <br /></td></tr>
+<tr class="separator:a358f099e989756e11bc355d1a0638289"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ad4f2ba93e84e3256af80c5750be410"><td class="memItemLeft" align="right" valign="top"><a id="a0ad4f2ba93e84e3256af80c5750be410"></a>
 std::shared_ptr&lt; std::vector&lt; size_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#a0ad4f2ba93e84e3256af80c5750be410">graphemeOffsets</a></td></tr>
 <tr class="memdesc:a0ad4f2ba93e84e3256af80c5750be410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache of the grapheme offsets, if they happen to be calculated. <br /></td></tr>
@@ -165,9 +184,32 @@ std::shared_ptr&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a UTF-8 encoded string that is Unicode-aware. </p>
 <p>This class serves as the interface between the Tang language and the ICU library. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ae9396cce6078fb0ab2986e3ea2910b36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9396cce6078fb0ab2986e3ea2910b36">&#9670;&nbsp;</a></span>UnicodeString()</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a58915a1dadac5cc71c6aea7169cd4aef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58915a1dadac5cc71c6aea7169cd4aef">&#9670;&nbsp;</a></span>Type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aef">Tang::UnicodeString::Type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The types of string being created. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a58915a1dadac5cc71c6aea7169cd4aefa157a44b8159d35ee4e5cbb7e15b37b38"></a>Trusted&#160;</td><td class="fielddoc"><p>String is from a trusted source. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a58915a1dadac5cc71c6aea7169cd4aefa53ce5b480cb1df2a39d67a0af7b68bce"></a>Untrusted&#160;</td><td class="fielddoc"><p>String is not from a trusted source. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a92d01ede537345e14040c4a15497444b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92d01ede537345e14040c4a15497444b">&#9670;&nbsp;</a></span>UnicodeString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -176,8 +218,18 @@ std::shared_ptr&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"
           <td class="memname">UnicodeString::UnicodeString </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>src</em></td><td>)</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aef">UnicodeString::Type</a>&#160;</td>
+          <td class="paramname"><em>type</em> = <code><a class="el" href="classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aefa157a44b8159d35ee4e5cbb7e15b37b38">UnicodeString::Trusted</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -369,6 +421,65 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns true if the two strings are equal. </dd></dl>
+
+</div>
+</div>
+<a id="a69305edbb266045c7a5032548d6fc8c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69305edbb266045c7a5032548d6fc8c9">&#9670;&nbsp;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnicodeString::render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Render the string in with dangerous characters HTML encoded, if the string is UnicodeString::Type::Untrusted. </p>
+<dl class="section return"><dt>Returns</dt><dd>The rendered string, according to its type. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTang_1_1UnicodeString_a69305edbb266045c7a5032548d6fc8c9_cgraph.png" border="0" usemap="#aclassTang_1_1UnicodeString_a69305edbb266045c7a5032548d6fc8c9_cgraph" alt=""/></div>
+<map name="aclassTang_1_1UnicodeString_a69305edbb266045c7a5032548d6fc8c9_cgraph" id="aclassTang_1_1UnicodeString_a69305edbb266045c7a5032548d6fc8c9_cgraph">
+<area shape="rect" title="Render the string in with dangerous characters HTML encoded, if the string is UnicodeString::Type::Un..." alt="" coords="5,22,156,63"/>
+<area shape="rect" href="unicodeString_8hpp.html#a98c3c850e57d173ab148e54ece83a671" title="Return an &quot;html escaped&quot; version of the provided string." alt="" coords="204,29,340,56"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9dca6ebd40e645d5eaf72f430ea7b541"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dca6ebd40e645d5eaf72f430ea7b541">&#9670;&nbsp;</a></span>renderAscii()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnicodeString::renderAscii </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Render the string in with all characters converted to an ASCII representation. </p>
+<p>The dangerous characters will not be HTML encoded, if the string is UnicodeString::Type::Trusted.</p>
+<dl class="section return"><dt>Returns</dt><dd>The rendered string, according to its type. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTang_1_1UnicodeString_a9dca6ebd40e645d5eaf72f430ea7b541_cgraph.png" border="0" usemap="#aclassTang_1_1UnicodeString_a9dca6ebd40e645d5eaf72f430ea7b541_cgraph" alt=""/></div>
+<map name="aclassTang_1_1UnicodeString_a9dca6ebd40e645d5eaf72f430ea7b541_cgraph" id="aclassTang_1_1UnicodeString_a9dca6ebd40e645d5eaf72f430ea7b541_cgraph">
+<area shape="rect" title="Render the string in with all characters converted to an ASCII representation." alt="" coords="5,22,156,63"/>
+<area shape="rect" href="unicodeString_8hpp.html#a7c67fbfd65105f2aa834593ee74cfe16" title="Return an Ascii&#45;only, &quot;html escaped&quot; version of the provided string." alt="" coords="204,29,371,56"/>
+</map>
+</div>
 
 </div>
 </div>
