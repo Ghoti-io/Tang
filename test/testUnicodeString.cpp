@@ -119,6 +119,29 @@ TEST(UnicodeString, SubString) {
   }
 }
 
+TEST(UnicodeString, Types) {
+  {
+    // Default (trusted) string.
+    UnicodeString s{"&"};
+    EXPECT_EQ(s.render(), "&");
+  }
+  {
+    // Untrusted string.
+    UnicodeString s{"&", UnicodeString::Untrusted};
+    EXPECT_EQ(s.render(), "&amp;");
+  }
+  {
+    // Trusted string.
+    UnicodeString s{"<h1>", UnicodeString::Trusted};
+    EXPECT_EQ(s.render(), "<h1>");
+  }
+  {
+    // Untrusted string.
+    UnicodeString s{"<h1>", UnicodeString::Untrusted};
+    EXPECT_EQ(s.render(), "&lt;h1&gt;");
+  }
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

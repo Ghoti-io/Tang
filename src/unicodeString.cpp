@@ -75,7 +75,7 @@ string Tang::htmlEscapeAscii(const string & str) {
   return out;
 }
 
-UnicodeString::UnicodeString(const string & src) : src{src} {}
+UnicodeString::UnicodeString(const string & src, UnicodeString::Type type) : src{src}, type{type} {}
 
 std::string UnicodeString::substr(size_t position, size_t length) const {
   // First sanity check.
@@ -133,5 +133,11 @@ void UnicodeString::generateCachedValues() const {
   if (!this->graphemeOffsets) {
     this->graphemeOffsets = make_shared<vector<size_t>>(getGraphemeOffsets(*static_pointer_cast<icu::UnicodeString>(this->uString)));
   }
+}
+
+string UnicodeString::render() const {
+  return (this->type == Type::Trusted)
+    ? this->src
+    : htmlEscape(this->src);
 }
 

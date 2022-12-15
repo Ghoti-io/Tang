@@ -58,12 +58,20 @@ namespace Tang {
   class UnicodeString {
   public:
     /**
+     * The types of string being created.
+     */
+    enum Type {
+      Trusted,      ///< String is from a trusted source.
+      Untrusted,    ///< String is not from a trusted source.
+    };
+
+    /**
      * Construct a Tang::UnicodeString object, which acts as the interface to
      * the ICU library.
      *
      * @param src A UTF-8 encoded string.
      */
-    UnicodeString(const std::string & src);
+    UnicodeString(const std::string & src, UnicodeString::Type type = UnicodeString::Trusted);
 
     /**
      * Return a Unicode grapheme-aware substring.
@@ -135,11 +143,24 @@ namespace Tang {
      */
     size_t bytesLength() const;
 
+    /**
+     * Render the string in with dangerous characters HTML encoded, if the
+     * string is UnicodeString::Type::Untrusted.
+     *
+     * @return The rendered string, according to its type.
+     */
+    std::string render() const;
+
   private:
     /**
      * The UTF-8 encoded string.
      */
     std::string src;
+
+    /**
+     * The type of string being stored.
+     */
+    UnicodeString::Type type;
 
     /**
      * Cache of the grapheme offsets, if they happen to be calculated.
