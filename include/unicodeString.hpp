@@ -29,12 +29,21 @@ namespace Tang {
     };
 
     /**
-     * Construct a Tang::UnicodeString object, which acts as the interface to
-     * the ICU library.
-     *
-     * @param src A UTF-8 encoded string.
+     * Construct an empty Tang::UnicodeString object, which acts as the
+     * interface to the ICU library.
      */
-    UnicodeString(const std::string & src, UnicodeString::Type type = UnicodeString::Trusted);
+    UnicodeString();
+
+    /**
+     * Construct a Tang::UnicodeString object, from an existing
+     * Tang::UnicodeString.
+     */
+    UnicodeString(const UnicodeString & source);
+
+    /**
+     * Construct a Tang::UnicodeString object, from an existing std::string.
+     */
+    UnicodeString(const std::string & source);
 
     /**
      * Return a Unicode grapheme-aware substring.
@@ -122,6 +131,11 @@ namespace Tang {
      * @return The rendered string, according to its type.
      */
     std::string renderAscii() const;
+
+    /**
+     * Set the string as UnicodeString::Type::Untrusted.
+     */
+    void setUntrusted();
 
   private:
     /**

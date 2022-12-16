@@ -69,6 +69,8 @@
 #include "garbageCollected.hpp"
 #include "program.hpp"
 #include "opcode.hpp"
+#include "computedExpression.hpp"
+#include "computedExpressionString.hpp"
 
 #endif // TANG_HPP
 

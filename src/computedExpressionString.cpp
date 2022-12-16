@@ -23,12 +23,12 @@ ComputedExpressionString::ComputedExpressionString(const vector<UnicodeString> &
 string ComputedExpressionString::dump() const {
   // Sanity check because many strings will only have one chunk.
   if (this->stringParts.size() == 1) {
-    return this->stringParts.at(0);
+    return this->stringParts.at(0).render();
   }
 
   string out{};
   for (auto & part : this->stringParts) {
-    out += part;
+    out += part.render();
   }
   return out;
 }
@@ -368,5 +368,11 @@ NativeBoundFunctionMap ComputedExpressionString::getMethods() {
 ComputedExpressionString & ComputedExpressionString::operator+=(const ComputedExpressionString &rhs) {
   this->stringParts.insert(this->stringParts.end(), rhs.stringParts.begin(), rhs.stringParts.end());
   return *this;
+}
+
+void ComputedExpressionString::setUntrusted() {
+  for (auto & s : this->stringParts) {
+    s.setUntrusted();
+  }
 }
 

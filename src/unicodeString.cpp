@@ -75,7 +75,11 @@ string Tang::htmlEscapeAscii(const string & str, UnicodeString::Type type) {
   return out;
 }
 
-UnicodeString::UnicodeString(const string & src, UnicodeString::Type type) : src{src}, type{type} {}
+UnicodeString::UnicodeString() : src{}, type{UnicodeString::Type::Trusted} {}
+
+UnicodeString::UnicodeString(const UnicodeString & source) : src{source.src}, type{source.type} {}
+
+UnicodeString::UnicodeString(const string & src) : src{src}, type{UnicodeString::Type::Trusted} {}
 
 std::string UnicodeString::substr(size_t position, size_t length) const {
   // First sanity check.
@@ -143,5 +147,9 @@ string UnicodeString::render() const {
 
 string UnicodeString::renderAscii() const {
   return htmlEscapeAscii(this->src, this->type);
+}
+
+void UnicodeString::setUntrusted() {
+  this->type = UnicodeString::Type::Untrusted;
 }
 

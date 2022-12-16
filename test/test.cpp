@@ -1925,6 +1925,40 @@ TEST(Syntax, MultiLineComment) {
   }
 }
 
+TEST(Syntax, UntrustedString) {
+  auto tang = TangBase::make_shared();
+  auto & methods = tang->getObjectMethods();
+  methods[type_index(typeid(ComputedExpressionString))]["make_untrusted"] = {0,
+    [](GarbageCollected & target, [[maybe_unused]] vector<GarbageCollected>& args) {
+      auto copy = target->makeCopy();
+      // We know that `target` is a GC String, so `copy` will be as well.
+      // Therefore, it is safe to perform the static cast.
+      static_cast<ComputedExpressionString &>(*copy).setUntrusted();
+      return copy;
+  }};
+  {
+    // Trusted String.
+    auto p1 = tang->compileScript(R"(
+      print("<h1>");
+    )");
+    EXPECT_EQ(p1.execute().out, "<h1>");
+  }
+  {
+    // Trusted String.
+    auto p1 = tang->compileScript(R"(
+      print("<h1>".length());
+    )");
+    EXPECT_EQ(p1.execute().out, "4");
+  }
+  {
+    // Untrusted String.
+    auto p1 = tang->compileScript(R"(
+      print("<h1>".make_untrusted());
+    )");
+    EXPECT_EQ(p1.execute().out, "&lt;h1&gt;");
+  }
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

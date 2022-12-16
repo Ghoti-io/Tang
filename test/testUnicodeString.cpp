@@ -127,27 +127,30 @@ TEST(UnicodeString, Types) {
   }
   {
     // Untrusted string.
-    UnicodeString s{"&", UnicodeString::Untrusted};
+    UnicodeString s{"&"};
+    s.setUntrusted();
     EXPECT_EQ(s.render(), "&amp;");
   }
   {
     // Trusted string.
-    UnicodeString s{"<h1>", UnicodeString::Trusted};
+    UnicodeString s{"<h1>"};
     EXPECT_EQ(s.render(), "<h1>");
   }
   {
     // Untrusted string.
-    UnicodeString s{"<h1>", UnicodeString::Untrusted};
+    UnicodeString s{"<h1>"};
+    s.setUntrusted();
     EXPECT_EQ(s.render(), "&lt;h1&gt;");
   }
   {
     // Trusted string.
-    UnicodeString s{"<h1>Hello\nWorld!</h1>", UnicodeString::Trusted};
+    UnicodeString s{"<h1>Hello\nWorld!</h1>"};
     EXPECT_EQ(s.renderAscii(), "<h1>Hello&NewLine;World!</h1>");
   }
   {
     // Untrusted string.
-    UnicodeString s{"<h1>Hello\nWorld!</h1>", UnicodeString::Untrusted};
+    UnicodeString s{"<h1>Hello\nWorld!</h1>"};
+    s.setUntrusted();
     EXPECT_EQ(s.renderAscii(), "&lt;h1&gt;Hello&NewLine;World&excl;&lt;&sol;h1&gt;");
   }
 }
