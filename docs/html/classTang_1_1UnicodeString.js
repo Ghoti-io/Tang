@@ -4,7 +4,9 @@ var classTang_1_1UnicodeString =
       [ "Trusted", "classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aefa157a44b8159d35ee4e5cbb7e15b37b38", null ],
       [ "Untrusted", "classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aefa53ce5b480cb1df2a39d67a0af7b68bce", null ]
     ] ],
-    [ "UnicodeString", "classTang_1_1UnicodeString.html#a92d01ede537345e14040c4a15497444b", null ],
+    [ "UnicodeString", "classTang_1_1UnicodeString.html#a0104e7a1ca98d59c902a7220dd12fc3d", null ],
+    [ "UnicodeString", "classTang_1_1UnicodeString.html#a9420e097f7c15e31ab403dd92bd69483", null ],
+    [ "UnicodeString", "classTang_1_1UnicodeString.html#a4ae11c0278fd55ba225167f9a0265275", null ],
     [ "bytesLength", "classTang_1_1UnicodeString.html#ac4f534c284a4edfc89887e7c6234e35e", null ],
     [ "generateCachedValues", "classTang_1_1UnicodeString.html#a4305d2e9ba94d11c36d904dd80a62e80", null ],
     [ "length", "classTang_1_1UnicodeString.html#aacfef070a2f6de639e050822c94263f5", null ],
@@ -15,6 +17,7 @@ var classTang_1_1UnicodeString =
     [ "operator==", "classTang_1_1UnicodeString.html#a7ec9ba3ea2b640435e31a61865c97ffd", null ],
     [ "render", "classTang_1_1UnicodeString.html#a69305edbb266045c7a5032548d6fc8c9", null ],
     [ "renderAscii", "classTang_1_1UnicodeString.html#a9dca6ebd40e645d5eaf72f430ea7b541", null ],
+    [ "setUntrusted", "classTang_1_1UnicodeString.html#ae570221e486828b53341eb764149a48e", null ],
     [ "substr", "classTang_1_1UnicodeString.html#a7bda91d3c0efba9f5e70d915a665ba18", null ],
     [ "graphemeOffsets", "classTang_1_1UnicodeString.html#a0ad4f2ba93e84e3256af80c5750be410", null ],
     [ "src", "classTang_1_1UnicodeString.html#a18a9354b4d362a01193154b85ec250a7", null ],

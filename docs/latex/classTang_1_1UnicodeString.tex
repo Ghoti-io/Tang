@@ -28,8 +28,15 @@ enum \mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4a
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTang_1_1UnicodeString_a92d01ede537345e14040c4a15497444b}{Unicode\+String}} (const std\+::string \&\mbox{\hyperlink{classTang_1_1UnicodeString_a18a9354b4d362a01193154b85ec250a7}{src}}, \mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aef}{Unicode\+String\+::\+Type}} \mbox{\hyperlink{classTang_1_1UnicodeString_a358f099e989756e11bc355d1a0638289}{type}}=\mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aefa157a44b8159d35ee4e5cbb7e15b37b38}{Unicode\+String\+::\+Trusted}})
-\begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{classTang_1_1UnicodeString}{Tang\+::\+Unicode\+String}} object, which acts as the interface to the ICU library. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1UnicodeString_a0104e7a1ca98d59c902a7220dd12fc3d}\label{classTang_1_1UnicodeString_a0104e7a1ca98d59c902a7220dd12fc3d}} 
+\mbox{\hyperlink{classTang_1_1UnicodeString_a0104e7a1ca98d59c902a7220dd12fc3d}{Unicode\+String}} ()
+\begin{DoxyCompactList}\small\item\em Construct an empty \mbox{\hyperlink{classTang_1_1UnicodeString}{Tang\+::\+Unicode\+String}} object, which acts as the interface to the ICU library. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1UnicodeString_a9420e097f7c15e31ab403dd92bd69483}\label{classTang_1_1UnicodeString_a9420e097f7c15e31ab403dd92bd69483}} 
+\mbox{\hyperlink{classTang_1_1UnicodeString_a9420e097f7c15e31ab403dd92bd69483}{Unicode\+String}} (const \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} \&source)
+\begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{classTang_1_1UnicodeString}{Tang\+::\+Unicode\+String}} object, from an existing \mbox{\hyperlink{classTang_1_1UnicodeString}{Tang\+::\+Unicode\+String}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1UnicodeString_a4ae11c0278fd55ba225167f9a0265275}\label{classTang_1_1UnicodeString_a4ae11c0278fd55ba225167f9a0265275}} 
+\mbox{\hyperlink{classTang_1_1UnicodeString_a4ae11c0278fd55ba225167f9a0265275}{Unicode\+String}} (const std\+::string \&source)
+\begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{classTang_1_1UnicodeString}{Tang\+::\+Unicode\+String}} object, from an existing std\+::string. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classTang_1_1UnicodeString_a7bda91d3c0efba9f5e70d915a665ba18}{substr}} (size\+\_\+t \mbox{\hyperlink{classTang_1_1position}{position}}, size\+\_\+t \mbox{\hyperlink{classTang_1_1UnicodeString_aacfef070a2f6de639e050822c94263f5}{length}}) const
 \begin{DoxyCompactList}\small\item\em Return a Unicode grapheme-\/aware substring. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classTang_1_1UnicodeString_a7ec9ba3ea2b640435e31a61865c97ffd}{operator==}} (const \mbox{\hyperlink{classTang_1_1UnicodeString}{Unicode\+String}} \&rhs) const
@@ -49,7 +56,10 @@ size\+\_\+t \mbox{\hyperlink{classTang_1_1UnicodeString_ac4f534c284a4edfc89887e7
 std\+::string \mbox{\hyperlink{classTang_1_1UnicodeString_a69305edbb266045c7a5032548d6fc8c9}{render}} () const
 \begin{DoxyCompactList}\small\item\em Render the string in with dangerous characters HTML encoded, if the string is Unicode\+String\+::\+Type\+::\+Untrusted. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classTang_1_1UnicodeString_a9dca6ebd40e645d5eaf72f430ea7b541}{render\+Ascii}} () const
-\begin{DoxyCompactList}\small\item\em Render the string in with all characters converted to an ASCII representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Render the string in with all characters converted to an ASCII representation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1UnicodeString_ae570221e486828b53341eb764149a48e}\label{classTang_1_1UnicodeString_ae570221e486828b53341eb764149a48e}} 
+void \mbox{\hyperlink{classTang_1_1UnicodeString_ae570221e486828b53341eb764149a48e}{set\+Untrusted}} ()
+\begin{DoxyCompactList}\small\item\em Set the string as Unicode\+String\+::\+Type\+::\+Untrusted. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -99,24 +109,6 @@ Untrusted&String is not from a trusted source. \\
 \hline
 
 \end{DoxyEnumFields}
-
-
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classTang_1_1UnicodeString_a92d01ede537345e14040c4a15497444b}\label{classTang_1_1UnicodeString_a92d01ede537345e14040c4a15497444b}} 
-\index{Tang::UnicodeString@{Tang::UnicodeString}!UnicodeString@{UnicodeString}}
-\index{UnicodeString@{UnicodeString}!Tang::UnicodeString@{Tang::UnicodeString}}
-\doxysubsubsection{\texorpdfstring{UnicodeString()}{UnicodeString()}}
-{\footnotesize\ttfamily Unicode\+String\+::\+Unicode\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{src,  }\item[{\mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aef}{Unicode\+String\+::\+Type}}}]{type = {\ttfamily \mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aefa157a44b8159d35ee4e5cbb7e15b37b38}{Unicode\+String\+::\+Trusted}}} }\end{DoxyParamCaption})}
-
-
-
-Construct a \mbox{\hyperlink{classTang_1_1UnicodeString}{Tang\+::\+Unicode\+String}} object, which acts as the interface to the ICU library. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em src} & A UTF-\/8 encoded string. \\
-\hline
-\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -255,8 +247,7 @@ Render the string in with dangerous characters HTML encoded, if the string is Un
 \begin{DoxyReturn}{Returns}
 The rendered string, according to its type. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -278,8 +269,7 @@ The dangerous characters will not be HTML encoded, if the string is Unicode\+Str
 \begin{DoxyReturn}{Returns}
 The rendered string, according to its type. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
