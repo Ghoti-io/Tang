@@ -5,10 +5,12 @@ var classTang_1_1AstNodeString =
       [ "IsAssignment", "classTang_1_1AstNodeString.html#ae0f662cd990cd733c7d5447ea3a1e641a586bda9718eca4db4d4afac8e298023a", null ]
     ] ],
     [ "AstNodeString", "classTang_1_1AstNodeString.html#a5cea34da6911ac7bbcb146ae2e5f0be2", null ],
+    [ "AstNodeString", "classTang_1_1AstNodeString.html#a0febadd5fcd92b1097b904feddb51976", null ],
     [ "compile", "classTang_1_1AstNodeString.html#a322432a74d87270585bce7739d13878b", null ],
     [ "compileLiteral", "classTang_1_1AstNodeString.html#acbd2f4395d767befc624b5bfaf69eaf0", null ],
     [ "compilePreprocess", "classTang_1_1AstNodeString.html#ab4100d94863c1ed9873b8aa875745218", null ],
     [ "dump", "classTang_1_1AstNodeString.html#ae4e9b9773f4491f6b3bc7c16bec06863", null ],
+    [ "isTrusted", "classTang_1_1AstNodeString.html#a712605ff200871ba48b9ba6abcf03026", null ],
     [ "location", "classTang_1_1AstNodeString.html#a41e8328d5a342163a5aabcc4cb8f1b5e", null ],
     [ "val", "classTang_1_1AstNodeString.html#a7ba606ce6a264d2f9f027b7d81fe5522", null ]
 ];

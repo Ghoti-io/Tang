@@ -15,7 +15,7 @@ var searchData=
   ['string_381',['String',['../classTang_1_1AstNodeCast.html#a63a014eee9fd7d365d8177c4bab2c4e4afe7d1c33151ae06a769df045e5430824',1,'Tang::AstNodeCast']]],
   ['string_382',['STRING',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a63b588d5559f64f89a416e656880b949',1,'Tang']]],
   ['stringparts_383',['stringParts',['../classTang_1_1ComputedExpressionString.html#a1eb20103509eee7de8c5aa2a7d3fd1e5',1,'Tang::ComputedExpressionString']]],
-  ['stringstack_384',['stringStack',['../classTang_1_1Program.html#aae4297c7f590e95eadc98f3c09f9dae9',1,'Tang::Program']]],
+  ['stringstack_384',['stringStack',['../classTang_1_1Program.html#ac24ab492b12ab4f6d9cc74645e7e8aa7',1,'Tang::Program']]],
   ['substr_385',['substr',['../classTang_1_1UnicodeString.html#a7bda91d3c0efba9f5e70d915a665ba18',1,'Tang::UnicodeString']]],
   ['subtract_386',['Subtract',['../classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9aa99c8c7c2de680bb7cb914e59a82c3e9',1,'Tang::AstNodeBinary']]],
   ['subtract_387',['SUBTRACT',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a23ebcc4776b613af25dfbe7c8ce4813e',1,'Tang']]]

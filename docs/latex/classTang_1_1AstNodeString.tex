@@ -38,7 +38,9 @@ enum \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Pr
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classTang_1_1AstNodeString_a5cea34da6911ac7bbcb146ae2e5f0be2}{Ast\+Node\+String}} (const string \&text, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
-\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construct a Trusted string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTang_1_1AstNodeString_a0febadd5fcd92b1097b904feddb51976}{Ast\+Node\+String}} (const string \&text, bool \mbox{\hyperlink{classTang_1_1AstNodeString_a712605ff200871ba48b9ba6abcf03026}{is\+Trusted}}, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
+\begin{DoxyCompactList}\small\item\em Construct a string that is either Trusted or Untrusted. \end{DoxyCompactList}\item 
 virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeString_ae4e9b9773f4491f6b3bc7c16bec06863}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
 \begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classTang_1_1AstNodeString_a322432a74d87270585bce7739d13878b}{compile}} (\mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} \&program) const override
@@ -58,7 +60,10 @@ void \mbox{\hyperlink{classTang_1_1AstNodeString_acbd2f4395d767befc624b5bfaf69ea
 \item 
 \mbox{\Hypertarget{classTang_1_1AstNodeString_a7ba606ce6a264d2f9f027b7d81fe5522}\label{classTang_1_1AstNodeString_a7ba606ce6a264d2f9f027b7d81fe5522}} 
 std\+::string \mbox{\hyperlink{classTang_1_1AstNodeString_a7ba606ce6a264d2f9f027b7d81fe5522}{val}}
-\begin{DoxyCompactList}\small\item\em The string value being stored. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The string value being stored. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1AstNodeString_a712605ff200871ba48b9ba6abcf03026}\label{classTang_1_1AstNodeString_a712605ff200871ba48b9ba6abcf03026}} 
+bool \mbox{\hyperlink{classTang_1_1AstNodeString_a712605ff200871ba48b9ba6abcf03026}{is\+Trusted}}
+\begin{DoxyCompactList}\small\item\em Whether or not the string is trusted. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -91,16 +96,35 @@ Is\+Assignment&\mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} is part of an 
 \mbox{\Hypertarget{classTang_1_1AstNodeString_a5cea34da6911ac7bbcb146ae2e5f0be2}\label{classTang_1_1AstNodeString_a5cea34da6911ac7bbcb146ae2e5f0be2}} 
 \index{Tang::AstNodeString@{Tang::AstNodeString}!AstNodeString@{AstNodeString}}
 \index{AstNodeString@{AstNodeString}!Tang::AstNodeString@{Tang::AstNodeString}}
-\doxysubsubsection{\texorpdfstring{AstNodeString()}{AstNodeString()}}
+\doxysubsubsection{\texorpdfstring{AstNodeString()}{AstNodeString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Ast\+Node\+String\+::\+Ast\+Node\+String (\begin{DoxyParamCaption}\item[{const string \&}]{text,  }\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{location }\end{DoxyParamCaption})}
 
 
 
-The constructor. 
+Construct a Trusted string. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em text} & The string to represent. \\
+\hline
+{\em location} & The location associated with the expression. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTang_1_1AstNodeString_a0febadd5fcd92b1097b904feddb51976}\label{classTang_1_1AstNodeString_a0febadd5fcd92b1097b904feddb51976}} 
+\index{Tang::AstNodeString@{Tang::AstNodeString}!AstNodeString@{AstNodeString}}
+\index{AstNodeString@{AstNodeString}!Tang::AstNodeString@{Tang::AstNodeString}}
+\doxysubsubsection{\texorpdfstring{AstNodeString()}{AstNodeString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Ast\+Node\+String\+::\+Ast\+Node\+String (\begin{DoxyParamCaption}\item[{const string \&}]{text,  }\item[{bool}]{is\+Trusted,  }\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{location }\end{DoxyParamCaption})}
+
+
+
+Construct a string that is either Trusted or Untrusted. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & The string to represent. \\
+\hline
+{\em is\+Trusted} & Whether or not the string literal is trusted. \\
 \hline
 {\em location} & The location associated with the expression. \\
 \hline
@@ -127,7 +151,8 @@ Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\
 
 Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a390f8887c418f972d75e968f1274b2cb}{Tang\+::\+Ast\+Node}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -177,7 +202,8 @@ Run any preprocess analysis needed before compilation.
 
 Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a269c37e41595e0338bf4653cdb32e9cb}{Tang\+::\+Ast\+Node}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

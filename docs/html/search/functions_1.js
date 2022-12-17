@@ -6,7 +6,7 @@ var searchData=
   ['addcontinue_603',['addContinue',['../classTang_1_1Program.html#ad95d0be274c087ea9361d4b758ae26c2',1,'Tang::Program']]],
   ['addidentifier_604',['addIdentifier',['../classTang_1_1Program.html#ab6ffaae61038ad76502d9fd5c26a69f2',1,'Tang::Program']]],
   ['addidentifierassigned_605',['addIdentifierAssigned',['../classTang_1_1Program.html#a861d7d5ad832ea2865156c8517b58ad1',1,'Tang::Program']]],
-  ['addstring_606',['addString',['../classTang_1_1Program.html#a7d778367416fa5697086a89bece76696',1,'Tang::Program']]],
+  ['addstring_606',['addString',['../classTang_1_1Program.html#a857438c58ac9e9ae420001676ee05582',1,'Tang::Program']]],
   ['append_607',['append',['../classTang_1_1ComputedExpressionArray.html#ab7fb0f0cc3b3b05f5307277bfbc600b8',1,'Tang::ComputedExpressionArray']]],
   ['astnode_608',['AstNode',['../classTang_1_1AstNode.html#a7b8d92e81c4497aa330460a870708578',1,'Tang::AstNode']]],
   ['astnodearray_609',['AstNodeArray',['../classTang_1_1AstNodeArray.html#acd580c30bb24bccbe8354d28e09da296',1,'Tang::AstNodeArray']]],
@@ -32,7 +32,7 @@ var searchData=
   ['astnoderangedfor_629',['AstNodeRangedFor',['../classTang_1_1AstNodeRangedFor.html#a163c8930bc7b8286a76f5b34aef57cb3',1,'Tang::AstNodeRangedFor']]],
   ['astnodereturn_630',['AstNodeReturn',['../classTang_1_1AstNodeReturn.html#ae0d0d2c3f3d54e5e5e83932f65730a84',1,'Tang::AstNodeReturn']]],
   ['astnodeslice_631',['AstNodeSlice',['../classTang_1_1AstNodeSlice.html#a5c50a246e5e3d72699e2d21508047be1',1,'Tang::AstNodeSlice']]],
-  ['astnodestring_632',['AstNodeString',['../classTang_1_1AstNodeString.html#a5cea34da6911ac7bbcb146ae2e5f0be2',1,'Tang::AstNodeString']]],
+  ['astnodestring_632',['AstNodeString',['../classTang_1_1AstNodeString.html#a5cea34da6911ac7bbcb146ae2e5f0be2',1,'Tang::AstNodeString::AstNodeString(const string &amp;text, Tang::location location)'],['../classTang_1_1AstNodeString.html#a0febadd5fcd92b1097b904feddb51976',1,'Tang::AstNodeString::AstNodeString(const string &amp;text, bool isTrusted, Tang::location location)']]],
   ['astnodeternary_633',['AstNodeTernary',['../classTang_1_1AstNodeTernary.html#a97fce073d6fe6caf68b2d64fad8b07c6',1,'Tang::AstNodeTernary']]],
   ['astnodeunary_634',['AstNodeUnary',['../classTang_1_1AstNodeUnary.html#ab05ef630c3da6067267226a760ac5973',1,'Tang::AstNodeUnary']]],
   ['astnodewhile_635',['AstNodeWhile',['../classTang_1_1AstNodeWhile.html#a0c21ef27e39dae086b7329e8b70b58cc',1,'Tang::AstNodeWhile']]]
