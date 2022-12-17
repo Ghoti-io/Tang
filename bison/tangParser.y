@@ -78,7 +78,7 @@
 %token <int64_t> INTEGER "integer literal"
 %token <long double> FLOAT "float literal"
 %token <bool> BOOLEAN "boolean literal"
-%token <std::string> STRING "string literal"
+%token <std::pair<std::string, bool>> STRING "string literal"
 %token STRINGERROR "Malformed String"
 %token <std::string> IDENTIFIER "identifier"
 %token ASSIGN "="
@@ -441,7 +441,7 @@ expression
       $$ = std::make_shared<AstNodeBoolean>($1, @1);
     }
   | STRING {
-      $$ = std::make_shared<AstNodeString>($1, @1);
+      $$ = std::make_shared<AstNodeString>($1.first, $1.second, @1);
     }
   | expression "=" expression
     {

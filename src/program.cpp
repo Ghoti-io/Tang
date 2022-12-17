@@ -36,10 +36,10 @@ void Program::parse() {
 
 void Program::pushEnvironment(const shared_ptr<AstNode> & ast) {
   // Prepare the identifier mapping stack with an empty map.
-  this->identifierStack.push_back(map<string,size_t>{});
+  this->identifierStack.push_back(map<string, size_t>{});
 
   // Prepare the string mapping stack with an empty map.
-  this->stringStack.push_back(map<string,size_t>{});
+  this->stringStack.push_back(map<pair<string, bool>, size_t>{});
 
   // Forward all of the previous function declarations, and gather any new ones
   // in the new scope.
@@ -110,13 +110,13 @@ void Program::compile() {
   // Reserve spaces on the stack for each string.
   // We must be careful to add them in the expected order, so figure out the
   // order first, and put that into `stringLiterals`.
-  vector<string> stringLiterals(this->stringStack.back().size());
+  vector<pair<string, bool>> stringLiterals(this->stringStack.back().size());
   for (auto & item : this->stringStack.back()) {
     stringLiterals[item.second] = item.first;
   }
   // Now that the strings are in the correct order, push them onto the stack.
   for (auto & literal : stringLiterals) {
-    AstNodeString(literal, Tang::location{}).compileLiteral(*this);
+    AstNodeString(literal.first, literal.second, Tang::location{}).compileLiteral(*this);
   }
 
   // Compile the program.
@@ -155,14 +155,14 @@ const set<string>& Program::getIdentifiersAssigned() const {
   return this->identifiersAssignedStack.back();
 }
 
-void Program::addString(const string & val) {
+void Program::addString(const string & val, bool isTrusted) {
   auto & strings = this->stringStack.back();
-  if (strings.count(val) == 0) {
-    strings[val] = strings.size();
+  if (strings.count({val, isTrusted}) == 0) {
+    strings[{val, isTrusted}] = strings.size();
   }
 }
 
-const map<string, size_t>& Program::getStrings() const {
+const map<pair<string, bool>, size_t>& Program::getStrings() const {
   return this->stringStack.back();
 }
 

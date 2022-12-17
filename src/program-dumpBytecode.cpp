@@ -113,20 +113,21 @@ string Program::dumpBytecode() const {
         break;
       }
       case Opcode::STRING: {
-        DUMPPROGRAMCHECK(1);
-        auto size = this->bytecode[pc + 1];
+        DUMPPROGRAMCHECK(2);
+        bool isTrusted = this->bytecode[pc + 1];
+        auto size = this->bytecode[pc + 2];
         auto bytes = ceil((double)size / sizeof(uinteger_t));
-        DUMPPROGRAMCHECK(1 + bytes);
+        DUMPPROGRAMCHECK(2 + bytes);
         string temp{};
         for (size_t i = 0; i < bytes; ++i) {
           for (size_t j = 0; j < sizeof(uinteger_t); ++j) {
             if ((integer_t)((i * sizeof(uinteger_t)) + j) < size) {
-              temp += (unsigned char)((this->bytecode[pc + 2 + i] >> (8 * (sizeof(uinteger_t) - 1 - j))) & 0xFF);
+              temp += (unsigned char)((this->bytecode[pc + 3 + i] >> (8 * (sizeof(uinteger_t) - 1 - j))) & 0xFF);
             }
           }
         }
-        out << "STRING" << "\"" << temp << "\"";
-        pc += bytes + 2;
+        out << "STRING" << (isTrusted ? "\"" : "!\"") << temp << "\"";
+        pc += bytes + 3;
         break;
       }
       case Opcode::ARRAY: {

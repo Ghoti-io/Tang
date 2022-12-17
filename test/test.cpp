@@ -1967,6 +1967,27 @@ TEST(Syntax, UntrustedString) {
   }
 }
 
+TEST(Syntax, UntrustedStringLiteral) {
+  {
+    // Untrusted String Literal
+    auto p1 = tang->compileScript(R"(
+      a = !"<h1>";
+      print(a);
+    )");
+    EXPECT_EQ(p1.execute().out, "&lt;h1&gt;");
+  }
+  {
+    // Untrusted and Trusted String Literals are separate.
+    auto p1 = tang->compileScript(R"(
+      a = !"<h1>";
+      b = "<h1>";
+      print(a);
+      print(b);
+    )");
+    EXPECT_EQ(p1.execute().out, "&lt;h1&gt;<h1>");
+  }
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

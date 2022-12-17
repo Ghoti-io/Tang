@@ -12,7 +12,9 @@
 using namespace std;
 using namespace Tang;
 
-AstNodeString::AstNodeString(const string & text, Tang::location location) : AstNode(location), val{text} {}
+AstNodeString::AstNodeString(const string & text, Tang::location location) : AstNode(location), val{text}, isTrusted{true} {}
+
+AstNodeString::AstNodeString(const string & text, bool isTrusted, Tang::location location) : AstNode(location), val{text}, isTrusted{isTrusted} {}
 
 string AstNodeString::dump(string indent) const {
   return indent + "String: \"" + this->val + "\"\n";
@@ -20,9 +22,9 @@ string AstNodeString::dump(string indent) const {
 
 void AstNodeString::compile(Tang::Program & program) const {
   auto & strings = program.getStrings();
-  if (strings.count(this->val)) {
+  if (strings.count({this->val, this->isTrusted})) {
     program.addBytecode((uinteger_t)Opcode::PEEK);
-    program.addBytecode((uinteger_t)(strings.at(this->val) + program.getIdentifiers().size()));
+    program.addBytecode((uinteger_t)(strings.at({this->val, this->isTrusted}) + program.getIdentifiers().size()));
   }
   else {
     program.addBytecode((uinteger_t)Opcode::NULLVAL);
@@ -31,6 +33,7 @@ void AstNodeString::compile(Tang::Program & program) const {
 
 void AstNodeString::compileLiteral(Tang::Program & program) const {
   program.addBytecode((uinteger_t)Opcode::STRING);
+  program.addBytecode((uinteger_t)this->isTrusted);
   program.addBytecode(bit_cast<uinteger_t>((integer_t)this->val.length()));
   // Pack the characters into the bytecode.
   uinteger_t temp = 0;
@@ -53,6 +56,6 @@ void AstNodeString::compileLiteral(Tang::Program & program) const {
 }
 
 void AstNodeString::compilePreprocess(Program & program, [[maybe_unused]] PreprocessState state) const {
-  program.addString(this->val);
+  program.addString(this->val, this->isTrusted);
 }
 

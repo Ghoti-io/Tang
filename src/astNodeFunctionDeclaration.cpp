@@ -80,13 +80,13 @@ void AstNodeFunctionDeclaration::compile(Tang::Program & program) const {
   // We must be careful to add them in the expected order, so figure out the
   // order first, and put that into `stringLiterals`.
   auto & strings = program.getStrings();
-  vector<string> stringLiterals(strings.size());
+  vector<pair<string, bool>> stringLiterals(strings.size());
   for (auto & item : strings) {
     stringLiterals[item.second] = item.first;
   }
   // Now that the strings are in the correct order, push them onto the stack.
   for (auto & literal : stringLiterals) {
-    AstNodeString(literal, Tang::location{}).compileLiteral(program);
+    AstNodeString(literal.first, literal.second, Tang::location{}).compileLiteral(program);
   }
 
   // If any argument will be altered within the function body, then create a

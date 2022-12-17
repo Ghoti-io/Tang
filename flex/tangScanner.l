@@ -102,6 +102,10 @@ using namespace std;
   // Holds the contents of a double-quoted string as it is being parsed.
   std::string stringBuffer;
 
+  // Indicates whether or not the current double-quoted string is trusted
+  // or untrusted.
+  bool isTrusted{false};
+
 <INITIAL,SCRIPT,singleLineComment,multiLineComment>{
   <<EOF>> {
     yyterminate();
@@ -117,9 +121,16 @@ using namespace std;
     // Beginning of a multi line comment.
     yy_push_state(multiLineComment);
   }
+  \!\" {
+    // The start of a new, double-quoted string.
+    stringBuffer.clear();
+    isTrusted = false;
+    yy_push_state(doubleQuoteString);
+  }
   \" {
     // The start of a new, double-quoted string.
     stringBuffer.clear();
+    isTrusted = true;
     yy_push_state(doubleQuoteString);
   }
   if {
@@ -291,7 +302,7 @@ using namespace std;
   \" {
     // Found the end of a double-quoted string.
     yy_pop_state();
-    return Tang::TangParser::make_STRING(stringBuffer, Tang::location(location));
+    return Tang::TangParser::make_STRING({stringBuffer, isTrusted}, Tang::location(location));
   }
   \\[0-7]{1,3} {
     // Interpret an escaped octal number.

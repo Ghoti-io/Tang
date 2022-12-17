@@ -166,22 +166,35 @@ Program& Program::execute() {
         break;
       }
       case Opcode::STRING: {
-        EXECUTEPROGRAMCHECK(1);
-        auto size = this->bytecode[pc + 1];
+        EXECUTEPROGRAMCHECK(2);
+        bool isTrusted = this->bytecode[pc + 1];
+        auto size = this->bytecode[pc + 2];
         auto bytes = ceil((double)size / sizeof(uinteger_t));
-        EXECUTEPROGRAMCHECK(1 + bytes);
-        // Construct the string.
+        EXECUTEPROGRAMCHECK(2 + bytes);
+
+        // Extract the letters of the string from the bytecode.
+        // TODO make this faster by using a char * buffer.
         string temp{};
         for (size_t i = 0; i < bytes; ++i) {
           for (size_t j = 0; j < sizeof(uinteger_t); ++j) {
             if ((integer_t)((i * sizeof(uinteger_t)) + j) < size) {
               temp += (unsigned char)
-                ((this->bytecode[pc + 2 + i] >> (8 * (sizeof(uinteger_t) - 1 - j))) & 0xFF);
+                ((this->bytecode[pc + 3 + i] >> (8 * (sizeof(uinteger_t) - 1 - j))) & 0xFF);
             }
           }
         }
-        stack.push_back(GarbageCollected::make<ComputedExpressionString>(temp));
-        pc += bytes + 2;
+
+        // Finally construct the string object.
+        auto gcString = GarbageCollected::make<ComputedExpressionString>(temp);
+
+        // Set the string as Untrusted if necessary.
+        if (!isTrusted) {
+          auto & s = static_cast<ComputedExpressionString &>(*gcString);
+          s.setUntrusted();
+        }
+
+        stack.push_back(gcString);
+        pc += bytes + 3;
         break;
       }
       case Opcode::ARRAY: {
