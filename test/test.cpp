@@ -1957,6 +1957,14 @@ TEST(Syntax, UntrustedString) {
     )");
     EXPECT_EQ(p1.execute().out, "&lt;h1&gt;");
   }
+  {
+    // Combined Trusted & Untrusted Strings.
+    auto p1 = tang->compileScript(R"(
+      a = "<h1>";
+      print(a + a.make_untrusted() + a);
+    )");
+    EXPECT_EQ(p1.execute().out, "<h1>&lt;h1&gt;<h1>");
+  }
 }
 
 int main(int argc, char** argv) {
