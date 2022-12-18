@@ -117,8 +117,14 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "computedExpressionNativeBoundFunction.hpp", "computedExpressionNativeBoundFunction_8hpp.html", [
       [ "ComputedExpressionNativeBoundFunction", "classTang_1_1ComputedExpressionNativeBoundFunction.html", "classTang_1_1ComputedExpressionNativeBoundFunction" ]
     ] ],
+    [ "computedExpressionNativeFunction.hpp", "computedExpressionNativeFunction_8hpp.html", [
+      [ "ComputedExpressionNativeFunction", "classTang_1_1ComputedExpressionNativeFunction.html", "classTang_1_1ComputedExpressionNativeFunction" ]
+    ] ],
     [ "computedExpressionString.hpp", "computedExpressionString_8hpp.html", [
       [ "ComputedExpressionString", "classTang_1_1ComputedExpressionString.html", "classTang_1_1ComputedExpressionString" ]
+    ] ],
+    [ "context.hpp", "context_8hpp.html", [
+      [ "Context", "classTang_1_1Context.html", "classTang_1_1Context" ]
     ] ],
     [ "error.hpp", "error_8hpp.html", [
       [ "Error", "classTang_1_1Error.html", "classTang_1_1Error" ]

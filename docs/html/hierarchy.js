@@ -40,8 +40,10 @@ var hierarchy =
       [ "Tang::ComputedExpressionIteratorEnd", "classTang_1_1ComputedExpressionIteratorEnd.html", null ],
       [ "Tang::ComputedExpressionMap", "classTang_1_1ComputedExpressionMap.html", null ],
       [ "Tang::ComputedExpressionNativeBoundFunction", "classTang_1_1ComputedExpressionNativeBoundFunction.html", null ],
+      [ "Tang::ComputedExpressionNativeFunction", "classTang_1_1ComputedExpressionNativeFunction.html", null ],
       [ "Tang::ComputedExpressionString", "classTang_1_1ComputedExpressionString.html", null ]
     ] ],
+    [ "Tang::Context", "classTang_1_1Context.html", null ],
     [ "std::enable_shared_from_this", null, [
       [ "Tang::TangBase", "classTang_1_1TangBase.html", null ]
     ] ],

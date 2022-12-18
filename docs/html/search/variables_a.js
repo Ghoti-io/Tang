@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['objectmethods_786',['objectMethods',['../classTang_1_1TangBase.html#af11e5d697c6646ad17d48d1da6b5c603',1,'Tang::TangBase']]],
-  ['op_787',['op',['../classTang_1_1AstNodeBinary.html#ae882ddf080e0e0306081b0e0b2f04a6b',1,'Tang::AstNodeBinary::op()'],['../classTang_1_1AstNodeUnary.html#add505dbcbc6093feb8b1b97169302e59',1,'Tang::AstNodeUnary::op()']]],
-  ['operand_788',['operand',['../classTang_1_1AstNodeUnary.html#afa5b9ab189a4661852040bd88ebf5755',1,'Tang::AstNodeUnary']]],
-  ['out_789',['out',['../classTang_1_1Program.html#a81bee7c0545c053eee44d4381295e193',1,'Tang::Program']]]
+  ['name_804',['name',['../classTang_1_1AstNodeFunctionDeclaration.html#afb6070458845b30f378c570574ed629d',1,'Tang::AstNodeFunctionDeclaration::name()'],['../classTang_1_1AstNodeIdentifier.html#a5179f37a6283f94c7093b573a12b3bd8',1,'Tang::AstNodeIdentifier::name()']]],
+  ['nativeboundfunction_805',['nativeBoundFunction',['../classTang_1_1ComputedExpressionNativeBoundFunction.html#a249f94e59883c44c5f5e2c54820dd4b8',1,'Tang::ComputedExpressionNativeBoundFunction']]],
+  ['nativefunction_806',['nativeFunction',['../classTang_1_1ComputedExpressionNativeFunction.html#abef2322a97563159dd67461fa7c057c8',1,'Tang::ComputedExpressionNativeFunction']]]
 ];

@@ -11,6 +11,7 @@ var classTang_1_1Program =
     [ "addIdentifier", "classTang_1_1Program.html#ab6ffaae61038ad76502d9fd5c26a69f2", null ],
     [ "addIdentifierAssigned", "classTang_1_1Program.html#a861d7d5ad832ea2865156c8517b58ad1", null ],
     [ "addString", "classTang_1_1Program.html#a857438c58ac9e9ae420001676ee05582", null ],
+    [ "clearOutput", "classTang_1_1Program.html#aeb450cc228b4b9c89684e3c4c03d776c", null ],
     [ "compile", "classTang_1_1Program.html#ac1fee8bf44ff31dd8a1131e9dbc47304", null ],
     [ "dumpBytecode", "classTang_1_1Program.html#aee5e79c40fac68e875c0d043f8fc2bc1", null ],
     [ "execute", "classTang_1_1Program.html#a68dc832846a651693dea5770d047d4a6", null ],

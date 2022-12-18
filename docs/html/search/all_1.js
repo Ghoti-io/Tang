@@ -12,7 +12,7 @@ var searchData=
   ['allocations_29',['allocations',['../classTang_1_1SingletonObjectPool.html#a63319cf03dfd242b90aa2866de5376d4',1,'Tang::SingletonObjectPool']]],
   ['and_30',['And',['../classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9af2d352022a9f92608a9c92b9f44c13d3',1,'Tang::AstNodeBinary']]],
   ['append_31',['append',['../classTang_1_1ComputedExpressionArray.html#ab7fb0f0cc3b3b05f5307277bfbc600b8',1,'Tang::ComputedExpressionArray']]],
-  ['argc_32',['argc',['../classTang_1_1ComputedExpressionNativeBoundFunction.html#afd13441fa5bc91dbabb2f31faffcb620',1,'Tang::ComputedExpressionNativeBoundFunction::argc()'],['../classTang_1_1ComputedExpressionCompiledFunction.html#a1c220a2e5e06b00a7628b97226e302dd',1,'Tang::ComputedExpressionCompiledFunction::argc()']]],
+  ['argc_32',['argc',['../classTang_1_1ComputedExpressionNativeFunction.html#ac304a28e5b0f1c77417d2f8525c7c4c6',1,'Tang::ComputedExpressionNativeFunction::argc()'],['../classTang_1_1ComputedExpressionNativeBoundFunction.html#afd13441fa5bc91dbabb2f31faffcb620',1,'Tang::ComputedExpressionNativeBoundFunction::argc()'],['../classTang_1_1ComputedExpressionCompiledFunction.html#a1c220a2e5e06b00a7628b97226e302dd',1,'Tang::ComputedExpressionCompiledFunction::argc()']]],
   ['arguments_33',['arguments',['../classTang_1_1AstNodeFunctionDeclaration.html#a1c4ca7dac3f31c69dd50a89492f3670d',1,'Tang::AstNodeFunctionDeclaration']]],
   ['argv_34',['argv',['../classTang_1_1AstNodeFunctionCall.html#a8ffab9fa512aefe17d1857e5f69c1c98',1,'Tang::AstNodeFunctionCall']]],
   ['array_35',['ARRAY',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acb4fb1757fb37c43cded35d3eb857c43',1,'Tang']]],

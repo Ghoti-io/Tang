@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['lhs_779',['lhs',['../classTang_1_1AstNodeAssign.html#adc000a71ac9be2c674578b29716d5c8a',1,'Tang::AstNodeAssign::lhs()'],['../classTang_1_1AstNodeBinary.html#ae0fd37da73486ef3902deecd2588e27c',1,'Tang::AstNodeBinary::lhs()'],['../classTang_1_1AstNodePeriod.html#a9c0b55f0606c20fdd3775a0ce9330bf1',1,'Tang::AstNodePeriod::lhs()']]],
-  ['line_780',['line',['../classTang_1_1position.html#a34c49c59465f6d5b40d26cd244942254',1,'Tang::position']]],
-  ['location_781',['location',['../classTang_1_1AstNode.html#a41e8328d5a342163a5aabcc4cb8f1b5e',1,'Tang::AstNode::location()'],['../classTang_1_1Error.html#a39386694098329e9cae1238b08412352',1,'Tang::Error::location()'],['../classTang_1_1TangScanner.html#af24dd2399a4f80b0bf9b002c2407f331',1,'Tang::TangScanner::location()']]],
-  ['lock_782',['lock',['../classTang_1_1SingletonObjectPool.html#a1353f46ca1658afd6691730c3c198793',1,'Tang::SingletonObjectPool']]]
+  ['identifiersassignedstack_792',['identifiersAssignedStack',['../classTang_1_1Program.html#afca51adb15fa6e650356dc003c50de8d',1,'Tang::Program']]],
+  ['identifierstack_793',['identifierStack',['../classTang_1_1Program.html#a440bf2cdcd08fe6b2b0c2c19c22fa276',1,'Tang::Program']]],
+  ['increment_794',['increment',['../classTang_1_1AstNodeFor.html#a5dc8f597eaeb656a7c43d4b1bc7ed172',1,'Tang::AstNodeFor']]],
+  ['index_795',['index',['../classTang_1_1AstNodeIndex.html#a662ba12b29adf377a1300f62a8f6f412',1,'Tang::AstNodeIndex::index()'],['../classTang_1_1ComputedExpressionIterator.html#a54163bd177b2e746206784938379d52a',1,'Tang::ComputedExpressionIterator::index()']]],
+  ['initialization_796',['initialization',['../classTang_1_1AstNodeFor.html#a057d8914e9b19dd7904cff2e2d19403d',1,'Tang::AstNodeFor']]],
+  ['istrusted_797',['isTrusted',['../classTang_1_1AstNodeString.html#a712605ff200871ba48b9ba6abcf03026',1,'Tang::AstNodeString']]],
+  ['iteratorvariablename_798',['iteratorVariableName',['../classTang_1_1AstNodeRangedFor.html#ae503002a89177184dfaf809d3ab1cc04',1,'Tang::AstNodeRangedFor']]]
 ];

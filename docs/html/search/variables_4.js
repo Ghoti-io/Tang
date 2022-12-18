@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['falseexpression_765',['falseExpression',['../classTang_1_1AstNodeTernary.html#a53744d4925e112f42c2c2cba7eda5afb',1,'Tang::AstNodeTernary']]],
-  ['filename_766',['filename',['../classTang_1_1position.html#ae029a2c528cdb5c806b7228a111e72fd',1,'Tang::position']]],
-  ['function_767',['function',['../classTang_1_1AstNodeFunctionCall.html#acb37ea535b0ad660dffb7d0843e3721e',1,'Tang::AstNodeFunctionCall']]],
-  ['functionscollected_768',['functionsCollected',['../classTang_1_1Program.html#a7bf410d953206df63379a9c395f09bb2',1,'Tang::Program']]],
-  ['functionsdeclared_769',['functionsDeclared',['../classTang_1_1Program.html#acca9bf07cd3197fffc3d01ed73985740',1,'Tang::Program']]],
-  ['functionstackdeclarations_770',['functionStackDeclarations',['../classTang_1_1Program.html#a1eedd506786a238a8bcedc7b77fd01f9',1,'Tang::Program']]]
+  ['elseblock_781',['elseBlock',['../classTang_1_1AstNodeIfElse.html#a60cca4336f678bb10abf5ea473919ff4',1,'Tang::AstNodeIfElse']]],
+  ['end_782',['end',['../classTang_1_1AstNodeSlice.html#ae9b72cb32eacd27648d57f9c5e54fbf6',1,'Tang::AstNodeSlice::end()'],['../classTang_1_1location.html#a1c727915f062f609b56d9e89f10485c2',1,'Tang::location::end()']]],
+  ['error_783',['error',['../classTang_1_1ComputedExpressionError.html#a4fba2dac234061887a185ecea0a66ed5',1,'Tang::ComputedExpressionError']]],
+  ['expression_784',['expression',['../classTang_1_1AstNodeCast.html#a317b9ddfd26f6e8ee15694a5b28a1c5b',1,'Tang::AstNodeCast::expression()'],['../classTang_1_1AstNodePrint.html#ab66e23d025bff5e528a02ee43d2084de',1,'Tang::AstNodePrint::expression()'],['../classTang_1_1AstNodeReturn.html#a887bfd57f936df5a0cc420973d20a7df',1,'Tang::AstNodeReturn::expression()']]]
 ];
