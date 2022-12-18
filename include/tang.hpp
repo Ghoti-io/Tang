@@ -71,6 +71,7 @@
 #include "opcode.hpp"
 #include "computedExpression.hpp"
 #include "computedExpressionString.hpp"
+#include "computedExpressionNativeFunction.hpp"
 
 #endif // TANG_HPP
 

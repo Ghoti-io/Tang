@@ -7,7 +7,7 @@ GEN_DIR := $(BUILD)/generated
 APP_DIR := $(BUILD)/apps
 TARGET := libtang.so
 INCLUDE := -I include/ -I $(GEN_DIR)/
-LIBOBJECTS := $(OBJ_DIR)/astNode.o $(OBJ_DIR)/astNodeArray.o $(OBJ_DIR)/astNodeAssign.o $(OBJ_DIR)/astNodeBinary.o $(OBJ_DIR)/astNodeBlock.o $(OBJ_DIR)/astNodeBoolean.o $(OBJ_DIR)/astNodeBreak.o $(OBJ_DIR)/astNodeCast.o $(OBJ_DIR)/astNodeContinue.o $(OBJ_DIR)/astNodeDoWhile.o $(OBJ_DIR)/astNodeFor.o $(OBJ_DIR)/astNodeFunctionCall.o $(OBJ_DIR)/astNodeFunctionDeclaration.o $(OBJ_DIR)/astNodeIfElse.o $(OBJ_DIR)/astNodeIndex.o $(OBJ_DIR)/astNodeFloat.o $(OBJ_DIR)/astNodeIdentifier.o $(OBJ_DIR)/astNodeInteger.o $(OBJ_DIR)/astNodeMap.o $(OBJ_DIR)/astNodePeriod.o $(OBJ_DIR)/astNodePrint.o $(OBJ_DIR)/astNodeRangedFor.o $(OBJ_DIR)/astNodeReturn.o $(OBJ_DIR)/astNodeSlice.o $(OBJ_DIR)/astNodeString.o $(OBJ_DIR)/astNodeTernary.o $(OBJ_DIR)/astNodeUnary.o $(OBJ_DIR)/astNodeWhile.o $(OBJ_DIR)/computedExpression.o $(OBJ_DIR)/computedExpressionArray.o $(OBJ_DIR)/computedExpressionBoolean.o $(OBJ_DIR)/computedExpressionCompiledFunction.o $(OBJ_DIR)/computedExpressionFloat.o $(OBJ_DIR)/computedExpressionInteger.o $(OBJ_DIR)/computedExpressionIterator.o $(OBJ_DIR)/computedExpressionIteratorEnd.o $(OBJ_DIR)/computedExpressionError.o $(OBJ_DIR)/computedExpressionMap.o $(OBJ_DIR)/computedExpressionNativeBoundFunction.o $(OBJ_DIR)/computedExpressionString.o $(OBJ_DIR)/error.o $(OBJ_DIR)/garbageCollected.o $(OBJ_DIR)/htmlEscape.o $(OBJ_DIR)/htmlEscapeAscii.o $(OBJ_DIR)/program.o $(OBJ_DIR)/program-dumpBytecode.o  $(OBJ_DIR)/program-execute.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o $(OBJ_DIR)/unescape.o $(OBJ_DIR)/unicodeString.o
+LIBOBJECTS := $(OBJ_DIR)/astNode.o $(OBJ_DIR)/astNodeArray.o $(OBJ_DIR)/astNodeAssign.o $(OBJ_DIR)/astNodeBinary.o $(OBJ_DIR)/astNodeBlock.o $(OBJ_DIR)/astNodeBoolean.o $(OBJ_DIR)/astNodeBreak.o $(OBJ_DIR)/astNodeCast.o $(OBJ_DIR)/astNodeContinue.o $(OBJ_DIR)/astNodeDoWhile.o $(OBJ_DIR)/astNodeFor.o $(OBJ_DIR)/astNodeFunctionCall.o $(OBJ_DIR)/astNodeFunctionDeclaration.o $(OBJ_DIR)/astNodeIfElse.o $(OBJ_DIR)/astNodeIndex.o $(OBJ_DIR)/astNodeFloat.o $(OBJ_DIR)/astNodeIdentifier.o $(OBJ_DIR)/astNodeInteger.o $(OBJ_DIR)/astNodeMap.o $(OBJ_DIR)/astNodePeriod.o $(OBJ_DIR)/astNodePrint.o $(OBJ_DIR)/astNodeRangedFor.o $(OBJ_DIR)/astNodeReturn.o $(OBJ_DIR)/astNodeSlice.o $(OBJ_DIR)/astNodeString.o $(OBJ_DIR)/astNodeTernary.o $(OBJ_DIR)/astNodeUnary.o $(OBJ_DIR)/astNodeWhile.o $(OBJ_DIR)/context.o $(OBJ_DIR)/computedExpression.o $(OBJ_DIR)/computedExpressionArray.o $(OBJ_DIR)/computedExpressionBoolean.o $(OBJ_DIR)/computedExpressionCompiledFunction.o $(OBJ_DIR)/computedExpressionFloat.o $(OBJ_DIR)/computedExpressionInteger.o $(OBJ_DIR)/computedExpressionIterator.o $(OBJ_DIR)/computedExpressionIteratorEnd.o $(OBJ_DIR)/computedExpressionError.o $(OBJ_DIR)/computedExpressionMap.o $(OBJ_DIR)/computedExpressionNativeBoundFunction.o $(OBJ_DIR)/computedExpressionNativeFunction.o $(OBJ_DIR)/computedExpressionString.o $(OBJ_DIR)/error.o $(OBJ_DIR)/garbageCollected.o $(OBJ_DIR)/htmlEscape.o $(OBJ_DIR)/htmlEscapeAscii.o $(OBJ_DIR)/program.o $(OBJ_DIR)/program-dumpBytecode.o  $(OBJ_DIR)/program-execute.o $(OBJ_DIR)/tangBase.o $(OBJ_DIR)/tangParser.o $(OBJ_DIR)/tangScanner.o $(OBJ_DIR)/unescape.o $(OBJ_DIR)/unicodeString.o
 
 TESTFLAGS := `pkg-config --libs --cflags gtest`
 
@@ -197,6 +197,11 @@ $(OBJ_DIR)/astNodeIfElse.o: src/astNodeIfElse.cpp include/macros.hpp include/ast
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
+$(OBJ_DIR)/context.o: src/context.cpp include/macros.hpp include/context.hpp
+	@echo "\n### Compiling context.o ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
+
 $(OBJ_DIR)/computedExpression.o: src/computedExpression.cpp include/macros.hpp include/computedExpression.hpp include/garbageCollected.hpp
 	@echo "\n### Compiling computedExpression.o ###"
 	@mkdir -p $(@D)
@@ -252,6 +257,11 @@ $(OBJ_DIR)/computedExpressionNativeBoundFunction.o: src/computedExpressionNative
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
+$(OBJ_DIR)/computedExpressionNativeFunction.o: src/computedExpressionNativeFunction.cpp include/macros.hpp include/computedExpressionNativeFunction.hpp include/computedExpression.hpp include/error.hpp include/garbageCollected.hpp include/unicodeString.hpp
+	@echo "\n### Compiling computedExpressionNativeFunction.o ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
+
 $(OBJ_DIR)/computedExpressionString.o: src/computedExpressionString.cpp include/macros.hpp include/computedExpressionString.hpp include/computedExpression.hpp include/error.hpp include/garbageCollected.hpp include/unicodeString.hpp
 	@echo "\n### Compiling computedExpressionString.o ###"
 	@mkdir -p $(@D)
@@ -287,7 +297,7 @@ $(OBJ_DIR)/program-dumpBytecode.o: src/program-dumpBytecode.cpp include/macros.h
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/program-execute.o: src/program-execute.cpp include/macros.hpp include/program.hpp include/tangScanner.hpp include/opcode.hpp include/astNode.hpp include/error.hpp include/garbageCollected.hpp include/computedExpression.hpp include/singletonObjectPool.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/program-execute.o: src/program-execute.cpp include/macros.hpp include/program.hpp include/context.hpp include/tangScanner.hpp include/opcode.hpp include/astNode.hpp include/error.hpp include/garbageCollected.hpp include/computedExpression.hpp include/singletonObjectPool.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling program-execute.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC

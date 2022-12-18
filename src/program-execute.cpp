@@ -6,6 +6,7 @@
 #include <bit>
 #include <cmath>
 #include "program.hpp"
+#include "context.hpp"
 #include "opcode.hpp"
 #include "computedExpressionError.hpp"
 #include "computedExpressionInteger.hpp"
@@ -16,6 +17,7 @@
 #include "computedExpressionMap.hpp"
 #include "computedExpressionCompiledFunction.hpp"
 #include "computedExpressionNativeBoundFunction.hpp"
+#include "computedExpressionNativeFunction.hpp"
 #include "computedExpressionIteratorEnd.hpp"
 
 using namespace std;
@@ -51,6 +53,7 @@ Program& Program::execute() {
   vector<GarbageCollected> stack;
   vector<size_t> pcStack{};
   vector<size_t> fpStack{};
+  Context context{};
 
   while (pc < this->bytecode.size()) {
     switch ((Opcode)this->bytecode[pc]) {
@@ -560,6 +563,42 @@ Program& Program::execute() {
           // There is no function target.  This is impossible under normal
           // circumstances, but we must account for it, just in case.
           stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Method is not bound to any object."}));
+          pc += 2;
+          break;
+        }
+
+        // Compiled functions make use of the arguments on the stack.
+        // They will clean up the stack when they finish, via the RETURN
+        // opcode.
+        if (typeid(*function) == typeid(ComputedExpressionNativeFunction)) {
+          auto & funcConv = static_cast<ComputedExpressionNativeFunction &>(*function);
+
+          // Populate argv to use when calling the function.
+          vector<GarbageCollected> argv{};
+          argv.reserve(argc);
+          auto iter = stack.end() - argc;
+          while (iter != stack.end()) {
+            argv.push_back(*iter);
+            ++iter;
+          }
+
+          // Remove the arguments from the stack.
+          for (int i = 0; i < argc; ++i) {
+            stack.pop_back();
+          }
+
+          // Verify that the number of arguments supplied matches the number
+          // of arguments expected.
+          if ((size_t)argc != funcConv.getArgc()) {
+            stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments provided to object method."}));
+
+            pc += 2;
+            break;
+          }
+
+          // Call the Native function.
+          stack.push_back(funcConv.getFunction()(argv, context));
+
           pc += 2;
           break;
         }

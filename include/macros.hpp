@@ -11,6 +11,9 @@
 #include <string>
 
 namespace Tang {
+  class Context;
+  class GarbageCollected;
+
   /**
    * Define the size of signed integers used by Tang.
    */
@@ -28,7 +31,10 @@ namespace Tang {
 
   static_assert(sizeof(integer_t) == sizeof(float_t), "Integer and float sizes must be the same.");
 
-  class GarbageCollected;
+  /**
+   * A function pointer that will be executed.
+   */
+  using NativeFunction = GarbageCollected (*) (std::vector<GarbageCollected> &, Context &);
 
   /**
    * A function pointer that will be executed as bound to an object.
