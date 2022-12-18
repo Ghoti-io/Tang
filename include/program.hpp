@@ -88,6 +88,11 @@ namespace Tang {
     std::string out;
 
     /**
+     * Clear the output of the program, so that it can be used again.
+     */
+    void clearOutput();
+
+    /**
      * Add a Tang::uinteger_t to the Bytecode.
      *
      * @param op The value to add to the Bytecode.

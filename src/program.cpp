@@ -181,6 +181,11 @@ optional<const GarbageCollected> Program::getResult() const {
   return this->result;
 }
 
+void Program::clearOutput() {
+  this->out = "";
+  this->computedExpressionOut = GarbageCollected::make<ComputedExpressionString>("");
+}
+
 size_t Program::addBytecode(uinteger_t op) {
   this->bytecode.push_back(op);
   return this->bytecode.size();
