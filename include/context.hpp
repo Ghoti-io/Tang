@@ -10,6 +10,9 @@ namespace Tang {
 #ifndef TANG_CONTEXT_HPP
 #define TANG_CONTEXT_HPP
 
+#include <any>
+#include <map>
+#include <string>
 #include <vector>
 #include "program.hpp"
 #include "computedExpression.hpp"
@@ -20,7 +23,15 @@ namespace Tang {
    */
   class Context {
   public:
+    /**
+     * Default constructor.
+     */
     Context();
+
+    /**
+     * Holds arbitrary data for use in the program execution.
+     */
+    std::map<std::string, std::any> data;
   };
 }
 
