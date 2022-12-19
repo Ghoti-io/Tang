@@ -48,6 +48,33 @@ namespace Tang {
      * The result of the Program execution.
      */
     std::optional<GarbageCollected> result;
+
+    /**
+     * The program counter of the current instruction.
+     */
+    size_t pc{0};
+
+    /**
+     * The frame pointer (an index into the stack frame).
+     */
+    size_t fp{0};
+
+    /**
+     * The execution stack.
+     */
+    vector<GarbageCollected> stack;
+
+    /**
+     * The stack of program counters used to recover the previous pc when
+     * returning from a function.
+     */
+    vector<size_t> pcStack{};
+
+    /**
+     * The stack of frame pointers, used to recover the previous fp when
+     * returning from a function.
+     */
+    vector<size_t> fpStack{};
   };
 }
 

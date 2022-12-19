@@ -29,149 +29,144 @@ using namespace Tang;
  * @param x The number of additional vector entries that should exist.
  */
 #define EXECUTEPROGRAMCHECK(x) \
-  if (this->bytecode.size() < (pc + (x))) { \
-    stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Opcode instruction truncated."})); \
-    pc = this->bytecode.size(); \
+  if (this->bytecode.size() < (context.pc + (x))) { \
+    context.stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Opcode instruction truncated."})); \
+    context.pc = this->bytecode.size(); \
     break; \
   }
 
 /**
- * Verify the size of the stack vector so that it may be safely accessed.
+ * Verify the size of the context.stack vector so that it may be safely accessed.
  *
- * @param x The number of entries that should exist in the stack.
+ * @param x The number of entries that should exist in the context.stack.
  */
 #define STACKCHECK(x) \
-  if (stack.size() < (fp + (x))) { \
-    stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Insufficient stack depth."})); \
-    pc = this->bytecode.size(); \
+  if (context.stack.size() < (context.fp + (x))) { \
+    context.stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Insufficient context.stack depth."})); \
+    context.pc = this->bytecode.size(); \
     break; \
   }
 
 Context Program::execute() {
-  size_t pc{0};
-  size_t fp{0};
-  vector<GarbageCollected> stack;
-  vector<size_t> pcStack{};
-  vector<size_t> fpStack{};
   Context context{};
 
-  while (pc < this->bytecode.size()) {
-    switch ((Opcode)this->bytecode[pc]) {
+  while (context.pc < this->bytecode.size()) {
+    switch ((Opcode)this->bytecode[context.pc]) {
       case Opcode::POP: {
         STACKCHECK(1);
-        stack.pop_back();
-        ++pc;
+        context.stack.pop_back();
+        ++context.pc;
         break;
       }
       case Opcode::PEEK: {
         EXECUTEPROGRAMCHECK(1);
-        auto position = this->bytecode[pc + 1];
+        auto position = this->bytecode[context.pc + 1];
         STACKCHECK(position);
-        stack.push_back(stack[fp + position]);
-        pc += 2;
+        context.stack.push_back(context.stack[context.fp + position]);
+        context.pc += 2;
         break;
       }
       case Opcode::POKE: {
         EXECUTEPROGRAMCHECK(1);
-        auto position = this->bytecode[pc + 1];
+        auto position = this->bytecode[context.pc + 1];
         STACKCHECK(position);
-        stack[fp + position] = stack.back();
-        pc += 2;
+        context.stack[context.fp + position] = context.stack.back();
+        context.pc += 2;
         break;
       }
       case Opcode::COPY: {
         EXECUTEPROGRAMCHECK(1);
-        auto position = this->bytecode[pc + 1];
+        auto position = this->bytecode[context.pc + 1];
         STACKCHECK(position);
-        auto targetPosition = fp + position;
-        if (stack[targetPosition].isCopyNeeded()) {
-          stack[targetPosition] = stack[targetPosition].makeCopy();
+        auto targetPosition = context.fp + position;
+        if (context.stack[targetPosition].isCopyNeeded()) {
+          context.stack[targetPosition] = context.stack[targetPosition].makeCopy();
         }
-        pc += 2;
+        context.pc += 2;
         break;
       }
       case Opcode::JMP: {
         EXECUTEPROGRAMCHECK(1);
-        pc = this->bytecode[pc + 1];
+        context.pc = this->bytecode[context.pc + 1];
         break;
       }
       case Opcode::JMPF: {
         EXECUTEPROGRAMCHECK(1);
         STACKCHECK(1);
-        auto condition = stack.back();
+        auto condition = context.stack.back();
         if (condition == false) {
-          pc = this->bytecode[pc + 1];
+          context.pc = this->bytecode[context.pc + 1];
         }
         else {
-          pc += 2;
+          context.pc += 2;
         }
         break;
       }
       case Opcode::JMPF_POP: {
         EXECUTEPROGRAMCHECK(1);
         STACKCHECK(1);
-        auto condition = stack.back();
-        stack.pop_back();
+        auto condition = context.stack.back();
+        context.stack.pop_back();
         if (condition == false) {
-          pc = this->bytecode[pc + 1];
+          context.pc = this->bytecode[context.pc + 1];
         }
         else {
-          pc += 2;
+          context.pc += 2;
         }
         break;
       }
       case Opcode::JMPT: {
         EXECUTEPROGRAMCHECK(1);
         STACKCHECK(1);
-        auto condition = stack.back();
+        auto condition = context.stack.back();
         if (condition == true) {
-          pc = this->bytecode[pc + 1];
+          context.pc = this->bytecode[context.pc + 1];
         }
         else {
-          pc += 2;
+          context.pc += 2;
         }
         break;
       }
       case Opcode::JMPT_POP: {
         EXECUTEPROGRAMCHECK(1);
         STACKCHECK(1);
-        auto condition = stack.back();
-        stack.pop_back();
+        auto condition = context.stack.back();
+        context.stack.pop_back();
         if (condition == true) {
-          pc = this->bytecode[pc + 1];
+          context.pc = this->bytecode[context.pc + 1];
         }
         else {
-          pc += 2;
+          context.pc += 2;
         }
         break;
       }
       case Opcode::NULLVAL: {
-        stack.push_back(GarbageCollected::make<ComputedExpression>());
-        ++pc;
+        context.stack.push_back(GarbageCollected::make<ComputedExpression>());
+        ++context.pc;
         break;
       }
       case Opcode::INTEGER: {
         EXECUTEPROGRAMCHECK(1);
-        stack.push_back(GarbageCollected::make<ComputedExpressionInteger>((integer_t)this->bytecode[pc + 1]));
-        pc += 2;
+        context.stack.push_back(GarbageCollected::make<ComputedExpressionInteger>((integer_t)this->bytecode[context.pc + 1]));
+        context.pc += 2;
         break;
       }
       case Opcode::FLOAT: {
         EXECUTEPROGRAMCHECK(1);
-        stack.push_back(GarbageCollected::make<ComputedExpressionFloat>(bit_cast<float_t>(this->bytecode[pc + 1])));
-        pc += 2;
+        context.stack.push_back(GarbageCollected::make<ComputedExpressionFloat>(bit_cast<float_t>(this->bytecode[context.pc + 1])));
+        context.pc += 2;
         break;
       }
       case Opcode::BOOLEAN: {
         EXECUTEPROGRAMCHECK(1);
-        stack.push_back(GarbageCollected::make<ComputedExpressionBoolean>(this->bytecode[pc + 1] ? true : false));
-        pc += 2;
+        context.stack.push_back(GarbageCollected::make<ComputedExpressionBoolean>(this->bytecode[context.pc + 1] ? true : false));
+        context.pc += 2;
         break;
       }
       case Opcode::STRING: {
         EXECUTEPROGRAMCHECK(2);
-        bool isTrusted = this->bytecode[pc + 1];
-        auto size = this->bytecode[pc + 2];
+        bool isTrusted = this->bytecode[context.pc + 1];
+        auto size = this->bytecode[context.pc + 2];
         auto bytes = ceil((double)size / sizeof(uinteger_t));
         EXECUTEPROGRAMCHECK(2 + bytes);
 
@@ -182,7 +177,7 @@ Context Program::execute() {
           for (size_t j = 0; j < sizeof(uinteger_t); ++j) {
             if ((integer_t)((i * sizeof(uinteger_t)) + j) < size) {
               temp += (unsigned char)
-                ((this->bytecode[pc + 3 + i] >> (8 * (sizeof(uinteger_t) - 1 - j))) & 0xFF);
+                ((this->bytecode[context.pc + 3 + i] >> (8 * (sizeof(uinteger_t) - 1 - j))) & 0xFF);
             }
           }
         }
@@ -196,351 +191,351 @@ Context Program::execute() {
           s.setUntrusted();
         }
 
-        stack.push_back(gcString);
-        pc += bytes + 3;
+        context.stack.push_back(gcString);
+        context.pc += bytes + 3;
         break;
       }
       case Opcode::ARRAY: {
         EXECUTEPROGRAMCHECK(1);
-        auto size = this->bytecode[pc + 1];
+        auto size = this->bytecode[context.pc + 1];
         STACKCHECK(size);
         vector<GarbageCollected> contents;
         contents.reserve(size);
         for (uinteger_t i = 0; i < size; ++i) {
-          contents.push_back(stack[stack.size() - size + i]);
+          contents.push_back(context.stack[context.stack.size() - size + i]);
         }
         for (uinteger_t i = 0; i < size; ++i) {
-          stack.pop_back();
+          context.stack.pop_back();
         }
-        stack.push_back(GarbageCollected::make<ComputedExpressionArray>(contents));
-        pc += 2;
+        context.stack.push_back(GarbageCollected::make<ComputedExpressionArray>(contents));
+        context.pc += 2;
         break;
       }
       case Opcode::MAP: {
         EXECUTEPROGRAMCHECK(1);
-        auto size = this->bytecode[pc + 1];
+        auto size = this->bytecode[context.pc + 1];
         STACKCHECK(size * 2);
         map<string, GarbageCollected> contents;
         for (uinteger_t i = 0; i < size; ++i) {
-          auto value = stack.back();
-          stack.pop_back();
-          auto key = stack.back();
-          stack.pop_back();
+          auto value = context.stack.back();
+          context.stack.pop_back();
+          auto key = context.stack.back();
+          context.stack.pop_back();
           if (typeid(*key) == typeid(ComputedExpressionString)) {
             contents.insert({static_cast<ComputedExpressionString &>(*key).dump(), value});
           }
         }
-        stack.push_back(GarbageCollected::make<ComputedExpressionMap>(contents));
-        pc += 2;
+        context.stack.push_back(GarbageCollected::make<ComputedExpressionMap>(contents));
+        context.pc += 2;
         break;
       }
       case Opcode::FUNCTION: {
         EXECUTEPROGRAMCHECK(2);
-        auto argc = this->bytecode[pc + 1];
-        auto targetPc = this->bytecode[pc + 2];
-        stack.push_back(GarbageCollected::make<ComputedExpressionCompiledFunction>((uint32_t)argc, targetPc));
-        pc += 3;
+        auto argc = this->bytecode[context.pc + 1];
+        auto targetPc = this->bytecode[context.pc + 2];
+        context.stack.push_back(GarbageCollected::make<ComputedExpressionCompiledFunction>((uint32_t)argc, targetPc));
+        context.pc += 3;
         break;
       }
       case Opcode::ASSIGNINDEX: {
         STACKCHECK(3);
-        auto index = stack.back();
-        stack.pop_back();
-        auto collection = stack.back();
-        stack.pop_back();
-        auto value = stack.back();
-        stack.pop_back();
-        stack.push_back(collection->__assign_index(index, value));
-        ++pc;
+        auto index = context.stack.back();
+        context.stack.pop_back();
+        auto collection = context.stack.back();
+        context.stack.pop_back();
+        auto value = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(collection->__assign_index(index, value));
+        ++context.pc;
         break;
       }
       case Opcode::ADD: {
         STACKCHECK(2);
-        auto rhs = stack.back();
-        stack.pop_back();
-        auto lhs = stack.back();
-        stack.pop_back();
-        stack.push_back(lhs + rhs);
-        ++pc;
+        auto rhs = context.stack.back();
+        context.stack.pop_back();
+        auto lhs = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(lhs + rhs);
+        ++context.pc;
         break;
       }
       case Opcode::SUBTRACT: {
         STACKCHECK(2);
-        auto rhs = stack.back();
-        stack.pop_back();
-        auto lhs = stack.back();
-        stack.pop_back();
-        stack.push_back(lhs - rhs);
-        ++pc;
+        auto rhs = context.stack.back();
+        context.stack.pop_back();
+        auto lhs = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(lhs - rhs);
+        ++context.pc;
         break;
       }
       case Opcode::MULTIPLY: {
         STACKCHECK(2);
-        auto rhs = stack.back();
-        stack.pop_back();
-        auto lhs = stack.back();
-        stack.pop_back();
-        stack.push_back(lhs * rhs);
-        ++pc;
+        auto rhs = context.stack.back();
+        context.stack.pop_back();
+        auto lhs = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(lhs * rhs);
+        ++context.pc;
         break;
       }
       case Opcode::DIVIDE: {
         STACKCHECK(2);
-        auto rhs = stack.back();
-        stack.pop_back();
-        auto lhs = stack.back();
-        stack.pop_back();
-        stack.push_back(lhs / rhs);
-        ++pc;
+        auto rhs = context.stack.back();
+        context.stack.pop_back();
+        auto lhs = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(lhs / rhs);
+        ++context.pc;
         break;
       }
       case Opcode::MODULO: {
         STACKCHECK(2);
-        auto rhs = stack.back();
-        stack.pop_back();
-        auto lhs = stack.back();
-        stack.pop_back();
-        stack.push_back(lhs % rhs);
-        ++pc;
+        auto rhs = context.stack.back();
+        context.stack.pop_back();
+        auto lhs = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(lhs % rhs);
+        ++context.pc;
         break;
       }
       case Opcode::NEGATIVE: {
         STACKCHECK(1);
-        auto operand = stack.back();
-        stack.pop_back();
-        stack.push_back(-operand);
-        ++pc;
+        auto operand = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(-operand);
+        ++context.pc;
         break;
       }
       case Opcode::NOT: {
         STACKCHECK(1);
-        auto operand = stack.back();
-        stack.pop_back();
-        stack.push_back(!operand);
-        ++pc;
+        auto operand = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(!operand);
+        ++context.pc;
         break;
       }
       case Opcode::LT: {
         STACKCHECK(2);
-        auto rhs = stack.back();
-        stack.pop_back();
-        auto lhs = stack.back();
-        stack.pop_back();
-        stack.push_back(lhs < rhs);
-        ++pc;
+        auto rhs = context.stack.back();
+        context.stack.pop_back();
+        auto lhs = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(lhs < rhs);
+        ++context.pc;
         break;
       }
       case Opcode::LTE: {
         STACKCHECK(2);
-        auto rhs = stack.back();
-        stack.pop_back();
-        auto lhs = stack.back();
-        stack.pop_back();
-        stack.push_back(lhs <= rhs);
-        ++pc;
+        auto rhs = context.stack.back();
+        context.stack.pop_back();
+        auto lhs = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(lhs <= rhs);
+        ++context.pc;
         break;
       }
       case Opcode::GT: {
         STACKCHECK(2);
-        auto rhs = stack.back();
-        stack.pop_back();
-        auto lhs = stack.back();
-        stack.pop_back();
-        stack.push_back(lhs > rhs);
-        ++pc;
+        auto rhs = context.stack.back();
+        context.stack.pop_back();
+        auto lhs = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(lhs > rhs);
+        ++context.pc;
         break;
       }
       case Opcode::GTE: {
         STACKCHECK(2);
-        auto rhs = stack.back();
-        stack.pop_back();
-        auto lhs = stack.back();
-        stack.pop_back();
-        stack.push_back(lhs >= rhs);
-        ++pc;
+        auto rhs = context.stack.back();
+        context.stack.pop_back();
+        auto lhs = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(lhs >= rhs);
+        ++context.pc;
         break;
       }
       case Opcode::EQ: {
         STACKCHECK(2);
-        auto rhs = stack.back();
-        stack.pop_back();
-        auto lhs = stack.back();
-        stack.pop_back();
-        stack.push_back(lhs == rhs);
-        ++pc;
+        auto rhs = context.stack.back();
+        context.stack.pop_back();
+        auto lhs = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(lhs == rhs);
+        ++context.pc;
         break;
       }
       case Opcode::NEQ: {
         STACKCHECK(2);
-        auto rhs = stack.back();
-        stack.pop_back();
-        auto lhs = stack.back();
-        stack.pop_back();
-        stack.push_back(lhs != rhs);
-        ++pc;
+        auto rhs = context.stack.back();
+        context.stack.pop_back();
+        auto lhs = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(lhs != rhs);
+        ++context.pc;
         break;
       }
       case Opcode::PERIOD: {
         STACKCHECK(2);
-        auto rhs = stack.back();
-        stack.pop_back();
-        auto lhs = stack.back();
-        stack.pop_back();
+        auto rhs = context.stack.back();
+        context.stack.pop_back();
+        auto lhs = context.stack.back();
+        context.stack.pop_back();
         auto tmp = lhs->__period(rhs, this->tang);
         if (typeid(*tmp) == typeid(ComputedExpressionNativeBoundFunction)) {
           static_cast<ComputedExpressionNativeBoundFunction &>(*tmp).target = lhs;
         }
-        stack.push_back(tmp);
-        ++pc;
+        context.stack.push_back(tmp);
+        ++context.pc;
         break;
       }
       case Opcode::INDEX: {
         STACKCHECK(2);
-        auto index = stack.back();
-        stack.pop_back();
-        auto container = stack.back();
-        stack.pop_back();
-        stack.push_back(container->__index(index));
-        ++pc;
+        auto index = context.stack.back();
+        context.stack.pop_back();
+        auto container = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(container->__index(index));
+        ++context.pc;
         break;
       }
       case Opcode::SLICE: {
         STACKCHECK(4);
-        auto skip = stack.back();
-        stack.pop_back();
-        auto end = stack.back();
-        stack.pop_back();
-        auto begin = stack.back();
-        stack.pop_back();
-        auto container = stack.back();
-        stack.pop_back();
-        stack.push_back(container->__slice(begin, end, skip));
-        ++pc;
+        auto skip = context.stack.back();
+        context.stack.pop_back();
+        auto end = context.stack.back();
+        context.stack.pop_back();
+        auto begin = context.stack.back();
+        context.stack.pop_back();
+        auto container = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(container->__slice(begin, end, skip));
+        ++context.pc;
         break;
       }
       case Opcode::GETITERATOR: {
         STACKCHECK(1);
-        auto collection = stack.back();
-        stack.pop_back();
-        stack.push_back(collection->__getIterator(collection));
-        ++pc;
+        auto collection = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(collection->__getIterator(collection));
+        ++context.pc;
         break;
       }
       case Opcode::ITERATORNEXT: {
         STACKCHECK(1);
-        auto iterator = stack.back();
-        stack.pop_back();
-        stack.push_back(iterator->__iteratorNext());
-        ++pc;
+        auto iterator = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(iterator->__iteratorNext());
+        ++context.pc;
         break;
       }
       case Opcode::ISITERATOREND: {
         STACKCHECK(1);
-        auto val = stack.back();
-        stack.pop_back();
-        stack.push_back(GarbageCollected::make<ComputedExpressionBoolean>((typeid(*val) == typeid(ComputedExpressionIteratorEnd)) || (typeid(*val) == typeid(ComputedExpressionError))));
-        ++pc;
+        auto val = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(GarbageCollected::make<ComputedExpressionBoolean>((typeid(*val) == typeid(ComputedExpressionIteratorEnd)) || (typeid(*val) == typeid(ComputedExpressionError))));
+        ++context.pc;
         break;
       }
       case Opcode::CASTINTEGER: {
         STACKCHECK(1);
-        auto operand = stack.back();
-        stack.pop_back();
-        stack.push_back(operand->__integer());
-        ++pc;
+        auto operand = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(operand->__integer());
+        ++context.pc;
         break;
       }
       case Opcode::CASTFLOAT: {
         STACKCHECK(1);
-        auto operand = stack.back();
-        stack.pop_back();
-        stack.push_back(operand->__float());
-        ++pc;
+        auto operand = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(operand->__float());
+        ++context.pc;
         break;
       }
       case Opcode::CASTBOOLEAN: {
         STACKCHECK(1);
-        auto operand = stack.back();
-        stack.pop_back();
-        stack.push_back(operand->__boolean());
-        ++pc;
+        auto operand = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(operand->__boolean());
+        ++context.pc;
         break;
       }
       case Opcode::CASTSTRING: {
         STACKCHECK(1);
-        auto operand = stack.back();
-        stack.pop_back();
-        stack.push_back(operand->__string());
-        ++pc;
+        auto operand = context.stack.back();
+        context.stack.pop_back();
+        context.stack.push_back(operand->__string());
+        ++context.pc;
         break;
       }
       case Opcode::CALLFUNC: {
         EXECUTEPROGRAMCHECK(1);
         STACKCHECK(1);
-        auto function = stack.back();
-        stack.pop_back();
-        auto argc = this->bytecode[pc + 1];
+        auto function = context.stack.back();
+        context.stack.pop_back();
+        auto argc = this->bytecode[context.pc + 1];
         STACKCHECK(argc);
 
-        // Compiled functions make use of the arguments on the stack.
-        // They will clean up the stack when they finish, via the RETURN
-        // opcode.
+        // Compiled functions make use of the arguments on the context.stack.
+        // They will clean up the context.stack when they finish, via the RETURN
+        // ocontext.pcode.
         if (typeid(*function) == typeid(ComputedExpressionCompiledFunction)) {
           auto & funcConv = static_cast<ComputedExpressionCompiledFunction &>(*function);
 
           // Verify that the correct number of arguments has been passed.
           if (argc != (int)funcConv.getArgc()) {
             // Incorrect number of arguments passed.
-            // Clear the arguments from the stack.
+            // Clear the arguments from the context.stack.
             for (uinteger_t i = 0; i < argc; ++i) {
-              stack.pop_back();
+              context.stack.pop_back();
             }
 
-            // Push an error onto the stack.
-            stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments supplied at function call."}));
+            // Push an error onto the context.stack.
+            context.stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments supplied at function call."}));
 
-            pc += 2;
+            context.pc += 2;
             break;
           }
 
           // Save the current execution environment so that it can be restored
           // when RETURNing from the function.
-          pcStack.push_back(pc + 2);
-          fpStack.push_back(fp);
+          context.pcStack.push_back(context.pc + 2);
+          context.fpStack.push_back(context.fp);
 
-          // Set the new pc and fp.
-          pc = funcConv.getPc();
-          fp = stack.size() - argc;
+          // Set the new context.pc and context.fp.
+          context.pc = funcConv.getPc();
+          context.fp = context.stack.size() - argc;
 
           break;
         }
 
-        // Compiled functions make use of the arguments on the stack.
-        // They will clean up the stack when they finish, via the RETURN
-        // opcode.
+        // Compiled functions make use of the arguments on the context.stack.
+        // They will clean up the context.stack when they finish, via the RETURN
+        // ocontext.pcode.
         if (typeid(*function) == typeid(ComputedExpressionNativeBoundFunction)) {
           auto & funcConv = static_cast<ComputedExpressionNativeBoundFunction &>(*function);
 
           // Populate argv to use when calling the function.
           vector<GarbageCollected> argv{};
           argv.reserve(argc);
-          auto iter = stack.end() - argc;
-          while (iter != stack.end()) {
+          auto iter = context.stack.end() - argc;
+          while (iter != context.stack.end()) {
             argv.push_back(*iter);
             ++iter;
           }
 
-          // Remove the arguments from the stack.
+          // Remove the arguments from the context.stack.
           for (int i = 0; i < argc; ++i) {
-            stack.pop_back();
+            context.stack.pop_back();
           }
 
           // Verify that the number of arguments supplied matches the number
           // of arguments expected.
           if ((size_t)argc != funcConv.getArgc()) {
-            stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments provided to object method."}));
+            context.stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments provided to object method."}));
 
-            pc += 2;
+            context.pc += 2;
             break;
           }
 
@@ -550,134 +545,134 @@ Context Program::execute() {
             // It is impossible for the target to not be the correct type under
             // normal circumstances.  This is just a safety check.
             if (type_index(typeid(**funcConv.target)) != funcConv.getTargetTypeIndex()) {
-              stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Type mismatch of object method to its target object."}));
+              context.stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Type mismatch of object method to its target object."}));
             }
             else {
-              stack.push_back(funcConv.getFunction()(*funcConv.target, argv));
+              context.stack.push_back(funcConv.getFunction()(*funcConv.target, argv));
             }
 
-            pc += 2;
+            context.pc += 2;
             break;
           }
 
           // There is no function target.  This is impossible under normal
           // circumstances, but we must account for it, just in case.
-          stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Method is not bound to any object."}));
-          pc += 2;
+          context.stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Method is not bound to any object."}));
+          context.pc += 2;
           break;
         }
 
-        // Compiled functions make use of the arguments on the stack.
-        // They will clean up the stack when they finish, via the RETURN
-        // opcode.
+        // Compiled functions make use of the arguments on the context.stack.
+        // They will clean up the context.stack when they finish, via the RETURN
+        // ocontext.pcode.
         if (typeid(*function) == typeid(ComputedExpressionNativeFunction)) {
           auto & funcConv = static_cast<ComputedExpressionNativeFunction &>(*function);
 
           // Populate argv to use when calling the function.
           vector<GarbageCollected> argv{};
           argv.reserve(argc);
-          auto iter = stack.end() - argc;
-          while (iter != stack.end()) {
+          auto iter = context.stack.end() - argc;
+          while (iter != context.stack.end()) {
             argv.push_back(*iter);
             ++iter;
           }
 
-          // Remove the arguments from the stack.
+          // Remove the arguments from the context.stack.
           for (int i = 0; i < argc; ++i) {
-            stack.pop_back();
+            context.stack.pop_back();
           }
 
           // Verify that the number of arguments supplied matches the number
           // of arguments expected.
           if ((size_t)argc != funcConv.getArgc()) {
-            stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments provided to object method."}));
+            context.stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments provided to object method."}));
 
-            pc += 2;
+            context.pc += 2;
             break;
           }
 
           // Call the Native function.
-          stack.push_back(funcConv.getFunction()(argv, context));
+          context.stack.push_back(funcConv.getFunction()(argv, context));
 
-          pc += 2;
+          context.pc += 2;
           break;
         }
 
         // Error: We don't know what to do.
-        // Clear the arguments from the stack.
+        // Clear the arguments from the context.stack.
         for (uinteger_t i = 0; i < argc; ++i) {
-          stack.pop_back();
+          context.stack.pop_back();
         }
 
-        stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Function call on unrecognized type."}));
-        pc = this->bytecode.size();
+        context.stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Function call on unrecognized type."}));
+        context.pc = this->bytecode.size();
         break;
       }
       case Opcode::RETURN: {
         EXECUTEPROGRAMCHECK(1);
-        size_t pop = this->bytecode[pc + 1];
+        size_t pop = this->bytecode[context.pc + 1];
         STACKCHECK(pop + 1);
 
-        // Save the top of the stack as the return value.
-        auto returnVal = stack.back();
+        // Save the top of the context.stack as the return value.
+        auto returnVal = context.stack.back();
 
-        // Remove the stack down to the fp.
+        // Remove the context.stack down to the context.fp.
         for (size_t i = 0; i <= pop; ++i) {
-          stack.pop_back();
+          context.stack.pop_back();
         }
 
-        // Put the return value back on the stack.
-        stack.push_back(returnVal);
+        // Put the return value back on the context.stack.
+        context.stack.push_back(returnVal);
 
-        // Restore the pc and fp.
-        pc = pcStack.back();
-        fp = fpStack.back();
-        pcStack.pop_back();
-        fpStack.pop_back();
+        // Restore the context.pc and context.fp.
+        context.pc = context.pcStack.back();
+        context.fp = context.fpStack.back();
+        context.pcStack.pop_back();
+        context.fpStack.pop_back();
         break;
       }
       case Opcode::PRINT: {
         STACKCHECK(1);
-        auto expression = stack.back();
-        stack.pop_back();
+        auto expression = context.stack.back();
+        context.stack.pop_back();
         // Try to convert the expression to a string.
         auto result = expression->__string();
         if (typeid(*result) == typeid(ComputedExpressionString)) {
           // We know that both our private member and `result` are a
           // ComputedExpressionString, so combine them here.
           static_cast<ComputedExpressionString &>(*context.computedExpressionOut) += static_cast<ComputedExpressionString &>(*result);
-          // Push an empty value onto the stack.
-          stack.push_back(GarbageCollected::make<ComputedExpression>());
+          // Push an empty value onto the context.stack.
+          context.stack.push_back(GarbageCollected::make<ComputedExpression>());
         }
         else if (typeid(*result) != typeid(ComputedExpressionError)) {
           // __string returned neither a string nor an error, so report that.
-          stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Argument not recognized as a string or error type."}));
+          context.stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Argument not recognized as a string or error type."}));
         }
         else {
-          // __string returned an error, pass that back to the stack.
-          stack.push_back(result);
+          // __string returned an error, pass that back to the context.stack.
+          context.stack.push_back(result);
         }
-        ++pc;
+        ++context.pc;
         break;
       }
       default: {
         // We should never reach this.
-        stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Unrecognized Opcode."}));
-        pc = stack.size();
+        context.stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Unrecognized Opcode."}));
+        context.pc = context.stack.size();
         break;
       }
     }
   }
 
-  // Verify that there is at least one value on the stack.  If not, set a
+  // Verify that there is at least one value on the context.stack.  If not, set a
   // runtime error.
-  if (!stack.size()) {
-    stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Stack is empty."}));
+  if (!context.stack.size()) {
+    context.stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Stack is empty."}));
   }
 
-  // Empty the stack, but save the top of the stack.
-  context.result = stack.back();
-  stack.clear();
+  // Empty the context.stack, but save the top of the context.stack.
+  context.result = context.stack.back();
+  context.stack.clear();
 
   // Render the output to `out`.
   context.out = context.computedExpressionOut->dump();
