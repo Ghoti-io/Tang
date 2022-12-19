@@ -1,5 +1,10 @@
 var NAVTREEINDEX5 =
 {
+"testSingletonObjectPool_8cpp.html#a6f7afafb5311169566cbca360bf27846":[2,0,3,2,6],
+"testSingletonObjectPool_8cpp.html#a8fe79cd4604a426186ab7a81ad8f39dd":[2,0,3,2,1],
+"testSingletonObjectPool_8cpp.html#acf28e5b52f59c0079487b73ab54dfe21":[2,0,3,2,5],
+"testSingletonObjectPool_8cpp.html#adf030f10a2b32ec1d58d1b7df78bff6c":[2,0,3,2,2],
+"testSingletonObjectPool_8cpp.html#ae1dabf3c6cd181eb2fd11347cc73eaf5":[2,0,3,2,3],
 "testSingletonObjectPool_8cpp.html#af9a3322a0adb130fa1319a6200ce911c":[2,0,3,2,7],
 "testUnicodeString_8cpp.html":[2,0,3,3],
 "testUnicodeString_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627":[2,0,3,3,0],

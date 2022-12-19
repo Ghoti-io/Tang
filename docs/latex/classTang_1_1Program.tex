@@ -11,7 +11,8 @@ Represents a compiled script or template that may be executed.
 
 
 
-Collaboration diagram for Tang\+::Program\+:\nopagebreak
+Collaboration diagram for Tang\+::Program\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -38,15 +39,12 @@ std\+::string \mbox{\hyperlink{classTang_1_1Program_aee5e79c40fac68e875c0d043f8f
 \begin{DoxyCompactList}\small\item\em Get the Opcodes of the compiled program, formatted like Assembly. \end{DoxyCompactList}\item 
 std\+::optional$<$ const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} $>$ \mbox{\hyperlink{classTang_1_1Program_a84b2e5e25f57eea224d1c04f1f3741eb}{get\+Result}} () const
 \begin{DoxyCompactList}\small\item\em Get the result of the \mbox{\hyperlink{classTang_1_1Program}{Program}} execution, if it exists. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTang_1_1Program_aeb450cc228b4b9c89684e3c4c03d776c}\label{classTang_1_1Program_aeb450cc228b4b9c89684e3c4c03d776c}} 
-void \mbox{\hyperlink{classTang_1_1Program_aeb450cc228b4b9c89684e3c4c03d776c}{clear\+Output}} ()
-\begin{DoxyCompactList}\small\item\em Clear the output of the program, so that it can be used again. \end{DoxyCompactList}\item 
 size\+\_\+t \mbox{\hyperlink{classTang_1_1Program_a1067d000db48378fa37ff569ffdf7329}{add\+Bytecode}} (\mbox{\hyperlink{macros_8hpp_ac3ea9ca53071c2710a6034d60f61d76e}{Tang\+::uinteger\+\_\+t}})
 \begin{DoxyCompactList}\small\item\em Add a Tang\+::uinteger\+\_\+t to the Bytecode. \end{DoxyCompactList}\item 
 const \mbox{\hyperlink{program_8hpp_a70114beec5ecf129f5367a4107442ca4}{Bytecode}} \& \mbox{\hyperlink{classTang_1_1Program_a742a5415a123a8a0cffa57476f74d55f}{get\+Bytecode}} ()
 \begin{DoxyCompactList}\small\item\em Get the Bytecode vector. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classTang_1_1Program}{Program}} \& \mbox{\hyperlink{classTang_1_1Program_a68dc832846a651693dea5770d047d4a6}{execute}} ()
-\begin{DoxyCompactList}\small\item\em Execute the program\textquotesingle{}s Bytecode, and return the current \mbox{\hyperlink{classTang_1_1Program}{Program}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTang_1_1Context}{Context}} \mbox{\hyperlink{classTang_1_1Program_a3449ae0f592e7eaa2cf05244839daa83}{execute}} ()
+\begin{DoxyCompactList}\small\item\em Execute the program\textquotesingle{}s Bytecode, and return the execution \mbox{\hyperlink{classTang_1_1Context}{Context}}. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classTang_1_1Program_a5da413efe8435cebd927a8be58dcb9be}{set\+Jump\+Target}} (size\+\_\+t opcode\+Address, \mbox{\hyperlink{macros_8hpp_ac3ea9ca53071c2710a6034d60f61d76e}{Tang\+::uinteger\+\_\+t}} jump\+Target)
 \begin{DoxyCompactList}\small\item\em Set the target address of a Jump opcode. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classTang_1_1Program_aabcfee07409be5bc6bf1312f26b56a85}{set\+Function\+Stack\+Declaration}} (size\+\_\+t opcode\+Address, \mbox{\hyperlink{macros_8hpp_ac3ea9ca53071c2710a6034d60f61d76e}{uinteger\+\_\+t}} argc, \mbox{\hyperlink{macros_8hpp_ac3ea9ca53071c2710a6034d60f61d76e}{uinteger\+\_\+t}} target\+PC)
@@ -85,9 +83,6 @@ void \mbox{\hyperlink{classTang_1_1Program_a0a824ad2a83896854f4e528f6c3cc630}{po
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classTang_1_1Program_a81bee7c0545c053eee44d4381295e193}\label{classTang_1_1Program_a81bee7c0545c053eee44d4381295e193}} 
-std\+::string \mbox{\hyperlink{classTang_1_1Program_a81bee7c0545c053eee44d4381295e193}{out}}
-\begin{DoxyCompactList}\small\item\em The output of the program, resulting from the program execution. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTang_1_1Program_a7bf410d953206df63379a9c395f09bb2}\label{classTang_1_1Program_a7bf410d953206df63379a9c395f09bb2}} 
 std\+::vector$<$ std\+::set$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classTang_1_1Program_a7bf410d953206df63379a9c395f09bb2}{functions\+Collected}}
 \begin{DoxyCompactList}\small\item\em Names of the functions that are declared in a previous or the current scope. \end{DoxyCompactList}\item 
@@ -138,12 +133,9 @@ shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{
 \mbox{\Hypertarget{classTang_1_1Program_a99f161953dfcc604f639fab842354262}\label{classTang_1_1Program_a99f161953dfcc604f639fab842354262}} 
 \mbox{\hyperlink{program_8hpp_a70114beec5ecf129f5367a4107442ca4}{Bytecode}} \mbox{\hyperlink{classTang_1_1Program_a99f161953dfcc604f639fab842354262}{bytecode}}
 \begin{DoxyCompactList}\small\item\em The Bytecode of the compiled program. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTang_1_1Program_aaea94478e88f196c18c76445858615dd}\label{classTang_1_1Program_aaea94478e88f196c18c76445858615dd}} 
-\mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1Program_aaea94478e88f196c18c76445858615dd}{computed\+Expression\+Out}}
-\begin{DoxyCompactList}\small\item\em The output of the program, as a \mbox{\hyperlink{classTang_1_1ComputedExpressionString}{Computed\+Expression\+String}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTang_1_1Program_a60f4be3d576e81e6200167f2d910f259}\label{classTang_1_1Program_a60f4be3d576e81e6200167f2d910f259}} 
 std\+::optional$<$ \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} $>$ \mbox{\hyperlink{classTang_1_1Program_a60f4be3d576e81e6200167f2d910f259}{result}}
-\begin{DoxyCompactList}\small\item\em The result of the \mbox{\hyperlink{classTang_1_1Program}{Program}} execution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The result of the \mbox{\hyperlink{classTang_1_1Program}{Program}} compilation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -305,24 +297,25 @@ Get the Opcodes of the compiled program, formatted like Assembly.
 \begin{DoxyReturn}{Returns}
 A string containing the Opcode representation. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classTang_1_1Program_a68dc832846a651693dea5770d047d4a6}\label{classTang_1_1Program_a68dc832846a651693dea5770d047d4a6}} 
+\mbox{\Hypertarget{classTang_1_1Program_a3449ae0f592e7eaa2cf05244839daa83}\label{classTang_1_1Program_a3449ae0f592e7eaa2cf05244839daa83}} 
 \index{Tang::Program@{Tang::Program}!execute@{execute}}
 \index{execute@{execute}!Tang::Program@{Tang::Program}}
 \doxysubsubsection{\texorpdfstring{execute()}{execute()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1Program}{Program}} \& Program\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1Context}{Context}} Program\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Execute the program\textquotesingle{}s Bytecode, and return the current \mbox{\hyperlink{classTang_1_1Program}{Program}} object. 
+Execute the program\textquotesingle{}s Bytecode, and return the execution \mbox{\hyperlink{classTang_1_1Context}{Context}}. 
 
 \begin{DoxyReturn}{Returns}
-The current \mbox{\hyperlink{classTang_1_1Program}{Program}} object. 
+The execution \mbox{\hyperlink{classTang_1_1Context}{Context}}. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classTang_1_1Program_a68dc832846a651693dea5770d047d4a6_cgraph}
+\includegraphics[width=350pt]{classTang_1_1Program_a3449ae0f592e7eaa2cf05244839daa83_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classTang_1_1Program_a2dedf08e5d7f9f92179c4af2eea870ee}\label{classTang_1_1Program_a2dedf08e5d7f9f92179c4af2eea870ee}} 
