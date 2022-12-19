@@ -15,7 +15,7 @@
 using namespace std;
 using namespace Tang;
 
-Program::Program(string code, Program::CodeType codeType, std::shared_ptr<Tang::TangBase> tang) : tang{tang}, code{code}, codeType{codeType}, ast{nullptr}, computedExpressionOut{GarbageCollected::make<ComputedExpressionString>("")} {
+Program::Program(string code, Program::CodeType codeType, std::shared_ptr<Tang::TangBase> tang) : tang{tang}, code{code}, codeType{codeType}, ast{nullptr} {
   this->parse();
   if (this->ast) {
     this->compile();
@@ -179,11 +179,6 @@ optional<const shared_ptr<AstNode>> Program::getAst() const {
 
 optional<const GarbageCollected> Program::getResult() const {
   return this->result;
-}
-
-void Program::clearOutput() {
-  this->out = "";
-  this->computedExpressionOut = GarbageCollected::make<ComputedExpressionString>("");
 }
 
 size_t Program::addBytecode(uinteger_t op) {

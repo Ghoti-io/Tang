@@ -20,6 +20,7 @@ namespace Tang {
 #include "tangBase.hpp"
 #include "computedExpression.hpp"
 #include "garbageCollected.hpp"
+#include "context.hpp"
 
 namespace Tang {
   class AstNode;
@@ -83,16 +84,6 @@ namespace Tang {
     std::optional<const GarbageCollected> getResult() const;
 
     /**
-     * The output of the program, resulting from the program execution.
-     */
-    std::string out;
-
-    /**
-     * Clear the output of the program, so that it can be used again.
-     */
-    void clearOutput();
-
-    /**
      * Add a Tang::uinteger_t to the Bytecode.
      *
      * @param op The value to add to the Bytecode.
@@ -108,11 +99,11 @@ namespace Tang {
     const Bytecode & getBytecode();
 
     /**
-     * Execute the program's Bytecode, and return the current Program object.
+     * Execute the program's Bytecode, and return the execution Context.
      *
-     * @return The current Program object.
+     * @return The execution Context.
      */
-    Program & execute();
+    Context execute();
 
     /**
      * Set the target address of a Jump opcode.
@@ -321,12 +312,7 @@ namespace Tang {
     Bytecode bytecode;
 
     /**
-     * The output of the program, as a ComputedExpressionString.
-     */
-    GarbageCollected computedExpressionOut;
-
-    /**
-     * The result of the Program execution.
+     * The result of the Program compilation.
      */
     std::optional<GarbageCollected> result;
   };

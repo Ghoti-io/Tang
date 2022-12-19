@@ -47,7 +47,7 @@ using namespace Tang;
     break; \
   }
 
-Program& Program::execute() {
+Context Program::execute() {
   size_t pc{0};
   size_t fp{0};
   vector<GarbageCollected> stack;
@@ -645,7 +645,7 @@ Program& Program::execute() {
         if (typeid(*result) == typeid(ComputedExpressionString)) {
           // We know that both our private member and `result` are a
           // ComputedExpressionString, so combine them here.
-          static_cast<ComputedExpressionString &>(*this->computedExpressionOut) += static_cast<ComputedExpressionString &>(*result);
+          static_cast<ComputedExpressionString &>(*context.computedExpressionOut) += static_cast<ComputedExpressionString &>(*result);
           // Push an empty value onto the stack.
           stack.push_back(GarbageCollected::make<ComputedExpression>());
         }
@@ -676,12 +676,12 @@ Program& Program::execute() {
   }
 
   // Empty the stack, but save the top of the stack.
-  this->result = stack.back();
+  context.result = stack.back();
   stack.clear();
 
   // Render the output to `out`.
-  this->out = this->computedExpressionOut->dump();
+  context.out = context.computedExpressionOut->dump();
 
-  return *this;
+  return context;
 }
 
