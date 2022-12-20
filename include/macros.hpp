@@ -7,6 +7,7 @@
 #define TANG_MACROS_HPP
 
 #include <vector>
+#include <unordered_map>
 #include <map>
 #include <string>
 #include <any>
@@ -51,7 +52,7 @@ namespace Tang {
    * Used to hold arbitrary data which should be made available to a program
    * during the program execution.
    */
-  using ContextData = std::map<std::string, std::any>;
+  using ContextData = std::unordered_map<std::string, std::any>;
 }
 #endif // TANG_MACROS_HPP
 

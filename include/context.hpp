@@ -32,7 +32,7 @@ namespace Tang {
     /**
      * Holds arbitrary data for use in the program execution.
      */
-    std::map<std::string, std::any> data;
+    ContextData data;
 
     /**
      * The output result from the program execution.
