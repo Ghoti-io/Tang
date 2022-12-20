@@ -32,20 +32,11 @@
 //
 // TODO What's next:
 // * TangString
-//   * html encode
 //   * percent encode
 //   * percent decode
-// * print!()
-// * print%()
-// * print<>()
-// * !"" - raw string
-// * default print() on ComputedExpressionString
-//   * What to do when combining strings?
 // * Better location tracking for bytecode and error reporting.
 // * "use" syntax to import libraries
-//   * native functions
-//     * Tang version
-//   * Execution Context
+//   * Tang version
 // * template scanning
 //   * short tags
 // * Library Extension
