@@ -157,6 +157,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3449ae0f592e7eaa2cf05244839daa83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTang_1_1Context.html">Context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a3449ae0f592e7eaa2cf05244839daa83">execute</a> ()</td></tr>
 <tr class="memdesc:a3449ae0f592e7eaa2cf05244839daa83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the program's Bytecode, and return the execution <a class="el" href="classTang_1_1Context.html" title="Holds all environment variables specific to the execution of a program.">Context</a>.  <a href="classTang_1_1Program.html#a3449ae0f592e7eaa2cf05244839daa83">More...</a><br /></td></tr>
 <tr class="separator:a3449ae0f592e7eaa2cf05244839daa83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56156253a209b04636fc6120ef11b7d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTang_1_1Context.html">Context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a56156253a209b04636fc6120ef11b7d2">execute</a> (<a class="el" href="macros_8hpp.html#a7f5af272721648f0b4a33770e915ecfc">ContextData</a> &amp;&amp;data)</td></tr>
+<tr class="memdesc:a56156253a209b04636fc6120ef11b7d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the program's Bytecode, and return the execution <a class="el" href="classTang_1_1Context.html" title="Holds all environment variables specific to the execution of a program.">Context</a>.  <a href="classTang_1_1Program.html#a56156253a209b04636fc6120ef11b7d2">More...</a><br /></td></tr>
+<tr class="separator:a56156253a209b04636fc6120ef11b7d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5da413efe8435cebd927a8be58dcb9be"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a5da413efe8435cebd927a8be58dcb9be">setJumpTarget</a> (size_t opcodeAddress, <a class="el" href="macros_8hpp.html#ac3ea9ca53071c2710a6034d60f61d76e">Tang::uinteger_t</a> jumpTarget)</td></tr>
 <tr class="memdesc:a5da413efe8435cebd927a8be58dcb9be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the target address of a Jump opcode.  <a href="classTang_1_1Program.html#a5da413efe8435cebd927a8be58dcb9be">More...</a><br /></td></tr>
 <tr class="separator:a5da413efe8435cebd927a8be58dcb9be"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -552,7 +555,7 @@ std::optional&lt; <a class="el" href="classTang_1_1GarbageCollected.html">Garbag
 </div>
 </div>
 <a id="a3449ae0f592e7eaa2cf05244839daa83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3449ae0f592e7eaa2cf05244839daa83">&#9670;&nbsp;</a></span>execute()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3449ae0f592e7eaa2cf05244839daa83">&#9670;&nbsp;</a></span>execute() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -567,12 +570,40 @@ std::optional&lt; <a class="el" href="classTang_1_1GarbageCollected.html">Garbag
 </div><div class="memdoc">
 
 <p>Execute the program's Bytecode, and return the execution <a class="el" href="classTang_1_1Context.html" title="Holds all environment variables specific to the execution of a program.">Context</a>. </p>
+<p>A default ContextData will be generated for the execution.</p>
+<dl class="section return"><dt>Returns</dt><dd>The execution <a class="el" href="classTang_1_1Context.html" title="Holds all environment variables specific to the execution of a program.">Context</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a56156253a209b04636fc6120ef11b7d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56156253a209b04636fc6120ef11b7d2">&#9670;&nbsp;</a></span>execute() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTang_1_1Context.html">Context</a> Program::execute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macros_8hpp.html#a7f5af272721648f0b4a33770e915ecfc">ContextData</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execute the program's Bytecode, and return the execution <a class="el" href="classTang_1_1Context.html" title="Holds all environment variables specific to the execution of a program.">Context</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>The default data to be made available to the execution <a class="el" href="classTang_1_1Context.html" title="Holds all environment variables specific to the execution of a program.">Context</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>The execution <a class="el" href="classTang_1_1Context.html" title="Holds all environment variables specific to the execution of a program.">Context</a>. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classTang_1_1Program_a3449ae0f592e7eaa2cf05244839daa83_cgraph.png" border="0" usemap="#aclassTang_1_1Program_a3449ae0f592e7eaa2cf05244839daa83_cgraph" alt=""/></div>
-<map name="aclassTang_1_1Program_a3449ae0f592e7eaa2cf05244839daa83_cgraph" id="aclassTang_1_1Program_a3449ae0f592e7eaa2cf05244839daa83_cgraph">
+<div class="center"><img src="classTang_1_1Program_a56156253a209b04636fc6120ef11b7d2_cgraph.png" border="0" usemap="#aclassTang_1_1Program_a56156253a209b04636fc6120ef11b7d2_cgraph" alt=""/></div>
+<map name="aclassTang_1_1Program_a56156253a209b04636fc6120ef11b7d2_cgraph" id="aclassTang_1_1Program_a56156253a209b04636fc6120ef11b7d2_cgraph">
 <area shape="rect" title="Execute the program&#39;s Bytecode, and return the execution Context." alt="" coords="5,46,180,73"/>
 <area shape="rect" href="classTang_1_1ComputedExpressionString.html#a97bdb82b5f4cf5b99a2819b93d7ac047" title="Output the contents of the ComputedExpression as a string." alt="" coords="228,5,427,47"/>
 <area shape="rect" href="classTang_1_1ComputedExpressionString.html#a7c787c71fde3a17e69ad290e51056eeb" title="Set all of the string parts to untrusted." alt="" coords="228,71,427,112"/>

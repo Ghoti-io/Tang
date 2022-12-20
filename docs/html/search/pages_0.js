@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tang_3a_20a_20template_20language_926',['Tang: A Template Language',['../index.html',1,'']]]
+  ['tang_3a_20a_20template_20language_920',['Tang: A Template Language',['../index.html',1,'']]]
 ];

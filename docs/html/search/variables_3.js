@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['data_783',['data',['../classTang_1_1Context.html#a220e1f4f217349c7aff368a79fc6420f',1,'Tang::Context']]]
+  ['data_780',['data',['../classTang_1_1Context.html#a0a3d4e4ccb4b095dc489c025c465eb5b',1,'Tang::Context']]]
 ];

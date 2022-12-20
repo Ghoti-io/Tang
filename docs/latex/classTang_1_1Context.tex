@@ -22,14 +22,14 @@ Collaboration diagram for Tang\+::Context\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classTang_1_1Context_a652cdcd2eedc8dbd9110bd284c5d5cf0}\label{classTang_1_1Context_a652cdcd2eedc8dbd9110bd284c5d5cf0}} 
-\mbox{\hyperlink{classTang_1_1Context_a652cdcd2eedc8dbd9110bd284c5d5cf0}{Context}} ()
+\mbox{\Hypertarget{classTang_1_1Context_a4f0be8fd63080911520ec6533b2bab60}\label{classTang_1_1Context_a4f0be8fd63080911520ec6533b2bab60}} 
+\mbox{\hyperlink{classTang_1_1Context_a4f0be8fd63080911520ec6533b2bab60}{Context}} (\mbox{\hyperlink{macros_8hpp_a7f5af272721648f0b4a33770e915ecfc}{Context\+Data}} \&\&\mbox{\hyperlink{classTang_1_1Context_a0a3d4e4ccb4b095dc489c025c465eb5b}{data}})
 \begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classTang_1_1Context_a220e1f4f217349c7aff368a79fc6420f}\label{classTang_1_1Context_a220e1f4f217349c7aff368a79fc6420f}} 
-std\+::map$<$ std\+::string, std\+::any $>$ \mbox{\hyperlink{classTang_1_1Context_a220e1f4f217349c7aff368a79fc6420f}{data}}
+\mbox{\Hypertarget{classTang_1_1Context_a0a3d4e4ccb4b095dc489c025c465eb5b}\label{classTang_1_1Context_a0a3d4e4ccb4b095dc489c025c465eb5b}} 
+\mbox{\hyperlink{macros_8hpp_a7f5af272721648f0b4a33770e915ecfc}{Context\+Data}} \mbox{\hyperlink{classTang_1_1Context_a0a3d4e4ccb4b095dc489c025c465eb5b}{data}}
 \begin{DoxyCompactList}\small\item\em Holds arbitrary data for use in the program execution. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTang_1_1Context_a291399f3d7fb9fa5714b31e40162a618}\label{classTang_1_1Context_a291399f3d7fb9fa5714b31e40162a618}} 
 std\+::string \mbox{\hyperlink{classTang_1_1Context_a291399f3d7fb9fa5714b31e40162a618}{out}}
@@ -39,22 +39,7 @@ std\+::string \mbox{\hyperlink{classTang_1_1Context_a291399f3d7fb9fa5714b31e4016
 \begin{DoxyCompactList}\small\item\em The output result from the program execution, as a \mbox{\hyperlink{classTang_1_1ComputedExpressionString}{Computed\+Expression\+String}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTang_1_1Context_a6f9649bbe7000377a510b6d254ad9eb4}\label{classTang_1_1Context_a6f9649bbe7000377a510b6d254ad9eb4}} 
 std\+::optional$<$ \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} $>$ \mbox{\hyperlink{classTang_1_1Context_a6f9649bbe7000377a510b6d254ad9eb4}{result}}
-\begin{DoxyCompactList}\small\item\em The result of the \mbox{\hyperlink{classTang_1_1Program}{Program}} execution. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTang_1_1Context_abd0c39825c4211d63d4b2149ad1f272e}\label{classTang_1_1Context_abd0c39825c4211d63d4b2149ad1f272e}} 
-size\+\_\+t \mbox{\hyperlink{classTang_1_1Context_abd0c39825c4211d63d4b2149ad1f272e}{pc}} \{0\}
-\begin{DoxyCompactList}\small\item\em The program counter of the current instruction. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTang_1_1Context_a2ba00c844e2638ec8d7a73b2d0c6cea0}\label{classTang_1_1Context_a2ba00c844e2638ec8d7a73b2d0c6cea0}} 
-size\+\_\+t \mbox{\hyperlink{classTang_1_1Context_a2ba00c844e2638ec8d7a73b2d0c6cea0}{fp}} \{0\}
-\begin{DoxyCompactList}\small\item\em The frame pointer (an index into the stack frame). \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTang_1_1Context_a23051e810942040420fc3d9bbdb45c0e}\label{classTang_1_1Context_a23051e810942040420fc3d9bbdb45c0e}} 
-vector$<$ \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} $>$ \mbox{\hyperlink{classTang_1_1Context_a23051e810942040420fc3d9bbdb45c0e}{stack}}
-\begin{DoxyCompactList}\small\item\em The execution stack. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTang_1_1Context_aea2b87e3d105314424fc42af1d0e1430}\label{classTang_1_1Context_aea2b87e3d105314424fc42af1d0e1430}} 
-vector$<$ size\+\_\+t $>$ \mbox{\hyperlink{classTang_1_1Context_aea2b87e3d105314424fc42af1d0e1430}{pc\+Stack}} \{\}
-\begin{DoxyCompactList}\small\item\em The stack of program counters used to recover the previous pc when returning from a function. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTang_1_1Context_a44c4420da822e0aa3557367a5185d5a8}\label{classTang_1_1Context_a44c4420da822e0aa3557367a5185d5a8}} 
-vector$<$ size\+\_\+t $>$ \mbox{\hyperlink{classTang_1_1Context_a44c4420da822e0aa3557367a5185d5a8}{fp\+Stack}} \{\}
-\begin{DoxyCompactList}\small\item\em The stack of frame pointers, used to recover the previous fp when returning from a function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The result of the \mbox{\hyperlink{classTang_1_1Program}{Program}} execution. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

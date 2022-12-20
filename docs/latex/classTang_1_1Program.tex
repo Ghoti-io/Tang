@@ -11,8 +11,7 @@ Represents a compiled script or template that may be executed.
 
 
 
-Collaboration diagram for Tang\+::Program\+:
-\nopagebreak
+Collaboration diagram for Tang\+::Program\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -44,6 +43,8 @@ size\+\_\+t \mbox{\hyperlink{classTang_1_1Program_a1067d000db48378fa37ff569ffdf7
 const \mbox{\hyperlink{program_8hpp_a70114beec5ecf129f5367a4107442ca4}{Bytecode}} \& \mbox{\hyperlink{classTang_1_1Program_a742a5415a123a8a0cffa57476f74d55f}{get\+Bytecode}} ()
 \begin{DoxyCompactList}\small\item\em Get the Bytecode vector. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTang_1_1Context}{Context}} \mbox{\hyperlink{classTang_1_1Program_a3449ae0f592e7eaa2cf05244839daa83}{execute}} ()
+\begin{DoxyCompactList}\small\item\em Execute the program\textquotesingle{}s Bytecode, and return the execution \mbox{\hyperlink{classTang_1_1Context}{Context}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTang_1_1Context}{Context}} \mbox{\hyperlink{classTang_1_1Program_a56156253a209b04636fc6120ef11b7d2}{execute}} (\mbox{\hyperlink{macros_8hpp_a7f5af272721648f0b4a33770e915ecfc}{Context\+Data}} \&\&data)
 \begin{DoxyCompactList}\small\item\em Execute the program\textquotesingle{}s Bytecode, and return the execution \mbox{\hyperlink{classTang_1_1Context}{Context}}. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classTang_1_1Program_a5da413efe8435cebd927a8be58dcb9be}{set\+Jump\+Target}} (size\+\_\+t opcode\+Address, \mbox{\hyperlink{macros_8hpp_ac3ea9ca53071c2710a6034d60f61d76e}{Tang\+::uinteger\+\_\+t}} jump\+Target)
 \begin{DoxyCompactList}\small\item\em Set the target address of a Jump opcode. \end{DoxyCompactList}\item 
@@ -300,13 +301,33 @@ A string containing the Opcode representation.
 \mbox{\Hypertarget{classTang_1_1Program_a3449ae0f592e7eaa2cf05244839daa83}\label{classTang_1_1Program_a3449ae0f592e7eaa2cf05244839daa83}} 
 \index{Tang::Program@{Tang::Program}!execute@{execute}}
 \index{execute@{execute}!Tang::Program@{Tang::Program}}
-\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1Context}{Context}} Program\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Execute the program\textquotesingle{}s Bytecode, and return the execution \mbox{\hyperlink{classTang_1_1Context}{Context}}. 
 
+A default Context\+Data will be generated for the execution.
+
+\begin{DoxyReturn}{Returns}
+The execution \mbox{\hyperlink{classTang_1_1Context}{Context}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1Program_a56156253a209b04636fc6120ef11b7d2}\label{classTang_1_1Program_a56156253a209b04636fc6120ef11b7d2}} 
+\index{Tang::Program@{Tang::Program}!execute@{execute}}
+\index{execute@{execute}!Tang::Program@{Tang::Program}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1Context}{Context}} Program\+::execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{macros_8hpp_a7f5af272721648f0b4a33770e915ecfc}{Context\+Data}} \&\&}]{data }\end{DoxyParamCaption})}
+
+
+
+Execute the program\textquotesingle{}s Bytecode, and return the execution \mbox{\hyperlink{classTang_1_1Context}{Context}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The default data to be made available to the execution \mbox{\hyperlink{classTang_1_1Context}{Context}}. \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 The execution \mbox{\hyperlink{classTang_1_1Context}{Context}}. 
 \end{DoxyReturn}
@@ -315,7 +336,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classTang_1_1Program_a3449ae0f592e7eaa2cf05244839daa83_cgraph}
+\includegraphics[width=350pt]{classTang_1_1Program_a56156253a209b04636fc6120ef11b7d2_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classTang_1_1Program_a2dedf08e5d7f9f92179c4af2eea870ee}\label{classTang_1_1Program_a2dedf08e5d7f9f92179c4af2eea870ee}} 

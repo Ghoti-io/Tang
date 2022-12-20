@@ -35,7 +35,7 @@ Include dependency graph for program-\/execute.cpp\+:
 \#define \mbox{\hyperlink{program-execute_8cpp_a9ded9c6308c1d34a5872db3199e9c973}{EXECUTEPROGRAMCHECK}}(x)
 \begin{DoxyCompactList}\small\item\em Verify the size of the Bytecode vector so that it may be safely accessed. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{program-execute_8cpp_a80c4bdcb0e9c9c0eebdb1488ad68aa38}{STACKCHECK}}(x)
-\begin{DoxyCompactList}\small\item\em Verify the size of the context.\+stack vector so that it may be safely accessed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Verify the size of the stack vector so that it may be safely accessed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -52,9 +52,9 @@ Define the \mbox{\hyperlink{classTang_1_1Program_a3449ae0f592e7eaa2cf05244839daa
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{  \textcolor{keywordflow}{if} (this-\/>bytecode.size() < (context.pc + (x))) \{ \(\backslash\)}
-\DoxyCodeLine{    context.stack.push\_back(GarbageCollected::make<ComputedExpressionError>(\mbox{\hyperlink{classTang_1_1Error}{Error}}\{\textcolor{stringliteral}{"{}Opcode instruction truncated."{}}\})); \(\backslash\)}
-\DoxyCodeLine{    context.pc = this-\/>bytecode.size(); \(\backslash\)}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (this-\/>bytecode.size() < (pc + (x))) \{ \(\backslash\)}
+\DoxyCodeLine{    stack.push\_back(GarbageCollected::make<ComputedExpressionError>(\mbox{\hyperlink{classTang_1_1Error}{Error}}\{\textcolor{stringliteral}{"{}Opcode instruction truncated."{}}\})); \(\backslash\)}
+\DoxyCodeLine{    pc = this-\/>bytecode.size(); \(\backslash\)}
 \DoxyCodeLine{    break; \(\backslash\)}
 \DoxyCodeLine{  \}}
 
@@ -76,19 +76,19 @@ Verify the size of the Bytecode vector so that it may be safely accessed.
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{  \textcolor{keywordflow}{if} (context.stack.size() < (context.fp + (x))) \{ \(\backslash\)}
-\DoxyCodeLine{    context.stack.push\_back(GarbageCollected::make<ComputedExpressionError>(\mbox{\hyperlink{classTang_1_1Error}{Error}}\{\textcolor{stringliteral}{"{}Insufficient context.stack depth."{}}\})); \(\backslash\)}
-\DoxyCodeLine{    context.pc = this-\/>bytecode.size(); \(\backslash\)}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (stack.size() < (fp + (x))) \{ \(\backslash\)}
+\DoxyCodeLine{    stack.push\_back(GarbageCollected::make<ComputedExpressionError>(\mbox{\hyperlink{classTang_1_1Error}{Error}}\{\textcolor{stringliteral}{"{}Insufficient stack depth."{}}\})); \(\backslash\)}
+\DoxyCodeLine{    pc = this-\/>bytecode.size(); \(\backslash\)}
 \DoxyCodeLine{    break; \(\backslash\)}
 \DoxyCodeLine{  \}}
 
 \end{DoxyCode}
 
 
-Verify the size of the context.\+stack vector so that it may be safely accessed. 
+Verify the size of the stack vector so that it may be safely accessed. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em x} & The number of entries that should exist in the context.\+stack. \\
+{\em x} & The number of entries that should exist in the stack. \\
 \hline
 \end{DoxyParams}

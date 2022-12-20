@@ -6,13 +6,16 @@ Contains generic macros.
 
 
 {\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
 {\ttfamily \#include $<$map$>$}\newline
 {\ttfamily \#include $<$string$>$}\newline
-Include dependency graph for macros.\+hpp\+:\nopagebreak
+{\ttfamily \#include $<$any$>$}\newline
+Include dependency graph for macros.\+hpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=246pt]{macros_8hpp__incl}
+\includegraphics[width=350pt]{macros_8hpp__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:
@@ -43,7 +46,10 @@ using \mbox{\hyperlink{macros_8hpp_a7c18603d0e934d5f83ec840355893411}{Tang\+::\+
 \begin{DoxyCompactList}\small\item\em A function pointer that will be executed as bound to an object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{macros_8hpp_a6d1db65473ddfd8c22fd26b1d65bc530}\label{macros_8hpp_a6d1db65473ddfd8c22fd26b1d65bc530}} 
 using \mbox{\hyperlink{macros_8hpp_a6d1db65473ddfd8c22fd26b1d65bc530}{Tang\+::\+Native\+Bound\+Function\+Map}} = std\+::map$<$ std\+::string, std\+::pair$<$ size\+\_\+t, Native\+Bound\+Function $>$ $>$
-\begin{DoxyCompactList}\small\item\em A map of method names to Native\+Bound\+Function objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A map of method names to Native\+Bound\+Function objects. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{macros_8hpp_a7f5af272721648f0b4a33770e915ecfc}\label{macros_8hpp_a7f5af272721648f0b4a33770e915ecfc}} 
+using \mbox{\hyperlink{macros_8hpp_a7f5af272721648f0b4a33770e915ecfc}{Tang\+::\+Context\+Data}} = std\+::unordered\+\_\+map$<$ std\+::string, std\+::any $>$
+\begin{DoxyCompactList}\small\item\em Used to hold arbitrary data which should be made available to a program during the program execution. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
