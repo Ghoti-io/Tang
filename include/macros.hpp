@@ -9,6 +9,7 @@
 #include <vector>
 #include <map>
 #include <string>
+#include <any>
 
 namespace Tang {
   class Context;
@@ -45,6 +46,12 @@ namespace Tang {
    * A map of method names to NativeBoundFunction objects.
    */
   using NativeBoundFunctionMap = std::map<std::string, std::pair<size_t, NativeBoundFunction>>;
+
+  /**
+   * Used to hold arbitrary data which should be made available to a program
+   * during the program execution.
+   */
+  using ContextData = std::map<std::string, std::any>;
 }
 #endif // TANG_MACROS_HPP
 

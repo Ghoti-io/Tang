@@ -48,7 +48,11 @@ using namespace Tang;
   }
 
 Context Program::execute() {
-  Context context{};
+  return this->execute(ContextData{});
+}
+
+Context Program::execute(ContextData && data) {
+  Context context{move(data)};
 
   // The program counter of the current instruction.
   size_t pc{0};

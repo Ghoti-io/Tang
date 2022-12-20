@@ -15,6 +15,7 @@ namespace Tang {
 #include <vector>
 #include <set>
 #include <map>
+#include "macros.hpp"
 #include "astNode.hpp"
 #include "error.hpp"
 #include "tangBase.hpp"
@@ -101,9 +102,20 @@ namespace Tang {
     /**
      * Execute the program's Bytecode, and return the execution Context.
      *
+     * A default ContextData will be generated for the execution.
+     *
      * @return The execution Context.
      */
     Context execute();
+
+    /**
+     * Execute the program's Bytecode, and return the execution Context.
+     *
+     * @param data The default data to be made available to the execution
+     *   Context.
+     * @return The execution Context.
+     */
+    Context execute(ContextData && data);
 
     /**
      * Set the target address of a Jump opcode.

@@ -14,6 +14,7 @@ namespace Tang {
 #include <map>
 #include <string>
 #include <vector>
+#include "macros.hpp"
 #include "program.hpp"
 #include "computedExpression.hpp"
 
@@ -26,7 +27,7 @@ namespace Tang {
     /**
      * Default constructor.
      */
-    Context();
+    Context(ContextData && data);
 
     /**
      * Holds arbitrary data for use in the program execution.
