@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"classTang_1_1UnicodeString.html#a9dca6ebd40e645d5eaf72f430ea7b541":[1,0,0,51,13],
+"classTang_1_1UnicodeString.html#aacfef070a2f6de639e050822c94263f5":[1,0,0,51,6],
 "classTang_1_1UnicodeString.html#ac4f534c284a4edfc89887e7c6234e35e":[1,0,0,51,4],
 "classTang_1_1UnicodeString.html#ad22c4f14673523cd3bcd5c56fa70286f":[1,0,0,51,10],
 "classTang_1_1UnicodeString.html#ae570221e486828b53341eb764149a48e":[1,0,0,51,14],
@@ -89,8 +91,8 @@ var NAVTREEINDEX4 =
 "functions_enum.html":[1,3,4],
 "functions_eval.html":[1,3,5],
 "functions_f.html":[1,3,0,6],
-"functions_func.html":[1,3,1,0],
 "functions_func.html":[1,3,1],
+"functions_func.html":[1,3,1,0],
 "functions_func_a.html":[1,3,1,1],
 "functions_func_b.html":[1,3,1,2],
 "functions_func_c.html":[1,3,1,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "testSingletonObjectPool_8cpp.html":[2,0,3,2],
 "testSingletonObjectPool_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627":[2,0,3,2,0],
 "testSingletonObjectPool_8cpp.html#a6a8e1bcd206f6b5d4c7556b3921d58d8":[2,0,3,2,4],
-"testSingletonObjectPool_8cpp.html#a6f7afafb5311169566cbca360bf27846":[2,0,3,2,6],
-"testSingletonObjectPool_8cpp.html#a8fe79cd4604a426186ab7a81ad8f39dd":[2,0,3,2,1],
-"testSingletonObjectPool_8cpp.html#acf28e5b52f59c0079487b73ab54dfe21":[2,0,3,2,5]
+"testSingletonObjectPool_8cpp.html#a6f7afafb5311169566cbca360bf27846":[2,0,3,2,6]
 };

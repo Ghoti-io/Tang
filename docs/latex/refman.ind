@@ -493,6 +493,8 @@
     \subitem {Tang::AstNodeWhile}, \hyperpage{140}
   \item {compileScript}
     \subitem {Tang::TangBase}, \hyperpage{372}
+  \item {compileTemplate}
+    \subitem {Tang::TangBase}, \hyperpage{373}
   \item {ComputedExpressionArray}
     \subitem {Tang::ComputedExpressionArray}, \hyperpage{157}
   \item {ComputedExpressionBoolean}
@@ -646,7 +648,7 @@
   \item {get\_next\_token}
     \subitem {Tang::HtmlEscape}, \hyperpage{352}
     \subitem {Tang::HtmlEscapeAscii}, \hyperpage{354}
-    \subitem {Tang::TangScanner}, \hyperpage{375}
+    \subitem {Tang::TangScanner}, \hyperpage{376}
     \subitem {Tang::Unescape}, \hyperpage{377}
   \item {getArgc}
     \subitem {Tang::ComputedExpressionNativeBoundFunction}, 
@@ -1005,7 +1007,7 @@
     \subitem {Tang::GarbageCollected}, \hyperpage{340, 341}
   \item {operator+}
     \subitem {Tang::GarbageCollected}, \hyperpage{341}
-    \subitem {Tang::UnicodeString}, \hyperpage{380}
+    \subitem {Tang::UnicodeString}, \hyperpage{381}
   \item {operator+=}
     \subitem {Tang::ComputedExpressionString}, \hyperpage{330}
     \subitem {Tang::UnicodeString}, \hyperpage{381}
@@ -1019,7 +1021,7 @@
     \subitem {Tang::GarbageCollected}, \hyperpage{345}
   \item {operator==}
     \subitem {Tang::GarbageCollected}, \hyperpage{345--348}
-    \subitem {Tang::UnicodeString}, \hyperpage{381}
+    \subitem {Tang::UnicodeString}, \hyperpage{382}
   \item {operator\%}
     \subitem {Tang::GarbageCollected}, \hyperpage{340}
   \item {Or}
@@ -1085,7 +1087,7 @@
   \item {recycle}
     \subitem {Tang::SingletonObjectPool$<$ T $>$}, \hyperpage{370}
   \item {render}
-    \subitem {Tang::UnicodeString}, \hyperpage{383}
+    \subitem {Tang::UnicodeString}, \hyperpage{382}
   \item {renderAscii}
     \subitem {Tang::UnicodeString}, \hyperpage{383}
   \item {RETURN}
@@ -1158,7 +1160,7 @@
   \item {String}
     \subitem {Tang::AstNodeCast}, \hyperpage{50}
   \item {substr}
-    \subitem {Tang::UnicodeString}, \hyperpage{384}
+    \subitem {Tang::UnicodeString}, \hyperpage{383}
   \item {SUBTRACT}
     \subitem {opcode.hpp}, \hyperpage{435}
   \item {Subtract}
@@ -1835,10 +1837,11 @@
     \subitem {recycle}, \hyperpage{370}
   \item {Tang::TangBase}, \hyperpage{371}
     \subitem {compileScript}, \hyperpage{372}
+    \subitem {compileTemplate}, \hyperpage{373}
     \subitem {make\_shared}, \hyperpage{373}
     \subitem {TangBase}, \hyperpage{372}
-  \item {Tang::TangScanner}, \hyperpage{373}
-    \subitem {get\_next\_token}, \hyperpage{375}
+  \item {Tang::TangScanner}, \hyperpage{374}
+    \subitem {get\_next\_token}, \hyperpage{376}
     \subitem {TangScanner}, \hyperpage{375}
   \item {Tang::Unescape}, \hyperpage{376}
     \subitem {get\_next\_token}, \hyperpage{377}
@@ -1848,15 +1851,15 @@
     \subitem {length}, \hyperpage{380}
     \subitem {operator std::string}, \hyperpage{380}
     \subitem {operator$<$}, \hyperpage{381}
-    \subitem {operator+}, \hyperpage{380}
+    \subitem {operator+}, \hyperpage{381}
     \subitem {operator+=}, \hyperpage{381}
-    \subitem {operator==}, \hyperpage{381}
-    \subitem {render}, \hyperpage{383}
+    \subitem {operator==}, \hyperpage{382}
+    \subitem {render}, \hyperpage{382}
     \subitem {renderAscii}, \hyperpage{383}
-    \subitem {substr}, \hyperpage{384}
-    \subitem {Trusted}, \hyperpage{379}
+    \subitem {substr}, \hyperpage{383}
+    \subitem {Trusted}, \hyperpage{380}
     \subitem {Type}, \hyperpage{379}
-    \subitem {Untrusted}, \hyperpage{379}
+    \subitem {Untrusted}, \hyperpage{380}
   \item {TangBase}
     \subitem {Tang::TangBase}, \hyperpage{372}
   \item {TangScanner}
@@ -1868,7 +1871,7 @@
   \item {test/testSingletonObjectPool.cpp}, \hyperpage{479}
   \item {test/testUnicodeString.cpp}, \hyperpage{479}
   \item {Trusted}
-    \subitem {Tang::UnicodeString}, \hyperpage{379}
+    \subitem {Tang::UnicodeString}, \hyperpage{380}
   \item {Type}
     \subitem {Tang::AstNodeCast}, \hyperpage{49}
     \subitem {Tang::AstNodePrint}, \hyperpage{106}
@@ -1885,6 +1888,6 @@
     \subitem {htmlEscapeAscii}, \hyperpage{443}
     \subitem {unescape}, \hyperpage{443}
   \item {Untrusted}
-    \subitem {Tang::UnicodeString}, \hyperpage{379}
+    \subitem {Tang::UnicodeString}, \hyperpage{380}
 
 \end{theindex}

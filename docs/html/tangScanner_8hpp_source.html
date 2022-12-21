@@ -120,17 +120,25 @@ $(document).ready(function(){initNavTree('tangScanner_8hpp_source.html',''); ini
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
 <div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classTang_1_1TangScanner.html#a0109128f5ed60f03bf6ff76b6ce25b1d">   66</a></span>&#160;    <span class="keyword">virtual</span> Tang::TangParser::symbol_type <a class="code" href="classTang_1_1TangScanner.html#a0109128f5ed60f03bf6ff76b6ce25b1d">get_next_token</a>();</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classTang_1_1TangScanner.html#af24dd2399a4f80b0bf9b002c2407f331">   72</a></span>&#160;    <a class="code" href="classTang_1_1location.html">Tang::location</a> <a class="code" href="classTang_1_1TangScanner.html#af24dd2399a4f80b0bf9b002c2407f331">location</a>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  };</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// TANG_TANGSCANNER_HPP</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classTang_1_1TangScanner.html#a9fe4142fa432e8e0344c9164b54642bb">   71</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTang_1_1TangScanner.html#a9fe4142fa432e8e0344c9164b54642bb">setModeTemplate</a>() {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="comment">// Formula is taken from the BEGIN macro in tangScanner.cpp.</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="comment">// (2) is the value that Flex has assigned the TEMPLATE rule type from</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="comment">// tpl.l.</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      this-&gt;yy_start = 1 + 2 * (2);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classTang_1_1TangScanner.html#af24dd2399a4f80b0bf9b002c2407f331">   82</a></span>&#160;    <a class="code" href="classTang_1_1location.html">Tang::location</a> <a class="code" href="classTang_1_1TangScanner.html#af24dd2399a4f80b0bf9b002c2407f331">location</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  };</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// TANG_TANGSCANNER_HPP</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
 <div class="ttc" id="aclassTang_1_1TangScanner_html"><div class="ttname"><a href="classTang_1_1TangScanner.html">Tang::TangScanner</a></div><div class="ttdoc">The Flex lexer class for the main Tang language.</div><div class="ttdef"><b>Definition:</b> tangScanner.hpp:40</div></div>
 <div class="ttc" id="aclassTang_1_1TangScanner_html_a0109128f5ed60f03bf6ff76b6ce25b1d"><div class="ttname"><a href="classTang_1_1TangScanner.html#a0109128f5ed60f03bf6ff76b6ce25b1d">Tang::TangScanner::get_next_token</a></div><div class="ttdeci">virtual Tang::TangParser::symbol_type get_next_token()</div><div class="ttdoc">A pass-through function that we supply so that we can provide a Bison 3 token return type instead of ...</div></div>
 <div class="ttc" id="aclassTang_1_1TangScanner_html_a138cb48b8162798aa40a44f9af26a7d7"><div class="ttname"><a href="classTang_1_1TangScanner.html#a138cb48b8162798aa40a44f9af26a7d7">Tang::TangScanner::TangScanner</a></div><div class="ttdeci">TangScanner(std::istream &amp;arg_yyin, std::ostream &amp;arg_yyout)</div><div class="ttdoc">The constructor for the Scanner.</div><div class="ttdef"><b>Definition:</b> tangScanner.hpp:57</div></div>
-<div class="ttc" id="aclassTang_1_1TangScanner_html_af24dd2399a4f80b0bf9b002c2407f331"><div class="ttname"><a href="classTang_1_1TangScanner.html#af24dd2399a4f80b0bf9b002c2407f331">Tang::TangScanner::location</a></div><div class="ttdeci">Tang::location location</div><div class="ttdoc">The location information of the token that is identified.</div><div class="ttdef"><b>Definition:</b> tangScanner.hpp:72</div></div>
+<div class="ttc" id="aclassTang_1_1TangScanner_html_a9fe4142fa432e8e0344c9164b54642bb"><div class="ttname"><a href="classTang_1_1TangScanner.html#a9fe4142fa432e8e0344c9164b54642bb">Tang::TangScanner::setModeTemplate</a></div><div class="ttdeci">void setModeTemplate()</div><div class="ttdoc">Helper function to set the scanner to template parsing mode.</div><div class="ttdef"><b>Definition:</b> tangScanner.hpp:71</div></div>
+<div class="ttc" id="aclassTang_1_1TangScanner_html_af24dd2399a4f80b0bf9b002c2407f331"><div class="ttname"><a href="classTang_1_1TangScanner.html#af24dd2399a4f80b0bf9b002c2407f331">Tang::TangScanner::location</a></div><div class="ttdeci">Tang::location location</div><div class="ttdoc">The location information of the token that is identified.</div><div class="ttdef"><b>Definition:</b> tangScanner.hpp:82</div></div>
 <div class="ttc" id="aclassTang_1_1location_html"><div class="ttname"><a href="classTang_1_1location.html">Tang::location</a></div><div class="ttdoc">Two points in a source file.</div><div class="ttdef"><b>Definition:</b> location.hh:167</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

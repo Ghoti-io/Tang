@@ -31,7 +31,9 @@ Collaboration diagram for Tang\+::Tang\+Base\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classTang_1_1Program}{Program}} \mbox{\hyperlink{classTang_1_1TangBase_a3c1ad8653a52f5a90fee20c385be7540}{compile\+Script}} (std\+::string script)
-\begin{DoxyCompactList}\small\item\em Compile the provided source code as a script and return a \mbox{\hyperlink{classTang_1_1Program}{Program}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Compile the provided text as a script and return a \mbox{\hyperlink{classTang_1_1Program}{Program}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTang_1_1Program}{Program}} \mbox{\hyperlink{classTang_1_1TangBase_a7982e433279e2aca3ed95904f5d7e0f6}{compile\+Template}} (std\+::string code)
+\begin{DoxyCompactList}\small\item\em Compile the provided text as a template and return a \mbox{\hyperlink{classTang_1_1Program}{Program}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTang_1_1TangBase_a6aa1668d0232e39e60d01fbce2419ef4}{Tang\+Base}} ()
 \begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTang_1_1TangBase_a62dfbf8c82da22d0c83d920c78c08eed}\label{classTang_1_1TangBase_a62dfbf8c82da22d0c83d920c78c08eed}} 
@@ -93,7 +95,7 @@ This function should never be called directly. Rather, always use the \mbox{\hyp
 
 
 
-Compile the provided source code as a script and return a \mbox{\hyperlink{classTang_1_1Program}{Program}}. 
+Compile the provided text as a script and return a \mbox{\hyperlink{classTang_1_1Program}{Program}}. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -102,6 +104,24 @@ Compile the provided source code as a script and return a \mbox{\hyperlink{class
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 The \mbox{\hyperlink{classTang_1_1Program}{Program}} object representing the compiled script. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1TangBase_a7982e433279e2aca3ed95904f5d7e0f6}\label{classTang_1_1TangBase_a7982e433279e2aca3ed95904f5d7e0f6}} 
+\index{Tang::TangBase@{Tang::TangBase}!compileTemplate@{compileTemplate}}
+\index{compileTemplate@{compileTemplate}!Tang::TangBase@{Tang::TangBase}}
+\doxysubsubsection{\texorpdfstring{compileTemplate()}{compileTemplate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1Program}{Program}} Tang\+Base\+::compile\+Template (\begin{DoxyParamCaption}\item[{std\+::string}]{code }\end{DoxyParamCaption})}
+
+
+
+Compile the provided text as a template and return a \mbox{\hyperlink{classTang_1_1Program}{Program}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & The Tang template to be compiled. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{classTang_1_1Program}{Program}} object representing the compiled template. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classTang_1_1TangBase_a7501b115ed8b6c60b3e5dfbe01d7aa5b}\label{classTang_1_1TangBase_a7501b115ed8b6c60b3e5dfbe01d7aa5b}} 
 \index{Tang::TangBase@{Tang::TangBase}!make\_shared@{make\_shared}}

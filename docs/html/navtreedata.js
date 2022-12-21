@@ -60,8 +60,8 @@ var NAVTREEINDEX =
 "classTang_1_1AstNodeFunctionDeclaration.html#ae0f662cd990cd733c7d5447ea3a1e641a586bda9718eca4db4d4afac8e298023a",
 "classTang_1_1ComputedExpressionBoolean.html#a89d0a492646d5493e138ee22bcd6dad7",
 "classTang_1_1ComputedExpressionNativeBoundFunction.html#a39df4abc066123ec2d634e921be40d21",
-"classTang_1_1UnicodeString.html#ac4f534c284a4edfc89887e7c6234e35e",
-"testSingletonObjectPool_8cpp.html#adf030f10a2b32ec1d58d1b7df78bff6c"
+"classTang_1_1UnicodeString.html#a9dca6ebd40e645d5eaf72f430ea7b541",
+"testSingletonObjectPool_8cpp.html#a8fe79cd4604a426186ab7a81ad8f39dd"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
