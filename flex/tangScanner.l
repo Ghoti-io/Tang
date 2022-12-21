@@ -111,10 +111,16 @@ using namespace std;
   bool eofSeen{false};
 
 <TEMPLATE>{
-  .+ {
+  "<%" {
+    yy_push_state(SCRIPT);
+    if (stringBuffer.length()) {
+      return Tang::TangParser::make_TEMPLATESTRING(stringBuffer, Tang::location(location));
+    }
+  }
+  [^<]+ {
     stringBuffer += yytext;
   }
-  \n {
+  "<" {
     stringBuffer += yytext;
   }
   <<EOF>> {
@@ -152,6 +158,16 @@ using namespace std;
     stringBuffer.clear();
     isTrusted = true;
     yy_push_state(doubleQuoteString);
+  }
+  "%>" {
+    // Exit out of SCRIPT mode and return to TEMPLATE mode.
+    // Error if we weren't actually in TEMPLATE mode to begin with.
+    if (yy_start_stack_ptr < 1) {
+      // Can't pop the stack.  This is an error.
+      return Tang::TangParser::make_UNEXPECTEDSCRIPTEND(Tang::location(location));
+    }
+    yy_pop_state();
+    stringBuffer.clear();
   }
   if {
     return Tang::TangParser::make_IF(Tang::location(location));

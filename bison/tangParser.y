@@ -124,6 +124,7 @@
 %token SEMICOLON ";"
 %token COMMA ","
 %token PERIOD "."
+%token UNEXPECTEDSCRIPTEND "%>"
 
 // Any %type declarations of non-terminals.
 // https://www.gnu.org/software/bison/manual/bison.html#index-_0025type
@@ -360,6 +361,10 @@ closedStatement
       $$ = std::make_shared<AstNodeContinue>(@1);
     }
   | expression ";"
+  | TEMPLATESTRING
+    {
+      $$ = std::make_shared<AstNodePrint>(AstNodePrint::Default, std::make_shared<AstNodeString>($1, @1), @1);
+    }
   ;
 
 // These should only have an openStatement as the last terminal.
@@ -532,10 +537,6 @@ expression
   | "print" "(" expression ")"
     {
       $$ = std::make_shared<AstNodePrint>(AstNodePrint::Default, $3, @1);
-    }
-  | TEMPLATESTRING
-    {
-      $$ = std::make_shared<AstNodePrint>(AstNodePrint::Default, std::make_shared<AstNodeString>($1, @1), @1);
     }
   | expression "." IDENTIFIER
     {

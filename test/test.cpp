@@ -2122,6 +2122,41 @@ TEST(Compile, Template) {
     EXPECT_EQ(*context.result, nullptr);
     EXPECT_EQ(context.out, "Hello World!");
   }
+  {
+    // Compile a simple template that contains a script.
+    auto p1 = tang->compileTemplate(R"(Hello <%
+      a = 1;
+      print(a);
+      %> World!)");
+    auto context = p1.execute();
+    EXPECT_EQ(*context.result, nullptr);
+    EXPECT_EQ(context.out, "Hello 1 World!");
+  }
+  {
+    // Compile a simple template that contains multiple script sections.
+    auto p1 = tang->compileTemplate(R"(Fish <%
+        a = "|";
+        print(a);
+      %> And <%
+        print(a);
+      %> Chips)");
+    auto context = p1.execute();
+    EXPECT_EQ(*context.result, nullptr);
+    EXPECT_EQ(context.out, "Fish | And | Chips");
+  }
+  {
+    // Verify behavior of trusted and untrusted strings.
+    auto p1 = tang->compileTemplate(R"(<h1><% print(!"<h1>"); %></h1>)");
+    auto context = p1.execute();
+    EXPECT_EQ(*context.result, nullptr);
+    EXPECT_EQ(context.out, "<h1>&lt;h1&gt;</h1>");
+  }
+  {
+    // Verify error when trying to exit from a script when not acutally
+    // compiling a template.
+    auto p1 = tang->compileScript(R"(a = 1;%>)");
+    EXPECT_EQ(*p1.getResult(), Error{"syntax error, unexpected %>, expecting end of code"});
+  }
 }
 
 int main(int argc, char** argv) {
