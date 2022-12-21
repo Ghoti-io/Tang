@@ -65,6 +65,16 @@ namespace Tang {
      */
     virtual Tang::TangParser::symbol_type get_next_token();
 
+    /**
+     * Helper function to set the scanner to template parsing mode.
+     */
+    void setModeTemplate() {
+      // Formula is taken from the BEGIN macro in tangScanner.cpp.
+      // (2) is the value that Flex has assigned the TEMPLATE rule type from
+      // tpl.l.
+      this->yy_start = 1 + 2 * (2);
+    }
+
   private:
     /**
      * The location information of the token that is identified.

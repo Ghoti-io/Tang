@@ -2114,6 +2114,16 @@ TEST(Context, General) {
   }
 }
 
+TEST(Compile, Template) {
+  {
+    // Compile a simple template that contains no script.
+    auto p1 = tang->compileTemplate(R"(Hello World!)");
+    auto context = p1.execute();
+    EXPECT_EQ(*context.result, nullptr);
+    EXPECT_EQ(context.out, "Hello World!");
+  }
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

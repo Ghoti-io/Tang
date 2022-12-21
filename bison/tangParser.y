@@ -79,6 +79,7 @@
 %token <long double> FLOAT "float literal"
 %token <bool> BOOLEAN "boolean literal"
 %token <std::pair<std::string, bool>> STRING "string literal"
+%token <std::string> TEMPLATESTRING "template string"
 %token STRINGERROR "Malformed String"
 %token <std::string> IDENTIFIER "identifier"
 %token ASSIGN "="
@@ -531,6 +532,10 @@ expression
   | "print" "(" expression ")"
     {
       $$ = std::make_shared<AstNodePrint>(AstNodePrint::Default, $3, @1);
+    }
+  | TEMPLATESTRING
+    {
+      $$ = std::make_shared<AstNodePrint>(AstNodePrint::Default, std::make_shared<AstNodeString>($1, @1), @1);
     }
   | expression "." IDENTIFIER
     {

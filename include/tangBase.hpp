@@ -74,12 +74,20 @@ namespace Tang {
     static std::shared_ptr<TangBase> make_shared();
 
     /**
-     * Compile the provided source code as a script and return a Program.
+     * Compile the provided text as a script and return a Program.
      *
      * @param script The Tang script to be compiled.
      * @return The Program object representing the compiled script.
      */
     Program compileScript(std::string script);
+
+    /**
+     * Compile the provided text as a template and return a Program.
+     *
+     * @param code The Tang template to be compiled.
+     * @return The Program object representing the compiled template.
+     */
+    Program compileTemplate(std::string code);
 
     /**
      * The constructor.

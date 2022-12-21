@@ -92,7 +92,7 @@ using namespace std;
  *   (search for "C-style")
  * Also given here: https://www.cs.virginia.edu/~cr4bd/flex-manual/Start-Conditions.html
  */
-%x SCRIPT doubleQuoteString singleLineComment multiLineComment
+%x SCRIPT TEMPLATE doubleQuoteString singleLineComment multiLineComment
 
 %%
   // Include any initialization code here.  These lines *must* be indented,
@@ -105,6 +105,26 @@ using namespace std;
   // Indicates whether or not the current double-quoted string is trusted
   // or untrusted.
   bool isTrusted{false};
+
+  // Flag variable to track whether or not the EOF has been seen, for use when
+  // parsing templates.
+  bool eofSeen{false};
+
+<TEMPLATE>{
+  .+ {
+    stringBuffer += yytext;
+  }
+  \n {
+    stringBuffer += yytext;
+  }
+  <<EOF>> {
+    if (!eofSeen && stringBuffer.length()) {
+      eofSeen = true;
+      return Tang::TangParser::make_TEMPLATESTRING(stringBuffer, Tang::location(location));
+    }
+    yyterminate();
+  }
+}
 
 <INITIAL,SCRIPT,singleLineComment,multiLineComment>{
   <<EOF>> {

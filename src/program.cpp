@@ -27,6 +27,13 @@ void Program::parse() {
   TangScanner scanner{ss, std::cout};
   Error * error{nullptr};
   TangParser parser{scanner, this->ast, error};
+
+  // Set the scanner mode, depending on the codeType.
+  if (this->codeType == Program::CodeType::Template) {
+    scanner.setModeTemplate();
+  }
+
+  // Begin parsing.
   parser.parse();
   if (error) {
     this->result = GarbageCollected::make<ComputedExpressionError>(*error);
