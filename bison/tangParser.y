@@ -124,6 +124,9 @@
 %token SEMICOLON ";"
 %token COMMA ","
 %token PERIOD "."
+%token QUICKPRINTBEGIN "<%="
+%token <std::string> QUICKPRINTBEGINANDSTRING "template string followed by <%="
+%token QUICKPRINTEND "<%= %> closing tag"
 %token UNEXPECTEDSCRIPTEND "%>"
 
 // Any %type declarations of non-terminals.
@@ -364,6 +367,19 @@ closedStatement
   | TEMPLATESTRING
     {
       $$ = std::make_shared<AstNodePrint>(AstNodePrint::Default, std::make_shared<AstNodeString>($1, @1), @1);
+    }
+  | QUICKPRINTBEGINANDSTRING expression QUICKPRINTEND
+    {
+      $$ = std::make_shared<AstNodeBlock>(vector<shared_ptr<AstNode>>{
+        // The Template String.
+        std::make_shared<AstNodePrint>(AstNodePrint::Default, std::make_shared<AstNodeString>($1, @1), @1),
+        // The Quick Print Expression.
+        std::make_shared<AstNodePrint>(AstNodePrint::Default, $2, @2)
+      }, @1);
+    }
+  | QUICKPRINTBEGIN expression QUICKPRINTEND
+    {
+      $$ = std::make_shared<AstNodePrint>(AstNodePrint::Default, $2, @1);
     }
   ;
 

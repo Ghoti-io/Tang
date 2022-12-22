@@ -2159,6 +2159,83 @@ TEST(Compile, Template) {
   }
 }
 
+TEST(Compile, ShortCodes) {
+  auto tang = TangBase::make_shared();
+  auto & methods = tang->getObjectMethods();
+  // Add `custom_function` as a method to any ComputedExpressionString.
+  methods[type_index(typeid(ComputedExpressionString))]["custom_function"] = {0,
+    []([[maybe_unused]] GarbageCollected & target, [[maybe_unused]] vector<GarbageCollected>& args) {
+      // `custom_function() will return a ComputedExpressionNativeFunction.
+      return GarbageCollected::make<ComputedExpressionNativeFunction>(
+        []([[maybe_unused]] vector<GarbageCollected>& args, [[maybe_unused]] Context & context) {
+          // We are in a ComputedExpressionNativeFunction.  It has access to
+          // the execution Context.  This function will use the Context to
+          // store a variable that it  will increment each time that the
+          // function is called.
+          int count = 0;
+
+          // Check to see if the variable already exists.
+          if (context.data.count("custom_function")) {
+            auto & val = context.data.at("custom_function");
+            if (val.type() != typeid(int)) {
+              // The variable is not the type that was expected, so something
+              // went wrong.  Rather than overwriting the function, we will
+              // simply return an error.
+              return GarbageCollected::make<ComputedExpressionError>(Error{"Something went wrong!"});
+            }
+            // The variable exists as an integer.  Increment it.
+            count = any_cast<int>(val) + 1;
+            val = count;
+          }
+          else {
+            // The variable did not exist, set it.
+            context.data["custom_function"] = (int)0;
+          }
+          // Return the `count` as an integer.
+          return GarbageCollected::make<ComputedExpressionInteger>(count);
+        }, (size_t)0);
+    }};
+
+  {
+    // Compile a simple short code template.
+    auto p1 = tang->compileTemplate(R"(1 + 1 = <%= 1 + 1 %>)");
+    EXPECT_EQ(p1.getResult(), nullopt);
+    EXPECT_EQ(p1.execute().out, "1 + 1 = 2");
+  }
+  {
+    // Compile a template with multiple short codes.
+    auto p1 = tang->compileTemplate(R"(-<%=
+        "".custom_function()()
+      %>-<%=
+        "Hello"
+      %>-<%=
+        "".custom_function()()
+      %>-<%=
+        "World"
+      %>-<%=
+        "".custom_function()()
+      %>-)");
+    EXPECT_EQ(p1.getResult(), nullopt);
+    EXPECT_EQ(p1.execute().out, "-0-Hello-1-World-2-");
+  }
+  {
+    // Syntax error on unterminated short code.
+    auto p1 = tang->compileTemplate(R"(-<%= )");
+    EXPECT_EQ(p1.getResult(), Error{"syntax error, unexpected end of code"});
+  }
+  {
+    // Syntax error on empty short code.
+    auto p1 = tang->compileTemplate(R"(-<%= %>)");
+    EXPECT_EQ(p1.getResult(), Error{"syntax error, unexpected <%= %> closing tag"});
+  }
+  {
+    // Template only includes a short code.
+    auto p1 = tang->compileTemplate(R"(<%= 3 %>)");
+    EXPECT_EQ(p1.getResult(), nullopt);
+    EXPECT_EQ(p1.execute().out, "3");
+  }
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

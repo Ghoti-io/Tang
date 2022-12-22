@@ -92,7 +92,7 @@ using namespace std;
  *   (search for "C-style")
  * Also given here: https://www.cs.virginia.edu/~cr4bd/flex-manual/Start-Conditions.html
  */
-%x SCRIPT TEMPLATE doubleQuoteString singleLineComment multiLineComment
+%x SCRIPT TEMPLATE QUICKPRINT doubleQuoteString singleLineComment multiLineComment
 
 %%
   // Include any initialization code here.  These lines *must* be indented,
@@ -111,6 +111,13 @@ using namespace std;
   bool eofSeen{false};
 
 <TEMPLATE>{
+  "<%=" {
+    yy_push_state(QUICKPRINT);
+    if (stringBuffer.length()) {
+      return Tang::TangParser::make_QUICKPRINTBEGINANDSTRING(stringBuffer, Tang::location(location));
+    }
+    return Tang::TangParser::make_QUICKPRINTBEGIN(Tang::location(location));
+  }
   "<%" {
     yy_push_state(SCRIPT);
     if (stringBuffer.length()) {
@@ -132,13 +139,35 @@ using namespace std;
   }
 }
 
-<INITIAL,SCRIPT,singleLineComment,multiLineComment>{
+<INITIAL,SCRIPT,QUICKPRINT,singleLineComment,multiLineComment>{
   <<EOF>> {
     yyterminate();
   }
 }
 
 <INITIAL,SCRIPT>{
+  "%>" {
+    // Exit out of SCRIPT mode and return to TEMPLATE mode.
+    // Error if we weren't actually in TEMPLATE mode to begin with.
+    if (yy_start_stack_ptr < 1) {
+      // Can't pop the stack.  This is an error.
+      return Tang::TangParser::make_UNEXPECTEDSCRIPTEND(Tang::location(location));
+    }
+    yy_pop_state();
+    stringBuffer.clear();
+  }
+}
+
+<QUICKPRINT>{
+  "%>" {
+    // Exit out of QUICKPRINT mode and return to TEMPLATE mode.
+    yy_pop_state();
+    stringBuffer.clear();
+    return Tang::TangParser::make_QUICKPRINTEND(Tang::location(location));
+  }
+}
+
+<INITIAL,SCRIPT,QUICKPRINT>{
   \/\/ {
     // Beginning of a single line comment.
     yy_push_state(singleLineComment);
@@ -158,16 +187,6 @@ using namespace std;
     stringBuffer.clear();
     isTrusted = true;
     yy_push_state(doubleQuoteString);
-  }
-  "%>" {
-    // Exit out of SCRIPT mode and return to TEMPLATE mode.
-    // Error if we weren't actually in TEMPLATE mode to begin with.
-    if (yy_start_stack_ptr < 1) {
-      // Can't pop the stack.  This is an error.
-      return Tang::TangParser::make_UNEXPECTEDSCRIPTEND(Tang::location(location));
-    }
-    yy_pop_state();
-    stringBuffer.clear();
   }
   if {
     return Tang::TangParser::make_IF(Tang::location(location));
