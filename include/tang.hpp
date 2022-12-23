@@ -37,8 +37,6 @@
 // * Better location tracking for bytecode and error reporting.
 // * "use" syntax to import libraries
 //   * Tang version
-// * template scanning
-//   * short tags
 // * Library Extension
 // * Math library
 //   * round, min, max, log, ceil, floor, exp
