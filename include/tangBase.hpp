@@ -14,6 +14,7 @@ namespace Tang {
 #include <string>
 #include <typeindex>
 #include <vector>
+#include "macros.hpp"
 #include "program.hpp"
 #include "computedExpression.hpp"
 
@@ -102,14 +103,25 @@ namespace Tang {
      * Get the object methods available to this instance of the base language
      * object.
      */
-    std::map<std::type_index, std::map<std::string, std::pair<size_t, Tang::NativeBoundFunction>>> & getObjectMethods();
+    std::map<std::type_index, NativeBoundFunctionMap> & getObjectMethods();
+
+    /**
+     * Get the libraries available to this instance of the base language
+     * object.
+     */
+    std::unordered_map<std::string, NativeFunctionMap> & getLibraries();
 
 
   private:
     /**
      * Store the available object methods.
      */
-    std::map<std::type_index, std::map<std::string, std::pair<size_t, Tang::NativeBoundFunction>>> objectMethods;
+    std::map<std::type_index, NativeBoundFunctionMap> objectMethods;
+
+    /**
+     * Store the available libraries.
+     */
+    std::unordered_map<std::string, NativeFunctionMap> libraries;
   };
 }
 

@@ -14,6 +14,7 @@
 #include "computedExpressionBoolean.hpp"
 #include "computedExpressionString.hpp"
 #include "computedExpressionArray.hpp"
+#include "computedExpressionLibrary.hpp"
 #include "computedExpressionMap.hpp"
 #include "computedExpressionCompiledFunction.hpp"
 #include "computedExpressionNativeBoundFunction.hpp"
@@ -248,6 +249,27 @@ Context Program::execute(ContextData && data) {
         }
         stack.push_back(GarbageCollected::make<ComputedExpressionMap>(contents));
         pc += 2;
+        break;
+      }
+      case Opcode::LIBRARY: {
+        STACKCHECK(1);
+        auto name = stack.back();
+        stack.pop_back();
+
+        if (typeid(*name) == typeid(ComputedExpressionString)) {
+          auto & nameConv = static_cast<ComputedExpressionString &>(*name);
+          auto & libraries = tang->getLibraries();
+          auto nameLiteral = nameConv.dump();
+          stack.push_back(libraries.count(nameLiteral)
+            ? GarbageCollected::make<ComputedExpressionLibrary>(&libraries.at(nameLiteral))
+            : GarbageCollected::make<ComputedExpressionError>(Error{"Unknown Library"}));
+        }
+        else {
+          // We can't use this CE to access a library.
+          stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Unrecognized operand on LIBRARY opcode."}));
+        }
+
+        ++pc;
         break;
       }
       case Opcode::FUNCTION: {

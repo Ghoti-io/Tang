@@ -23,6 +23,7 @@ namespace Tang {
               ///<   with the last array item popped first
     MAP,      ///< Get len, pop `len` value then key pairs, putting them into
               ///<   a map
+    LIBRARY,  ///< Pop name, push Library identified by name
     FUNCTION, ///< Get argc, PC#: push function(argc, PC #)
     ASSIGNINDEX, ///< Pop index, pop collection, pop value,
                  ///<   push (collection[index] = value)

@@ -142,6 +142,11 @@ string Program::dumpBytecode() const {
         pc += 2;
         break;
       }
+      case Opcode::LIBRARY: {
+        out << "LIBRARY";
+        ++pc;
+        break;
+      }
       case Opcode::FUNCTION: {
         DUMPPROGRAMCHECK(2);
         out << "FUNCTION" << this->bytecode[pc + 1] << " " << this->bytecode[pc + 2];

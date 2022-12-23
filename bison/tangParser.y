@@ -196,6 +196,7 @@ namespace Tang {
 #include "astNodeCast.hpp"
 #include "astNodeBlock.hpp"
 #include "astNodeIfElse.hpp"
+#include "astNodeLibrary.hpp"
 #include "astNodeMap.hpp"
 #include "astNodeWhile.hpp"
 #include "astNodeDoWhile.hpp"
@@ -381,6 +382,10 @@ closedStatement
   | QUICKPRINTBEGIN expression QUICKPRINTEND
     {
       $$ = std::make_shared<AstNodePrint>(AstNodePrint::Default, $2, @1);
+    }
+  | "use" IDENTIFIER ";"
+    {
+      $$ = std::make_shared<AstNodeLibrary>(std::make_shared<AstNodeIdentifier>($2, @2), $2, @1);
     }
   ;
 

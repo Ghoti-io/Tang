@@ -14,7 +14,7 @@ using namespace Tang;
 TangBase::TangBase() : objectMethods{
     {type_index(typeid(ComputedExpressionArray)), ComputedExpressionArray::getMethods()},
     {type_index(typeid(ComputedExpressionString)), ComputedExpressionString::getMethods()},
-  } {};
+  }, libraries{} {};
 
 Program TangBase::compileScript(string script) {
   return Program{script, Program::CodeType::Script, this->shared_from_this()};
@@ -30,5 +30,9 @@ shared_ptr<TangBase> TangBase::make_shared() {
 
 map<std::type_index, Tang::NativeBoundFunctionMap> & TangBase::getObjectMethods() {
   return this->objectMethods;
+}
+
+unordered_map<std::string, NativeFunctionMap> & TangBase::getLibraries() {
+  return this->libraries;
 }
 

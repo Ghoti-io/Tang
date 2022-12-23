@@ -24,7 +24,7 @@ namespace Tang {
      * @param name The name of the identifier.
      * @param location The location associated with the expression.
      */
-    AstNodeLibrary(std::shared_ptr<AstNode> & expression, const std::string & name, Tang::location location);
+    AstNodeLibrary(std::shared_ptr<AstNode> expression, const std::string & name, Tang::location location);
 
     virtual std::string dump(std::string indent = "") const override;
     virtual void compile(Tang::Program & program) const override;
