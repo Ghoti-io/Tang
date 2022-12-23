@@ -54,6 +54,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "astNodeInteger.hpp", "astNodeInteger_8hpp.html", [
       [ "AstNodeInteger", "classTang_1_1AstNodeInteger.html", "classTang_1_1AstNodeInteger" ]
     ] ],
+    [ "astNodeLibrary.hpp", "astNodeLibrary_8hpp.html", [
+      [ "AstNodeLibrary", "classTang_1_1AstNodeLibrary.html", "classTang_1_1AstNodeLibrary" ]
+    ] ],
     [ "astNodeMap.hpp", "astNodeMap_8hpp.html", [
       [ "AstNodeMap", "classTang_1_1AstNodeMap.html", "classTang_1_1AstNodeMap" ]
     ] ],
@@ -110,6 +113,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     ] ],
     [ "computedExpressionIteratorEnd.hpp", "computedExpressionIteratorEnd_8hpp.html", [
       [ "ComputedExpressionIteratorEnd", "classTang_1_1ComputedExpressionIteratorEnd.html", "classTang_1_1ComputedExpressionIteratorEnd" ]
+    ] ],
+    [ "computedExpressionLibrary.hpp", "computedExpressionLibrary_8hpp.html", [
+      [ "ComputedExpressionLibrary", "classTang_1_1ComputedExpressionLibrary.html", "classTang_1_1ComputedExpressionLibrary" ]
     ] ],
     [ "computedExpressionMap.hpp", "computedExpressionMap_8hpp.html", [
       [ "ComputedExpressionMap", "classTang_1_1ComputedExpressionMap.html", "classTang_1_1ComputedExpressionMap" ]

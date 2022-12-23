@@ -17,6 +17,7 @@ var opcode_8hpp =
       [ "STRING", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a63b588d5559f64f89a416e656880b949", null ],
       [ "ARRAY", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acb4fb1757fb37c43cded35d3eb857c43", null ],
       [ "MAP", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a5af1a3a285c2bdee4192223e31e1f833", null ],
+      [ "LIBRARY", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acb0a59495dfabbf78b33afa5ea3aa341", null ],
       [ "FUNCTION", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a6a72a6a776662a244f82d31e9274a07b", null ],
       [ "ASSIGNINDEX", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ad841b7b2c8fba802dc3425c697d2ee11", null ],
       [ "ADD", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a9eeb52badb613229884838847294b90d", null ],
