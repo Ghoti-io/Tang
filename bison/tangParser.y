@@ -114,6 +114,7 @@
 %token CASTFLOAT "float"
 %token CASTBOOLEAN "boolean"
 %token CASTSTRING "string"
+%token USE "use"
 %token FUNCTION "function"
 %token RETURN "return"
 %token BREAK "break"

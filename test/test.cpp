@@ -2236,6 +2236,17 @@ TEST(Compile, ShortCodes) {
   }
 }
 
+TEST(Library, Use) {
+  {
+    // "use" invocation
+    auto p1 = tang->compileScript(R"(
+      use math;
+      print(math.abs(3.5));
+    )");
+    EXPECT_EQ(p1.execute().out, "3");
+  }
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

@@ -44,6 +44,11 @@ namespace Tang {
   using NativeBoundFunction = GarbageCollected (*) (GarbageCollected &, std::vector<GarbageCollected> &);
 
   /**
+   * A map of method names to NativeFunction objects.
+   */
+  using NativeFunctionMap = std::map<std::string, std::pair<size_t, NativeFunction>>;
+
+  /**
    * A map of method names to NativeBoundFunction objects.
    */
   using NativeBoundFunctionMap = std::map<std::string, std::pair<size_t, NativeBoundFunction>>;

@@ -224,6 +224,9 @@ using namespace std;
   false {
     return Tang::TangParser::make_BOOLEAN(false, Tang::location(location));
   }
+  use {
+    return Tang::TangParser::make_USE(Tang::location(location));
+  }
   function {
     return Tang::TangParser::make_FUNCTION(Tang::location(location));
   }
