@@ -36,6 +36,11 @@ namespace Tang {
   /**
    * A function pointer that will be executed.
    */
+  using LibraryFunction = GarbageCollected (*) (Context &);
+
+  /**
+   * A function pointer that will be executed as bound to an object.
+   */
   using NativeFunction = GarbageCollected (*) (std::vector<GarbageCollected> &, Context &);
 
   /**
@@ -44,9 +49,9 @@ namespace Tang {
   using NativeBoundFunction = GarbageCollected (*) (GarbageCollected &, std::vector<GarbageCollected> &);
 
   /**
-   * A map of method names to NativeFunction objects.
+   * A map of method names to LibraryFunction objects.
    */
-  using NativeFunctionMap = std::map<std::string, std::pair<size_t, NativeFunction>>;
+  using LibraryFunctionMap = std::map<std::string, LibraryFunction>;
 
   /**
    * A map of method names to NativeBoundFunction objects.

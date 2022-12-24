@@ -32,7 +32,11 @@ map<std::type_index, Tang::NativeBoundFunctionMap> & TangBase::getObjectMethods(
   return this->objectMethods;
 }
 
-unordered_map<std::string, NativeFunctionMap> & TangBase::getLibraries() {
+LibraryFunctionMap & TangBase::getLibraries() {
   return this->libraries;
+}
+
+unordered_map<std::type_index, LibraryFunctionMap> & TangBase::getLibraryAttributes() {
+  return this->libraryAttributes;
 }
 

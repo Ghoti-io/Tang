@@ -261,7 +261,7 @@ Context Program::execute(ContextData && data) {
           auto & libraries = tang->getLibraries();
           auto nameLiteral = nameConv.dump();
           stack.push_back(libraries.count(nameLiteral)
-            ? GarbageCollected::make<ComputedExpressionLibrary>(&libraries.at(nameLiteral))
+            ? libraries.at(nameLiteral)(context)
             : GarbageCollected::make<ComputedExpressionError>(Error{"Unknown Library"}));
         }
         else {

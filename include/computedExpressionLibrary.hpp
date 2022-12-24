@@ -20,18 +20,12 @@ namespace Tang {
        *
        * @param library The NativeFunctionMap this library represents.
        */
-      ComputedExpressionLibrary(const Tang::NativeFunctionMap * library);
+      ComputedExpressionLibrary();
 
       virtual std::string dump() const override;
       GarbageCollected makeCopy() const override;
-
-    private:
-      /**
-       * Reference to the NativeFunctionMap this library represents.
-       */
-      const NativeFunctionMap* library;
+      GarbageCollected __period(const GarbageCollected & member, shared_ptr<TangBase> & tang) const override;
   };
-
 }
 
 #endif // TANG_COMPUTEDEXPRESSIONLIBRARY_HPP

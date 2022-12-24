@@ -109,8 +109,13 @@ namespace Tang {
      * Get the libraries available to this instance of the base language
      * object.
      */
-    std::unordered_map<std::string, NativeFunctionMap> & getLibraries();
+    LibraryFunctionMap & getLibraries();
 
+    /**
+     * Get the library attributes available to this instance of the base
+     * language object.
+     */
+    std::unordered_map<std::type_index, LibraryFunctionMap> & getLibraryAttributes();
 
   private:
     /**
@@ -121,7 +126,12 @@ namespace Tang {
     /**
      * Store the available libraries.
      */
-    std::unordered_map<std::string, NativeFunctionMap> libraries;
+    LibraryFunctionMap libraries;
+
+    /**
+     * Store the available library attributes.
+     */
+    std::unordered_map<std::type_index, LibraryFunctionMap> libraryAttributes;
   };
 }
 
