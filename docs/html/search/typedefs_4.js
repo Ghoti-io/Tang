@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['nativeboundfunction_862',['NativeBoundFunction',['../macros_8hpp.html#a7c18603d0e934d5f83ec840355893411',1,'Tang']]],
-  ['nativeboundfunctionmap_863',['NativeBoundFunctionMap',['../macros_8hpp.html#a6d1db65473ddfd8c22fd26b1d65bc530',1,'Tang']]],
-  ['nativefunction_864',['NativeFunction',['../macros_8hpp.html#aece6c429435b04c80842278ae26dcc57',1,'Tang']]],
-  ['nativefunctionmap_865',['NativeFunctionMap',['../macros_8hpp.html#aaf843cacf1f354f57b7da59c615e50af',1,'Tang']]]
+  ['libraryfunction_882',['LibraryFunction',['../macros_8hpp.html#ae12842cdf29eb1486164a0a74a84477f',1,'Tang']]],
+  ['libraryfunctionmap_883',['LibraryFunctionMap',['../macros_8hpp.html#a497b271a17e2d6f921ae341266ada023',1,'Tang']]]
 ];

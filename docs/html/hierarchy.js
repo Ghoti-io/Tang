@@ -39,10 +39,13 @@ var hierarchy =
       [ "Tang::ComputedExpressionInteger", "classTang_1_1ComputedExpressionInteger.html", null ],
       [ "Tang::ComputedExpressionIterator", "classTang_1_1ComputedExpressionIterator.html", null ],
       [ "Tang::ComputedExpressionIteratorEnd", "classTang_1_1ComputedExpressionIteratorEnd.html", null ],
-      [ "Tang::ComputedExpressionLibrary", "classTang_1_1ComputedExpressionLibrary.html", null ],
+      [ "Tang::ComputedExpressionLibrary", "classTang_1_1ComputedExpressionLibrary.html", [
+        [ "Tang::ComputedExpressionLibraryMath", "classTang_1_1ComputedExpressionLibraryMath.html", null ]
+      ] ],
       [ "Tang::ComputedExpressionMap", "classTang_1_1ComputedExpressionMap.html", null ],
       [ "Tang::ComputedExpressionNativeBoundFunction", "classTang_1_1ComputedExpressionNativeBoundFunction.html", null ],
       [ "Tang::ComputedExpressionNativeFunction", "classTang_1_1ComputedExpressionNativeFunction.html", null ],
+      [ "Tang::ComputedExpressionNativeLibraryFunction", "classTang_1_1ComputedExpressionNativeLibraryFunction.html", null ],
       [ "Tang::ComputedExpressionString", "classTang_1_1ComputedExpressionString.html", null ]
     ] ],
     [ "Tang::Context", "classTang_1_1Context.html", null ],

@@ -111,15 +111,16 @@ Collaboration diagram for Tang::TangBase:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTang_1_1TangBase__coll__graph.png" border="0" usemap="#aTang_1_1TangBase_coll__map" alt="Collaboration graph"/></div>
 <map name="aTang_1_1TangBase_coll__map" id="aTang_1_1TangBase_coll__map">
-<area shape="rect" title="The base class for the Tang programming language." alt="" coords="867,86,989,113"/>
+<area shape="rect" title="The base class for the Tang programming language." alt="" coords="876,118,999,145"/>
 <area shape="rect" title=" " alt="" coords="520,5,703,47"/>
+<area shape="rect" title=" " alt="" coords="516,71,707,127"/>
+<area shape="rect" title=" " alt="" coords="257,135,392,162"/>
 <area shape="rect" title=" " alt="" coords="505,151,717,207"/>
-<area shape="rect" title=" " alt="" coords="257,158,392,185"/>
-<area shape="rect" title=" " alt="" coords="507,71,715,127"/>
-<area shape="rect" title=" " alt="" coords="55,150,94,177"/>
-<area shape="rect" title=" " alt="" coords="55,201,94,227"/>
-<area shape="rect" title=" " alt="" coords="281,75,368,102"/>
-<area shape="rect" title=" " alt="" coords="5,68,144,109"/>
+<area shape="rect" title=" " alt="" coords="55,103,94,130"/>
+<area shape="rect" title=" " alt="" coords="55,154,94,181"/>
+<area shape="rect" title=" " alt="" coords="530,232,693,273"/>
+<area shape="rect" title=" " alt="" coords="281,239,368,266"/>
+<area shape="rect" title=" " alt="" coords="5,232,144,273"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -138,10 +139,14 @@ Public Member Functions</h2></td></tr>
 std::map&lt; std::type_index, <a class="el" href="macros_8hpp.html#a6d1db65473ddfd8c22fd26b1d65bc530">NativeBoundFunctionMap</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1TangBase.html#a62dfbf8c82da22d0c83d920c78c08eed">getObjectMethods</a> ()</td></tr>
 <tr class="memdesc:a62dfbf8c82da22d0c83d920c78c08eed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the object methods available to this instance of the base language object. <br /></td></tr>
 <tr class="separator:a62dfbf8c82da22d0c83d920c78c08eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98004f8151b590f298048fbf263bf7cd"><td class="memItemLeft" align="right" valign="top"><a id="a98004f8151b590f298048fbf263bf7cd"></a>
-std::unordered_map&lt; std::string, <a class="el" href="macros_8hpp.html#aaf843cacf1f354f57b7da59c615e50af">NativeFunctionMap</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1TangBase.html#a98004f8151b590f298048fbf263bf7cd">getLibraries</a> ()</td></tr>
-<tr class="memdesc:a98004f8151b590f298048fbf263bf7cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the libraries available to this instance of the base language object. <br /></td></tr>
-<tr class="separator:a98004f8151b590f298048fbf263bf7cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4c92aa7a604522e7f9ecbd930fc561d"><td class="memItemLeft" align="right" valign="top"><a id="ad4c92aa7a604522e7f9ecbd930fc561d"></a>
+<a class="el" href="macros_8hpp.html#a497b271a17e2d6f921ae341266ada023">LibraryFunctionMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1TangBase.html#ad4c92aa7a604522e7f9ecbd930fc561d">getLibraries</a> ()</td></tr>
+<tr class="memdesc:ad4c92aa7a604522e7f9ecbd930fc561d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the libraries available to this instance of the base language object. <br /></td></tr>
+<tr class="separator:ad4c92aa7a604522e7f9ecbd930fc561d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4f22a5586c7988e1c5d1192819db3b0"><td class="memItemLeft" align="right" valign="top"><a id="af4f22a5586c7988e1c5d1192819db3b0"></a>
+std::unordered_map&lt; std::type_index, <a class="el" href="macros_8hpp.html#a497b271a17e2d6f921ae341266ada023">LibraryFunctionMap</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1TangBase.html#af4f22a5586c7988e1c5d1192819db3b0">getLibraryAttributes</a> ()</td></tr>
+<tr class="memdesc:af4f22a5586c7988e1c5d1192819db3b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the library attributes available to this instance of the base language object. <br /></td></tr>
+<tr class="separator:af4f22a5586c7988e1c5d1192819db3b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -155,10 +160,14 @@ Private Attributes</h2></td></tr>
 std::map&lt; std::type_index, <a class="el" href="macros_8hpp.html#a6d1db65473ddfd8c22fd26b1d65bc530">NativeBoundFunctionMap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1TangBase.html#a019efe0e4e6a30b3ca740922e96637a0">objectMethods</a></td></tr>
 <tr class="memdesc:a019efe0e4e6a30b3ca740922e96637a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store the available object methods. <br /></td></tr>
 <tr class="separator:a019efe0e4e6a30b3ca740922e96637a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cd473903e9e777f8100d82645a26a5b"><td class="memItemLeft" align="right" valign="top"><a id="a6cd473903e9e777f8100d82645a26a5b"></a>
-std::unordered_map&lt; std::string, <a class="el" href="macros_8hpp.html#aaf843cacf1f354f57b7da59c615e50af">NativeFunctionMap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1TangBase.html#a6cd473903e9e777f8100d82645a26a5b">libraries</a></td></tr>
-<tr class="memdesc:a6cd473903e9e777f8100d82645a26a5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store the available libraries. <br /></td></tr>
-<tr class="separator:a6cd473903e9e777f8100d82645a26a5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae718d8d5b0c1ff49230b6582bd9776d9"><td class="memItemLeft" align="right" valign="top"><a id="ae718d8d5b0c1ff49230b6582bd9776d9"></a>
+<a class="el" href="macros_8hpp.html#a497b271a17e2d6f921ae341266ada023">LibraryFunctionMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1TangBase.html#ae718d8d5b0c1ff49230b6582bd9776d9">libraries</a></td></tr>
+<tr class="memdesc:ae718d8d5b0c1ff49230b6582bd9776d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store the available libraries. <br /></td></tr>
+<tr class="separator:ae718d8d5b0c1ff49230b6582bd9776d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a503f9b7f6a515e7bb4cde9339e9b867d"><td class="memItemLeft" align="right" valign="top"><a id="a503f9b7f6a515e7bb4cde9339e9b867d"></a>
+std::unordered_map&lt; std::type_index, <a class="el" href="macros_8hpp.html#a497b271a17e2d6f921ae341266ada023">LibraryFunctionMap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1TangBase.html#a503f9b7f6a515e7bb4cde9339e9b867d">libraryAttributes</a></td></tr>
+<tr class="memdesc:a503f9b7f6a515e7bb4cde9339e9b867d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store the available library attributes. <br /></td></tr>
+<tr class="separator:a503f9b7f6a515e7bb4cde9339e9b867d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The base class for the Tang programming language. </p>

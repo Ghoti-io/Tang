@@ -117,6 +117,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "computedExpressionLibrary.hpp", "computedExpressionLibrary_8hpp.html", [
       [ "ComputedExpressionLibrary", "classTang_1_1ComputedExpressionLibrary.html", "classTang_1_1ComputedExpressionLibrary" ]
     ] ],
+    [ "computedExpressionLibraryMath.hpp", "computedExpressionLibraryMath_8hpp.html", [
+      [ "ComputedExpressionLibraryMath", "classTang_1_1ComputedExpressionLibraryMath.html", "classTang_1_1ComputedExpressionLibraryMath" ]
+    ] ],
     [ "computedExpressionMap.hpp", "computedExpressionMap_8hpp.html", [
       [ "ComputedExpressionMap", "classTang_1_1ComputedExpressionMap.html", "classTang_1_1ComputedExpressionMap" ]
     ] ],
@@ -125,6 +128,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     ] ],
     [ "computedExpressionNativeFunction.hpp", "computedExpressionNativeFunction_8hpp.html", [
       [ "ComputedExpressionNativeFunction", "classTang_1_1ComputedExpressionNativeFunction.html", "classTang_1_1ComputedExpressionNativeFunction" ]
+    ] ],
+    [ "computedExpressionNativeLibraryFunction.hpp", "computedExpressionNativeLibraryFunction_8hpp.html", [
+      [ "ComputedExpressionNativeLibraryFunction", "classTang_1_1ComputedExpressionNativeLibraryFunction.html", "classTang_1_1ComputedExpressionNativeLibraryFunction" ]
     ] ],
     [ "computedExpressionString.hpp", "computedExpressionString_8hpp.html", [
       [ "ComputedExpressionString", "classTang_1_1ComputedExpressionString.html", "classTang_1_1ComputedExpressionString" ]

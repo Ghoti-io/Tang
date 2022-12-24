@@ -1,6 +1,6 @@
 var classTang_1_1ComputedExpressionLibrary =
 [
-    [ "ComputedExpressionLibrary", "classTang_1_1ComputedExpressionLibrary.html#a28ad12b5c049e82fb71ca5a19bc7692c", null ],
+    [ "ComputedExpressionLibrary", "classTang_1_1ComputedExpressionLibrary.html#a94adfb4797a4a49f62e62e504760f442", null ],
     [ "__add", "classTang_1_1ComputedExpressionLibrary.html#a7265dda9f1e6db478f0c1cd9c3e37aa9", null ],
     [ "__asCode", "classTang_1_1ComputedExpressionLibrary.html#a6d0c01f57a6a2b6b8ec701202b16af94", null ],
     [ "__assign_index", "classTang_1_1ComputedExpressionLibrary.html#a011d86ce9b04fca4bef67b4c5bb3324c", null ],
@@ -17,7 +17,7 @@ var classTang_1_1ComputedExpressionLibrary =
     [ "__multiply", "classTang_1_1ComputedExpressionLibrary.html#a39df4abc066123ec2d634e921be40d21", null ],
     [ "__negative", "classTang_1_1ComputedExpressionLibrary.html#a8e779d014cbb877f078d61a2ff91603d", null ],
     [ "__not", "classTang_1_1ComputedExpressionLibrary.html#ac21f9e07c9d1f0a98b60bb1d75d8e87d", null ],
-    [ "__period", "classTang_1_1ComputedExpressionLibrary.html#a5d83d6e7243a7af7aae63e77c8fd680a", null ],
+    [ "__period", "classTang_1_1ComputedExpressionLibrary.html#a4cb7540d998586eaf5f5aa2134e27173", null ],
     [ "__slice", "classTang_1_1ComputedExpressionLibrary.html#aa7a262384220a86eb273284f8990ca84", null ],
     [ "__string", "classTang_1_1ComputedExpressionLibrary.html#a14a57cffe9fb44b0d5f34d06afd0db1b", null ],
     [ "__subtract", "classTang_1_1ComputedExpressionLibrary.html#ab0d79debcd475a5063e574c10f1715ff", null ],
@@ -29,6 +29,5 @@ var classTang_1_1ComputedExpressionLibrary =
     [ "is_equal", "classTang_1_1ComputedExpressionLibrary.html#a7265d530e9b32f55d2485a326ab353aa", null ],
     [ "is_equal", "classTang_1_1ComputedExpressionLibrary.html#a76aaf726b67cedb54b6b3c75c834645f", null ],
     [ "isCopyNeeded", "classTang_1_1ComputedExpressionLibrary.html#a493f58bd7f51ca4d6b9b1ef1860b4370", null ],
-    [ "makeCopy", "classTang_1_1ComputedExpressionLibrary.html#a358bd27080cf96a6a75e1824d27b509f", null ],
-    [ "library", "classTang_1_1ComputedExpressionLibrary.html#a37e081b61c704ddb56661dec07b9322a", null ]
+    [ "makeCopy", "classTang_1_1ComputedExpressionLibrary.html#a358bd27080cf96a6a75e1824d27b509f", null ]
 ];

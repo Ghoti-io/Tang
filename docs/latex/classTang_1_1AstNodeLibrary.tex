@@ -11,8 +11,7 @@ An \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} that represents an identif
 
 
 
-Inheritance diagram for Tang\+::Ast\+Node\+Library\+:
-\nopagebreak
+Inheritance diagram for Tang\+::Ast\+Node\+Library\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -39,7 +38,7 @@ enum \mbox{\hyperlink{classTang_1_1AstNode_ae0f662cd990cd733c7d5447ea3a1e641}{Pr
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTang_1_1AstNodeLibrary_a1162a7d084ab68d6ec48fcd500b05c08}{Ast\+Node\+Library}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeLibrary_abf7f215890ed9965e3ce7057152bdef8}{expression}}, const std\+::string \&\mbox{\hyperlink{classTang_1_1AstNodeLibrary_af7f107d3b5dff043fa12aee6df5acc0b}{name}}, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
+\mbox{\hyperlink{classTang_1_1AstNodeLibrary_a87a3c719347149de311107ce6c310e89}{Ast\+Node\+Library}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeLibrary_abf7f215890ed9965e3ce7057152bdef8}{expression}}, const std\+::string \&\mbox{\hyperlink{classTang_1_1AstNodeLibrary_aae16814956c24c8080c736b61a0d264a}{alias}}, \mbox{\hyperlink{classTang_1_1location}{Tang\+::location}} \mbox{\hyperlink{classTang_1_1location}{location}})
 \begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
 virtual std\+::string \mbox{\hyperlink{classTang_1_1AstNodeLibrary_a7b4fa289027bb8612b80535fdd5e8f2a}{dump}} (std\+::string indent=\char`\"{}\char`\"{}) const override
 \begin{DoxyCompactList}\small\item\em Return a string that describes the contents of the node. \end{DoxyCompactList}\item 
@@ -50,8 +49,8 @@ virtual void \mbox{\hyperlink{classTang_1_1AstNodeLibrary_a1c469e3dfd049cac861cc
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classTang_1_1AstNodeLibrary_af7f107d3b5dff043fa12aee6df5acc0b}\label{classTang_1_1AstNodeLibrary_af7f107d3b5dff043fa12aee6df5acc0b}} 
-std\+::string \mbox{\hyperlink{classTang_1_1AstNodeLibrary_af7f107d3b5dff043fa12aee6df5acc0b}{name}}
+\mbox{\Hypertarget{classTang_1_1AstNodeLibrary_aae16814956c24c8080c736b61a0d264a}\label{classTang_1_1AstNodeLibrary_aae16814956c24c8080c736b61a0d264a}} 
+std\+::string \mbox{\hyperlink{classTang_1_1AstNodeLibrary_aae16814956c24c8080c736b61a0d264a}{alias}}
 \begin{DoxyCompactList}\small\item\em The alias to use for the library expression. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTang_1_1AstNodeLibrary_abf7f215890ed9965e3ce7057152bdef8}\label{classTang_1_1AstNodeLibrary_abf7f215890ed9965e3ce7057152bdef8}} 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$ \mbox{\hyperlink{classTang_1_1AstNodeLibrary_abf7f215890ed9965e3ce7057152bdef8}{expression}}
@@ -93,11 +92,11 @@ Is\+Assignment&\mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} is part of an 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classTang_1_1AstNodeLibrary_a1162a7d084ab68d6ec48fcd500b05c08}\label{classTang_1_1AstNodeLibrary_a1162a7d084ab68d6ec48fcd500b05c08}} 
+\mbox{\Hypertarget{classTang_1_1AstNodeLibrary_a87a3c719347149de311107ce6c310e89}\label{classTang_1_1AstNodeLibrary_a87a3c719347149de311107ce6c310e89}} 
 \index{Tang::AstNodeLibrary@{Tang::AstNodeLibrary}!AstNodeLibrary@{AstNodeLibrary}}
 \index{AstNodeLibrary@{AstNodeLibrary}!Tang::AstNodeLibrary@{Tang::AstNodeLibrary}}
 \doxysubsubsection{\texorpdfstring{AstNodeLibrary()}{AstNodeLibrary()}}
-{\footnotesize\ttfamily Ast\+Node\+Library\+::\+Ast\+Node\+Library (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$}]{expression,  }\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{location }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Ast\+Node\+Library\+::\+Ast\+Node\+Library (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$}]{expression,  }\item[{const std\+::string \&}]{alias,  }\item[{\mbox{\hyperlink{classTang_1_1location}{Tang\+::location}}}]{location }\end{DoxyParamCaption})}
 
 
 
@@ -107,7 +106,7 @@ The constructor.
 \begin{DoxyParams}{Parameters}
 {\em expression} & The library expression. \\
 \hline
-{\em name} & The name of the identifier. \\
+{\em alias} & An alias used to access the library expression within the script. \\
 \hline
 {\em location} & The location associated with the expression. \\
 \hline
@@ -134,8 +133,7 @@ Compile the ast of the provided \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\
 
 Reimplemented from \mbox{\hyperlink{classTang_1_1AstNode_a390f8887c418f972d75e968f1274b2cb}{Tang\+::\+Ast\+Node}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
