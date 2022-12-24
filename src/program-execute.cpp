@@ -18,6 +18,7 @@
 #include "computedExpressionMap.hpp"
 #include "computedExpressionCompiledFunction.hpp"
 #include "computedExpressionNativeBoundFunction.hpp"
+#include "computedExpressionNativeLibraryFunction.hpp"
 #include "computedExpressionNativeFunction.hpp"
 #include "computedExpressionIteratorEnd.hpp"
 
@@ -425,9 +426,23 @@ Context Program::execute(ContextData && data) {
         auto lhs = stack.back();
         stack.pop_back();
         auto tmp = lhs->__period(rhs, this->tang);
+
+        // Resolve any library attribute requests.
+        // This could not be done earlier, because __period() does not have
+        // access to the context object, which is needed by the library
+        // attribute function.  So we clean up that part now.
+        while (typeid(*tmp) == typeid(ComputedExpressionNativeLibraryFunction)) {
+          tmp = static_cast<ComputedExpressionNativeLibraryFunction &>(*tmp).getFunction()(context);
+        }
+
+        // Set the target of a native bound function.
+        // This could not be done earlier, because __period() does not have
+        // access to the target object (lhs).  So we clean up that part now.
         if (typeid(*tmp) == typeid(ComputedExpressionNativeBoundFunction)) {
           static_cast<ComputedExpressionNativeBoundFunction &>(*tmp).target = lhs;
         }
+
+        // Finally, push the result onto the stack.
         stack.push_back(tmp);
         ++pc;
         break;
