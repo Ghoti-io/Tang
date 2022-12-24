@@ -35,11 +35,10 @@
 //   * percent encode
 //   * percent decode
 // * Better location tracking for bytecode and error reporting.
-// * "use" syntax to import libraries
-//   * Tang version
+// * Tang version
 // * Library Extension
-// * Math library
-//   * round, min, max, log, ceil, floor, exp
+// * Math library (started)
+//   * round, min, max, log, ceil, exp
 //   * number format to string
 // * Date/Time type & functions
 // * Execution count timeout
