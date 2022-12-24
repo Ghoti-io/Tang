@@ -387,6 +387,10 @@ closedStatement
     {
       $$ = std::make_shared<AstNodeLibrary>(std::make_shared<AstNodeIdentifier>($2, @2), $2, @1);
     }
+  | "use" IDENTIFIER "as" IDENTIFIER ";"
+    {
+      $$ = std::make_shared<AstNodeLibrary>(std::make_shared<AstNodeIdentifier>($2, @2), $4, @1);
+    }
   ;
 
 // These should only have an openStatement as the last terminal.

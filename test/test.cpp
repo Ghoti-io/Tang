@@ -2245,7 +2245,6 @@ TEST(Library, Use) {
     )");
     EXPECT_EQ(p1.execute().out, "3");
   }
-/*
   {
     // "use..as" invocation
     auto p1 = tang->compileScript(R"(
@@ -2254,6 +2253,7 @@ TEST(Library, Use) {
     )");
     EXPECT_EQ(p1.execute().out, "3");
   }
+/*
   {
     // "use..as" invocation
     auto p1 = tang->compileScript(R"(
