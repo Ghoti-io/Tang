@@ -7,6 +7,8 @@
 #include "computedExpressionArray.hpp"
 #include "computedExpressionString.hpp"
 #include "computedExpressionError.hpp"
+#include "computedExpressionLibraryMath.hpp"
+#include "context.hpp"
 
 using namespace std;
 using namespace Tang;
@@ -14,7 +16,15 @@ using namespace Tang;
 TangBase::TangBase() : objectMethods{
     {type_index(typeid(ComputedExpressionArray)), ComputedExpressionArray::getMethods()},
     {type_index(typeid(ComputedExpressionString)), ComputedExpressionString::getMethods()},
-  }, libraries{} {};
+  },
+  libraries{
+    {"math", []([[maybe_unused]] Context & context) {
+      return GarbageCollected::make<ComputedExpressionLibraryMath>();
+    }},
+	},
+  libraryAttributes{
+    {type_index(typeid(ComputedExpressionLibraryMath)), ComputedExpressionLibraryMath::getLibraryAttributes()},
+	} {};
 
 Program TangBase::compileScript(string script) {
   return Program{script, Program::CodeType::Script, this->shared_from_this()};

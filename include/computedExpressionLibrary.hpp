@@ -17,8 +17,6 @@ namespace Tang {
     public:
       /**
        * Construct a Runtime Library
-       *
-       * @param library The NativeFunctionMap this library represents.
        */
       ComputedExpressionLibrary();
 

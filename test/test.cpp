@@ -2237,28 +2237,28 @@ TEST(Compile, ShortCodes) {
 }
 
 TEST(Library, Use) {
-/*
   {
     // "use" invocation
     auto p1 = tang->compileScript(R"(
       use math;
-      print(math.abs(3.5));
+      print(math.floor(3.5));
     )");
     EXPECT_EQ(p1.execute().out, "3");
   }
+/*
   {
     // "use..as" invocation
     auto p1 = tang->compileScript(R"(
       use math as m;
-      print(m.abs(3.5));
+      print(m.floor(3.5));
     )");
     EXPECT_EQ(p1.execute().out, "3");
   }
   {
     // "use..as" invocation
     auto p1 = tang->compileScript(R"(
-      use math.abs as abs;
-      print(abs(3.5));
+      use math.floor as floor;
+      print(floor(3.5));
     )");
     EXPECT_EQ(p1.execute().out, "3");
   }
