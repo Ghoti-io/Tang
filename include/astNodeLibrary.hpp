@@ -21,25 +21,18 @@ namespace Tang {
      * The constructor.
      *
      * @param expression The library expression.
-     * @param alias An alias used to access the library expression within the
-     *   script.
      * @param location The location associated with the expression.
      */
-    AstNodeLibrary(std::shared_ptr<AstNode> expression, const std::string & alias, Tang::location location);
+    AstNodeLibrary(const std::string & libraryName, Tang::location location);
 
     virtual std::string dump(std::string indent = "") const override;
     virtual void compile(Tang::Program & program) const override;
     virtual void compilePreprocess(Program & program, PreprocessState state) const override;
 
     /**
-     * The alias to use for the library expression.
+     * The library name.
      */
-    std::string alias;
-
-    /**
-     * The library expression.
-     */
-    std::shared_ptr<AstNode> expression;
+    std::string libraryName;
   };
 }
 

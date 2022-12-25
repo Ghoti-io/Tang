@@ -2253,16 +2253,14 @@ TEST(Library, Use) {
     )");
     EXPECT_EQ(p1.execute().out, "3");
   }
-/*
   {
-    // "use..as" invocation
+    // "use..as" invocation with an expression, not just the library name.
     auto p1 = tang->compileScript(R"(
       use math.floor as floor;
       print(floor(3.5));
     )");
     EXPECT_EQ(p1.execute().out, "3");
   }
-*/
 }
 
 int main(int argc, char** argv) {

@@ -134,6 +134,7 @@
 // https://www.gnu.org/software/bison/manual/bison.html#index-_0025type
 %type <std::shared_ptr<Tang::AstNode>> program
 %type <std::shared_ptr<Tang::AstNode>> expression
+%type <std::shared_ptr<Tang::AstNode>> libraryExpression
 %type <std::vector<std::shared_ptr<Tang::AstNode>>> statements
 %type <std::vector<std::string>> functionDeclarationArguments
 %type <std::vector<std::shared_ptr<Tang::AstNode>>> expressionList
@@ -207,6 +208,7 @@ namespace Tang {
 #include "astNodeRangedFor.hpp"
 #include "astNodeReturn.hpp"
 #include "astNodeSlice.hpp"
+#include "astNodeUse.hpp"
 
 // We must provide the yylex() function.
 // yylex() arguments are defined in the bison .y file.
@@ -385,11 +387,22 @@ closedStatement
     }
   | "use" IDENTIFIER ";"
     {
-      $$ = std::make_shared<AstNodeLibrary>(std::make_shared<AstNodeIdentifier>($2, @2), $2, @1);
+      $$ = std::make_shared<AstNodeUse>(std::make_shared<AstNodeLibrary>($2, @1), $2, @1);
     }
-  | "use" IDENTIFIER "as" IDENTIFIER ";"
+  | "use" libraryExpression "as" IDENTIFIER ";"
     {
-      $$ = std::make_shared<AstNodeLibrary>(std::make_shared<AstNodeIdentifier>($2, @2), $4, @1);
+      $$ = std::make_shared<AstNodeUse>($2, $4, @1);
+    }
+  ;
+
+libraryExpression
+  : IDENTIFIER
+    {
+      $$ = std::make_shared<AstNodeLibrary>($1, @1);
+    }
+  | libraryExpression "." IDENTIFIER
+    {
+      $$ = std::make_shared<AstNodePeriod>($1, $3, @1);
     }
   ;
 
