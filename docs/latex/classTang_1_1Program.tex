@@ -11,7 +11,8 @@ Represents a compiled script or template that may be executed.
 
 
 
-Collaboration diagram for Tang\+::Program\+:\nopagebreak
+Collaboration diagram for Tang\+::Program\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -59,6 +60,10 @@ void \mbox{\hyperlink{classTang_1_1Program_ab6ffaae61038ad76502d9fd5c26a69f2}{ad
 \begin{DoxyCompactList}\small\item\em Add an identifier to the environment. \end{DoxyCompactList}\item 
 const std\+::map$<$ std\+::string, size\+\_\+t $>$ \& \mbox{\hyperlink{classTang_1_1Program_a788deba60696516b2019081afdead30c}{get\+Identifiers}} () const
 \begin{DoxyCompactList}\small\item\em Get the identifier map of the current environment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTang_1_1Program_a9737c37d13b8db7d3a4f9effd817fdd1}{add\+Library\+Alias}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Add a library alias to the environment. \end{DoxyCompactList}\item 
+const std\+::map$<$ std\+::string, \mbox{\hyperlink{macros_8hpp_ac3ea9ca53071c2710a6034d60f61d76e}{uinteger\+\_\+t}} $>$ \& \mbox{\hyperlink{classTang_1_1Program_a73c9ac65877a7ecfcaf891c4e9ace9f5}{get\+Library\+Aliases}} () const
+\begin{DoxyCompactList}\small\item\em Get the library alias map of the current environment. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classTang_1_1Program_a861d7d5ad832ea2865156c8517b58ad1}{add\+Identifier\+Assigned}} (const std\+::string \&name)
 \begin{DoxyCompactList}\small\item\em Indicate that an identifier will be altered within the associated scope. \end{DoxyCompactList}\item 
 const std\+::set$<$ std\+::string $>$ \& \mbox{\hyperlink{classTang_1_1Program_a93e80b96547877bfb6ed1b01fd0a6b7c}{get\+Identifiers\+Assigned}} () const
@@ -110,6 +115,9 @@ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+::\+Tang
 \mbox{\Hypertarget{classTang_1_1Program_a440bf2cdcd08fe6b2b0c2c19c22fa276}\label{classTang_1_1Program_a440bf2cdcd08fe6b2b0c2c19c22fa276}} 
 std\+::vector$<$ std\+::map$<$ std\+::string, size\+\_\+t $>$ $>$ \mbox{\hyperlink{classTang_1_1Program_a440bf2cdcd08fe6b2b0c2c19c22fa276}{identifier\+Stack}}
 \begin{DoxyCompactList}\small\item\em Stack of mappings of identifiers to their stack locations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1Program_a7c61c1a9764679f46be0bd0c98af05db}\label{classTang_1_1Program_a7c61c1a9764679f46be0bd0c98af05db}} 
+std\+::vector$<$ std\+::map$<$ std\+::string, \mbox{\hyperlink{macros_8hpp_ac3ea9ca53071c2710a6034d60f61d76e}{uinteger\+\_\+t}} $>$ $>$ \mbox{\hyperlink{classTang_1_1Program_a7c61c1a9764679f46be0bd0c98af05db}{library\+Alias\+Stack}}
+\begin{DoxyCompactList}\small\item\em Stack of library aliases that are used in the program. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTang_1_1Program_afca51adb15fa6e650356dc003c50de8d}\label{classTang_1_1Program_afca51adb15fa6e650356dc003c50de8d}} 
 std\+::vector$<$ std\+::set$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classTang_1_1Program_afca51adb15fa6e650356dc003c50de8d}{identifiers\+Assigned\+Stack}}
 \begin{DoxyCompactList}\small\item\em Stack of sets of identifiers that are the target of an assignment statement within the associated scope. \end{DoxyCompactList}\item 
@@ -268,6 +276,21 @@ Indicate that an identifier will be altered within the associated scope.
 {\em name} & The identifier name. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classTang_1_1Program_a9737c37d13b8db7d3a4f9effd817fdd1}\label{classTang_1_1Program_a9737c37d13b8db7d3a4f9effd817fdd1}} 
+\index{Tang::Program@{Tang::Program}!addLibraryAlias@{addLibraryAlias}}
+\index{addLibraryAlias@{addLibraryAlias}!Tang::Program@{Tang::Program}}
+\doxysubsubsection{\texorpdfstring{addLibraryAlias()}{addLibraryAlias()}}
+{\footnotesize\ttfamily void Program\+::add\+Library\+Alias (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Add a library alias to the environment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The library alias to add to the environment. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classTang_1_1Program_a857438c58ac9e9ae420001676ee05582}\label{classTang_1_1Program_a857438c58ac9e9ae420001676ee05582}} 
 \index{Tang::Program@{Tang::Program}!addString@{addString}}
 \index{addString@{addString}!Tang::Program@{Tang::Program}}
@@ -404,6 +427,19 @@ Get the set of identifiers that will be assigned in the current scope.
 
 \begin{DoxyReturn}{Returns}
 A set of identifier names that have been identified as the target of an assignment operator within the current scope. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1Program_a73c9ac65877a7ecfcaf891c4e9ace9f5}\label{classTang_1_1Program_a73c9ac65877a7ecfcaf891c4e9ace9f5}} 
+\index{Tang::Program@{Tang::Program}!getLibraryAliases@{getLibraryAliases}}
+\index{getLibraryAliases@{getLibraryAliases}!Tang::Program@{Tang::Program}}
+\doxysubsubsection{\texorpdfstring{getLibraryAliases()}{getLibraryAliases()}}
+{\footnotesize\ttfamily const map$<$ string, \mbox{\hyperlink{macros_8hpp_ac3ea9ca53071c2710a6034d60f61d76e}{uinteger\+\_\+t}} $>$ \& Program\+::get\+Library\+Aliases (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the library alias map of the current environment. 
+
+\begin{DoxyReturn}{Returns}
+A map of each library alias to its stack position within the current environment. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classTang_1_1Program_a84b2e5e25f57eea224d1c04f1f3741eb}\label{classTang_1_1Program_a84b2e5e25f57eea224d1c04f1f3741eb}} 
 \index{Tang::Program@{Tang::Program}!getResult@{getResult}}
