@@ -7,6 +7,7 @@
 #include "opcode.hpp"
 #include "astNodeLibrary.hpp"
 #include "astNodeIdentifier.hpp"
+#include "program.hpp"
 
 using namespace std;
 using namespace Tang;

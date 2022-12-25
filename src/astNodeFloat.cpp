@@ -6,6 +6,7 @@
 #include <bit>
 #include "astNodeFloat.hpp"
 #include "opcode.hpp"
+#include "program.hpp"
 
 using namespace std;
 using namespace Tang;

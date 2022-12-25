@@ -20,7 +20,7 @@ namespace Tang {
      * @param expression The expression to be returned.
      * @param location The location associated with the return statement.
      */
-    AstNodeReturn(shared_ptr<AstNode> expression, Tang::location location);
+    AstNodeReturn(std::shared_ptr<AstNode> expression, Tang::location location);
 
     virtual std::string dump(std::string indent = "") const override;
     virtual void compile(Tang::Program & program) const override;
@@ -30,7 +30,7 @@ namespace Tang {
     /**
      * The expression to which the operation will be applied.
      */
-    shared_ptr<AstNode> expression;
+    std::shared_ptr<AstNode> expression;
   };
 }
 

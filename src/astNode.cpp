@@ -6,6 +6,7 @@
 #include <iostream>
 #include "macros.hpp"
 #include "astNode.hpp"
+#include "program.hpp"
 #include "opcode.hpp"
 
 using namespace std;

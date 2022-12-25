@@ -20,7 +20,7 @@ namespace Tang {
      * @param text The string to represent.
      * @param location The location associated with the expression.
      */
-    AstNodeString(const string & text, Tang::location location);
+    AstNodeString(const std::string & text, Tang::location location);
 
     /**
      * Construct a string that is either Trusted or Untrusted.
@@ -29,7 +29,7 @@ namespace Tang {
      * @param isTrusted Whether or not the string literal is trusted.
      * @param location The location associated with the expression.
      */
-    AstNodeString(const string & text, bool isTrusted, Tang::location location);
+    AstNodeString(const std::string & text, bool isTrusted, Tang::location location);
 
     virtual std::string dump(std::string indent = "") const override;
     virtual void compile(Tang::Program & program) const override;

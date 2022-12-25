@@ -98,7 +98,7 @@ namespace Tang {
        * @param val The value to compare against.
        * @return True if equal, false if not.
        */
-      virtual bool is_equal(const string & val) const;
+      virtual bool is_equal(const std::string & val) const;
 
       /**
        * Check whether or not the computed expression is equal to another value.

@@ -8,6 +8,7 @@
 #include "astNodeFunctionDeclaration.hpp"
 #include "astNodeString.hpp"
 #include "opcode.hpp"
+#include "program.hpp"
 
 using namespace std;
 using namespace Tang;

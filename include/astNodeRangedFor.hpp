@@ -24,7 +24,7 @@ namespace Tang {
      * @param codeBlock The statement executed when the condition is true.
      * @param location The location associated with the expression.
      */
-    AstNodeRangedFor(shared_ptr<AstNodeIdentifier> target, shared_ptr<AstNode> collection, shared_ptr<AstNode> codeBlock, Tang::location location);
+    AstNodeRangedFor(std::shared_ptr<AstNodeIdentifier> target, std::shared_ptr<AstNode> collection, std::shared_ptr<AstNode> codeBlock, Tang::location location);
 
     virtual std::string dump(std::string indent = "") const override;
     virtual void compile(Tang::Program & program) const override;
@@ -34,23 +34,23 @@ namespace Tang {
     /**
      * The target variable to hold the value for the current loop iteration.
      */
-    shared_ptr<AstNodeIdentifier> target;
+    std::shared_ptr<AstNodeIdentifier> target;
 
     /**
      * The collection through which to iterate.
      */
-    shared_ptr<AstNode> collection;
+    std::shared_ptr<AstNode> collection;
 
     /**
      * The code block executed when the condition is true.
      */
-    shared_ptr<AstNode> codeBlock;
+    std::shared_ptr<AstNode> codeBlock;
 
     /**
      * The unique variable name that this iterator will use to persist its
      * state on the stack.
      */
-    string iteratorVariableName;
+    std::string iteratorVariableName;
   };
 }
 

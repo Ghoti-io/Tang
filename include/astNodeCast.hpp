@@ -31,7 +31,7 @@ namespace Tang {
      * @param expression The expression to be typecast.
      * @param location The location associated with this node.
      */
-    AstNodeCast(Type targetType, shared_ptr<AstNode> expression, Tang::location location);
+    AstNodeCast(Type targetType, std::shared_ptr<AstNode> expression, Tang::location location);
 
     virtual std::string dump(std::string indent = "") const override;
     virtual void compile(Tang::Program & program) const override;
@@ -46,7 +46,7 @@ namespace Tang {
     /**
      * The expression being typecast.
      */
-    shared_ptr<AstNode> expression;
+    std::shared_ptr<AstNode> expression;
   };
 }
 

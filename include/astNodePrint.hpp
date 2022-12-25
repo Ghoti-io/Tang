@@ -28,7 +28,7 @@ namespace Tang {
      * @param expression The expression to be printed.
      * @param location The location associated with the expression.
      */
-    AstNodePrint(Type type, shared_ptr<AstNode> expression, Tang::location location);
+    AstNodePrint(Type type, std::shared_ptr<AstNode> expression, Tang::location location);
 
     virtual std::string dump(std::string indent = "") const override;
     virtual void compile(Tang::Program & program) const override;
@@ -43,7 +43,7 @@ namespace Tang {
     /**
      * The expression to be printed.
      */
-    shared_ptr<AstNode> expression;
+    std::shared_ptr<AstNode> expression;
   };
 }
 

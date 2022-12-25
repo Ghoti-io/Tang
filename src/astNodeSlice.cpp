@@ -7,6 +7,7 @@
 #include <bit>
 #include "astNodeSlice.hpp"
 #include "opcode.hpp"
+#include "program.hpp"
 
 using namespace std;
 using namespace Tang;

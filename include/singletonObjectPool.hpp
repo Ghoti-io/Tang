@@ -8,7 +8,7 @@
 
 #include <mutex>
 #include <iostream>
-using namespace std;
+
 /**
  * The threshold size to use when allocating blocks of data, measured in the
  * number of instances of the object type.

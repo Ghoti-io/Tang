@@ -22,7 +22,7 @@ namespace Tang {
 
       virtual std::string dump() const override;
       GarbageCollected makeCopy() const override;
-      GarbageCollected __period(const GarbageCollected & member, shared_ptr<TangBase> & tang) const override;
+      GarbageCollected __period(const GarbageCollected & member, std::shared_ptr<TangBase> & tang) const override;
   };
 }
 

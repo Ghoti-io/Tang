@@ -210,6 +210,8 @@ namespace Tang {
 #include "astNodeSlice.hpp"
 #include "astNodeUse.hpp"
 
+using namespace std;
+
 // We must provide the yylex() function.
 // yylex() arguments are defined in the bison .y file.
 // It is conceivable that a programmer may want to have multiple compilers in

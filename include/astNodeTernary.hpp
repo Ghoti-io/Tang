@@ -23,7 +23,7 @@ namespace Tang {
      * @param falseExpression The expression executed when the condition is false.
      * @param location The location associated with the expression.
      */
-    AstNodeTernary(shared_ptr<AstNode> condition, shared_ptr<AstNode> trueExpression, shared_ptr<AstNode> falseExpression, Tang::location location);
+    AstNodeTernary(std::shared_ptr<AstNode> condition, std::shared_ptr<AstNode> trueExpression, std::shared_ptr<AstNode> falseExpression, Tang::location location);
 
     virtual std::string dump(std::string indent = "") const override;
     virtual void compile(Tang::Program & program) const override;
@@ -34,17 +34,17 @@ namespace Tang {
      * The expression which determines whether the trueExpression or
      * falseExpression is executed.
      */
-    shared_ptr<AstNode> condition;
+    std::shared_ptr<AstNode> condition;
 
     /**
      * The expression executed when the condition is true.
      */
-    shared_ptr<AstNode> trueExpression;
+    std::shared_ptr<AstNode> trueExpression;
 
     /**
      * The expression executed when the condition is false.
      */
-    shared_ptr<AstNode> falseExpression;
+    std::shared_ptr<AstNode> falseExpression;
   };
 }
 

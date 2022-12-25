@@ -29,7 +29,7 @@ namespace Tang {
      * @param operand The expression to be operated on.
      * @param location The location associated with the expression.
      */
-    AstNodeUnary(Operator op, shared_ptr<AstNode> operand, Tang::location location);
+    AstNodeUnary(Operator op, std::shared_ptr<AstNode> operand, Tang::location location);
 
     virtual std::string dump(std::string indent = "") const override;
     virtual void compile(Tang::Program & program) const override;
@@ -44,7 +44,7 @@ namespace Tang {
     /**
      * The operand to which the operation will be applied.
      */
-    shared_ptr<AstNode> operand;
+    std::shared_ptr<AstNode> operand;
   };
 }
 

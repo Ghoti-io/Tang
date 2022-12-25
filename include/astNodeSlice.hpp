@@ -23,7 +23,7 @@ namespace Tang {
      * @param skip The skip index position of the slice.
      * @param location The location associated with the expression.
      */
-    AstNodeSlice(shared_ptr<AstNode> collection, shared_ptr<AstNode> begin, shared_ptr<AstNode> end, shared_ptr<AstNode> slice, Tang::location location);
+    AstNodeSlice(std::shared_ptr<AstNode> collection, std::shared_ptr<AstNode> begin, std::shared_ptr<AstNode> end, std::shared_ptr<AstNode> slice, Tang::location location);
 
     virtual std::string dump(std::string indent = "") const override;
     virtual void compile(Tang::Program & program) const override;
@@ -33,22 +33,22 @@ namespace Tang {
     /**
      * The collection which will be sliced.
      */
-    shared_ptr<AstNode> collection;
+    std::shared_ptr<AstNode> collection;
 
     /**
      * The begin index position of the slice.
      */
-    shared_ptr<AstNode> begin;
+    std::shared_ptr<AstNode> begin;
 
     /**
      * The end index position of the slice.
      */
-    shared_ptr<AstNode> end;
+    std::shared_ptr<AstNode> end;
 
     /**
      * The skip index position of the slice.
      */
-    shared_ptr<AstNode> skip;
+    std::shared_ptr<AstNode> skip;
   };
 }
 

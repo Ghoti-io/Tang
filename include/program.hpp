@@ -316,7 +316,7 @@ namespace Tang {
     /**
      * A pointer to the AST, if parsing was successful.
      */
-    shared_ptr<AstNode> ast;
+    std::shared_ptr<AstNode> ast;
 
     /**
      * The Bytecode of the compiled program.

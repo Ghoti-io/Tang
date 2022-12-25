@@ -35,7 +35,7 @@ namespace Tang {
       virtual std::string __asCode() const override;
       GarbageCollected makeCopy() const override;
       virtual bool is_equal(const bool & val) const override;
-      virtual bool is_equal(const string & val) const override;
+      virtual bool is_equal(const std::string & val) const override;
       virtual GarbageCollected __index(const GarbageCollected & index) const override;
       virtual GarbageCollected __slice(const GarbageCollected & begin, const GarbageCollected & end, const GarbageCollected & skip) const override;
       virtual GarbageCollected __getIterator(const GarbageCollected & collection) const override;

@@ -24,7 +24,7 @@ namespace Tang {
      * @param codeBlock The code executed as part of the function. 
      * @param location The location associated with the function declaration.
      */
-    AstNodeFunctionDeclaration(std::string name, std::vector<std::string> arguments, shared_ptr<AstNode> codeBlock, Tang::location location);
+    AstNodeFunctionDeclaration(std::string name, std::vector<std::string> arguments, std::shared_ptr<AstNode> codeBlock, Tang::location location);
 
     virtual std::string dump(std::string indent = "") const override;
     virtual void compile(Tang::Program & program) const override;
@@ -44,7 +44,7 @@ namespace Tang {
     /**
      * The code block executed when the condition is true.
      */
-    shared_ptr<AstNode> codeBlock;
+    std::shared_ptr<AstNode> codeBlock;
   };
 }
 

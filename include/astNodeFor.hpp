@@ -24,7 +24,7 @@ namespace Tang {
      * @param codeBlock The statement executed when the condition is true.
      * @param location The location associated with the expression.
      */
-    AstNodeFor(shared_ptr<AstNode> initialization, shared_ptr<AstNode> condition, shared_ptr<AstNode> increment, shared_ptr<AstNode> codeBlock, Tang::location location);
+    AstNodeFor(std::shared_ptr<AstNode> initialization, std::shared_ptr<AstNode> condition, std::shared_ptr<AstNode> increment, std::shared_ptr<AstNode> codeBlock, Tang::location location);
 
     virtual std::string dump(std::string indent = "") const override;
     virtual void compile(Tang::Program & program) const override;
@@ -34,23 +34,23 @@ namespace Tang {
     /**
      * The expression to be executed first to set up the for() loop.
      */
-    shared_ptr<AstNode> initialization;
+    std::shared_ptr<AstNode> initialization;
 
     /**
      * The expression which determines whether or not the code block will
      * continue to be executed.
      */
-    shared_ptr<AstNode> condition;
+    std::shared_ptr<AstNode> condition;
 
     /**
      * The expression to be executed immediately after the code block.
      */
-    shared_ptr<AstNode> increment;
+    std::shared_ptr<AstNode> increment;
 
     /**
      * The code block executed when the condition is true.
      */
-    shared_ptr<AstNode> codeBlock;
+    std::shared_ptr<AstNode> codeBlock;
   };
 }
 
