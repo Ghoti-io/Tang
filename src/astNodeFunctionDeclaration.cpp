@@ -36,6 +36,8 @@ void AstNodeFunctionDeclaration::compile(Tang::Program & program) const {
   program.addBytecode(0);
 
   // Prepare for a new function environment.
+  // pushEnvironment() will collect all of the expected variable names,
+  // string literals, function declarations, and library aliases.
   program.pushEnvironment(this->codeBlock);
 
   // Ensure that arguments are listed as identifiers in the order that they
@@ -51,11 +53,12 @@ void AstNodeFunctionDeclaration::compile(Tang::Program & program) const {
   // arguments.
   // First, get a vector of stack names in the correct order.
   vector<string> identifiers(program.getIdentifiers().size());
-  for (auto & i : program.getIdentifiers()) {
-    if (i.second < identifiers.size()) {
-      identifiers[i.second] = i.first;
+  for (auto & [name, position] : program.getIdentifiers()) {
+    if (position < identifiers.size()) {
+      identifiers[position] = name;
     }
   }
+
   // Second, add an entry for each identifier.  If the identifier is a
   // function name, then leave enough room in the bytecode.
   // The arguments will have already been placed on the stack by the calling
@@ -70,6 +73,17 @@ void AstNodeFunctionDeclaration::compile(Tang::Program & program) const {
       // Record the fact that this bytecode will need to be populated later,
       // once the function details are known.
       program.functionStackDeclarations[identifiers[i]].push_back(opcodeLocation);
+    }
+    else if (program.getLibraryAliases().count(identifiers[i])) {
+      // This is a library alias.
+      auto & aliases = program.getLibraryAliases();
+      if (aliases.count(identifiers[i])) {
+        program.addBytecode((uinteger_t)Opcode::LIBRARYCOPY);
+        program.addBytecode(aliases.at(identifiers[i]));
+      }
+      else {
+        program.addBytecode((uinteger_t)Opcode::NULLVAL);
+      }
     }
     else {
       // This is just a standard value.

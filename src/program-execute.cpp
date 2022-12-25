@@ -73,6 +73,10 @@ Context Program::execute(ContextData && data) {
   // returning from a function.
   vector<size_t> fpStack{};
 
+  // The stack of library aliases, used to propagate loaded libraries into
+  // the environment of compiled functions during execution.
+  vector<map<uinteger_t, GarbageCollected>> libraryAliasStack{{}};
+
   while (pc < this->bytecode.size()) {
     switch ((Opcode)this->bytecode[pc]) {
       case Opcode::POP: {
@@ -271,6 +275,28 @@ Context Program::execute(ContextData && data) {
         }
 
         ++pc;
+        break;
+      }
+      case Opcode::LIBRARYSAVE: {
+        EXECUTEPROGRAMCHECK(1);
+        auto index = this->bytecode[pc + 1];
+        libraryAliasStack.back().insert({index, stack.back()});
+
+        pc += 2;
+        break;
+      }
+      case Opcode::LIBRARYCOPY: {
+        EXECUTEPROGRAMCHECK(1);
+        auto index = this->bytecode[pc + 1];
+        auto & aliases = libraryAliasStack.back();
+        if (aliases.count(index)) {
+          stack.push_back(aliases.at(index));
+        }
+        else {
+          stack.push_back(GarbageCollected::make<ComputedExpression>());
+        }
+
+        pc += 2;
         break;
       }
       case Opcode::FUNCTION: {

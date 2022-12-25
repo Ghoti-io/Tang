@@ -2261,6 +2261,46 @@ TEST(Library, Use) {
     )");
     EXPECT_EQ(p1.execute().out, "3");
   }
+  {
+    // "use..as" putting alias into global namespace.
+    auto p1 = tang->compileScript(R"(
+      use math.floor as floor;
+      function f(x) {
+        return floor(x);
+      }
+      print(f(3.5));
+    )");
+    EXPECT_EQ(p1.execute().out, "3");
+  }
+  {
+    // "use..as" putting alias into global namespace.
+    // Here, the library reference is not honored, because it has the same name
+    // as an argument.
+    auto p1 = tang->compileScript(R"(
+      use math.floor as floor;
+      function f(floor) {
+        return floor;
+      }
+      print(f(3.5));
+    )");
+    EXPECT_EQ(p1.execute().out, "3.500000");
+  }
+  {
+    // "use..as" putting alias into global namespace.
+    // Here, the library reference is not honored, because it has the same name
+    // as an argument.  The argument belongs to the inner function.
+    auto p1 = tang->compileScript(R"(
+      use math.floor as floor;
+      function f(x) {
+        function fInner(floor) {
+          return floor;
+        }
+        return fInner(x);
+      }
+      print(f(3.5));
+    )");
+    EXPECT_EQ(p1.execute().out, "3.500000");
+  }
 }
 
 int main(int argc, char** argv) {

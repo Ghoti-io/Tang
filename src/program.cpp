@@ -57,6 +57,15 @@ void Program::pushEnvironment(const shared_ptr<AstNode> & ast) {
     this->functionsCollected.push_back({});
   }
 
+  // Forward all of the previous library aliases, and gather any new ones
+  // in the new scope.
+  if (this->libraryAliasStack.size()) {
+    this->libraryAliasStack.push_back(this->libraryAliasStack.back());
+  }
+  else {
+    this->libraryAliasStack.push_back({});
+  }
+
   // Prepare the break stack.
   this->pushBreakStack();
 
@@ -94,6 +103,9 @@ void Program::popEnvironment() {
 
   // Restore the `functionsCollected` stack to the previous scope state.
   this->functionsCollected.pop_back();
+
+  // Restore the `libraryAliasStack` to the previous scope state.
+  this->libraryAliasStack.pop_back();
 
   // Try to "fill in" break opcodes.
   this->popBreakStack(this->bytecode.size());
@@ -152,6 +164,15 @@ void Program::addIdentifier(const string & name, optional<size_t> position) {
 
 const map<string, size_t>& Program::getIdentifiers() const {
   return this->identifierStack.back();
+}
+
+void Program::addLibraryAlias(const string & name) {
+  auto & currentAliases = this->libraryAliasStack.back();
+  currentAliases.insert({name, currentAliases.size()});
+};
+
+const map<string, uinteger_t> & Program::getLibraryAliases() const {
+  return this->libraryAliasStack.back();
 }
 
 void Program::addIdentifierAssigned(const string & name) {

@@ -147,6 +147,18 @@ string Program::dumpBytecode() const {
         ++pc;
         break;
       }
+      case Opcode::LIBRARYSAVE: {
+        DUMPPROGRAMCHECK(1);
+        out << "LIBRARYSAVE" << this->bytecode[pc + 1];
+        pc += 2;
+        break;
+      }
+      case Opcode::LIBRARYCOPY: {
+        DUMPPROGRAMCHECK(1);
+        out << "LIBRARYCOPY" << this->bytecode[pc + 1];
+        pc += 2;
+        break;
+      }
       case Opcode::FUNCTION: {
         DUMPPROGRAMCHECK(2);
         out << "FUNCTION" << this->bytecode[pc + 1] << " " << this->bytecode[pc + 2];

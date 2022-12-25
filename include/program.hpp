@@ -165,6 +165,21 @@ namespace Tang {
     const std::map<std::string, size_t>& getIdentifiers() const;
 
     /**
+     * Add a library alias to the environment.
+     *
+     * @param name The library alias to add to the environment.
+     */
+    void addLibraryAlias(const std::string & name);
+
+    /**
+     * Get the library alias map of the current environment.
+     *
+     * @return A map of each library alias to its stack position within the
+     *   current environment.
+     */
+    const std::map<std::string, uinteger_t> & getLibraryAliases() const;
+
+    /**
      * Indicate that an identifier will be altered within the associated scope.
      *
      * @param name The identifier name.
@@ -271,6 +286,11 @@ namespace Tang {
      * Stack of mappings of identifiers to their stack locations.
      */
     std::vector<std::map<std::string, size_t>> identifierStack;
+
+    /**
+     * Stack of library aliases that are used in the program.
+     */
+    std::vector<std::map<std::string, uinteger_t>> libraryAliasStack;
 
     /**
      * Stack of sets of identifiers that are the target of an assignment

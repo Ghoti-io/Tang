@@ -24,6 +24,8 @@ namespace Tang {
     MAP,      ///< Get len, pop `len` value then key pairs, putting them into
               ///<   a map
     LIBRARY,  ///< Pop name, push Library identified by name
+    LIBRARYSAVE, ///< Get index, save top of stack to library[index]
+    LIBRARYCOPY, ///< Get index, load from library[index]
     FUNCTION, ///< Get argc, PC#: push function(argc, PC #)
     ASSIGNINDEX, ///< Pop index, pop collection, pop value,
                  ///<   push (collection[index] = value)
