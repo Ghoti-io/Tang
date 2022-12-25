@@ -4,8 +4,8 @@ var classTang_1_1AstNodeString =
       [ "Default", "classTang_1_1AstNodeString.html#ae0f662cd990cd733c7d5447ea3a1e641a0936249b625085e3b4124ae378f9a1c1", null ],
       [ "IsAssignment", "classTang_1_1AstNodeString.html#ae0f662cd990cd733c7d5447ea3a1e641a586bda9718eca4db4d4afac8e298023a", null ]
     ] ],
-    [ "AstNodeString", "classTang_1_1AstNodeString.html#a5cea34da6911ac7bbcb146ae2e5f0be2", null ],
-    [ "AstNodeString", "classTang_1_1AstNodeString.html#a0febadd5fcd92b1097b904feddb51976", null ],
+    [ "AstNodeString", "classTang_1_1AstNodeString.html#a2fb2867df30ad73999f742fdb968f667", null ],
+    [ "AstNodeString", "classTang_1_1AstNodeString.html#ab0480764d07d209a151fe810c0d91178", null ],
     [ "compile", "classTang_1_1AstNodeString.html#a322432a74d87270585bce7739d13878b", null ],
     [ "compileLiteral", "classTang_1_1AstNodeString.html#acbd2f4395d767befc624b5bfaf69eaf0", null ],
     [ "compilePreprocess", "classTang_1_1AstNodeString.html#ab4100d94863c1ed9873b8aa875745218", null ],

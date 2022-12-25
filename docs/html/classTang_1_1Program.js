@@ -31,7 +31,7 @@ var classTang_1_1Program =
     [ "pushEnvironment", "classTang_1_1Program.html#a3ed3e014d80138d61d545a3ef5fe0a2e", null ],
     [ "setFunctionStackDeclaration", "classTang_1_1Program.html#aabcfee07409be5bc6bf1312f26b56a85", null ],
     [ "setJumpTarget", "classTang_1_1Program.html#a5da413efe8435cebd927a8be58dcb9be", null ],
-    [ "ast", "classTang_1_1Program.html#a198a64d60c39f219c74e89819f2afacf", null ],
+    [ "ast", "classTang_1_1Program.html#a5cc63c7bd370755ee30b6a4d2081ddd1", null ],
     [ "breakStack", "classTang_1_1Program.html#a7b046b69c9c937c8414214fa2ef813b2", null ],
     [ "bytecode", "classTang_1_1Program.html#a99f161953dfcc604f639fab842354262", null ],
     [ "code", "classTang_1_1Program.html#a747cd63b40c48f81d17a2501e4fdd0e5", null ],

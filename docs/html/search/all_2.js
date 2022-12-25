@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['begin_129',['begin',['../classTang_1_1AstNodeSlice.html#aa6bf68f98b8143ec6fbc86610e97bcff',1,'Tang::AstNodeSlice::begin()'],['../classTang_1_1location.html#adff0a0a7d855c30ca70c8fb5fd719e67',1,'Tang::location::begin()']]],
+  ['begin_129',['begin',['../classTang_1_1AstNodeSlice.html#a229f658c655b0bf2c5cc621f06ee53c2',1,'Tang::AstNodeSlice::begin()'],['../classTang_1_1location.html#adff0a0a7d855c30ca70c8fb5fd719e67',1,'Tang::location::begin()']]],
   ['boolean_130',['Boolean',['../classTang_1_1AstNodeCast.html#a63a014eee9fd7d365d8177c4bab2c4e4a85206fe18cb8ea971023050f86050b2a',1,'Tang::AstNodeCast']]],
   ['boolean_131',['BOOLEAN',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ac48d5da12d702e73d6966069f2687376',1,'Tang']]],
   ['breakstack_132',['breakStack',['../classTang_1_1Program.html#a7b046b69c9c937c8414214fa2ef813b2',1,'Tang::Program']]],

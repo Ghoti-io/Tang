@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('singletonObjectPool_8hpp_source.html',
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;mutex&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="singletonObjectPool_8hpp.html#a9512012dc8428ba1bd4a3ba555335720">   16</a></span>&#160;<span class="preprocessor">#define GROW 1024</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>Tang {</div>
@@ -106,31 +106,31 @@ $(document).ready(function(){initNavTree('singletonObjectPool_8hpp_source.html',
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classTang_1_1SingletonObjectPool.html#a1dac888021447a848de8f8b002c8fd23">   40</a></span>&#160;    T* <a class="code" href="classTang_1_1SingletonObjectPool.html#a1dac888021447a848de8f8b002c8fd23">get</a>() {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      this-&gt;lock.lock();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a1353f46ca1658afd6691730c3c198793">lock</a>.lock();</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="comment">// If there is a recycled object available, return it first.</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keywordflow">if</span> (this-&gt;currentRecycledAllocation != -1) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keywordflow">if</span> (this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#ac6d3bccb5db5f5e8d4d0492e99aa6243">currentRecycledAllocation</a> != -1) {</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">// Get the block of recycled pointers.</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        T** recycled = (T**)&amp;this-&gt;allocations[this-&gt;currentRecycledAllocation][<a class="code" href="singletonObjectPool_8hpp.html#a9512012dc8428ba1bd4a3ba555335720">GROW</a>];</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        T** recycled = (T**)&amp;this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a63319cf03dfd242b90aa2866de5376d4">allocations</a>[this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#ac6d3bccb5db5f5e8d4d0492e99aa6243">currentRecycledAllocation</a>][<a class="code" href="singletonObjectPool_8hpp.html#a9512012dc8428ba1bd4a3ba555335720">GROW</a>];</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">// Get the pointer to be returned.</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        T* tmp = recycled[this-&gt;currentRecycledIndex--];</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        T* tmp = recycled[this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a3c973458307ae81943d55078c129e5ba">currentRecycledIndex</a>--];</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment">// Decrement the `currentRecycledIndex` and adjust if necessary.</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">if</span> (this-&gt;currentRecycledIndex &lt; 0) {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;          --this-&gt;currentRecycledAllocation;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;          this-&gt;currentRecycledIndex = <a class="code" href="singletonObjectPool_8hpp.html#a9512012dc8428ba1bd4a3ba555335720">GROW</a> - 1;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">if</span> (this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a3c973458307ae81943d55078c129e5ba">currentRecycledIndex</a> &lt; 0) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;          --this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#ac6d3bccb5db5f5e8d4d0492e99aa6243">currentRecycledAllocation</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;          this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a3c973458307ae81943d55078c129e5ba">currentRecycledIndex</a> = <a class="code" href="singletonObjectPool_8hpp.html#a9512012dc8428ba1bd4a3ba555335720">GROW</a> - 1;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        this-&gt;lock.unlock();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a1353f46ca1658afd6691730c3c198793">lock</a>.unlock();</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> tmp;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      }</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <span class="comment">// There wasn&#39;t a recycled object available.  Check to see if there is an</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <span class="comment">// allocation pool memory address available.</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordflow">if</span> (this-&gt;currentIndex &lt; <a class="code" href="singletonObjectPool_8hpp.html#a9512012dc8428ba1bd4a3ba555335720">GROW</a>) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordflow">if</span> (this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a513f1bcde18478abadac77aeeba5ac73">currentIndex</a> &lt; <a class="code" href="singletonObjectPool_8hpp.html#a9512012dc8428ba1bd4a3ba555335720">GROW</a>) {</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">// There is a memory address available at `currentIndex`.</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        T* tmp = &amp;this-&gt;allocations[this-&gt;currentAllocation][this-&gt;currentIndex++];</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        this-&gt;lock.unlock();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        T* tmp = &amp;this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a63319cf03dfd242b90aa2866de5376d4">allocations</a>[this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#aac74dd3a410287874d1dd98bef3a5059">currentAllocation</a>][this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a513f1bcde18478abadac77aeeba5ac73">currentIndex</a>++];</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a1353f46ca1658afd6691730c3c198793">lock</a>.unlock();</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">return</span> tmp;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      }</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
@@ -139,60 +139,60 @@ $(document).ready(function(){initNavTree('singletonObjectPool_8hpp_source.html',
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      T* newBlock = (T*)malloc((<span class="keyword">sizeof</span>(T) * <a class="code" href="singletonObjectPool_8hpp.html#a9512012dc8428ba1bd4a3ba555335720">GROW</a>) + (<span class="keyword">sizeof</span>(T*) * <a class="code" href="singletonObjectPool_8hpp.html#a9512012dc8428ba1bd4a3ba555335720">GROW</a>));</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keywordflow">if</span> (!newBlock) {</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">// The malloc() failed.</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        this-&gt;lock.unlock();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a1353f46ca1658afd6691730c3c198793">lock</a>.unlock();</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">throw</span> std::bad_alloc();</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      T** newAllocation = (T**)realloc(this-&gt;allocations, <span class="keyword">sizeof</span>(T*) * (this-&gt;currentAllocation + 2));</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      T** newAllocation = (T**)realloc(this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a63319cf03dfd242b90aa2866de5376d4">allocations</a>, <span class="keyword">sizeof</span>(T*) * (this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#aac74dd3a410287874d1dd98bef3a5059">currentAllocation</a> + 2));</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keywordflow">if</span> (!newAllocation) {</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="comment">// The realloc() failed. Clean up and throw an exception.</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        this-&gt;lock.unlock();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a1353f46ca1658afd6691730c3c198793">lock</a>.unlock();</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        free (newBlock);</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">throw</span> std::bad_alloc();</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      }</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <span class="comment">// The allocation succeeded.  Wire up all of the pointers.</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      this-&gt;allocations = newAllocation;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      ++this-&gt;currentAllocation;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      this-&gt;allocations[this-&gt;currentAllocation] = newBlock;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      this-&gt;currentIndex = 1;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      T* tmp = &amp;this-&gt;allocations[this-&gt;currentAllocation][0];</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      this-&gt;lock.unlock();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a63319cf03dfd242b90aa2866de5376d4">allocations</a> = newAllocation;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      ++this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#aac74dd3a410287874d1dd98bef3a5059">currentAllocation</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a63319cf03dfd242b90aa2866de5376d4">allocations</a>[this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#aac74dd3a410287874d1dd98bef3a5059">currentAllocation</a>] = newBlock;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a513f1bcde18478abadac77aeeba5ac73">currentIndex</a> = 1;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      T* tmp = &amp;this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a63319cf03dfd242b90aa2866de5376d4">allocations</a>[this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#aac74dd3a410287874d1dd98bef3a5059">currentAllocation</a>][0];</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a1353f46ca1658afd6691730c3c198793">lock</a>.unlock();</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      <span class="keywordflow">return</span> tmp;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
 <div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classTang_1_1SingletonObjectPool.html#ae03f03120231023e4ce7af518fc1bc19">  100</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTang_1_1SingletonObjectPool.html#ae03f03120231023e4ce7af518fc1bc19">recycle</a>(T* obj) {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      this-&gt;lock.lock();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a1353f46ca1658afd6691730c3c198793">lock</a>.lock();</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="comment">// TODO: Verify that there is room in the current recycled block.</span></div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <span class="comment">// ASSERT(this-&gt;currentRecycledAllocation != -1);</span></div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <span class="keywordflow">if</span> (++this-&gt;currentRecycledIndex == <a class="code" href="singletonObjectPool_8hpp.html#a9512012dc8428ba1bd4a3ba555335720">GROW</a>) {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        this-&gt;currentRecycledIndex = 0;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        ++this-&gt;currentRecycledAllocation;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <span class="keywordflow">if</span> (++this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a3c973458307ae81943d55078c129e5ba">currentRecycledIndex</a> == <a class="code" href="singletonObjectPool_8hpp.html#a9512012dc8428ba1bd4a3ba555335720">GROW</a>) {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a3c973458307ae81943d55078c129e5ba">currentRecycledIndex</a> = 0;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        ++this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#ac6d3bccb5db5f5e8d4d0492e99aa6243">currentRecycledAllocation</a>;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      }</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      <span class="comment">// Get the block of recycled pointers.</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      T** recycled = (T**)&amp;this-&gt;allocations[this-&gt;currentRecycledAllocation][<a class="code" href="singletonObjectPool_8hpp.html#a9512012dc8428ba1bd4a3ba555335720">GROW</a>];</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      recycled[this-&gt;currentRecycledIndex] = obj;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      T** recycled = (T**)&amp;this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a63319cf03dfd242b90aa2866de5376d4">allocations</a>[this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#ac6d3bccb5db5f5e8d4d0492e99aa6243">currentRecycledAllocation</a>][<a class="code" href="singletonObjectPool_8hpp.html#a9512012dc8428ba1bd4a3ba555335720">GROW</a>];</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      recycled[this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a3c973458307ae81943d55078c129e5ba">currentRecycledIndex</a>] = obj;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      this-&gt;lock.unlock();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a1353f46ca1658afd6691730c3c198793">lock</a>.unlock();</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
 <div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classTang_1_1SingletonObjectPool.html#aa08b02817cfe13aa257959963db1bbf7">  121</a></span>&#160;    <a class="code" href="classTang_1_1SingletonObjectPool.html#aa08b02817cfe13aa257959963db1bbf7">~SingletonObjectPool</a>() {</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="comment">// It is possible that an object pool was created (via the templated</span></div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <span class="comment">// get() function) but never used.  Don&#39;t free memory unless it was</span></div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      <span class="comment">// actually allocated in the first place.</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      <span class="keywordflow">if</span> (this-&gt;allocations) {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      <span class="keywordflow">if</span> (this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a63319cf03dfd242b90aa2866de5376d4">allocations</a>) {</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="comment">// Free all of the allocation pages.</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt;= this-&gt;currentAllocation; ++i) {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;          free (this-&gt;allocations[i]);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt;= this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#aac74dd3a410287874d1dd98bef3a5059">currentAllocation</a>; ++i) {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;          free (this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a63319cf03dfd242b90aa2866de5376d4">allocations</a>[i]);</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        }</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        free (this-&gt;allocations);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        free (this-&gt;<a class="code" href="classTang_1_1SingletonObjectPool.html#a63319cf03dfd242b90aa2866de5376d4">allocations</a>);</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      }</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="classTang_1_1SingletonObjectPool.html#a0b836e6c39c2c9c4ddd033ef6c5d1395">  138</a></span>&#160;    <a class="code" href="classTang_1_1SingletonObjectPool.html#a0b836e6c39c2c9c4ddd033ef6c5d1395">SingletonObjectPool</a>() : allocations{nullptr}, <span class="comment">/*recycled{nullptr},*/</span> currentAllocation{-1}, currentIndex{<a class="code" href="singletonObjectPool_8hpp.html#a9512012dc8428ba1bd4a3ba555335720">GROW</a>}, currentRecycledAllocation{-1}, currentRecycledIndex{<a class="code" href="singletonObjectPool_8hpp.html#a9512012dc8428ba1bd4a3ba555335720">GROW</a> - 1} {}</div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="classTang_1_1SingletonObjectPool.html#a0b836e6c39c2c9c4ddd033ef6c5d1395">  138</a></span>&#160;    <a class="code" href="classTang_1_1SingletonObjectPool.html#a0b836e6c39c2c9c4ddd033ef6c5d1395">SingletonObjectPool</a>() : <a class="code" href="classTang_1_1SingletonObjectPool.html#a63319cf03dfd242b90aa2866de5376d4">allocations</a>{nullptr}, <span class="comment">/*recycled{nullptr},*/</span> <a class="code" href="classTang_1_1SingletonObjectPool.html#aac74dd3a410287874d1dd98bef3a5059">currentAllocation</a>{-1}, <a class="code" href="classTang_1_1SingletonObjectPool.html#a513f1bcde18478abadac77aeeba5ac73">currentIndex</a>{<a class="code" href="singletonObjectPool_8hpp.html#a9512012dc8428ba1bd4a3ba555335720">GROW</a>}, <a class="code" href="classTang_1_1SingletonObjectPool.html#ac6d3bccb5db5f5e8d4d0492e99aa6243">currentRecycledAllocation</a>{-1}, <a class="code" href="classTang_1_1SingletonObjectPool.html#a3c973458307ae81943d55078c129e5ba">currentRecycledIndex</a>{<a class="code" href="singletonObjectPool_8hpp.html#a9512012dc8428ba1bd4a3ba555335720">GROW</a> - 1} {}</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
 <div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="classTang_1_1SingletonObjectPool.html#a3ebbf0afec6bf855021523dbdce97ac5">  143</a></span>&#160;    <a class="code" href="classTang_1_1SingletonObjectPool.html#a3ebbf0afec6bf855021523dbdce97ac5">SingletonObjectPool</a>(<span class="keyword">const</span> <a class="code" href="classTang_1_1SingletonObjectPool.html">SingletonObjectPool</a> &amp; other) {}</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>

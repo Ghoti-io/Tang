@@ -707,7 +707,7 @@
   \item {dumpBytecode}
     \subitem {Tang::Program}, \hyperpage{410}
   \item {DUMPPROGRAMCHECK}
-    \subitem {program-\/dumpBytecode.cpp}, \hyperpage{528}
+    \subitem {program-\/dumpBytecode.cpp}, \hyperpage{526}
 
   \indexspace
 
@@ -718,11 +718,11 @@
   \item {Error}
     \subitem {Tang::Error}, \hyperpage{381}
   \item {error.cpp}
-    \subitem {operator$<$$<$}, \hyperpage{526}
+    \subitem {operator$<$$<$}, \hyperpage{524}
   \item {execute}
     \subitem {Tang::Program}, \hyperpage{410}
   \item {EXECUTEPROGRAMCHECK}
-    \subitem {program-\/execute.cpp}, \hyperpage{529}
+    \subitem {program-\/execute.cpp}, \hyperpage{527}
 
   \indexspace
 
@@ -740,7 +740,7 @@
   \item {GarbageCollected}
     \subitem {Tang::GarbageCollected}, \hyperpage{384, 385}
   \item {garbageCollected.cpp}
-    \subitem {operator$<$$<$}, \hyperpage{527}
+    \subitem {operator$<$$<$}, \hyperpage{525}
   \item {get}
     \subitem {Tang::SingletonObjectPool$<$ T $>$}, \hyperpage{417}
   \item {get\_next\_token}
@@ -1118,8 +1118,8 @@
     \subitem {Tang::GarbageCollected}, \hyperpage{392}
     \subitem {Tang::UnicodeString}, \hyperpage{429}
   \item {operator$<$$<$}
-    \subitem {error.cpp}, \hyperpage{526}
-    \subitem {garbageCollected.cpp}, \hyperpage{527}
+    \subitem {error.cpp}, \hyperpage{524}
+    \subitem {garbageCollected.cpp}, \hyperpage{525}
     \subitem {location.hh}, \hyperpage{434, 435}
     \subitem {Tang::Error}, \hyperpage{381}
     \subitem {Tang::GarbageCollected}, \hyperpage{397}
@@ -1203,10 +1203,10 @@
   \item {Program}
     \subitem {Tang::Program}, \hyperpage{408}
   \item {program-\/dumpBytecode.cpp}
-    \subitem {DUMPPROGRAMCHECK}, \hyperpage{528}
+    \subitem {DUMPPROGRAMCHECK}, \hyperpage{526}
   \item {program-\/execute.cpp}
-    \subitem {EXECUTEPROGRAMCHECK}, \hyperpage{529}
-    \subitem {STACKCHECK}, \hyperpage{530}
+    \subitem {EXECUTEPROGRAMCHECK}, \hyperpage{527}
+    \subitem {STACKCHECK}, \hyperpage{528}
   \item {pushEnvironment}
     \subitem {Tang::Program}, \hyperpage{414}
 
@@ -1236,59 +1236,59 @@
   \item {src/astNodeAssign.cpp}, \hyperpage{499}
   \item {src/astNodeBinary.cpp}, \hyperpage{499}
   \item {src/astNodeBlock.cpp}, \hyperpage{500}
-  \item {src/astNodeBoolean.cpp}, \hyperpage{501}
+  \item {src/astNodeBoolean.cpp}, \hyperpage{500}
   \item {src/astNodeBreak.cpp}, \hyperpage{501}
-  \item {src/astNodeCast.cpp}, \hyperpage{502}
+  \item {src/astNodeCast.cpp}, \hyperpage{501}
   \item {src/astNodeContinue.cpp}, \hyperpage{502}
-  \item {src/astNodeDoWhile.cpp}, \hyperpage{503}
-  \item {src/astNodeFloat.cpp}, \hyperpage{504}
-  \item {src/astNodeFor.cpp}, \hyperpage{504}
-  \item {src/astNodeFunctionCall.cpp}, \hyperpage{505}
-  \item {src/astNodeFunctionDeclaration.cpp}, \hyperpage{505}
-  \item {src/astNodeIdentifier.cpp}, \hyperpage{506}
-  \item {src/astNodeIfElse.cpp}, \hyperpage{507}
-  \item {src/astNodeIndex.cpp}, \hyperpage{507}
-  \item {src/astNodeInteger.cpp}, \hyperpage{508}
-  \item {src/astNodeLibrary.cpp}, \hyperpage{508}
-  \item {src/astNodeMap.cpp}, \hyperpage{509}
-  \item {src/astNodePeriod.cpp}, \hyperpage{510}
-  \item {src/astNodePrint.cpp}, \hyperpage{510}
-  \item {src/astNodeRangedFor.cpp}, \hyperpage{511}
-  \item {src/astNodeReturn.cpp}, \hyperpage{511}
-  \item {src/astNodeSlice.cpp}, \hyperpage{512}
-  \item {src/astNodeString.cpp}, \hyperpage{513}
-  \item {src/astNodeTernary.cpp}, \hyperpage{513}
-  \item {src/astNodeUnary.cpp}, \hyperpage{514}
-  \item {src/astNodeUse.cpp}, \hyperpage{514}
-  \item {src/astNodeWhile.cpp}, \hyperpage{515}
-  \item {src/computedExpression.cpp}, \hyperpage{516}
-  \item {src/computedExpressionArray.cpp}, \hyperpage{516}
-  \item {src/computedExpressionBoolean.cpp}, \hyperpage{517}
-  \item {src/computedExpressionCompiledFunction.cpp}, \hyperpage{517}
-  \item {src/computedExpressionError.cpp}, \hyperpage{518}
-  \item {src/computedExpressionFloat.cpp}, \hyperpage{519}
-  \item {src/computedExpressionInteger.cpp}, \hyperpage{519}
-  \item {src/computedExpressionIterator.cpp}, \hyperpage{520}
-  \item {src/computedExpressionIteratorEnd.cpp}, \hyperpage{520}
-  \item {src/computedExpressionLibrary.cpp}, \hyperpage{521}
-  \item {src/computedExpressionLibraryMath.cpp}, \hyperpage{522}
-  \item {src/computedExpressionMap.cpp}, \hyperpage{522}
+  \item {src/astNodeDoWhile.cpp}, \hyperpage{502}
+  \item {src/astNodeFloat.cpp}, \hyperpage{503}
+  \item {src/astNodeFor.cpp}, \hyperpage{503}
+  \item {src/astNodeFunctionCall.cpp}, \hyperpage{504}
+  \item {src/astNodeFunctionDeclaration.cpp}, \hyperpage{504}
+  \item {src/astNodeIdentifier.cpp}, \hyperpage{505}
+  \item {src/astNodeIfElse.cpp}, \hyperpage{505}
+  \item {src/astNodeIndex.cpp}, \hyperpage{506}
+  \item {src/astNodeInteger.cpp}, \hyperpage{506}
+  \item {src/astNodeLibrary.cpp}, \hyperpage{507}
+  \item {src/astNodeMap.cpp}, \hyperpage{507}
+  \item {src/astNodePeriod.cpp}, \hyperpage{508}
+  \item {src/astNodePrint.cpp}, \hyperpage{508}
+  \item {src/astNodeRangedFor.cpp}, \hyperpage{509}
+  \item {src/astNodeReturn.cpp}, \hyperpage{509}
+  \item {src/astNodeSlice.cpp}, \hyperpage{510}
+  \item {src/astNodeString.cpp}, \hyperpage{510}
+  \item {src/astNodeTernary.cpp}, \hyperpage{511}
+  \item {src/astNodeUnary.cpp}, \hyperpage{512}
+  \item {src/astNodeUse.cpp}, \hyperpage{512}
+  \item {src/astNodeWhile.cpp}, \hyperpage{513}
+  \item {src/computedExpression.cpp}, \hyperpage{513}
+  \item {src/computedExpressionArray.cpp}, \hyperpage{514}
+  \item {src/computedExpressionBoolean.cpp}, \hyperpage{515}
+  \item {src/computedExpressionCompiledFunction.cpp}, \hyperpage{515}
+  \item {src/computedExpressionError.cpp}, \hyperpage{516}
+  \item {src/computedExpressionFloat.cpp}, \hyperpage{516}
+  \item {src/computedExpressionInteger.cpp}, \hyperpage{517}
+  \item {src/computedExpressionIterator.cpp}, \hyperpage{518}
+  \item {src/computedExpressionIteratorEnd.cpp}, \hyperpage{518}
+  \item {src/computedExpressionLibrary.cpp}, \hyperpage{519}
+  \item {src/computedExpressionLibraryMath.cpp}, \hyperpage{519}
+  \item {src/computedExpressionMap.cpp}, \hyperpage{520}
   \item {src/computedExpressionNativeBoundFunction.cpp}, 
-		\hyperpage{523}
-  \item {src/computedExpressionNativeFunction.cpp}, \hyperpage{523}
+		\hyperpage{521}
+  \item {src/computedExpressionNativeFunction.cpp}, \hyperpage{521}
   \item {src/computedExpressionNativeLibraryFunction.cpp}, 
-		\hyperpage{524}
-  \item {src/computedExpressionString.cpp}, \hyperpage{525}
-  \item {src/context.cpp}, \hyperpage{525}
-  \item {src/error.cpp}, \hyperpage{526}
-  \item {src/garbageCollected.cpp}, \hyperpage{527}
-  \item {src/program-\/dumpBytecode.cpp}, \hyperpage{528}
-  \item {src/program-\/execute.cpp}, \hyperpage{529}
-  \item {src/program.cpp}, \hyperpage{530}
-  \item {src/tangBase.cpp}, \hyperpage{531}
-  \item {src/unicodeString.cpp}, \hyperpage{532}
+		\hyperpage{522}
+  \item {src/computedExpressionString.cpp}, \hyperpage{522}
+  \item {src/context.cpp}, \hyperpage{523}
+  \item {src/error.cpp}, \hyperpage{524}
+  \item {src/garbageCollected.cpp}, \hyperpage{525}
+  \item {src/program-\/dumpBytecode.cpp}, \hyperpage{526}
+  \item {src/program-\/execute.cpp}, \hyperpage{527}
+  \item {src/program.cpp}, \hyperpage{528}
+  \item {src/tangBase.cpp}, \hyperpage{529}
+  \item {src/unicodeString.cpp}, \hyperpage{530}
   \item {STACKCHECK}
-    \subitem {program-\/execute.cpp}, \hyperpage{530}
+    \subitem {program-\/execute.cpp}, \hyperpage{528}
   \item {STRING}
     \subitem {opcode.hpp}, \hyperpage{488}
   \item {String}
@@ -2094,10 +2094,10 @@
     \subitem {Tang::TangScanner}, \hyperpage{423}
   \item {Template}
     \subitem {Tang::Program}, \hyperpage{408}
-  \item {test/test.cpp}, \hyperpage{532}
-  \item {test/testGarbageCollected.cpp}, \hyperpage{534}
-  \item {test/testSingletonObjectPool.cpp}, \hyperpage{535}
-  \item {test/testUnicodeString.cpp}, \hyperpage{535}
+  \item {test/test.cpp}, \hyperpage{530}
+  \item {test/testGarbageCollected.cpp}, \hyperpage{532}
+  \item {test/testSingletonObjectPool.cpp}, \hyperpage{533}
+  \item {test/testUnicodeString.cpp}, \hyperpage{533}
   \item {Trusted}
     \subitem {Tang::UnicodeString}, \hyperpage{428}
   \item {Type}
