@@ -84,6 +84,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "astNodeUnary.hpp", "astNodeUnary_8hpp.html", [
       [ "AstNodeUnary", "classTang_1_1AstNodeUnary.html", "classTang_1_1AstNodeUnary" ]
     ] ],
+    [ "astNodeUse.hpp", "astNodeUse_8hpp.html", [
+      [ "AstNodeUse", "classTang_1_1AstNodeUse.html", "classTang_1_1AstNodeUse" ]
+    ] ],
     [ "astNodeWhile.hpp", "astNodeWhile_8hpp.html", [
       [ "AstNodeWhile", "classTang_1_1AstNodeWhile.html", "classTang_1_1AstNodeWhile" ]
     ] ],

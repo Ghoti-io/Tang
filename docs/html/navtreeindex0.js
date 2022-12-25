@@ -82,9 +82,12 @@ var NAVTREEINDEX0 =
 "astNodeUnary_8cpp.html":[2,0,2,27],
 "astNodeUnary_8hpp.html":[2,0,1,27],
 "astNodeUnary_8hpp_source.html":[2,0,1,27],
-"astNodeWhile_8cpp.html":[2,0,2,28],
-"astNodeWhile_8hpp.html":[2,0,1,28],
-"astNodeWhile_8hpp_source.html":[2,0,1,28],
+"astNodeUse_8cpp.html":[2,0,2,28],
+"astNodeUse_8hpp.html":[2,0,1,28],
+"astNodeUse_8hpp_source.html":[2,0,1,28],
+"astNodeWhile_8cpp.html":[2,0,2,29],
+"astNodeWhile_8hpp.html":[2,0,1,29],
+"astNodeWhile_8hpp_source.html":[2,0,1,29],
 "astNode_8cpp.html":[2,0,2,0],
 "astNode_8hpp.html":[2,0,1,0],
 "astNode_8hpp_source.html":[2,0,1,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX0 =
 "classTang_1_1AstNodeFunctionCall.html#ae9d85fcadc7bffb2799c89ea8938c24f":[1,0,0,12,4],
 "classTang_1_1AstNodeFunctionDeclaration.html":[1,0,0,13],
 "classTang_1_1AstNodeFunctionDeclaration.html#a1c4ca7dac3f31c69dd50a89492f3670d":[1,0,0,13,5],
-"classTang_1_1AstNodeFunctionDeclaration.html#a405a5a52a104ab614975d6e6a8e33df4":[1,0,0,13,6],
-"classTang_1_1AstNodeFunctionDeclaration.html#a41e8328d5a342163a5aabcc4cb8f1b5e":[1,0,0,13,7],
-"classTang_1_1AstNodeFunctionDeclaration.html#a6b5d243bc4cbf7ea0f4a580da3250d8d":[1,0,0,13,1],
-"classTang_1_1AstNodeFunctionDeclaration.html#aa5067f4dfc34a538a858f3437fd063ef":[1,0,0,13,3]
+"classTang_1_1AstNodeFunctionDeclaration.html#a405a5a52a104ab614975d6e6a8e33df4":[1,0,0,13,6]
 };

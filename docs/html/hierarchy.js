@@ -28,6 +28,7 @@ var hierarchy =
       [ "Tang::AstNodeString", "classTang_1_1AstNodeString.html", null ],
       [ "Tang::AstNodeTernary", "classTang_1_1AstNodeTernary.html", null ],
       [ "Tang::AstNodeUnary", "classTang_1_1AstNodeUnary.html", null ],
+      [ "Tang::AstNodeUse", "classTang_1_1AstNodeUse.html", null ],
       [ "Tang::AstNodeWhile", "classTang_1_1AstNodeWhile.html", null ]
     ] ],
     [ "Tang::ComputedExpression", "classTang_1_1ComputedExpression.html", [
