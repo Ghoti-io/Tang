@@ -11,11 +11,13 @@ namespace Tang {
 #define TANG_GARBAGECOLLECTED_HPP
 
 #include <functional>
+#include "macros.hpp"
 #include "singletonObjectPool.hpp"
-#include "computedExpression.hpp"
 #include "error.hpp"
 
 namespace Tang {
+  class ComputedExpression;
+
   /**
    * A container that acts as a resource-counting garbage collector for the
    * specified type.

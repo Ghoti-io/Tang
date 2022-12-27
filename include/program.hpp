@@ -18,12 +18,12 @@ namespace Tang {
 #include "macros.hpp"
 #include "astNode.hpp"
 #include "error.hpp"
-#include "tangBase.hpp"
 #include "computedExpression.hpp"
 #include "garbageCollected.hpp"
 #include "context.hpp"
 
 namespace Tang {
+  class TangBase;
   class AstNode;
 
   /**

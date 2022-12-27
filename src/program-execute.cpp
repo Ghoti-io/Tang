@@ -21,6 +21,7 @@
 #include "computedExpressionNativeLibraryFunction.hpp"
 #include "computedExpressionNativeFunction.hpp"
 #include "computedExpressionIteratorEnd.hpp"
+#include "tangBase.hpp"
 
 using namespace std;
 using namespace Tang;
