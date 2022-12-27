@@ -158,6 +158,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a7c67fbfd65105f2aa834593ee74cfe16"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unicodeString_8hpp.html#a7c67fbfd65105f2aa834593ee74cfe16">Tang::htmlEscapeAscii</a> (const std::string &amp;str, <a class="el" href="classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aef">UnicodeString::Type</a> type=UnicodeString::Type::Untrusted)</td></tr>
 <tr class="memdesc:a7c67fbfd65105f2aa834593ee74cfe16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an Ascii-only, "html escaped" version of the provided string.  <a href="unicodeString_8hpp.html#a7c67fbfd65105f2aa834593ee74cfe16">More...</a><br /></td></tr>
 <tr class="separator:a7c67fbfd65105f2aa834593ee74cfe16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35d02509a3aac9ad4dd44dbbdc0fc3fa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unicodeString_8hpp.html#a35d02509a3aac9ad4dd44dbbdc0fc3fa">Tang::percentEncode</a> (const std::string &amp;str)</td></tr>
+<tr class="memdesc:a35d02509a3aac9ad4dd44dbbdc0fc3fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a "percent encoded" version of the provided string.  <a href="unicodeString_8hpp.html#a35d02509a3aac9ad4dd44dbbdc0fc3fa">More...</a><br /></td></tr>
+<tr class="separator:a35d02509a3aac9ad4dd44dbbdc0fc3fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains the code to interface with the ICU library. </p>
@@ -239,6 +242,42 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="unicodeString_8hpp_a7c67fbfd65105f2aa834593ee74cfe16_cgraph.png" border="0" usemap="#aunicodeString_8hpp_a7c67fbfd65105f2aa834593ee74cfe16_cgraph" alt=""/></div>
 <map name="aunicodeString_8hpp_a7c67fbfd65105f2aa834593ee74cfe16_cgraph" id="aunicodeString_8hpp_a7c67fbfd65105f2aa834593ee74cfe16_cgraph">
 <area shape="rect" title="Return an Ascii&#45;only, &quot;html escaped&quot; version of the provided string." alt="" coords="5,29,172,56"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a35d02509a3aac9ad4dd44dbbdc0fc3fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35d02509a3aac9ad4dd44dbbdc0fc3fa">&#9670;&nbsp;</a></span>percentEncode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Tang::percentEncode </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return a "percent encoded" version of the provided string. </p>
+<p>See <a href="https://en.wikipedia.org/wiki/Percent-encoding">https://en.wikipedia.org/wiki/Percent-encoding</a> for details.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The string to be escaped. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A "percent encoded" version of the provided string. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="unicodeString_8hpp_a35d02509a3aac9ad4dd44dbbdc0fc3fa_cgraph.png" border="0" usemap="#aunicodeString_8hpp_a35d02509a3aac9ad4dd44dbbdc0fc3fa_cgraph" alt=""/></div>
+<map name="aunicodeString_8hpp_a35d02509a3aac9ad4dd44dbbdc0fc3fa_cgraph" id="aunicodeString_8hpp_a35d02509a3aac9ad4dd44dbbdc0fc3fa_cgraph">
+<area shape="rect" title="Return a &quot;percent encoded&quot; version of the provided string." alt="" coords="5,29,161,56"/>
 </map>
 </div>
 

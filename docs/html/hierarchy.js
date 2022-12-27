@@ -65,6 +65,9 @@ var hierarchy =
     [ "TangHtmlEscapeFlexLexer", null, [
       [ "Tang::HtmlEscape", "classTang_1_1HtmlEscape.html", null ]
     ] ],
+    [ "TangPercentEncodeFlexLexer", null, [
+      [ "Tang::PercentEncode", "classTang_1_1PercentEncode.html", null ]
+    ] ],
     [ "TangTangFlexLexer", null, [
       [ "Tang::TangScanner", "classTang_1_1TangScanner.html", null ]
     ] ],

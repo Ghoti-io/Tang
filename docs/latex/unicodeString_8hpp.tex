@@ -35,7 +35,9 @@ std\+::string \mbox{\hyperlink{unicodeString_8hpp_af1528e54f4a6e664d30f4e6557e0f
 std\+::string \mbox{\hyperlink{unicodeString_8hpp_a98c3c850e57d173ab148e54ece83a671}{Tang\+::html\+Escape}} (const std\+::string \&str)
 \begin{DoxyCompactList}\small\item\em Return an \char`\"{}html escaped\char`\"{} version of the provided string. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{unicodeString_8hpp_a7c67fbfd65105f2aa834593ee74cfe16}{Tang\+::html\+Escape\+Ascii}} (const std\+::string \&str, \mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aef}{Unicode\+String\+::\+Type}} type=Unicode\+String\+::\+Type\+::\+Untrusted)
-\begin{DoxyCompactList}\small\item\em Return an Ascii-\/only, \char`\"{}html escaped\char`\"{} version of the provided string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Return an Ascii-\/only, \char`\"{}html escaped\char`\"{} version of the provided string. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{unicodeString_8hpp_a35d02509a3aac9ad4dd44dbbdc0fc3fa}{Tang\+::percent\+Encode}} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Return a \char`\"{}percent encoded\char`\"{} version of the provided string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -96,6 +98,34 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=205pt]{unicodeString_8hpp_a7c67fbfd65105f2aa834593ee74cfe16_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{unicodeString_8hpp_a35d02509a3aac9ad4dd44dbbdc0fc3fa}\label{unicodeString_8hpp_a35d02509a3aac9ad4dd44dbbdc0fc3fa}} 
+\index{unicodeString.hpp@{unicodeString.hpp}!percentEncode@{percentEncode}}
+\index{percentEncode@{percentEncode}!unicodeString.hpp@{unicodeString.hpp}}
+\doxysubsubsection{\texorpdfstring{percentEncode()}{percentEncode()}}
+{\footnotesize\ttfamily std\+::string Tang\+::percent\+Encode (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Return a \char`\"{}percent encoded\char`\"{} version of the provided string. 
+
+See \href{https://en.wikipedia.org/wiki/Percent-encoding}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Percent-\/encoding}} for details.
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to be escaped. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \char`\"{}percent encoded\char`\"{} version of the provided string. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{unicodeString_8hpp_a35d02509a3aac9ad4dd44dbbdc0fc3fa_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{unicodeString_8hpp_af1528e54f4a6e664d30f4e6557e0f84c}\label{unicodeString_8hpp_af1528e54f4a6e664d30f4e6557e0f84c}} 

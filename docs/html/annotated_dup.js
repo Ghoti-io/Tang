@@ -52,6 +52,7 @@ var annotated_dup =
       [ "GarbageCollected", "classTang_1_1GarbageCollected.html", "classTang_1_1GarbageCollected" ],
       [ "HtmlEscape", "classTang_1_1HtmlEscape.html", "classTang_1_1HtmlEscape" ],
       [ "HtmlEscapeAscii", "classTang_1_1HtmlEscapeAscii.html", "classTang_1_1HtmlEscapeAscii" ],
+      [ "PercentEncode", "classTang_1_1PercentEncode.html", "classTang_1_1PercentEncode" ],
       [ "Program", "classTang_1_1Program.html", "classTang_1_1Program" ],
       [ "SingletonObjectPool", "classTang_1_1SingletonObjectPool.html", "classTang_1_1SingletonObjectPool" ],
       [ "TangBase", "classTang_1_1TangBase.html", "classTang_1_1TangBase" ],
