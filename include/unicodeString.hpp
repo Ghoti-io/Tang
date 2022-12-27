@@ -200,6 +200,16 @@ namespace Tang {
    * @return An "escaped" version of the provided string.
    */
   std::string htmlEscapeAscii(const std::string & str, UnicodeString::Type type = UnicodeString::Type::Untrusted);
+
+  /**
+   * Return a "percent encoded" version of the provided string.
+   *
+   * See https://en.wikipedia.org/wiki/Percent-encoding for details.
+   *
+   * @param str The string to be escaped.
+   * @return A "percent encoded" version of the provided string.
+   */
+  std::string percentEncode(const std::string & str);
 }
 
 #endif // TANG_UNICODESTRING_HPP

@@ -17,6 +17,7 @@
 #include "unescape.hpp"
 #include "htmlEscape.hpp"
 #include "htmlEscapeAscii.hpp"
+#include "percentEncode.hpp"
 
 using namespace std;
 using namespace Tang;
@@ -70,6 +71,16 @@ string Tang::htmlEscapeAscii(const string & str, UnicodeString::Type type) {
   HtmlEscapeAscii h{ss, cout, type};
   string out{}, next;
   while ((next = h.get_next_token()).length()) {
+    out += next;
+  }
+  return out;
+}
+
+std::string Tang::percentEncode(const std::string & str) {
+  stringstream ss{str};
+  PercentEncode p{ss, cout};
+  string out{}, next;
+  while ((next = p.get_next_token()).length()) {
     out += next;
   }
   return out;

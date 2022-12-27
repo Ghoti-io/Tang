@@ -155,6 +155,30 @@ TEST(UnicodeString, Types) {
   }
 }
 
+TEST(Core, PercentEncode) {
+  {
+    // Space becomes a plus.
+    UnicodeString s{"abc def"};
+    EXPECT_EQ(percentEncode(s), "abc+def");
+  }
+  {
+    // Plus is percent encoded.
+    UnicodeString s{"abc+def"};
+    EXPECT_EQ(percentEncode(s), "abc%2Bdef");
+  }
+  {
+    // Plus is percent encoded.
+    UnicodeString s{"ABC\nDEF"};
+    EXPECT_EQ(percentEncode(s), "ABC%0ADEF");
+  }
+  {
+    // Unicode Character is percent encoded.
+    // Notice the "$" is also encoded, but the "." did not need to be encoded.
+    UnicodeString s{"$\xF0\x9F\x8F\xB4\xF3\xA0\x81\xA7\xF3\xA0\x81\xA2\xF3\xA0\x81\xB3\xF3\xA0\x81\xA3\xF3\xA0\x81\xB4\xF3\xA0\x81\xBF."};
+    EXPECT_EQ(percentEncode(s), "%24%F0%9F%8F%B4%F3%A0%81%A7%F3%A0%81%A2%F3%A0%81%B3%F3%A0%81%A3%F3%A0%81%B4%F3%A0%81%BF.");
+  }
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

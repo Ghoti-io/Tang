@@ -58,6 +58,7 @@ LIBOBJECTS := $(OBJ_DIR)/astNode.o \
 							$(OBJ_DIR)/garbageCollected.o \
 							$(OBJ_DIR)/htmlEscape.o \
 							$(OBJ_DIR)/htmlEscapeAscii.o \
+							$(OBJ_DIR)/percentEncode.o \
 							$(OBJ_DIR)/program-dumpBytecode.o \
 							$(OBJ_DIR)/program-execute.o \
 							$(OBJ_DIR)/program.o \
@@ -93,6 +94,11 @@ $(GEN_DIR)/htmlEscape.cpp: flex/htmlEscape.l
 
 $(GEN_DIR)/htmlEscapeAscii.cpp: flex/htmlEscapeAscii.l
 	@echo "\n### Generating The HtmlEscapeAscii Scanner ###"
+	@mkdir -p $(@D)
+	flex -o $@ $<
+
+$(GEN_DIR)/percentEncode.cpp: flex/percentEncode.l
+	@echo "\n### Generating The PercentEncode Scanner ###"
 	@mkdir -p $(@D)
 	flex -o $@ $<
 
@@ -370,6 +376,11 @@ $(OBJ_DIR)/htmlEscapeAscii.o: $(GEN_DIR)/htmlEscapeAscii.cpp include/htmlEscapeA
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
+$(OBJ_DIR)/percentEncode.o: $(GEN_DIR)/percentEncode.cpp include/percentEncode.hpp
+	@echo "\n### Compiling percentEncode.o ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
+
 $(OBJ_DIR)/program.o: src/program.cpp include/macros.hpp include/program.hpp include/tangScanner.hpp include/opcode.hpp include/astNode.hpp include/error.hpp include/garbageCollected.hpp include/computedExpression.hpp include/singletonObjectPool.hpp $(GEN_DIR)/location.hh
 	@echo "\n### Compiling program.o ###"
 	@mkdir -p $(@D)
@@ -405,7 +416,7 @@ $(OBJ_DIR)/unescape.o: $(GEN_DIR)/unescape.cpp include/unescape.hpp
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/unicodeString.o: src/unicodeString.cpp include/unicodeString.hpp include/unescape.hpp
+$(OBJ_DIR)/unicodeString.o: src/unicodeString.cpp include/unicodeString.hpp include/htmlEscape.hpp $(OBJ_DIR)/htmlEscape.o include/htmlEscapeAscii.hpp $(OBJ_DIR)/htmlEscapeAscii.o include/unescape.hpp $(OBJ_DIR)/unescape.o include/percentEncode.hpp $(OBJ_DIR)/percentEncode.o
 	@echo "\n### Compiling unicodeString.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
@@ -423,7 +434,7 @@ $(APP_DIR)/$(TARGET): $(LIBOBJECTS)
 # Unit Tests
 ####################################################################
 
-$(APP_DIR)/testUnicodeString: test/testUnicodeString.cpp $(OBJ_DIR)/htmlEscape.o $(OBJ_DIR)/htmlEscapeAscii.o $(OBJ_DIR)/unicodeString.o $(OBJ_DIR)/unescape.o
+$(APP_DIR)/testUnicodeString: test/testUnicodeString.cpp $(OBJ_DIR)/htmlEscape.o $(OBJ_DIR)/htmlEscapeAscii.o $(OBJ_DIR)/percentEncode.o $(OBJ_DIR)/unicodeString.o $(OBJ_DIR)/unescape.o
 	@echo "\n### Compiling UnicodeString Test ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ $^ $(LDFLAGS) $(TESTFLAGS)
@@ -485,9 +496,9 @@ test: $(APP_DIR)/testUnicodeString $(APP_DIR)/test $(APP_DIR)/testSingletonObjec
 	@echo "\033[0m"
 	$(APP_DIR)/testSingletonObjectPool --gtest_brief=1
 	@echo "\033[0;32m"
-	@echo "#########################################"
+	@echo "######################################"
 	@echo "### Running GarbageCollected Tests ###"
-	@echo "#########################################"
+	@echo "######################################"
 	@echo "\033[0m"
 	$(APP_DIR)/testGarbageCollected --gtest_brief=1
 	@echo "\033[0;32m"
