@@ -331,44 +331,44 @@ statement
 closedStatement
   : "if" "(" expression ")" closedStatement "else" closedStatement
     {
-      $$ = std::make_shared<AstNodeIfElse>($3, $5, $7, @1);
+      $$ = std::make_shared<AstNodeIfElse>($3, $5, $7, @1+@7);
     }
   | "while" "(" expression ")" closedStatement
     {
-      $$ = std::make_shared<AstNodeWhile>($3, $5, @1);
+      $$ = std::make_shared<AstNodeWhile>($3, $5, @1+@5);
     }
   | "do" statement "while" "(" expression ")" ";"
     {
-      $$ = std::make_shared<AstNodeDoWhile>($5, $2, @1);
+      $$ = std::make_shared<AstNodeDoWhile>($5, $2, @1+@7);
     }
   | "for" "(" optionalExpression ";" optionalExpression ";" optionalExpression ")" closedStatement
     {
-      $$ = std::make_shared<AstNodeFor>($3, $5, $7, $9, @1);
+      $$ = std::make_shared<AstNodeFor>($3, $5, $7, $9, @1+@9);
     }
   | "for" "(" IDENTIFIER ":" expression ")" closedStatement
     {
-      $$ = std::make_shared<AstNodeRangedFor>(std::make_shared<AstNodeIdentifier>($3, @3), $5, $7, @1);
+      $$ = std::make_shared<AstNodeRangedFor>(std::make_shared<AstNodeIdentifier>($3, @3), $5, $7, @1+@7);
     }
   | "function" IDENTIFIER "(" functionDeclarationArguments ")" codeBlock
     {
-      $$ = std::make_shared<AstNodeFunctionDeclaration>($2, $4, $6, @1);
+      $$ = std::make_shared<AstNodeFunctionDeclaration>($2, $4, $6, @1+@6);
     }
   | codeBlock
   | "return" ";"
     {
-      $$ = std::make_shared<AstNodeReturn>(std::make_shared<AstNode>(@1), @1);
+      $$ = std::make_shared<AstNodeReturn>(std::make_shared<AstNode>(@1+@2), @1+@2);
     }
   | "return" expression ";"
     {
-      $$ = std::make_shared<AstNodeReturn>($2, @1);
+      $$ = std::make_shared<AstNodeReturn>($2, @1+@3);
     }
   | "break" ";"
     {
-      $$ = std::make_shared<AstNodeBreak>(@1);
+      $$ = std::make_shared<AstNodeBreak>(@1+@2);
     }
   | "continue" ";"
     {
-      $$ = std::make_shared<AstNodeContinue>(@1);
+      $$ = std::make_shared<AstNodeContinue>(@1+@2);
     }
   | expression ";"
   | TEMPLATESTRING
@@ -381,20 +381,20 @@ closedStatement
         // The Template String.
         std::make_shared<AstNodePrint>(AstNodePrint::Default, std::make_shared<AstNodeString>($1, @1), @1),
         // The Quick Print Expression.
-        std::make_shared<AstNodePrint>(AstNodePrint::Default, $2, @2)
-      }, @1);
+        std::make_shared<AstNodePrint>(AstNodePrint::Default, $2, @2+@3)
+      }, @1+@3);
     }
   | QUICKPRINTBEGIN expression QUICKPRINTEND
     {
-      $$ = std::make_shared<AstNodePrint>(AstNodePrint::Default, $2, @1);
+      $$ = std::make_shared<AstNodePrint>(AstNodePrint::Default, $2, @1+@3);
     }
   | "use" IDENTIFIER ";"
     {
-      $$ = std::make_shared<AstNodeUse>(std::make_shared<AstNodeLibrary>($2, @1), $2, @1);
+      $$ = std::make_shared<AstNodeUse>(std::make_shared<AstNodeLibrary>($2, @1), $2, @1+@3);
     }
   | "use" libraryExpression "as" IDENTIFIER ";"
     {
-      $$ = std::make_shared<AstNodeUse>($2, $4, @1);
+      $$ = std::make_shared<AstNodeUse>($2, $4, @1+@5);
     }
   ;
 
@@ -405,7 +405,7 @@ libraryExpression
     }
   | libraryExpression "." IDENTIFIER
     {
-      $$ = std::make_shared<AstNodePeriod>($1, $3, @1);
+      $$ = std::make_shared<AstNodePeriod>($1, $3, @1+@3);
     }
   ;
 
@@ -413,23 +413,23 @@ libraryExpression
 openStatement
   : "if" "(" expression ")" statement
     {
-      $$ = std::make_shared<AstNodeIfElse>($3, $5, @1);
+      $$ = std::make_shared<AstNodeIfElse>($3, $5, @1+@5);
     }
   | "if" "(" expression ")" closedStatement "else" openStatement
     {
-      $$ = std::make_shared<AstNodeIfElse>($3, $5, $7, @1);
+      $$ = std::make_shared<AstNodeIfElse>($3, $5, $7, @1+@7);
     }
   | "while" "(" expression ")" openStatement
     {
-      $$ = std::make_shared<AstNodeWhile>($3, $5, @1);
+      $$ = std::make_shared<AstNodeWhile>($3, $5, @1+@5);
     }
   | "for" "(" optionalExpression ";" optionalExpression ";" optionalExpression ")" openStatement
     {
-      $$ = std::make_shared<AstNodeFor>($3, $5, $7, $9, @1);
+      $$ = std::make_shared<AstNodeFor>($3, $5, $7, $9, @1+@9);
     }
   | "for" "(" IDENTIFIER ":" expression ")" openStatement
     {
-      $$ = std::make_shared<AstNodeRangedFor>(std::make_shared<AstNodeIdentifier>($3, @3), $5, $7, @1);
+      $$ = std::make_shared<AstNodeRangedFor>(std::make_shared<AstNodeIdentifier>($3, @3), $5, $7, @1+@7);
     }
   ;
 
@@ -447,11 +447,11 @@ optionalExpression
 slice
   : expression "[" optionalExpression ":" optionalExpression ":" optionalExpression "]"
     {
-      $$ = std::make_shared<AstNodeSlice>($1, $3, $5, $7, @1);
+      $$ = std::make_shared<AstNodeSlice>($1, $3, $5, $7, @1+@8);
     }
   | expression "[" optionalExpression ":" optionalExpression "]"
     {
-      $$ = std::make_shared<AstNodeSlice>($1, $3, $5, std::make_shared<AstNode>(Tang::location{}), @1);
+      $$ = std::make_shared<AstNodeSlice>($1, $3, $5, std::make_shared<AstNode>(Tang::location{}), @1+@6);
     }
   ;
 
@@ -459,11 +459,11 @@ slice
 codeBlock
   : "{" "}"
     {
-      $$ = std::make_shared<AstNodeBlock>(std::vector<shared_ptr<AstNode>>{}, @1);
+      $$ = std::make_shared<AstNodeBlock>(std::vector<shared_ptr<AstNode>>{}, @1+@2);
     }
   | "{" statements "}"
     {
-      $$ = std::make_shared<AstNodeBlock>($2, @1);
+      $$ = std::make_shared<AstNodeBlock>($2, @1+@3);
     }
   ;
 
@@ -559,54 +559,55 @@ expression
   | "(" expression ")"
     {
       $$ = $2;
+      $$->location = @1+@3;
     }
   | expression "as" "int"
     {
-      $$ = std::make_shared<AstNodeCast>(AstNodeCast::Integer, $1, @2);
+      $$ = std::make_shared<AstNodeCast>(AstNodeCast::Integer, $1, @2+@3);
     }
   | expression "as" "float"
     {
-      $$ = std::make_shared<AstNodeCast>(AstNodeCast::Float, $1, @2);
+      $$ = std::make_shared<AstNodeCast>(AstNodeCast::Float, $1, @2+@3);
     }
   | expression "as" "boolean"
     {
-      $$ = std::make_shared<AstNodeCast>(AstNodeCast::Boolean, $1, @2);
+      $$ = std::make_shared<AstNodeCast>(AstNodeCast::Boolean, $1, @2+@3);
     }
   | expression "as" "string"
     {
-      $$ = std::make_shared<AstNodeCast>(AstNodeCast::String, $1, @2);
+      $$ = std::make_shared<AstNodeCast>(AstNodeCast::String, $1, @2+@3);
     }
   | "print" "(" expression ")"
     {
-      $$ = std::make_shared<AstNodePrint>(AstNodePrint::Default, $3, @1);
+      $$ = std::make_shared<AstNodePrint>(AstNodePrint::Default, $3, @1+@4);
     }
   | expression "." IDENTIFIER
     {
-      $$ = std::make_shared<AstNodePeriod>($1, $3, @1);
+      $$ = std::make_shared<AstNodePeriod>($1, $3, @2);
     }
   |  "[" expressionList "]"
     {
-      $$ = std::make_shared<AstNodeArray>($2, @1);
+      $$ = std::make_shared<AstNodeArray>($2, @1+@3);
     }
   | "{" ":" "}"
     {
-      $$ = std::make_shared<AstNodeMap>(std::vector<std::pair<std::string, std::shared_ptr<Tang::AstNode>>>{}, @1);
+      $$ = std::make_shared<AstNodeMap>(std::vector<std::pair<std::string, std::shared_ptr<Tang::AstNode>>>{}, @1+@3);
     }
   | "{" mapList "}"
     {
-      $$ = std::make_shared<AstNodeMap>($2, @1);
+      $$ = std::make_shared<AstNodeMap>($2, @1+@3);
     }
   | expression "[" expression "]"
     {
-      $$ = std::make_shared<AstNodeIndex>($1, $3, @1);
+      $$ = std::make_shared<AstNodeIndex>($1, $3, @2+@4);
     }
   | expression "(" expressionList ")"
     {
-      $$ = std::make_shared<AstNodeFunctionCall>($1, $3, @1);
+      $$ = std::make_shared<AstNodeFunctionCall>($1, $3, @2+@4);
     }
   | expression "?" expression ":" expression
     {
-      $$ = std::make_shared<AstNodeTernary>($1, $3, $5, @2);
+      $$ = std::make_shared<AstNodeTernary>($1, $3, $5, @2+@4);
     }
   ;
 

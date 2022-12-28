@@ -67,7 +67,6 @@ namespace Tang {
      */
     virtual void compilePreprocess(Program & program, PreprocessState state) const;
 
-  protected:
     /**
      * The location associated with this node.
      */
