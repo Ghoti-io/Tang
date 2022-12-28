@@ -22,7 +22,7 @@ var searchData=
   ['getobjectmethods_754',['getObjectMethods',['../classTang_1_1TangBase.html#a62dfbf8c82da22d0c83d920c78c08eed',1,'Tang::TangBase']]],
   ['getpc_755',['getPc',['../classTang_1_1ComputedExpressionCompiledFunction.html#a9f576e7603c38ff07d77c5511b96ab20',1,'Tang::ComputedExpressionCompiledFunction']]],
   ['getresult_756',['getResult',['../classTang_1_1Program.html#a84b2e5e25f57eea224d1c04f1f3741eb',1,'Tang::Program']]],
-  ['getstrings_757',['getStrings',['../classTang_1_1Program.html#a70ddc2a3e97541b106e7ab403292a3f0',1,'Tang::Program']]],
+  ['getstrings_757',['getStrings',['../classTang_1_1Program.html#afc153c1457c40b20178a2a9a0d2bf24f',1,'Tang::Program']]],
   ['gettargettypeindex_758',['getTargetTypeIndex',['../classTang_1_1ComputedExpressionNativeBoundFunction.html#afd95e9e142bc00eefcd92689c26f538d',1,'Tang::ComputedExpressionNativeBoundFunction']]],
   ['getvalue_759',['getValue',['../classTang_1_1ComputedExpressionFloat.html#aff3df8b3d5f1a4f8c58a8de75999119f',1,'Tang::ComputedExpressionFloat::getValue()'],['../classTang_1_1ComputedExpressionInteger.html#a04c76a5ba8dbc3bfa4258c50c263b306',1,'Tang::ComputedExpressionInteger::getValue()'],['../classTang_1_1ComputedExpressionString.html#a7d9f4db5aca646d6dfec35352ce80aad',1,'Tang::ComputedExpressionString::getValue()']]]
 ];

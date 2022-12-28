@@ -11,7 +11,7 @@ var classTang_1_1Program =
     [ "addIdentifier", "classTang_1_1Program.html#ab6ffaae61038ad76502d9fd5c26a69f2", null ],
     [ "addIdentifierAssigned", "classTang_1_1Program.html#a861d7d5ad832ea2865156c8517b58ad1", null ],
     [ "addLibraryAlias", "classTang_1_1Program.html#a9737c37d13b8db7d3a4f9effd817fdd1", null ],
-    [ "addString", "classTang_1_1Program.html#a857438c58ac9e9ae420001676ee05582", null ],
+    [ "addString", "classTang_1_1Program.html#a410d12e2ac6cdfe926c730a50e56eca3", null ],
     [ "compile", "classTang_1_1Program.html#ac1fee8bf44ff31dd8a1131e9dbc47304", null ],
     [ "dumpBytecode", "classTang_1_1Program.html#aee5e79c40fac68e875c0d043f8fc2bc1", null ],
     [ "execute", "classTang_1_1Program.html#a3449ae0f592e7eaa2cf05244839daa83", null ],
@@ -23,7 +23,7 @@ var classTang_1_1Program =
     [ "getIdentifiersAssigned", "classTang_1_1Program.html#a93e80b96547877bfb6ed1b01fd0a6b7c", null ],
     [ "getLibraryAliases", "classTang_1_1Program.html#a73c9ac65877a7ecfcaf891c4e9ace9f5", null ],
     [ "getResult", "classTang_1_1Program.html#a84b2e5e25f57eea224d1c04f1f3741eb", null ],
-    [ "getStrings", "classTang_1_1Program.html#a70ddc2a3e97541b106e7ab403292a3f0", null ],
+    [ "getStrings", "classTang_1_1Program.html#afc153c1457c40b20178a2a9a0d2bf24f", null ],
     [ "parse", "classTang_1_1Program.html#a7e845a6184bade97aead63d2e14c5040", null ],
     [ "popBreakStack", "classTang_1_1Program.html#ab170cc8217af1ed518b89cf445508d18", null ],
     [ "popContinueStack", "classTang_1_1Program.html#a0a824ad2a83896854f4e528f6c3cc630", null ],
@@ -46,6 +46,6 @@ var classTang_1_1Program =
     [ "identifierStack", "classTang_1_1Program.html#a440bf2cdcd08fe6b2b0c2c19c22fa276", null ],
     [ "libraryAliasStack", "classTang_1_1Program.html#a7c61c1a9764679f46be0bd0c98af05db", null ],
     [ "result", "classTang_1_1Program.html#a60f4be3d576e81e6200167f2d910f259", null ],
-    [ "stringStack", "classTang_1_1Program.html#ac24ab492b12ab4f6d9cc74645e7e8aa7", null ],
+    [ "stringStack", "classTang_1_1Program.html#a43c6934d7b0e1883a91efeb29a3592c6", null ],
     [ "tang", "classTang_1_1Program.html#ae1b7ad9e715c228225c69765a2904bf9", null ]
 ];

@@ -35,6 +35,7 @@ var classTang_1_1ComputedExpressionString =
     [ "length", "classTang_1_1ComputedExpressionString.html#a07543a59d142a3a520834f4410ea1c45", null ],
     [ "makeCopy", "classTang_1_1ComputedExpressionString.html#aa424ab2f196af728a8810fc7ed188f7c", null ],
     [ "operator+=", "classTang_1_1ComputedExpressionString.html#a0f9112a2bd0a0cdd2b060bfedd5a0b6d", null ],
+    [ "setPercent", "classTang_1_1ComputedExpressionString.html#a44b6e238b4dd3597160048392139424c", null ],
     [ "setUntrusted", "classTang_1_1ComputedExpressionString.html#a7c787c71fde3a17e69ad290e51056eeb", null ],
     [ "cachedBytesLength", "classTang_1_1ComputedExpressionString.html#a4e57454fff6f117242d453e629507fe1", null ],
     [ "cachedLength", "classTang_1_1ComputedExpressionString.html#a4f19bdb8f21cbae91a25624a95d5e6e9", null ],

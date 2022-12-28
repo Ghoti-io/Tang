@@ -115,6 +115,7 @@ Collaboration diagram for Tang::UnicodeString:</div>
 Public Types</h2></td></tr>
 <tr class="memitem:a58915a1dadac5cc71c6aea7169cd4aef"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aef">Type</a> { <a class="el" href="classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aefa157a44b8159d35ee4e5cbb7e15b37b38">Trusted</a>
 , <a class="el" href="classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aefa53ce5b480cb1df2a39d67a0af7b68bce">Untrusted</a>
+, <a class="el" href="classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aefad99a94916aff98d5c33330cbe653b51c">Percent</a>
  }</td></tr>
 <tr class="memdesc:a58915a1dadac5cc71c6aea7169cd4aef"><td class="mdescLeft">&#160;</td><td class="mdescRight">The types of string being created.  <a href="classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aef">More...</a><br /></td></tr>
 <tr class="separator:a58915a1dadac5cc71c6aea7169cd4aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,6 +168,10 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#ae570221e486828b53341eb764149a48e">setUntrusted</a> ()</td></tr>
 <tr class="memdesc:ae570221e486828b53341eb764149a48e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the string as UnicodeString::Type::Untrusted. <br /></td></tr>
 <tr class="separator:ae570221e486828b53341eb764149a48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a96fca104f7aef59f1a4e4ad1009f0f"><td class="memItemLeft" align="right" valign="top"><a id="a1a96fca104f7aef59f1a4e4ad1009f0f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1UnicodeString.html#a1a96fca104f7aef59f1a4e4ad1009f0f">setPercent</a> ()</td></tr>
+<tr class="memdesc:a1a96fca104f7aef59f1a4e4ad1009f0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the string as UnicodeString::Type::Percent. <br /></td></tr>
+<tr class="separator:a1a96fca104f7aef59f1a4e4ad1009f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -215,6 +220,8 @@ std::shared_ptr&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a58915a1dadac5cc71c6aea7169cd4aefa157a44b8159d35ee4e5cbb7e15b37b38"></a>Trusted&#160;</td><td class="fielddoc"><p>String is from a trusted source. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a58915a1dadac5cc71c6aea7169cd4aefa53ce5b480cb1df2a39d67a0af7b68bce"></a>Untrusted&#160;</td><td class="fielddoc"><p>String is not from a trusted source. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a58915a1dadac5cc71c6aea7169cd4aefad99a94916aff98d5c33330cbe653b51c"></a>Percent&#160;</td><td class="fielddoc"><p>String is to be percent encoded. </p>
 </td></tr>
 </table>
 
@@ -422,8 +429,9 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTang_1_1UnicodeString_a69305edbb266045c7a5032548d6fc8c9_cgraph.png" border="0" usemap="#aclassTang_1_1UnicodeString_a69305edbb266045c7a5032548d6fc8c9_cgraph" alt=""/></div>
 <map name="aclassTang_1_1UnicodeString_a69305edbb266045c7a5032548d6fc8c9_cgraph" id="aclassTang_1_1UnicodeString_a69305edbb266045c7a5032548d6fc8c9_cgraph">
-<area shape="rect" title="Render the string in with dangerous characters HTML encoded, if the string is UnicodeString::Type::Un..." alt="" coords="5,22,156,63"/>
-<area shape="rect" href="unicodeString_8hpp.html#a98c3c850e57d173ab148e54ece83a671" title="Return an &quot;html escaped&quot; version of the provided string." alt="" coords="204,29,340,56"/>
+<area shape="rect" title="Render the string in with dangerous characters HTML encoded, if the string is UnicodeString::Type::Un..." alt="" coords="5,59,156,101"/>
+<area shape="rect" href="unicodeString_8hpp.html#a98c3c850e57d173ab148e54ece83a671" title="Return an &quot;html escaped&quot; version of the provided string." alt="" coords="214,29,350,56"/>
+<area shape="rect" href="unicodeString_8hpp.html#a35d02509a3aac9ad4dd44dbbdc0fc3fa" title="Return a &quot;percent encoded&quot; version of the provided string." alt="" coords="204,104,360,131"/>
 </map>
 </div>
 

@@ -6,5 +6,5 @@ var searchData=
   ['targettypeindex_895',['targetTypeIndex',['../classTang_1_1ComputedExpressionNativeBoundFunction.html#ae49de962276370b305631612b2ea0430',1,'Tang::ComputedExpressionNativeBoundFunction']]],
   ['thenblock_896',['thenBlock',['../classTang_1_1AstNodeIfElse.html#a23fc2ef7bca0019876ccc1daf4871bed',1,'Tang::AstNodeIfElse']]],
   ['trueexpression_897',['trueExpression',['../classTang_1_1AstNodeTernary.html#a9a4f7f50b0bccc85c1315f83587ae10f',1,'Tang::AstNodeTernary']]],
-  ['type_898',['type',['../classTang_1_1AstNodePrint.html#a8b3aa67e544c90533473e1f9622f14f8',1,'Tang::AstNodePrint::type()'],['../classTang_1_1HtmlEscapeAscii.html#abed8a97197ee4869987c8fe80979112a',1,'Tang::HtmlEscapeAscii::type()'],['../classTang_1_1UnicodeString.html#a358f099e989756e11bc355d1a0638289',1,'Tang::UnicodeString::type()']]]
+  ['type_898',['type',['../classTang_1_1AstNodePrint.html#a8b3aa67e544c90533473e1f9622f14f8',1,'Tang::AstNodePrint::type()'],['../classTang_1_1AstNodeString.html#af3a9a5dae4fa5fb7c22b1e12199746ce',1,'Tang::AstNodeString::type()'],['../classTang_1_1HtmlEscapeAscii.html#abed8a97197ee4869987c8fe80979112a',1,'Tang::HtmlEscapeAscii::type()'],['../classTang_1_1UnicodeString.html#a358f099e989756e11bc355d1a0638289',1,'Tang::UnicodeString::type()']]]
 ];

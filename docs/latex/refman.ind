@@ -847,11 +847,11 @@
   \item {include/astNodeReturn.hpp}, \hyperpage{462}
   \item {include/astNodeSlice.hpp}, \hyperpage{463}
   \item {include/astNodeString.hpp}, \hyperpage{464}
-  \item {include/astNodeTernary.hpp}, \hyperpage{464}
-  \item {include/astNodeUnary.hpp}, \hyperpage{465}
-  \item {include/astNodeUse.hpp}, \hyperpage{466}
-  \item {include/astNodeWhile.hpp}, \hyperpage{467}
-  \item {include/computedExpression.hpp}, \hyperpage{468}
+  \item {include/astNodeTernary.hpp}, \hyperpage{465}
+  \item {include/astNodeUnary.hpp}, \hyperpage{466}
+  \item {include/astNodeUse.hpp}, \hyperpage{467}
+  \item {include/astNodeWhile.hpp}, \hyperpage{468}
+  \item {include/computedExpression.hpp}, \hyperpage{469}
   \item {include/computedExpressionArray.hpp}, \hyperpage{469}
   \item {include/computedExpressionBoolean.hpp}, \hyperpage{470}
   \item {include/computedExpressionCompiledFunction.hpp}, 
@@ -1169,6 +1169,8 @@
 
   \item {PEEK}
     \subitem {opcode.hpp}, \hyperpage{490}
+  \item {Percent}
+    \subitem {Tang::UnicodeString}, \hyperpage{431}
   \item {PercentEncode}
     \subitem {Tang::PercentEncode}, \hyperpage{405}
   \item {percentEncode}
@@ -1268,33 +1270,33 @@
   \item {src/astNodeLibrary.cpp}, \hyperpage{512}
   \item {src/astNodeMap.cpp}, \hyperpage{512}
   \item {src/astNodePeriod.cpp}, \hyperpage{513}
-  \item {src/astNodePrint.cpp}, \hyperpage{514}
+  \item {src/astNodePrint.cpp}, \hyperpage{513}
   \item {src/astNodeRangedFor.cpp}, \hyperpage{514}
   \item {src/astNodeReturn.cpp}, \hyperpage{515}
   \item {src/astNodeSlice.cpp}, \hyperpage{515}
   \item {src/astNodeString.cpp}, \hyperpage{516}
   \item {src/astNodeTernary.cpp}, \hyperpage{516}
   \item {src/astNodeUnary.cpp}, \hyperpage{517}
-  \item {src/astNodeUse.cpp}, \hyperpage{517}
+  \item {src/astNodeUse.cpp}, \hyperpage{518}
   \item {src/astNodeWhile.cpp}, \hyperpage{518}
-  \item {src/computedExpression.cpp}, \hyperpage{518}
+  \item {src/computedExpression.cpp}, \hyperpage{519}
   \item {src/computedExpressionArray.cpp}, \hyperpage{519}
   \item {src/computedExpressionBoolean.cpp}, \hyperpage{520}
-  \item {src/computedExpressionCompiledFunction.cpp}, \hyperpage{520}
+  \item {src/computedExpressionCompiledFunction.cpp}, \hyperpage{521}
   \item {src/computedExpressionError.cpp}, \hyperpage{521}
-  \item {src/computedExpressionFloat.cpp}, \hyperpage{521}
+  \item {src/computedExpressionFloat.cpp}, \hyperpage{522}
   \item {src/computedExpressionInteger.cpp}, \hyperpage{522}
   \item {src/computedExpressionIterator.cpp}, \hyperpage{523}
-  \item {src/computedExpressionIteratorEnd.cpp}, \hyperpage{523}
+  \item {src/computedExpressionIteratorEnd.cpp}, \hyperpage{524}
   \item {src/computedExpressionLibrary.cpp}, \hyperpage{524}
-  \item {src/computedExpressionLibraryMath.cpp}, \hyperpage{524}
+  \item {src/computedExpressionLibraryMath.cpp}, \hyperpage{525}
   \item {src/computedExpressionMap.cpp}, \hyperpage{525}
   \item {src/computedExpressionNativeBoundFunction.cpp}, 
 		\hyperpage{526}
-  \item {src/computedExpressionNativeFunction.cpp}, \hyperpage{526}
+  \item {src/computedExpressionNativeFunction.cpp}, \hyperpage{527}
   \item {src/computedExpressionNativeLibraryFunction.cpp}, 
 		\hyperpage{527}
-  \item {src/computedExpressionString.cpp}, \hyperpage{527}
+  \item {src/computedExpressionString.cpp}, \hyperpage{528}
   \item {src/context.cpp}, \hyperpage{528}
   \item {src/error.cpp}, \hyperpage{529}
   \item {src/garbageCollected.cpp}, \hyperpage{530}
@@ -2103,6 +2105,7 @@
     \subitem {operator+}, \hyperpage{432}
     \subitem {operator+=}, \hyperpage{432}
     \subitem {operator==}, \hyperpage{433}
+    \subitem {Percent}, \hyperpage{431}
     \subitem {render}, \hyperpage{433}
     \subitem {renderAscii}, \hyperpage{434}
     \subitem {substr}, \hyperpage{434}

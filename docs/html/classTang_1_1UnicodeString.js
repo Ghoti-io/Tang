@@ -2,7 +2,8 @@ var classTang_1_1UnicodeString =
 [
     [ "Type", "classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aef", [
       [ "Trusted", "classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aefa157a44b8159d35ee4e5cbb7e15b37b38", null ],
-      [ "Untrusted", "classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aefa53ce5b480cb1df2a39d67a0af7b68bce", null ]
+      [ "Untrusted", "classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aefa53ce5b480cb1df2a39d67a0af7b68bce", null ],
+      [ "Percent", "classTang_1_1UnicodeString.html#a58915a1dadac5cc71c6aea7169cd4aefad99a94916aff98d5c33330cbe653b51c", null ]
     ] ],
     [ "UnicodeString", "classTang_1_1UnicodeString.html#a0104e7a1ca98d59c902a7220dd12fc3d", null ],
     [ "UnicodeString", "classTang_1_1UnicodeString.html#a9420e097f7c15e31ab403dd92bd69483", null ],
@@ -17,6 +18,7 @@ var classTang_1_1UnicodeString =
     [ "operator==", "classTang_1_1UnicodeString.html#a7ec9ba3ea2b640435e31a61865c97ffd", null ],
     [ "render", "classTang_1_1UnicodeString.html#a69305edbb266045c7a5032548d6fc8c9", null ],
     [ "renderAscii", "classTang_1_1UnicodeString.html#a9dca6ebd40e645d5eaf72f430ea7b541", null ],
+    [ "setPercent", "classTang_1_1UnicodeString.html#a1a96fca104f7aef59f1a4e4ad1009f0f", null ],
     [ "setUntrusted", "classTang_1_1UnicodeString.html#ae570221e486828b53341eb764149a48e", null ],
     [ "substr", "classTang_1_1UnicodeString.html#a7bda91d3c0efba9f5e70d915a665ba18", null ],
     [ "graphemeOffsets", "classTang_1_1UnicodeString.html#a0ad4f2ba93e84e3256af80c5750be410", null ],

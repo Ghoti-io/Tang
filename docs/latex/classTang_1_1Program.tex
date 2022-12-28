@@ -11,7 +11,8 @@ Represents a compiled script or template that may be executed.
 
 
 
-Collaboration diagram for Tang\+::Program\+:\nopagebreak
+Collaboration diagram for Tang\+::Program\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -67,9 +68,9 @@ void \mbox{\hyperlink{classTang_1_1Program_a861d7d5ad832ea2865156c8517b58ad1}{ad
 \begin{DoxyCompactList}\small\item\em Indicate that an identifier will be altered within the associated scope. \end{DoxyCompactList}\item 
 const std\+::set$<$ std\+::string $>$ \& \mbox{\hyperlink{classTang_1_1Program_a93e80b96547877bfb6ed1b01fd0a6b7c}{get\+Identifiers\+Assigned}} () const
 \begin{DoxyCompactList}\small\item\em Get the set of identifiers that will be assigned in the current scope. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classTang_1_1Program_a857438c58ac9e9ae420001676ee05582}{add\+String}} (const std\+::string \&name, bool is\+Trusted)
+void \mbox{\hyperlink{classTang_1_1Program_a410d12e2ac6cdfe926c730a50e56eca3}{add\+String}} (const std\+::string \&name, \mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aef}{Unicode\+String\+::\+Type}})
 \begin{DoxyCompactList}\small\item\em Add a string to the environment. \end{DoxyCompactList}\item 
-const std\+::map$<$ std\+::pair$<$ std\+::string, bool $>$, size\+\_\+t $>$ \& \mbox{\hyperlink{classTang_1_1Program_a70ddc2a3e97541b106e7ab403292a3f0}{get\+Strings}} () const
+const std\+::map$<$ std\+::pair$<$ std\+::string, \mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aef}{Unicode\+String\+::\+Type}} $>$, size\+\_\+t $>$ \& \mbox{\hyperlink{classTang_1_1Program_afc153c1457c40b20178a2a9a0d2bf24f}{get\+Strings}} () const
 \begin{DoxyCompactList}\small\item\em Get the string map of the current environment. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTang_1_1Program_a5c12ec99486118295496695b50750da9}\label{classTang_1_1Program_a5c12ec99486118295496695b50750da9}} 
 void \mbox{\hyperlink{classTang_1_1Program_a5c12ec99486118295496695b50750da9}{push\+Break\+Stack}} ()
@@ -120,8 +121,8 @@ std\+::vector$<$ std\+::map$<$ std\+::string, \mbox{\hyperlink{macros_8hpp_ac3ea
 \mbox{\Hypertarget{classTang_1_1Program_afca51adb15fa6e650356dc003c50de8d}\label{classTang_1_1Program_afca51adb15fa6e650356dc003c50de8d}} 
 std\+::vector$<$ std\+::set$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classTang_1_1Program_afca51adb15fa6e650356dc003c50de8d}{identifiers\+Assigned\+Stack}}
 \begin{DoxyCompactList}\small\item\em Stack of sets of identifiers that are the target of an assignment statement within the associated scope. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTang_1_1Program_ac24ab492b12ab4f6d9cc74645e7e8aa7}\label{classTang_1_1Program_ac24ab492b12ab4f6d9cc74645e7e8aa7}} 
-std\+::vector$<$ std\+::map$<$ std\+::pair$<$ std\+::string, bool $>$, size\+\_\+t $>$ $>$ \mbox{\hyperlink{classTang_1_1Program_ac24ab492b12ab4f6d9cc74645e7e8aa7}{string\+Stack}}
+\mbox{\Hypertarget{classTang_1_1Program_a43c6934d7b0e1883a91efeb29a3592c6}\label{classTang_1_1Program_a43c6934d7b0e1883a91efeb29a3592c6}} 
+std\+::vector$<$ std\+::map$<$ std\+::pair$<$ std\+::string, \mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aef}{Unicode\+String\+::\+Type}} $>$, size\+\_\+t $>$ $>$ \mbox{\hyperlink{classTang_1_1Program_a43c6934d7b0e1883a91efeb29a3592c6}{string\+Stack}}
 \begin{DoxyCompactList}\small\item\em Stack of mappings of strings to their stack locations. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTang_1_1Program_a7b046b69c9c937c8414214fa2ef813b2}\label{classTang_1_1Program_a7b046b69c9c937c8414214fa2ef813b2}} 
 std\+::vector$<$ std\+::set$<$ size\+\_\+t $>$ $>$ \mbox{\hyperlink{classTang_1_1Program_a7b046b69c9c937c8414214fa2ef813b2}{break\+Stack}}
@@ -290,11 +291,11 @@ Add a library alias to the environment.
 {\em name} & The library alias to add to the environment. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classTang_1_1Program_a857438c58ac9e9ae420001676ee05582}\label{classTang_1_1Program_a857438c58ac9e9ae420001676ee05582}} 
+\mbox{\Hypertarget{classTang_1_1Program_a410d12e2ac6cdfe926c730a50e56eca3}\label{classTang_1_1Program_a410d12e2ac6cdfe926c730a50e56eca3}} 
 \index{Tang::Program@{Tang::Program}!addString@{addString}}
 \index{addString@{addString}!Tang::Program@{Tang::Program}}
 \doxysubsubsection{\texorpdfstring{addString()}{addString()}}
-{\footnotesize\ttfamily void Program\+::add\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{bool}]{is\+Trusted }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Program\+::add\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aef}{Unicode\+String\+::\+Type}}}]{type }\end{DoxyParamCaption})}
 
 
 
@@ -304,7 +305,7 @@ Add a string to the environment.
 \begin{DoxyParams}{Parameters}
 {\em name} & The variable to add to the environment. \\
 \hline
-{\em is\+Trusted} & Whether or not the string is a trusted literal. \\
+{\em type} & The \mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aef}{Unicode\+String\+::\+Type}} of the string. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classTang_1_1Program_aee5e79c40fac68e875c0d043f8fc2bc1}\label{classTang_1_1Program_aee5e79c40fac68e875c0d043f8fc2bc1}} 
@@ -353,7 +354,8 @@ Execute the program\textquotesingle{}s Bytecode, and return the execution \mbox{
 \begin{DoxyReturn}{Returns}
 The execution \mbox{\hyperlink{classTang_1_1Context}{Context}}. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -453,11 +455,11 @@ Get the result of the \mbox{\hyperlink{classTang_1_1Program}{Program}} execution
 \begin{DoxyReturn}{Returns}
 The result of the \mbox{\hyperlink{classTang_1_1Program}{Program}} execution, if it exists. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classTang_1_1Program_a70ddc2a3e97541b106e7ab403292a3f0}\label{classTang_1_1Program_a70ddc2a3e97541b106e7ab403292a3f0}} 
+\mbox{\Hypertarget{classTang_1_1Program_afc153c1457c40b20178a2a9a0d2bf24f}\label{classTang_1_1Program_afc153c1457c40b20178a2a9a0d2bf24f}} 
 \index{Tang::Program@{Tang::Program}!getStrings@{getStrings}}
 \index{getStrings@{getStrings}!Tang::Program@{Tang::Program}}
 \doxysubsubsection{\texorpdfstring{getStrings()}{getStrings()}}
-{\footnotesize\ttfamily const map$<$ pair$<$ string, bool $>$, size\+\_\+t $>$ \& Program\+::get\+Strings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily const map$<$ pair$<$ string, \mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aef}{Unicode\+String\+::\+Type}} $>$, size\+\_\+t $>$ \& Program\+::get\+Strings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 

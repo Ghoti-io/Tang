@@ -23,6 +23,7 @@ Collaboration diagram for Tang\+::Unicode\+String\+:\nopagebreak
 \item 
 enum \mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aef}{Type}} \{ \mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aefa157a44b8159d35ee4e5cbb7e15b37b38}{Trusted}}
 , \mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aefa53ce5b480cb1df2a39d67a0af7b68bce}{Untrusted}}
+, \mbox{\hyperlink{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aefad99a94916aff98d5c33330cbe653b51c}{Percent}}
  \}
 \begin{DoxyCompactList}\small\item\em The types of string being created. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
@@ -59,7 +60,10 @@ std\+::string \mbox{\hyperlink{classTang_1_1UnicodeString_a9dca6ebd40e645d5eaf72
 \begin{DoxyCompactList}\small\item\em Render the string in with all characters converted to an ASCII representation. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTang_1_1UnicodeString_ae570221e486828b53341eb764149a48e}\label{classTang_1_1UnicodeString_ae570221e486828b53341eb764149a48e}} 
 void \mbox{\hyperlink{classTang_1_1UnicodeString_ae570221e486828b53341eb764149a48e}{set\+Untrusted}} ()
-\begin{DoxyCompactList}\small\item\em Set the string as Unicode\+String\+::\+Type\+::\+Untrusted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Set the string as Unicode\+String\+::\+Type\+::\+Untrusted. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1UnicodeString_a1a96fca104f7aef59f1a4e4ad1009f0f}\label{classTang_1_1UnicodeString_a1a96fca104f7aef59f1a4e4ad1009f0f}} 
+void \mbox{\hyperlink{classTang_1_1UnicodeString_a1a96fca104f7aef59f1a4e4ad1009f0f}{set\+Percent}} ()
+\begin{DoxyCompactList}\small\item\em Set the string as Unicode\+String\+::\+Type\+::\+Percent. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -106,6 +110,10 @@ Trusted&String is from a trusted source. \\
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{Untrusted@{Untrusted}!Tang::UnicodeString@{Tang::UnicodeString}}\index{Tang::UnicodeString@{Tang::UnicodeString}!Untrusted@{Untrusted}}}\mbox{\Hypertarget{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aefa53ce5b480cb1df2a39d67a0af7b68bce}\label{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aefa53ce5b480cb1df2a39d67a0af7b68bce}} 
 Untrusted&String is not from a trusted source. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Percent@{Percent}!Tang::UnicodeString@{Tang::UnicodeString}}\index{Tang::UnicodeString@{Tang::UnicodeString}!Percent@{Percent}}}\mbox{\Hypertarget{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aefad99a94916aff98d5c33330cbe653b51c}\label{classTang_1_1UnicodeString_a58915a1dadac5cc71c6aea7169cd4aefad99a94916aff98d5c33330cbe653b51c}} 
+Percent&String is to be percent encoded. \\
 \hline
 
 \end{DoxyEnumFields}
@@ -247,11 +255,12 @@ Render the string in with dangerous characters HTML encoded, if the string is Un
 \begin{DoxyReturn}{Returns}
 The rendered string, according to its type. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=331pt]{classTang_1_1UnicodeString_a69305edbb266045c7a5032548d6fc8c9_cgraph}
+\includegraphics[width=346pt]{classTang_1_1UnicodeString_a69305edbb266045c7a5032548d6fc8c9_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classTang_1_1UnicodeString_a9dca6ebd40e645d5eaf72f430ea7b541}\label{classTang_1_1UnicodeString_a9dca6ebd40e645d5eaf72f430ea7b541}} 
