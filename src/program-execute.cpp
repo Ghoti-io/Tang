@@ -215,8 +215,11 @@ Context Program::execute(ContextData && data) {
 
         // Set the string as Untrusted if necessary.
         if (type == UnicodeString::Type::Untrusted) {
-          auto & s = static_cast<ComputedExpressionString &>(*gcString);
-          s.setUntrusted();
+          static_cast<ComputedExpressionString &>(*gcString).setUntrusted();
+        }
+        // Set the string as Percent if necessary.
+        else if (type == UnicodeString::Type::Percent) {
+          static_cast<ComputedExpressionString &>(*gcString).setPercent();
         }
 
         stack.push_back(gcString);

@@ -376,3 +376,9 @@ void ComputedExpressionString::setUntrusted() {
   }
 }
 
+void ComputedExpressionString::setPercent() {
+  for (auto & s : this->stringParts) {
+    s.setPercent();
+  }
+}
+

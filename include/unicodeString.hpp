@@ -138,6 +138,11 @@ namespace Tang {
      */
     void setUntrusted();
 
+    /**
+     * Set the string as UnicodeString::Type::Percent.
+     */
+    void setPercent();
+
   private:
     /**
      * The UTF-8 encoded string.

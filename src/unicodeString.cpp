@@ -153,7 +153,9 @@ void UnicodeString::generateCachedValues() const {
 string UnicodeString::render() const {
   return (this->type == Type::Trusted)
     ? this->src
-    : htmlEscape(this->src);
+    : this->type == Type::Percent
+      ? percentEncode(this->src)
+      : htmlEscape(this->src);
 }
 
 string UnicodeString::renderAscii() const {
@@ -162,5 +164,9 @@ string UnicodeString::renderAscii() const {
 
 void UnicodeString::setUntrusted() {
   this->type = UnicodeString::Type::Untrusted;
+}
+
+void UnicodeString::setPercent() {
+  this->type = UnicodeString::Type::Percent;
 }
 

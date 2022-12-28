@@ -176,6 +176,12 @@ using namespace std;
     // Beginning of a multi line comment.
     yy_push_state(multiLineComment);
   }
+  %\" {
+    // The start of a new, double-quoted string.
+    stringBuffer.clear();
+    type = UnicodeString::Type::Percent;
+    yy_push_state(doubleQuoteString);
+  }
   \!\" {
     // The start of a new, double-quoted string.
     stringBuffer.clear();

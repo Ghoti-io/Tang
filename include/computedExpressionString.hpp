@@ -86,9 +86,14 @@ namespace Tang {
       ComputedExpressionString & operator+=(const ComputedExpressionString &rhs);
 
       /**
-       * Set all of the string parts to untrusted.
+       * Set all of the string parts to UnicodeString::Type::Untrusted.
        */
       void setUntrusted();
+
+      /**
+       * Set all of the string parts to UnicodeString::Type::Percent.
+       */
+      void setPercent();
 
     private:
       /**

@@ -1986,6 +1986,17 @@ TEST(Syntax, UntrustedStringLiteral) {
   }
 }
 
+TEST(Syntax, PercentEncodedString) {
+  {
+    // Untrusted String Literal
+    auto p1 = tang->compileScript(R"(
+      a = %"abc def";
+      print(a);
+    )");
+    EXPECT_EQ(p1.execute().out, "abc+def");
+  }
+}
+
 TEST(NativeFunctions, General) {
   auto tang = TangBase::make_shared();
   auto & methods = tang->getObjectMethods();

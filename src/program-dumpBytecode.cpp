@@ -126,7 +126,13 @@ string Program::dumpBytecode() const {
             }
           }
         }
-        out << "STRING" << (type == UnicodeString::Type::Trusted ? "\"" : "!\"") << temp << "\"";
+        out << "STRING" << (
+          type == UnicodeString::Type::Trusted
+            ? "\""
+            : type == UnicodeString::Type::Untrusted
+              ? "!\""
+              : "%\""
+        ) << temp << "\"";
         pc += bytes + 3;
         break;
       }
