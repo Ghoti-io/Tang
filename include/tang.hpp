@@ -31,8 +31,8 @@
 //
 //
 // TODO What's next:
-// * Better location tracking for bytecode and error reporting.
 // * Tang version
+// * Library Macros
 // * Library Extension
 // * Math library (started)
 //   * round, min, max, log, ceil, exp
