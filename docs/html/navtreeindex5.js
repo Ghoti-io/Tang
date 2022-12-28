@@ -1,5 +1,8 @@
 var NAVTREEINDEX5 =
 {
+"functions_func_o.html":[1,3,1,11],
+"functions_func_p.html":[1,3,1,12],
+"functions_func_r.html":[1,3,1,13],
 "functions_func_s.html":[1,3,1,14],
 "functions_func_t.html":[1,3,1,15],
 "functions_func_u.html":[1,3,1,16],
@@ -36,8 +39,8 @@ var NAVTREEINDEX5 =
 "htmlEscape_8hpp.html#ae5b01ac2fa5a6ad5fb97559638abe686":[2,0,1,49,1],
 "htmlEscape_8hpp.html#af699458ba5331ddec7e15a878f42f8f5":[2,0,1,49,2],
 "htmlEscape_8hpp_source.html":[2,0,1,49],
-"index.html":[0],
 "index.html":[],
+"index.html":[0],
 "index.html#A":[0,0],
 "index.html#Features":[0,1],
 "index.html#License":[0,2],

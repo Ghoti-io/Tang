@@ -85,7 +85,11 @@ void \mbox{\hyperlink{classTang_1_1Program_af5d2ae23991475e3c8776de0d0a01123}{pu
 void \mbox{\hyperlink{classTang_1_1Program_ad95d0be274c087ea9361d4b758ae26c2}{add\+Continue}} (size\+\_\+t \mbox{\hyperlink{classTang_1_1location}{location}})
 \begin{DoxyCompactList}\small\item\em Add the Bytecode location of a {\ttfamily continue} statement, to be set when the final target is known at a later time. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classTang_1_1Program_a0a824ad2a83896854f4e528f6c3cc630}{pop\+Continue\+Stack}} (size\+\_\+t target)
-\begin{DoxyCompactList}\small\item\em For all {\ttfamily continue} bytecode locations collected by Tang\+::add\+Continue, set the target pc to {\ttfamily target}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em For all {\ttfamily continue} bytecode locations collected by Tang\+::add\+Continue, set the target pc to {\ttfamily target}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTang_1_1Program_ade07719c20e60f6bc5639a8af7327093}{set\+Annotation}} (size\+\_\+t offset, const std\+::string \&annotation)
+\begin{DoxyCompactList}\small\item\em Set a bytecode annotation. \end{DoxyCompactList}\item 
+const std\+::map$<$ size\+\_\+t, std\+::string $>$ \& \mbox{\hyperlink{classTang_1_1Program_ab0a0be7fcce3e73bb2dbe010978eafe3}{get\+Annotations}} () const
+\begin{DoxyCompactList}\small\item\em Get the bytecode annotations. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -144,7 +148,10 @@ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1AstNode}{Ast\+Node}} $>$
 \begin{DoxyCompactList}\small\item\em The Bytecode of the compiled program. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTang_1_1Program_a60f4be3d576e81e6200167f2d910f259}\label{classTang_1_1Program_a60f4be3d576e81e6200167f2d910f259}} 
 std\+::optional$<$ \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} $>$ \mbox{\hyperlink{classTang_1_1Program_a60f4be3d576e81e6200167f2d910f259}{result}}
-\begin{DoxyCompactList}\small\item\em The result of the \mbox{\hyperlink{classTang_1_1Program}{Program}} compilation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The result of the \mbox{\hyperlink{classTang_1_1Program}{Program}} compilation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1Program_ab4c55c9652ca085b8eb700be2f4d6a07}\label{classTang_1_1Program_ab4c55c9652ca085b8eb700be2f4d6a07}} 
+std\+::map$<$ size\+\_\+t, std\+::string $>$ \mbox{\hyperlink{classTang_1_1Program_ab4c55c9652ca085b8eb700be2f4d6a07}{annotations}}
+\begin{DoxyCompactList}\small\item\em Bytecode annotations. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -354,14 +361,26 @@ Execute the program\textquotesingle{}s Bytecode, and return the execution \mbox{
 \begin{DoxyReturn}{Returns}
 The execution \mbox{\hyperlink{classTang_1_1Context}{Context}}. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classTang_1_1Program_a56156253a209b04636fc6120ef11b7d2_cgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classTang_1_1Program_ab0a0be7fcce3e73bb2dbe010978eafe3}\label{classTang_1_1Program_ab0a0be7fcce3e73bb2dbe010978eafe3}} 
+\index{Tang::Program@{Tang::Program}!getAnnotations@{getAnnotations}}
+\index{getAnnotations@{getAnnotations}!Tang::Program@{Tang::Program}}
+\doxysubsubsection{\texorpdfstring{getAnnotations()}{getAnnotations()}}
+{\footnotesize\ttfamily const map$<$ size\+\_\+t, string $>$ \& Program\+::get\+Annotations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the bytecode annotations. 
+
+\begin{DoxyReturn}{Returns}
+A map of bytecode offsets to their associated annotation. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classTang_1_1Program_a2dedf08e5d7f9f92179c4af2eea870ee}\label{classTang_1_1Program_a2dedf08e5d7f9f92179c4af2eea870ee}} 
 \index{Tang::Program@{Tang::Program}!getAst@{getAst}}
 \index{getAst@{getAst}!Tang::Program@{Tang::Program}}
@@ -534,6 +553,23 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classTang_1_1Program_a3ed3e014d80138d61d545a3ef5fe0a2e_cgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classTang_1_1Program_ade07719c20e60f6bc5639a8af7327093}\label{classTang_1_1Program_ade07719c20e60f6bc5639a8af7327093}} 
+\index{Tang::Program@{Tang::Program}!setAnnotation@{setAnnotation}}
+\index{setAnnotation@{setAnnotation}!Tang::Program@{Tang::Program}}
+\doxysubsubsection{\texorpdfstring{setAnnotation()}{setAnnotation()}}
+{\footnotesize\ttfamily void Program\+::set\+Annotation (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{offset,  }\item[{const std\+::string \&}]{annotation }\end{DoxyParamCaption})}
+
+
+
+Set a bytecode annotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & The bytecode offset to associate with the annotation. \\
+\hline
+{\em annotation} & The annotation for the bytecode offset. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classTang_1_1Program_aabcfee07409be5bc6bf1312f26b56a85}\label{classTang_1_1Program_aabcfee07409be5bc6bf1312f26b56a85}} 
 \index{Tang::Program@{Tang::Program}!setFunctionStackDeclaration@{setFunctionStackDeclaration}}
 \index{setFunctionStackDeclaration@{setFunctionStackDeclaration}!Tang::Program@{Tang::Program}}

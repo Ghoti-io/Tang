@@ -104,24 +104,25 @@ Collaboration diagram for Tang::Program:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTang_1_1Program__coll__graph.png" border="0" usemap="#aTang_1_1Program_coll__map" alt="Collaboration graph"/></div>
 <map name="aTang_1_1Program_coll__map" id="aTang_1_1Program_coll__map">
-<area shape="rect" title="Represents a compiled script or template that may be executed." alt="" coords="1243,344,1357,371"/>
-<area shape="rect" title=" " alt="" coords="819,27,974,69"/>
-<area shape="rect" title=" " alt="" coords="394,35,533,61"/>
-<area shape="rect" title=" " alt="" coords="588,265,751,321"/>
-<area shape="rect" title=" " alt="" coords="193,308,280,335"/>
-<area shape="rect" title=" " alt="" coords="382,337,545,378"/>
-<area shape="rect" title=" " alt="" coords="775,207,1019,249"/>
-<area shape="rect" title=" " alt="" coords="381,405,546,432"/>
-<area shape="rect" title=" " alt="" coords="382,459,545,501"/>
-<area shape="rect" title=" " alt="" coords="5,301,144,342"/>
-<area shape="rect" title=" " alt="" coords="793,337,1000,378"/>
-<area shape="rect" title=" " alt="" coords="391,150,535,191"/>
-<area shape="rect" title=" " alt="" coords="809,533,984,603"/>
-<area shape="rect" title=" " alt="" coords="363,540,564,596"/>
-<area shape="rect" title=" " alt="" coords="815,627,979,669"/>
-<area shape="rect" title=" " alt="" coords="815,693,979,734"/>
-<area shape="rect" title=" " alt="" coords="819,402,974,443"/>
-<area shape="rect" title=" " alt="" coords="807,467,986,509"/>
+<area shape="rect" title="Represents a compiled script or template that may be executed." alt="" coords="1273,356,1388,383"/>
+<area shape="rect" title=" " alt="" coords="850,29,1005,70"/>
+<area shape="rect" title=" " alt="" coords="425,36,563,63"/>
+<area shape="rect" title=" " alt="" coords="620,141,780,182"/>
+<area shape="rect" title=" " alt="" coords="193,349,280,376"/>
+<area shape="rect" title=" " alt="" coords="619,329,781,385"/>
+<area shape="rect" title=" " alt="" coords="413,401,575,442"/>
+<area shape="rect" title=" " alt="" coords="805,271,1049,313"/>
+<area shape="rect" title=" " alt="" coords="411,469,577,496"/>
+<area shape="rect" title=" " alt="" coords="413,526,575,567"/>
+<area shape="rect" title=" " alt="" coords="5,342,144,383"/>
+<area shape="rect" title=" " alt="" coords="824,401,1031,442"/>
+<area shape="rect" title=" " alt="" coords="422,211,566,253"/>
+<area shape="rect" title=" " alt="" coords="840,597,1015,667"/>
+<area shape="rect" title=" " alt="" coords="393,604,595,660"/>
+<area shape="rect" title=" " alt="" coords="845,691,1009,733"/>
+<area shape="rect" title=" " alt="" coords="845,757,1009,798"/>
+<area shape="rect" title=" " alt="" coords="850,466,1005,507"/>
+<area shape="rect" title=" " alt="" coords="838,531,1017,573"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -219,6 +220,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a0a824ad2a83896854f4e528f6c3cc630"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a0a824ad2a83896854f4e528f6c3cc630">popContinueStack</a> (size_t target)</td></tr>
 <tr class="memdesc:a0a824ad2a83896854f4e528f6c3cc630"><td class="mdescLeft">&#160;</td><td class="mdescRight">For all <code>continue</code> bytecode locations collected by Tang::addContinue, set the target pc to <code>target</code>.  <a href="classTang_1_1Program.html#a0a824ad2a83896854f4e528f6c3cc630">More...</a><br /></td></tr>
 <tr class="separator:a0a824ad2a83896854f4e528f6c3cc630"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade07719c20e60f6bc5639a8af7327093"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#ade07719c20e60f6bc5639a8af7327093">setAnnotation</a> (size_t offset, const std::string &amp;annotation)</td></tr>
+<tr class="memdesc:ade07719c20e60f6bc5639a8af7327093"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a bytecode annotation.  <a href="classTang_1_1Program.html#ade07719c20e60f6bc5639a8af7327093">More...</a><br /></td></tr>
+<tr class="separator:ade07719c20e60f6bc5639a8af7327093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0a0be7fcce3e73bb2dbe010978eafe3"><td class="memItemLeft" align="right" valign="top">const std::map&lt; size_t, std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#ab0a0be7fcce3e73bb2dbe010978eafe3">getAnnotations</a> () const</td></tr>
+<tr class="memdesc:ab0a0be7fcce3e73bb2dbe010978eafe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bytecode annotations.  <a href="classTang_1_1Program.html#ab0a0be7fcce3e73bb2dbe010978eafe3">More...</a><br /></td></tr>
+<tr class="separator:ab0a0be7fcce3e73bb2dbe010978eafe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -295,6 +302,10 @@ std::shared_ptr&lt; <a class="el" href="classTang_1_1AstNode.html">AstNode</a> &
 std::optional&lt; <a class="el" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#a60f4be3d576e81e6200167f2d910f259">result</a></td></tr>
 <tr class="memdesc:a60f4be3d576e81e6200167f2d910f259"><td class="mdescLeft">&#160;</td><td class="mdescRight">The result of the <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Program</a> compilation. <br /></td></tr>
 <tr class="separator:a60f4be3d576e81e6200167f2d910f259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4c55c9652ca085b8eb700be2f4d6a07"><td class="memItemLeft" align="right" valign="top"><a id="ab4c55c9652ca085b8eb700be2f4d6a07"></a>
+std::map&lt; size_t, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1Program.html#ab4c55c9652ca085b8eb700be2f4d6a07">annotations</a></td></tr>
+<tr class="memdesc:ab4c55c9652ca085b8eb700be2f4d6a07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bytecode annotations. <br /></td></tr>
+<tr class="separator:ab4c55c9652ca085b8eb700be2f4d6a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a compiled script or template that may be executed. </p>
@@ -651,6 +662,26 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="ab0a0be7fcce3e73bb2dbe010978eafe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0a0be7fcce3e73bb2dbe010978eafe3">&#9670;&nbsp;</a></span>getAnnotations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const map&lt; size_t, string &gt; &amp; Program::getAnnotations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the bytecode annotations. </p>
+<dl class="section return"><dt>Returns</dt><dd>A map of bytecode offsets to their associated annotation. </dd></dl>
+
+</div>
+</div>
 <a id="a2dedf08e5d7f9f92179c4af2eea870ee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2dedf08e5d7f9f92179c4af2eea870ee">&#9670;&nbsp;</a></span>getAst()</h2>
 
@@ -915,6 +946,43 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="classTang_1_1Program.html#af5d2ae23991475e3c8776de0d0a01123" title="Increase the continue environment stack, so that we can handle nested continue&#45;supporting structures." alt="" coords="291,71,503,112"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="ade07719c20e60f6bc5639a8af7327093"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade07719c20e60f6bc5639a8af7327093">&#9670;&nbsp;</a></span>setAnnotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Program::setAnnotation </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>annotation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a bytecode annotation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>The bytecode offset to associate with the annotation. </td></tr>
+    <tr><td class="paramname">annotation</td><td>The annotation for the bytecode offset. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

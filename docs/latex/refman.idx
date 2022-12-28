@@ -257,8 +257,8 @@
 \indexentry{AstNodeIdentifier@{AstNodeIdentifier}!Tang::AstNodeIdentifier@{Tang::AstNodeIdentifier}|hyperpage}{79}
 \indexentry{Tang::AstNodeIdentifier@{Tang::AstNodeIdentifier}!compile@{compile}|hyperpage}{79}
 \indexentry{compile@{compile}!Tang::AstNodeIdentifier@{Tang::AstNodeIdentifier}|hyperpage}{79}
-\indexentry{Tang::AstNodeIdentifier@{Tang::AstNodeIdentifier}!compilePreprocess@{compilePreprocess}|hyperpage}{79}
-\indexentry{compilePreprocess@{compilePreprocess}!Tang::AstNodeIdentifier@{Tang::AstNodeIdentifier}|hyperpage}{79}
+\indexentry{Tang::AstNodeIdentifier@{Tang::AstNodeIdentifier}!compilePreprocess@{compilePreprocess}|hyperpage}{80}
+\indexentry{compilePreprocess@{compilePreprocess}!Tang::AstNodeIdentifier@{Tang::AstNodeIdentifier}|hyperpage}{80}
 \indexentry{Tang::AstNodeIdentifier@{Tang::AstNodeIdentifier}!dump@{dump}|hyperpage}{80}
 \indexentry{dump@{dump}!Tang::AstNodeIdentifier@{Tang::AstNodeIdentifier}|hyperpage}{80}
 \indexentry{Tang::AstNodeIfElse@{Tang::AstNodeIfElse}|hyperpage}{81}
@@ -1609,14 +1609,14 @@
 \indexentry{Tang::Program@{Tang::Program}!Template@{Template}|hyperpage}{410}
 \indexentry{Tang::Program@{Tang::Program}!Program@{Program}|hyperpage}{410}
 \indexentry{Program@{Program}!Tang::Program@{Tang::Program}|hyperpage}{410}
-\indexentry{Tang::Program@{Tang::Program}!addBreak@{addBreak}|hyperpage}{410}
-\indexentry{addBreak@{addBreak}!Tang::Program@{Tang::Program}|hyperpage}{410}
+\indexentry{Tang::Program@{Tang::Program}!addBreak@{addBreak}|hyperpage}{411}
+\indexentry{addBreak@{addBreak}!Tang::Program@{Tang::Program}|hyperpage}{411}
 \indexentry{Tang::Program@{Tang::Program}!addBytecode@{addBytecode}|hyperpage}{411}
 \indexentry{addBytecode@{addBytecode}!Tang::Program@{Tang::Program}|hyperpage}{411}
 \indexentry{Tang::Program@{Tang::Program}!addContinue@{addContinue}|hyperpage}{411}
 \indexentry{addContinue@{addContinue}!Tang::Program@{Tang::Program}|hyperpage}{411}
-\indexentry{Tang::Program@{Tang::Program}!addIdentifier@{addIdentifier}|hyperpage}{411}
-\indexentry{addIdentifier@{addIdentifier}!Tang::Program@{Tang::Program}|hyperpage}{411}
+\indexentry{Tang::Program@{Tang::Program}!addIdentifier@{addIdentifier}|hyperpage}{412}
+\indexentry{addIdentifier@{addIdentifier}!Tang::Program@{Tang::Program}|hyperpage}{412}
 \indexentry{Tang::Program@{Tang::Program}!addIdentifierAssigned@{addIdentifierAssigned}|hyperpage}{412}
 \indexentry{addIdentifierAssigned@{addIdentifierAssigned}!Tang::Program@{Tang::Program}|hyperpage}{412}
 \indexentry{Tang::Program@{Tang::Program}!addLibraryAlias@{addLibraryAlias}|hyperpage}{412}
@@ -1629,93 +1629,97 @@
 \indexentry{execute@{execute}!Tang::Program@{Tang::Program}|hyperpage}{413}
 \indexentry{Tang::Program@{Tang::Program}!execute@{execute}|hyperpage}{413}
 \indexentry{execute@{execute}!Tang::Program@{Tang::Program}|hyperpage}{413}
+\indexentry{Tang::Program@{Tang::Program}!getAnnotations@{getAnnotations}|hyperpage}{414}
+\indexentry{getAnnotations@{getAnnotations}!Tang::Program@{Tang::Program}|hyperpage}{414}
 \indexentry{Tang::Program@{Tang::Program}!getAst@{getAst}|hyperpage}{414}
 \indexentry{getAst@{getAst}!Tang::Program@{Tang::Program}|hyperpage}{414}
 \indexentry{Tang::Program@{Tang::Program}!getBytecode@{getBytecode}|hyperpage}{414}
 \indexentry{getBytecode@{getBytecode}!Tang::Program@{Tang::Program}|hyperpage}{414}
-\indexentry{Tang::Program@{Tang::Program}!getCode@{getCode}|hyperpage}{414}
-\indexentry{getCode@{getCode}!Tang::Program@{Tang::Program}|hyperpage}{414}
+\indexentry{Tang::Program@{Tang::Program}!getCode@{getCode}|hyperpage}{415}
+\indexentry{getCode@{getCode}!Tang::Program@{Tang::Program}|hyperpage}{415}
 \indexentry{Tang::Program@{Tang::Program}!getIdentifiers@{getIdentifiers}|hyperpage}{415}
 \indexentry{getIdentifiers@{getIdentifiers}!Tang::Program@{Tang::Program}|hyperpage}{415}
 \indexentry{Tang::Program@{Tang::Program}!getIdentifiersAssigned@{getIdentifiersAssigned}|hyperpage}{415}
 \indexentry{getIdentifiersAssigned@{getIdentifiersAssigned}!Tang::Program@{Tang::Program}|hyperpage}{415}
 \indexentry{Tang::Program@{Tang::Program}!getLibraryAliases@{getLibraryAliases}|hyperpage}{415}
 \indexentry{getLibraryAliases@{getLibraryAliases}!Tang::Program@{Tang::Program}|hyperpage}{415}
-\indexentry{Tang::Program@{Tang::Program}!getResult@{getResult}|hyperpage}{415}
-\indexentry{getResult@{getResult}!Tang::Program@{Tang::Program}|hyperpage}{415}
+\indexentry{Tang::Program@{Tang::Program}!getResult@{getResult}|hyperpage}{416}
+\indexentry{getResult@{getResult}!Tang::Program@{Tang::Program}|hyperpage}{416}
 \indexentry{Tang::Program@{Tang::Program}!getStrings@{getStrings}|hyperpage}{416}
 \indexentry{getStrings@{getStrings}!Tang::Program@{Tang::Program}|hyperpage}{416}
 \indexentry{Tang::Program@{Tang::Program}!popBreakStack@{popBreakStack}|hyperpage}{416}
 \indexentry{popBreakStack@{popBreakStack}!Tang::Program@{Tang::Program}|hyperpage}{416}
-\indexentry{Tang::Program@{Tang::Program}!popContinueStack@{popContinueStack}|hyperpage}{416}
-\indexentry{popContinueStack@{popContinueStack}!Tang::Program@{Tang::Program}|hyperpage}{416}
+\indexentry{Tang::Program@{Tang::Program}!popContinueStack@{popContinueStack}|hyperpage}{417}
+\indexentry{popContinueStack@{popContinueStack}!Tang::Program@{Tang::Program}|hyperpage}{417}
 \indexentry{Tang::Program@{Tang::Program}!pushEnvironment@{pushEnvironment}|hyperpage}{417}
 \indexentry{pushEnvironment@{pushEnvironment}!Tang::Program@{Tang::Program}|hyperpage}{417}
-\indexentry{Tang::Program@{Tang::Program}!setFunctionStackDeclaration@{setFunctionStackDeclaration}|hyperpage}{417}
-\indexentry{setFunctionStackDeclaration@{setFunctionStackDeclaration}!Tang::Program@{Tang::Program}|hyperpage}{417}
+\indexentry{Tang::Program@{Tang::Program}!setAnnotation@{setAnnotation}|hyperpage}{418}
+\indexentry{setAnnotation@{setAnnotation}!Tang::Program@{Tang::Program}|hyperpage}{418}
+\indexentry{Tang::Program@{Tang::Program}!setFunctionStackDeclaration@{setFunctionStackDeclaration}|hyperpage}{418}
+\indexentry{setFunctionStackDeclaration@{setFunctionStackDeclaration}!Tang::Program@{Tang::Program}|hyperpage}{418}
 \indexentry{Tang::Program@{Tang::Program}!setJumpTarget@{setJumpTarget}|hyperpage}{418}
 \indexentry{setJumpTarget@{setJumpTarget}!Tang::Program@{Tang::Program}|hyperpage}{418}
-\indexentry{Tang::Program@{Tang::Program}!functionsDeclared@{functionsDeclared}|hyperpage}{418}
-\indexentry{functionsDeclared@{functionsDeclared}!Tang::Program@{Tang::Program}|hyperpage}{418}
+\indexentry{Tang::Program@{Tang::Program}!functionsDeclared@{functionsDeclared}|hyperpage}{419}
+\indexentry{functionsDeclared@{functionsDeclared}!Tang::Program@{Tang::Program}|hyperpage}{419}
 \indexentry{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}|hyperpage}{419}
-\indexentry{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}!get@{get}|hyperpage}{420}
-\indexentry{get@{get}!Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}|hyperpage}{420}
-\indexentry{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}!getInstance@{getInstance}|hyperpage}{420}
-\indexentry{getInstance@{getInstance}!Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}|hyperpage}{420}
+\indexentry{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}!get@{get}|hyperpage}{421}
+\indexentry{get@{get}!Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}|hyperpage}{421}
+\indexentry{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}!getInstance@{getInstance}|hyperpage}{421}
+\indexentry{getInstance@{getInstance}!Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}|hyperpage}{421}
 \indexentry{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}!recycle@{recycle}|hyperpage}{421}
 \indexentry{recycle@{recycle}!Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}|hyperpage}{421}
-\indexentry{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}!currentIndex@{currentIndex}|hyperpage}{421}
-\indexentry{currentIndex@{currentIndex}!Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}|hyperpage}{421}
-\indexentry{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}!currentRecycledIndex@{currentRecycledIndex}|hyperpage}{421}
-\indexentry{currentRecycledIndex@{currentRecycledIndex}!Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}|hyperpage}{421}
+\indexentry{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}!currentIndex@{currentIndex}|hyperpage}{422}
+\indexentry{currentIndex@{currentIndex}!Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}|hyperpage}{422}
+\indexentry{Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}!currentRecycledIndex@{currentRecycledIndex}|hyperpage}{422}
+\indexentry{currentRecycledIndex@{currentRecycledIndex}!Tang::SingletonObjectPool$<$ T $>$@{Tang::SingletonObjectPool$<$ T $>$}|hyperpage}{422}
 \indexentry{Tang::TangBase@{Tang::TangBase}|hyperpage}{422}
-\indexentry{Tang::TangBase@{Tang::TangBase}!TangBase@{TangBase}|hyperpage}{423}
-\indexentry{TangBase@{TangBase}!Tang::TangBase@{Tang::TangBase}|hyperpage}{423}
+\indexentry{Tang::TangBase@{Tang::TangBase}!TangBase@{TangBase}|hyperpage}{424}
+\indexentry{TangBase@{TangBase}!Tang::TangBase@{Tang::TangBase}|hyperpage}{424}
 \indexentry{Tang::TangBase@{Tang::TangBase}!compileScript@{compileScript}|hyperpage}{424}
 \indexentry{compileScript@{compileScript}!Tang::TangBase@{Tang::TangBase}|hyperpage}{424}
 \indexentry{Tang::TangBase@{Tang::TangBase}!compileTemplate@{compileTemplate}|hyperpage}{424}
 \indexentry{compileTemplate@{compileTemplate}!Tang::TangBase@{Tang::TangBase}|hyperpage}{424}
-\indexentry{Tang::TangBase@{Tang::TangBase}!make\_shared@{make\_shared}|hyperpage}{424}
-\indexentry{make\_shared@{make\_shared}!Tang::TangBase@{Tang::TangBase}|hyperpage}{424}
+\indexentry{Tang::TangBase@{Tang::TangBase}!make\_shared@{make\_shared}|hyperpage}{425}
+\indexentry{make\_shared@{make\_shared}!Tang::TangBase@{Tang::TangBase}|hyperpage}{425}
 \indexentry{Tang::TangScanner@{Tang::TangScanner}|hyperpage}{425}
-\indexentry{Tang::TangScanner@{Tang::TangScanner}!TangScanner@{TangScanner}|hyperpage}{426}
-\indexentry{TangScanner@{TangScanner}!Tang::TangScanner@{Tang::TangScanner}|hyperpage}{426}
+\indexentry{Tang::TangScanner@{Tang::TangScanner}!TangScanner@{TangScanner}|hyperpage}{427}
+\indexentry{TangScanner@{TangScanner}!Tang::TangScanner@{Tang::TangScanner}|hyperpage}{427}
 \indexentry{Tang::TangScanner@{Tang::TangScanner}!get\_next\_token@{get\_next\_token}|hyperpage}{427}
 \indexentry{get\_next\_token@{get\_next\_token}!Tang::TangScanner@{Tang::TangScanner}|hyperpage}{427}
-\indexentry{Tang::Unescape@{Tang::Unescape}|hyperpage}{427}
-\indexentry{Tang::Unescape@{Tang::Unescape}!Unescape@{Unescape}|hyperpage}{428}
-\indexentry{Unescape@{Unescape}!Tang::Unescape@{Tang::Unescape}|hyperpage}{428}
-\indexentry{Tang::Unescape@{Tang::Unescape}!get\_next\_token@{get\_next\_token}|hyperpage}{428}
-\indexentry{get\_next\_token@{get\_next\_token}!Tang::Unescape@{Tang::Unescape}|hyperpage}{428}
-\indexentry{Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{429}
-\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!Type@{Type}|hyperpage}{430}
-\indexentry{Type@{Type}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{430}
-\indexentry{Trusted@{Trusted}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{431}
-\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!Trusted@{Trusted}|hyperpage}{431}
-\indexentry{Untrusted@{Untrusted}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{431}
-\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!Untrusted@{Untrusted}|hyperpage}{431}
-\indexentry{Percent@{Percent}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{431}
-\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!Percent@{Percent}|hyperpage}{431}
-\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!bytesLength@{bytesLength}|hyperpage}{431}
-\indexentry{bytesLength@{bytesLength}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{431}
-\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!length@{length}|hyperpage}{431}
-\indexentry{length@{length}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{431}
-\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!operator std::string@{operator std::string}|hyperpage}{431}
-\indexentry{operator std::string@{operator std::string}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{431}
-\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!operator+@{operator+}|hyperpage}{432}
-\indexentry{operator+@{operator+}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{432}
-\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!operator+=@{operator+=}|hyperpage}{432}
-\indexentry{operator+=@{operator+=}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{432}
-\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!operator$<$@{operator$<$}|hyperpage}{432}
-\indexentry{operator$<$@{operator$<$}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{432}
-\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!operator==@{operator==}|hyperpage}{433}
-\indexentry{operator==@{operator==}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{433}
-\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!render@{render}|hyperpage}{433}
-\indexentry{render@{render}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{433}
-\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!renderAscii@{renderAscii}|hyperpage}{434}
-\indexentry{renderAscii@{renderAscii}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{434}
-\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!substr@{substr}|hyperpage}{434}
-\indexentry{substr@{substr}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{434}
+\indexentry{Tang::Unescape@{Tang::Unescape}|hyperpage}{428}
+\indexentry{Tang::Unescape@{Tang::Unescape}!Unescape@{Unescape}|hyperpage}{429}
+\indexentry{Unescape@{Unescape}!Tang::Unescape@{Tang::Unescape}|hyperpage}{429}
+\indexentry{Tang::Unescape@{Tang::Unescape}!get\_next\_token@{get\_next\_token}|hyperpage}{429}
+\indexentry{get\_next\_token@{get\_next\_token}!Tang::Unescape@{Tang::Unescape}|hyperpage}{429}
+\indexentry{Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{430}
+\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!Type@{Type}|hyperpage}{431}
+\indexentry{Type@{Type}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{431}
+\indexentry{Trusted@{Trusted}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{432}
+\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!Trusted@{Trusted}|hyperpage}{432}
+\indexentry{Untrusted@{Untrusted}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{432}
+\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!Untrusted@{Untrusted}|hyperpage}{432}
+\indexentry{Percent@{Percent}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{432}
+\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!Percent@{Percent}|hyperpage}{432}
+\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!bytesLength@{bytesLength}|hyperpage}{432}
+\indexentry{bytesLength@{bytesLength}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{432}
+\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!length@{length}|hyperpage}{432}
+\indexentry{length@{length}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{432}
+\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!operator std::string@{operator std::string}|hyperpage}{432}
+\indexentry{operator std::string@{operator std::string}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{432}
+\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!operator+@{operator+}|hyperpage}{433}
+\indexentry{operator+@{operator+}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{433}
+\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!operator+=@{operator+=}|hyperpage}{433}
+\indexentry{operator+=@{operator+=}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{433}
+\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!operator$<$@{operator$<$}|hyperpage}{433}
+\indexentry{operator$<$@{operator$<$}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{433}
+\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!operator==@{operator==}|hyperpage}{434}
+\indexentry{operator==@{operator==}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{434}
+\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!render@{render}|hyperpage}{434}
+\indexentry{render@{render}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{434}
+\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!renderAscii@{renderAscii}|hyperpage}{435}
+\indexentry{renderAscii@{renderAscii}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{435}
+\indexentry{Tang::UnicodeString@{Tang::UnicodeString}!substr@{substr}|hyperpage}{435}
+\indexentry{substr@{substr}!Tang::UnicodeString@{Tang::UnicodeString}|hyperpage}{435}
 \indexentry{build/generated/location.hh@{build/generated/location.hh}|hyperpage}{437}
 \indexentry{location.hh@{location.hh}!operator$<$$<$@{operator$<$$<$}|hyperpage}{438}
 \indexentry{operator$<$$<$@{operator$<$$<$}!location.hh@{location.hh}|hyperpage}{438}
