@@ -32,6 +32,10 @@ string Program::dumpBytecode() const {
   size_t pc{0};
 
   while(pc < this->bytecode.size()) {
+    if (this->annotations.count(pc)) {
+      // There is an annotation for this bytecode offset.
+      out << setw(offsetWidth + 3) << right << "; " << this->annotations.at(pc) << endl;
+    }
     out << setw(offsetWidth) << setfill('0') << right << pc << " "
       << setw(opcodeWidth) << setfill(' ') << left;
 

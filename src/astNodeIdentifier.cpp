@@ -27,12 +27,15 @@ void AstNodeIdentifier::compilePreprocess(Program & program, PreprocessState sta
 }
 
 void AstNodeIdentifier::compile(Tang::Program & program) const {
+  string annotation = "IDENTIFIER (" + this->name + ") : ";
   auto & identifier = program.getIdentifiers();
   if (identifier.count(this->name)) {
+    program.setAnnotation(program.getBytecode().size(), annotation + "Load from stack");
     program.addBytecode((uinteger_t)Opcode::PEEK);
     program.addBytecode((uinteger_t)identifier.at(this->name));
   }
   else {
+    program.setAnnotation(program.getBytecode().size(), annotation + "WARNING: identifier not found");
     program.addBytecode((uinteger_t)Opcode::NULLVAL);
   }
 }

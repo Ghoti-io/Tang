@@ -30,10 +30,12 @@ string AstNodeFunctionDeclaration::dump(string indent) const {
 }
 
 void AstNodeFunctionDeclaration::compile(Tang::Program & program) const {
+  string annotation = "FUNCTION (" + this->name + ") : ";
   // Jump past the function Bytecode (that we are about to compile).
   auto jumpPastFunction = program.getBytecode().size();
   program.addBytecode((uinteger_t)Opcode::JMP);
   program.addBytecode(0);
+  program.setAnnotation(jumpPastFunction, annotation + "Jump past function declaration");
 
   // Prepare for a new function environment.
   // pushEnvironment() will collect all of the expected variable names,
@@ -63,6 +65,9 @@ void AstNodeFunctionDeclaration::compile(Tang::Program & program) const {
   // function name, then leave enough room in the bytecode.
   // The arguments will have already been placed on the stack by the calling
   // code, so they can be skipped.
+  if (this->arguments.size() < identifiers.size()) {
+    program.setAnnotation(program.getBytecode().size(), annotation + "Reserve stack space for function identifiers");
+  }
   for (size_t i = this->arguments.size(); i < identifiers.size(); ++i) {
     if (program.functionsCollected.back().count(identifiers[i])) {
       // This is function.
@@ -94,6 +99,9 @@ void AstNodeFunctionDeclaration::compile(Tang::Program & program) const {
   // Put the string literals on the stack.
   // We must be careful to add them in the expected order, so figure out the
   // order first, and put that into `stringLiterals`.
+  if (program.getStrings().size()) {
+    program.setAnnotation(program.getBytecode().size(), annotation + "Reserve stack space for function strings");
+  }
   auto & strings = program.getStrings();
   vector<pair<string, UnicodeString::Type>> stringLiterals(strings.size());
   for (auto & [item, position] : strings) {
@@ -120,6 +128,7 @@ void AstNodeFunctionDeclaration::compile(Tang::Program & program) const {
   // Compile the program.
   // Do not pop the result.  It will be the "default" return value of the
   // function, if a `return;` statement is not otherwise used.
+  program.setAnnotation(program.getBytecode().size(), annotation + "Code block start");
   this->codeBlock->compile(program);
 
   // At this point, we need to account for any stray `continue` or `break`
@@ -147,6 +156,7 @@ void AstNodeFunctionDeclaration::compile(Tang::Program & program) const {
   program.pushContinueStack();
 
   // Ensure that the function is cleaned up by calling `RETURN`
+  program.setAnnotation(program.getBytecode().size(), annotation + "Code block end");
   program.addBytecode((uinteger_t)Opcode::RETURN);
   program.addBytecode((uinteger_t)program.getIdentifiers().size() + program.getStrings().size());
 

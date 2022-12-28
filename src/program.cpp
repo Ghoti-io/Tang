@@ -278,3 +278,11 @@ void Program::popContinueStack(size_t target) {
   this->continueStack.pop_back();
 }
 
+void Program::setAnnotation(size_t offset, const std::string & annotation) {
+  this->annotations[offset] = annotation;
+}
+
+const map<size_t, string> & Program::getAnnotations() const {
+  return this->annotations;
+}
+

@@ -277,6 +277,21 @@ namespace Tang {
      */
     void popContinueStack(size_t target);
 
+    /**
+     * Set a bytecode annotation.
+     *
+     * @param offset The bytecode offset to associate with the annotation.
+     * @param annotation The annotation for the bytecode offset.
+     */
+    void setAnnotation(size_t offset, const std::string & annotation);
+
+    /**
+     * Get the bytecode annotations.
+     *
+     * @result A map of bytecode offsets to their associated annotation.
+     */
+    const std::map<size_t, std::string> & getAnnotations() const;
+
   private:
     /**
      * A pointer to the base Tang class.
@@ -348,6 +363,11 @@ namespace Tang {
      * The result of the Program compilation.
      */
     std::optional<GarbageCollected> result;
+
+    /**
+     * Bytecode annotations.
+     */
+    std::map<size_t, std::string> annotations;
   };
 }
 
