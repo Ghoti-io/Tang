@@ -21,17 +21,17 @@ string AstNodeLibrary::dump(string indent) const {
 void AstNodeLibrary::compilePreprocess(Program & program, [[maybe_unused]] PreprocessState state) const {
   // Add the library name to the program strings so that it can be used by the
   // bytecode to load the library.
-  program.addString(this->libraryName, true);
+  program.addString(this->libraryName, UnicodeString::Type::Trusted);
 }
 
 void AstNodeLibrary::compile(Tang::Program & program) const {
   auto & strings = program.getStrings();
   auto & identifiers = program.getIdentifiers();
 
-  if (strings.count({this->libraryName, true})) {
+  if (strings.count({this->libraryName, UnicodeString::Type::Trusted})) {
     // Load the library onto the stack.
     program.addBytecode((uinteger_t)Opcode::PEEK);
-    program.addBytecode((uinteger_t)(strings.at({this->libraryName, true}) + identifiers.size()));
+    program.addBytecode((uinteger_t)(strings.at({this->libraryName, UnicodeString::Type::Trusted}) + identifiers.size()));
     program.addBytecode((uinteger_t)Opcode::LIBRARY);
 
   }

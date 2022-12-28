@@ -193,7 +193,7 @@ Context Program::execute(ContextData && data) {
       }
       case Opcode::STRING: {
         EXECUTEPROGRAMCHECK(2);
-        bool isTrusted = this->bytecode[pc + 1];
+        UnicodeString::Type type = (UnicodeString::Type) this->bytecode[pc + 1];
         auto size = this->bytecode[pc + 2];
         auto bytes = ceil((double)size / sizeof(uinteger_t));
         EXECUTEPROGRAMCHECK(2 + bytes);
@@ -214,7 +214,7 @@ Context Program::execute(ContextData && data) {
         auto gcString = GarbageCollected::make<ComputedExpressionString>(temp);
 
         // Set the string as Untrusted if necessary.
-        if (!isTrusted) {
+        if (type == UnicodeString::Type::Untrusted) {
           auto & s = static_cast<ComputedExpressionString &>(*gcString);
           s.setUntrusted();
         }

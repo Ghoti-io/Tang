@@ -114,7 +114,7 @@ string Program::dumpBytecode() const {
       }
       case Opcode::STRING: {
         DUMPPROGRAMCHECK(2);
-        bool isTrusted = this->bytecode[pc + 1];
+        UnicodeString::Type type = (UnicodeString::Type)this->bytecode[pc + 1];
         auto size = this->bytecode[pc + 2];
         auto bytes = ceil((double)size / sizeof(uinteger_t));
         DUMPPROGRAMCHECK(2 + bytes);
@@ -126,7 +126,7 @@ string Program::dumpBytecode() const {
             }
           }
         }
-        out << "STRING" << (isTrusted ? "\"" : "!\"") << temp << "\"";
+        out << "STRING" << (type == UnicodeString::Type::Trusted ? "\"" : "!\"") << temp << "\"";
         pc += bytes + 3;
         break;
       }

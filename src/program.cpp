@@ -43,10 +43,10 @@ void Program::parse() {
 
 void Program::pushEnvironment(const shared_ptr<AstNode> & ast) {
   // Prepare the identifier mapping stack with an empty map.
-  this->identifierStack.push_back(map<string, size_t>{});
+  this->identifierStack.push_back({});
 
   // Prepare the string mapping stack with an empty map.
-  this->stringStack.push_back(map<pair<string, bool>, size_t>{});
+  this->stringStack.push_back({});
 
   // Forward all of the previous function declarations, and gather any new ones
   // in the new scope.
@@ -129,13 +129,13 @@ void Program::compile() {
   // Reserve spaces on the stack for each string.
   // We must be careful to add them in the expected order, so figure out the
   // order first, and put that into `stringLiterals`.
-  vector<pair<string, bool>> stringLiterals(this->stringStack.back().size());
-  for (auto & item : this->stringStack.back()) {
-    stringLiterals[item.second] = item.first;
+  vector<pair<string, UnicodeString::Type>> stringLiterals(this->stringStack.back().size());
+  for (auto & [item, position] : this->stringStack.back()) {
+    stringLiterals[position] = item;
   }
   // Now that the strings are in the correct order, push them onto the stack.
-  for (auto & literal : stringLiterals) {
-    AstNodeString(literal.first, literal.second, Tang::location{}).compileLiteral(*this);
+  for (auto & [str, type] : stringLiterals) {
+    AstNodeString(str, type, Tang::location{}).compileLiteral(*this);
   }
 
   // Compile the program.
@@ -183,14 +183,14 @@ const set<string>& Program::getIdentifiersAssigned() const {
   return this->identifiersAssignedStack.back();
 }
 
-void Program::addString(const string & val, bool isTrusted) {
+void Program::addString(const string & val, UnicodeString::Type type) {
   auto & strings = this->stringStack.back();
-  if (strings.count({val, isTrusted}) == 0) {
-    strings[{val, isTrusted}] = strings.size();
+  if (strings.count({val, type}) == 0) {
+    strings[{val, type}] = strings.size();
   }
 }
 
-const map<pair<string, bool>, size_t>& Program::getStrings() const {
+const map<pair<string, UnicodeString::Type>, size_t>& Program::getStrings() const {
   return this->stringStack.back();
 }
 

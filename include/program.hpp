@@ -21,6 +21,7 @@ namespace Tang {
 #include "computedExpression.hpp"
 #include "garbageCollected.hpp"
 #include "context.hpp"
+#include "unicodeString.hpp"
 
 namespace Tang {
   class TangBase;
@@ -198,9 +199,9 @@ namespace Tang {
      * Add a string to the environment.
      *
      * @param name The variable to add to the environment.
-     * @param isTrusted Whether or not the string is a trusted literal.
+     * @param type The UnicodeString::Type of the string.
      */
-    void addString(const std::string & name, bool isTrusted);
+    void addString(const std::string & name, UnicodeString::Type);
 
     /**
      * Get the string map of the current environment.
@@ -208,7 +209,7 @@ namespace Tang {
      * @return A map of each identifer name to its stack position within the
      *   current environment.
      */
-    const std::map<std::pair<std::string, bool>, size_t>& getStrings() const;
+    const std::map<std::pair<std::string, UnicodeString::Type>, size_t>& getStrings() const;
 
     /**
      * Names of the functions that are declared in a previous or the current
@@ -301,7 +302,7 @@ namespace Tang {
     /**
      * Stack of mappings of strings to their stack locations.
      */
-    std::vector<std::map<std::pair<std::string, bool>, size_t>> stringStack;
+    std::vector<std::map<std::pair<std::string, UnicodeString::Type>, size_t>> stringStack;
 
     /**
      * Stack of a collection of `break` statement locations.

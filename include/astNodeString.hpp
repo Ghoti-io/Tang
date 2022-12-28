@@ -7,6 +7,7 @@
 #define TANG_ASTNODESTRING_HPP
 
 #include "astNode.hpp"
+#include "unicodeString.hpp"
 
 namespace Tang {
   /**
@@ -26,10 +27,10 @@ namespace Tang {
      * Construct a string that is either Trusted or Untrusted.
      *
      * @param text The string to represent.
-     * @param isTrusted Whether or not the string literal is trusted.
+     * @param type The UnicodeString::Type that the string should be considered.
      * @param location The location associated with the expression.
      */
-    AstNodeString(const std::string & text, bool isTrusted, Tang::location location);
+    AstNodeString(const std::string & text, UnicodeString::Type type, Tang::location location);
 
     virtual std::string dump(std::string indent = "") const override;
     virtual void compile(Tang::Program & program) const override;
@@ -49,9 +50,9 @@ namespace Tang {
     std::string val;
 
     /**
-     * Whether or not the string is trusted.
+     * The UnicodeString::Type that the string should be considered.
      */
-    bool isTrusted;
+    UnicodeString::Type type;
   };
 }
 

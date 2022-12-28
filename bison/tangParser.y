@@ -78,7 +78,7 @@
 %token <int64_t> INTEGER "integer literal"
 %token <long double> FLOAT "float literal"
 %token <bool> BOOLEAN "boolean literal"
-%token <std::pair<std::string, bool>> STRING "string literal"
+%token <std::pair<std::string, Tang::UnicodeString::Type>> STRING "string literal"
 %token <std::string> TEMPLATESTRING "template string"
 %token STRINGERROR "Malformed String"
 %token <std::string> IDENTIFIER "identifier"
@@ -170,6 +170,7 @@
 #include <stdint.h>
 #include "astNode.hpp"
 #include "error.hpp"
+#include "unicodeString.hpp"
 namespace Tang {
   class TangScanner;
 }

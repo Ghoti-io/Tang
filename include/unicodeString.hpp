@@ -26,6 +26,7 @@ namespace Tang {
     enum Type {
       Trusted,      ///< String is from a trusted source.
       Untrusted,    ///< String is not from a trusted source.
+      Percent,      ///< String is to be percent encoded.
     };
 
     /**
