@@ -31,9 +31,6 @@
 //
 //
 // TODO What's next:
-// * TangString
-//   * percent encode
-//   * percent decode
 // * Better location tracking for bytecode and error reporting.
 // * Tang version
 // * Library Extension
