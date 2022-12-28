@@ -1995,6 +1995,23 @@ TEST(Syntax, PercentEncodedString) {
     )");
     EXPECT_EQ(p1.execute().out, "abc+def");
   }
+  {
+    // Untrusted String Literal
+    auto p1 = tang->compileScript(R"(
+      a = %"abc+def";
+      print(a);
+    )");
+    EXPECT_EQ(p1.execute().out, "abc%2Bdef");
+  }
+  {
+    // Untrusted String Literal
+    auto p1 = tang->compileScript(R"(
+      print("abc>def ");
+      print(!"abc>def ");
+      print(%"abc>def ");
+    )");
+    EXPECT_EQ(p1.execute().out, "abc>def abc&gt;def abc%3Edef+");
+  }
 }
 
 TEST(NativeFunctions, General) {
