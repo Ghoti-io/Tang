@@ -41,6 +41,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "computedExpressionIteratorEnd.cpp", "computedExpressionIteratorEnd_8cpp.html", null ],
     [ "computedExpressionLibrary.cpp", "computedExpressionLibrary_8cpp.html", null ],
     [ "computedExpressionLibraryMath.cpp", "computedExpressionLibraryMath_8cpp.html", null ],
+    [ "computedExpressionLibraryTang.cpp", "computedExpressionLibraryTang_8cpp.html", null ],
     [ "computedExpressionMap.cpp", "computedExpressionMap_8cpp.html", null ],
     [ "computedExpressionNativeBoundFunction.cpp", "computedExpressionNativeBoundFunction_8cpp.html", null ],
     [ "computedExpressionNativeFunction.cpp", "computedExpressionNativeFunction_8cpp.html", null ],
@@ -52,6 +53,6 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "program-dumpBytecode.cpp", "program-dumpBytecode_8cpp.html", "program-dumpBytecode_8cpp" ],
     [ "program-execute.cpp", "program-execute_8cpp.html", "program-execute_8cpp" ],
     [ "program.cpp", "program_8cpp.html", null ],
-    [ "tangBase.cpp", "tangBase_8cpp.html", null ],
+    [ "tangBase.cpp", "tangBase_8cpp.html", "tangBase_8cpp" ],
     [ "unicodeString.cpp", "unicodeString_8cpp.html", null ]
 ];

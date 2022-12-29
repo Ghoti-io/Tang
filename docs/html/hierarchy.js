@@ -41,7 +41,7 @@ var hierarchy =
       [ "Tang::ComputedExpressionIterator", "classTang_1_1ComputedExpressionIterator.html", null ],
       [ "Tang::ComputedExpressionIteratorEnd", "classTang_1_1ComputedExpressionIteratorEnd.html", null ],
       [ "Tang::ComputedExpressionLibrary", "classTang_1_1ComputedExpressionLibrary.html", [
-        [ "Tang::ComputedExpressionLibraryMath", "classTang_1_1ComputedExpressionLibraryMath.html", null ]
+        [ "Tang::ComputedExpressionLibraryBase", "classTang_1_1ComputedExpressionLibraryBase.html", null ]
       ] ],
       [ "Tang::ComputedExpressionMap", "classTang_1_1ComputedExpressionMap.html", null ],
       [ "Tang::ComputedExpressionNativeBoundFunction", "classTang_1_1ComputedExpressionNativeBoundFunction.html", null ],

@@ -10,16 +10,45 @@ Define the \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+::\+Tang\+Base}} class.
 {\ttfamily \#include \char`\"{}computed\+Expression\+String.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}computed\+Expression\+Error.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}computed\+Expression\+Library\+Math.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}computed\+Expression\+Library\+Tang.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}context.\+hpp\char`\"{}}\newline
-Include dependency graph for tang\+Base.\+cpp\+:\nopagebreak
+Include dependency graph for tang\+Base.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{tangBase_8cpp__incl}
 \end{center}
 \end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{tangBase_8cpp_ab2534bd74f779c9a34dc3ce78a819ea7}\label{tangBase_8cpp_ab2534bd74f779c9a34dc3ce78a819ea7}} 
+\#define {\bfseries OBJECTMETHOD}(type)~\{type\+\_\+index(typeid(type)), type\+::get\+Methods()\}
+\item 
+\#define {\bfseries LIBRARY}(alias,  type)
+\item 
+\mbox{\Hypertarget{tangBase_8cpp_ae2219dfed5ed3289e5b9dd4e2c28bf35}\label{tangBase_8cpp_ae2219dfed5ed3289e5b9dd4e2c28bf35}} 
+\#define {\bfseries LIBRARYATTRIBUTES}(type)~\{type\+\_\+index(typeid(type)), type\+::get\+Library\+Attributes()\}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Define the \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+::\+Tang\+Base}} class. 
 
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{tangBase_8cpp_a3d0211e68184d1d932845b25f327560d}\label{tangBase_8cpp_a3d0211e68184d1d932845b25f327560d}} 
+\index{tangBase.cpp@{tangBase.cpp}!LIBRARY@{LIBRARY}}
+\index{LIBRARY@{LIBRARY}!tangBase.cpp@{tangBase.cpp}}
+\doxysubsubsection{\texorpdfstring{LIBRARY}{LIBRARY}}
+{\footnotesize\ttfamily \#define LIBRARY(\begin{DoxyParamCaption}\item[{}]{alias,  }\item[{}]{type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \{alias, []([[maybe\_unused]] \mbox{\hyperlink{classTang_1_1Context}{Context}} \& context) \{ \(\backslash\)}
+\DoxyCodeLine{  return GarbageCollected::make<type>();\(\backslash\)}
+\DoxyCodeLine{\}\}}
+
+\end{DoxyCode}

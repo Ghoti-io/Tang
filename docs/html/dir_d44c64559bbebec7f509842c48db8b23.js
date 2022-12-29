@@ -120,9 +120,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "computedExpressionLibrary.hpp", "computedExpressionLibrary_8hpp.html", [
       [ "ComputedExpressionLibrary", "classTang_1_1ComputedExpressionLibrary.html", "classTang_1_1ComputedExpressionLibrary" ]
     ] ],
-    [ "computedExpressionLibraryMath.hpp", "computedExpressionLibraryMath_8hpp.html", [
-      [ "ComputedExpressionLibraryMath", "classTang_1_1ComputedExpressionLibraryMath.html", "classTang_1_1ComputedExpressionLibraryMath" ]
-    ] ],
+    [ "computedExpressionLibraryBase.hpp", "computedExpressionLibraryBase_8hpp_source.html", null ],
+    [ "computedExpressionLibraryMath.hpp", "computedExpressionLibraryMath_8hpp.html", "computedExpressionLibraryMath_8hpp" ],
+    [ "computedExpressionLibraryTang.hpp", "computedExpressionLibraryTang_8hpp.html", "computedExpressionLibraryTang_8hpp" ],
     [ "computedExpressionMap.hpp", "computedExpressionMap_8hpp.html", [
       [ "ComputedExpressionMap", "classTang_1_1ComputedExpressionMap.html", "classTang_1_1ComputedExpressionMap" ]
     ] ],

@@ -41,7 +41,7 @@ var annotated_dup =
       [ "ComputedExpressionIterator", "classTang_1_1ComputedExpressionIterator.html", "classTang_1_1ComputedExpressionIterator" ],
       [ "ComputedExpressionIteratorEnd", "classTang_1_1ComputedExpressionIteratorEnd.html", "classTang_1_1ComputedExpressionIteratorEnd" ],
       [ "ComputedExpressionLibrary", "classTang_1_1ComputedExpressionLibrary.html", "classTang_1_1ComputedExpressionLibrary" ],
-      [ "ComputedExpressionLibraryMath", "classTang_1_1ComputedExpressionLibraryMath.html", "classTang_1_1ComputedExpressionLibraryMath" ],
+      [ "ComputedExpressionLibraryBase", "classTang_1_1ComputedExpressionLibraryBase.html", "classTang_1_1ComputedExpressionLibraryBase" ],
       [ "ComputedExpressionMap", "classTang_1_1ComputedExpressionMap.html", "classTang_1_1ComputedExpressionMap" ],
       [ "ComputedExpressionNativeBoundFunction", "classTang_1_1ComputedExpressionNativeBoundFunction.html", "classTang_1_1ComputedExpressionNativeBoundFunction" ],
       [ "ComputedExpressionNativeFunction", "classTang_1_1ComputedExpressionNativeFunction.html", "classTang_1_1ComputedExpressionNativeFunction" ],
