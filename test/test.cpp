@@ -2331,6 +2331,17 @@ TEST(Library, Use) {
   }
 }
 
+TEST(Library, Tang) {
+  {
+    // Get the Tang version.
+    auto p1 = tang->compileScript(R"(
+      use tang as t;
+      print(t.version);
+    )");
+    EXPECT_EQ(p1.execute().out, TANGVERSION);
+  }
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

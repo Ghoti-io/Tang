@@ -48,6 +48,7 @@ LIBOBJECTS := $(OBJ_DIR)/astNode.o \
 							$(OBJ_DIR)/computedExpressionIteratorEnd.o \
 							$(OBJ_DIR)/computedExpressionLibrary.o \
 							$(OBJ_DIR)/computedExpressionLibraryMath.o \
+							$(OBJ_DIR)/computedExpressionLibraryTang.o \
 							$(OBJ_DIR)/computedExpressionMap.o \
 							$(OBJ_DIR)/computedExpressionNativeBoundFunction.o \
 							$(OBJ_DIR)/computedExpressionNativeFunction.o \
@@ -327,6 +328,11 @@ $(OBJ_DIR)/computedExpressionLibrary.o: src/computedExpressionLibrary.cpp includ
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
 $(OBJ_DIR)/computedExpressionLibraryMath.o: src/computedExpressionLibraryMath.cpp include/macros.hpp include/computedExpressionLibraryMath.hpp include/computedExpression.hpp include/error.hpp include/garbageCollected.hpp include/unicodeString.hpp
+	@echo "\n### Compiling computedExpressionLibrary.o ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
+
+$(OBJ_DIR)/computedExpressionLibraryTang.o: src/computedExpressionLibraryTang.cpp include/macros.hpp include/computedExpressionLibraryTang.hpp include/computedExpression.hpp include/error.hpp include/garbageCollected.hpp include/unicodeString.hpp
 	@echo "\n### Compiling computedExpressionLibrary.o ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC

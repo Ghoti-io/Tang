@@ -31,7 +31,6 @@
 //
 //
 // TODO What's next:
-// * Tang version
 // * Library Macros
 // * Library Extension
 // * Math library (started)

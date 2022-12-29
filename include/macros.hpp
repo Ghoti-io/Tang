@@ -12,12 +12,7 @@
 #include <string>
 #include <any>
 
-#define LIBRARYFUNCTIONWRAPPER (body, argc) \
-  ([]([[maybe_unused]] Context & context) { \
-  return GarbageCollected::make<ComputedExpressionNativeFunction>( \
-    [](vector<GarbageCollected> & args, [[maybe_unused]] Context & context) body , (size_t)argc); \
-  })
-
+#define TANGVERSION "0.0.0 alpha"
 
 namespace Tang {
   class Context;

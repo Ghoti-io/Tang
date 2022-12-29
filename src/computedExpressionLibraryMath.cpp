@@ -17,7 +17,7 @@ using namespace std;
 using namespace Tang;
 
 // Return the "floor" of a value.
-LibraryFunction floorFunction = []([[maybe_unused]] Context & context) {
+static LibraryFunction floorFunction = []([[maybe_unused]] Context & context) {
   return GarbageCollected::make<ComputedExpressionNativeFunction>(
     [](vector<GarbageCollected> & args, [[maybe_unused]] Context & context) {
       if (typeid(*args.at(0)) == typeid(ComputedExpressionInteger)) {
