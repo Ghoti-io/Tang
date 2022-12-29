@@ -14,21 +14,25 @@
 using namespace std;
 using namespace Tang;
 
+#define OBJECTMETHOD(type) {type_index(typeid(type)), type::getMethods()}
+
+#define LIBRARY(alias, type) {alias, []([[maybe_unused]] Context & context) { \
+  return GarbageCollected::make<type>();\
+}}
+
+#define LIBRARYATTRIBUTES(type) {type_index(typeid(type)), type::getLibraryAttributes()}
+
 TangBase::TangBase() : objectMethods{
-    {type_index(typeid(ComputedExpressionArray)), ComputedExpressionArray::getMethods()},
-    {type_index(typeid(ComputedExpressionString)), ComputedExpressionString::getMethods()},
+    OBJECTMETHOD(ComputedExpressionArray),
+    OBJECTMETHOD(ComputedExpressionString),
   },
   libraries{
-    {"math", []([[maybe_unused]] Context & context) {
-      return GarbageCollected::make<ComputedExpressionLibraryMath>();
-    }},
-    {"tang", []([[maybe_unused]] Context & context) {
-      return GarbageCollected::make<ComputedExpressionLibraryTang>();
-    }},
+    LIBRARY("math", ComputedExpressionLibraryMath),
+    LIBRARY("tang", ComputedExpressionLibraryTang),
 	},
   libraryAttributes{
-    {type_index(typeid(ComputedExpressionLibraryMath)), ComputedExpressionLibraryMath::getLibraryAttributes()},
-    {type_index(typeid(ComputedExpressionLibraryTang)), ComputedExpressionLibraryTang::getLibraryAttributes()},
+    LIBRARYATTRIBUTES(ComputedExpressionLibraryMath),
+    LIBRARYATTRIBUTES(ComputedExpressionLibraryTang),
 	} {};
 
 Program TangBase::compileScript(string script) {
