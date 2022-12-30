@@ -35,11 +35,19 @@ TangBase::TangBase() : objectMethods{
     LIBRARYATTRIBUTES(ComputedExpressionLibraryTang),
 	} {};
 
-Program TangBase::compileScript(string script) {
+Program TangBase::compileScript(const string & script) {
   return Program{script, Program::CodeType::Script, this->shared_from_this()};
 }
 
-Program TangBase::compileTemplate(string code) {
+Program TangBase::compileScript(istream & script) {
+  return Program{script, Program::CodeType::Script, this->shared_from_this()};
+}
+
+Program TangBase::compileTemplate(const string & code) {
+  return Program{code, Program::CodeType::Template, this->shared_from_this()};
+}
+
+Program TangBase::compileTemplate(istream & code) {
   return Program{code, Program::CodeType::Template, this->shared_from_this()};
 }
 

@@ -15,7 +15,14 @@
 using namespace std;
 using namespace Tang;
 
-Program::Program(string code, Program::CodeType codeType, std::shared_ptr<Tang::TangBase> tang) : tang{tang}, code{code}, codeType{codeType}, ast{nullptr} {
+Program::Program(const string & code, Program::CodeType codeType, std::shared_ptr<Tang::TangBase> tang) : tang{tang}, code{code}, codeType{codeType}, ast{nullptr} {
+  this->parse();
+  if (this->ast) {
+    this->compile();
+  }
+}
+
+Program::Program(istream & code, Program::CodeType codeType, std::shared_ptr<Tang::TangBase> tang) : tang{tang}, istreamCode{&code}, codeType{codeType}, ast{nullptr} {
   this->parse();
   if (this->ast) {
     this->compile();
@@ -23,14 +30,21 @@ Program::Program(string code, Program::CodeType codeType, std::shared_ptr<Tang::
 }
 
 void Program::parse() {
-  stringstream ss{this->code};
-  TangScanner scanner{ss, std::cout};
+  unique_ptr<TangScanner> scanner{};
+  if (this->istreamCode) {
+    scanner = make_unique<TangScanner>(**this->istreamCode, cout);
+  }
+  else {
+    stringstream ss{this->code};
+    scanner = make_unique<TangScanner>(ss, cout);
+  }
+
   Error * error{nullptr};
-  TangParser parser{scanner, this->ast, error};
+  TangParser parser{*scanner, this->ast, error};
 
   // Set the scanner mode, depending on the codeType.
   if (this->codeType == Program::CodeType::Template) {
-    scanner.setModeTemplate();
+    scanner->setModeTemplate();
   }
 
   // Begin parsing.

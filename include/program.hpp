@@ -52,7 +52,16 @@ namespace Tang {
      * @param codeType Whether the code is a `Script` or `Template`.
      * @param tang A pointer to the base Tang class.
      */
-    Program(std::string code, CodeType codeType, std::shared_ptr<Tang::TangBase> tang);
+    Program(const std::string & code, CodeType codeType, std::shared_ptr<Tang::TangBase> tang);
+
+    /**
+     * Create a compiled program using the provided code.
+     *
+     * @param code An istream to the code to be compiled.
+     * @param codeType Whether the code is a `Script` or `Template`.
+     * @param tang A pointer to the base Tang class.
+     */
+    Program(std::istream & code, CodeType codeType, std::shared_ptr<Tang::TangBase> tang);
 
     /**
      * Get the code that was provided when the Program was created.
@@ -343,6 +352,11 @@ namespace Tang {
      * The code supplied when the Program was instantiated.
      */
     std::string code;
+
+    /**
+     * An optional istream which supplied the code.
+     */
+    std::optional<std::istream *> istreamCode;
 
     /**
      * The type of code that was supplied when the Program was instantiated.

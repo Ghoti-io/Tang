@@ -80,7 +80,15 @@ namespace Tang {
      * @param script The Tang script to be compiled.
      * @return The Program object representing the compiled script.
      */
-    Program compileScript(std::string script);
+    Program compileScript(const std::string & script);
+
+    /**
+     * Compile the provided text as a script and return a Program.
+     *
+     * @param script An istream to the Tang script to be compiled.
+     * @return The Program object representing the compiled script.
+     */
+    Program compileScript(std::istream & script);
 
     /**
      * Compile the provided text as a template and return a Program.
@@ -88,13 +96,21 @@ namespace Tang {
      * @param code The Tang template to be compiled.
      * @return The Program object representing the compiled template.
      */
-    Program compileTemplate(std::string code);
+    Program compileTemplate(const std::string & code);
+
+    /**
+     * Compile the provided text as a template and return a Program.
+     *
+     * @param code An istream to the Tang template to be compiled.
+     * @return The Program object representing the compiled template.
+     */
+    Program compileTemplate(std::istream & code);
 
     /**
      * The constructor.
      *
      * This function should never be called directly.  Rather, always use the
-     * Tang::TangBase() static method, which supplies the shared pointer
+     * Tang::make_shared() static method, which supplies the shared pointer
      * necessary for creation of Program objects.
      */
     TangBase();

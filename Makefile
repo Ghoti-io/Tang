@@ -75,7 +75,7 @@ TESTFLAGS := `pkg-config --libs --cflags gtest`
 TANGLIBRARY := -L $(APP_DIR) -Wl,-R -Wl,$(APP_DIR) -l:libtang.so
 
 
-all: $(APP_DIR)/$(TARGET) ## Build the shared library
+all: $(APP_DIR)/$(TARGET) $(APP_DIR)/tang ## Build the shared library
 
 ####################################################################
 # Bison-Generated Files
@@ -437,6 +437,15 @@ $(APP_DIR)/$(TARGET): $(LIBOBJECTS)
 	$(CXX) $(CXXFLAGS) -shared -o $@ $^ $(LDFLAGS)
 
 ####################################################################
+# Command Line Utility
+####################################################################
+
+$(APP_DIR)/tang: src/tang.cpp $(APP_DIR)/$(TARGET) include/tang.hpp include/tangBase.hpp
+	@echo "\n### Compiling Tang Command Line Utility ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ $< $(LDFLAGS) $(TANGLIBRARY)
+
+####################################################################
 # Unit Tests
 ####################################################################
 
@@ -488,7 +497,7 @@ test-watch: ## Watch the file directory for changes and run the unit tests
 					inotifywait -qr -e modify -e create -e delete -e move src include bison flex test Makefile --exclude '/\.'; \
 					done
 
-test: $(APP_DIR)/testUnicodeString $(APP_DIR)/test $(APP_DIR)/testSingletonObjectPool $(APP_DIR)/testGarbageCollected ## Make and run the Unit tests
+test: $(APP_DIR)/testUnicodeString $(APP_DIR)/test $(APP_DIR)/testSingletonObjectPool $(APP_DIR)/testGarbageCollected $(APP_DIR)/tang ## Make and run the Unit tests
 	@echo "\033[0;32m"
 	@echo "############################"
 	@echo "### Running string tests ###"

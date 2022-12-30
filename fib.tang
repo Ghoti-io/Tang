@@ -1,0 +1,13 @@
+// Compute the nth number of the fibonacci sequence, where 1 is the first
+// number.  Use a very inefficient recursive solution, just to prove that
+// it works.  Also, this is only meant to be called for positive numbers.
+// It's just an example, after all!
+
+function fib(n) {
+  if (n < 2)
+    return n;
+  return fib(n - 2) + fib(n - 1);
+}
+
+print(fib(30));
+
