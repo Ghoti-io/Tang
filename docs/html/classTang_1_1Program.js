@@ -4,7 +4,8 @@ var classTang_1_1Program =
       [ "Script", "classTang_1_1Program.html#ad99e214562094e21f38b6a453163041ba38b647d35ef85ffa1affec5c7fcb7ac1", null ],
       [ "Template", "classTang_1_1Program.html#ad99e214562094e21f38b6a453163041bacfade8685b2abd2b062a2367158ce2f3", null ]
     ] ],
-    [ "Program", "classTang_1_1Program.html#a9e319b3f9fb276c281e1ad070462a8a3", null ],
+    [ "Program", "classTang_1_1Program.html#ab2abe09f7ca03a90455f69c1a92a39b6", null ],
+    [ "Program", "classTang_1_1Program.html#a10e0d55762bad64b4f9c1f1f3b0501e5", null ],
     [ "addBreak", "classTang_1_1Program.html#ae4a0290af40e77c489286303ef73dae3", null ],
     [ "addBytecode", "classTang_1_1Program.html#a1067d000db48378fa37ff569ffdf7329", null ],
     [ "addContinue", "classTang_1_1Program.html#ad95d0be274c087ea9361d4b758ae26c2", null ],
@@ -47,6 +48,7 @@ var classTang_1_1Program =
     [ "functionStackDeclarations", "classTang_1_1Program.html#a1eedd506786a238a8bcedc7b77fd01f9", null ],
     [ "identifiersAssignedStack", "classTang_1_1Program.html#afca51adb15fa6e650356dc003c50de8d", null ],
     [ "identifierStack", "classTang_1_1Program.html#a440bf2cdcd08fe6b2b0c2c19c22fa276", null ],
+    [ "istreamCode", "classTang_1_1Program.html#ad130ace72c2d5c25c17fc8b33435cc9c", null ],
     [ "libraryAliasStack", "classTang_1_1Program.html#a7c61c1a9764679f46be0bd0c98af05db", null ],
     [ "result", "classTang_1_1Program.html#a60f4be3d576e81e6200167f2d910f259", null ],
     [ "stringStack", "classTang_1_1Program.html#a43c6934d7b0e1883a91efeb29a3592c6", null ],

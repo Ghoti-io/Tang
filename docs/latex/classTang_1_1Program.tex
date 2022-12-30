@@ -28,7 +28,9 @@ enum \mbox{\hyperlink{classTang_1_1Program_ad99e214562094e21f38b6a453163041b}{Co
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTang_1_1Program_a9e319b3f9fb276c281e1ad070462a8a3}{Program}} (std\+::string \mbox{\hyperlink{classTang_1_1Program_a747cd63b40c48f81d17a2501e4fdd0e5}{code}}, \mbox{\hyperlink{classTang_1_1Program_ad99e214562094e21f38b6a453163041b}{Code\+Type}} \mbox{\hyperlink{classTang_1_1Program_adc2c06ba6f616882bbf0876ceedfc328}{code\+Type}}, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+::\+Tang\+Base}} $>$ \mbox{\hyperlink{classTang_1_1Program_ae1b7ad9e715c228225c69765a2904bf9}{tang}})
+\mbox{\hyperlink{classTang_1_1Program_ab2abe09f7ca03a90455f69c1a92a39b6}{Program}} (const std\+::string \&\mbox{\hyperlink{classTang_1_1Program_a747cd63b40c48f81d17a2501e4fdd0e5}{code}}, \mbox{\hyperlink{classTang_1_1Program_ad99e214562094e21f38b6a453163041b}{Code\+Type}} \mbox{\hyperlink{classTang_1_1Program_adc2c06ba6f616882bbf0876ceedfc328}{code\+Type}}, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+::\+Tang\+Base}} $>$ \mbox{\hyperlink{classTang_1_1Program_ae1b7ad9e715c228225c69765a2904bf9}{tang}})
+\begin{DoxyCompactList}\small\item\em Create a compiled program using the provided code. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTang_1_1Program_a10e0d55762bad64b4f9c1f1f3b0501e5}{Program}} (std\+::istream \&\mbox{\hyperlink{classTang_1_1Program_a747cd63b40c48f81d17a2501e4fdd0e5}{code}}, \mbox{\hyperlink{classTang_1_1Program_ad99e214562094e21f38b6a453163041b}{Code\+Type}} \mbox{\hyperlink{classTang_1_1Program_adc2c06ba6f616882bbf0876ceedfc328}{code\+Type}}, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+::\+Tang\+Base}} $>$ \mbox{\hyperlink{classTang_1_1Program_ae1b7ad9e715c228225c69765a2904bf9}{tang}})
 \begin{DoxyCompactList}\small\item\em Create a compiled program using the provided code. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classTang_1_1Program_a75aff78d6b94472f4d8f93e6f79cfbe0}{get\+Code}} () const
 \begin{DoxyCompactList}\small\item\em Get the code that was provided when the \mbox{\hyperlink{classTang_1_1Program}{Program}} was created. \end{DoxyCompactList}\item 
@@ -136,6 +138,9 @@ std\+::vector$<$ std\+::set$<$ size\+\_\+t $>$ $>$ \mbox{\hyperlink{classTang_1_
 \mbox{\Hypertarget{classTang_1_1Program_a747cd63b40c48f81d17a2501e4fdd0e5}\label{classTang_1_1Program_a747cd63b40c48f81d17a2501e4fdd0e5}} 
 std\+::string \mbox{\hyperlink{classTang_1_1Program_a747cd63b40c48f81d17a2501e4fdd0e5}{code}}
 \begin{DoxyCompactList}\small\item\em The code supplied when the \mbox{\hyperlink{classTang_1_1Program}{Program}} was instantiated. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTang_1_1Program_ad130ace72c2d5c25c17fc8b33435cc9c}\label{classTang_1_1Program_ad130ace72c2d5c25c17fc8b33435cc9c}} 
+std\+::optional$<$ std\+::istream $\ast$ $>$ \mbox{\hyperlink{classTang_1_1Program_ad130ace72c2d5c25c17fc8b33435cc9c}{istream\+Code}}
+\begin{DoxyCompactList}\small\item\em An optional istream which supplied the code. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTang_1_1Program_adc2c06ba6f616882bbf0876ceedfc328}\label{classTang_1_1Program_adc2c06ba6f616882bbf0876ceedfc328}} 
 \mbox{\hyperlink{classTang_1_1Program_ad99e214562094e21f38b6a453163041b}{Code\+Type}} \mbox{\hyperlink{classTang_1_1Program_adc2c06ba6f616882bbf0876ceedfc328}{code\+Type}}
 \begin{DoxyCompactList}\small\item\em The type of code that was supplied when the \mbox{\hyperlink{classTang_1_1Program}{Program}} was instantiated. \end{DoxyCompactList}\item 
@@ -180,11 +185,11 @@ Template&The code is a template. \\
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classTang_1_1Program_a9e319b3f9fb276c281e1ad070462a8a3}\label{classTang_1_1Program_a9e319b3f9fb276c281e1ad070462a8a3}} 
+\mbox{\Hypertarget{classTang_1_1Program_ab2abe09f7ca03a90455f69c1a92a39b6}\label{classTang_1_1Program_ab2abe09f7ca03a90455f69c1a92a39b6}} 
 \index{Tang::Program@{Tang::Program}!Program@{Program}}
 \index{Program@{Program}!Tang::Program@{Tang::Program}}
-\doxysubsubsection{\texorpdfstring{Program()}{Program()}}
-{\footnotesize\ttfamily Program\+::\+Program (\begin{DoxyParamCaption}\item[{std\+::string}]{code,  }\item[{\mbox{\hyperlink{classTang_1_1Program_ad99e214562094e21f38b6a453163041b}{Program\+::\+Code\+Type}}}]{code\+Type,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+::\+Tang\+Base}} $>$}]{tang }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{Program()}{Program()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Program\+::\+Program (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{code,  }\item[{\mbox{\hyperlink{classTang_1_1Program_ad99e214562094e21f38b6a453163041b}{Program\+::\+Code\+Type}}}]{code\+Type,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+::\+Tang\+Base}} $>$}]{tang }\end{DoxyParamCaption})}
 
 
 
@@ -193,6 +198,25 @@ Create a compiled program using the provided code.
 
 \begin{DoxyParams}{Parameters}
 {\em code} & The code to be compiled. \\
+\hline
+{\em code\+Type} & Whether the code is a {\ttfamily Script} or {\ttfamily Template}. \\
+\hline
+{\em tang} & A pointer to the base Tang class. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTang_1_1Program_a10e0d55762bad64b4f9c1f1f3b0501e5}\label{classTang_1_1Program_a10e0d55762bad64b4f9c1f1f3b0501e5}} 
+\index{Tang::Program@{Tang::Program}!Program@{Program}}
+\index{Program@{Program}!Tang::Program@{Tang::Program}}
+\doxysubsubsection{\texorpdfstring{Program()}{Program()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Program\+::\+Program (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{code,  }\item[{\mbox{\hyperlink{classTang_1_1Program_ad99e214562094e21f38b6a453163041b}{Program\+::\+Code\+Type}}}]{code\+Type,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+::\+Tang\+Base}} $>$}]{tang }\end{DoxyParamCaption})}
+
+
+
+Create a compiled program using the provided code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & An istream to the code to be compiled. \\
 \hline
 {\em code\+Type} & Whether the code is a {\ttfamily Script} or {\ttfamily Template}. \\
 \hline

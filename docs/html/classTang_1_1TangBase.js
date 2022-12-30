@@ -1,8 +1,10 @@
 var classTang_1_1TangBase =
 [
     [ "TangBase", "classTang_1_1TangBase.html#a6aa1668d0232e39e60d01fbce2419ef4", null ],
-    [ "compileScript", "classTang_1_1TangBase.html#a3c1ad8653a52f5a90fee20c385be7540", null ],
-    [ "compileTemplate", "classTang_1_1TangBase.html#a7982e433279e2aca3ed95904f5d7e0f6", null ],
+    [ "compileScript", "classTang_1_1TangBase.html#a740dd068eef1c703c503f8ff66e68f1a", null ],
+    [ "compileScript", "classTang_1_1TangBase.html#a7f2df290faeacbca1095e08da6f2cd9e", null ],
+    [ "compileTemplate", "classTang_1_1TangBase.html#a5eb4cc17e0e456141cb95563e4e8f675", null ],
+    [ "compileTemplate", "classTang_1_1TangBase.html#ad9fd10eeb87b935531a1d7b884d0b4fb", null ],
     [ "getLibraries", "classTang_1_1TangBase.html#ad4c92aa7a604522e7f9ecbd930fc561d", null ],
     [ "getLibraryAttributes", "classTang_1_1TangBase.html#af4f22a5586c7988e1c5d1192819db3b0", null ],
     [ "getObjectMethods", "classTang_1_1TangBase.html#a62dfbf8c82da22d0c83d920c78c08eed", null ],

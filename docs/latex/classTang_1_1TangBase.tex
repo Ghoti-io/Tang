@@ -30,9 +30,13 @@ Collaboration diagram for Tang\+::Tang\+Base\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTang_1_1Program}{Program}} \mbox{\hyperlink{classTang_1_1TangBase_a3c1ad8653a52f5a90fee20c385be7540}{compile\+Script}} (std\+::string script)
+\mbox{\hyperlink{classTang_1_1Program}{Program}} \mbox{\hyperlink{classTang_1_1TangBase_a740dd068eef1c703c503f8ff66e68f1a}{compile\+Script}} (const std\+::string \&script)
 \begin{DoxyCompactList}\small\item\em Compile the provided text as a script and return a \mbox{\hyperlink{classTang_1_1Program}{Program}}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classTang_1_1Program}{Program}} \mbox{\hyperlink{classTang_1_1TangBase_a7982e433279e2aca3ed95904f5d7e0f6}{compile\+Template}} (std\+::string code)
+\mbox{\hyperlink{classTang_1_1Program}{Program}} \mbox{\hyperlink{classTang_1_1TangBase_a7f2df290faeacbca1095e08da6f2cd9e}{compile\+Script}} (std\+::istream \&script)
+\begin{DoxyCompactList}\small\item\em Compile the provided text as a script and return a \mbox{\hyperlink{classTang_1_1Program}{Program}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTang_1_1Program}{Program}} \mbox{\hyperlink{classTang_1_1TangBase_a5eb4cc17e0e456141cb95563e4e8f675}{compile\+Template}} (const std\+::string \&code)
+\begin{DoxyCompactList}\small\item\em Compile the provided text as a template and return a \mbox{\hyperlink{classTang_1_1Program}{Program}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTang_1_1Program}{Program}} \mbox{\hyperlink{classTang_1_1TangBase_ad9fd10eeb87b935531a1d7b884d0b4fb}{compile\+Template}} (std\+::istream \&code)
 \begin{DoxyCompactList}\small\item\em Compile the provided text as a template and return a \mbox{\hyperlink{classTang_1_1Program}{Program}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTang_1_1TangBase_a6aa1668d0232e39e60d01fbce2419ef4}{Tang\+Base}} ()
 \begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
@@ -89,14 +93,14 @@ It is intentionally designed that each instance of \mbox{\hyperlink{classTang_1_
 
 The constructor. 
 
-This function should never be called directly. Rather, always use the \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+::\+Tang\+Base()}} static method, which supplies the shared pointer necessary for creation of \mbox{\hyperlink{classTang_1_1Program}{Program}} objects. 
+This function should never be called directly. Rather, always use the Tang\+::make\+\_\+shared() static method, which supplies the shared pointer necessary for creation of \mbox{\hyperlink{classTang_1_1Program}{Program}} objects. 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classTang_1_1TangBase_a3c1ad8653a52f5a90fee20c385be7540}\label{classTang_1_1TangBase_a3c1ad8653a52f5a90fee20c385be7540}} 
+\mbox{\Hypertarget{classTang_1_1TangBase_a740dd068eef1c703c503f8ff66e68f1a}\label{classTang_1_1TangBase_a740dd068eef1c703c503f8ff66e68f1a}} 
 \index{Tang::TangBase@{Tang::TangBase}!compileScript@{compileScript}}
 \index{compileScript@{compileScript}!Tang::TangBase@{Tang::TangBase}}
-\doxysubsubsection{\texorpdfstring{compileScript()}{compileScript()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1Program}{Program}} Tang\+Base\+::compile\+Script (\begin{DoxyParamCaption}\item[{std\+::string}]{script }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{compileScript()}{compileScript()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1Program}{Program}} Tang\+Base\+::compile\+Script (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{script }\end{DoxyParamCaption})}
 
 
 
@@ -110,11 +114,29 @@ Compile the provided text as a script and return a \mbox{\hyperlink{classTang_1_
 \begin{DoxyReturn}{Returns}
 The \mbox{\hyperlink{classTang_1_1Program}{Program}} object representing the compiled script. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classTang_1_1TangBase_a7982e433279e2aca3ed95904f5d7e0f6}\label{classTang_1_1TangBase_a7982e433279e2aca3ed95904f5d7e0f6}} 
+\mbox{\Hypertarget{classTang_1_1TangBase_a7f2df290faeacbca1095e08da6f2cd9e}\label{classTang_1_1TangBase_a7f2df290faeacbca1095e08da6f2cd9e}} 
+\index{Tang::TangBase@{Tang::TangBase}!compileScript@{compileScript}}
+\index{compileScript@{compileScript}!Tang::TangBase@{Tang::TangBase}}
+\doxysubsubsection{\texorpdfstring{compileScript()}{compileScript()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1Program}{Program}} Tang\+Base\+::compile\+Script (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{script }\end{DoxyParamCaption})}
+
+
+
+Compile the provided text as a script and return a \mbox{\hyperlink{classTang_1_1Program}{Program}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em script} & An istream to the Tang script to be compiled. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{classTang_1_1Program}{Program}} object representing the compiled script. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1TangBase_a5eb4cc17e0e456141cb95563e4e8f675}\label{classTang_1_1TangBase_a5eb4cc17e0e456141cb95563e4e8f675}} 
 \index{Tang::TangBase@{Tang::TangBase}!compileTemplate@{compileTemplate}}
 \index{compileTemplate@{compileTemplate}!Tang::TangBase@{Tang::TangBase}}
-\doxysubsubsection{\texorpdfstring{compileTemplate()}{compileTemplate()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1Program}{Program}} Tang\+Base\+::compile\+Template (\begin{DoxyParamCaption}\item[{std\+::string}]{code }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{compileTemplate()}{compileTemplate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1Program}{Program}} Tang\+Base\+::compile\+Template (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{code }\end{DoxyParamCaption})}
 
 
 
@@ -123,6 +145,24 @@ Compile the provided text as a template and return a \mbox{\hyperlink{classTang_
 
 \begin{DoxyParams}{Parameters}
 {\em code} & The Tang template to be compiled. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{classTang_1_1Program}{Program}} object representing the compiled template. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1TangBase_ad9fd10eeb87b935531a1d7b884d0b4fb}\label{classTang_1_1TangBase_ad9fd10eeb87b935531a1d7b884d0b4fb}} 
+\index{Tang::TangBase@{Tang::TangBase}!compileTemplate@{compileTemplate}}
+\index{compileTemplate@{compileTemplate}!Tang::TangBase@{Tang::TangBase}}
+\doxysubsubsection{\texorpdfstring{compileTemplate()}{compileTemplate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1Program}{Program}} Tang\+Base\+::compile\+Template (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{code }\end{DoxyParamCaption})}
+
+
+
+Compile the provided text as a template and return a \mbox{\hyperlink{classTang_1_1Program}{Program}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & An istream to the Tang template to be compiled. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

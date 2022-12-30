@@ -7,7 +7,7 @@ var searchData=
   ['popcontinuestack_803',['popContinueStack',['../classTang_1_1Program.html#a0a824ad2a83896854f4e528f6c3cc630',1,'Tang::Program']]],
   ['popenvironment_804',['popEnvironment',['../classTang_1_1Program.html#a655fefae4d0f0bcf92766d8918be89bd',1,'Tang::Program']]],
   ['position_805',['position',['../classTang_1_1position.html#ae699872e4e3ee996e0feb52ba9e44da7',1,'Tang::position']]],
-  ['program_806',['Program',['../classTang_1_1Program.html#a9e319b3f9fb276c281e1ad070462a8a3',1,'Tang::Program']]],
+  ['program_806',['Program',['../classTang_1_1Program.html#ab2abe09f7ca03a90455f69c1a92a39b6',1,'Tang::Program::Program(const std::string &amp;code, CodeType codeType, std::shared_ptr&lt; Tang::TangBase &gt; tang)'],['../classTang_1_1Program.html#a10e0d55762bad64b4f9c1f1f3b0501e5',1,'Tang::Program::Program(std::istream &amp;code, CodeType codeType, std::shared_ptr&lt; Tang::TangBase &gt; tang)']]],
   ['pushbreakstack_807',['pushBreakStack',['../classTang_1_1Program.html#a5c12ec99486118295496695b50750da9',1,'Tang::Program']]],
   ['pushcontinuestack_808',['pushContinueStack',['../classTang_1_1Program.html#af5d2ae23991475e3c8776de0d0a01123',1,'Tang::Program']]],
   ['pushenvironment_809',['pushEnvironment',['../classTang_1_1Program.html#a3ed3e014d80138d61d545a3ef5fe0a2e',1,'Tang::Program']]]

@@ -944,24 +944,25 @@
 \contentsline {subsection}{\numberline {5.55.2}Member Enumeration Documentation}{411}{subsection.5.55.2}%
 \contentsline {subsubsection}{\numberline {5.55.2.1}CodeType}{411}{subsubsection.5.55.2.1}%
 \contentsline {subsection}{\numberline {5.55.3}Constructor \& Destructor Documentation}{411}{subsection.5.55.3}%
-\contentsline {subsubsection}{\numberline {5.55.3.1}Program()}{411}{subsubsection.5.55.3.1}%
+\contentsline {subsubsection}{\numberline {5.55.3.1}Program()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{411}{subsubsection.5.55.3.1}%
+\contentsline {subsubsection}{\numberline {5.55.3.2}Program()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{412}{subsubsection.5.55.3.2}%
 \contentsline {subsection}{\numberline {5.55.4}Member Function Documentation}{412}{subsection.5.55.4}%
 \contentsline {subsubsection}{\numberline {5.55.4.1}addBreak()}{412}{subsubsection.5.55.4.1}%
 \contentsline {subsubsection}{\numberline {5.55.4.2}addBytecode()}{412}{subsubsection.5.55.4.2}%
-\contentsline {subsubsection}{\numberline {5.55.4.3}addContinue()}{412}{subsubsection.5.55.4.3}%
+\contentsline {subsubsection}{\numberline {5.55.4.3}addContinue()}{413}{subsubsection.5.55.4.3}%
 \contentsline {subsubsection}{\numberline {5.55.4.4}addIdentifier()}{413}{subsubsection.5.55.4.4}%
 \contentsline {subsubsection}{\numberline {5.55.4.5}addIdentifierAssigned()}{413}{subsubsection.5.55.4.5}%
-\contentsline {subsubsection}{\numberline {5.55.4.6}addLibraryAlias()}{413}{subsubsection.5.55.4.6}%
+\contentsline {subsubsection}{\numberline {5.55.4.6}addLibraryAlias()}{414}{subsubsection.5.55.4.6}%
 \contentsline {subsubsection}{\numberline {5.55.4.7}addString()}{414}{subsubsection.5.55.4.7}%
 \contentsline {subsubsection}{\numberline {5.55.4.8}dumpBytecode()}{414}{subsubsection.5.55.4.8}%
 \contentsline {subsubsection}{\numberline {5.55.4.9}execute()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{414}{subsubsection.5.55.4.9}%
-\contentsline {subsubsection}{\numberline {5.55.4.10}execute()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{414}{subsubsection.5.55.4.10}%
+\contentsline {subsubsection}{\numberline {5.55.4.10}execute()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{415}{subsubsection.5.55.4.10}%
 \contentsline {subsubsection}{\numberline {5.55.4.11}getAnnotations()}{415}{subsubsection.5.55.4.11}%
-\contentsline {subsubsection}{\numberline {5.55.4.12}getAst()}{415}{subsubsection.5.55.4.12}%
+\contentsline {subsubsection}{\numberline {5.55.4.12}getAst()}{416}{subsubsection.5.55.4.12}%
 \contentsline {subsubsection}{\numberline {5.55.4.13}getBytecode()}{416}{subsubsection.5.55.4.13}%
 \contentsline {subsubsection}{\numberline {5.55.4.14}getCode()}{416}{subsubsection.5.55.4.14}%
 \contentsline {subsubsection}{\numberline {5.55.4.15}getIdentifiers()}{416}{subsubsection.5.55.4.15}%
-\contentsline {subsubsection}{\numberline {5.55.4.16}getIdentifiersAssigned()}{416}{subsubsection.5.55.4.16}%
+\contentsline {subsubsection}{\numberline {5.55.4.16}getIdentifiersAssigned()}{417}{subsubsection.5.55.4.16}%
 \contentsline {subsubsection}{\numberline {5.55.4.17}getLibraryAliases()}{417}{subsubsection.5.55.4.17}%
 \contentsline {subsubsection}{\numberline {5.55.4.18}getResult()}{417}{subsubsection.5.55.4.18}%
 \contentsline {subsubsection}{\numberline {5.55.4.19}getStrings()}{417}{subsubsection.5.55.4.19}%
@@ -983,40 +984,42 @@
 \contentsline {subsubsection}{\numberline {5.56.3.1}currentIndex}{423}{subsubsection.5.56.3.1}%
 \contentsline {subsubsection}{\numberline {5.56.3.2}currentRecycledIndex}{423}{subsubsection.5.56.3.2}%
 \contentsline {section}{\numberline {5.57}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Class Reference}{423}{section.5.57}%
-\contentsline {subsection}{\numberline {5.57.1}Detailed Description}{424}{subsection.5.57.1}%
+\contentsline {subsection}{\numberline {5.57.1}Detailed Description}{425}{subsection.5.57.1}%
 \contentsline {subsection}{\numberline {5.57.2}Constructor \& Destructor Documentation}{425}{subsection.5.57.2}%
 \contentsline {subsubsection}{\numberline {5.57.2.1}TangBase()}{425}{subsubsection.5.57.2.1}%
 \contentsline {subsection}{\numberline {5.57.3}Member Function Documentation}{425}{subsection.5.57.3}%
-\contentsline {subsubsection}{\numberline {5.57.3.1}compileScript()}{425}{subsubsection.5.57.3.1}%
-\contentsline {subsubsection}{\numberline {5.57.3.2}compileTemplate()}{425}{subsubsection.5.57.3.2}%
-\contentsline {subsubsection}{\numberline {5.57.3.3}make\_shared()}{426}{subsubsection.5.57.3.3}%
-\contentsline {section}{\numberline {5.58}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scanner Class Reference}{426}{section.5.58}%
-\contentsline {subsection}{\numberline {5.58.1}Detailed Description}{427}{subsection.5.58.1}%
-\contentsline {subsection}{\numberline {5.58.2}Constructor \& Destructor Documentation}{428}{subsection.5.58.2}%
-\contentsline {subsubsection}{\numberline {5.58.2.1}TangScanner()}{428}{subsubsection.5.58.2.1}%
-\contentsline {subsection}{\numberline {5.58.3}Member Function Documentation}{428}{subsection.5.58.3}%
-\contentsline {subsubsection}{\numberline {5.58.3.1}get\_next\_token()}{428}{subsubsection.5.58.3.1}%
-\contentsline {section}{\numberline {5.59}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Unescape Class Reference}{429}{section.5.59}%
-\contentsline {subsection}{\numberline {5.59.1}Detailed Description}{429}{subsection.5.59.1}%
-\contentsline {subsection}{\numberline {5.59.2}Constructor \& Destructor Documentation}{430}{subsection.5.59.2}%
-\contentsline {subsubsection}{\numberline {5.59.2.1}Unescape()}{430}{subsubsection.5.59.2.1}%
-\contentsline {subsection}{\numberline {5.59.3}Member Function Documentation}{430}{subsection.5.59.3}%
-\contentsline {subsubsection}{\numberline {5.59.3.1}get\_next\_token()}{430}{subsubsection.5.59.3.1}%
-\contentsline {section}{\numberline {5.60}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Unicode\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}String Class Reference}{431}{section.5.60}%
-\contentsline {subsection}{\numberline {5.60.1}Detailed Description}{432}{subsection.5.60.1}%
-\contentsline {subsection}{\numberline {5.60.2}Member Enumeration Documentation}{432}{subsection.5.60.2}%
-\contentsline {subsubsection}{\numberline {5.60.2.1}Type}{432}{subsubsection.5.60.2.1}%
-\contentsline {subsection}{\numberline {5.60.3}Member Function Documentation}{433}{subsection.5.60.3}%
-\contentsline {subsubsection}{\numberline {5.60.3.1}bytesLength()}{433}{subsubsection.5.60.3.1}%
-\contentsline {subsubsection}{\numberline {5.60.3.2}length()}{433}{subsubsection.5.60.3.2}%
-\contentsline {subsubsection}{\numberline {5.60.3.3}operator std::string()}{434}{subsubsection.5.60.3.3}%
-\contentsline {subsubsection}{\numberline {5.60.3.4}operator+()}{434}{subsubsection.5.60.3.4}%
-\contentsline {subsubsection}{\numberline {5.60.3.5}operator+=()}{434}{subsubsection.5.60.3.5}%
-\contentsline {subsubsection}{\numberline {5.60.3.6}operator$<$()}{435}{subsubsection.5.60.3.6}%
-\contentsline {subsubsection}{\numberline {5.60.3.7}operator==()}{435}{subsubsection.5.60.3.7}%
-\contentsline {subsubsection}{\numberline {5.60.3.8}render()}{435}{subsubsection.5.60.3.8}%
-\contentsline {subsubsection}{\numberline {5.60.3.9}renderAscii()}{436}{subsubsection.5.60.3.9}%
-\contentsline {subsubsection}{\numberline {5.60.3.10}substr()}{436}{subsubsection.5.60.3.10}%
+\contentsline {subsubsection}{\numberline {5.57.3.1}compileScript()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{425}{subsubsection.5.57.3.1}%
+\contentsline {subsubsection}{\numberline {5.57.3.2}compileScript()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{426}{subsubsection.5.57.3.2}%
+\contentsline {subsubsection}{\numberline {5.57.3.3}compileTemplate()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{426}{subsubsection.5.57.3.3}%
+\contentsline {subsubsection}{\numberline {5.57.3.4}compileTemplate()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{426}{subsubsection.5.57.3.4}%
+\contentsline {subsubsection}{\numberline {5.57.3.5}make\_shared()}{427}{subsubsection.5.57.3.5}%
+\contentsline {section}{\numberline {5.58}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scanner Class Reference}{427}{section.5.58}%
+\contentsline {subsection}{\numberline {5.58.1}Detailed Description}{428}{subsection.5.58.1}%
+\contentsline {subsection}{\numberline {5.58.2}Constructor \& Destructor Documentation}{429}{subsection.5.58.2}%
+\contentsline {subsubsection}{\numberline {5.58.2.1}TangScanner()}{429}{subsubsection.5.58.2.1}%
+\contentsline {subsection}{\numberline {5.58.3}Member Function Documentation}{429}{subsection.5.58.3}%
+\contentsline {subsubsection}{\numberline {5.58.3.1}get\_next\_token()}{429}{subsubsection.5.58.3.1}%
+\contentsline {section}{\numberline {5.59}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Unescape Class Reference}{430}{section.5.59}%
+\contentsline {subsection}{\numberline {5.59.1}Detailed Description}{430}{subsection.5.59.1}%
+\contentsline {subsection}{\numberline {5.59.2}Constructor \& Destructor Documentation}{431}{subsection.5.59.2}%
+\contentsline {subsubsection}{\numberline {5.59.2.1}Unescape()}{431}{subsubsection.5.59.2.1}%
+\contentsline {subsection}{\numberline {5.59.3}Member Function Documentation}{431}{subsection.5.59.3}%
+\contentsline {subsubsection}{\numberline {5.59.3.1}get\_next\_token()}{431}{subsubsection.5.59.3.1}%
+\contentsline {section}{\numberline {5.60}Tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Unicode\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}String Class Reference}{432}{section.5.60}%
+\contentsline {subsection}{\numberline {5.60.1}Detailed Description}{433}{subsection.5.60.1}%
+\contentsline {subsection}{\numberline {5.60.2}Member Enumeration Documentation}{433}{subsection.5.60.2}%
+\contentsline {subsubsection}{\numberline {5.60.2.1}Type}{433}{subsubsection.5.60.2.1}%
+\contentsline {subsection}{\numberline {5.60.3}Member Function Documentation}{434}{subsection.5.60.3}%
+\contentsline {subsubsection}{\numberline {5.60.3.1}bytesLength()}{434}{subsubsection.5.60.3.1}%
+\contentsline {subsubsection}{\numberline {5.60.3.2}length()}{434}{subsubsection.5.60.3.2}%
+\contentsline {subsubsection}{\numberline {5.60.3.3}operator std::string()}{435}{subsubsection.5.60.3.3}%
+\contentsline {subsubsection}{\numberline {5.60.3.4}operator+()}{435}{subsubsection.5.60.3.4}%
+\contentsline {subsubsection}{\numberline {5.60.3.5}operator+=()}{435}{subsubsection.5.60.3.5}%
+\contentsline {subsubsection}{\numberline {5.60.3.6}operator$<$()}{436}{subsubsection.5.60.3.6}%
+\contentsline {subsubsection}{\numberline {5.60.3.7}operator==()}{436}{subsubsection.5.60.3.7}%
+\contentsline {subsubsection}{\numberline {5.60.3.8}render()}{436}{subsubsection.5.60.3.8}%
+\contentsline {subsubsection}{\numberline {5.60.3.9}renderAscii()}{437}{subsubsection.5.60.3.9}%
+\contentsline {subsubsection}{\numberline {5.60.3.10}substr()}{437}{subsubsection.5.60.3.10}%
 \contentsline {chapter}{\numberline {6}File Documentation}{439}{chapter.6}%
 \contentsline {section}{\numberline {6.1}build/generated/location.hh File Reference}{439}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}Detailed Description}{440}{subsection.6.1.1}%

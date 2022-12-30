@@ -16,7 +16,7 @@ var searchData=
   ['position_400',['position',['../classTang_1_1position.html#ae699872e4e3ee996e0feb52ba9e44da7',1,'Tang::position::position()'],['../classTang_1_1position.html',1,'Tang::position']]],
   ['preprocessstate_401',['PreprocessState',['../classTang_1_1AstNode.html#ae0f662cd990cd733c7d5447ea3a1e641',1,'Tang::AstNode']]],
   ['print_402',['PRINT',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af96eee4e48ee90430f17fb3a8388507b',1,'Tang']]],
-  ['program_403',['Program',['../classTang_1_1Program.html#a9e319b3f9fb276c281e1ad070462a8a3',1,'Tang::Program::Program()'],['../classTang_1_1Program.html',1,'Tang::Program']]],
+  ['program_403',['Program',['../classTang_1_1Program.html#ab2abe09f7ca03a90455f69c1a92a39b6',1,'Tang::Program::Program(const std::string &amp;code, CodeType codeType, std::shared_ptr&lt; Tang::TangBase &gt; tang)'],['../classTang_1_1Program.html#a10e0d55762bad64b4f9c1f1f3b0501e5',1,'Tang::Program::Program(std::istream &amp;code, CodeType codeType, std::shared_ptr&lt; Tang::TangBase &gt; tang)'],['../classTang_1_1Program.html',1,'Tang::Program']]],
   ['program_2ddumpbytecode_2ecpp_404',['program-dumpBytecode.cpp',['../program-dumpBytecode_8cpp.html',1,'']]],
   ['program_2dexecute_2ecpp_405',['program-execute.cpp',['../program-execute_8cpp.html',1,'']]],
   ['program_2ecpp_406',['program.cpp',['../program_8cpp.html',1,'']]],

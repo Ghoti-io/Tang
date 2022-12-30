@@ -414,15 +414,15 @@
   \item {addBytecode}
     \subitem {Tang::Program}, \hyperpage{412}
   \item {addContinue}
-    \subitem {Tang::Program}, \hyperpage{412}
+    \subitem {Tang::Program}, \hyperpage{413}
   \item {addIdentifier}
     \subitem {Tang::Program}, \hyperpage{413}
   \item {addIdentifierAssigned}
     \subitem {Tang::Program}, \hyperpage{413}
   \item {addLibraryAlias}
-    \subitem {Tang::Program}, \hyperpage{413}
+    \subitem {Tang::Program}, \hyperpage{414}
   \item {addString}
-    \subitem {Tang::Program}, \hyperpage{413}
+    \subitem {Tang::Program}, \hyperpage{414}
   \item {And}
     \subitem {Tang::AstNodeBinary}, \hyperpage{32}
   \item {append}
@@ -501,7 +501,7 @@
   \item {build/generated/location.hh}, \hyperpage{439}
   \item {bytesLength}
     \subitem {Tang::ComputedExpressionString}, \hyperpage{374}
-    \subitem {Tang::UnicodeString}, \hyperpage{433}
+    \subitem {Tang::UnicodeString}, \hyperpage{434}
 
   \indexspace
 
@@ -584,7 +584,7 @@
   \item {compileScript}
     \subitem {Tang::TangBase}, \hyperpage{425}
   \item {compileTemplate}
-    \subitem {Tang::TangBase}, \hyperpage{425}
+    \subitem {Tang::TangBase}, \hyperpage{426}
   \item {ComputedExpressionArray}
     \subitem {Tang::ComputedExpressionArray}, \hyperpage{166}
   \item {ComputedExpressionBoolean}
@@ -749,8 +749,8 @@
     \subitem {Tang::HtmlEscape}, \hyperpage{401}
     \subitem {Tang::HtmlEscapeAscii}, \hyperpage{403}
     \subitem {Tang::PercentEncode}, \hyperpage{406}
-    \subitem {Tang::TangScanner}, \hyperpage{428}
-    \subitem {Tang::Unescape}, \hyperpage{430}
+    \subitem {Tang::TangScanner}, \hyperpage{429}
+    \subitem {Tang::Unescape}, \hyperpage{431}
   \item {getAnnotations}
     \subitem {Tang::Program}, \hyperpage{415}
   \item {getArgc}
@@ -760,7 +760,7 @@
   \item {getAst}
     \subitem {Tang::Program}, \hyperpage{415}
   \item {getBytecode}
-    \subitem {Tang::Program}, \hyperpage{415}
+    \subitem {Tang::Program}, \hyperpage{416}
   \item {getCode}
     \subitem {Tang::Program}, \hyperpage{416}
   \item {getCollection}
@@ -784,7 +784,7 @@
   \item {GETITERATOR}
     \subitem {opcode.hpp}, \hyperpage{494}
   \item {getLibraryAliases}
-    \subitem {Tang::Program}, \hyperpage{416}
+    \subitem {Tang::Program}, \hyperpage{417}
   \item {getMethods}
     \subitem {Tang::ComputedExpressionArray}, \hyperpage{175}
     \subitem {Tang::ComputedExpressionString}, \hyperpage{375}
@@ -991,7 +991,7 @@
 
   \item {length}
     \subitem {Tang::ComputedExpressionString}, \hyperpage{378}
-    \subitem {Tang::UnicodeString}, \hyperpage{433}
+    \subitem {Tang::UnicodeString}, \hyperpage{434}
   \item {LessThan}
     \subitem {Tang::AstNodeBinary}, \hyperpage{32}
   \item {LessThanEqual}
@@ -1015,7 +1015,7 @@
   \item {make}
     \subitem {Tang::GarbageCollected}, \hyperpage{387}
   \item {make\_shared}
-    \subitem {Tang::TangBase}, \hyperpage{426}
+    \subitem {Tang::TangBase}, \hyperpage{427}
   \item {makeCopy}
     \subitem {Tang::ComputedExpression}, \hyperpage{163}
     \subitem {Tang::ComputedExpressionArray}, \hyperpage{178}
@@ -1123,14 +1123,14 @@
   \item {Operator}
     \subitem {Tang::AstNodeUnary}, \hyperpage{137}
   \item {operator std::string}
-    \subitem {Tang::UnicodeString}, \hyperpage{433}
+    \subitem {Tang::UnicodeString}, \hyperpage{434}
   \item {operator!}
     \subitem {Tang::GarbageCollected}, \hyperpage{388}
   \item {operator!=}
     \subitem {Tang::GarbageCollected}, \hyperpage{388}
   \item {operator$<$}
     \subitem {Tang::GarbageCollected}, \hyperpage{393}
-    \subitem {Tang::UnicodeString}, \hyperpage{434}
+    \subitem {Tang::UnicodeString}, \hyperpage{435}
   \item {operator$<$$<$}
     \subitem {error.cpp}, \hyperpage{533}
     \subitem {garbageCollected.cpp}, \hyperpage{534}
@@ -1147,10 +1147,10 @@
     \subitem {Tang::GarbageCollected}, \hyperpage{389, 390}
   \item {operator+}
     \subitem {Tang::GarbageCollected}, \hyperpage{390}
-    \subitem {Tang::UnicodeString}, \hyperpage{434}
+    \subitem {Tang::UnicodeString}, \hyperpage{435}
   \item {operator+=}
     \subitem {Tang::ComputedExpressionString}, \hyperpage{379}
-    \subitem {Tang::UnicodeString}, \hyperpage{434}
+    \subitem {Tang::UnicodeString}, \hyperpage{435}
   \item {operator-\/}
     \subitem {Tang::GarbageCollected}, \hyperpage{391}
   \item {operator-\/$>$}
@@ -1161,7 +1161,7 @@
     \subitem {Tang::GarbageCollected}, \hyperpage{394}
   \item {operator==}
     \subitem {Tang::GarbageCollected}, \hyperpage{394--397}
-    \subitem {Tang::UnicodeString}, \hyperpage{435}
+    \subitem {Tang::UnicodeString}, \hyperpage{436}
   \item {operator\%}
     \subitem {Tang::GarbageCollected}, \hyperpage{389}
   \item {Or}
@@ -1172,7 +1172,7 @@
   \item {PEEK}
     \subitem {opcode.hpp}, \hyperpage{493}
   \item {Percent}
-    \subitem {Tang::UnicodeString}, \hyperpage{433}
+    \subitem {Tang::UnicodeString}, \hyperpage{434}
   \item {PercentEncode}
     \subitem {Tang::PercentEncode}, \hyperpage{406}
   \item {percentEncode}
@@ -1221,7 +1221,7 @@
   \item {PRINT}
     \subitem {opcode.hpp}, \hyperpage{494}
   \item {Program}
-    \subitem {Tang::Program}, \hyperpage{411}
+    \subitem {Tang::Program}, \hyperpage{411, 412}
   \item {program-\/dumpBytecode.cpp}
     \subitem {DUMPPROGRAMCHECK}, \hyperpage{535}
   \item {program-\/execute.cpp}
@@ -1235,9 +1235,9 @@
   \item {recycle}
     \subitem {Tang::SingletonObjectPool$<$ T $>$}, \hyperpage{422}
   \item {render}
-    \subitem {Tang::UnicodeString}, \hyperpage{435}
-  \item {renderAscii}
     \subitem {Tang::UnicodeString}, \hyperpage{436}
+  \item {renderAscii}
+    \subitem {Tang::UnicodeString}, \hyperpage{437}
   \item {RETURN}
     \subitem {opcode.hpp}, \hyperpage{494}
 
@@ -1250,7 +1250,7 @@
   \item {setFunctionStackDeclaration}
     \subitem {Tang::Program}, \hyperpage{419}
   \item {setJumpTarget}
-    \subitem {Tang::Program}, \hyperpage{419}
+    \subitem {Tang::Program}, \hyperpage{420}
   \item {SLICE}
     \subitem {opcode.hpp}, \hyperpage{494}
   \item {src/astNode.cpp}, \hyperpage{505}
@@ -1317,7 +1317,7 @@
   \item {String}
     \subitem {Tang::AstNodeCast}, \hyperpage{50}
   \item {substr}
-    \subitem {Tang::UnicodeString}, \hyperpage{436}
+    \subitem {Tang::UnicodeString}, \hyperpage{437}
   \item {SUBTRACT}
     \subitem {opcode.hpp}, \hyperpage{494}
   \item {Subtract}
@@ -2059,32 +2059,32 @@
   \item {Tang::Program}, \hyperpage{408}
     \subitem {addBreak}, \hyperpage{412}
     \subitem {addBytecode}, \hyperpage{412}
-    \subitem {addContinue}, \hyperpage{412}
+    \subitem {addContinue}, \hyperpage{413}
     \subitem {addIdentifier}, \hyperpage{413}
     \subitem {addIdentifierAssigned}, \hyperpage{413}
-    \subitem {addLibraryAlias}, \hyperpage{413}
-    \subitem {addString}, \hyperpage{413}
+    \subitem {addLibraryAlias}, \hyperpage{414}
+    \subitem {addString}, \hyperpage{414}
     \subitem {CodeType}, \hyperpage{411}
     \subitem {dumpBytecode}, \hyperpage{414}
     \subitem {execute}, \hyperpage{414}
     \subitem {functionsDeclared}, \hyperpage{420}
     \subitem {getAnnotations}, \hyperpage{415}
     \subitem {getAst}, \hyperpage{415}
-    \subitem {getBytecode}, \hyperpage{415}
+    \subitem {getBytecode}, \hyperpage{416}
     \subitem {getCode}, \hyperpage{416}
     \subitem {getIdentifiers}, \hyperpage{416}
     \subitem {getIdentifiersAssigned}, \hyperpage{416}
-    \subitem {getLibraryAliases}, \hyperpage{416}
+    \subitem {getLibraryAliases}, \hyperpage{417}
     \subitem {getResult}, \hyperpage{417}
     \subitem {getStrings}, \hyperpage{417}
     \subitem {popBreakStack}, \hyperpage{417}
     \subitem {popContinueStack}, \hyperpage{418}
-    \subitem {Program}, \hyperpage{411}
+    \subitem {Program}, \hyperpage{411, 412}
     \subitem {pushEnvironment}, \hyperpage{418}
     \subitem {Script}, \hyperpage{411}
     \subitem {setAnnotation}, \hyperpage{419}
     \subitem {setFunctionStackDeclaration}, \hyperpage{419}
-    \subitem {setJumpTarget}, \hyperpage{419}
+    \subitem {setJumpTarget}, \hyperpage{420}
     \subitem {Template}, \hyperpage{411}
   \item {Tang::SingletonObjectPool$<$ T $>$}, \hyperpage{420}
     \subitem {currentIndex}, \hyperpage{423}
@@ -2094,36 +2094,36 @@
     \subitem {recycle}, \hyperpage{422}
   \item {Tang::TangBase}, \hyperpage{423}
     \subitem {compileScript}, \hyperpage{425}
-    \subitem {compileTemplate}, \hyperpage{425}
-    \subitem {make\_shared}, \hyperpage{426}
+    \subitem {compileTemplate}, \hyperpage{426}
+    \subitem {make\_shared}, \hyperpage{427}
     \subitem {TangBase}, \hyperpage{425}
-  \item {Tang::TangScanner}, \hyperpage{426}
-    \subitem {get\_next\_token}, \hyperpage{428}
-    \subitem {TangScanner}, \hyperpage{428}
-  \item {Tang::Unescape}, \hyperpage{429}
-    \subitem {get\_next\_token}, \hyperpage{430}
-    \subitem {Unescape}, \hyperpage{430}
-  \item {Tang::UnicodeString}, \hyperpage{431}
-    \subitem {bytesLength}, \hyperpage{433}
-    \subitem {length}, \hyperpage{433}
-    \subitem {operator std::string}, \hyperpage{433}
-    \subitem {operator$<$}, \hyperpage{434}
-    \subitem {operator+}, \hyperpage{434}
-    \subitem {operator+=}, \hyperpage{434}
-    \subitem {operator==}, \hyperpage{435}
-    \subitem {Percent}, \hyperpage{433}
-    \subitem {render}, \hyperpage{435}
-    \subitem {renderAscii}, \hyperpage{436}
-    \subitem {substr}, \hyperpage{436}
-    \subitem {Trusted}, \hyperpage{433}
-    \subitem {Type}, \hyperpage{432}
-    \subitem {Untrusted}, \hyperpage{433}
+  \item {Tang::TangScanner}, \hyperpage{427}
+    \subitem {get\_next\_token}, \hyperpage{429}
+    \subitem {TangScanner}, \hyperpage{429}
+  \item {Tang::Unescape}, \hyperpage{430}
+    \subitem {get\_next\_token}, \hyperpage{431}
+    \subitem {Unescape}, \hyperpage{431}
+  \item {Tang::UnicodeString}, \hyperpage{432}
+    \subitem {bytesLength}, \hyperpage{434}
+    \subitem {length}, \hyperpage{434}
+    \subitem {operator std::string}, \hyperpage{434}
+    \subitem {operator$<$}, \hyperpage{435}
+    \subitem {operator+}, \hyperpage{435}
+    \subitem {operator+=}, \hyperpage{435}
+    \subitem {operator==}, \hyperpage{436}
+    \subitem {Percent}, \hyperpage{434}
+    \subitem {render}, \hyperpage{436}
+    \subitem {renderAscii}, \hyperpage{437}
+    \subitem {substr}, \hyperpage{437}
+    \subitem {Trusted}, \hyperpage{434}
+    \subitem {Type}, \hyperpage{433}
+    \subitem {Untrusted}, \hyperpage{434}
   \item {TangBase}
     \subitem {Tang::TangBase}, \hyperpage{425}
   \item {tangBase.cpp}
     \subitem {LIBRARY}, \hyperpage{539}
   \item {TangScanner}
-    \subitem {Tang::TangScanner}, \hyperpage{428}
+    \subitem {Tang::TangScanner}, \hyperpage{429}
   \item {Template}
     \subitem {Tang::Program}, \hyperpage{411}
   \item {test/test.cpp}, \hyperpage{540}
@@ -2131,16 +2131,16 @@
   \item {test/testSingletonObjectPool.cpp}, \hyperpage{542}
   \item {test/testUnicodeString.cpp}, \hyperpage{543}
   \item {Trusted}
-    \subitem {Tang::UnicodeString}, \hyperpage{433}
+    \subitem {Tang::UnicodeString}, \hyperpage{434}
   \item {Type}
     \subitem {Tang::AstNodeCast}, \hyperpage{49}
     \subitem {Tang::AstNodePrint}, \hyperpage{110}
-    \subitem {Tang::UnicodeString}, \hyperpage{432}
+    \subitem {Tang::UnicodeString}, \hyperpage{433}
 
   \indexspace
 
   \item {Unescape}
-    \subitem {Tang::Unescape}, \hyperpage{430}
+    \subitem {Tang::Unescape}, \hyperpage{431}
   \item {unescape}
     \subitem {unicodeString.hpp}, \hyperpage{505}
   \item {unicodeString.hpp}
@@ -2149,6 +2149,6 @@
     \subitem {percentEncode}, \hyperpage{504}
     \subitem {unescape}, \hyperpage{505}
   \item {Untrusted}
-    \subitem {Tang::UnicodeString}, \hyperpage{433}
+    \subitem {Tang::UnicodeString}, \hyperpage{434}
 
 \end{theindex}
