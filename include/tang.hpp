@@ -31,14 +31,12 @@
 //
 //
 // TODO What's next:
-// * Library Macros
 // * Library Extension
 // * Math library (started)
 //   * round, min, max, log, ceil, exp
 //   * number format to string
 // * Date/Time type & functions
 // * Execution count timeout
-// * Stand-alone interpreter program
 // * Optimization
 // * Potential tail call optimization rather than loop & switch case for VM
 //
