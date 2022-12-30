@@ -46,27 +46,23 @@ int main(int argc, char* argv[]) {
     }
   }
 
+  // Compile the code into a Program.
   auto tang = TangBase::make_shared();
-  if (eval) {
-    if (isScript) {
-      auto program = tang->compileScript(eval);
-      cout << program.execute().out;
-    }
-    else {
-      auto program = tang->compileTemplate(eval);
-      cout << program.execute().out;
-    }
+  Program program = eval
+    ? isScript
+      ? tang->compileScript(eval)
+      : tang->compileTemplate(eval)
+    : isScript
+      ? tang->compileScript(cin)
+      : tang->compileTemplate(cin);
+
+  // Execute the program.
+  auto context = program.execute();
+  if (typeid(**context.result) == typeid(ComputedExpressionError)) {
+    cerr << *context.result << endl;
+    return 2;
   }
-  else {
-    if (isScript) {
-      auto program = tang->compileScript(cin);
-      cout << program.execute().out;
-    }
-    else {
-      auto program = tang->compileTemplate(cin);
-      cout << program.execute().out;
-    }
-  }
+  cout << context.out;
   return 0;
 }
 
