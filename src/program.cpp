@@ -15,14 +15,14 @@
 using namespace std;
 using namespace Tang;
 
-Program::Program(const string & code, Program::CodeType codeType, std::shared_ptr<Tang::TangBase> tang) : tang{tang}, code{code}, codeType{codeType}, ast{nullptr} {
+Program::Program(const string & code, Program::CodeType codeType, std::shared_ptr<Tang::TangBase> tang) : tang{tang}, code{code}, istreamCode{nullopt}, codeType{codeType}, ast{nullptr} {
   this->parse();
   if (this->ast) {
     this->compile();
   }
 }
 
-Program::Program(istream & code, Program::CodeType codeType, std::shared_ptr<Tang::TangBase> tang) : tang{tang}, istreamCode{&code}, codeType{codeType}, ast{nullptr} {
+Program::Program(istream & code, Program::CodeType codeType, std::shared_ptr<Tang::TangBase> tang) : tang{tang}, code{""}, istreamCode{&code}, codeType{codeType}, ast{nullptr} {
   this->parse();
   if (this->ast) {
     this->compile();
@@ -31,11 +31,13 @@ Program::Program(istream & code, Program::CodeType codeType, std::shared_ptr<Tan
 
 void Program::parse() {
   unique_ptr<TangScanner> scanner{};
+  stringstream ss{};
+
   if (this->istreamCode) {
     scanner = make_unique<TangScanner>(**this->istreamCode, cout);
   }
   else {
-    stringstream ss{this->code};
+    ss << this->code;
     scanner = make_unique<TangScanner>(ss, cout);
   }
 
