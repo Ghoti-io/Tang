@@ -78,6 +78,39 @@ TANGLIBRARY := -L $(APP_DIR) -Wl,-R -Wl,$(APP_DIR) -l:libtang.so
 all: $(APP_DIR)/$(TARGET) $(APP_DIR)/tang ## Build the shared library
 
 ####################################################################
+# Dependency Variables
+####################################################################
+DEPASTNODEHPP = \
+  $(GEN_DIR)/location.hh
+DEPERRORHPP = \
+  $(GEN_DIR)/location.hh
+DEPGARBAGECOLLECTEDHPP = \
+	include/macros.hpp \
+	include/singletonObjectPool.hpp \
+  $(DEPERRORHPP)
+DEPCOMPUTEDEXPRESSION = \
+	include/macros.hpp \
+	$(DEPERRORHPP) \
+  $(DEPGARBAGECOLLECTEDHPP)
+DEPCONTEXTHPP = \
+	include/macros.hpp \
+  $(DEPCOMPUTEDEXPRESSION)
+DEPPROGRAMHPP = \
+	include/macros.hpp \
+	include/unicodeString.hpp \
+	$(DEPASTNODEHPP) \
+	$(DEPCOMPUTEDEXPRESSIONHPP) \
+	$(DEPCONTEXTHPP) \
+	$(DEPERRORHPP) \
+  $(DEPGARBAGECOLLECTEDHPP)
+
+DEPASTNODECPP = \
+  include/opcode.hpp \
+	include/macros.hpp \
+	$(DEPASTNODEHPP) \
+	$(DEPPROGRAMHPP)
+
+####################################################################
 # Bison-Generated Files
 ####################################################################
 $(GEN_DIR)/tangParser.hpp: bison/tangParser.y
@@ -127,7 +160,7 @@ $(LIBOBJECTS) :
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/astNode.o: src/astNode.cpp include/macros.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNode.o: src/astNode.cpp $(DEPASTNODECPP)
 
 $(OBJ_DIR)/astNodeArray.o: src/astNodeArray.cpp include/macros.hpp include/astNodeArray.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
 
