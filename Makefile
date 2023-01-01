@@ -80,35 +80,60 @@ all: $(APP_DIR)/$(TARGET) $(APP_DIR)/tang ## Build the shared library
 ####################################################################
 # Dependency Variables
 ####################################################################
-DEPASTNODEHPP = \
-  $(GEN_DIR)/location.hh
-DEPERRORHPP = \
-  $(GEN_DIR)/location.hh
-DEPGARBAGECOLLECTEDHPP = \
+DEP_ASTNODE = $(GEN_DIR)/location.hh
+DEP_ERROR = $(GEN_DIR)/location.hh
+DEP_GARBAGECOLLECTED = \
 	include/macros.hpp \
 	include/singletonObjectPool.hpp \
-  $(DEPERRORHPP)
-DEPCOMPUTEDEXPRESSION = \
+  $(DEP_ERROR)
+DEP_COMPUTEDEXPRESSION = \
 	include/macros.hpp \
-	$(DEPERRORHPP) \
-  $(DEPGARBAGECOLLECTEDHPP)
-DEPCONTEXTHPP = \
+	$(DEP_ERROR) \
+  $(DEP_GARBAGECOLLECTED)
+DEP_CONTEXT = \
 	include/macros.hpp \
-  $(DEPCOMPUTEDEXPRESSION)
-DEPPROGRAMHPP = \
+  $(DEP_COMPUTEDEXPRESSION)
+DEP_PROGRAM = \
 	include/macros.hpp \
 	include/unicodeString.hpp \
-	$(DEPASTNODEHPP) \
-	$(DEPCOMPUTEDEXPRESSIONHPP) \
-	$(DEPCONTEXTHPP) \
-	$(DEPERRORHPP) \
-  $(DEPGARBAGECOLLECTEDHPP)
-
-DEPASTNODECPP = \
-  include/opcode.hpp \
-	include/macros.hpp \
-	$(DEPASTNODEHPP) \
-	$(DEPPROGRAMHPP)
+	$(DEP_ASTNODE) \
+	$(DEP_COMPUTEDEXPRESSION) \
+	$(DEP_CONTEXT) \
+	$(DEP_ERROR) \
+  $(DEP_GARBAGECOLLECTED)
+DEP_ASTNODEARRAY = $(DEP_ASTNODE)
+DEP_ASTNODEIDENTIFIER = $(DEP_ASTNODE)
+DEP_ASTNODEASSIGN = $(DEP_ASTNODE)
+DEP_ASTNODEINDEX = $(DEP_ASTNODE)
+DEP_ASTNODEBINARY = $(DEP_ASTNODE)
+DEP_ASTNODEBLOCK = $(DEP_ASTNODE)
+DEP_ASTNODEBOOLEAN = $(DEP_ASTNODE)
+DEP_ASTNODEBREAK = $(DEP_ASTNODE)
+DEP_ASTNODECAST = $(DEP_ASTNODE)
+DEP_ASTNODECONTINUE = $(DEP_ASTNODE)
+DEP_ASTNODEDOWHILE = $(DEP_ASTNODE)
+DEP_ASTNODEFLOAT = $(DEP_ASTNODE)
+DEP_ASTNODEFOR = $(DEP_ASTNODE)
+DEP_ASTNODEFUNCTIONCALL = $(DEP_ASTNODE)
+DEP_ASTNODEFUNCTIONDECLARATION = $(DEP_ASTNODE)
+DEP_ASTNODEIDENTIFIER = $(DEP_ASTNODE)
+DEP_ASTNODEIFELSE = $(DEP_ASTNODE)
+DEP_ASTNODEINDEX = $(DEP_ASTNODE)
+DEP_ASTNODEINTEGER = $(DEP_ASTNODE)
+DEP_ASTNODELIBRARY = $(DEP_ASTNODE)
+DEP_ASTNODEMAP = $(DEP_ASTNODE)
+DEP_ASTNODEP_ERIOD = $(DEP_ASTNODE)
+DEP_ASTNODEP_RINT = $(DEP_ASTNODE)
+DEP_ASTNODERANGEDFOR = \
+  $(DEP_ASTNODE) \
+  $(DEP_ASTNODEIDENTIFIER)
+DEP_ASTNODERETURN = $(DEP_ASTNODE)
+DEP_ASTNODESLICE = $(DEP_ASTNODE)
+DEP_ASTNODESTRING = $(DEP_ASTNODE)
+DEP_ASTNODETERNARY = $(DEP_ASTNODE)
+DEP_ASTNODEUNARY = $(DEP_ASTNODE)
+DEP_ASTNODEUSE = $(DEP_ASTNODE)
+DEP_ASTNODEWHILE = $(DEP_ASTNODE)
 
 ####################################################################
 # Bison-Generated Files
@@ -160,65 +185,223 @@ $(LIBOBJECTS) :
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -MMD -o $@ -fPIC
 
-$(OBJ_DIR)/astNode.o: src/astNode.cpp $(DEPASTNODECPP)
+$(OBJ_DIR)/astNode.o: \
+				src/astNode.cpp \
+				include/opcode.hpp \
+				include/macros.hpp \
+				$(DEP_ASTNODE) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeArray.o: src/astNodeArray.cpp include/macros.hpp include/astNodeArray.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeArray.o: \
+				src/astNodeArray.cpp \
+				include/astNodeArray.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODEARRAY) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeAssign.o: src/astNodeAssign.cpp include/macros.hpp include/astNodeAssign.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeAssign.o: \
+				src/astNodeAssign.cpp \
+				include/astNodeAssign.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODEASSIGN) \
+				$(DEP_ASTNODEIDENTIFIER) \
+				$(DEP_ASTNODEINDEX) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeBinary.o: src/astNodeBinary.cpp include/macros.hpp include/astNodeBinary.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeBinary.o: \
+				src/astNodeBinary.cpp \
+				include/astNodeBinary.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODEBINARY) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeBlock.o: src/astNodeBlock.cpp include/macros.hpp include/astNodeBlock.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeBlock.o: \
+				src/astNodeBlock.cpp \
+				include/astNodeBlock.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODEBLOCK) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeBoolean.o: src/astNodeBoolean.cpp include/macros.hpp include/astNodeBoolean.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeBoolean.o: \
+				src/astNodeBoolean.cpp \
+				include/astNodeBoolean.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODEBOOLEAN) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeBreak.o: src/astNodeBreak.cpp include/macros.hpp include/astNodeBreak.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeBreak.o: \
+				src/astNodeBreak.cpp \
+				include/astNodeBreak.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODEBREAK) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeIndex.o: src/astNodeIndex.cpp include/macros.hpp include/astNodeIndex.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeCast.o: \
+				src/astNodeCast.cpp \
+				include/astNodeCast.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODECAST) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeFloat.o: src/astNodeFloat.cpp include/macros.hpp include/astNodeFloat.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeContinue.o: \
+				src/astNodeContinue.cpp \
+				include/astNodeContinue.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODECONTINUE) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeFunctionCall.o: src/astNodeFunctionCall.cpp include/macros.hpp include/astNodeFunctionCall.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeDoWhile.o: \
+				src/astNodeDoWhile.cpp \
+				include/astNodeDoWhile.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODEDOWHILE) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeFunctionDeclaration.o: src/astNodeFunctionDeclaration.cpp include/macros.hpp include/astNodeFunctionDeclaration.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeFor.o: \
+				src/astNodeFor.cpp \
+				include/astNodeFor.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODEFOR) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeIdentifier.o: src/astNodeIdentifier.cpp include/macros.hpp include/astNodeIdentifier.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeFloat.o: \
+				src/astNodeFloat.cpp \
+				include/astNodeFloat.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODEFLOAT) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeInteger.o: src/astNodeInteger.cpp include/macros.hpp include/astNodeInteger.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeFunctionCall.o: \
+				src/astNodeFunctionCall.cpp \
+				include/astNodeFunctionCall.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODEFUNCTIONCALL) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeLibrary.o: src/astNodeLibrary.cpp include/macros.hpp include/astNodeLibrary.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeFunctionDeclaration.o: \
+				src/astNodeFunctionDeclaration.cpp \
+				include/astNodeFunctionDeclaration.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODEFUNCTIONDECLARATION) \
+				$(DEP_ASTNODESTRING) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeMap.o: src/astNodeMap.cpp include/macros.hpp include/astNodeMap.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeIdentifier.o: \
+				src/astNodeIdentifier.cpp \
+				include/astNodeIdentifier.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODEIDENTIFIER) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodePeriod.o: src/astNodePeriod.cpp include/macros.hpp include/astNodePeriod.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeIfElse.o: \
+				src/astNodeIfElse.cpp \
+				include/astNodeIfElse.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODEIFELSE) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodePrint.o: src/astNodePrint.cpp include/macros.hpp include/astNodePrint.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeIndex.o: \
+				src/astNodeIndex.cpp \
+				include/astNodeIndex.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODEINDEX) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeRangedFor.o: src/astNodeRangedFor.cpp include/macros.hpp include/astNodeRangedFor.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeInteger.o: \
+				src/astNodeInteger.cpp \
+				include/astNodeInteger.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODEINTEGER) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeReturn.o: src/astNodeReturn.cpp include/macros.hpp include/astNodeReturn.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeLibrary.o: \
+				src/astNodeLibrary.cpp \
+				include/astNodeLibrary.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODEIDENTIFIER) \
+				$(DEP_ASTNODELIBRARY) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeSlice.o: src/astNodeSlice.cpp include/macros.hpp include/astNodeSlice.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeMap.o: \
+				src/astNodeMap.cpp \
+				include/astNodeMap.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODEMAP) \
+				$(DEP_ASTNODESTRING) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeString.o: src/astNodeString.cpp include/macros.hpp include/astNodeString.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodePeriod.o: \
+				src/astNodePeriod.cpp \
+				include/astNodePeriod.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODEP_ERIOD) \
+				$(DEP_ASTNODESTRING) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeTernary.o: src/astNodeTernary.cpp include/macros.hpp include/astNodeTernary.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodePrint.o: \
+				src/astNodePrint.cpp \
+				include/astNodePrint.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODEP_RINT) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeUnary.o: src/astNodeUnary.cpp include/macros.hpp include/astNodeUnary.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeRangedFor.o: \
+				src/astNodeRangedFor.cpp \
+				include/astNodeRangedFor.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODERANGEDFOR) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeUse.o: src/astNodeUse.cpp include/macros.hpp include/astNodeUse.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeReturn.o: \
+				src/astNodeReturn.cpp \
+				include/astNodeReturn.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODERETURN) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeWhile.o: src/astNodeWhile.cpp include/macros.hpp include/astNodeWhile.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeSlice.o: \
+				src/astNodeSlice.cpp \
+				include/astNodeSlice.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODESLICE) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeCast.o: src/astNodeCast.cpp include/macros.hpp include/astNodeCast.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeString.o: \
+				src/astNodeString.cpp \
+				include/astNodeString.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODESTRING) \
+				$(DEP_PROGRAM) \
+				$(DEP_UNICODESTRING)
 
-$(OBJ_DIR)/astNodeContinue.o: src/astNodeContinue.cpp include/macros.hpp include/astNodeContinue.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeTernary.o: \
+				src/astNodeTernary.cpp \
+				include/astNodeTernary.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODETERNARY) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeDoWhile.o: src/astNodeDoWhile.cpp include/macros.hpp include/astNodeDoWhile.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeUnary.o: \
+				src/astNodeUnary.cpp \
+				include/astNodeUnary.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODEUNARY) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeFor.o: src/astNodeFor.cpp include/macros.hpp include/astNodeFor.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeUse.o: \
+				src/astNodeUse.cpp \
+				include/astNodeUse.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODEIDENTIFIER) \
+				$(DEP_ASTNODEUSE) \
+				$(DEP_PROGRAM)
 
-$(OBJ_DIR)/astNodeIfElse.o: src/astNodeIfElse.cpp include/macros.hpp include/astNodeIfElse.hpp include/astNode.hpp include/macros.hpp include/opcode.hpp include/program.hpp include/garbageCollected.hpp include/error.hpp include/singletonObjectPool.hpp include/computedExpression.hpp $(GEN_DIR)/location.hh
+$(OBJ_DIR)/astNodeWhile.o: \
+				src/astNodeWhile.cpp \
+				include/astNodeWhile.hpp \
+				include/opcode.hpp \
+				$(DEP_ASTNODEWHILE) \
+				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/context.o: src/context.cpp include/macros.hpp include/context.hpp
 
