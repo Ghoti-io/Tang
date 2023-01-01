@@ -1,3 +1,9 @@
+/**
+ * @file
+ *
+ * Code for the Tang command line interpreter.
+ */
+
 #include <cstring>
 #include <iomanip>
 #include <iostream>
