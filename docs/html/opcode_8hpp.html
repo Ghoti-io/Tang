@@ -84,7 +84,8 @@ $(document).ready(function(){initNavTree('opcode_8hpp.html',''); initResizable()
 
 <div class="header">
   <div class="summary">
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">opcode.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -92,48 +93,68 @@ $(document).ready(function(){initNavTree('opcode_8hpp.html',''); initResizable()
 
 <p>Declare the Opcodes used in the Bytecode representation of a program.  
 <a href="#details">More...</a></p>
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &lt;ostream&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for opcode.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="opcode_8hpp__incl.png" border="0" usemap="#ainclude_2opcode_8hpp" alt=""/></div>
+<map name="ainclude_2opcode_8hpp" id="ainclude_2opcode_8hpp">
+<area shape="rect" title="Declare the Opcodes used in the Bytecode representation of a program." alt="" coords="5,5,153,32"/>
+<area shape="rect" title=" " alt="" coords="41,80,117,107"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="opcode_8hpp__dep__incl.png" border="0" usemap="#ainclude_2opcode_8hppdep" alt=""/></div>
 <map name="ainclude_2opcode_8hppdep" id="ainclude_2opcode_8hppdep">
-<area shape="rect" title="Declare the Opcodes used in the Bytecode representation of a program." alt="" coords="3270,5,3418,32"/>
-<area shape="rect" href="tang_8hpp.html" title="Header file supplied for use by 3rd party code so that they can easily include all necessary headers." alt="" coords="53,80,184,107"/>
-<area shape="rect" href="astNode_8cpp.html" title="Define the Tang::AstNode class." alt="" coords="209,80,335,107"/>
-<area shape="rect" href="astNodeArray_8cpp.html" title="Define the Tang::AstNodeArray class." alt="" coords="359,80,518,107"/>
-<area shape="rect" href="astNodeAssign_8cpp.html" title="Define the Tang::AstNodeAssign class." alt="" coords="542,80,711,107"/>
-<area shape="rect" href="astNodeBinary_8cpp.html" title="Define the Tang::AstNodeBinary class." alt="" coords="735,80,902,107"/>
-<area shape="rect" href="astNodeBlock_8cpp.html" title="Define the Tang::AstNodeBlock class." alt="" coords="927,80,1089,107"/>
-<area shape="rect" href="astNodeBoolean_8cpp.html" title="Define the Tang::AstNodeBoolean class." alt="" coords="1113,80,1292,107"/>
-<area shape="rect" href="astNodeBreak_8cpp.html" title="Define the Tang::AstNodeBreak class." alt="" coords="1317,80,1481,107"/>
-<area shape="rect" href="astNodeCast_8cpp.html" title="Define the Tang::AstNodeCast class." alt="" coords="1505,80,1660,107"/>
-<area shape="rect" href="astNodeContinue_8cpp.html" title="Define the Tang::AstNodeContinue class." alt="" coords="1684,80,1868,107"/>
-<area shape="rect" href="astNodeDoWhile_8cpp.html" title="Define the Tang::AstNodeDoWhile class." alt="" coords="1892,80,2073,107"/>
-<area shape="rect" href="astNodeFloat_8cpp.html" title="Define the Tang::AstNodeFloat class." alt="" coords="2098,80,2257,107"/>
-<area shape="rect" href="astNodeFor_8cpp.html" title="Define the Tang::AstNodeFor class." alt="" coords="2281,80,2426,107"/>
-<area shape="rect" href="astNodeFunctionCall_8cpp.html" title="Define the Tang::AstNodeFunctionCall class." alt="" coords="2450,80,2657,107"/>
-<area shape="rect" href="astNodeFunctionDeclaration_8cpp.html" title="Define the Tang::AstNodeFunctionDeclaration class." alt="" coords="2681,80,2937,107"/>
-<area shape="rect" href="astNodeIdentifier_8cpp.html" title="Define the Tang::AstNodeIdentifier class." alt="" coords="2962,80,3145,107"/>
-<area shape="rect" href="astNodeIfElse_8cpp.html" title="Define the Tang::AstNodeIfElse class." alt="" coords="3169,80,3332,107"/>
-<area shape="rect" href="astNodeIndex_8cpp.html" title="Define the Tang::AstNodeIndex class." alt="" coords="3356,80,3519,107"/>
-<area shape="rect" href="astNodeInteger_8cpp.html" title="Define the Tang::AstNodeInteger class." alt="" coords="3543,80,3713,107"/>
-<area shape="rect" href="astNodeLibrary_8cpp.html" title="Define the Tang::AstNodeLibrary class." alt="" coords="3738,80,3907,107"/>
-<area shape="rect" href="astNodeMap_8cpp.html" title="Define the Tang::AstNodeMap class." alt="" coords="3932,80,4087,107"/>
-<area shape="rect" href="astNodePeriod_8cpp.html" title="Define the Tang::AstNodePeriod class." alt="" coords="4111,80,4278,107"/>
-<area shape="rect" href="astNodePrint_8cpp.html" title="Define the Tang::AstNodePrint class." alt="" coords="4302,80,4458,107"/>
-<area shape="rect" href="astNodeRangedFor_8cpp.html" title="Define the Tang::AstNodeRangedFor class." alt="" coords="4483,80,4677,107"/>
-<area shape="rect" href="astNodeReturn_8cpp.html" title="Define the Tang::AstNodeReturn class." alt="" coords="4702,80,4871,107"/>
-<area shape="rect" href="astNodeSlice_8cpp.html" title="Define the Tang::AstNodeSlice class." alt="" coords="4896,80,5053,107"/>
-<area shape="rect" href="astNodeString_8cpp.html" title="Define the Tang::AstNodeString class." alt="" coords="5078,80,5242,107"/>
-<area shape="rect" href="astNodeTernary_8cpp.html" title="Define the Tang::AstNodeTernary class." alt="" coords="5266,80,5438,107"/>
-<area shape="rect" href="astNodeUnary_8cpp.html" title="Define the Tang::AstNodeUnary class." alt="" coords="5463,80,5625,107"/>
-<area shape="rect" href="astNodeUse_8cpp.html" title="Define the Tang::AstNodeUse class." alt="" coords="5650,80,5801,107"/>
-<area shape="rect" href="astNodeWhile_8cpp.html" title="Define the Tang::AstNodeWhile class." alt="" coords="5825,80,5988,107"/>
-<area shape="rect" href="program-dumpBytecode_8cpp.html" title="Define the Tang::Program::dumpBytecode method." alt="" coords="6013,80,6243,107"/>
-<area shape="rect" href="program-execute_8cpp.html" title="Define the Tang::Program::execute method." alt="" coords="6267,80,6450,107"/>
-<area shape="rect" href="program_8cpp.html" title="Define the Tang::Program class." alt="" coords="6474,80,6601,107"/>
-<area shape="rect" href="tang_8cpp.html" title="Code for the Tang command line interpreter." alt="" coords="5,155,107,181"/>
-<area shape="rect" href="test_8cpp.html" title="Test the general language behaviors." alt="" coords="131,155,234,181"/>
+<area shape="rect" title="Declare the Opcodes used in the Bytecode representation of a program." alt="" coords="3785,5,3933,32"/>
+<area shape="rect" href="program_8hpp.html" title="Declare the Tang::Program class used to compile and execute source code." alt="" coords="3424,80,3580,107"/>
+<area shape="rect" href="tang_8hpp.html" title="Header file supplied for use by 3rd party code so that they can easily include all necessary headers." alt="" coords="3637,237,3767,263"/>
+<area shape="rect" href="program-execute_8cpp.html" title="Define the Tang::Program::execute method." alt="" coords="3792,237,3975,263"/>
+<area shape="rect" href="astNode_8cpp.html" title="Define the Tang::AstNode class." alt="" coords="5,155,132,181"/>
+<area shape="rect" href="astNodeArray_8cpp.html" title="Define the Tang::AstNodeArray class." alt="" coords="156,155,315,181"/>
+<area shape="rect" href="astNodeAssign_8cpp.html" title="Define the Tang::AstNodeAssign class." alt="" coords="339,155,508,181"/>
+<area shape="rect" href="astNodeBinary_8cpp.html" title="Define the Tang::AstNodeBinary class." alt="" coords="532,155,699,181"/>
+<area shape="rect" href="astNodeBlock_8cpp.html" title="Define the Tang::AstNodeBlock class." alt="" coords="723,155,886,181"/>
+<area shape="rect" href="astNodeBoolean_8cpp.html" title="Define the Tang::AstNodeBoolean class." alt="" coords="910,155,1089,181"/>
+<area shape="rect" href="astNodeBreak_8cpp.html" title="Define the Tang::AstNodeBreak class." alt="" coords="1113,155,1277,181"/>
+<area shape="rect" href="astNodeCast_8cpp.html" title="Define the Tang::AstNodeCast class." alt="" coords="1302,155,1457,181"/>
+<area shape="rect" href="astNodeContinue_8cpp.html" title="Define the Tang::AstNodeContinue class." alt="" coords="1481,155,1665,181"/>
+<area shape="rect" href="astNodeDoWhile_8cpp.html" title="Define the Tang::AstNodeDoWhile class." alt="" coords="1689,155,1870,181"/>
+<area shape="rect" href="astNodeFloat_8cpp.html" title="Define the Tang::AstNodeFloat class." alt="" coords="1895,155,2053,181"/>
+<area shape="rect" href="astNodeFor_8cpp.html" title="Define the Tang::AstNodeFor class." alt="" coords="2077,155,2223,181"/>
+<area shape="rect" href="astNodeFunctionCall_8cpp.html" title="Define the Tang::AstNodeFunctionCall class." alt="" coords="2247,155,2453,181"/>
+<area shape="rect" href="astNodeFunctionDeclaration_8cpp.html" title="Define the Tang::AstNodeFunctionDeclaration class." alt="" coords="2478,155,2734,181"/>
+<area shape="rect" href="astNodeIdentifier_8cpp.html" title="Define the Tang::AstNodeIdentifier class." alt="" coords="2759,155,2941,181"/>
+<area shape="rect" href="astNodeIfElse_8cpp.html" title="Define the Tang::AstNodeIfElse class." alt="" coords="2966,155,3129,181"/>
+<area shape="rect" href="astNodeIndex_8cpp.html" title="Define the Tang::AstNodeIndex class." alt="" coords="3587,155,3750,181"/>
+<area shape="rect" href="astNodeInteger_8cpp.html" title="Define the Tang::AstNodeInteger class." alt="" coords="3774,155,3945,181"/>
+<area shape="rect" href="astNodeLibrary_8cpp.html" title="Define the Tang::AstNodeLibrary class." alt="" coords="3969,155,4139,181"/>
+<area shape="rect" href="astNodeMap_8cpp.html" title="Define the Tang::AstNodeMap class." alt="" coords="4163,155,4318,181"/>
+<area shape="rect" href="astNodePeriod_8cpp.html" title="Define the Tang::AstNodePeriod class." alt="" coords="4343,155,4509,181"/>
+<area shape="rect" href="astNodePrint_8cpp.html" title="Define the Tang::AstNodePrint class." alt="" coords="4533,155,4689,181"/>
+<area shape="rect" href="astNodeRangedFor_8cpp.html" title="Define the Tang::AstNodeRangedFor class." alt="" coords="4714,155,4909,181"/>
+<area shape="rect" href="astNodeReturn_8cpp.html" title="Define the Tang::AstNodeReturn class." alt="" coords="4933,155,5103,181"/>
+<area shape="rect" href="astNodeSlice_8cpp.html" title="Define the Tang::AstNodeSlice class." alt="" coords="5127,155,5285,181"/>
+<area shape="rect" href="astNodeString_8cpp.html" title="Define the Tang::AstNodeString class." alt="" coords="5309,155,5473,181"/>
+<area shape="rect" href="astNodeTernary_8cpp.html" title="Define the Tang::AstNodeTernary class." alt="" coords="5497,155,5669,181"/>
+<area shape="rect" href="astNodeUnary_8cpp.html" title="Define the Tang::AstNodeUnary class." alt="" coords="5694,155,5857,181"/>
+<area shape="rect" href="astNodeUse_8cpp.html" title="Define the Tang::AstNodeUse class." alt="" coords="5881,155,6032,181"/>
+<area shape="rect" href="astNodeWhile_8cpp.html" title="Define the Tang::AstNodeWhile class." alt="" coords="6057,155,6219,181"/>
+<area shape="rect" href="opcode_8cpp.html" title="Define the Tang::Program::dumpBytecode method." alt="" coords="6244,155,6363,181"/>
+<area shape="rect" href="program-analyze_8cpp.html" title="Define the Tang::Program::dumpBytecode method." alt="" coords="6387,155,6569,181"/>
+<area shape="rect" href="program-dumpBytecode_8cpp.html" title="Define the Tang::Program::dumpBytecode method." alt="" coords="6593,155,6824,181"/>
+<area shape="rect" href="program_8cpp.html" title="Define the Tang::Program class." alt="" coords="6848,155,6975,181"/>
+<area shape="rect" href="tangBase_8hpp.html" title="Declare the Tang::TangBase class used to interact with Tang." alt="" coords="3153,155,3315,181"/>
+<area shape="rect" href="context_8cpp.html" title="Define the Tang::Context class." alt="" coords="3441,155,3563,181"/>
+<area shape="rect" href="tang_8cpp.html" title="Code for the Tang command line interpreter." alt="" coords="3587,319,3689,345"/>
+<area shape="rect" href="test_8cpp.html" title="Test the general language behaviors." alt="" coords="3713,319,3816,345"/>
+<area shape="rect" href="computedExpression_8cpp.html" title="Define the Tang::ComputedExpression class." alt="" coords="3130,237,3338,263"/>
+<area shape="rect" href="computedExpressionLibrary_8cpp.html" title="Define the Tang::ComputedExpressionLibrary class." alt="" coords="3362,237,3613,263"/>
+<area shape="rect" href="computedExpressionLibraryMath_8cpp.html" title="Define the Tang::ComputedExpressionLibraryMath class." alt="" coords="2471,229,2698,271"/>
+<area shape="rect" href="computedExpressionLibraryTang_8cpp.html" title="Define the Tang::ComputedExpressionLibraryTang class." alt="" coords="2722,229,2949,271"/>
+<area shape="rect" href="tangBase_8cpp.html" title="Define the Tang::TangBase class." alt="" coords="2973,237,3106,263"/>
 </map>
 </div>
 </div>
@@ -203,6 +224,12 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a3db69378da7fea0383c531f8cae78f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:af3ba50dd455dfe1d1167f78d2bb95d10"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="opcode_8hpp.html#af3ba50dd455dfe1d1167f78d2bb95d10">Tang::operator&lt;&lt;</a> (std::ostream &amp;lhs, const <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04">Tang::Opcode</a> &amp;rhs)</td></tr>
+<tr class="memdesc:af3ba50dd455dfe1d1167f78d2bb95d10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to output the name of an opcode.  <a href="opcode_8hpp.html#af3ba50dd455dfe1d1167f78d2bb95d10">More...</a><br /></td></tr>
+<tr class="separator:af3ba50dd455dfe1d1167f78d2bb95d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Declare the Opcodes used in the Bytecode representation of a program. </p>
@@ -322,6 +349,53 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04af96eee4e48ee90430f17fb3a8388507b"></a>PRINT&#160;</td><td class="fielddoc"><p>Pop val, print(val), push error or NULL. </p>
 </td></tr>
 </table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="af3ba50dd455dfe1d1167f78d2bb95d10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3ba50dd455dfe1d1167f78d2bb95d10">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ostream &amp; Tang::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04">Tang::Opcode</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helper to output the name of an opcode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>The ostream to write into. </td></tr>
+    <tr><td class="paramname">rhs</td><td>The Opcode whose name should be output. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The ostream that was written to. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="opcode_8hpp_af3ba50dd455dfe1d1167f78d2bb95d10_cgraph.png" border="0" usemap="#aopcode_8hpp_af3ba50dd455dfe1d1167f78d2bb95d10_cgraph" alt=""/></div>
+<map name="aopcode_8hpp_af3ba50dd455dfe1d1167f78d2bb95d10_cgraph" id="aopcode_8hpp_af3ba50dd455dfe1d1167f78d2bb95d10_cgraph">
+<area shape="rect" title="Helper to output the name of an opcode." alt="" coords="5,29,143,56"/>
+</map>
+</div>
 
 </div>
 </div>

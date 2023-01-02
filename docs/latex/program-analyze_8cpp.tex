@@ -1,0 +1,57 @@
+\hypertarget{program-analyze_8cpp}{}\doxysection{src/program-\/analyze.cpp File Reference}
+\label{program-analyze_8cpp}\index{src/program-\/analyze.cpp@{src/program-\/analyze.cpp}}
+
+
+Define the \mbox{\hyperlink{classTang_1_1Program_aee5e79c40fac68e875c0d043f8fc2bc1}{Tang\+::\+Program\+::dump\+Bytecode}} method.  
+
+
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$bit$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include \char`\"{}program.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opcode.\+hpp\char`\"{}}\newline
+Include dependency graph for program-\/analyze.cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{program-analyze_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{program-analyze_8cpp_ad2842e810a7f95f018888a1da1d03d52}{DUMPPROGRAMCHECK}}(x)
+\begin{DoxyCompactList}\small\item\em Verify the size of the Bytecode vector so that it may be safely accessed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Define the \mbox{\hyperlink{classTang_1_1Program_aee5e79c40fac68e875c0d043f8fc2bc1}{Tang\+::\+Program\+::dump\+Bytecode}} method. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{program-analyze_8cpp_ad2842e810a7f95f018888a1da1d03d52}\label{program-analyze_8cpp_ad2842e810a7f95f018888a1da1d03d52}} 
+\index{program-\/analyze.cpp@{program-\/analyze.cpp}!DUMPPROGRAMCHECK@{DUMPPROGRAMCHECK}}
+\index{DUMPPROGRAMCHECK@{DUMPPROGRAMCHECK}!program-\/analyze.cpp@{program-\/analyze.cpp}}
+\doxysubsubsection{\texorpdfstring{DUMPPROGRAMCHECK}{DUMPPROGRAMCHECK}}
+{\footnotesize\ttfamily \#define DUMPPROGRAMCHECK(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (this-\/>bytecode.size() < (pc + (x))) \(\backslash\)}
+\DoxyCodeLine{    return \{\{\},\{\}\}}
+
+\end{DoxyCode}
+
+
+Verify the size of the Bytecode vector so that it may be safely accessed. 
+
+If the vector is not large enough, an empty result is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The number of additional vector entries that should exist. \\
+\hline
+\end{DoxyParams}

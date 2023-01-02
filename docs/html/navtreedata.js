@@ -61,8 +61,8 @@ var NAVTREEINDEX =
 "classTang_1_1ComputedExpressionArray.html#aa91f27a9f03b9a7fb9aa5a79efc3039f",
 "classTang_1_1ComputedExpressionLibrary.html#a7265d530e9b32f55d2485a326ab353aa",
 "classTang_1_1GarbageCollected.html#a281b1b6890cbd28c71a7a83090df08c7",
-"functions_func_a.html",
-"unicodeString_8hpp_source.html"
+"functions_func.html",
+"unicodeString_8hpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

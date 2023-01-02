@@ -50,6 +50,8 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "context.cpp", "context_8cpp.html", null ],
     [ "error.cpp", "error_8cpp.html", "error_8cpp" ],
     [ "garbageCollected.cpp", "garbageCollected_8cpp.html", "garbageCollected_8cpp" ],
+    [ "opcode.cpp", "opcode_8cpp.html", null ],
+    [ "program-analyze.cpp", "program-analyze_8cpp.html", "program-analyze_8cpp" ],
     [ "program-dumpBytecode.cpp", "program-dumpBytecode_8cpp.html", "program-dumpBytecode_8cpp" ],
     [ "program-execute.cpp", "program-execute_8cpp.html", "program-execute_8cpp" ],
     [ "program.cpp", "program_8cpp.html", null ],
