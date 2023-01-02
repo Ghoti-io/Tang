@@ -10,17 +10,18 @@ namespace Tang {
 #ifndef TANG_PROGRAM_HPP
 #define TANG_PROGRAM_HPP
 
-#include <string>
-#include <optional>
-#include <vector>
-#include <set>
 #include <map>
-#include "macros.hpp"
+#include <optional>
+#include <set>
+#include <string>
+#include <vector>
 #include "astNode.hpp"
-#include "error.hpp"
 #include "computedExpression.hpp"
-#include "garbageCollected.hpp"
 #include "context.hpp"
+#include "error.hpp"
+#include "garbageCollected.hpp"
+#include "macros.hpp"
+#include "opcode.hpp"
 #include "unicodeString.hpp"
 
 namespace Tang {
@@ -347,6 +348,11 @@ namespace Tang {
      * Compile the AST into Bytecode.
      */
     void compile();
+
+    /**
+     * Analyze the current Bytecode.
+     */
+    std::pair<std::map<Opcode, std::vector<std::pair<size_t, size_t>>>, std::vector<std::pair<Opcode, size_t>>> analyze() const;
 
     /**
      * The code supplied when the Program was instantiated.

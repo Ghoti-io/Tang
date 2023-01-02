@@ -3,6 +3,11 @@
  * Declare the Opcodes used in the Bytecode representation of a program.
  */
 
+#ifndef TANG_OPCODE_HPP
+#define TANG_OPCODE_HPP
+
+#include <ostream>
+
 namespace Tang {
   enum class Opcode {
     POP,      ///< Pop a val
@@ -58,5 +63,16 @@ namespace Tang {
               ///< push val, restore fp, restore pc
     PRINT,    ///< Pop val, print(val), push error or NULL
   };
+
+  /**
+   * Helper to output the name of an opcode.
+   *
+   * @param lhs The ostream to write into.
+   * @param rhs The Opcode whose name should be output.
+   * @return The ostream that was written to.
+   */
+  std::ostream & operator<<(std::ostream & lhs, const Tang::Opcode & rhs);
 }
+
+#endif // TANG_OPCODE_HPP
 

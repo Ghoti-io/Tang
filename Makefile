@@ -59,7 +59,9 @@ LIBOBJECTS := $(OBJ_DIR)/astNode.o \
 							$(OBJ_DIR)/garbageCollected.o \
 							$(OBJ_DIR)/htmlEscape.o \
 							$(OBJ_DIR)/htmlEscapeAscii.o \
+							$(OBJ_DIR)/opcode.o \
 							$(OBJ_DIR)/percentEncode.o \
+							$(OBJ_DIR)/program-analyze.o \
 							$(OBJ_DIR)/program-dumpBytecode.o \
 							$(OBJ_DIR)/program-execute.o \
 							$(OBJ_DIR)/program.o \
@@ -82,6 +84,8 @@ all: $(APP_DIR)/$(TARGET) $(APP_DIR)/tang ## Build the shared library
 ####################################################################
 DEP_MACROS = \
 	include/macros.hpp
+DEP_OPCODE = \
+	include/opcode.hpp
 DEP_LOCATION = \
   $(GEN_DIR)/location.hh
 DEP_UNICODESTRING = \
@@ -347,191 +351,191 @@ $(LIBOBJECTS) :
 
 $(OBJ_DIR)/astNode.o: \
 				src/astNode.cpp \
-				include/opcode.hpp \
 				include/macros.hpp \
 				$(DEP_ASTNODE) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeArray.o: \
 				src/astNodeArray.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODEARRAY) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeAssign.o: \
 				src/astNodeAssign.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODEASSIGN) \
 				$(DEP_ASTNODEIDENTIFIER) \
 				$(DEP_ASTNODEINDEX) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeBinary.o: \
 				src/astNodeBinary.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODEBINARY) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeBlock.o: \
 				src/astNodeBlock.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODEBLOCK) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeBoolean.o: \
 				src/astNodeBoolean.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODEBOOLEAN) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeBreak.o: \
 				src/astNodeBreak.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODEBREAK) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeCast.o: \
 				src/astNodeCast.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODECAST) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeContinue.o: \
 				src/astNodeContinue.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODECONTINUE) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeDoWhile.o: \
 				src/astNodeDoWhile.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODEDOWHILE) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeFor.o: \
 				src/astNodeFor.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODEFOR) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeFloat.o: \
 				src/astNodeFloat.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODEFLOAT) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeFunctionCall.o: \
 				src/astNodeFunctionCall.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODEFUNCTIONCALL) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeFunctionDeclaration.o: \
 				src/astNodeFunctionDeclaration.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODEFUNCTIONDECLARATION) \
 				$(DEP_ASTNODESTRING) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeIdentifier.o: \
 				src/astNodeIdentifier.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODEIDENTIFIER) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeIfElse.o: \
 				src/astNodeIfElse.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODEIFELSE) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeIndex.o: \
 				src/astNodeIndex.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODEINDEX) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeInteger.o: \
 				src/astNodeInteger.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODEINTEGER) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeLibrary.o: \
 				src/astNodeLibrary.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODEIDENTIFIER) \
 				$(DEP_ASTNODELIBRARY) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeMap.o: \
 				src/astNodeMap.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODEMAP) \
 				$(DEP_ASTNODESTRING) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodePeriod.o: \
 				src/astNodePeriod.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODEPERIOD) \
 				$(DEP_ASTNODESTRING) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodePrint.o: \
 				src/astNodePrint.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODEPRINT) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeRangedFor.o: \
 				src/astNodeRangedFor.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODERANGEDFOR) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeReturn.o: \
 				src/astNodeReturn.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODERETURN) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeSlice.o: \
 				src/astNodeSlice.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODESLICE) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeString.o: \
 				src/astNodeString.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODESTRING) \
 				$(DEP_PROGRAM) \
+				$(DEP_OPCODE) \
 				$(DEP_UNICODESTRING)
 
 $(OBJ_DIR)/astNodeTernary.o: \
 				src/astNodeTernary.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODETERNARY) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeUnary.o: \
 				src/astNodeUnary.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODEUNARY) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeUse.o: \
 				src/astNodeUse.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODEIDENTIFIER) \
 				$(DEP_ASTNODEUSE) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/astNodeWhile.o: \
 				src/astNodeWhile.cpp \
-				include/opcode.hpp \
 				$(DEP_ASTNODEWHILE) \
+				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
 
 $(OBJ_DIR)/computedExpression.o: \
@@ -686,17 +690,29 @@ $(OBJ_DIR)/garbageCollected.o: \
 				$(DEP_COMPUTEDEXPRESSIONERROR) \
 				$(DEP_GARBAGECOLLECTED)
 
-$(OBJ_DIR)/htmlEscape.o: $(GEN_DIR)/htmlEscape.cpp \
+$(OBJ_DIR)/htmlEscape.o: \
+				$(GEN_DIR)/htmlEscape.cpp \
 				$(DEP_COMPUTEDEXPRESSION) \
 				include/htmlEscape.hpp
 
-$(OBJ_DIR)/htmlEscapeAscii.o: $(GEN_DIR)/htmlEscapeAscii.cpp \
+$(OBJ_DIR)/htmlEscapeAscii.o: \
+				$(GEN_DIR)/htmlEscapeAscii.cpp \
 				$(DEP_COMPUTEDEXPRESSION) \
 				include/htmlEscapeAscii.hpp
 
-$(OBJ_DIR)/percentEncode.o: $(GEN_DIR)/percentEncode.cpp \
+$(OBJ_DIR)/opcode.o: \
+				src/opcode.cpp \
+				$(DEP_OPCODE)
+
+$(OBJ_DIR)/percentEncode.o: \
+				$(GEN_DIR)/percentEncode.cpp \
 				$(DEP_COMPUTEDEXPRESSION) \
 				include/percentEncode.hpp
+
+$(OBJ_DIR)/program-analyze.o: \
+				src/program-analyze.cpp \
+				$(DEP_PROGRAM) \
+				$(DEP_OPCODE) \
 
 $(OBJ_DIR)/program-dumpBytecode.o: \
 				src/program-dumpBytecode.cpp \
