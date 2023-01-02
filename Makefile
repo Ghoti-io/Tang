@@ -351,7 +351,7 @@ $(LIBOBJECTS) :
 
 $(OBJ_DIR)/astNode.o: \
 				src/astNode.cpp \
-				include/macros.hpp \
+				$(DEP_MACROS) \
 				$(DEP_ASTNODE) \
 				$(DEP_OPCODE) \
 				$(DEP_PROGRAM)
