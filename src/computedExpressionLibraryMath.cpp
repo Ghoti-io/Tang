@@ -24,7 +24,7 @@ static LibraryFunction floorFunction = []([[maybe_unused]] Context & context) {
         return args.at(0);
       }
       if (typeid(*args.at(0)) == typeid(ComputedExpressionFloat)) {
-        return GarbageCollected::make<ComputedExpressionInteger>((uinteger_t)floor(static_cast<ComputedExpressionFloat&>(*args.at(0)).getValue()));
+        return GarbageCollected::make<ComputedExpressionInteger>((integer_t)floor(static_cast<ComputedExpressionFloat&>(*args.at(0)).getValue()));
       }
       return GarbageCollected::make<ComputedExpressionError>(Error{"Unknown argument type."});
     }, (size_t)1);

@@ -159,6 +159,9 @@ void Program::compile() {
 
   // Release the environment.
   this->popEnvironment();
+
+  // Optimize the Bytecode.
+  this->optimize();
 }
 
 void Program::addIdentifier(const string & name, optional<size_t> position) {

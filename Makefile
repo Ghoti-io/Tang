@@ -64,6 +64,7 @@ LIBOBJECTS := $(OBJ_DIR)/astNode.o \
 							$(OBJ_DIR)/program-analyze.o \
 							$(OBJ_DIR)/program-dumpBytecode.o \
 							$(OBJ_DIR)/program-execute.o \
+							$(OBJ_DIR)/program-optimize.o \
 							$(OBJ_DIR)/program.o \
 							$(OBJ_DIR)/tangBase.o \
 							$(OBJ_DIR)/tangParser.o \
@@ -712,12 +713,12 @@ $(OBJ_DIR)/percentEncode.o: \
 $(OBJ_DIR)/program-analyze.o: \
 				src/program-analyze.cpp \
 				$(DEP_PROGRAM) \
-				$(DEP_OPCODE) \
+				$(DEP_OPCODE)
 
 $(OBJ_DIR)/program-dumpBytecode.o: \
 				src/program-dumpBytecode.cpp \
 				$(DEP_PROGRAM) \
-				$(DEP_OPCODE) \
+				$(DEP_OPCODE)
 
 $(OBJ_DIR)/program-execute.o: \
 				src/program-execute.cpp \
@@ -738,6 +739,11 @@ $(OBJ_DIR)/program-execute.o: \
 				$(DEP_OPCODE) \
 				$(DEP_PROGRAM) \
 				$(DEP_TANGBASE)
+
+$(OBJ_DIR)/program-optimize.o: \
+				src/program-optimize.cpp \
+				$(DEP_PROGRAM) \
+				$(DEP_OPCODE)
 
 $(OBJ_DIR)/program.o: \
 				src/program.cpp \

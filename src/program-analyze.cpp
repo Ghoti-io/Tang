@@ -24,13 +24,15 @@ using namespace Tang;
   if (this->bytecode.size() < (pc + (x))) \
     return {{},{}}
 
-pair<map<Opcode, vector<pair<size_t, size_t>>>, vector<pair<Opcode, size_t>>> Program::analyze() const {
+pair<OpcodeOffsets, OpcodePositions> Program::analyze() const {
   // Map of Opcode to a vector of position pairs, with the first position
-  // being the Bytecode offset, and the second position being the ops offset.
-  map<Opcode, vector<pair<size_t, size_t>>> opOffsets{};
+  // being the Bytecode offset, and the second position being the position of
+  // the Opcode relative to other Opcodes (e.g., the Nth position).
+  OpcodeOffsets opOffsets{};
+
   // Vector of Opcodes in the order that they appear in the bytecode,
   // followed by their offset within the bytecode.
-  vector<pair<Opcode, size_t>> ops{};
+  OpcodePositions ops{};
 
   size_t pc{0};
 

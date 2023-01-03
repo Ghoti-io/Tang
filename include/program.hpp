@@ -34,6 +34,23 @@ namespace Tang {
   using Bytecode = std::vector<Tang::uinteger_t>;
 
   /**
+   * Map of Opcodes to a pair of offsets, with the first position
+   * being the Bytecode offset, and the second position being the position of
+   * the Opcode relative to the other Opcodes (e.g., the Nth position).
+   */
+  using OpcodeOffsets = std::map<Opcode, std::vector<std::pair<size_t, size_t>>>;
+
+  /**
+   * Vector of Opcodes in positional order.  Each entry is a pair, specifying
+   * the Opcode and the Bytecode offset.
+   */
+  using OpcodePositions = std::vector<std::pair<Opcode, size_t>>;
+
+  /**
+   * Map of Bytecode offsets to a string annotation.
+   */
+  using OpcodeAnnotations = std::map<size_t, std::string>;
+  /**
    * Represents a compiled script or template that may be executed.
    */
   class Program {
@@ -300,7 +317,7 @@ namespace Tang {
      *
      * @result A map of bytecode offsets to their associated annotation.
      */
-    const std::map<size_t, std::string> & getAnnotations() const;
+    const OpcodeAnnotations & getAnnotations() const;
 
   private:
     /**
@@ -352,7 +369,12 @@ namespace Tang {
     /**
      * Analyze the current Bytecode.
      */
-    std::pair<std::map<Opcode, std::vector<std::pair<size_t, size_t>>>, std::vector<std::pair<Opcode, size_t>>> analyze() const;
+    std::pair<OpcodeOffsets, OpcodePositions> analyze() const;
+
+    /**
+     * Optimize the Bytecode.
+     */
+    void optimize();
 
     /**
      * The code supplied when the Program was instantiated.
@@ -387,7 +409,7 @@ namespace Tang {
     /**
      * Bytecode annotations.
      */
-    std::map<size_t, std::string> annotations;
+     OpcodeAnnotations annotations;
   };
 }
 
