@@ -142,7 +142,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="program_8hpp__dep__incl.png" border="0" usemap="#ainclude_2program_8hppdep" alt=""/></div>
 <map name="ainclude_2program_8hppdep" id="ainclude_2program_8hppdep">
-<area shape="rect" title="Declare the Tang::Program class used to compile and execute source code." alt="" coords="4042,5,4198,32"/>
+<area shape="rect" title="Declare the Tang::Program class used to compile and execute source code." alt="" coords="4135,5,4291,32"/>
 <area shape="rect" href="tang_8hpp.html" title="Header file supplied for use by 3rd party code so that they can easily include all necessary headers." alt="" coords="53,162,184,189"/>
 <area shape="rect" href="tangBase_8hpp.html" title="Declare the Tang::TangBase class used to interact with Tang." alt="" coords="747,80,909,107"/>
 <area shape="rect" href="program-execute_8cpp.html" title="Define the Tang::Program::execute method." alt="" coords="1374,162,1557,189"/>
@@ -180,7 +180,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="rect" href="opcode_8cpp.html" title="Define the Tang::Program::dumpBytecode method." alt="" coords="6934,80,7053,107"/>
 <area shape="rect" href="program-analyze_8cpp.html" title="Define the Tang::Program::dumpBytecode method." alt="" coords="7077,80,7259,107"/>
 <area shape="rect" href="program-dumpBytecode_8cpp.html" title="Define the Tang::Program::dumpBytecode method." alt="" coords="7283,80,7514,107"/>
-<area shape="rect" href="program_8cpp.html" title="Define the Tang::Program class." alt="" coords="7538,80,7665,107"/>
+<area shape="rect" href="program-optimize_8cpp.html" title="Define the Tang::Program::dumpBytecode method." alt="" coords="7539,80,7728,107"/>
+<area shape="rect" href="program_8cpp.html" title="Define the Tang::Program class." alt="" coords="7753,80,7879,107"/>
 <area shape="rect" href="tang_8cpp.html" title="Code for the Tang command line interpreter." alt="" coords="5,244,107,271"/>
 <area shape="rect" href="test_8cpp.html" title="Test the general language behaviors." alt="" coords="131,244,234,271"/>
 <area shape="rect" href="computedExpression_8cpp.html" title="Define the Tang::ComputedExpression class." alt="" coords="208,162,416,189"/>
@@ -202,13 +203,42 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a70114beec5ecf129f5367a4107442ca4"><td class="memItemLeft" align="right" valign="top"><a id="a70114beec5ecf129f5367a4107442ca4"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8hpp.html#a70114beec5ecf129f5367a4107442ca4">Tang::Bytecode</a> = std::vector&lt; <a class="el" href="macros_8hpp.html#ac3ea9ca53071c2710a6034d60f61d76e">Tang::uinteger_t</a> &gt;</td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8hpp.html#a70114beec5ecf129f5367a4107442ca4">Tang::Bytecode</a> = std::vector&lt; <a class="el" href="macros_8hpp.html#a361122436ab50159be865d93fb80b527">Tang::uinteger_t</a> &gt;</td></tr>
 <tr class="memdesc:a70114beec5ecf129f5367a4107442ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains the Opcodes of a compiled program. <br /></td></tr>
 <tr class="separator:a70114beec5ecf129f5367a4107442ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33ed3c97ef06f26b0fbec76797cc99c4"><td class="memItemLeft" align="right" valign="top"><a id="a33ed3c97ef06f26b0fbec76797cc99c4"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8hpp.html#a33ed3c97ef06f26b0fbec76797cc99c4">Tang::OpcodeOffsets</a> = std::map&lt; Opcode, std::vector&lt; std::pair&lt; size_t, size_t &gt; &gt;&gt;</td></tr>
+<tr class="memdesc:a33ed3c97ef06f26b0fbec76797cc99c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of Opcodes to a pair of offsets, with the first position being the Bytecode offset, and the second position being the position of the Opcode relative to the other Opcodes (e.g., the Nth position). <br /></td></tr>
+<tr class="separator:a33ed3c97ef06f26b0fbec76797cc99c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5220bb493ee6768252815d3f7ee263eb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8hpp.html#a5220bb493ee6768252815d3f7ee263eb">Tang::OpcodePositions</a> = std::vector&lt; std::pair&lt; Opcode, size_t &gt; &gt;</td></tr>
+<tr class="memdesc:a5220bb493ee6768252815d3f7ee263eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of Opcodes in positional order.  <a href="program_8hpp.html#a5220bb493ee6768252815d3f7ee263eb">More...</a><br /></td></tr>
+<tr class="separator:a5220bb493ee6768252815d3f7ee263eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bcf02c94ff32ec131d6fa7439ff4ded"><td class="memItemLeft" align="right" valign="top"><a id="a8bcf02c94ff32ec131d6fa7439ff4ded"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program_8hpp.html#a8bcf02c94ff32ec131d6fa7439ff4ded">Tang::OpcodeAnnotations</a> = std::map&lt; size_t, std::string &gt;</td></tr>
+<tr class="memdesc:a8bcf02c94ff32ec131d6fa7439ff4ded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of Bytecode offsets to a string annotation. <br /></td></tr>
+<tr class="separator:a8bcf02c94ff32ec131d6fa7439ff4ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Declare the <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Tang::Program</a> class used to compile and execute source code. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a id="a5220bb493ee6768252815d3f7ee263eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5220bb493ee6768252815d3f7ee263eb">&#9670;&nbsp;</a></span>OpcodePositions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="program_8hpp.html#a5220bb493ee6768252815d3f7ee263eb">Tang::OpcodePositions</a> = typedef std::vector&lt;std::pair&lt;Opcode, size_t&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vector of Opcodes in positional order. </p>
+<p>Each entry is a pair, specifying the Opcode and the Bytecode offset. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

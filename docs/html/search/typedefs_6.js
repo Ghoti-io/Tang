@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['uinteger_5ft_932',['uinteger_t',['../macros_8hpp.html#ac3ea9ca53071c2710a6034d60f61d76e',1,'Tang']]]
+  ['opcodeannotations_939',['OpcodeAnnotations',['../program_8hpp.html#a8bcf02c94ff32ec131d6fa7439ff4ded',1,'Tang']]],
+  ['opcodeoffsets_940',['OpcodeOffsets',['../program_8hpp.html#a33ed3c97ef06f26b0fbec76797cc99c4',1,'Tang']]],
+  ['opcodepositions_941',['OpcodePositions',['../program_8hpp.html#a5220bb493ee6768252815d3f7ee263eb',1,'Tang']]]
 ];

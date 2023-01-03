@@ -18,8 +18,7 @@ Declare the \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} class use
 {\ttfamily \#include \char`\"{}macros.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}opcode.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}unicode\+String.\+hpp\char`\"{}}\newline
-Include dependency graph for program.\+hpp\+:
-\nopagebreak
+Include dependency graph for program.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -43,10 +42,32 @@ class \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{program_8hpp_a70114beec5ecf129f5367a4107442ca4}\label{program_8hpp_a70114beec5ecf129f5367a4107442ca4}} 
-using \mbox{\hyperlink{program_8hpp_a70114beec5ecf129f5367a4107442ca4}{Tang\+::\+Bytecode}} = std\+::vector$<$ \mbox{\hyperlink{macros_8hpp_ac3ea9ca53071c2710a6034d60f61d76e}{Tang\+::uinteger\+\_\+t}} $>$
-\begin{DoxyCompactList}\small\item\em Contains the Opcodes of a compiled program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+using \mbox{\hyperlink{program_8hpp_a70114beec5ecf129f5367a4107442ca4}{Tang\+::\+Bytecode}} = std\+::vector$<$ \mbox{\hyperlink{macros_8hpp_a361122436ab50159be865d93fb80b527}{Tang\+::uinteger\+\_\+t}} $>$
+\begin{DoxyCompactList}\small\item\em Contains the Opcodes of a compiled program. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{program_8hpp_a33ed3c97ef06f26b0fbec76797cc99c4}\label{program_8hpp_a33ed3c97ef06f26b0fbec76797cc99c4}} 
+using \mbox{\hyperlink{program_8hpp_a33ed3c97ef06f26b0fbec76797cc99c4}{Tang\+::\+Opcode\+Offsets}} = std\+::map$<$ Opcode, std\+::vector$<$ std\+::pair$<$ size\+\_\+t, size\+\_\+t $>$ $>$$>$
+\begin{DoxyCompactList}\small\item\em Map of Opcodes to a pair of offsets, with the first position being the Bytecode offset, and the second position being the position of the Opcode relative to the other Opcodes (e.\+g., the Nth position). \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{program_8hpp_a5220bb493ee6768252815d3f7ee263eb}{Tang\+::\+Opcode\+Positions}} = std\+::vector$<$ std\+::pair$<$ Opcode, size\+\_\+t $>$ $>$
+\begin{DoxyCompactList}\small\item\em Vector of Opcodes in positional order. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{program_8hpp_a8bcf02c94ff32ec131d6fa7439ff4ded}\label{program_8hpp_a8bcf02c94ff32ec131d6fa7439ff4ded}} 
+using \mbox{\hyperlink{program_8hpp_a8bcf02c94ff32ec131d6fa7439ff4ded}{Tang\+::\+Opcode\+Annotations}} = std\+::map$<$ size\+\_\+t, std\+::string $>$
+\begin{DoxyCompactList}\small\item\em Map of Bytecode offsets to a string annotation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Declare the \mbox{\hyperlink{classTang_1_1Program}{Tang\+::\+Program}} class used to compile and execute source code. 
 
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{program_8hpp_a5220bb493ee6768252815d3f7ee263eb}\label{program_8hpp_a5220bb493ee6768252815d3f7ee263eb}} 
+\index{program.hpp@{program.hpp}!OpcodePositions@{OpcodePositions}}
+\index{OpcodePositions@{OpcodePositions}!program.hpp@{program.hpp}}
+\doxysubsubsection{\texorpdfstring{OpcodePositions}{OpcodePositions}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{program_8hpp_a5220bb493ee6768252815d3f7ee263eb}{Tang\+::\+Opcode\+Positions}} = typedef std\+::vector$<$std\+::pair$<$Opcode, size\+\_\+t$>$ $>$}
+
+
+
+Vector of Opcodes in positional order. 
+
+Each entry is a pair, specifying the Opcode and the Bytecode offset. 
