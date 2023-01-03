@@ -26,7 +26,7 @@ namespace Tang {
   /**
    * Define the size of integers used by Tang.
    */
-  using uinteger_t = int32_t;
+  using uinteger_t = uint32_t;
 
   /**
    * Define the size of floats used by Tang.

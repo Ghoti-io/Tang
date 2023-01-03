@@ -203,7 +203,7 @@ Context Program::execute(ContextData && data) {
         string temp{};
         for (size_t i = 0; i < bytes; ++i) {
           for (size_t j = 0; j < sizeof(uinteger_t); ++j) {
-            if ((integer_t)((i * sizeof(uinteger_t)) + j) < size) {
+            if ((uinteger_t)((i * sizeof(uinteger_t)) + j) < size) {
               temp += (unsigned char)
                 ((this->bytecode[pc + 3 + i] >> (8 * (sizeof(uinteger_t) - 1 - j))) & 0xFF);
             }
@@ -307,7 +307,7 @@ Context Program::execute(ContextData && data) {
         EXECUTEPROGRAMCHECK(2);
         auto argc = this->bytecode[pc + 1];
         auto targetPc = this->bytecode[pc + 2];
-        stack.push_back(GarbageCollected::make<ComputedExpressionCompiledFunction>((uint32_t)argc, targetPc));
+        stack.push_back(GarbageCollected::make<ComputedExpressionCompiledFunction>((uint32_t)argc, (integer_t)targetPc));
         pc += 3;
         break;
       }
@@ -572,7 +572,7 @@ Context Program::execute(ContextData && data) {
           auto & funcConv = static_cast<ComputedExpressionCompiledFunction &>(*function);
 
           // Verify that the correct number of arguments has been passed.
-          if (argc != (int)funcConv.getArgc()) {
+          if (argc != funcConv.getArgc()) {
             // Incorrect number of arguments passed.
             // Clear the arguments from the stack.
             for (uinteger_t i = 0; i < argc; ++i) {
@@ -614,7 +614,7 @@ Context Program::execute(ContextData && data) {
           }
 
           // Remove the arguments from the stack.
-          for (int i = 0; i < argc; ++i) {
+          for (uinteger_t i = 0; i < argc; ++i) {
             stack.pop_back();
           }
 
@@ -666,7 +666,7 @@ Context Program::execute(ContextData && data) {
           }
 
           // Remove the arguments from the stack.
-          for (int i = 0; i < argc; ++i) {
+          for (uinteger_t i = 0; i < argc; ++i) {
             stack.pop_back();
           }
 

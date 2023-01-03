@@ -125,7 +125,7 @@ string Program::dumpBytecode() const {
         string temp{};
         for (size_t i = 0; i < bytes; ++i) {
           for (size_t j = 0; j < sizeof(uinteger_t); ++j) {
-            if ((integer_t)((i * sizeof(uinteger_t)) + j) < size) {
+            if ((uinteger_t)((i * sizeof(uinteger_t)) + j) < size) {
               temp += (unsigned char)((this->bytecode[pc + 3 + i] >> (8 * (sizeof(uinteger_t) - 1 - j))) & 0xFF);
             }
           }
@@ -316,21 +316,7 @@ string Program::dumpBytecode() const {
     }
     out << endl;
   }
-  /*
-  auto [opOffsets, ops] = this->analyze();
-  out << "OPCODE OFFSETS (BYTECODE, OP #)" << endl;
-  for (auto & [opcode, offsets] : opOffsets) {
-    out << "OPCODE: " << opcode << endl;
-    for (auto & [bytecodeOffset, opcodeOffset] : offsets) {
-      out << "  " << bytecodeOffset << " : " << opcodeOffset << endl;
-    }
-  }
-  out << "OPCODES (order#, opcode, bytecode offset)" << endl;
-  size_t opcodeOffset = 0;
-  for (auto & [opcode, bytecodeOffset] : ops) {
-    out << opcodeOffset++ << " : " << opcode << " : " << bytecodeOffset << endl;
-  }
-  */
+
   return out.str();
 }
 
