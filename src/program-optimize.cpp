@@ -10,6 +10,14 @@
 using namespace std;
 using namespace Tang;
 
+static set<Opcode> jumpOpcodes{
+  Opcode::JMP,
+  Opcode::JMPF,
+  Opcode::JMPF_POP,
+  Opcode::JMPT,
+  Opcode::JMPT_POP,
+};
+
 /**
  * Remove Opcodes and their associated data from the Bytecode array and the
  * accompanying metadata arrays.
@@ -22,7 +30,7 @@ using namespace Tang;
  * @param ops OpcodePositions metadata of the Bytecode array.
  * @param annotations The OpcodeAnnotations associated with the Bytecode.
  */
-static void removeOpcodes([[maybe_unused]]Bytecode & bytecode, [[maybe_unused]]size_t position, [[maybe_unused]]size_t count, [[maybe_unused]]OpcodeOffsets & opOffsets, [[maybe_unused]]OpcodePositions & ops, [[maybe_unused]]OpcodeAnnotations & annotations) {
+static void removeOpcodes(Bytecode & bytecode, size_t position, size_t count, OpcodeOffsets & opOffsets, OpcodePositions & ops, OpcodeAnnotations & annotations) {
   // Sanity check to make sure that `position` is within the scope of 
   // available Opcode positions.
   if ((ops.size() <= position) || (count < 1)) {
@@ -33,17 +41,9 @@ static void removeOpcodes([[maybe_unused]]Bytecode & bytecode, [[maybe_unused]]s
   auto originalBytecodeSize = bytecode.size();
   auto bytecodeStart = ops[position].second;
   auto bytecodeExclusiveEnd = (position + count >= ops.size())
-    ? ops.size()
+    ? bytecode.size()
     : ops[position + count].second;
   auto bytecodeDeletedCount = bytecodeExclusiveEnd - bytecodeStart;
-
-  set<Opcode> jumpOpcodes{
-    Opcode::JMP,
-    Opcode::JMPF,
-    Opcode::JMPF_POP,
-    Opcode::JMPT,
-    Opcode::JMPT_POP,
-  };
 
   // Delete the opcodes from the Bytecode array.
   bytecode.erase(bytecode.begin() + bytecodeStart, bytecode.begin() + bytecodeExclusiveEnd);
@@ -72,9 +72,14 @@ static void removeOpcodes([[maybe_unused]]Bytecode & bytecode, [[maybe_unused]]s
       }
       else {
         // Remove "deleted" Opcode entries from OpcodeOffsets.
-        auto next = it + 1;
-        offsets.erase(next.base());
-        it = next - 1;
+        // Get the reverseIndex #
+        auto reverseIndex = it - offsets.rbegin();
+        offsets.erase((it + 1).base());
+        // Recalculate the reverse index.
+        // TODO: Verify whether or not this is necessary.  When a vector
+        // erases elements, does that invalidate the existing iterators?
+        // If so, then our recalculation is necessary.
+        it = offsets.rbegin() + (reverseIndex - 1);
       }
     }
     if (jumpOpcodes.count(op)) {
@@ -147,19 +152,68 @@ void Program::optimize() {
     Opcode::STRING,
     Opcode::FUNCTION,
   };
-	for (size_t i{1}; i < ops.size(); ++i) {
-    if ((ops[i].first == Opcode::POP) && (valueProducingOpcodes.count(ops[i-1].first))) {
-      // We have found a set of opcodes that can be removed!
-      removeOpcodes(this->bytecode, i - 1, 2, opOffsets, ops, this->annotations);
-      i -= 2;
+
+  bool changed = true;
+  while (changed) {
+    changed = false;
+    // Optimization #2:
+    // Poke.. pop.. peek, when poke and peek are the same stack location.
+    //    24 POKE        0
+    //    26 POP
+    //    27 PEEK        0
+    //    ex: 26 & 27 can be removed, if not a jump target.
+    //        27 is often a jump target when 26 is from a for() initialization.
+    for (size_t i{2}; i < ops.size(); ++i) {
+      // ops[i].first is an opcode
+      // ops[i].second is a bytecodeTarget 
+      if ((ops[i].first == Opcode::PEEK)
+          && (ops[i - 1].first == Opcode::POP)
+          && (ops[i - 2].first == Opcode::POKE)
+          && (this->bytecode[ops[i].second + 1] == this->bytecode[ops[i - 2].second + 1])) {
+        // The optimization cannot be performed if ops[i].second is a jump target
+        bool isAJumpTarget{false};
+        for (auto & op : jumpOpcodes) {
+          if (opOffsets.count(op)) {
+            for (auto & [bytecodeOffset, opcodeOffset] : opOffsets.at(op)) {
+              if (this->bytecode[bytecodeOffset + 1] == ops[i].second) {
+                isAJumpTarget = true;
+                break;
+              }
+            }
+          }
+        }
+        if (!isAJumpTarget) {
+          // We have found a set of opcodes that can be removed!
+          removeOpcodes(this->bytecode, i - 1, 2, opOffsets, ops, this->annotations);
+          changed = true;
+          i -= 2;
+        }
+      }
     }
-	}
-  //auto after = this->dumpBytecode();
+
+    // Optimization #3:
+    // Push.. pop, can be removed.
+    //    17 JMPF_POP    24
+    //    19 NULLVAL
+    //    20 POP
+    //    21 JMP         7
+    //    ex: 19 & 20 can be removed, if 20 is not a jump target.
+    for (size_t i{1}; i < ops.size(); ++i) {
+      if ((ops[i].first == Opcode::POP) && (valueProducingOpcodes.count(ops[i-1].first))) {
+        // We have found a set of opcodes that can be removed!
+        removeOpcodes(this->bytecode, i - 1, 2, opOffsets, ops, this->annotations);
+        changed = true;
+        i -= 2;
+      }
+    }
+  }
   /*
+  auto after = this->dumpBytecode();
   if (before != after) {
-    cout << "#########################################" << endl;
-    cout << before;
-    cout << "--------------------------" << endl << after;
+    cout << "#########################################" << endl
+      << before
+      << "--------------------------" << endl
+      << after;
   }
   */
 }

@@ -15,20 +15,6 @@
 //    32 PEEK        1
 //    ex: 31 can be removed.
 //
-// 2. Poke.. pop.. peek, when poke and peek are the same stack location.
-//    24 POKE        0
-//    26 POP
-//    27 PEEK        0
-//    ex: 26 & 27 can be removed, if not a jump target.
-//        27 is often a jump target when 26 is from a for() initialization.
-//
-// 3. Push.. pop, can be removed.
-//    17 JMPF_POP    24
-//    19 NULLVAL
-//    20 POP
-//    21 JMP         7
-//    ex: 19 & 20 can be removed, if 20 is not a jump target.
-//
 //
 // TODO What's next:
 // * Library Extension
