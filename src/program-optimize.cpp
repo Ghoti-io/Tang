@@ -18,6 +18,15 @@ static set<Opcode> jumpOpcodes{
   Opcode::JMPT_POP,
 };
 
+static set<Opcode> valueProducingOpcodes{
+  Opcode::NULLVAL,
+  Opcode::INTEGER,
+  Opcode::FLOAT,
+  Opcode::BOOLEAN,
+  Opcode::STRING,
+  Opcode::FUNCTION,
+};
+
 /**
  * Remove Opcodes and their associated data from the Bytecode array and the
  * accompanying metadata arrays.
@@ -83,7 +92,7 @@ static void removeOpcodes(Bytecode & bytecode, size_t position, size_t count, Op
       }
     }
     if (jumpOpcodes.count(op)) {
-      // 3. Update any Jump targets that may have been affected.
+      // 3a. Update any Jump targets that may have been affected.
       // We did not do this earlier because the first loop exited early to save
       // processing time.
       // For this loop, however, we must examine every jump target and adjust
@@ -97,6 +106,24 @@ static void removeOpcodes(Bytecode & bytecode, size_t position, size_t count, Op
         else if (target >= bytecodeStart) {
           // Target was jumping to an opcode that is now deleted.
           bytecode[boffset + 1] = bytecodeStart;
+        }
+      }
+    }
+    if (op == Opcode::FUNCTION) {
+      // 3b. Update any Function targets that may have been affected.
+      // We did not do this earlier because the first loop exited early to save
+      // processing time.
+      // For this loop, however, we must examine every jump target and adjust
+      // it as needed, and we cannot assume that the jump instructions are in
+      // any particular order.
+      for (auto & [boffset, ooffset] : offsets) {
+        uinteger_t target = bytecode[boffset + 2];
+        if (target >= bytecodeExclusiveEnd) {
+          bytecode[boffset + 2] = target - bytecodeDeletedCount;
+        }
+        else if (target >= bytecodeStart) {
+          // Target was jumping to an opcode that is now deleted.
+          bytecode[boffset + 2] = bytecodeStart;
         }
       }
     }
@@ -144,18 +171,67 @@ void Program::optimize() {
   }
   */
 
-  set<Opcode> valueProducingOpcodes{
-    Opcode::NULLVAL,
-    Opcode::INTEGER,
-    Opcode::FLOAT,
-    Opcode::BOOLEAN,
-    Opcode::STRING,
-    Opcode::FUNCTION,
-  };
-
   bool changed = true;
   while (changed) {
     changed = false;
+    // Optimization #1:
+    // All opcodes after a JMP and before a jump target or function target
+    // can be removed.
+    //    17 JMPF_POP    32
+    //      ...
+    //    29 JMP         12
+    //    31 POP
+    //    32 PEEK        1
+    //    ex: 31 can be removed.
+    for (size_t i{0}; i < ops.size(); ++i) {
+      if (ops[i].first == Opcode::JMP) {
+        auto jmpBytecodeOffset = ops[i].second;
+        size_t minBytecodeTarget = this->bytecode.size();
+        // Check for Jump instruction targets.
+        for (auto & op : jumpOpcodes) {
+          if (opOffsets.count(op)) {
+            for (auto & [bytecodeOffset, opcodeOffset] : opOffsets.at(op)) {
+              auto jumpInstructionTarget = this->bytecode[bytecodeOffset + 1];
+              if ((jumpInstructionTarget > jmpBytecodeOffset) && (jumpInstructionTarget < minBytecodeTarget)) {
+                minBytecodeTarget = jumpInstructionTarget;
+              }
+            }
+          }
+        }
+        // Check for Function targets.
+        if (opOffsets.count(Opcode::FUNCTION)) {
+          for (auto & [bytecodeOffset, opcodeOffset] : opOffsets.at(Opcode::FUNCTION)) {
+            auto jumpInstructionTarget = this->bytecode[bytecodeOffset + 2];
+            if ((jumpInstructionTarget > jmpBytecodeOffset) && (jumpInstructionTarget < minBytecodeTarget)) {
+              minBytecodeTarget = jumpInstructionTarget;
+            }
+          }
+        }
+        // Remove any bytecodes that can never be executed.
+        auto firstBytecodeToDelete = jmpBytecodeOffset + 2;
+        if (minBytecodeTarget > firstBytecodeToDelete) {
+          /*
+          cout << "++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+          cout << "WOULD DELETE FROM " << firstBytecodeToDelete << " TO " << minBytecodeTarget << endl;
+          cout << this->dumpBytecode();
+          */
+          // Figure out the opcode # of the "minBytecodeTarget".
+          auto minOffset = i + 1;
+          do {
+            ++minOffset;
+          } while ((minOffset < ops.size()) && (ops[minOffset].second < minBytecodeTarget));
+
+          /*
+          cout << "Opcodes " << i + 1 << " : " << minOffset << endl;
+          cout << "++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+          */
+          //cout << "OPTIMIZATION 1" << endl;
+          removeOpcodes(this->bytecode, i + 1, minOffset - (i + 1), opOffsets, ops, this->annotations);
+          changed = true;
+        }
+      }
+    }
+
     // Optimization #2:
     // Poke.. pop.. peek, when poke and peek are the same stack location.
     //    24 POKE        0
@@ -184,6 +260,7 @@ void Program::optimize() {
         }
         if (!isAJumpTarget) {
           // We have found a set of opcodes that can be removed!
+          //cout << "OPTIMIZATION 2" << endl;
           removeOpcodes(this->bytecode, i - 1, 2, opOffsets, ops, this->annotations);
           changed = true;
           i -= 2;
@@ -201,16 +278,20 @@ void Program::optimize() {
     for (size_t i{1}; i < ops.size(); ++i) {
       if ((ops[i].first == Opcode::POP) && (valueProducingOpcodes.count(ops[i-1].first))) {
         // We have found a set of opcodes that can be removed!
+        //cout << "OPTIMIZATION 3" << endl;
         removeOpcodes(this->bytecode, i - 1, 2, opOffsets, ops, this->annotations);
         changed = true;
         i -= 2;
       }
     }
   }
+
   /*
   auto after = this->dumpBytecode();
   if (before != after) {
     cout << "#########################################" << endl
+      << this->code << endl
+      << "--------------------------" << endl
       << before
       << "--------------------------" << endl
       << after;
