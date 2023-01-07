@@ -1,6 +1,6 @@
 /**
  * @file
- * Define the Tang::Program::dumpBytecode method.
+ * Define the Tang::Program::optimize method.
  */
 
 #include <set>
@@ -142,34 +142,10 @@ static void removeOpcodes(Bytecode & bytecode, size_t position, size_t count, Op
       annotations.erase(i);
     }
   }
-  /*
-  for (auto & [op, offsets] : opOffsets) {
-    cout << op << endl;
-    for (auto & [boffset, ooffset] : offsets) {
-      cout << "  " << boffset << " : " << ooffset << endl;
-    }
-  }
-  */
 }
 
 void Program::optimize() {
   auto [opOffsets, ops] = this->analyze();
-  //auto before = this->dumpBytecode();
-  /*
-  cout << "OPCODE OFFSETS (BYTECODE, OP #)" << endl;
-  for (auto & [opcode, offsets] : opOffsets) {
-    cout << "OPCODE: " << opcode << endl;
-    for (auto & [bytecodeOffset, opcodeOffset] : offsets) {
-      cout << "  " << bytecodeOffset << " : " << opcodeOffset << endl;
-    }
-  }
-
-  cout << "OPCODES (order#, opcode, bytecode offset)" << endl;
-  size_t opcodeOffset = 0;
-  for (auto & [opcode, bytecodeOffset] : ops) {
-    cout << opcodeOffset++ << " : " << opcode << " : " << bytecodeOffset << endl;
-  }
-  */
 
   bool changed = true;
   while (changed) {
@@ -210,22 +186,12 @@ void Program::optimize() {
         // Remove any bytecodes that can never be executed.
         auto firstBytecodeToDelete = jmpBytecodeOffset + 2;
         if (minBytecodeTarget > firstBytecodeToDelete) {
-          /*
-          cout << "++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
-          cout << "WOULD DELETE FROM " << firstBytecodeToDelete << " TO " << minBytecodeTarget << endl;
-          cout << this->dumpBytecode();
-          */
           // Figure out the opcode # of the "minBytecodeTarget".
           auto minOffset = i + 1;
           do {
             ++minOffset;
           } while ((minOffset < ops.size()) && (ops[minOffset].second < minBytecodeTarget));
 
-          /*
-          cout << "Opcodes " << i + 1 << " : " << minOffset << endl;
-          cout << "++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
-          */
-          //cout << "OPTIMIZATION 1" << endl;
           removeOpcodes(this->bytecode, i + 1, minOffset - (i + 1), opOffsets, ops, this->annotations);
           changed = true;
         }
@@ -260,7 +226,6 @@ void Program::optimize() {
         }
         if (!isAJumpTarget) {
           // We have found a set of opcodes that can be removed!
-          //cout << "OPTIMIZATION 2" << endl;
           removeOpcodes(this->bytecode, i - 1, 2, opOffsets, ops, this->annotations);
           changed = true;
           i -= 2;
@@ -278,24 +243,11 @@ void Program::optimize() {
     for (size_t i{1}; i < ops.size(); ++i) {
       if ((ops[i].first == Opcode::POP) && (valueProducingOpcodes.count(ops[i-1].first))) {
         // We have found a set of opcodes that can be removed!
-        //cout << "OPTIMIZATION 3" << endl;
         removeOpcodes(this->bytecode, i - 1, 2, opOffsets, ops, this->annotations);
         changed = true;
         i -= 2;
       }
     }
   }
-
-  /*
-  auto after = this->dumpBytecode();
-  if (before != after) {
-    cout << "#########################################" << endl
-      << this->code << endl
-      << "--------------------------" << endl
-      << before
-      << "--------------------------" << endl
-      << after;
-  }
-  */
 }
 

@@ -5,17 +5,6 @@
  */
 
 //
-// Future Optimizations:
-//
-// 1. All opcodes after a JMP and before a jump target can be removed.
-//    17 JMPF_POP    32
-//      ...
-//    29 JMP         12
-//    31 POP
-//    32 PEEK        1
-//    ex: 31 can be removed.
-//
-//
 // TODO What's next:
 // * Library Extension
 // * Math library (started)
@@ -23,8 +12,9 @@
 //   * number format to string
 // * Date/Time type & functions
 // * Execution count timeout
-// * Optimization
 // * Potential tail call optimization rather than loop & switch case for VM
+// * Use string views
+// * Move GarbageCollected from global to Context, in order to get rid of mutex
 //
 
 #ifndef TANG_HPP
