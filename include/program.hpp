@@ -319,6 +319,13 @@ namespace Tang {
      */
     const OpcodeAnnotations & getAnnotations() const;
 
+    /**
+     * Get a reference to the Tang language instance.
+     *
+     * @result A shared pointer reference to the Tang language instance.
+     */
+    std::shared_ptr<Tang::TangBase> getTang() const;
+
   private:
     /**
      * A pointer to the base Tang class.

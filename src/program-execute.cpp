@@ -31,6 +31,13 @@ using namespace Tang;
  *
  * @param x The number of additional vector entries that should exist.
  */
+#define LEXECUTEPROGRAMCHECK(x) \
+  if (program.getBytecode().size() < (pc + (x))) { \
+    stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Opcode instruction truncated."})); \
+    pc = program.getBytecode().size(); \
+    return; \
+  }
+
 #define EXECUTEPROGRAMCHECK(x) \
   if (this->bytecode.size() < (pc + (x))) { \
     stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Opcode instruction truncated."})); \
@@ -43,12 +50,846 @@ using namespace Tang;
  *
  * @param x The number of entries that should exist in the stack.
  */
+#define LSTACKCHECK(x) \
+  if (stack.size() < (fp + (x))) { \
+    stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Insufficient stack depth."})); \
+    pc = program.getBytecode().size(); \
+    return; \
+  }
+
 #define STACKCHECK(x) \
   if (stack.size() < (fp + (x))) { \
     stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Insufficient stack depth."})); \
     pc = this->bytecode.size(); \
     break; \
   }
+
+#define BYTECODELAMBDAARGS \
+  [[maybe_unused]] Program & program, \
+  [[maybe_unused]] size_t & pc, \
+  [[maybe_unused]] size_t & fp, \
+  [[maybe_unused]] vector<GarbageCollected> & stack, \
+  [[maybe_unused]] vector<size_t> & pcStack, \
+  [[maybe_unused]] vector<size_t> & fpStack, \
+  [[maybe_unused]] vector<map<uinteger_t, GarbageCollected>> & libraryAliasStack, \
+  [[maybe_unused]] Context & context
+
+#define NEXTBYTECODELAMBDA \
+  if (pc >= program.getBytecode().size()) { \
+    return; \
+  } \
+  else if (program.getBytecode()[pc] >= (uinteger_t)Opcode::OPCODE_COUNT) { \
+    stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Unrecognized Opcode."})); \
+    return; \
+  } \
+  auto bytecodeTarget = program.getBytecode()[pc]; \
+  return bytecodeLambdas[bytecodeTarget](program, pc, fp, stack, pcStack, fpStack, libraryAliasStack, context);
+
+using BytecodeLambda = void(*)(BYTECODELAMBDAARGS);
+
+BytecodeLambda bytecodeLambdas[] = {
+  [](BYTECODELAMBDAARGS) {
+    // POP
+    {
+    LSTACKCHECK(1);
+    stack.pop_back();
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // PEEK
+    {
+    LEXECUTEPROGRAMCHECK(1);
+    auto position = program.getBytecode()[pc + 1];
+    LSTACKCHECK(position);
+    stack.push_back(stack[fp + position]);
+    pc += 2;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // POKE
+    {
+    LEXECUTEPROGRAMCHECK(1);
+    auto position = program.getBytecode()[pc + 1];
+    LSTACKCHECK(position);
+    stack[fp + position] = stack.back();
+    pc += 2;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // COPY
+    {
+    LEXECUTEPROGRAMCHECK(1);
+    auto position = program.getBytecode()[pc + 1];
+    LSTACKCHECK(position);
+    auto targetPosition = fp + position;
+    if (stack[targetPosition].isCopyNeeded()) {
+      stack[targetPosition] = stack[targetPosition].makeCopy();
+    }
+    pc += 2;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // JMP
+    {
+    LEXECUTEPROGRAMCHECK(1);
+    pc = program.getBytecode()[pc + 1];
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // JMPF
+    {
+    LEXECUTEPROGRAMCHECK(1);
+    LSTACKCHECK(1);
+    auto condition = stack.back();
+    if (condition == false) {
+      pc = program.getBytecode()[pc + 1];
+    }
+    else {
+      pc += 2;
+    }
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // JMPF_POP
+    {
+    LEXECUTEPROGRAMCHECK(1);
+    LSTACKCHECK(1);
+    auto condition = stack.back();
+    stack.pop_back();
+    if (condition == false) {
+      pc = program.getBytecode()[pc + 1];
+    }
+    else {
+      pc += 2;
+    }
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // JMPT
+    {
+    LEXECUTEPROGRAMCHECK(1);
+    LSTACKCHECK(1);
+    auto condition = stack.back();
+    if (condition == true) {
+      pc = program.getBytecode()[pc + 1];
+    }
+    else {
+      pc += 2;
+    }
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // JMPT_POP
+    {
+    LEXECUTEPROGRAMCHECK(1);
+    LSTACKCHECK(1);
+    auto condition = stack.back();
+    stack.pop_back();
+    if (condition == true) {
+      pc = program.getBytecode()[pc + 1];
+    }
+    else {
+      pc += 2;
+    }
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // NULLVAL
+    {
+    stack.push_back(GarbageCollected::make<ComputedExpression>());
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // INTEGER
+    {
+    LEXECUTEPROGRAMCHECK(1);
+    stack.push_back(GarbageCollected::make<ComputedExpressionInteger>((integer_t)program.getBytecode()[pc + 1]));
+    pc += 2;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // FLOAT
+    {
+    LEXECUTEPROGRAMCHECK(1);
+    stack.push_back(GarbageCollected::make<ComputedExpressionFloat>(bit_cast<float_t>(program.getBytecode()[pc + 1])));
+    pc += 2;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // BOOLEAN
+    {
+    LEXECUTEPROGRAMCHECK(1);
+    stack.push_back(GarbageCollected::make<ComputedExpressionBoolean>(program.getBytecode()[pc + 1] ? true : false));
+    pc += 2;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // STRING
+    {
+    LEXECUTEPROGRAMCHECK(2);
+    UnicodeString::Type type = (UnicodeString::Type) program.getBytecode()[pc + 1];
+    auto size = program.getBytecode()[pc + 2];
+    auto bytes = ceil((double)size / sizeof(uinteger_t));
+    LEXECUTEPROGRAMCHECK(2 + bytes);
+
+    // Extract the letters of the string from the bytecode.
+    // TODO make this faster by using a char * buffer.
+    string temp{};
+    for (size_t i = 0; i < bytes; ++i) {
+      for (size_t j = 0; j < sizeof(uinteger_t); ++j) {
+        if ((uinteger_t)((i * sizeof(uinteger_t)) + j) < size) {
+          temp += (unsigned char)
+            ((program.getBytecode()[pc + 3 + i] >> (8 * (sizeof(uinteger_t) - 1 - j))) & 0xFF);
+        }
+      }
+    }
+
+    // Finally construct the string object.
+    auto gcString = GarbageCollected::make<ComputedExpressionString>(temp);
+
+    // Set the string as Untrusted if necessary.
+    if (type == UnicodeString::Type::Untrusted) {
+      static_cast<ComputedExpressionString &>(*gcString).setUntrusted();
+    }
+    // Set the string as Percent if necessary.
+    else if (type == UnicodeString::Type::Percent) {
+      static_cast<ComputedExpressionString &>(*gcString).setPercent();
+    }
+
+    stack.push_back(gcString);
+    pc += bytes + 3;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // ARRAY
+    {
+    LEXECUTEPROGRAMCHECK(1);
+    auto size = program.getBytecode()[pc + 1];
+    LSTACKCHECK(size);
+    vector<GarbageCollected> contents;
+    contents.reserve(size);
+    for (uinteger_t i = 0; i < size; ++i) {
+      contents.push_back(stack[stack.size() - size + i]);
+    }
+    for (uinteger_t i = 0; i < size; ++i) {
+      stack.pop_back();
+    }
+    stack.push_back(GarbageCollected::make<ComputedExpressionArray>(contents));
+    pc += 2;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // MAP
+    {
+    LEXECUTEPROGRAMCHECK(1);
+    auto size = program.getBytecode()[pc + 1];
+    LSTACKCHECK(size * 2);
+    map<string, GarbageCollected> contents;
+    for (uinteger_t i = 0; i < size; ++i) {
+      auto value = stack.back();
+      stack.pop_back();
+      auto key = stack.back();
+      stack.pop_back();
+      if (typeid(*key) == typeid(ComputedExpressionString)) {
+        contents.insert({static_cast<ComputedExpressionString &>(*key).dump(), value});
+      }
+    }
+    stack.push_back(GarbageCollected::make<ComputedExpressionMap>(contents));
+    pc += 2;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // LIBRARY
+    {
+    LSTACKCHECK(1);
+    auto name = stack.back();
+    stack.pop_back();
+
+    if (typeid(*name) == typeid(ComputedExpressionString)) {
+      auto & nameConv = static_cast<ComputedExpressionString &>(*name);
+      auto & libraries = program.getTang()->getLibraries();
+      auto nameLiteral = nameConv.dump();
+      stack.push_back(libraries.count(nameLiteral)
+          ? libraries.at(nameLiteral)(context)
+          : GarbageCollected::make<ComputedExpressionError>(Error{"Unknown Library"}));
+    }
+    else {
+      // We can't use this CE to access a library.
+      stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Unrecognized operand on LIBRARY opcode."}));
+    }
+
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // LIBRARYSAVE
+    {
+    LEXECUTEPROGRAMCHECK(1);
+    auto index = program.getBytecode()[pc + 1];
+    libraryAliasStack.back().insert({index, stack.back()});
+
+    pc += 2;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // LIBRARYCOPY
+    {
+    LEXECUTEPROGRAMCHECK(1);
+    auto index = program.getBytecode()[pc + 1];
+    auto & aliases = libraryAliasStack.back();
+    if (aliases.count(index)) {
+      stack.push_back(aliases.at(index));
+    }
+    else {
+      stack.push_back(GarbageCollected::make<ComputedExpression>());
+    }
+
+    pc += 2;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // FUNCTION
+    {
+    LEXECUTEPROGRAMCHECK(2);
+    auto argc = program.getBytecode()[pc + 1];
+    auto targetPc = program.getBytecode()[pc + 2];
+    stack.push_back(GarbageCollected::make<ComputedExpressionCompiledFunction>((uint32_t)argc, (integer_t)targetPc));
+    pc += 3;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // ASSIGNINDEX
+    {
+    LSTACKCHECK(3);
+    auto index = stack.back();
+    stack.pop_back();
+    auto collection = stack.back();
+    stack.pop_back();
+    auto value = stack.back();
+    stack.pop_back();
+    stack.push_back(collection->__assign_index(index, value));
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // ADD
+    {
+    LSTACKCHECK(2);
+    auto rhs = stack.back();
+    stack.pop_back();
+    auto lhs = stack.back();
+    stack.pop_back();
+    stack.push_back(lhs + rhs);
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // SUBTRACT
+    {
+    LSTACKCHECK(2);
+    auto rhs = stack.back();
+    stack.pop_back();
+    auto lhs = stack.back();
+    stack.pop_back();
+    stack.push_back(lhs - rhs);
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // MULTIPLY
+    {
+    LSTACKCHECK(2);
+    auto rhs = stack.back();
+    stack.pop_back();
+    auto lhs = stack.back();
+    stack.pop_back();
+    stack.push_back(lhs * rhs);
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // DIVIDE
+    {
+    LSTACKCHECK(2);
+    auto rhs = stack.back();
+    stack.pop_back();
+    auto lhs = stack.back();
+    stack.pop_back();
+    stack.push_back(lhs / rhs);
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // MODULO
+    {
+    LSTACKCHECK(2);
+    auto rhs = stack.back();
+    stack.pop_back();
+    auto lhs = stack.back();
+    stack.pop_back();
+    stack.push_back(lhs % rhs);
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // NEGATIVE
+    {
+    LSTACKCHECK(1);
+    auto operand = stack.back();
+    stack.pop_back();
+    stack.push_back(-operand);
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // NOT
+    {
+    LSTACKCHECK(1);
+    auto operand = stack.back();
+    stack.pop_back();
+    stack.push_back(!operand);
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // LT
+    {
+    LSTACKCHECK(2);
+    auto rhs = stack.back();
+    stack.pop_back();
+    auto lhs = stack.back();
+    stack.pop_back();
+    stack.push_back(lhs < rhs);
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // LTE
+    {
+    LSTACKCHECK(2);
+    auto rhs = stack.back();
+    stack.pop_back();
+    auto lhs = stack.back();
+    stack.pop_back();
+    stack.push_back(lhs <= rhs);
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // GT
+    {
+    LSTACKCHECK(2);
+    auto rhs = stack.back();
+    stack.pop_back();
+    auto lhs = stack.back();
+    stack.pop_back();
+    stack.push_back(lhs > rhs);
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // GTE
+    {
+    LSTACKCHECK(2);
+    auto rhs = stack.back();
+    stack.pop_back();
+    auto lhs = stack.back();
+    stack.pop_back();
+    stack.push_back(lhs >= rhs);
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // EQ
+    {
+    LSTACKCHECK(2);
+    auto rhs = stack.back();
+    stack.pop_back();
+    auto lhs = stack.back();
+    stack.pop_back();
+    stack.push_back(lhs == rhs);
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // NEQ
+    {
+    LSTACKCHECK(2);
+    auto rhs = stack.back();
+    stack.pop_back();
+    auto lhs = stack.back();
+    stack.pop_back();
+    stack.push_back(lhs != rhs);
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // PERIOD
+    {
+    LSTACKCHECK(2);
+    auto rhs = stack.back();
+    stack.pop_back();
+    auto lhs = stack.back();
+    stack.pop_back();
+    auto tang = program.getTang();
+    auto tmp = lhs->__period(rhs, tang);
+
+    // Resolve any library attribute requests.
+    // This could not be done earlier, because __period() does not have
+    // access to the context object, which is needed by the library
+    // attribute function.  So we clean up that part now.
+    while (typeid(*tmp) == typeid(ComputedExpressionNativeLibraryFunction)) {
+      tmp = static_cast<ComputedExpressionNativeLibraryFunction &>(*tmp).getFunction()(context);
+    }
+
+    // Set the target of a native bound function.
+    // This could not be done earlier, because __period() does not have
+    // access to the target object (lhs).  So we clean up that part now.
+    if (typeid(*tmp) == typeid(ComputedExpressionNativeBoundFunction)) {
+      static_cast<ComputedExpressionNativeBoundFunction &>(*tmp).target = lhs;
+    }
+
+    // Finally, push the result onto the stack.
+    stack.push_back(tmp);
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // INDEX
+    {
+    LSTACKCHECK(2);
+    auto index = stack.back();
+    stack.pop_back();
+    auto container = stack.back();
+    stack.pop_back();
+    stack.push_back(container->__index(index));
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // SLICE
+    {
+    LSTACKCHECK(4);
+    auto skip = stack.back();
+    stack.pop_back();
+    auto end = stack.back();
+    stack.pop_back();
+    auto begin = stack.back();
+    stack.pop_back();
+    auto container = stack.back();
+    stack.pop_back();
+    stack.push_back(container->__slice(begin, end, skip));
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // GETITERATOR
+    {
+    LSTACKCHECK(1);
+    auto collection = stack.back();
+    stack.pop_back();
+    stack.push_back(collection->__getIterator(collection));
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // ITERATORNEXT
+    {
+    LSTACKCHECK(1);
+    auto iterator = stack.back();
+    stack.pop_back();
+    stack.push_back(iterator->__iteratorNext());
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // ISITERATOREND
+    {
+    LSTACKCHECK(1);
+    auto val = stack.back();
+    stack.pop_back();
+    stack.push_back(GarbageCollected::make<ComputedExpressionBoolean>((typeid(*val) == typeid(ComputedExpressionIteratorEnd)) || (typeid(*val) == typeid(ComputedExpressionError))));
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // CASTINTEGER
+    {
+    LSTACKCHECK(1);
+    auto operand = stack.back();
+    stack.pop_back();
+    stack.push_back(operand->__integer());
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // CASTFLOAT
+    {
+    LSTACKCHECK(1);
+    auto operand = stack.back();
+    stack.pop_back();
+    stack.push_back(operand->__float());
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // CASTBOOLEAN
+    {
+    LSTACKCHECK(1);
+    auto operand = stack.back();
+    stack.pop_back();
+    stack.push_back(operand->__boolean());
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // CASTSTRING
+    {
+    LSTACKCHECK(1);
+    auto operand = stack.back();
+    stack.pop_back();
+    stack.push_back(operand->__string());
+    ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // CALLFUNC
+    {
+      LEXECUTEPROGRAMCHECK(1);
+      LSTACKCHECK(1);
+      auto function = stack.back();
+      stack.pop_back();
+      auto argc = program.getBytecode()[pc + 1];
+      LSTACKCHECK(argc);
+
+      // Compiled functions make use of the arguments on the stack.
+      // They will clean up the stack when they finish, via the RETURN
+      // opcode.
+      if (typeid(*function) == typeid(ComputedExpressionCompiledFunction)) {
+        auto & funcConv = static_cast<ComputedExpressionCompiledFunction &>(*function);
+
+        // Verify that the correct number of arguments has been passed.
+        if (argc != funcConv.getArgc()) {
+          // Incorrect number of arguments passed.
+          // Clear the arguments from the stack.
+          for (uinteger_t i = 0; i < argc; ++i) {
+            stack.pop_back();
+          }
+
+          // Push an error onto the stack.
+          stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments supplied at function call."}));
+
+          pc += 2;
+        }
+
+        else {
+          // Save the current execution environment so that it can be restored
+          // when RETURNing from the function.
+          pcStack.push_back(pc + 2);
+          fpStack.push_back(fp);
+
+          // Set the new pc and fp.
+          pc = funcConv.getPc();
+          fp = stack.size() - argc;
+        }
+      }
+
+      // Compiled functions make use of the arguments on the stack.
+      // They will clean up the stack when they finish, via the RETURN
+      // opcode.
+      else if (typeid(*function) == typeid(ComputedExpressionNativeBoundFunction)) {
+        auto & funcConv = static_cast<ComputedExpressionNativeBoundFunction &>(*function);
+
+        // Populate argv to use when calling the function.
+        vector<GarbageCollected> argv{};
+        argv.reserve(argc);
+        auto iter = stack.end() - argc;
+        while (iter != stack.end()) {
+          argv.push_back(*iter);
+          ++iter;
+        }
+
+        // Remove the arguments from the stack.
+        for (uinteger_t i = 0; i < argc; ++i) {
+          stack.pop_back();
+        }
+
+        // Verify that the number of arguments supplied matches the number
+        // of arguments expected.
+        if ((size_t)argc != funcConv.getArgc()) {
+          stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments provided to object method."}));
+          pc += 2;
+        }
+
+        // Make sure that there is an object that was bound to the function.
+        else if (funcConv.target) {
+          // Verify that the target is the correct type.
+          // It is impossible for the target to not be the correct type under
+          // normal circumstances.  This is just a safety check.
+          if (type_index(typeid(**funcConv.target)) != funcConv.getTargetTypeIndex()) {
+            stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Type mismatch of object method to its target object."}));
+          }
+          else {
+            stack.push_back(funcConv.getFunction()(*funcConv.target, argv));
+          }
+          pc += 2;
+        }
+        else {
+          // There is no function target.  This is impossible under normal
+          // circumstances, but we must account for it, just in case.
+          stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Method is not bound to any object."}));
+          pc += 2;
+        }
+      }
+
+      // Compiled functions make use of the arguments on the stack.
+      // They will clean up the stack when they finish, via the RETURN
+      // opcode.
+      else if (typeid(*function) == typeid(ComputedExpressionNativeFunction)) {
+        auto & funcConv = static_cast<ComputedExpressionNativeFunction &>(*function);
+
+        // Populate argv to use when calling the function.
+        vector<GarbageCollected> argv{};
+        argv.reserve(argc);
+        auto iter = stack.end() - argc;
+        while (iter != stack.end()) {
+          argv.push_back(*iter);
+          ++iter;
+        }
+
+        // Remove the arguments from the stack.
+        for (uinteger_t i = 0; i < argc; ++i) {
+          stack.pop_back();
+        }
+
+        // Verify that the number of arguments supplied matches the number
+        // of arguments expected.
+        if ((size_t)argc != funcConv.getArgc()) {
+          stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments provided to object method."}));
+        }
+
+        else {
+          // Call the Native function.
+          stack.push_back(funcConv.getFunction()(argv, context));
+        }
+
+        pc += 2;
+      }
+
+      else {
+        // Error: We don't know what to do.
+        // Clear the arguments from the stack.
+        for (uinteger_t i = 0; i < argc; ++i) {
+          stack.pop_back();
+        }
+
+        stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Function call on unrecognized type."}));
+        pc = program.getBytecode().size();
+      }
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // RETURN
+    {
+    LEXECUTEPROGRAMCHECK(1);
+    size_t pop = program.getBytecode()[pc + 1];
+    LSTACKCHECK(pop + 1);
+
+    // Save the top of the stack as the return value.
+    auto returnVal = stack.back();
+
+    // Remove the stack down to the fp.
+    for (size_t i = 0; i <= pop; ++i) {
+      stack.pop_back();
+    }
+
+    // Put the return value back on the stack.
+    stack.push_back(returnVal);
+
+    // Restore the pc and fp.
+    pc = pcStack.back();
+    fp = fpStack.back();
+    pcStack.pop_back();
+    fpStack.pop_back();
+
+    }
+    NEXTBYTECODELAMBDA;
+  },
+  [](BYTECODELAMBDAARGS) {
+    // PRINT
+    {
+      LSTACKCHECK(1);
+      auto expression = stack.back();
+      stack.pop_back();
+      // Try to convert the expression to a string.
+      auto result = expression->__string();
+      if (typeid(*result) == typeid(ComputedExpressionString)) {
+        // We know that both our private member and `result` are a
+        // ComputedExpressionString, so combine them here.
+        static_cast<ComputedExpressionString &>(*context.computedExpressionOut) += static_cast<ComputedExpressionString &>(*result);
+        // Push an empty value onto the stack.
+        stack.push_back(GarbageCollected::make<ComputedExpression>());
+      }
+      else if (typeid(*result) != typeid(ComputedExpressionError)) {
+        // __string returned neither a string nor an error, so report that.
+        stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Argument not recognized as a string or error type."}));
+      }
+      else {
+        // __string returned an error, pass that back to the stack.
+        stack.push_back(result);
+      }
+      ++pc;
+    }
+    NEXTBYTECODELAMBDA;
+  },
+};
 
 Context Program::execute() {
   return this->execute(ContextData{});
@@ -78,6 +919,13 @@ Context Program::execute(ContextData && data) {
   // the environment of compiled functions during execution.
   vector<map<uinteger_t, GarbageCollected>> libraryAliasStack{{}};
 
+  // Execute the program.
+  if (pc < this->bytecode.size()) {
+    auto bytecodeTarget = this->bytecode[pc];
+    bytecodeLambdas[bytecodeTarget](*this, pc, fp, stack, pcStack, fpStack, libraryAliasStack, context);
+  }
+
+  /*
   while (pc < this->bytecode.size()) {
     switch ((Opcode)this->bytecode[pc]) {
       case Opcode::POP: {
@@ -751,6 +1599,7 @@ Context Program::execute(ContextData && data) {
       }
     }
   }
+  */
 
   // Verify that there is at least one value on the stack.  If not, set a
   // runtime error.

@@ -305,3 +305,7 @@ const map<size_t, string> & Program::getAnnotations() const {
   return this->annotations;
 }
 
+shared_ptr<TangBase> Program::getTang() const {
+  return this->tang;
+}
+

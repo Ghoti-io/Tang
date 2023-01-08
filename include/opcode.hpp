@@ -7,9 +7,10 @@
 #define TANG_OPCODE_HPP
 
 #include <ostream>
+#include "macros.hpp"
 
 namespace Tang {
-  enum class Opcode {
+  enum class Opcode : uinteger_t {
     POP,      ///< Pop a val
     PEEK,     ///< Stack # (from fp): push val from stack #
     POKE,     ///< Stack # (from fp): Copy a val, store @ stack #
@@ -62,6 +63,7 @@ namespace Tang {
     RETURN,   ///< Get stack #, pop return val, pop (stack #) times,
               ///< push val, restore fp, restore pc
     PRINT,    ///< Pop val, print(val), push error or NULL
+    OPCODE_COUNT ///< The number of opcodes defined.
   };
 
   /**
