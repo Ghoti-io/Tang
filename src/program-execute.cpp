@@ -84,24 +84,24 @@ Context Program::execute(ContextData && data) {
         STACKCHECK(1);
         stack.pop_back();
         ++pc;
-        break;
       }
+      break;
       case Opcode::PEEK: {
         EXECUTEPROGRAMCHECK(1);
         auto position = this->bytecode[pc + 1];
         STACKCHECK(position);
         stack.push_back(stack[fp + position]);
         pc += 2;
-        break;
       }
+      break;
       case Opcode::POKE: {
         EXECUTEPROGRAMCHECK(1);
         auto position = this->bytecode[pc + 1];
         STACKCHECK(position);
         stack[fp + position] = stack.back();
         pc += 2;
-        break;
       }
+      break;
       case Opcode::COPY: {
         EXECUTEPROGRAMCHECK(1);
         auto position = this->bytecode[pc + 1];
@@ -111,13 +111,13 @@ Context Program::execute(ContextData && data) {
           stack[targetPosition] = stack[targetPosition].makeCopy();
         }
         pc += 2;
-        break;
       }
+      break;
       case Opcode::JMP: {
         EXECUTEPROGRAMCHECK(1);
         pc = this->bytecode[pc + 1];
-        break;
       }
+      break;
       case Opcode::JMPF: {
         EXECUTEPROGRAMCHECK(1);
         STACKCHECK(1);
@@ -128,8 +128,8 @@ Context Program::execute(ContextData && data) {
         else {
           pc += 2;
         }
-        break;
       }
+      break;
       case Opcode::JMPF_POP: {
         EXECUTEPROGRAMCHECK(1);
         STACKCHECK(1);
@@ -141,8 +141,8 @@ Context Program::execute(ContextData && data) {
         else {
           pc += 2;
         }
-        break;
       }
+      break;
       case Opcode::JMPT: {
         EXECUTEPROGRAMCHECK(1);
         STACKCHECK(1);
@@ -153,8 +153,8 @@ Context Program::execute(ContextData && data) {
         else {
           pc += 2;
         }
-        break;
       }
+      break;
       case Opcode::JMPT_POP: {
         EXECUTEPROGRAMCHECK(1);
         STACKCHECK(1);
@@ -166,31 +166,31 @@ Context Program::execute(ContextData && data) {
         else {
           pc += 2;
         }
-        break;
       }
+      break;
       case Opcode::NULLVAL: {
         stack.push_back(GarbageCollected::make<ComputedExpression>());
         ++pc;
-        break;
       }
+      break;
       case Opcode::INTEGER: {
         EXECUTEPROGRAMCHECK(1);
         stack.push_back(GarbageCollected::make<ComputedExpressionInteger>((integer_t)this->bytecode[pc + 1]));
         pc += 2;
-        break;
       }
+      break;
       case Opcode::FLOAT: {
         EXECUTEPROGRAMCHECK(1);
         stack.push_back(GarbageCollected::make<ComputedExpressionFloat>(bit_cast<float_t>(this->bytecode[pc + 1])));
         pc += 2;
-        break;
       }
+      break;
       case Opcode::BOOLEAN: {
         EXECUTEPROGRAMCHECK(1);
         stack.push_back(GarbageCollected::make<ComputedExpressionBoolean>(this->bytecode[pc + 1] ? true : false));
         pc += 2;
-        break;
       }
+      break;
       case Opcode::STRING: {
         EXECUTEPROGRAMCHECK(2);
         UnicodeString::Type type = (UnicodeString::Type) this->bytecode[pc + 1];
@@ -224,8 +224,8 @@ Context Program::execute(ContextData && data) {
 
         stack.push_back(gcString);
         pc += bytes + 3;
-        break;
       }
+      break;
       case Opcode::ARRAY: {
         EXECUTEPROGRAMCHECK(1);
         auto size = this->bytecode[pc + 1];
@@ -240,8 +240,8 @@ Context Program::execute(ContextData && data) {
         }
         stack.push_back(GarbageCollected::make<ComputedExpressionArray>(contents));
         pc += 2;
-        break;
       }
+      break;
       case Opcode::MAP: {
         EXECUTEPROGRAMCHECK(1);
         auto size = this->bytecode[pc + 1];
@@ -258,8 +258,8 @@ Context Program::execute(ContextData && data) {
         }
         stack.push_back(GarbageCollected::make<ComputedExpressionMap>(contents));
         pc += 2;
-        break;
       }
+      break;
       case Opcode::LIBRARY: {
         STACKCHECK(1);
         auto name = stack.back();
@@ -279,16 +279,16 @@ Context Program::execute(ContextData && data) {
         }
 
         ++pc;
-        break;
       }
+      break;
       case Opcode::LIBRARYSAVE: {
         EXECUTEPROGRAMCHECK(1);
         auto index = this->bytecode[pc + 1];
         libraryAliasStack.back().insert({index, stack.back()});
 
         pc += 2;
-        break;
       }
+      break;
       case Opcode::LIBRARYCOPY: {
         EXECUTEPROGRAMCHECK(1);
         auto index = this->bytecode[pc + 1];
@@ -301,16 +301,16 @@ Context Program::execute(ContextData && data) {
         }
 
         pc += 2;
-        break;
       }
+      break;
       case Opcode::FUNCTION: {
         EXECUTEPROGRAMCHECK(2);
         auto argc = this->bytecode[pc + 1];
         auto targetPc = this->bytecode[pc + 2];
         stack.push_back(GarbageCollected::make<ComputedExpressionCompiledFunction>((uint32_t)argc, (integer_t)targetPc));
         pc += 3;
-        break;
       }
+      break;
       case Opcode::ASSIGNINDEX: {
         STACKCHECK(3);
         auto index = stack.back();
@@ -321,8 +321,8 @@ Context Program::execute(ContextData && data) {
         stack.pop_back();
         stack.push_back(collection->__assign_index(index, value));
         ++pc;
-        break;
       }
+      break;
       case Opcode::ADD: {
         STACKCHECK(2);
         auto rhs = stack.back();
@@ -331,8 +331,8 @@ Context Program::execute(ContextData && data) {
         stack.pop_back();
         stack.push_back(lhs + rhs);
         ++pc;
-        break;
       }
+      break;
       case Opcode::SUBTRACT: {
         STACKCHECK(2);
         auto rhs = stack.back();
@@ -341,8 +341,8 @@ Context Program::execute(ContextData && data) {
         stack.pop_back();
         stack.push_back(lhs - rhs);
         ++pc;
-        break;
       }
+      break;
       case Opcode::MULTIPLY: {
         STACKCHECK(2);
         auto rhs = stack.back();
@@ -351,8 +351,8 @@ Context Program::execute(ContextData && data) {
         stack.pop_back();
         stack.push_back(lhs * rhs);
         ++pc;
-        break;
       }
+      break;
       case Opcode::DIVIDE: {
         STACKCHECK(2);
         auto rhs = stack.back();
@@ -361,8 +361,8 @@ Context Program::execute(ContextData && data) {
         stack.pop_back();
         stack.push_back(lhs / rhs);
         ++pc;
-        break;
       }
+      break;
       case Opcode::MODULO: {
         STACKCHECK(2);
         auto rhs = stack.back();
@@ -371,24 +371,24 @@ Context Program::execute(ContextData && data) {
         stack.pop_back();
         stack.push_back(lhs % rhs);
         ++pc;
-        break;
       }
+      break;
       case Opcode::NEGATIVE: {
         STACKCHECK(1);
         auto operand = stack.back();
         stack.pop_back();
         stack.push_back(-operand);
         ++pc;
-        break;
       }
+      break;
       case Opcode::NOT: {
         STACKCHECK(1);
         auto operand = stack.back();
         stack.pop_back();
         stack.push_back(!operand);
         ++pc;
-        break;
       }
+      break;
       case Opcode::LT: {
         STACKCHECK(2);
         auto rhs = stack.back();
@@ -397,8 +397,8 @@ Context Program::execute(ContextData && data) {
         stack.pop_back();
         stack.push_back(lhs < rhs);
         ++pc;
-        break;
       }
+      break;
       case Opcode::LTE: {
         STACKCHECK(2);
         auto rhs = stack.back();
@@ -407,8 +407,8 @@ Context Program::execute(ContextData && data) {
         stack.pop_back();
         stack.push_back(lhs <= rhs);
         ++pc;
-        break;
       }
+      break;
       case Opcode::GT: {
         STACKCHECK(2);
         auto rhs = stack.back();
@@ -417,8 +417,8 @@ Context Program::execute(ContextData && data) {
         stack.pop_back();
         stack.push_back(lhs > rhs);
         ++pc;
-        break;
       }
+      break;
       case Opcode::GTE: {
         STACKCHECK(2);
         auto rhs = stack.back();
@@ -427,8 +427,8 @@ Context Program::execute(ContextData && data) {
         stack.pop_back();
         stack.push_back(lhs >= rhs);
         ++pc;
-        break;
       }
+      break;
       case Opcode::EQ: {
         STACKCHECK(2);
         auto rhs = stack.back();
@@ -437,8 +437,8 @@ Context Program::execute(ContextData && data) {
         stack.pop_back();
         stack.push_back(lhs == rhs);
         ++pc;
-        break;
       }
+      break;
       case Opcode::NEQ: {
         STACKCHECK(2);
         auto rhs = stack.back();
@@ -447,8 +447,8 @@ Context Program::execute(ContextData && data) {
         stack.pop_back();
         stack.push_back(lhs != rhs);
         ++pc;
-        break;
       }
+      break;
       case Opcode::PERIOD: {
         STACKCHECK(2);
         auto rhs = stack.back();
@@ -475,8 +475,8 @@ Context Program::execute(ContextData && data) {
         // Finally, push the result onto the stack.
         stack.push_back(tmp);
         ++pc;
-        break;
       }
+      break;
       case Opcode::INDEX: {
         STACKCHECK(2);
         auto index = stack.back();
@@ -485,8 +485,8 @@ Context Program::execute(ContextData && data) {
         stack.pop_back();
         stack.push_back(container->__index(index));
         ++pc;
-        break;
       }
+      break;
       case Opcode::SLICE: {
         STACKCHECK(4);
         auto skip = stack.back();
@@ -499,64 +499,64 @@ Context Program::execute(ContextData && data) {
         stack.pop_back();
         stack.push_back(container->__slice(begin, end, skip));
         ++pc;
-        break;
       }
+      break;
       case Opcode::GETITERATOR: {
         STACKCHECK(1);
         auto collection = stack.back();
         stack.pop_back();
         stack.push_back(collection->__getIterator(collection));
         ++pc;
-        break;
       }
+      break;
       case Opcode::ITERATORNEXT: {
         STACKCHECK(1);
         auto iterator = stack.back();
         stack.pop_back();
         stack.push_back(iterator->__iteratorNext());
         ++pc;
-        break;
       }
+      break;
       case Opcode::ISITERATOREND: {
         STACKCHECK(1);
         auto val = stack.back();
         stack.pop_back();
         stack.push_back(GarbageCollected::make<ComputedExpressionBoolean>((typeid(*val) == typeid(ComputedExpressionIteratorEnd)) || (typeid(*val) == typeid(ComputedExpressionError))));
         ++pc;
-        break;
       }
+      break;
       case Opcode::CASTINTEGER: {
         STACKCHECK(1);
         auto operand = stack.back();
         stack.pop_back();
         stack.push_back(operand->__integer());
         ++pc;
-        break;
       }
+      break;
       case Opcode::CASTFLOAT: {
         STACKCHECK(1);
         auto operand = stack.back();
         stack.pop_back();
         stack.push_back(operand->__float());
         ++pc;
-        break;
       }
+      break;
       case Opcode::CASTBOOLEAN: {
         STACKCHECK(1);
         auto operand = stack.back();
         stack.pop_back();
         stack.push_back(operand->__boolean());
         ++pc;
-        break;
       }
+      break;
       case Opcode::CASTSTRING: {
         STACKCHECK(1);
         auto operand = stack.back();
         stack.pop_back();
         stack.push_back(operand->__string());
         ++pc;
-        break;
       }
+      break;
       case Opcode::CALLFUNC: {
         EXECUTEPROGRAMCHECK(1);
         STACKCHECK(1);
@@ -581,27 +581,24 @@ Context Program::execute(ContextData && data) {
 
             // Push an error onto the stack.
             stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments supplied at function call."}));
-
             pc += 2;
-            break;
           }
+          else {
+            // Save the current execution environment so that it can be restored
+            // when RETURNing from the function.
+            pcStack.push_back(pc + 2);
+            fpStack.push_back(fp);
 
-          // Save the current execution environment so that it can be restored
-          // when RETURNing from the function.
-          pcStack.push_back(pc + 2);
-          fpStack.push_back(fp);
-
-          // Set the new pc and fp.
-          pc = funcConv.getPc();
-          fp = stack.size() - argc;
-
-          break;
+            // Set the new pc and fp.
+            pc = funcConv.getPc();
+            fp = stack.size() - argc;
+          }
         }
 
         // Compiled functions make use of the arguments on the stack.
         // They will clean up the stack when they finish, via the RETURN
         // opcode.
-        if (typeid(*function) == typeid(ComputedExpressionNativeBoundFunction)) {
+        else if (typeid(*function) == typeid(ComputedExpressionNativeBoundFunction)) {
           auto & funcConv = static_cast<ComputedExpressionNativeBoundFunction &>(*function);
 
           // Populate argv to use when calling the function.
@@ -622,13 +619,11 @@ Context Program::execute(ContextData && data) {
           // of arguments expected.
           if ((size_t)argc != funcConv.getArgc()) {
             stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments provided to object method."}));
-
             pc += 2;
-            break;
           }
 
           // Make sure that there is an object that was bound to the function.
-          if (funcConv.target) {
+          else if (funcConv.target) {
             // Verify that the target is the correct type.
             // It is impossible for the target to not be the correct type under
             // normal circumstances.  This is just a safety check.
@@ -638,22 +633,20 @@ Context Program::execute(ContextData && data) {
             else {
               stack.push_back(funcConv.getFunction()(*funcConv.target, argv));
             }
-
             pc += 2;
-            break;
           }
-
-          // There is no function target.  This is impossible under normal
-          // circumstances, but we must account for it, just in case.
-          stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Method is not bound to any object."}));
-          pc += 2;
-          break;
+          else {
+            // There is no function target.  This is impossible under normal
+            // circumstances, but we must account for it, just in case.
+            stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Method is not bound to any object."}));
+            pc += 2;
+          }
         }
 
         // Compiled functions make use of the arguments on the stack.
         // They will clean up the stack when they finish, via the RETURN
         // opcode.
-        if (typeid(*function) == typeid(ComputedExpressionNativeFunction)) {
+        else if (typeid(*function) == typeid(ComputedExpressionNativeFunction)) {
           auto & funcConv = static_cast<ComputedExpressionNativeFunction &>(*function);
 
           // Populate argv to use when calling the function.
@@ -674,28 +667,26 @@ Context Program::execute(ContextData && data) {
           // of arguments expected.
           if ((size_t)argc != funcConv.getArgc()) {
             stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments provided to object method."}));
-
             pc += 2;
-            break;
+          }
+          else {
+            // Call the Native function.
+            stack.push_back(funcConv.getFunction()(argv, context));
+            pc += 2;
+          }
+        }
+        else {
+          // Error: We don't know what to do.
+          // Clear the arguments from the stack.
+          for (uinteger_t i = 0; i < argc; ++i) {
+            stack.pop_back();
           }
 
-          // Call the Native function.
-          stack.push_back(funcConv.getFunction()(argv, context));
-
-          pc += 2;
-          break;
+          stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Function call on unrecognized type."}));
+          pc = this->bytecode.size();
         }
-
-        // Error: We don't know what to do.
-        // Clear the arguments from the stack.
-        for (uinteger_t i = 0; i < argc; ++i) {
-          stack.pop_back();
-        }
-
-        stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Function call on unrecognized type."}));
-        pc = this->bytecode.size();
-        break;
       }
+      break;
       case Opcode::RETURN: {
         EXECUTEPROGRAMCHECK(1);
         size_t pop = this->bytecode[pc + 1];
@@ -717,8 +708,8 @@ Context Program::execute(ContextData && data) {
         fp = fpStack.back();
         pcStack.pop_back();
         fpStack.pop_back();
-        break;
       }
+      break;
       case Opcode::PRINT: {
         STACKCHECK(1);
         auto expression = stack.back();
@@ -741,14 +732,14 @@ Context Program::execute(ContextData && data) {
           stack.push_back(result);
         }
         ++pc;
-        break;
       }
+      break;
       default: {
         // We should never reach this.
         stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Unrecognized Opcode."}));
         pc = stack.size();
-        break;
       }
+      break;
     }
   }
 
