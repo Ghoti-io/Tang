@@ -110,8 +110,8 @@ namespace Tang {
      * The constructor.
      *
      * This function should never be called directly.  Rather, always use the
-     * Tang::make_shared() static method, which supplies the shared pointer
-     * necessary for creation of Program objects.
+     * Tang::TangBase::make_shared() static method, which supplies the shared
+     * pointer necessary for creation of Program objects.
      */
     TangBase();
 

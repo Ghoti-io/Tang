@@ -25,7 +25,7 @@ all necessary class information.  A simple use case might be:
 #include "tang.hpp"
 
 int main() {
-  auto program = Tang::TangBase().compileScript(R"(
+  auto program = Tang::TangBase::make_shared().compileScript(R"(
     // Compute the nth number of the fibonacci sequence, where 1 is the first
     // number.  Use a very inefficient recursive solution, just to prove that
     // it works.  Also, this is only meant to be called for positive numbers.
