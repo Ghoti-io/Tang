@@ -161,15 +161,16 @@ DEP_ASTNODEFLOAT = \
 DEP_ASTNODEFOR = \
 	include/astNodeFor.hpp \
 	$(DEP_ASTNODE)
-DEP_ASTNODEFUNCTIONCALL = \
-	include/astNodeFunctionCall.hpp \
-	$(DEP_ASTNODE)
 DEP_ASTNODEFUNCTIONDECLARATION = \
 	include/astNodeFunctionDeclaration.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODEIDENTIFIER = \
 	include/astNodeIdentifier.hpp \
 	$(DEP_ASTNODE)
+DEP_ASTNODEFUNCTIONCALL = \
+	include/astNodeFunctionCall.hpp \
+	$(DEP_ASTNODE) \
+	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODEIFELSE = \
 	include/astNodeIfElse.hpp \
 	$(DEP_ASTNODE)

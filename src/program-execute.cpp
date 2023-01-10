@@ -50,6 +50,129 @@ using namespace Tang;
     break; \
   }
 
+static void callFunc(GarbageCollected & function, uinteger_t argc, size_t & pc, size_t & fp, vector<GarbageCollected> & stack, vector<size_t> & pcStack, vector<size_t> & fpStack, Bytecode & bytecode, Context & context, size_t opcodeSize) {
+  // Compiled functions make use of the arguments on the stack.
+  // They will clean up the stack when they finish, via the RETURN
+  // opcode.
+  if (typeid(*function) == typeid(ComputedExpressionCompiledFunction)) {
+    auto & funcConv = static_cast<ComputedExpressionCompiledFunction &>(*function);
+
+    // Verify that the correct number of arguments has been passed.
+    if (argc != funcConv.getArgc()) {
+      // Incorrect number of arguments passed.
+      // Clear the arguments from the stack.
+      for (uinteger_t i = 0; i < argc; ++i) {
+        stack.pop_back();
+      }
+
+      // Push an error onto the stack.
+      stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments supplied at function call."}));
+      pc += opcodeSize;
+    }
+    else {
+      // Save the current execution environment so that it can be restored
+      // when RETURNing from the function.
+      pcStack.push_back(pc + opcodeSize);
+      fpStack.push_back(fp);
+
+      // Set the new pc and fp.
+      pc = funcConv.getPc();
+      fp = stack.size() - argc;
+    }
+  }
+
+  // Compiled functions make use of the arguments on the stack.
+  // They will clean up the stack when they finish, via the RETURN
+  // opcode.
+  else if (typeid(*function) == typeid(ComputedExpressionNativeBoundFunction)) {
+    auto & funcConv = static_cast<ComputedExpressionNativeBoundFunction &>(*function);
+
+    // Populate argv to use when calling the function.
+    vector<GarbageCollected> argv{};
+    argv.reserve(argc);
+    auto iter = stack.end() - argc;
+    while (iter != stack.end()) {
+      argv.push_back(*iter);
+      ++iter;
+    }
+
+    // Remove the arguments from the stack.
+    for (uinteger_t i = 0; i < argc; ++i) {
+      stack.pop_back();
+    }
+
+    // Verify that the number of arguments supplied matches the number
+    // of arguments expected.
+    if ((size_t)argc != funcConv.getArgc()) {
+      stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments provided to object method."}));
+      pc += opcodeSize;
+    }
+
+    // Make sure that there is an object that was bound to the function.
+    else if (funcConv.target) {
+      // Verify that the target is the correct type.
+      // It is impossible for the target to not be the correct type under
+      // normal circumstances.  This is just a safety check.
+      if (type_index(typeid(**funcConv.target)) != funcConv.getTargetTypeIndex()) {
+        stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Type mismatch of object method to its target object."}));
+      }
+      else {
+        stack.push_back(funcConv.getFunction()(*funcConv.target, argv));
+      }
+      pc += opcodeSize;
+    }
+    else {
+      // There is no function target.  This is impossible under normal
+      // circumstances, but we must account for it, just in case.
+      stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Method is not bound to any object."}));
+      pc += opcodeSize;
+    }
+  }
+
+  // Compiled functions make use of the arguments on the stack.
+  // They will clean up the stack when they finish, via the RETURN
+  // opcode.
+  else if (typeid(*function) == typeid(ComputedExpressionNativeFunction)) {
+    auto & funcConv = static_cast<ComputedExpressionNativeFunction &>(*function);
+
+    // Populate argv to use when calling the function.
+    vector<GarbageCollected> argv{};
+    argv.reserve(argc);
+    auto iter = stack.end() - argc;
+    while (iter != stack.end()) {
+      argv.push_back(*iter);
+      ++iter;
+    }
+
+    // Remove the arguments from the stack.
+    for (uinteger_t i = 0; i < argc; ++i) {
+      stack.pop_back();
+    }
+
+    // Verify that the number of arguments supplied matches the number
+    // of arguments expected.
+    if ((size_t)argc != funcConv.getArgc()) {
+      stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments provided to object method."}));
+      pc += opcodeSize;
+    }
+    else {
+      // Call the Native function.
+      stack.push_back(funcConv.getFunction()(argv, context));
+      pc += opcodeSize;
+    }
+  }
+  else {
+    // Error: We don't know what to do.
+    // Clear the arguments from the stack.
+    for (uinteger_t i = 0; i < argc; ++i) {
+      stack.pop_back();
+    }
+
+    stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Function call on unrecognized type."}));
+    pc = bytecode.size();
+  }
+}
+
 Context Program::execute() {
   return this->execute(ContextData{});
 }
@@ -564,127 +687,20 @@ Context Program::execute(ContextData && data) {
         stack.pop_back();
         auto argc = this->bytecode[pc + 1];
         STACKCHECK(argc);
+        // Call the function.
+        callFunc(function, argc, pc, fp, stack, pcStack, fpStack, this->bytecode, context, 2);
+      }
+      break;
+      case Opcode::CALLFUNC_I: {
+        EXECUTEPROGRAMCHECK(2);
+        auto position = this->bytecode[pc + 2];
+        STACKCHECK(position);
+        auto function = stack[fp + position];
+        auto argc = this->bytecode[pc + 1];
+        STACKCHECK(argc);
 
-        // Compiled functions make use of the arguments on the stack.
-        // They will clean up the stack when they finish, via the RETURN
-        // opcode.
-        if (typeid(*function) == typeid(ComputedExpressionCompiledFunction)) {
-          auto & funcConv = static_cast<ComputedExpressionCompiledFunction &>(*function);
-
-          // Verify that the correct number of arguments has been passed.
-          if (argc != funcConv.getArgc()) {
-            // Incorrect number of arguments passed.
-            // Clear the arguments from the stack.
-            for (uinteger_t i = 0; i < argc; ++i) {
-              stack.pop_back();
-            }
-
-            // Push an error onto the stack.
-            stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments supplied at function call."}));
-            pc += 2;
-          }
-          else {
-            // Save the current execution environment so that it can be restored
-            // when RETURNing from the function.
-            pcStack.push_back(pc + 2);
-            fpStack.push_back(fp);
-
-            // Set the new pc and fp.
-            pc = funcConv.getPc();
-            fp = stack.size() - argc;
-          }
-        }
-
-        // Compiled functions make use of the arguments on the stack.
-        // They will clean up the stack when they finish, via the RETURN
-        // opcode.
-        else if (typeid(*function) == typeid(ComputedExpressionNativeBoundFunction)) {
-          auto & funcConv = static_cast<ComputedExpressionNativeBoundFunction &>(*function);
-
-          // Populate argv to use when calling the function.
-          vector<GarbageCollected> argv{};
-          argv.reserve(argc);
-          auto iter = stack.end() - argc;
-          while (iter != stack.end()) {
-            argv.push_back(*iter);
-            ++iter;
-          }
-
-          // Remove the arguments from the stack.
-          for (uinteger_t i = 0; i < argc; ++i) {
-            stack.pop_back();
-          }
-
-          // Verify that the number of arguments supplied matches the number
-          // of arguments expected.
-          if ((size_t)argc != funcConv.getArgc()) {
-            stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments provided to object method."}));
-            pc += 2;
-          }
-
-          // Make sure that there is an object that was bound to the function.
-          else if (funcConv.target) {
-            // Verify that the target is the correct type.
-            // It is impossible for the target to not be the correct type under
-            // normal circumstances.  This is just a safety check.
-            if (type_index(typeid(**funcConv.target)) != funcConv.getTargetTypeIndex()) {
-              stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Type mismatch of object method to its target object."}));
-            }
-            else {
-              stack.push_back(funcConv.getFunction()(*funcConv.target, argv));
-            }
-            pc += 2;
-          }
-          else {
-            // There is no function target.  This is impossible under normal
-            // circumstances, but we must account for it, just in case.
-            stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Method is not bound to any object."}));
-            pc += 2;
-          }
-        }
-
-        // Compiled functions make use of the arguments on the stack.
-        // They will clean up the stack when they finish, via the RETURN
-        // opcode.
-        else if (typeid(*function) == typeid(ComputedExpressionNativeFunction)) {
-          auto & funcConv = static_cast<ComputedExpressionNativeFunction &>(*function);
-
-          // Populate argv to use when calling the function.
-          vector<GarbageCollected> argv{};
-          argv.reserve(argc);
-          auto iter = stack.end() - argc;
-          while (iter != stack.end()) {
-            argv.push_back(*iter);
-            ++iter;
-          }
-
-          // Remove the arguments from the stack.
-          for (uinteger_t i = 0; i < argc; ++i) {
-            stack.pop_back();
-          }
-
-          // Verify that the number of arguments supplied matches the number
-          // of arguments expected.
-          if ((size_t)argc != funcConv.getArgc()) {
-            stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments provided to object method."}));
-            pc += 2;
-          }
-          else {
-            // Call the Native function.
-            stack.push_back(funcConv.getFunction()(argv, context));
-            pc += 2;
-          }
-        }
-        else {
-          // Error: We don't know what to do.
-          // Clear the arguments from the stack.
-          for (uinteger_t i = 0; i < argc; ++i) {
-            stack.pop_back();
-          }
-
-          stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Function call on unrecognized type."}));
-          pc = this->bytecode.size();
-        }
+        // Call the function.
+        callFunc(function, argc, pc, fp, stack, pcStack, fpStack, this->bytecode, context, 3);
       }
       break;
       case Opcode::RETURN: {

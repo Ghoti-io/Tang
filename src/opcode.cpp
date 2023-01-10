@@ -59,6 +59,7 @@ static const char* description[] = {
   "CASTBOOLEAN",
   "CASTSTRING",
   "CALLFUNC",
+  "CALLFUNC_I",
   "RETURN",
   "PRINT",
 };

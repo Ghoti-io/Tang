@@ -243,6 +243,11 @@ pair<OpcodeOffsets, OpcodePositions> Program::analyze() const {
         pc += 2;
         break;
       }
+      case Opcode::CALLFUNC_I: {
+        DUMPPROGRAMCHECK(2);
+        pc += 3;
+        break;
+      }
       case Opcode::RETURN: {
         DUMPPROGRAMCHECK(1);
         pc += 2;

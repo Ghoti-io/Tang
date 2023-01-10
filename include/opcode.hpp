@@ -58,7 +58,9 @@ namespace Tang {
     CASTFLOAT,   ///< Pop a val, typecast to float, push
     CASTBOOLEAN, ///< Pop a val, typecast to boolean, push
     CASTSTRING,  ///< Pop a val, typecast to string, push
-    CALLFUNC, ///< Get argc, Pop a function, execute function if argc matches.
+    CALLFUNC,    ///< Get argc, Pop a function, execute function if argc matches.
+    CALLFUNC_I,  ///< Get argc, get index, execute function at index if argc
+                 ///<   matches.
     RETURN,   ///< Get stack #, pop return val, pop (stack #) times,
               ///< push val, restore fp, restore pc
     PRINT,    ///< Pop val, print(val), push error or NULL

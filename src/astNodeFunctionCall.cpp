@@ -4,6 +4,7 @@
  */
 
 #include <string>
+#include "astNodeIdentifier.hpp"
 #include "astNodeFunctionCall.hpp"
 #include "opcode.hpp"
 #include "program.hpp"
@@ -35,6 +36,19 @@ void AstNodeFunctionCall::compile(Tang::Program & program) const {
   // Push the arguments onto the stack.
   for (auto & arg : this->argv) {
     arg->compile(program);
+  }
+
+  // If function is an identifier, then use the CALLFUNC_I opcode.
+  if (typeid(*this->function) == typeid(AstNodeIdentifier)) {
+    auto & name = static_cast<AstNodeIdentifier &>(*this->function).name;
+    auto & identifier = program.getIdentifiers();
+    if (identifier.count(name)) {
+      program.addBytecode((uinteger_t)Opcode::CALLFUNC_I);
+      program.addBytecode((uinteger_t)this->argv.size());
+      program.addBytecode((uinteger_t)identifier.at(name));
+      return;
+    }
+    // Identifier was not found, so fall through to the default compilation.
   }
 
   // Push the function onto the stack.

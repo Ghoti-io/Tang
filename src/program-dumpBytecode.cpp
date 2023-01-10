@@ -301,6 +301,15 @@ string Program::dumpBytecode() const {
         pc += 2;
         break;
       }
+      case Opcode::CALLFUNC_I: {
+        DUMPPROGRAMCHECK(2);
+        out << (Opcode)this->bytecode[pc]
+          << this->bytecode[pc + 1]
+          << ", "
+          << this->bytecode[pc + 2];
+        pc += 3;
+        break;
+      }
       case Opcode::RETURN: {
         DUMPPROGRAMCHECK(1);
         out << (Opcode)this->bytecode[pc] << this->bytecode[pc + 1];
