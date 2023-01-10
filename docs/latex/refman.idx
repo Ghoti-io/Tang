@@ -227,8 +227,8 @@
 \indexentry{AstNodeFunctionCall@{AstNodeFunctionCall}!Tang::AstNodeFunctionCall@{Tang::AstNodeFunctionCall}|hyperpage}{71}
 \indexentry{Tang::AstNodeFunctionCall@{Tang::AstNodeFunctionCall}!compile@{compile}|hyperpage}{71}
 \indexentry{compile@{compile}!Tang::AstNodeFunctionCall@{Tang::AstNodeFunctionCall}|hyperpage}{71}
-\indexentry{Tang::AstNodeFunctionCall@{Tang::AstNodeFunctionCall}!compilePreprocess@{compilePreprocess}|hyperpage}{71}
-\indexentry{compilePreprocess@{compilePreprocess}!Tang::AstNodeFunctionCall@{Tang::AstNodeFunctionCall}|hyperpage}{71}
+\indexentry{Tang::AstNodeFunctionCall@{Tang::AstNodeFunctionCall}!compilePreprocess@{compilePreprocess}|hyperpage}{72}
+\indexentry{compilePreprocess@{compilePreprocess}!Tang::AstNodeFunctionCall@{Tang::AstNodeFunctionCall}|hyperpage}{72}
 \indexentry{Tang::AstNodeFunctionCall@{Tang::AstNodeFunctionCall}!dump@{dump}|hyperpage}{72}
 \indexentry{dump@{dump}!Tang::AstNodeFunctionCall@{Tang::AstNodeFunctionCall}|hyperpage}{72}
 \indexentry{Tang::AstNodeFunctionDeclaration@{Tang::AstNodeFunctionDeclaration}|hyperpage}{72}
@@ -1744,11 +1744,11 @@
 \indexentry{include/astNodeFunctionCall.hpp@{include/astNodeFunctionCall.hpp}|hyperpage}{455}
 \indexentry{include/astNodeFunctionDeclaration.hpp@{include/astNodeFunctionDeclaration.hpp}|hyperpage}{456}
 \indexentry{include/astNodeIdentifier.hpp@{include/astNodeIdentifier.hpp}|hyperpage}{457}
-\indexentry{include/astNodeIfElse.hpp@{include/astNodeIfElse.hpp}|hyperpage}{458}
-\indexentry{include/astNodeIndex.hpp@{include/astNodeIndex.hpp}|hyperpage}{459}
-\indexentry{include/astNodeInteger.hpp@{include/astNodeInteger.hpp}|hyperpage}{460}
-\indexentry{include/astNodeLibrary.hpp@{include/astNodeLibrary.hpp}|hyperpage}{461}
-\indexentry{include/astNodeMap.hpp@{include/astNodeMap.hpp}|hyperpage}{462}
+\indexentry{include/astNodeIfElse.hpp@{include/astNodeIfElse.hpp}|hyperpage}{457}
+\indexentry{include/astNodeIndex.hpp@{include/astNodeIndex.hpp}|hyperpage}{458}
+\indexentry{include/astNodeInteger.hpp@{include/astNodeInteger.hpp}|hyperpage}{459}
+\indexentry{include/astNodeLibrary.hpp@{include/astNodeLibrary.hpp}|hyperpage}{460}
+\indexentry{include/astNodeMap.hpp@{include/astNodeMap.hpp}|hyperpage}{461}
 \indexentry{include/astNodePeriod.hpp@{include/astNodePeriod.hpp}|hyperpage}{463}
 \indexentry{include/astNodePrint.hpp@{include/astNodePrint.hpp}|hyperpage}{464}
 \indexentry{include/astNodeRangedFor.hpp@{include/astNodeRangedFor.hpp}|hyperpage}{465}
@@ -1875,6 +1875,8 @@
 \indexentry{opcode.hpp@{opcode.hpp}!CASTSTRING@{CASTSTRING}|hyperpage}{497}
 \indexentry{CALLFUNC@{CALLFUNC}!opcode.hpp@{opcode.hpp}|hyperpage}{497}
 \indexentry{opcode.hpp@{opcode.hpp}!CALLFUNC@{CALLFUNC}|hyperpage}{497}
+\indexentry{CALLFUNC\_I@{CALLFUNC\_I}!opcode.hpp@{opcode.hpp}|hyperpage}{497}
+\indexentry{opcode.hpp@{opcode.hpp}!CALLFUNC\_I@{CALLFUNC\_I}|hyperpage}{497}
 \indexentry{RETURN@{RETURN}!opcode.hpp@{opcode.hpp}|hyperpage}{497}
 \indexentry{opcode.hpp@{opcode.hpp}!RETURN@{RETURN}|hyperpage}{497}
 \indexentry{PRINT@{PRINT}!opcode.hpp@{opcode.hpp}|hyperpage}{497}

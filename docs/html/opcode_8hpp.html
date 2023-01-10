@@ -220,6 +220,7 @@ Enumerations</h2></td></tr>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a68c788d6865114079a3fdad808204a83">CASTSTRING</a>
 , <br />
 &#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a8fbd21f6a619e33ff038cdf5a69a14d8">CALLFUNC</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a651b5d67f67162a8bc778591dafa9405">CALLFUNC_I</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04aa2bec276a54439fe011eb523b845dac5">RETURN</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af96eee4e48ee90430f17fb3a8388507b">PRINT</a>
 <br />
@@ -344,6 +345,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a68c788d6865114079a3fdad808204a83"></a>CASTSTRING&#160;</td><td class="fielddoc"><p>Pop a val, typecast to string, push. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a8fbd21f6a619e33ff038cdf5a69a14d8"></a>CALLFUNC&#160;</td><td class="fielddoc"><p>Get argc, Pop a function, execute function if argc matches. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a651b5d67f67162a8bc778591dafa9405"></a>CALLFUNC_I&#160;</td><td class="fielddoc"><p>Get argc, get index, execute function at index if argc matches. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04aa2bec276a54439fe011eb523b845dac5"></a>RETURN&#160;</td><td class="fielddoc"><p>Get stack #, pop return val, pop (stack #) times, push val, restore fp, restore pc. </p>
 </td></tr>

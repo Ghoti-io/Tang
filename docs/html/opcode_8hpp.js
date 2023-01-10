@@ -46,6 +46,7 @@ var opcode_8hpp =
       [ "CASTBOOLEAN", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620", null ],
       [ "CASTSTRING", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a68c788d6865114079a3fdad808204a83", null ],
       [ "CALLFUNC", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a8fbd21f6a619e33ff038cdf5a69a14d8", null ],
+      [ "CALLFUNC_I", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a651b5d67f67162a8bc778591dafa9405", null ],
       [ "RETURN", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04aa2bec276a54439fe011eb523b845dac5", null ],
       [ "PRINT", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af96eee4e48ee90430f17fb3a8388507b", null ]
     ] ],

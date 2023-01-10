@@ -507,6 +507,8 @@
 
   \item {CALLFUNC}
     \subitem {opcode.hpp}, \hyperpage{497}
+  \item {CALLFUNC\_I}
+    \subitem {opcode.hpp}, \hyperpage{497}
   \item {CASTBOOLEAN}
     \subitem {opcode.hpp}, \hyperpage{497}
   \item {CASTFLOAT}
@@ -563,7 +565,7 @@
     \subitem {Tang::AstNodeDoWhile}, \hyperpage{59}
     \subitem {Tang::AstNodeFloat}, \hyperpage{63}
     \subitem {Tang::AstNodeFor}, \hyperpage{68}
-    \subitem {Tang::AstNodeFunctionCall}, \hyperpage{71}
+    \subitem {Tang::AstNodeFunctionCall}, \hyperpage{72}
     \subitem {Tang::AstNodeFunctionDeclaration}, \hyperpage{75}
     \subitem {Tang::AstNodeIdentifier}, \hyperpage{80}
     \subitem {Tang::AstNodeIfElse}, \hyperpage{85}
@@ -837,11 +839,11 @@
   \item {include/astNodeFunctionCall.hpp}, \hyperpage{455}
   \item {include/astNodeFunctionDeclaration.hpp}, \hyperpage{456}
   \item {include/astNodeIdentifier.hpp}, \hyperpage{457}
-  \item {include/astNodeIfElse.hpp}, \hyperpage{458}
-  \item {include/astNodeIndex.hpp}, \hyperpage{459}
-  \item {include/astNodeInteger.hpp}, \hyperpage{460}
-  \item {include/astNodeLibrary.hpp}, \hyperpage{461}
-  \item {include/astNodeMap.hpp}, \hyperpage{462}
+  \item {include/astNodeIfElse.hpp}, \hyperpage{457}
+  \item {include/astNodeIndex.hpp}, \hyperpage{458}
+  \item {include/astNodeInteger.hpp}, \hyperpage{459}
+  \item {include/astNodeLibrary.hpp}, \hyperpage{460}
+  \item {include/astNodeMap.hpp}, \hyperpage{461}
   \item {include/astNodePeriod.hpp}, \hyperpage{463}
   \item {include/astNodePrint.hpp}, \hyperpage{464}
   \item {include/astNodeRangedFor.hpp}, \hyperpage{465}
@@ -1076,6 +1078,7 @@
     \subitem {ASSIGNINDEX}, \hyperpage{496}
     \subitem {BOOLEAN}, \hyperpage{496}
     \subitem {CALLFUNC}, \hyperpage{497}
+    \subitem {CALLFUNC\_I}, \hyperpage{497}
     \subitem {CASTBOOLEAN}, \hyperpage{497}
     \subitem {CASTFLOAT}, \hyperpage{497}
     \subitem {CASTINTEGER}, \hyperpage{497}
@@ -1456,7 +1459,7 @@
   \item {Tang::AstNodeFunctionCall}, \hyperpage{69}
     \subitem {AstNodeFunctionCall}, \hyperpage{71}
     \subitem {compile}, \hyperpage{71}
-    \subitem {compilePreprocess}, \hyperpage{71}
+    \subitem {compilePreprocess}, \hyperpage{72}
     \subitem {Default}, \hyperpage{70}
     \subitem {dump}, \hyperpage{72}
     \subitem {IsAssignment}, \hyperpage{70}
