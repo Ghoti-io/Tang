@@ -244,7 +244,7 @@ Context Program::execute(ContextData && data) {
       case Opcode::JMPF: {
         EXECUTEPROGRAMCHECK(1);
         STACKCHECK(1);
-        auto condition = stack.back();
+        auto & condition = stack.back();
         if (condition == false) {
           pc = this->bytecode[pc + 1];
         }
@@ -269,7 +269,7 @@ Context Program::execute(ContextData && data) {
       case Opcode::JMPT: {
         EXECUTEPROGRAMCHECK(1);
         STACKCHECK(1);
-        auto condition = stack.back();
+        auto & condition = stack.back();
         if (condition == true) {
           pc = this->bytecode[pc + 1];
         }
@@ -695,7 +695,7 @@ Context Program::execute(ContextData && data) {
         EXECUTEPROGRAMCHECK(2);
         auto position = this->bytecode[pc + 2];
         STACKCHECK(position);
-        auto function = stack[fp + position];
+        auto & function = stack[fp + position];
         auto argc = this->bytecode[pc + 1];
         STACKCHECK(argc);
 
