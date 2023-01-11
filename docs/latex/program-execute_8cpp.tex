@@ -37,7 +37,15 @@ Include dependency graph for program-\/execute.cpp\+:\nopagebreak
 \#define \mbox{\hyperlink{program-execute_8cpp_a9ded9c6308c1d34a5872db3199e9c973}{EXECUTEPROGRAMCHECK}}(x)
 \begin{DoxyCompactList}\small\item\em Verify the size of the Bytecode vector so that it may be safely accessed. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{program-execute_8cpp_a80c4bdcb0e9c9c0eebdb1488ad68aa38}{STACKCHECK}}(x)
-\begin{DoxyCompactList}\small\item\em Verify the size of the stack vector so that it may be safely accessed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Verify the size of the stack vector so that it may be safely accessed. \end{DoxyCompactList}\item 
+\#define {\bfseries BINARYOP\+\_\+\+SS}
+\item 
+\#define {\bfseries BINARYOP\+\_\+\+SI}
+\item 
+\#define {\bfseries BINARYOP\+\_\+\+IS}
+\item 
+\#define {\bfseries BINARYOP\+\_\+\+II}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -46,6 +54,76 @@ Define the \mbox{\hyperlink{classTang_1_1Program_a3449ae0f592e7eaa2cf05244839daa
 
 
 \doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{program-execute_8cpp_a56c11065adb02dd1e06bf6d5c0a3f1db}\label{program-execute_8cpp_a56c11065adb02dd1e06bf6d5c0a3f1db}} 
+\index{program-\/execute.cpp@{program-\/execute.cpp}!BINARYOP\_II@{BINARYOP\_II}}
+\index{BINARYOP\_II@{BINARYOP\_II}!program-\/execute.cpp@{program-\/execute.cpp}}
+\doxysubsubsection{\texorpdfstring{BINARYOP\_II}{BINARYOP\_II}}
+{\footnotesize\ttfamily \#define BINARYOP\+\_\+\+II}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        \mbox{\hyperlink{program-execute_8cpp_a9ded9c6308c1d34a5872db3199e9c973}{EXECUTEPROGRAMCHECK}}(2); \(\backslash\)}
+\DoxyCodeLine{        auto lhsIndex = this-\/>bytecode[pc + 1]; \(\backslash\)}
+\DoxyCodeLine{        STACKCHECK(lhsIndex); \(\backslash\)}
+\DoxyCodeLine{        auto \& lhs = stack[fp + lhsIndex]; \(\backslash\)}
+\DoxyCodeLine{        auto rhsIndex = this-\/>bytecode[pc + 2]; \(\backslash\)}
+\DoxyCodeLine{        STACKCHECK(rhsIndex); \(\backslash\)}
+\DoxyCodeLine{        auto \& rhs = stack[fp + rhsIndex]; \(\backslash\)}
+\DoxyCodeLine{        pc += 3;}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{program-execute_8cpp_ad147b34a8bcfda75b4e0de785feceb86}\label{program-execute_8cpp_ad147b34a8bcfda75b4e0de785feceb86}} 
+\index{program-\/execute.cpp@{program-\/execute.cpp}!BINARYOP\_IS@{BINARYOP\_IS}}
+\index{BINARYOP\_IS@{BINARYOP\_IS}!program-\/execute.cpp@{program-\/execute.cpp}}
+\doxysubsubsection{\texorpdfstring{BINARYOP\_IS}{BINARYOP\_IS}}
+{\footnotesize\ttfamily \#define BINARYOP\+\_\+\+IS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        \mbox{\hyperlink{program-execute_8cpp_a9ded9c6308c1d34a5872db3199e9c973}{EXECUTEPROGRAMCHECK}}(1); \(\backslash\)}
+\DoxyCodeLine{        STACKCHECK(1); \(\backslash\)}
+\DoxyCodeLine{        auto rhs = stack.back(); \(\backslash\)}
+\DoxyCodeLine{        stack.pop\_back(); \(\backslash\)}
+\DoxyCodeLine{        auto lhsIndex = this-\/>bytecode[pc + 1]; \(\backslash\)}
+\DoxyCodeLine{        STACKCHECK(lhsIndex); \(\backslash\)}
+\DoxyCodeLine{        auto \& lhs = stack[fp + lhsIndex]; \(\backslash\)}
+\DoxyCodeLine{        pc += 2;}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{program-execute_8cpp_a43193c2b4f59bd0e8e1479f6b7bfaaa9}\label{program-execute_8cpp_a43193c2b4f59bd0e8e1479f6b7bfaaa9}} 
+\index{program-\/execute.cpp@{program-\/execute.cpp}!BINARYOP\_SI@{BINARYOP\_SI}}
+\index{BINARYOP\_SI@{BINARYOP\_SI}!program-\/execute.cpp@{program-\/execute.cpp}}
+\doxysubsubsection{\texorpdfstring{BINARYOP\_SI}{BINARYOP\_SI}}
+{\footnotesize\ttfamily \#define BINARYOP\+\_\+\+SI}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        \mbox{\hyperlink{program-execute_8cpp_a9ded9c6308c1d34a5872db3199e9c973}{EXECUTEPROGRAMCHECK}}(1); \(\backslash\)}
+\DoxyCodeLine{        STACKCHECK(1); \(\backslash\)}
+\DoxyCodeLine{        auto rhsIndex = this-\/>bytecode[pc + 1]; \(\backslash\)}
+\DoxyCodeLine{        STACKCHECK(rhsIndex); \(\backslash\)}
+\DoxyCodeLine{        auto \& rhs = stack[fp + rhsIndex]; \(\backslash\)}
+\DoxyCodeLine{        auto lhs = stack.back(); \(\backslash\)}
+\DoxyCodeLine{        stack.pop\_back(); \(\backslash\)}
+\DoxyCodeLine{        pc += 2;}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{program-execute_8cpp_a2e4329998787cb6fd62bf47732a09f75}\label{program-execute_8cpp_a2e4329998787cb6fd62bf47732a09f75}} 
+\index{program-\/execute.cpp@{program-\/execute.cpp}!BINARYOP\_SS@{BINARYOP\_SS}}
+\index{BINARYOP\_SS@{BINARYOP\_SS}!program-\/execute.cpp@{program-\/execute.cpp}}
+\doxysubsubsection{\texorpdfstring{BINARYOP\_SS}{BINARYOP\_SS}}
+{\footnotesize\ttfamily \#define BINARYOP\+\_\+\+SS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        \mbox{\hyperlink{program-execute_8cpp_a80c4bdcb0e9c9c0eebdb1488ad68aa38}{STACKCHECK}}(2); \(\backslash\)}
+\DoxyCodeLine{        auto rhs = stack.back(); \(\backslash\)}
+\DoxyCodeLine{        stack.pop\_back(); \(\backslash\)}
+\DoxyCodeLine{        auto lhs = stack.back(); \(\backslash\)}
+\DoxyCodeLine{        stack.pop\_back(); \(\backslash\)}
+\DoxyCodeLine{        ++pc;}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{program-execute_8cpp_a9ded9c6308c1d34a5872db3199e9c973}\label{program-execute_8cpp_a9ded9c6308c1d34a5872db3199e9c973}} 
 \index{program-\/execute.cpp@{program-\/execute.cpp}!EXECUTEPROGRAMCHECK@{EXECUTEPROGRAMCHECK}}
 \index{EXECUTEPROGRAMCHECK@{EXECUTEPROGRAMCHECK}!program-\/execute.cpp@{program-\/execute.cpp}}

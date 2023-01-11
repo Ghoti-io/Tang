@@ -22,7 +22,13 @@ Include dependency graph for program-\/dump\+Bytecode.cpp\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{program-dumpBytecode_8cpp_ad2842e810a7f95f018888a1da1d03d52}{DUMPPROGRAMCHECK}}(x)
-\begin{DoxyCompactList}\small\item\em Verify the size of the Bytecode vector so that it may be safely accessed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Verify the size of the Bytecode vector so that it may be safely accessed. \end{DoxyCompactList}\item 
+\#define {\bfseries DUMPBINARY}
+\item 
+\#define {\bfseries DUMPBINARY\+\_\+I}
+\item 
+\#define {\bfseries DUMPBINARY\+\_\+\+II}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -31,6 +37,48 @@ Define the \mbox{\hyperlink{classTang_1_1Program_aee5e79c40fac68e875c0d043f8fc2b
 
 
 \doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{program-dumpBytecode_8cpp_ac5180f5868d1f71f540ad26197bf2ed7}\label{program-dumpBytecode_8cpp_ac5180f5868d1f71f540ad26197bf2ed7}} 
+\index{program-\/dumpBytecode.cpp@{program-\/dumpBytecode.cpp}!DUMPBINARY@{DUMPBINARY}}
+\index{DUMPBINARY@{DUMPBINARY}!program-\/dumpBytecode.cpp@{program-\/dumpBytecode.cpp}}
+\doxysubsubsection{\texorpdfstring{DUMPBINARY}{DUMPBINARY}}
+{\footnotesize\ttfamily \#define DUMPBINARY}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  out << (\mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04}{Opcode}})this-\/>bytecode[pc]; \(\backslash\)}
+\DoxyCodeLine{  ++pc;}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{program-dumpBytecode_8cpp_a4dd2198c53fc972f20b5259ff52bef69}\label{program-dumpBytecode_8cpp_a4dd2198c53fc972f20b5259ff52bef69}} 
+\index{program-\/dumpBytecode.cpp@{program-\/dumpBytecode.cpp}!DUMPBINARY\_I@{DUMPBINARY\_I}}
+\index{DUMPBINARY\_I@{DUMPBINARY\_I}!program-\/dumpBytecode.cpp@{program-\/dumpBytecode.cpp}}
+\doxysubsubsection{\texorpdfstring{DUMPBINARY\_I}{DUMPBINARY\_I}}
+{\footnotesize\ttfamily \#define DUMPBINARY\+\_\+I}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{program-dumpBytecode_8cpp_ad2842e810a7f95f018888a1da1d03d52}{DUMPPROGRAMCHECK}}(1); \(\backslash\)}
+\DoxyCodeLine{  out << (\mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04}{Opcode}})this-\/>bytecode[pc] \(\backslash\)}
+\DoxyCodeLine{    << this-\/>bytecode[pc + 1]; \(\backslash\)}
+\DoxyCodeLine{  pc += 2;}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{program-dumpBytecode_8cpp_ac0d9b8172a6d142909d46e93b12106f5}\label{program-dumpBytecode_8cpp_ac0d9b8172a6d142909d46e93b12106f5}} 
+\index{program-\/dumpBytecode.cpp@{program-\/dumpBytecode.cpp}!DUMPBINARY\_II@{DUMPBINARY\_II}}
+\index{DUMPBINARY\_II@{DUMPBINARY\_II}!program-\/dumpBytecode.cpp@{program-\/dumpBytecode.cpp}}
+\doxysubsubsection{\texorpdfstring{DUMPBINARY\_II}{DUMPBINARY\_II}}
+{\footnotesize\ttfamily \#define DUMPBINARY\+\_\+\+II}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{program-dumpBytecode_8cpp_ad2842e810a7f95f018888a1da1d03d52}{DUMPPROGRAMCHECK}}(2); \(\backslash\)}
+\DoxyCodeLine{  out << (\mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04}{Opcode}})this-\/>bytecode[pc] \(\backslash\)}
+\DoxyCodeLine{    << this-\/>bytecode[pc + 1] \(\backslash\)}
+\DoxyCodeLine{    << \textcolor{stringliteral}{"{}, "{}} \(\backslash\)}
+\DoxyCodeLine{    << this-\/>bytecode[pc + 2]; \(\backslash\)}
+\DoxyCodeLine{  pc += 3;}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{program-dumpBytecode_8cpp_ad2842e810a7f95f018888a1da1d03d52}\label{program-dumpBytecode_8cpp_ad2842e810a7f95f018888a1da1d03d52}} 
 \index{program-\/dumpBytecode.cpp@{program-\/dumpBytecode.cpp}!DUMPPROGRAMCHECK@{DUMPPROGRAMCHECK}}
 \index{DUMPPROGRAMCHECK@{DUMPPROGRAMCHECK}!program-\/dumpBytecode.cpp@{program-\/dumpBytecode.cpp}}

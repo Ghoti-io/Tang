@@ -140,10 +140,72 @@ Macros</h2></td></tr>
 <tr class="memitem:ad2842e810a7f95f018888a1da1d03d52"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program-dumpBytecode_8cpp.html#ad2842e810a7f95f018888a1da1d03d52">DUMPPROGRAMCHECK</a>(x)</td></tr>
 <tr class="memdesc:ad2842e810a7f95f018888a1da1d03d52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify the size of the Bytecode vector so that it may be safely accessed.  <a href="program-dumpBytecode_8cpp.html#ad2842e810a7f95f018888a1da1d03d52">More...</a><br /></td></tr>
 <tr class="separator:ad2842e810a7f95f018888a1da1d03d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5180f5868d1f71f540ad26197bf2ed7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>DUMPBINARY</b></td></tr>
+<tr class="separator:ac5180f5868d1f71f540ad26197bf2ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dd2198c53fc972f20b5259ff52bef69"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>DUMPBINARY_I</b></td></tr>
+<tr class="separator:a4dd2198c53fc972f20b5259ff52bef69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0d9b8172a6d142909d46e93b12106f5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>DUMPBINARY_II</b></td></tr>
+<tr class="separator:ac0d9b8172a6d142909d46e93b12106f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Define the <a class="el" href="classTang_1_1Program.html#aee5e79c40fac68e875c0d043f8fc2bc1" title="Get the Opcodes of the compiled program, formatted like Assembly.">Tang::Program::dumpBytecode</a> method. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ac5180f5868d1f71f540ad26197bf2ed7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5180f5868d1f71f540ad26197bf2ed7">&#9670;&nbsp;</a></span>DUMPBINARY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DUMPBINARY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  out &lt;&lt; (<a class="code" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04">Opcode</a>)this-&gt;bytecode[pc]; \</div>
+<div class="line">  ++pc;</div>
+<div class="ttc" id="aopcode_8hpp_html_a3db69378da7fea0383c531f8cae78f04"><div class="ttname"><a href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04">Tang::Opcode</a></div><div class="ttdeci">Opcode</div><div class="ttdoc">All possible Opcodes that may be used in the Bytecode.</div><div class="ttdef"><b>Definition:</b> opcode.hpp:23</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4dd2198c53fc972f20b5259ff52bef69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dd2198c53fc972f20b5259ff52bef69">&#9670;&nbsp;</a></span>DUMPBINARY_I</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DUMPBINARY_I</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <a class="code" href="program-dumpBytecode_8cpp.html#ad2842e810a7f95f018888a1da1d03d52">DUMPPROGRAMCHECK</a>(1); \</div>
+<div class="line">  out &lt;&lt; (<a class="code" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04">Opcode</a>)this-&gt;bytecode[pc] \</div>
+<div class="line">    &lt;&lt; this-&gt;bytecode[pc + 1]; \</div>
+<div class="line">  pc += 2;</div>
+<div class="ttc" id="aprogram-dumpBytecode_8cpp_html_ad2842e810a7f95f018888a1da1d03d52"><div class="ttname"><a href="program-dumpBytecode_8cpp.html#ad2842e810a7f95f018888a1da1d03d52">DUMPPROGRAMCHECK</a></div><div class="ttdeci">#define DUMPPROGRAMCHECK(x)</div><div class="ttdoc">Verify the size of the Bytecode vector so that it may be safely accessed.</div><div class="ttdef"><b>Definition:</b> program-dumpBytecode.cpp:24</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac0d9b8172a6d142909d46e93b12106f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0d9b8172a6d142909d46e93b12106f5">&#9670;&nbsp;</a></span>DUMPBINARY_II</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DUMPBINARY_II</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <a class="code" href="program-dumpBytecode_8cpp.html#ad2842e810a7f95f018888a1da1d03d52">DUMPPROGRAMCHECK</a>(2); \</div>
+<div class="line">  out &lt;&lt; (<a class="code" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04">Opcode</a>)this-&gt;bytecode[pc] \</div>
+<div class="line">    &lt;&lt; this-&gt;bytecode[pc + 1] \</div>
+<div class="line">    &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> \</div>
+<div class="line">    &lt;&lt; this-&gt;bytecode[pc + 2]; \</div>
+<div class="line">  pc += 3;</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="ad2842e810a7f95f018888a1da1d03d52"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad2842e810a7f95f018888a1da1d03d52">&#9670;&nbsp;</a></span>DUMPPROGRAMCHECK</h2>
 

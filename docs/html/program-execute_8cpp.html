@@ -169,10 +169,106 @@ Macros</h2></td></tr>
 <tr class="memitem:a80c4bdcb0e9c9c0eebdb1488ad68aa38"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program-execute_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38">STACKCHECK</a>(x)</td></tr>
 <tr class="memdesc:a80c4bdcb0e9c9c0eebdb1488ad68aa38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify the size of the stack vector so that it may be safely accessed.  <a href="program-execute_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38">More...</a><br /></td></tr>
 <tr class="separator:a80c4bdcb0e9c9c0eebdb1488ad68aa38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e4329998787cb6fd62bf47732a09f75"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>BINARYOP_SS</b></td></tr>
+<tr class="separator:a2e4329998787cb6fd62bf47732a09f75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43193c2b4f59bd0e8e1479f6b7bfaaa9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>BINARYOP_SI</b></td></tr>
+<tr class="separator:a43193c2b4f59bd0e8e1479f6b7bfaaa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad147b34a8bcfda75b4e0de785feceb86"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>BINARYOP_IS</b></td></tr>
+<tr class="separator:ad147b34a8bcfda75b4e0de785feceb86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56c11065adb02dd1e06bf6d5c0a3f1db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>BINARYOP_II</b></td></tr>
+<tr class="separator:a56c11065adb02dd1e06bf6d5c0a3f1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Define the <a class="el" href="classTang_1_1Program.html#a3449ae0f592e7eaa2cf05244839daa83" title="Execute the program&#39;s Bytecode, and return the execution Context.">Tang::Program::execute</a> method. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a56c11065adb02dd1e06bf6d5c0a3f1db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56c11065adb02dd1e06bf6d5c0a3f1db">&#9670;&nbsp;</a></span>BINARYOP_II</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BINARYOP_II</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">        <a class="code" href="program-execute_8cpp.html#a9ded9c6308c1d34a5872db3199e9c973">EXECUTEPROGRAMCHECK</a>(2); \</div>
+<div class="line">        auto lhsIndex = this-&gt;bytecode[pc + 1]; \</div>
+<div class="line">        STACKCHECK(lhsIndex); \</div>
+<div class="line">        auto &amp; lhs = stack[fp + lhsIndex]; \</div>
+<div class="line">        auto rhsIndex = this-&gt;bytecode[pc + 2]; \</div>
+<div class="line">        STACKCHECK(rhsIndex); \</div>
+<div class="line">        auto &amp; rhs = stack[fp + rhsIndex]; \</div>
+<div class="line">        pc += 3;</div>
+<div class="ttc" id="aprogram-execute_8cpp_html_a9ded9c6308c1d34a5872db3199e9c973"><div class="ttname"><a href="program-execute_8cpp.html#a9ded9c6308c1d34a5872db3199e9c973">EXECUTEPROGRAMCHECK</a></div><div class="ttdeci">#define EXECUTEPROGRAMCHECK(x)</div><div class="ttdoc">Verify the size of the Bytecode vector so that it may be safely accessed.</div><div class="ttdef"><b>Definition:</b> program-execute.cpp:34</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad147b34a8bcfda75b4e0de785feceb86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad147b34a8bcfda75b4e0de785feceb86">&#9670;&nbsp;</a></span>BINARYOP_IS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BINARYOP_IS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">        <a class="code" href="program-execute_8cpp.html#a9ded9c6308c1d34a5872db3199e9c973">EXECUTEPROGRAMCHECK</a>(1); \</div>
+<div class="line">        STACKCHECK(1); \</div>
+<div class="line">        auto rhs = stack.back(); \</div>
+<div class="line">        stack.pop_back(); \</div>
+<div class="line">        auto lhsIndex = this-&gt;bytecode[pc + 1]; \</div>
+<div class="line">        STACKCHECK(lhsIndex); \</div>
+<div class="line">        auto &amp; lhs = stack[fp + lhsIndex]; \</div>
+<div class="line">        pc += 2;</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a43193c2b4f59bd0e8e1479f6b7bfaaa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43193c2b4f59bd0e8e1479f6b7bfaaa9">&#9670;&nbsp;</a></span>BINARYOP_SI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BINARYOP_SI</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">        <a class="code" href="program-execute_8cpp.html#a9ded9c6308c1d34a5872db3199e9c973">EXECUTEPROGRAMCHECK</a>(1); \</div>
+<div class="line">        STACKCHECK(1); \</div>
+<div class="line">        auto rhsIndex = this-&gt;bytecode[pc + 1]; \</div>
+<div class="line">        STACKCHECK(rhsIndex); \</div>
+<div class="line">        auto &amp; rhs = stack[fp + rhsIndex]; \</div>
+<div class="line">        auto lhs = stack.back(); \</div>
+<div class="line">        stack.pop_back(); \</div>
+<div class="line">        pc += 2;</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2e4329998787cb6fd62bf47732a09f75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e4329998787cb6fd62bf47732a09f75">&#9670;&nbsp;</a></span>BINARYOP_SS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BINARYOP_SS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">        <a class="code" href="program-execute_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38">STACKCHECK</a>(2); \</div>
+<div class="line">        auto rhs = stack.back(); \</div>
+<div class="line">        stack.pop_back(); \</div>
+<div class="line">        auto lhs = stack.back(); \</div>
+<div class="line">        stack.pop_back(); \</div>
+<div class="line">        ++pc;</div>
+<div class="ttc" id="aprogram-execute_8cpp_html_a80c4bdcb0e9c9c0eebdb1488ad68aa38"><div class="ttname"><a href="program-execute_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38">STACKCHECK</a></div><div class="ttdeci">#define STACKCHECK(x)</div><div class="ttdoc">Verify the size of the stack vector so that it may be safely accessed.</div><div class="ttdef"><b>Definition:</b> program-execute.cpp:46</div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a9ded9c6308c1d34a5872db3199e9c973"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9ded9c6308c1d34a5872db3199e9c973">&#9670;&nbsp;</a></span>EXECUTEPROGRAMCHECK</h2>
 

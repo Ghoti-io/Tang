@@ -19,6 +19,9 @@ var searchData=
   ['location_335',['location',['../classTang_1_1Error.html#a39386694098329e9cae1238b08412352',1,'Tang::Error::location()'],['../classTang_1_1TangScanner.html#af24dd2399a4f80b0bf9b002c2407f331',1,'Tang::TangScanner::location()'],['../classTang_1_1location.html#aff8ce61807f30433ae309d68f15fd781',1,'Tang::location::location(const position &amp;b, const position &amp;e)'],['../classTang_1_1location.html#a298dda09e3632f8bf02033c64d21110b',1,'Tang::location::location(const position &amp;p=position())'],['../classTang_1_1location.html#aa281cc810060676842307e9efa456f83',1,'Tang::location::location(filename_type *f, counter_type l=1, counter_type c=1)'],['../classTang_1_1AstNode.html#a41e8328d5a342163a5aabcc4cb8f1b5e',1,'Tang::AstNode::location()'],['../classTang_1_1location.html',1,'Tang::location']]],
   ['location_2ehh_336',['location.hh',['../location_8hh.html',1,'']]],
   ['lock_337',['lock',['../classTang_1_1SingletonObjectPool.html#a1353f46ca1658afd6691730c3c198793',1,'Tang::SingletonObjectPool']]],
-  ['lt_338',['LT',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ac562607189d77eb9dfb707464c1e7b0b',1,'Tang']]],
-  ['lte_339',['LTE',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acc981ecc65ecf63ad1673cbec9c64198',1,'Tang']]]
+  ['lt_5fii_338',['LT_II',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04aed53b7aebafad485286175db7e9b27f4',1,'Tang']]],
+  ['lt_5fis_339',['LT_IS',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a478b206c3954d8503ffd1f63946f6d1e',1,'Tang']]],
+  ['lt_5fsi_340',['LT_SI',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a5857e1197e597f27f69ff24c9cdd1398',1,'Tang']]],
+  ['lt_5fss_341',['LT_SS',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a865bf1e1f0d2ad8c0b32db73836c8cd9',1,'Tang']]],
+  ['lte_342',['LTE',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acc981ecc65ecf63ad1673cbec9c64198',1,'Tang']]]
 ];
