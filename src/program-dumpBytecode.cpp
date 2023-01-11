@@ -278,14 +278,20 @@ string Program::dumpBytecode() const {
         DUMPBINARY_II;
         break;
       }
-      case Opcode::NEGATIVE: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+      case Opcode::NEGATIVE_S: {
+        DUMPBINARY;
         break;
       }
-      case Opcode::NOT: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+      case Opcode::NEGATIVE_I: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::NOT_S: {
+        DUMPBINARY;
+        break;
+      }
+      case Opcode::NOT_I: {
+        DUMPBINARY_I;
         break;
       }
       case Opcode::LT_SS: {

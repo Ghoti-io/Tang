@@ -208,7 +208,8 @@ DEP_ASTNODETERNARY = \
 	$(DEP_ASTNODE)
 DEP_ASTNODEUNARY = \
 	include/astNodeUnary.hpp \
-	$(DEP_ASTNODE)
+	$(DEP_ASTNODE) \
+	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODEUSE = \
 	include/astNodeUse.hpp \
 	$(DEP_ASTNODE)

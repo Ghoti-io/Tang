@@ -241,12 +241,20 @@ pair<OpcodeOffsets, OpcodePositions> Program::analyze() const {
         pc += 3;
         break;
       }
-      case Opcode::NEGATIVE: {
+      case Opcode::NEGATIVE_S: {
         ++pc;
         break;
       }
-      case Opcode::NOT: {
+      case Opcode::NEGATIVE_I: {
+        pc += 2;
+        break;
+      }
+      case Opcode::NOT_S: {
         ++pc;
+        break;
+      }
+      case Opcode::NOT_I: {
+        pc += 2;
         break;
       }
       case Opcode::LT_SS: {

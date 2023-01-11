@@ -5,12 +5,32 @@
 
 #include <string>
 #include <bit>
+#include "astNodeIdentifier.hpp"
 #include "astNodeUnary.hpp"
 #include "opcode.hpp"
 #include "program.hpp"
 
 using namespace std;
 using namespace Tang;
+
+#define UNARYOP(OP_S, OP_I) \
+  integer_t index{-1}; \
+  auto & identifier = program.getIdentifiers(); \
+  if (typeid(*this->operand) == typeid(AstNodeIdentifier)) { \
+    auto & name = static_cast<AstNodeIdentifier &>(*this->operand).name; \
+    if (identifier.count(name)) { \
+      index = identifier.at(name); \
+    } \
+  } \
+  if (index >= 0) { \
+    program.addBytecode((uinteger_t)Opcode:: OP_I); \
+    program.addBytecode((uinteger_t)index); \
+  } \
+  else { \
+    this->operand->compile(program); \
+    program.addBytecode((uinteger_t)Opcode:: OP_S); \
+  } \
+  return;
 
 AstNodeUnary::AstNodeUnary(Operator op, shared_ptr<AstNode> operand, Tang::location location) : AstNode(location), op{op}, operand{operand} {}
 
@@ -27,14 +47,13 @@ void AstNodeUnary::compilePreprocess(Program & program, PreprocessState state) c
 }
 
 void AstNodeUnary::compile(Tang::Program & program) const {
-  this->operand->compile(program);
   switch (this->op) {
     case Negative: {
-      program.addBytecode((uinteger_t)Opcode::NEGATIVE);
+      UNARYOP(NEGATIVE_S, NEGATIVE_I);
       break;
     }
     case Not: {
-      program.addBytecode((uinteger_t)Opcode::NOT);
+      UNARYOP(NOT_S, NOT_I);
       break;
     }
   }

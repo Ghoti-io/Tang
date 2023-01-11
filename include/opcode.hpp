@@ -65,8 +65,10 @@ namespace Tang {
     MODULO_SI,   ///< Push lhs % rhs
     MODULO_IS,   ///< Push lhs % rhs
     MODULO_II,   ///< Push lhs % rhs
-    NEGATIVE, ///< Pop val, push negative val
-    NOT,      ///< Pop val, push logical not of val
+    NEGATIVE_S,  ///< Push negative val
+    NEGATIVE_I,  ///< Push negative val
+    NOT_S,       ///< Push logical not of val
+    NOT_I,       ///< Push logical not of val
     LT_SS,       ///< Push lhs < rhs
     LT_SI,       ///< Push lhs < rhs
     LT_IS,       ///< Push lhs < rhs

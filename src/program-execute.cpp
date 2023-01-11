@@ -50,6 +50,19 @@ using namespace Tang;
     break; \
   }
 
+#define UNARYOP_S \
+        STACKCHECK(1); \
+        auto operand = stack.back(); \
+        stack.pop_back(); \
+        ++pc;
+
+#define UNARYOP_I \
+        EXECUTEPROGRAMCHECK(1); \
+        auto index = this->bytecode[pc + 1]; \
+        STACKCHECK(index); \
+        auto & operand = stack[fp + index]; \
+        pc += 2;
+
 #define BINARYOP_SS \
         STACKCHECK(2); \
         auto rhs = stack.back(); \
@@ -584,20 +597,24 @@ Context Program::execute(ContextData && data) {
         stack.push_back(lhs % rhs);
       }
       break;
-      case Opcode::NEGATIVE: {
-        STACKCHECK(1);
-        auto operand = stack.back();
-        stack.pop_back();
+      case Opcode::NEGATIVE_S: {
+        UNARYOP_S;
         stack.push_back(-operand);
-        ++pc;
       }
       break;
-      case Opcode::NOT: {
-        STACKCHECK(1);
-        auto operand = stack.back();
-        stack.pop_back();
+      case Opcode::NEGATIVE_I: {
+        UNARYOP_I;
+        stack.push_back(-operand);
+      }
+      break;
+      case Opcode::NOT_S: {
+        UNARYOP_S;
         stack.push_back(!operand);
-        ++pc;
+      }
+      break;
+      case Opcode::NOT_I: {
+        UNARYOP_I;
+        stack.push_back(!operand);
       }
       break;
       case Opcode::LT_SS: {
