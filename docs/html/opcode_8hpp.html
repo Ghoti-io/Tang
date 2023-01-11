@@ -143,7 +143,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="rect" href="astNodeUse_8cpp.html" title="Define the Tang::AstNodeUse class." alt="" coords="5900,155,6051,181"/>
 <area shape="rect" href="astNodeWhile_8cpp.html" title="Define the Tang::AstNodeWhile class." alt="" coords="6075,155,6238,181"/>
 <area shape="rect" href="opcode_8cpp.html" title="Define the Tang::Program::dumpBytecode method." alt="" coords="6263,155,6381,181"/>
-<area shape="rect" href="program-analyze_8cpp.html" title="Define the Tang::Program::dumpBytecode method." alt="" coords="6405,155,6588,181"/>
+<area shape="rect" href="program-analyze_8cpp.html" title="Define the Tang::Program::analyze method." alt="" coords="6405,155,6588,181"/>
 <area shape="rect" href="program-dumpBytecode_8cpp.html" title="Define the Tang::Program::dumpBytecode method." alt="" coords="6612,155,6843,181"/>
 <area shape="rect" href="program-optimize_8cpp.html" title="Define the Tang::Program::optimize method." alt="" coords="6867,155,7057,181"/>
 <area shape="rect" href="program_8cpp.html" title="Define the Tang::Program class." alt="" coords="7081,155,7208,181"/>
@@ -190,46 +190,82 @@ Enumerations</h2></td></tr>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a6a72a6a776662a244f82d31e9274a07b">FUNCTION</a>
 , <br />
 &#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ad841b7b2c8fba802dc3425c697d2ee11">ASSIGNINDEX</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a9eeb52badb613229884838847294b90d">ADD</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a7a99ed20cc895bea44a617ee07b7c4f5">ADD_SS</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a831eb40fc5ac48f896234c5786f90fd0">ADD_SI</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a4bc77e73ac1a2f43bf90d346a27cfbac">ADD_IS</a>
+, <br />
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ab6487b01dd0e162293a84b8e8b739d79">ADD_II</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a2543bd14ce64288ab1d76d6796ead378">SUBTRACT_SS</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a8c6df28b5109baf3ac7bbaa79fe7d3cc">SUBTRACT_SI</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acc4304f10344d8e431bf864fad094509">SUBTRACT_IS</a>
 , <br />
-&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acc4304f10344d8e431bf864fad094509">SUBTRACT_IS</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a5c24745a0b111125767fa6f179a3488f">SUBTRACT_II</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a080aaf8d817ada96fca7096b7b55bd30">MULTIPLY</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a210c66d794cec40488f3f8f634d6c33b">DIVIDE</a>
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a5c24745a0b111125767fa6f179a3488f">SUBTRACT_II</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af10a9bf9e9a5e9c2e7e004a7e400e5a2">MULTIPLY_SS</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a5aca321ce2fd40f3f74dd93ce1ee291e">MULTIPLY_SI</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a7913fc0d483d5226b89cd3c21a60ae35">MULTIPLY_IS</a>
 , <br />
-&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a928ab45d616dde447dbbbd0270db87ad">MODULO</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a50546bf973283065b6ccf09faf7a580a">NEGATIVE</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a10df3d67626099df882920ba6552f16d">NOT</a>
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a08b3a1e4e76f22fe136252611841a97b">MULTIPLY_II</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a534195c8d07b1165b2dee80967559e39">DIVIDE_SS</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a4995b358042a82fe1d283b09f161c0c8">DIVIDE_SI</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ac05eb13dd11d775cf5304c122369b74c">DIVIDE_IS</a>
+, <br />
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a39cd35e1de4db7ea6dbb735f1b02697b">DIVIDE_II</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a6878abe4f9713f900496a3569ead5824">MODULO_SS</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ac666eaf44f46a96e1d854a9644b79567">MODULO_SI</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a027122494eacf165242b1b2d8f1378e9">MODULO_IS</a>
+, <br />
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a9f035766fef20fbe90aff9a8920dbe64">MODULO_II</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a5bdab1937b8f018781d4718a8aca6686">NEGATIVE_S</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a816a56e81a967dd4e532361bff49126c">NEGATIVE_I</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a02a64be8092904acc79c5006ed312613">NOT_S</a>
+, <br />
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a8fd91e15dc432acca5973443bf06d91a">NOT_I</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a865bf1e1f0d2ad8c0b32db73836c8cd9">LT_SS</a>
-, <br />
-&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a5857e1197e597f27f69ff24c9cdd1398">LT_SI</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a5857e1197e597f27f69ff24c9cdd1398">LT_SI</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a478b206c3954d8503ffd1f63946f6d1e">LT_IS</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04aed53b7aebafad485286175db7e9b27f4">LT_II</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acc981ecc65ecf63ad1673cbec9c64198">LTE</a>
 , <br />
-&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acd6a9bd2a175104eed40f0d33a8b4020">GT</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a32d35312e8f24bc1669bd2b45c00d47c">GTE</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a2dcbad7477fd40561e8b8198f173bd47">EQ</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a375b332cf2e0c6d522baf007ef7cb554">NEQ</a>
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04aed53b7aebafad485286175db7e9b27f4">LT_II</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04aadc73a155a14cb9c3a113c7960542335">LTE_SS</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a57ed7c3be31b9c5cb74113006b31d047">LTE_SI</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a57a1946fa9209ec397df572c900cdfa5">LTE_IS</a>
 , <br />
-&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ade58a28573783fe95304a260ccd90362">PERIOD</a>
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04aca7a6a3ea34b4a1c97aa81c1bf01ec4b">LTE_II</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a0cc09663a300e3adc97d2e572c598a68">GT_SS</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a625df8a4d0e4385a7459a385d44c35ba">GT_SI</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a75fb45d31b4db51da597b84cde3733a9">GT_IS</a>
+, <br />
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04aafc604e7e8771e2b93d7e4a720c576e7">GT_II</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a9c3c49aa503be32ffe079548afa5d1d1">GTE_SS</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a082576d6d52b1af7a4c5739985a053ab">GTE_SI</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a32686a8a338bb9d467d11ad1abfd2e01">GTE_IS</a>
+, <br />
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a00f488fdd99910cba7ab1e4b8b67e4cb">GTE_II</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ac4a2b64632c1efa6955f5c9e91d3a7db">EQ_SS</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ab623276de9dbd681091c2b5d5ecf435a">EQ_SI</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a62d0662b7b603a97b2a404fd8ca78538">EQ_IS</a>
+, <br />
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ae76af60d6fba398daa6b9832ff9fb6d5">EQ_II</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a61a4a618ee54924a00138ef68f9203cb">NEQ_SS</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a78aee135705a3faed6409e09e21b8b77">NEQ_SI</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04adb381a958618b7b5ebacc9ac15c73620">NEQ_IS</a>
+, <br />
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a3cc0ace23c11f1db4dd6f5e5efa71272">NEQ_II</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ade58a28573783fe95304a260ccd90362">PERIOD</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04acb4ae3b37047fb4b2c0d16f8bf84f076">INDEX</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a0a1031e189c0c5e08d55c44fc02a4b26">SLICE</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a007663613f231d7bfcee9025e2d9f756">GETITERATOR</a>
 , <br />
-&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a0025221d3192b323ba93e40e7c1403fb">ITERATORNEXT</a>
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a007663613f231d7bfcee9025e2d9f756">GETITERATOR</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a0025221d3192b323ba93e40e7c1403fb">ITERATORNEXT</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04ae7185531b0fe3cf42b93676198c7af37">ISITERATOREND</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a0a109fb07a3a6984f50ffe52dd2c213b">CASTINTEGER</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af721c36554a56d3695dda4af2863efbb">CASTFLOAT</a>
 , <br />
-&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620">CASTBOOLEAN</a>
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af721c36554a56d3695dda4af2863efbb">CASTFLOAT</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a958f96740eee65afc3776e66d48a5620">CASTBOOLEAN</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a68c788d6865114079a3fdad808204a83">CASTSTRING</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a8fbd21f6a619e33ff038cdf5a69a14d8">CALLFUNC</a>
-, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a651b5d67f67162a8bc778591dafa9405">CALLFUNC_I</a>
 , <br />
-&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04aa2bec276a54439fe011eb523b845dac5">RETURN</a>
+&#160;&#160;<a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a651b5d67f67162a8bc778591dafa9405">CALLFUNC_I</a>
+, <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04aa2bec276a54439fe011eb523b845dac5">RETURN</a>
 , <a class="el" href="opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af96eee4e48ee90430f17fb3a8388507b">PRINT</a>
 <br />
  }</td></tr>
@@ -311,7 +347,13 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04ad841b7b2c8fba802dc3425c697d2ee11"></a>ASSIGNINDEX&#160;</td><td class="fielddoc"><p>Pop index, pop collection, pop value, push (collection[index] = value) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a9eeb52badb613229884838847294b90d"></a>ADD&#160;</td><td class="fielddoc"><p>Pop rhs, pop lhs, push lhs + rhs. </p>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a7a99ed20cc895bea44a617ee07b7c4f5"></a>ADD_SS&#160;</td><td class="fielddoc"><p>Push lhs + rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a831eb40fc5ac48f896234c5786f90fd0"></a>ADD_SI&#160;</td><td class="fielddoc"><p>Push lhs + rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a4bc77e73ac1a2f43bf90d346a27cfbac"></a>ADD_IS&#160;</td><td class="fielddoc"><p>Push lhs + rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04ab6487b01dd0e162293a84b8e8b739d79"></a>ADD_II&#160;</td><td class="fielddoc"><p>Push lhs + rhs. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a2543bd14ce64288ab1d76d6796ead378"></a>SUBTRACT_SS&#160;</td><td class="fielddoc"><p>Push lhs - rhs. </p>
 </td></tr>
@@ -321,15 +363,37 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a5c24745a0b111125767fa6f179a3488f"></a>SUBTRACT_II&#160;</td><td class="fielddoc"><p>Push lhs - rhs. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a080aaf8d817ada96fca7096b7b55bd30"></a>MULTIPLY&#160;</td><td class="fielddoc"><p>Pop rhs, pop lhs, push lhs * rhs. </p>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04af10a9bf9e9a5e9c2e7e004a7e400e5a2"></a>MULTIPLY_SS&#160;</td><td class="fielddoc"><p>Push lhs * rhs. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a210c66d794cec40488f3f8f634d6c33b"></a>DIVIDE&#160;</td><td class="fielddoc"><p>Pop rhs, pop lhs, push lhs / rhs. </p>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a5aca321ce2fd40f3f74dd93ce1ee291e"></a>MULTIPLY_SI&#160;</td><td class="fielddoc"><p>Push lhs * rhs. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a928ab45d616dde447dbbbd0270db87ad"></a>MODULO&#160;</td><td class="fielddoc"><p>Pop rhs, pop lhs, push lhs % rhs. </p>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a7913fc0d483d5226b89cd3c21a60ae35"></a>MULTIPLY_IS&#160;</td><td class="fielddoc"><p>Push lhs * rhs. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a50546bf973283065b6ccf09faf7a580a"></a>NEGATIVE&#160;</td><td class="fielddoc"><p>Pop val, push negative val. </p>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a08b3a1e4e76f22fe136252611841a97b"></a>MULTIPLY_II&#160;</td><td class="fielddoc"><p>Push lhs * rhs. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a10df3d67626099df882920ba6552f16d"></a>NOT&#160;</td><td class="fielddoc"><p>Pop val, push logical not of val. </p>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a534195c8d07b1165b2dee80967559e39"></a>DIVIDE_SS&#160;</td><td class="fielddoc"><p>Push lhs / rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a4995b358042a82fe1d283b09f161c0c8"></a>DIVIDE_SI&#160;</td><td class="fielddoc"><p>Push lhs / rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04ac05eb13dd11d775cf5304c122369b74c"></a>DIVIDE_IS&#160;</td><td class="fielddoc"><p>Push lhs / rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a39cd35e1de4db7ea6dbb735f1b02697b"></a>DIVIDE_II&#160;</td><td class="fielddoc"><p>Push lhs / rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a6878abe4f9713f900496a3569ead5824"></a>MODULO_SS&#160;</td><td class="fielddoc"><p>Push lhs % rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04ac666eaf44f46a96e1d854a9644b79567"></a>MODULO_SI&#160;</td><td class="fielddoc"><p>Push lhs % rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a027122494eacf165242b1b2d8f1378e9"></a>MODULO_IS&#160;</td><td class="fielddoc"><p>Push lhs % rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a9f035766fef20fbe90aff9a8920dbe64"></a>MODULO_II&#160;</td><td class="fielddoc"><p>Push lhs % rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a5bdab1937b8f018781d4718a8aca6686"></a>NEGATIVE_S&#160;</td><td class="fielddoc"><p>Push negative val. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a816a56e81a967dd4e532361bff49126c"></a>NEGATIVE_I&#160;</td><td class="fielddoc"><p>Push negative val. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a02a64be8092904acc79c5006ed312613"></a>NOT_S&#160;</td><td class="fielddoc"><p>Push logical not of val. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a8fd91e15dc432acca5973443bf06d91a"></a>NOT_I&#160;</td><td class="fielddoc"><p>Push logical not of val. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a865bf1e1f0d2ad8c0b32db73836c8cd9"></a>LT_SS&#160;</td><td class="fielddoc"><p>Push lhs &lt; rhs. </p>
 </td></tr>
@@ -339,15 +403,45 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04aed53b7aebafad485286175db7e9b27f4"></a>LT_II&#160;</td><td class="fielddoc"><p>Push lhs &lt; rhs. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04acc981ecc65ecf63ad1673cbec9c64198"></a>LTE&#160;</td><td class="fielddoc"><p>Pop rhs, pop lhs, push lhs &lt;= rhs. </p>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04aadc73a155a14cb9c3a113c7960542335"></a>LTE_SS&#160;</td><td class="fielddoc"><p>Push lhs &lt;= rhs. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04acd6a9bd2a175104eed40f0d33a8b4020"></a>GT&#160;</td><td class="fielddoc"><p>Pop rhs, pop lhs, push lhs &gt; rhs. </p>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a57ed7c3be31b9c5cb74113006b31d047"></a>LTE_SI&#160;</td><td class="fielddoc"><p>Push lhs &lt;= rhs. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a32d35312e8f24bc1669bd2b45c00d47c"></a>GTE&#160;</td><td class="fielddoc"><p>Pop rhs, pop lhs, push lhs &gt;= rhs. </p>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a57a1946fa9209ec397df572c900cdfa5"></a>LTE_IS&#160;</td><td class="fielddoc"><p>Push lhs &lt;= rhs. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a2dcbad7477fd40561e8b8198f173bd47"></a>EQ&#160;</td><td class="fielddoc"><p>Pop rhs, pop lhs, push lhs == rhs. </p>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04aca7a6a3ea34b4a1c97aa81c1bf01ec4b"></a>LTE_II&#160;</td><td class="fielddoc"><p>Push lhs &lt;= rhs. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a375b332cf2e0c6d522baf007ef7cb554"></a>NEQ&#160;</td><td class="fielddoc"><p>Pop rhs, pop lhs, push lhs != rhs. </p>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a0cc09663a300e3adc97d2e572c598a68"></a>GT_SS&#160;</td><td class="fielddoc"><p>Push lhs &gt; rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a625df8a4d0e4385a7459a385d44c35ba"></a>GT_SI&#160;</td><td class="fielddoc"><p>Push lhs &gt; rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a75fb45d31b4db51da597b84cde3733a9"></a>GT_IS&#160;</td><td class="fielddoc"><p>Push lhs &gt; rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04aafc604e7e8771e2b93d7e4a720c576e7"></a>GT_II&#160;</td><td class="fielddoc"><p>Push lhs &gt; rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a9c3c49aa503be32ffe079548afa5d1d1"></a>GTE_SS&#160;</td><td class="fielddoc"><p>Push lhs &gt;= rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a082576d6d52b1af7a4c5739985a053ab"></a>GTE_SI&#160;</td><td class="fielddoc"><p>Push lhs &gt;= rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a32686a8a338bb9d467d11ad1abfd2e01"></a>GTE_IS&#160;</td><td class="fielddoc"><p>Push lhs &gt;= rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a00f488fdd99910cba7ab1e4b8b67e4cb"></a>GTE_II&#160;</td><td class="fielddoc"><p>Push lhs &gt;= rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04ac4a2b64632c1efa6955f5c9e91d3a7db"></a>EQ_SS&#160;</td><td class="fielddoc"><p>Push lhs == rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04ab623276de9dbd681091c2b5d5ecf435a"></a>EQ_SI&#160;</td><td class="fielddoc"><p>Push lhs == rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a62d0662b7b603a97b2a404fd8ca78538"></a>EQ_IS&#160;</td><td class="fielddoc"><p>Push lhs == rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04ae76af60d6fba398daa6b9832ff9fb6d5"></a>EQ_II&#160;</td><td class="fielddoc"><p>Push lhs == rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a61a4a618ee54924a00138ef68f9203cb"></a>NEQ_SS&#160;</td><td class="fielddoc"><p>Push lhs != rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a78aee135705a3faed6409e09e21b8b77"></a>NEQ_SI&#160;</td><td class="fielddoc"><p>Push lhs != rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04adb381a958618b7b5ebacc9ac15c73620"></a>NEQ_IS&#160;</td><td class="fielddoc"><p>Push lhs != rhs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04a3cc0ace23c11f1db4dd6f5e5efa71272"></a>NEQ_II&#160;</td><td class="fielddoc"><p>Push lhs != rhs. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a3db69378da7fea0383c531f8cae78f04ade58a28573783fe95304a260ccd90362"></a>PERIOD&#160;</td><td class="fielddoc"><p>Pop rhs, pop lhs, push lhs.rhs. </p>
 </td></tr>

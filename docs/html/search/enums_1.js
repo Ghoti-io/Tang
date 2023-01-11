@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['opcode_951',['Opcode',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04',1,'Tang']]],
-  ['operation_952',['Operation',['../classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9',1,'Tang::AstNodeBinary']]],
-  ['operator_953',['Operator',['../classTang_1_1AstNodeUnary.html#aace748ce32f4cc74ea732f9bf0cc9172',1,'Tang::AstNodeUnary']]]
+  ['opcode_980',['Opcode',['../opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04',1,'Tang']]],
+  ['operation_981',['Operation',['../classTang_1_1AstNodeBinary.html#a8fa249142e89a3ade59f2c7a98eb74f9',1,'Tang::AstNodeBinary']]],
+  ['operator_982',['Operator',['../classTang_1_1AstNodeUnary.html#aace748ce32f4cc74ea732f9bf0cc9172',1,'Tang::AstNodeUnary']]]
 ];

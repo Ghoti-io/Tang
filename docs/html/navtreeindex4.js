@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"classTang_1_1GarbageCollected.html#a233b98cbedb6d8b63ab5285516c6aef4":[1,0,0,48,20],
 "classTang_1_1GarbageCollected.html#a2736795d97b3e8f540df23fb8b875f91":[1,0,0,48,18],
 "classTang_1_1GarbageCollected.html#a281b1b6890cbd28c71a7a83090df08c7":[1,0,0,48,21],
 "classTang_1_1GarbageCollected.html#a3683ebb77cfca1a8ac1aaf26c41d3666":[1,0,0,48,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "functions_c.html":[1,3,0,3],
 "functions_d.html":[1,3,0,4],
 "functions_e.html":[1,3,0,5],
-"functions_enum.html":[1,3,4],
-"functions_eval.html":[1,3,5]
+"functions_enum.html":[1,3,4]
 };

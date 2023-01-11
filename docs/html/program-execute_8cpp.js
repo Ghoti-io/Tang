@@ -5,5 +5,7 @@ var program_execute_8cpp =
     [ "BINARYOP_SI", "program-execute_8cpp.html#a43193c2b4f59bd0e8e1479f6b7bfaaa9", null ],
     [ "BINARYOP_SS", "program-execute_8cpp.html#a2e4329998787cb6fd62bf47732a09f75", null ],
     [ "EXECUTEPROGRAMCHECK", "program-execute_8cpp.html#a9ded9c6308c1d34a5872db3199e9c973", null ],
-    [ "STACKCHECK", "program-execute_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38", null ]
+    [ "STACKCHECK", "program-execute_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38", null ],
+    [ "UNARYOP_I", "program-execute_8cpp.html#a1b5620ea1419a9c0d5f591b1864f7cdf", null ],
+    [ "UNARYOP_S", "program-execute_8cpp.html#ae88fd9e812fda386f717d6d69f177959", null ]
 ];

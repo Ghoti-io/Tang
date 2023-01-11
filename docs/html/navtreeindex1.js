@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"classTang_1_1AstNodeFunctionDeclaration.html#a1c4ca7dac3f31c69dd50a89492f3670d":[1,0,0,13,5],
 "classTang_1_1AstNodeFunctionDeclaration.html#a229132791787019f85fe9af886043b86":[1,0,0,13,1],
 "classTang_1_1AstNodeFunctionDeclaration.html#a41e8328d5a342163a5aabcc4cb8f1b5e":[1,0,0,13,7],
 "classTang_1_1AstNodeFunctionDeclaration.html#a47027f2c2fae0d4635e72fb7c5e94c19":[1,0,0,13,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "classTang_1_1ComputedExpressionArray.html#a7dc724830081b12709885b0c563d7eef":[1,0,0,31,3],
 "classTang_1_1ComputedExpressionArray.html#a8e779d014cbb877f078d61a2ff91603d":[1,0,0,31,15],
 "classTang_1_1ComputedExpressionArray.html#a8f1c04c03b8c7b97ef2ea1efd2270b07":[1,0,0,31,11],
-"classTang_1_1ComputedExpressionArray.html#a907104a9d090d21e9bcc487b696738c4":[1,0,0,31,24],
-"classTang_1_1ComputedExpressionArray.html#aa13b85a91c9321388a62bef514bd1bf6":[1,0,0,31,32]
+"classTang_1_1ComputedExpressionArray.html#a907104a9d090d21e9bcc487b696738c4":[1,0,0,31,24]
 };

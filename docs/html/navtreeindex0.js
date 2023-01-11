@@ -81,6 +81,7 @@ var NAVTREEINDEX0 =
 "astNodeTernary_8hpp.html":[2,0,1,26],
 "astNodeTernary_8hpp_source.html":[2,0,1,26],
 "astNodeUnary_8cpp.html":[2,0,2,27],
+"astNodeUnary_8cpp.html#a548cb3ff9c5d9385313d130eb66b1b36":[2,0,2,27,0],
 "astNodeUnary_8hpp.html":[2,0,1,27],
 "astNodeUnary_8hpp_source.html":[2,0,1,27],
 "astNodeUse_8cpp.html":[2,0,2,28],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "classTang_1_1AstNodeFunctionCall.html#ae0f662cd990cd733c7d5447ea3a1e641a586bda9718eca4db4d4afac8e298023a":[1,0,0,12,0,1],
 "classTang_1_1AstNodeFunctionCall.html#ae9334b90c4fe34944cd85744acf6fc9c":[1,0,0,12,3],
 "classTang_1_1AstNodeFunctionCall.html#ae9d85fcadc7bffb2799c89ea8938c24f":[1,0,0,12,4],
-"classTang_1_1AstNodeFunctionDeclaration.html":[1,0,0,13],
-"classTang_1_1AstNodeFunctionDeclaration.html#a1c4ca7dac3f31c69dd50a89492f3670d":[1,0,0,13,5]
+"classTang_1_1AstNodeFunctionDeclaration.html":[1,0,0,13]
 };

@@ -27,7 +27,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "astNodeSlice.cpp", "astNodeSlice_8cpp.html", null ],
     [ "astNodeString.cpp", "astNodeString_8cpp.html", null ],
     [ "astNodeTernary.cpp", "astNodeTernary_8cpp.html", null ],
-    [ "astNodeUnary.cpp", "astNodeUnary_8cpp.html", null ],
+    [ "astNodeUnary.cpp", "astNodeUnary_8cpp.html", "astNodeUnary_8cpp" ],
     [ "astNodeUse.cpp", "astNodeUse_8cpp.html", null ],
     [ "astNodeWhile.cpp", "astNodeWhile_8cpp.html", null ],
     [ "computedExpression.cpp", "computedExpression_8cpp.html", null ],

@@ -169,6 +169,10 @@ Macros</h2></td></tr>
 <tr class="memitem:a80c4bdcb0e9c9c0eebdb1488ad68aa38"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program-execute_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38">STACKCHECK</a>(x)</td></tr>
 <tr class="memdesc:a80c4bdcb0e9c9c0eebdb1488ad68aa38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify the size of the stack vector so that it may be safely accessed.  <a href="program-execute_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38">More...</a><br /></td></tr>
 <tr class="separator:a80c4bdcb0e9c9c0eebdb1488ad68aa38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae88fd9e812fda386f717d6d69f177959"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>UNARYOP_S</b></td></tr>
+<tr class="separator:ae88fd9e812fda386f717d6d69f177959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b5620ea1419a9c0d5f591b1864f7cdf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>UNARYOP_I</b></td></tr>
+<tr class="separator:a1b5620ea1419a9c0d5f591b1864f7cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e4329998787cb6fd62bf47732a09f75"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>BINARYOP_SS</b></td></tr>
 <tr class="separator:a2e4329998787cb6fd62bf47732a09f75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43193c2b4f59bd0e8e1479f6b7bfaaa9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>BINARYOP_SI</b></td></tr>
@@ -330,6 +334,43 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 
+</div>
+</div>
+<a id="a1b5620ea1419a9c0d5f591b1864f7cdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b5620ea1419a9c0d5f591b1864f7cdf">&#9670;&nbsp;</a></span>UNARYOP_I</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UNARYOP_I</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">        <a class="code" href="program-execute_8cpp.html#a9ded9c6308c1d34a5872db3199e9c973">EXECUTEPROGRAMCHECK</a>(1); \</div>
+<div class="line">        auto index = this-&gt;bytecode[pc + 1]; \</div>
+<div class="line">        STACKCHECK(index); \</div>
+<div class="line">        auto &amp; operand = stack[fp + index]; \</div>
+<div class="line">        pc += 2;</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae88fd9e812fda386f717d6d69f177959"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae88fd9e812fda386f717d6d69f177959">&#9670;&nbsp;</a></span>UNARYOP_S</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UNARYOP_S</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">        <a class="code" href="program-execute_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38">STACKCHECK</a>(1); \</div>
+<div class="line">        auto operand = stack.back(); \</div>
+<div class="line">        stack.pop_back(); \</div>
+<div class="line">        ++pc;</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
