@@ -198,9 +198,20 @@ string Program::dumpBytecode() const {
         ++pc;
         break;
       }
-      case Opcode::ADD: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+      case Opcode::ADD_SS: {
+        DUMPBINARY;
+        break;
+      }
+      case Opcode::ADD_SI: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::ADD_IS: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::ADD_II: {
+        DUMPBINARY_II;
         break;
       }
       case Opcode::SUBTRACT_SS: {
@@ -219,19 +230,52 @@ string Program::dumpBytecode() const {
         DUMPBINARY_II;
         break;
       }
-      case Opcode::MULTIPLY: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+      case Opcode::MULTIPLY_SS: {
+        DUMPBINARY;
         break;
       }
-      case Opcode::DIVIDE: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+      case Opcode::MULTIPLY_SI: {
+        DUMPBINARY_I;
         break;
       }
-      case Opcode::MODULO: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+      case Opcode::MULTIPLY_IS: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::MULTIPLY_II: {
+        DUMPBINARY_II;
+        break;
+      }
+      case Opcode::DIVIDE_SS: {
+        DUMPBINARY;
+        break;
+      }
+      case Opcode::DIVIDE_SI: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::DIVIDE_IS: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::DIVIDE_II: {
+        DUMPBINARY_II;
+        break;
+      }
+      case Opcode::MODULO_SS: {
+        DUMPBINARY;
+        break;
+      }
+      case Opcode::MODULO_SI: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::MODULO_IS: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::MODULO_II: {
+        DUMPBINARY_II;
         break;
       }
       case Opcode::NEGATIVE: {
@@ -260,29 +304,84 @@ string Program::dumpBytecode() const {
         DUMPBINARY_II;
         break;
       }
-      case Opcode::LTE: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+      case Opcode::LTE_SS: {
+        DUMPBINARY;
         break;
       }
-      case Opcode::GT: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+      case Opcode::LTE_SI: {
+        DUMPBINARY_I;
         break;
       }
-      case Opcode::GTE: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+      case Opcode::LTE_IS: {
+        DUMPBINARY_I;
         break;
       }
-      case Opcode::EQ: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+      case Opcode::LTE_II: {
+        DUMPBINARY_II;
         break;
       }
-      case Opcode::NEQ: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+      case Opcode::GT_SS: {
+        DUMPBINARY;
+        break;
+      }
+      case Opcode::GT_SI: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::GT_IS: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::GT_II: {
+        DUMPBINARY_II;
+        break;
+      }
+      case Opcode::GTE_SS: {
+        DUMPBINARY;
+        break;
+      }
+      case Opcode::GTE_SI: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::GTE_IS: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::GTE_II: {
+        DUMPBINARY_II;
+        break;
+      }
+      case Opcode::EQ_SS: {
+        DUMPBINARY;
+        break;
+      }
+      case Opcode::EQ_SI: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::EQ_IS: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::EQ_II: {
+        DUMPBINARY_II;
+        break;
+      }
+      case Opcode::NEQ_SS: {
+        DUMPBINARY;
+        break;
+      }
+      case Opcode::NEQ_SI: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::NEQ_IS: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::NEQ_II: {
+        DUMPBINARY_II;
         break;
       }
       case Opcode::PERIOD: {

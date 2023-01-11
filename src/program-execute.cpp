@@ -484,14 +484,24 @@ Context Program::execute(ContextData && data) {
         ++pc;
       }
       break;
-      case Opcode::ADD: {
-        STACKCHECK(2);
-        auto rhs = stack.back();
-        stack.pop_back();
-        auto lhs = stack.back();
-        stack.pop_back();
+      case Opcode::ADD_SS: {
+        BINARYOP_SS;
         stack.push_back(lhs + rhs);
-        ++pc;
+      }
+      break;
+      case Opcode::ADD_SI: {
+        BINARYOP_SI;
+        stack.push_back(lhs + rhs);
+      }
+      break;
+      case Opcode::ADD_IS: {
+        BINARYOP_IS;
+        stack.push_back(lhs + rhs);
+      }
+      break;
+      case Opcode::ADD_II: {
+        BINARYOP_II;
+        stack.push_back(lhs + rhs);
       }
       break;
       case Opcode::SUBTRACT_SS: {
@@ -514,34 +524,64 @@ Context Program::execute(ContextData && data) {
         stack.push_back(lhs - rhs);
       }
       break;
-      case Opcode::MULTIPLY: {
-        STACKCHECK(2);
-        auto rhs = stack.back();
-        stack.pop_back();
-        auto lhs = stack.back();
-        stack.pop_back();
+      case Opcode::MULTIPLY_SS: {
+        BINARYOP_SS;
         stack.push_back(lhs * rhs);
-        ++pc;
       }
       break;
-      case Opcode::DIVIDE: {
-        STACKCHECK(2);
-        auto rhs = stack.back();
-        stack.pop_back();
-        auto lhs = stack.back();
-        stack.pop_back();
+      case Opcode::MULTIPLY_SI: {
+        BINARYOP_SI;
+        stack.push_back(lhs * rhs);
+      }
+      break;
+      case Opcode::MULTIPLY_IS: {
+        BINARYOP_IS;
+        stack.push_back(lhs * rhs);
+      }
+      break;
+      case Opcode::MULTIPLY_II: {
+        BINARYOP_II;
+        stack.push_back(lhs * rhs);
+      }
+      break;
+      case Opcode::DIVIDE_SS: {
+        BINARYOP_SS;
         stack.push_back(lhs / rhs);
-        ++pc;
       }
       break;
-      case Opcode::MODULO: {
-        STACKCHECK(2);
-        auto rhs = stack.back();
-        stack.pop_back();
-        auto lhs = stack.back();
-        stack.pop_back();
+      case Opcode::DIVIDE_SI: {
+        BINARYOP_SI;
+        stack.push_back(lhs / rhs);
+      }
+      break;
+      case Opcode::DIVIDE_IS: {
+        BINARYOP_IS;
+        stack.push_back(lhs / rhs);
+      }
+      break;
+      case Opcode::DIVIDE_II: {
+        BINARYOP_II;
+        stack.push_back(lhs / rhs);
+      }
+      break;
+      case Opcode::MODULO_SS: {
+        BINARYOP_SS;
         stack.push_back(lhs % rhs);
-        ++pc;
+      }
+      break;
+      case Opcode::MODULO_SI: {
+        BINARYOP_SI;
+        stack.push_back(lhs % rhs);
+      }
+      break;
+      case Opcode::MODULO_IS: {
+        BINARYOP_IS;
+        stack.push_back(lhs % rhs);
+      }
+      break;
+      case Opcode::MODULO_II: {
+        BINARYOP_II;
+        stack.push_back(lhs % rhs);
       }
       break;
       case Opcode::NEGATIVE: {
@@ -580,54 +620,104 @@ Context Program::execute(ContextData && data) {
         stack.push_back(lhs < rhs);
       }
       break;
-      case Opcode::LTE: {
-        STACKCHECK(2);
-        auto rhs = stack.back();
-        stack.pop_back();
-        auto lhs = stack.back();
-        stack.pop_back();
+      case Opcode::LTE_SS: {
+        BINARYOP_SS;
         stack.push_back(lhs <= rhs);
-        ++pc;
       }
       break;
-      case Opcode::GT: {
-        STACKCHECK(2);
-        auto rhs = stack.back();
-        stack.pop_back();
-        auto lhs = stack.back();
-        stack.pop_back();
+      case Opcode::LTE_SI: {
+        BINARYOP_SI;
+        stack.push_back(lhs <= rhs);
+      }
+      break;
+      case Opcode::LTE_IS: {
+        BINARYOP_IS;
+        stack.push_back(lhs <= rhs);
+      }
+      break;
+      case Opcode::LTE_II: {
+        BINARYOP_II;
+        stack.push_back(lhs <= rhs);
+      }
+      break;
+      case Opcode::GT_SS: {
+        BINARYOP_SS;
         stack.push_back(lhs > rhs);
-        ++pc;
       }
       break;
-      case Opcode::GTE: {
-        STACKCHECK(2);
-        auto rhs = stack.back();
-        stack.pop_back();
-        auto lhs = stack.back();
-        stack.pop_back();
+      case Opcode::GT_SI: {
+        BINARYOP_SI;
+        stack.push_back(lhs > rhs);
+      }
+      break;
+      case Opcode::GT_IS: {
+        BINARYOP_IS;
+        stack.push_back(lhs > rhs);
+      }
+      break;
+      case Opcode::GT_II: {
+        BINARYOP_II;
+        stack.push_back(lhs > rhs);
+      }
+      break;
+      case Opcode::GTE_SS: {
+        BINARYOP_SS;
         stack.push_back(lhs >= rhs);
-        ++pc;
       }
       break;
-      case Opcode::EQ: {
-        STACKCHECK(2);
-        auto rhs = stack.back();
-        stack.pop_back();
-        auto lhs = stack.back();
-        stack.pop_back();
+      case Opcode::GTE_SI: {
+        BINARYOP_SI;
+        stack.push_back(lhs >= rhs);
+      }
+      break;
+      case Opcode::GTE_IS: {
+        BINARYOP_IS;
+        stack.push_back(lhs >= rhs);
+      }
+      break;
+      case Opcode::GTE_II: {
+        BINARYOP_II;
+        stack.push_back(lhs >= rhs);
+      }
+      break;
+      case Opcode::EQ_SS: {
+        BINARYOP_SS;
         stack.push_back(lhs == rhs);
-        ++pc;
       }
       break;
-      case Opcode::NEQ: {
-        STACKCHECK(2);
-        auto rhs = stack.back();
-        stack.pop_back();
-        auto lhs = stack.back();
-        stack.pop_back();
+      case Opcode::EQ_SI: {
+        BINARYOP_SI;
+        stack.push_back(lhs == rhs);
+      }
+      break;
+      case Opcode::EQ_IS: {
+        BINARYOP_IS;
+        stack.push_back(lhs == rhs);
+      }
+      break;
+      case Opcode::EQ_II: {
+        BINARYOP_II;
+        stack.push_back(lhs == rhs);
+      }
+      break;
+      case Opcode::NEQ_SS: {
+        BINARYOP_SS;
         stack.push_back(lhs != rhs);
-        ++pc;
+      }
+      break;
+      case Opcode::NEQ_SI: {
+        BINARYOP_SI;
+        stack.push_back(lhs != rhs);
+      }
+      break;
+      case Opcode::NEQ_IS: {
+        BINARYOP_IS;
+        stack.push_back(lhs != rhs);
+      }
+      break;
+      case Opcode::NEQ_II: {
+        BINARYOP_II;
+        stack.push_back(lhs != rhs);
       }
       break;
       case Opcode::PERIOD: {

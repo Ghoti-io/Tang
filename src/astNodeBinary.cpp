@@ -85,26 +85,10 @@ void AstNodeBinary::compilePreprocess(Program & program, PreprocessState state) 
 }
 
 void AstNodeBinary::compile(Tang::Program & program) const {
-  if (this->op == Operation::Subtract) {
-    BINARYOP(SUBTRACT_SS, SUBTRACT_SI, SUBTRACT_IS, SUBTRACT_II);
-  }
-  else if (this->op == Operation::LessThan) {
-    BINARYOP(LT_SS, LT_SI, LT_IS, LT_II);
-  }
-
-  // All binary operators require that the lhs be compiled first.
-  this->lhs->compile(program);
-
-  // And and Or require short-circuit evaluation, so don't compile rhs yet.
-  // Everything else needs the rhs compiled.
-  if (this->op != And && this->op != Or) {
-    this->rhs->compile(program);
-  }
-
   // This is a standard binary operator.
   switch (this->op) {
     case Add: {
-      program.addBytecode((uinteger_t)Opcode::ADD);
+      BINARYOP(ADD_SS, ADD_SI, ADD_IS, ADD_II);
       break;
     }
     case Subtract: {
@@ -112,15 +96,15 @@ void AstNodeBinary::compile(Tang::Program & program) const {
       break;
     }
     case Multiply: {
-      program.addBytecode((uinteger_t)Opcode::MULTIPLY);
+      BINARYOP(MULTIPLY_SS, MULTIPLY_SI, MULTIPLY_IS, MULTIPLY_II);
       break;
     }
     case Divide: {
-      program.addBytecode((uinteger_t)Opcode::DIVIDE);
+      BINARYOP(DIVIDE_SS, DIVIDE_SI, DIVIDE_IS, DIVIDE_II);
       break;
     }
     case Modulo: {
-      program.addBytecode((uinteger_t)Opcode::MODULO);
+      BINARYOP(MODULO_SS, MODULO_SI, MODULO_IS, MODULO_II);
       break;
     }
     case LessThan : {
@@ -128,27 +112,28 @@ void AstNodeBinary::compile(Tang::Program & program) const {
       break;
     }
     case LessThanEqual : {
-      program.addBytecode((uinteger_t)Opcode::LTE);
+      BINARYOP(LTE_SS, LTE_SI, LTE_IS, LTE_II);
       break;
     }
     case GreaterThan : {
-      program.addBytecode((uinteger_t)Opcode::GT);
+      BINARYOP(GT_SS, GT_SI, GT_IS, GT_II);
       break;
     }
     case GreaterThanEqual : {
-      program.addBytecode((uinteger_t)Opcode::GTE);
+      BINARYOP(GTE_SS, GTE_SI, GTE_IS, GTE_II);
       break;
     }
     case Equal : {
-      program.addBytecode((uinteger_t)Opcode::EQ);
+      BINARYOP(EQ_SS, EQ_SI, EQ_IS, EQ_II);
       break;
     }
     case NotEqual : {
-      program.addBytecode((uinteger_t)Opcode::NEQ);
+      BINARYOP(NEQ_SS, NEQ_SI, NEQ_IS, NEQ_II);
       break;
     }
     case And : {
       // Evaluate the lhs.
+      this->lhs->compile(program);
       auto conditionFalseJump = program.getBytecode().size();
       program.addBytecode((uinteger_t)Opcode::JMPF);
       program.addBytecode(0);
@@ -163,6 +148,7 @@ void AstNodeBinary::compile(Tang::Program & program) const {
     }
     case Or : {
       // Evaluate the lhs.
+      this->lhs->compile(program);
       auto conditionTrueJump = program.getBytecode().size();
       program.addBytecode((uinteger_t)Opcode::JMPT);
       program.addBytecode(0);

@@ -1,6 +1,6 @@
 /**
  * @file
- * Define the Tang::Program::dumpBytecode method.
+ * Define the Tang::Program::analyze method.
  */
 
 #include <sstream>
@@ -146,8 +146,23 @@ pair<OpcodeOffsets, OpcodePositions> Program::analyze() const {
         ++pc;
         break;
       }
-      case Opcode::ADD: {
+      case Opcode::ADD_SS: {
         ++pc;
+        break;
+      }
+      case Opcode::ADD_SI: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::ADD_IS: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::ADD_II: {
+        DUMPPROGRAMCHECK(2);
+        pc += 3;
         break;
       }
       case Opcode::SUBTRACT_SS: {
@@ -169,16 +184,61 @@ pair<OpcodeOffsets, OpcodePositions> Program::analyze() const {
         pc += 3;
         break;
       }
-      case Opcode::MULTIPLY: {
+      case Opcode::MULTIPLY_SS: {
         ++pc;
         break;
       }
-      case Opcode::DIVIDE: {
+      case Opcode::MULTIPLY_SI: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::MULTIPLY_IS: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::MULTIPLY_II: {
+        DUMPPROGRAMCHECK(2);
+        pc += 3;
+        break;
+      }
+      case Opcode::DIVIDE_SS: {
         ++pc;
         break;
       }
-      case Opcode::MODULO: {
+      case Opcode::DIVIDE_SI: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::DIVIDE_IS: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::DIVIDE_II: {
+        DUMPPROGRAMCHECK(2);
+        pc += 3;
+        break;
+      }
+      case Opcode::MODULO_SS: {
         ++pc;
+        break;
+      }
+      case Opcode::MODULO_SI: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::MODULO_IS: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::MODULO_II: {
+        DUMPPROGRAMCHECK(2);
+        pc += 3;
         break;
       }
       case Opcode::NEGATIVE: {
@@ -205,24 +265,99 @@ pair<OpcodeOffsets, OpcodePositions> Program::analyze() const {
         pc += 3;
         break;
       }
-      case Opcode::LTE: {
+      case Opcode::LTE_SS: {
         ++pc;
         break;
       }
-      case Opcode::GT: {
+      case Opcode::LTE_SI: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::LTE_IS: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::LTE_II: {
+        DUMPPROGRAMCHECK(2);
+        pc += 3;
+        break;
+      }
+      case Opcode::GT_SS: {
         ++pc;
         break;
       }
-      case Opcode::GTE: {
+      case Opcode::GT_SI: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::GT_IS: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::GT_II: {
+        DUMPPROGRAMCHECK(2);
+        pc += 3;
+        break;
+      }
+      case Opcode::GTE_SS: {
         ++pc;
         break;
       }
-      case Opcode::EQ: {
+      case Opcode::GTE_SI: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::GTE_IS: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::GTE_II: {
+        DUMPPROGRAMCHECK(2);
+        pc += 3;
+        break;
+      }
+      case Opcode::EQ_SS: {
         ++pc;
         break;
       }
-      case Opcode::NEQ: {
+      case Opcode::EQ_SI: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::EQ_IS: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::EQ_II: {
+        DUMPPROGRAMCHECK(2);
+        pc += 3;
+        break;
+      }
+      case Opcode::NEQ_SS: {
         ++pc;
+        break;
+      }
+      case Opcode::NEQ_SI: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::NEQ_IS: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::NEQ_II: {
+        DUMPPROGRAMCHECK(2);
+        pc += 3;
         break;
       }
       case Opcode::PERIOD: {
