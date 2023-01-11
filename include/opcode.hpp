@@ -9,6 +9,17 @@
 #include <ostream>
 
 namespace Tang {
+  /**
+   * All possible Opcodes that may be used in the Bytecode.
+   *
+   * For S/I suffixed Opcodes, (S) indicates that a value will be popped from
+   * the stack, and (I) indicates that an index is provided in the bytecode, to
+   * be referenced from the frame pointer (fp) during execution.
+   *
+   * The S/I order in the Opcode indicates the nature (stack or index) of the
+   * associated values.  For example, ADD_SS will add a lhs + rhs.  The lhs
+   * will have been pushed onto the stack first, followed by the rhs.
+   */
   enum class Opcode {
     POP,      ///< Pop a val
     PEEK,     ///< Stack # (from fp): push val from stack #
@@ -35,19 +46,19 @@ namespace Tang {
     ASSIGNINDEX, ///< Pop index, pop collection, pop value,
                  ///<   push (collection[index] = value)
     ADD,      ///< Pop rhs, pop lhs, push lhs + rhs
-    SUBTRACT_SS, ///< Pop rhs, pop lhs, push lhs - rhs
-    SUBTRACT_SI, ///< Get rhsIndex
-                 ///< rhs = stack[rhsIndex], pop lhs, push lhs - rhs
-    SUBTRACT_IS, ///< Get lhsIndex
-                 ///< Pop rhs, lhs = stack[lhsIndex], push lhs - rhs
-    SUBTRACT_II, ///< Get lhsIndex, Get rhsIndex,
-                 ///< rhs = stack[rhsIndex], lhs = stack[lhsIndex], push lhs - rhs
+    SUBTRACT_SS, ///< Push lhs - rhs
+    SUBTRACT_SI, ///< Push lhs - rhs
+    SUBTRACT_IS, ///< Push lhs - rhs
+    SUBTRACT_II, ///< Push lhs - rhs
     MULTIPLY, ///< Pop rhs, pop lhs, push lhs * rhs
     DIVIDE,   ///< Pop rhs, pop lhs, push lhs / rhs
     MODULO,   ///< Pop rhs, pop lhs, push lhs % rhs
     NEGATIVE, ///< Pop val, push negative val
     NOT,      ///< Pop val, push logical not of val
-    LT,       ///< Pop rhs, pop lhs, push lhs < rhs
+    LT_SS,       ///< Push lhs < rhs
+    LT_SI,       ///< Push lhs < rhs
+    LT_IS,       ///< Push lhs < rhs
+    LT_II,       ///< Push lhs < rhs
     LTE,      ///< Pop rhs, pop lhs, push lhs <= rhs
     GT,       ///< Pop rhs, pop lhs, push lhs > rhs
     GTE,      ///< Pop rhs, pop lhs, push lhs >= rhs

@@ -25,6 +25,24 @@ using namespace Tang;
   if (this->bytecode.size() < (pc + (x))) \
     return out.str() + "Error: Opcode truncated\n"
 
+#define DUMPBINARY \
+  out << (Opcode)this->bytecode[pc]; \
+  ++pc;
+
+#define DUMPBINARY_I \
+  DUMPPROGRAMCHECK(1); \
+  out << (Opcode)this->bytecode[pc] \
+    << this->bytecode[pc + 1]; \
+  pc += 2;
+
+#define DUMPBINARY_II \
+  DUMPPROGRAMCHECK(2); \
+  out << (Opcode)this->bytecode[pc] \
+    << this->bytecode[pc + 1] \
+    << ", " \
+    << this->bytecode[pc + 2]; \
+  pc += 3;
+
 string Program::dumpBytecode() const {
   stringstream out;
   int opcodeWidth{12};
@@ -186,31 +204,19 @@ string Program::dumpBytecode() const {
         break;
       }
       case Opcode::SUBTRACT_SS: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+        DUMPBINARY;
         break;
       }
       case Opcode::SUBTRACT_SI: {
-        DUMPPROGRAMCHECK(1);
-        out << (Opcode)this->bytecode[pc]
-          << this->bytecode[pc + 1];
-        pc += 2;
+        DUMPBINARY_I;
         break;
       }
       case Opcode::SUBTRACT_IS: {
-        DUMPPROGRAMCHECK(1);
-        out << (Opcode)this->bytecode[pc]
-          << this->bytecode[pc + 1];
-        pc += 2;
+        DUMPBINARY_I;
         break;
       }
       case Opcode::SUBTRACT_II: {
-        DUMPPROGRAMCHECK(2);
-        out << (Opcode)this->bytecode[pc]
-          << this->bytecode[pc + 1]
-          << ", "
-          << this->bytecode[pc + 1];
-        pc += 3;
+        DUMPBINARY_II;
         break;
       }
       case Opcode::MULTIPLY: {
@@ -238,9 +244,20 @@ string Program::dumpBytecode() const {
         ++pc;
         break;
       }
-      case Opcode::LT: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+      case Opcode::LT_SS: {
+        DUMPBINARY;
+        break;
+      }
+      case Opcode::LT_SI: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::LT_IS: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::LT_II: {
+        DUMPBINARY_II;
         break;
       }
       case Opcode::LTE: {

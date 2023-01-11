@@ -12,6 +12,47 @@
 using namespace std;
 using namespace Tang;
 
+#define BINARYOP(OP_SS, OP_SI, OP_IS, OP_II) \
+    integer_t lhsIndex{-1}, rhsIndex{-1}; \
+    auto & identifier = program.getIdentifiers(); \
+    if (typeid(*this->lhs) == typeid(AstNodeIdentifier)) { \
+      auto & name = static_cast<AstNodeIdentifier &>(*this->lhs).name; \
+      if (identifier.count(name)) { \
+        lhsIndex = identifier.at(name); \
+      } \
+    } \
+    if (typeid(*this->rhs) == typeid(AstNodeIdentifier)) { \
+      auto & name = static_cast<AstNodeIdentifier &>(*this->rhs).name; \
+      if (identifier.count(name)) { \
+        rhsIndex = identifier.at(name); \
+      } \
+    } \
+    if (lhsIndex >= 0) { \
+      if (rhsIndex >= 0) { \
+        program.addBytecode((uinteger_t)Opcode:: OP_II); \
+        program.addBytecode((uinteger_t)lhsIndex); \
+        program.addBytecode((uinteger_t)rhsIndex); \
+      } \
+      else { \
+        this->rhs->compile(program); \
+        program.addBytecode((uinteger_t)Opcode:: OP_IS); \
+        program.addBytecode((uinteger_t)lhsIndex); \
+      } \
+    } \
+    else { \
+      if (rhsIndex >= 0) { \
+        this->lhs->compile(program); \
+        program.addBytecode((uinteger_t)Opcode:: OP_SI); \
+        program.addBytecode((uinteger_t)rhsIndex); \
+      } \
+      else { \
+        this->lhs->compile(program); \
+        this->rhs->compile(program); \
+        program.addBytecode((uinteger_t)Opcode:: OP_SS); \
+      } \
+    } \
+    return;
+
 AstNodeBinary::AstNodeBinary(Operation op, shared_ptr<AstNode> lhs, shared_ptr<AstNode> rhs, Tang::location location) : AstNode(location), op{op}, lhs{lhs}, rhs{rhs} {}
 
 string AstNodeBinary::dump(string indent) const {
@@ -45,45 +86,10 @@ void AstNodeBinary::compilePreprocess(Program & program, PreprocessState state) 
 
 void AstNodeBinary::compile(Tang::Program & program) const {
   if (this->op == Operation::Subtract) {
-    integer_t lhsIndex{-1}, rhsIndex{-1};
-    auto & identifier = program.getIdentifiers();
-    if (typeid(*this->lhs) == typeid(AstNodeIdentifier)) {
-      auto & name = static_cast<AstNodeIdentifier &>(*this->lhs).name;
-      if (identifier.count(name)) {
-        lhsIndex = identifier.at(name);
-      }
-    }
-    if (typeid(*this->rhs) == typeid(AstNodeIdentifier)) {
-      auto & name = static_cast<AstNodeIdentifier &>(*this->rhs).name;
-      if (identifier.count(name)) {
-        rhsIndex = identifier.at(name);
-      }
-    }
-    if (lhsIndex >= 0) {
-      if (rhsIndex >= 0) {
-        program.addBytecode((uinteger_t)Opcode::SUBTRACT_II);
-        program.addBytecode((uinteger_t)lhsIndex);
-        program.addBytecode((uinteger_t)rhsIndex);
-      }
-      else {
-        this->rhs->compile(program);
-        program.addBytecode((uinteger_t)Opcode::SUBTRACT_IS);
-        program.addBytecode((uinteger_t)lhsIndex);
-      }
-    }
-    else {
-      if (rhsIndex >= 0) {
-        this->lhs->compile(program);
-        program.addBytecode((uinteger_t)Opcode::SUBTRACT_SI);
-        program.addBytecode((uinteger_t)rhsIndex);
-      }
-      else {
-        this->lhs->compile(program);
-        this->rhs->compile(program);
-        program.addBytecode((uinteger_t)Opcode::SUBTRACT_SS);
-      }
-    }
-    return;
+    BINARYOP(SUBTRACT_SS, SUBTRACT_SI, SUBTRACT_IS, SUBTRACT_II);
+  }
+  else if (this->op == Operation::LessThan) {
+    BINARYOP(LT_SS, LT_SI, LT_IS, LT_II);
   }
 
   // All binary operators require that the lhs be compiled first.
@@ -102,7 +108,7 @@ void AstNodeBinary::compile(Tang::Program & program) const {
       break;
     }
     case Subtract: {
-      //program.addBytecode((uinteger_t)Opcode::SUBTRACT);
+      BINARYOP(SUBTRACT_SS, SUBTRACT_SI, SUBTRACT_IS, SUBTRACT_II);
       break;
     }
     case Multiply: {
@@ -118,7 +124,7 @@ void AstNodeBinary::compile(Tang::Program & program) const {
       break;
     }
     case LessThan : {
-      program.addBytecode((uinteger_t)Opcode::LT);
+      BINARYOP(LT_SS, LT_SI, LT_IS, LT_II);
       break;
     }
     case LessThanEqual : {

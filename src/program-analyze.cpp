@@ -189,8 +189,20 @@ pair<OpcodeOffsets, OpcodePositions> Program::analyze() const {
         ++pc;
         break;
       }
-      case Opcode::LT: {
+      case Opcode::LT_SS: {
         ++pc;
+        break;
+      }
+      case Opcode::LT_SI: {
+        pc += 2;
+        break;
+      }
+      case Opcode::LT_IS: {
+        pc += 2;
+        break;
+      }
+      case Opcode::LT_II: {
+        pc += 3;
         break;
       }
       case Opcode::LTE: {
