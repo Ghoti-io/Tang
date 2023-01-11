@@ -2342,6 +2342,37 @@ TEST(Library, Tang) {
   }
 }
 
+TEST(Optimization, Subtract) {
+  {
+    auto p1 = tang->compileScript(R"(
+      a = 1;
+      b = 2;
+      print(a - b);
+    )");
+    EXPECT_EQ(p1.execute().out, "-1");
+  }
+  {
+    auto p1 = tang->compileScript(R"(
+      a = 1;
+      print(a - 5);
+    )");
+    EXPECT_EQ(p1.execute().out, "-4");
+  }
+  {
+    auto p1 = tang->compileScript(R"(
+      a = 1;
+      print(5 - a);
+    )");
+    EXPECT_EQ(p1.execute().out, "4");
+  }
+  {
+    auto p1 = tang->compileScript(R"(
+      print(6 - 1);
+    )");
+    EXPECT_EQ(p1.execute().out, "5");
+  }
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

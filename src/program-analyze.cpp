@@ -150,8 +150,23 @@ pair<OpcodeOffsets, OpcodePositions> Program::analyze() const {
         ++pc;
         break;
       }
-      case Opcode::SUBTRACT: {
+      case Opcode::SUBTRACT_SS: {
         ++pc;
+        break;
+      }
+      case Opcode::SUBTRACT_SI: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::SUBTRACT_IS: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::SUBTRACT_II: {
+        DUMPPROGRAMCHECK(2);
+        pc += 3;
         break;
       }
       case Opcode::MULTIPLY: {

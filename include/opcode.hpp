@@ -35,7 +35,13 @@ namespace Tang {
     ASSIGNINDEX, ///< Pop index, pop collection, pop value,
                  ///<   push (collection[index] = value)
     ADD,      ///< Pop rhs, pop lhs, push lhs + rhs
-    SUBTRACT, ///< Pop rhs, pop lhs, push lhs - rhs
+    SUBTRACT_SS, ///< Pop rhs, pop lhs, push lhs - rhs
+    SUBTRACT_SI, ///< Get rhsIndex
+                 ///< rhs = stack[rhsIndex], pop lhs, push lhs - rhs
+    SUBTRACT_IS, ///< Get lhsIndex
+                 ///< Pop rhs, lhs = stack[lhsIndex], push lhs - rhs
+    SUBTRACT_II, ///< Get lhsIndex, Get rhsIndex,
+                 ///< rhs = stack[rhsIndex], lhs = stack[lhsIndex], push lhs - rhs
     MULTIPLY, ///< Pop rhs, pop lhs, push lhs * rhs
     DIVIDE,   ///< Pop rhs, pop lhs, push lhs / rhs
     MODULO,   ///< Pop rhs, pop lhs, push lhs % rhs

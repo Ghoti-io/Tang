@@ -456,7 +456,7 @@ Context Program::execute(ContextData && data) {
         ++pc;
       }
       break;
-      case Opcode::SUBTRACT: {
+      case Opcode::SUBTRACT_SS: {
         STACKCHECK(2);
         auto rhs = stack.back();
         stack.pop_back();
@@ -464,6 +464,42 @@ Context Program::execute(ContextData && data) {
         stack.pop_back();
         stack.push_back(lhs - rhs);
         ++pc;
+      }
+      break;
+      case Opcode::SUBTRACT_SI: {
+        EXECUTEPROGRAMCHECK(1);
+        STACKCHECK(1);
+        auto rhsIndex = this->bytecode[pc + 1];
+        STACKCHECK(rhsIndex);
+        auto & rhs = stack[fp + rhsIndex];
+        auto lhs = stack.back();
+        stack.pop_back();
+        stack.push_back(lhs - rhs);
+        pc += 2;
+      }
+      break;
+      case Opcode::SUBTRACT_IS: {
+        EXECUTEPROGRAMCHECK(1);
+        STACKCHECK(1);
+        auto rhs = stack.back();
+        stack.pop_back();
+        auto lhsIndex = this->bytecode[pc + 1];
+        STACKCHECK(lhsIndex);
+        auto & lhs = stack[fp + lhsIndex];
+        stack.push_back(lhs - rhs);
+        pc += 2;
+      }
+      break;
+      case Opcode::SUBTRACT_II: {
+        EXECUTEPROGRAMCHECK(2);
+        auto lhsIndex = this->bytecode[pc + 1];
+        STACKCHECK(lhsIndex);
+        auto & lhs = stack[fp + lhsIndex];
+        auto rhsIndex = this->bytecode[pc + 2];
+        STACKCHECK(rhsIndex);
+        auto & rhs = stack[fp + rhsIndex];
+        stack.push_back(lhs - rhs);
+        pc += 3;
       }
       break;
       case Opcode::MULTIPLY: {

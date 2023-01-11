@@ -1,5 +1,5 @@
 CXX := g++
-CXXFLAGS := -pedantic-errors -Wall -Wextra -Werror -Wno-error=unused-function -std=c++20 -Og -g
+CXXFLAGS := -pedantic-errors -Wall -Wextra -Werror -Wno-error=unused-function -std=c++20 -O3 -g
 LDFLAGS := -L /usr/lib -lstdc++ -lm `pkg-config --libs --cflags icu-io icu-i18n icu-uc`
 BUILD := ./build
 OBJ_DIR := $(BUILD)/objects
@@ -136,7 +136,8 @@ DEP_ASTNODEINDEX = \
 	$(DEP_ASTNODE)
 DEP_ASTNODEBINARY = \
 	include/astNodeBinary.hpp \
-	$(DEP_ASTNODE)
+	$(DEP_ASTNODE) \
+	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODEBLOCK = \
 	include/astNodeBlock.hpp \
 	$(DEP_ASTNODE)
@@ -163,9 +164,6 @@ DEP_ASTNODEFOR = \
 	$(DEP_ASTNODE)
 DEP_ASTNODEFUNCTIONDECLARATION = \
 	include/astNodeFunctionDeclaration.hpp \
-	$(DEP_ASTNODE)
-DEP_ASTNODEIDENTIFIER = \
-	include/astNodeIdentifier.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODEFUNCTIONCALL = \
 	include/astNodeFunctionCall.hpp \

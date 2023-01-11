@@ -5,6 +5,7 @@
 
 #include <string>
 #include "astNodeBinary.hpp"
+#include "astNodeIdentifier.hpp"
 #include "opcode.hpp"
 #include "program.hpp"
 
@@ -43,6 +44,48 @@ void AstNodeBinary::compilePreprocess(Program & program, PreprocessState state) 
 }
 
 void AstNodeBinary::compile(Tang::Program & program) const {
+  if (this->op == Operation::Subtract) {
+    integer_t lhsIndex{-1}, rhsIndex{-1};
+    auto & identifier = program.getIdentifiers();
+    if (typeid(*this->lhs) == typeid(AstNodeIdentifier)) {
+      auto & name = static_cast<AstNodeIdentifier &>(*this->lhs).name;
+      if (identifier.count(name)) {
+        lhsIndex = identifier.at(name);
+      }
+    }
+    if (typeid(*this->rhs) == typeid(AstNodeIdentifier)) {
+      auto & name = static_cast<AstNodeIdentifier &>(*this->rhs).name;
+      if (identifier.count(name)) {
+        rhsIndex = identifier.at(name);
+      }
+    }
+    if (lhsIndex >= 0) {
+      if (rhsIndex >= 0) {
+        program.addBytecode((uinteger_t)Opcode::SUBTRACT_II);
+        program.addBytecode((uinteger_t)lhsIndex);
+        program.addBytecode((uinteger_t)rhsIndex);
+      }
+      else {
+        this->rhs->compile(program);
+        program.addBytecode((uinteger_t)Opcode::SUBTRACT_IS);
+        program.addBytecode((uinteger_t)lhsIndex);
+      }
+    }
+    else {
+      if (rhsIndex >= 0) {
+        this->lhs->compile(program);
+        program.addBytecode((uinteger_t)Opcode::SUBTRACT_SI);
+        program.addBytecode((uinteger_t)rhsIndex);
+      }
+      else {
+        this->lhs->compile(program);
+        this->rhs->compile(program);
+        program.addBytecode((uinteger_t)Opcode::SUBTRACT_SS);
+      }
+    }
+    return;
+  }
+
   // All binary operators require that the lhs be compiled first.
   this->lhs->compile(program);
 
@@ -59,7 +102,7 @@ void AstNodeBinary::compile(Tang::Program & program) const {
       break;
     }
     case Subtract: {
-      program.addBytecode((uinteger_t)Opcode::SUBTRACT);
+      //program.addBytecode((uinteger_t)Opcode::SUBTRACT);
       break;
     }
     case Multiply: {
