@@ -15,6 +15,19 @@
 using namespace std;
 using namespace Tang;
 
+static set<Opcode> jumpOpcodes_S{
+  Opcode::JMP,
+  Opcode::JMPF_S,
+  Opcode::JMPF_POP,
+  Opcode::JMPT_S,
+  Opcode::JMPT_POP,
+};
+
+static set<Opcode> jumpOpcodes_I{
+  Opcode::JMPF_I,
+  Opcode::JMPT_I,
+};
+
 Program::Program(const string & code, Program::CodeType codeType, std::shared_ptr<Tang::TangBase> tang) : tang{tang}, code{code}, istreamCode{nullopt}, codeType{codeType}, ast{nullptr} {
   this->parse();
   if (this->ast) {
@@ -242,12 +255,21 @@ bool Program::setJumpTarget(size_t opcodeAddress, uinteger_t jumpTarget) {
   if (opcodeAddress >= this->bytecode.size() - 1) {
     return false;
   }
-  // Verify that the opcodeAddress is, in fact, a jump instruction.
-  // TODO
 
-  // Set the instruction.
-  this->bytecode[opcodeAddress + 1] = jumpTarget;
-  return true;
+  // Verify that the opcodeAddress is, in fact, a jump instruction.
+  if (jumpOpcodes_S.count((Opcode)this->bytecode[opcodeAddress])) {
+    // Set the instruction.
+    this->bytecode[opcodeAddress + 1] = jumpTarget;
+    return true;
+  }
+  else if (jumpOpcodes_I.count((Opcode)this->bytecode[opcodeAddress])) {
+    // Set the instruction.
+    this->bytecode[opcodeAddress + 2] = jumpTarget;
+    return true;
+  }
+
+  // The opcodeAddress was not a jump instruction.
+  return false;
 }
 
 bool Program::setFunctionStackDeclaration(size_t opcodeAddress, uinteger_t argc, uinteger_t targetPC) {
