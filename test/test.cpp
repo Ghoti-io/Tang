@@ -541,6 +541,22 @@ TEST(Expression, And) {
   EXPECT_EQ(*p11.execute().result, nullptr);
   auto p12 = tang->compileScript("(a = true) && (a = null); a;");
   EXPECT_EQ(*p12.execute().result, nullptr);
+  {
+    auto p1 = tang->compileScript(R"(
+      a = 1;
+      b = 2;
+      a && b;
+    )");
+    EXPECT_EQ(*p1.execute().result, true);
+  }
+  {
+    auto p1 = tang->compileScript(R"(
+      a = 0;
+      b = 2;
+      a && b;
+    )");
+    EXPECT_EQ(*p1.execute().result, false);
+  }
 }
 
 TEST(Expression, Or) {
@@ -568,6 +584,30 @@ TEST(Expression, Or) {
   EXPECT_EQ(*p11.execute().result, (float_t)2.);
   auto p12 = tang->compileScript("(a = true) || (a = null); a;");
   EXPECT_EQ(*p12.execute().result, true);
+  {
+    auto p1 = tang->compileScript(R"(
+      a = 1;
+      b = 2;
+      a || b;
+    )");
+    EXPECT_EQ(*p1.execute().result, true);
+  }
+  {
+    auto p1 = tang->compileScript(R"(
+      a = 0;
+      b = 2;
+      a || b;
+    )");
+    EXPECT_EQ(*p1.execute().result, true);
+  }
+  {
+    auto p1 = tang->compileScript(R"(
+      a = 0;
+      b = 0;
+      a || b;
+    )");
+    EXPECT_EQ(*p1.execute().result, false);
+  }
 }
 
 TEST(Expression, Ternary) {

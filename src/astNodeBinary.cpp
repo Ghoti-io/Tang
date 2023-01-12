@@ -13,45 +13,78 @@ using namespace std;
 using namespace Tang;
 
 #define BINARYOP(OP_SS, OP_SI, OP_IS, OP_II) \
-    integer_t lhsIndex{-1}, rhsIndex{-1}; \
-    auto & identifier = program.getIdentifiers(); \
-    if (typeid(*this->lhs) == typeid(AstNodeIdentifier)) { \
-      auto & name = static_cast<AstNodeIdentifier &>(*this->lhs).name; \
-      if (identifier.count(name)) { \
-        lhsIndex = identifier.at(name); \
-      } \
+  integer_t lhsIndex{-1}, rhsIndex{-1}; \
+  auto & identifier = program.getIdentifiers(); \
+  if (typeid(*this->lhs) == typeid(AstNodeIdentifier)) { \
+    auto & name = static_cast<AstNodeIdentifier &>(*this->lhs).name; \
+    if (identifier.count(name)) { \
+      lhsIndex = identifier.at(name); \
     } \
-    if (typeid(*this->rhs) == typeid(AstNodeIdentifier)) { \
-      auto & name = static_cast<AstNodeIdentifier &>(*this->rhs).name; \
-      if (identifier.count(name)) { \
-        rhsIndex = identifier.at(name); \
-      } \
+  } \
+  if (typeid(*this->rhs) == typeid(AstNodeIdentifier)) { \
+    auto & name = static_cast<AstNodeIdentifier &>(*this->rhs).name; \
+    if (identifier.count(name)) { \
+      rhsIndex = identifier.at(name); \
     } \
-    if (lhsIndex >= 0) { \
-      if (rhsIndex >= 0) { \
-        program.addBytecode((uinteger_t)Opcode:: OP_II); \
-        program.addBytecode((uinteger_t)lhsIndex); \
-        program.addBytecode((uinteger_t)rhsIndex); \
-      } \
-      else { \
-        this->rhs->compile(program); \
-        program.addBytecode((uinteger_t)Opcode:: OP_IS); \
-        program.addBytecode((uinteger_t)lhsIndex); \
-      } \
+  } \
+  if (lhsIndex >= 0) { \
+    if (rhsIndex >= 0) { \
+      program.addBytecode((uinteger_t)Opcode:: OP_II); \
+      program.addBytecode((uinteger_t)lhsIndex); \
+      program.addBytecode((uinteger_t)rhsIndex); \
     } \
     else { \
-      if (rhsIndex >= 0) { \
-        this->lhs->compile(program); \
-        program.addBytecode((uinteger_t)Opcode:: OP_SI); \
-        program.addBytecode((uinteger_t)rhsIndex); \
-      } \
-      else { \
-        this->lhs->compile(program); \
-        this->rhs->compile(program); \
-        program.addBytecode((uinteger_t)Opcode:: OP_SS); \
-      } \
+      this->rhs->compile(program); \
+      program.addBytecode((uinteger_t)Opcode:: OP_IS); \
+      program.addBytecode((uinteger_t)lhsIndex); \
     } \
-    return;
+  } \
+  else { \
+    if (rhsIndex >= 0) { \
+      this->lhs->compile(program); \
+      program.addBytecode((uinteger_t)Opcode:: OP_SI); \
+      program.addBytecode((uinteger_t)rhsIndex); \
+    } \
+    else { \
+      this->lhs->compile(program); \
+      this->rhs->compile(program); \
+      program.addBytecode((uinteger_t)Opcode:: OP_SS); \
+    } \
+  }
+
+#define LOGICALOP(OP_S, OP_I) \
+  integer_t lhsIndex{-1}; \
+  size_t conditionJump{0}; \
+  auto & identifier = program.getIdentifiers(); \
+  if (typeid(*this->lhs) == typeid(AstNodeIdentifier)) { \
+    auto & name = static_cast<AstNodeIdentifier &>(*this->lhs).name; \
+    if (identifier.count(name)) { \
+      lhsIndex = identifier.at(name); \
+    } \
+  } \
+  if (lhsIndex >= 0) { \
+    conditionJump = program.getBytecode().size(); \
+    program.addBytecode((uinteger_t)Opcode:: OP_I); \
+    program.addBytecode(lhsIndex); \
+    program.addBytecode(0); \
+    this->rhs->compile(program); \
+    auto rhsLeapfrog = program.getBytecode().size(); \
+    program.addBytecode((uinteger_t)Opcode::JMP); \
+    program.addBytecode(0); \
+    program.setJumpTarget(conditionJump, program.getBytecode().size()); \
+    program.addBytecode((uinteger_t)Opcode::PEEK); \
+    program.addBytecode(lhsIndex); \
+    program.setJumpTarget(rhsLeapfrog, program.getBytecode().size()); \
+  } \
+  else { \
+    this->lhs->compile(program); \
+    conditionJump = program.getBytecode().size(); \
+    program.addBytecode((uinteger_t)Opcode:: OP_S); \
+    program.addBytecode(0); \
+    program.addBytecode((uinteger_t)Opcode::POP); \
+    this->rhs->compile(program); \
+    program.setJumpTarget(conditionJump, program.getBytecode().size()); \
+  } \
 
 AstNodeBinary::AstNodeBinary(Operation op, shared_ptr<AstNode> lhs, shared_ptr<AstNode> rhs, Tang::location location) : AstNode(location), op{op}, lhs{lhs}, rhs{rhs} {}
 
@@ -132,33 +165,11 @@ void AstNodeBinary::compile(Tang::Program & program) const {
       break;
     }
     case And : {
-      // Evaluate the lhs.
-      this->lhs->compile(program);
-      auto conditionFalseJump = program.getBytecode().size();
-      program.addBytecode((uinteger_t)Opcode::JMPF_S);
-      program.addBytecode(0);
-
-      // Remove lhs from stack, evaluate rhs.
-      program.addBytecode((uinteger_t)Opcode::POP);
-      this->rhs->compile(program);
-
-      // Set the lhs JMPF target
-      program.setJumpTarget(conditionFalseJump, program.getBytecode().size());
+      LOGICALOP(JMPF_S, JMPF_I);
       break;
     }
     case Or : {
-      // Evaluate the lhs.
-      this->lhs->compile(program);
-      auto conditionTrueJump = program.getBytecode().size();
-      program.addBytecode((uinteger_t)Opcode::JMPT_S);
-      program.addBytecode(0);
-
-      // Remove lhs from stack, evaluate rhs.
-      program.addBytecode((uinteger_t)Opcode::POP);
-      this->rhs->compile(program);
-
-      // Set the lhs JMPT target
-      program.setJumpTarget(conditionTrueJump, program.getBytecode().size());
+      LOGICALOP(JMPT_S, JMPT_I);
       break;
     }
   }
