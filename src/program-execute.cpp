@@ -50,6 +50,19 @@ using namespace Tang;
     break; \
   }
 
+#define CASTOP_S \
+        STACKCHECK(1); \
+        auto operand = stack.back(); \
+        stack.pop_back(); \
+        ++pc;
+
+#define CASTOP_I \
+        EXECUTEPROGRAMCHECK(1); \
+        auto index = this->bytecode[pc + 1]; \
+        STACKCHECK(index); \
+        auto & operand = stack[fp + index]; \
+        pc += 2;
+
 #define UNARYOP_S \
         STACKCHECK(1); \
         auto operand = stack.back(); \
@@ -813,36 +826,44 @@ Context Program::execute(ContextData && data) {
         ++pc;
       }
       break;
-      case Opcode::CASTINTEGER: {
-        STACKCHECK(1);
-        auto operand = stack.back();
-        stack.pop_back();
+      case Opcode::CASTINTEGER_S: {
+        CASTOP_S;
         stack.push_back(operand->__integer());
-        ++pc;
       }
       break;
-      case Opcode::CASTFLOAT: {
-        STACKCHECK(1);
-        auto operand = stack.back();
-        stack.pop_back();
+      case Opcode::CASTINTEGER_I: {
+        CASTOP_I;
+        stack.push_back(operand->__integer());
+      }
+      break;
+      case Opcode::CASTFLOAT_S: {
+        CASTOP_S;
         stack.push_back(operand->__float());
-        ++pc;
       }
       break;
-      case Opcode::CASTBOOLEAN: {
-        STACKCHECK(1);
-        auto operand = stack.back();
-        stack.pop_back();
+      case Opcode::CASTFLOAT_I: {
+        CASTOP_I;
+        stack.push_back(operand->__float());
+      }
+      break;
+      case Opcode::CASTBOOLEAN_S: {
+        CASTOP_S;
         stack.push_back(operand->__boolean());
-        ++pc;
       }
       break;
-      case Opcode::CASTSTRING: {
-        STACKCHECK(1);
-        auto operand = stack.back();
-        stack.pop_back();
+      case Opcode::CASTBOOLEAN_I: {
+        CASTOP_I;
+        stack.push_back(operand->__boolean());
+      }
+      break;
+      case Opcode::CASTSTRING_S: {
+        CASTOP_S;
         stack.push_back(operand->__string());
-        ++pc;
+      }
+      break;
+      case Opcode::CASTSTRING_I: {
+        CASTOP_I;
+        stack.push_back(operand->__string());
       }
       break;
       case Opcode::CALLFUNC: {

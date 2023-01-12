@@ -392,20 +392,40 @@ pair<OpcodeOffsets, OpcodePositions> Program::analyze() const {
         ++pc;
         break;
       }
-      case Opcode::CASTINTEGER: {
+      case Opcode::CASTINTEGER_S: {
         ++pc;
         break;
       }
-      case Opcode::CASTFLOAT: {
+      case Opcode::CASTINTEGER_I: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::CASTFLOAT_S: {
         ++pc;
         break;
       }
-      case Opcode::CASTBOOLEAN: {
+      case Opcode::CASTFLOAT_I: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::CASTBOOLEAN_S: {
         ++pc;
         break;
       }
-      case Opcode::CASTSTRING: {
+      case Opcode::CASTBOOLEAN_I: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::CASTSTRING_S: {
         ++pc;
+        break;
+      }
+      case Opcode::CASTSTRING_I: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
         break;
       }
       case Opcode::CALLFUNC: {

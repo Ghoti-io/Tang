@@ -149,7 +149,8 @@ DEP_ASTNODEBREAK = \
 	$(DEP_ASTNODE)
 DEP_ASTNODECAST = \
 	include/astNodeCast.hpp \
-	$(DEP_ASTNODE)
+	$(DEP_ASTNODE) \
+	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODECONTINUE = \
 	include/astNodeContinue.hpp \
 	$(DEP_ASTNODE)

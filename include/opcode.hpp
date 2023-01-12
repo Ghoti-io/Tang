@@ -100,10 +100,14 @@ namespace Tang {
     GETITERATOR, ///< Pop a collection, push the collection iterator
     ITERATORNEXT,///< Pop an iterator, push the next iterator value
     ISITERATOREND,///< Pop a val, push bool(is val == iterator end)
-    CASTINTEGER, ///< Pop a val, typecast to int, push
-    CASTFLOAT,   ///< Pop a val, typecast to float, push
-    CASTBOOLEAN, ///< Pop a val, typecast to boolean, push
-    CASTSTRING,  ///< Pop a val, typecast to string, push
+    CASTINTEGER_S,///< Typecast to int, push
+    CASTINTEGER_I,///< Typecast to int, push
+    CASTFLOAT_S,  ///< Typecast to float, push
+    CASTFLOAT_I,  ///< Typecast to float, push
+    CASTBOOLEAN_S,///< Typecast to boolean, push
+    CASTBOOLEAN_I,///< Typecast to boolean, push
+    CASTSTRING_S, ///< Typecast to string, push
+    CASTSTRING_I, ///< Typecast to string, push
     CALLFUNC,    ///< Get argc, Pop a function, execute function if argc matches.
     CALLFUNC_I,  ///< Get argc, get index, execute function at index if argc
                  ///<   matches.

@@ -420,24 +420,36 @@ string Program::dumpBytecode() const {
         ++pc;
         break;
       }
-      case Opcode::CASTINTEGER: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+      case Opcode::CASTINTEGER_S: {
+        DUMPBINARY;
         break;
       }
-      case Opcode::CASTFLOAT: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+      case Opcode::CASTINTEGER_I: {
+        DUMPBINARY_I;
         break;
       }
-      case Opcode::CASTBOOLEAN: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+      case Opcode::CASTFLOAT_S: {
+        DUMPBINARY;
         break;
       }
-      case Opcode::CASTSTRING: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+      case Opcode::CASTFLOAT_I: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::CASTBOOLEAN_S: {
+        DUMPBINARY;
+        break;
+      }
+      case Opcode::CASTBOOLEAN_I: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::CASTSTRING_S: {
+        DUMPBINARY;
+        break;
+      }
+      case Opcode::CASTSTRING_I: {
+        DUMPBINARY_I;
         break;
       }
       case Opcode::CALLFUNC: {
