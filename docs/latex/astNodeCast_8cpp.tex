@@ -7,17 +7,54 @@ Define the \mbox{\hyperlink{classTang_1_1AstNodeCast}{Tang\+::\+Ast\+Node\+Cast}
 
 {\ttfamily \#include $<$bit$>$}\newline
 {\ttfamily \#include \char`\"{}ast\+Node\+Cast.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ast\+Node\+Identifier.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}opcode.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}program.\+hpp\char`\"{}}\newline
-Include dependency graph for ast\+Node\+Cast.\+cpp\+:\nopagebreak
+Include dependency graph for ast\+Node\+Cast.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{astNodeCast_8cpp__incl}
 \end{center}
 \end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries CASTOP}(OP\+\_\+S,  OP\+\_\+I)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Define the \mbox{\hyperlink{classTang_1_1AstNodeCast}{Tang\+::\+Ast\+Node\+Cast}} class. 
 
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{astNodeCast_8cpp_ab7f811d66da4639c4145a64ec7b12395}\label{astNodeCast_8cpp_ab7f811d66da4639c4145a64ec7b12395}} 
+\index{astNodeCast.cpp@{astNodeCast.cpp}!CASTOP@{CASTOP}}
+\index{CASTOP@{CASTOP}!astNodeCast.cpp@{astNodeCast.cpp}}
+\doxysubsubsection{\texorpdfstring{CASTOP}{CASTOP}}
+{\footnotesize\ttfamily \#define CASTOP(\begin{DoxyParamCaption}\item[{}]{OP\+\_\+S,  }\item[{}]{OP\+\_\+I }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{macros_8hpp_a48da4f54f29ec5b8a4dfd1a9234f7ee8}{integer\_t}} index\{-\/1\}; \(\backslash\)}
+\DoxyCodeLine{  auto \& identifier = program.getIdentifiers(); \(\backslash\)}
+\DoxyCodeLine{  if (\textcolor{keyword}{typeid}(*this-\/>expression) == \textcolor{keyword}{typeid}(\mbox{\hyperlink{classTang_1_1AstNodeIdentifier}{AstNodeIdentifier}})) \{ \(\backslash\)}
+\DoxyCodeLine{    auto \& name = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classTang_1_1AstNodeIdentifier}{AstNodeIdentifier}} \&\textcolor{keyword}{>}(*this-\/>expression).name; \(\backslash\)}
+\DoxyCodeLine{    if (identifier.count(name)) \{ \(\backslash\)}
+\DoxyCodeLine{      index = identifier.at(name); \(\backslash\)}
+\DoxyCodeLine{    \} \(\backslash\)}
+\DoxyCodeLine{  \} \(\backslash\)}
+\DoxyCodeLine{  if (index >= 0) \{ \(\backslash\)}
+\DoxyCodeLine{    program.addBytecode((\mbox{\hyperlink{macros_8hpp_a361122436ab50159be865d93fb80b527}{uinteger\_t}})Opcode:: OP\_I); \(\backslash\)}
+\DoxyCodeLine{    program.addBytecode((\mbox{\hyperlink{macros_8hpp_a361122436ab50159be865d93fb80b527}{uinteger\_t}})index); \(\backslash\)}
+\DoxyCodeLine{  \} \(\backslash\)}
+\DoxyCodeLine{  else \{ \(\backslash\)}
+\DoxyCodeLine{    this-\/>expression-\/>\mbox{\hyperlink{classTang_1_1AstNodeIdentifier_ae8c87f5d7c44b4281b9606376f1dc20f}{compile}}(program); \(\backslash\)}
+\DoxyCodeLine{    program.addBytecode((\mbox{\hyperlink{macros_8hpp_a361122436ab50159be865d93fb80b527}{uinteger\_t}})Opcode:: OP\_S); \(\backslash\)}
+\DoxyCodeLine{  \} \(\backslash\)}
+\DoxyCodeLine{  return;}
+
+\end{DoxyCode}

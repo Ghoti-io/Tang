@@ -434,9 +434,9 @@
   \item {append}
     \subitem {Tang::ComputedExpressionArray}, \hyperpage{174}
   \item {ARRAY}
-    \subitem {opcode.hpp}, \hyperpage{496}
+    \subitem {opcode.hpp}, \hyperpage{497}
   \item {ASSIGNINDEX}
-    \subitem {opcode.hpp}, \hyperpage{496}
+    \subitem {opcode.hpp}, \hyperpage{497}
   \item {AstNode}
     \subitem {Tang::AstNode}, \hyperpage{18}
   \item {AstNodeArray}
@@ -453,8 +453,10 @@
     \subitem {Tang::AstNodeBreak}, \hyperpage{45}
   \item {AstNodeCast}
     \subitem {Tang::AstNodeCast}, \hyperpage{50}
+  \item {astNodeCast.cpp}
+    \subitem {CASTOP}, \hyperpage{515}
   \item {AstNodeContinue}
-    \subitem {Tang::AstNodeContinue}, \hyperpage{54}
+    \subitem {Tang::AstNodeContinue}, \hyperpage{53}
   \item {AstNodeDoWhile}
     \subitem {Tang::AstNodeDoWhile}, \hyperpage{58}
   \item {AstNodeFloat}
@@ -494,7 +496,7 @@
   \item {AstNodeUnary}
     \subitem {Tang::AstNodeUnary}, \hyperpage{138}
   \item {astNodeUnary.cpp}
-    \subitem {UNARYOP}, \hyperpage{525}
+    \subitem {UNARYOP}, \hyperpage{526}
   \item {AstNodeUse}
     \subitem {Tang::AstNodeUse}, \hyperpage{143}
   \item {AstNodeWhile}
@@ -503,15 +505,15 @@
   \indexspace
 
   \item {BINARYOP\_II}
-    \subitem {program-\/execute.cpp}, \hyperpage{544}
+    \subitem {program-\/execute.cpp}, \hyperpage{545}
   \item {BINARYOP\_IS}
-    \subitem {program-\/execute.cpp}, \hyperpage{544}
+    \subitem {program-\/execute.cpp}, \hyperpage{546}
   \item {BINARYOP\_SI}
-    \subitem {program-\/execute.cpp}, \hyperpage{545}
+    \subitem {program-\/execute.cpp}, \hyperpage{546}
   \item {BINARYOP\_SS}
-    \subitem {program-\/execute.cpp}, \hyperpage{545}
+    \subitem {program-\/execute.cpp}, \hyperpage{546}
   \item {BOOLEAN}
-    \subitem {opcode.hpp}, \hyperpage{496}
+    \subitem {opcode.hpp}, \hyperpage{497}
   \item {Boolean}
     \subitem {Tang::AstNodeCast}, \hyperpage{50}
   \item {build/generated/location.hh}, \hyperpage{441}
@@ -525,13 +527,27 @@
     \subitem {opcode.hpp}, \hyperpage{498}
   \item {CALLFUNC\_I}
     \subitem {opcode.hpp}, \hyperpage{498}
-  \item {CASTBOOLEAN}
+  \item {CASTBOOLEAN\_I}
     \subitem {opcode.hpp}, \hyperpage{498}
-  \item {CASTFLOAT}
+  \item {CASTBOOLEAN\_S}
     \subitem {opcode.hpp}, \hyperpage{498}
-  \item {CASTINTEGER}
+  \item {CASTFLOAT\_I}
     \subitem {opcode.hpp}, \hyperpage{498}
-  \item {CASTSTRING}
+  \item {CASTFLOAT\_S}
+    \subitem {opcode.hpp}, \hyperpage{498}
+  \item {CASTINTEGER\_I}
+    \subitem {opcode.hpp}, \hyperpage{498}
+  \item {CASTINTEGER\_S}
+    \subitem {opcode.hpp}, \hyperpage{498}
+  \item {CASTOP}
+    \subitem {astNodeCast.cpp}, \hyperpage{515}
+  \item {CASTOP\_I}
+    \subitem {program-\/execute.cpp}, \hyperpage{546}
+  \item {CASTOP\_S}
+    \subitem {program-\/execute.cpp}, \hyperpage{547}
+  \item {CASTSTRING\_I}
+    \subitem {opcode.hpp}, \hyperpage{498}
+  \item {CASTSTRING\_S}
     \subitem {opcode.hpp}, \hyperpage{498}
   \item {CodeType}
     \subitem {Tang::Program}, \hyperpage{411}
@@ -576,8 +592,8 @@
     \subitem {Tang::AstNodeBlock}, \hyperpage{38}
     \subitem {Tang::AstNodeBoolean}, \hyperpage{42}
     \subitem {Tang::AstNodeBreak}, \hyperpage{46}
-    \subitem {Tang::AstNodeCast}, \hyperpage{51}
-    \subitem {Tang::AstNodeContinue}, \hyperpage{55}
+    \subitem {Tang::AstNodeCast}, \hyperpage{50}
+    \subitem {Tang::AstNodeContinue}, \hyperpage{54}
     \subitem {Tang::AstNodeDoWhile}, \hyperpage{59}
     \subitem {Tang::AstNodeFloat}, \hyperpage{63}
     \subitem {Tang::AstNodeFor}, \hyperpage{68}
@@ -648,7 +664,7 @@
     \subitem {Tang::AstNodeBoolean}, \hyperpage{41}
     \subitem {Tang::AstNodeBreak}, \hyperpage{45}
     \subitem {Tang::AstNodeCast}, \hyperpage{49}
-    \subitem {Tang::AstNodeContinue}, \hyperpage{54}
+    \subitem {Tang::AstNodeContinue}, \hyperpage{53}
     \subitem {Tang::AstNodeDoWhile}, \hyperpage{58}
     \subitem {Tang::AstNodeFloat}, \hyperpage{62}
     \subitem {Tang::AstNodeFor}, \hyperpage{66}
@@ -731,37 +747,37 @@
 		\hyperpage{358}
     \subitem {Tang::ComputedExpressionString}, \hyperpage{374}
   \item {DUMPBINARY}
-    \subitem {program-\/dumpBytecode.cpp}, \hyperpage{542}
-  \item {DUMPBINARY\_I}
-    \subitem {program-\/dumpBytecode.cpp}, \hyperpage{542}
-  \item {DUMPBINARY\_II}
     \subitem {program-\/dumpBytecode.cpp}, \hyperpage{543}
+  \item {DUMPBINARY\_I}
+    \subitem {program-\/dumpBytecode.cpp}, \hyperpage{543}
+  \item {DUMPBINARY\_II}
+    \subitem {program-\/dumpBytecode.cpp}, \hyperpage{544}
   \item {dumpBytecode}
     \subitem {Tang::Program}, \hyperpage{414}
   \item {DUMPPROGRAMCHECK}
-    \subitem {program-\/analyze.cpp}, \hyperpage{541}
-    \subitem {program-\/dumpBytecode.cpp}, \hyperpage{543}
+    \subitem {program-\/analyze.cpp}, \hyperpage{542}
+    \subitem {program-\/dumpBytecode.cpp}, \hyperpage{544}
 
   \indexspace
 
   \item {EQ\_II}
-    \subitem {opcode.hpp}, \hyperpage{497}
+    \subitem {opcode.hpp}, \hyperpage{498}
   \item {EQ\_IS}
-    \subitem {opcode.hpp}, \hyperpage{497}
+    \subitem {opcode.hpp}, \hyperpage{498}
   \item {EQ\_SI}
-    \subitem {opcode.hpp}, \hyperpage{497}
+    \subitem {opcode.hpp}, \hyperpage{498}
   \item {EQ\_SS}
-    \subitem {opcode.hpp}, \hyperpage{497}
+    \subitem {opcode.hpp}, \hyperpage{498}
   \item {Equal}
     \subitem {Tang::AstNodeBinary}, \hyperpage{32}
   \item {Error}
     \subitem {Tang::Error}, \hyperpage{382}
   \item {error.cpp}
-    \subitem {operator$<$$<$}, \hyperpage{538}
+    \subitem {operator$<$$<$}, \hyperpage{539}
   \item {execute}
     \subitem {Tang::Program}, \hyperpage{415}
   \item {EXECUTEPROGRAMCHECK}
-    \subitem {program-\/execute.cpp}, \hyperpage{545}
+    \subitem {program-\/execute.cpp}, \hyperpage{547}
 
   \indexspace
 
@@ -770,7 +786,7 @@
   \item {Float}
     \subitem {Tang::AstNodeCast}, \hyperpage{50}
   \item {FUNCTION}
-    \subitem {opcode.hpp}, \hyperpage{496}
+    \subitem {opcode.hpp}, \hyperpage{497}
   \item {functionsDeclared}
     \subitem {Tang::Program}, \hyperpage{420}
 
@@ -779,7 +795,7 @@
   \item {GarbageCollected}
     \subitem {Tang::GarbageCollected}, \hyperpage{385, 386}
   \item {garbageCollected.cpp}
-    \subitem {operator$<$$<$}, \hyperpage{539}
+    \subitem {operator$<$$<$}, \hyperpage{540}
   \item {get}
     \subitem {Tang::SingletonObjectPool$<$ T $>$}, \hyperpage{422}
   \item {get\_next\_token}
@@ -849,7 +865,7 @@
   \item {GT\_SS}
     \subitem {opcode.hpp}, \hyperpage{497}
   \item {GTE\_II}
-    \subitem {opcode.hpp}, \hyperpage{497}
+    \subitem {opcode.hpp}, \hyperpage{498}
   \item {GTE\_IS}
     \subitem {opcode.hpp}, \hyperpage{497}
   \item {GTE\_SI}
@@ -862,11 +878,11 @@
   \item {HtmlEscape}
     \subitem {Tang::HtmlEscape}, \hyperpage{400}
   \item {htmlEscape}
-    \subitem {unicodeString.hpp}, \hyperpage{507}
+    \subitem {unicodeString.hpp}, \hyperpage{508}
   \item {HtmlEscapeAscii}
     \subitem {Tang::HtmlEscapeAscii}, \hyperpage{402}
   \item {htmlEscapeAscii}
-    \subitem {unicodeString.hpp}, \hyperpage{507}
+    \subitem {unicodeString.hpp}, \hyperpage{508}
 
   \indexspace
 
@@ -933,8 +949,8 @@
   \item {include/tang.hpp}, \hyperpage{502}
   \item {include/tangBase.hpp}, \hyperpage{503}
   \item {include/tangScanner.hpp}, \hyperpage{504}
-  \item {include/unescape.hpp}, \hyperpage{505}
-  \item {include/unicodeString.hpp}, \hyperpage{506}
+  \item {include/unescape.hpp}, \hyperpage{506}
+  \item {include/unicodeString.hpp}, \hyperpage{507}
   \item {INDEX}
     \subitem {opcode.hpp}, \hyperpage{498}
   \item {INTEGER}
@@ -975,7 +991,7 @@
     \subitem {Tang::AstNodeBoolean}, \hyperpage{41}
     \subitem {Tang::AstNodeBreak}, \hyperpage{45}
     \subitem {Tang::AstNodeCast}, \hyperpage{49}
-    \subitem {Tang::AstNodeContinue}, \hyperpage{54}
+    \subitem {Tang::AstNodeContinue}, \hyperpage{53}
     \subitem {Tang::AstNodeDoWhile}, \hyperpage{58}
     \subitem {Tang::AstNodeFloat}, \hyperpage{62}
     \subitem {Tang::AstNodeFor}, \hyperpage{66}
@@ -1027,13 +1043,17 @@
 
   \item {JMP}
     \subitem {opcode.hpp}, \hyperpage{496}
-  \item {JMPF}
+  \item {JMPF\_I}
     \subitem {opcode.hpp}, \hyperpage{496}
   \item {JMPF\_POP}
     \subitem {opcode.hpp}, \hyperpage{496}
-  \item {JMPT}
+  \item {JMPF\_S}
+    \subitem {opcode.hpp}, \hyperpage{496}
+  \item {JMPT\_I}
     \subitem {opcode.hpp}, \hyperpage{496}
   \item {JMPT\_POP}
+    \subitem {opcode.hpp}, \hyperpage{496}
+  \item {JMPT\_S}
     \subitem {opcode.hpp}, \hyperpage{496}
 
   \indexspace
@@ -1046,12 +1066,12 @@
   \item {LessThanEqual}
     \subitem {Tang::AstNodeBinary}, \hyperpage{32}
   \item {LIBRARY}
-    \subitem {opcode.hpp}, \hyperpage{496}
-    \subitem {tangBase.cpp}, \hyperpage{549}
+    \subitem {opcode.hpp}, \hyperpage{497}
+    \subitem {tangBase.cpp}, \hyperpage{550}
   \item {LIBRARYCOPY}
-    \subitem {opcode.hpp}, \hyperpage{496}
+    \subitem {opcode.hpp}, \hyperpage{497}
   \item {LIBRARYSAVE}
-    \subitem {opcode.hpp}, \hyperpage{496}
+    \subitem {opcode.hpp}, \hyperpage{497}
   \item {location.hh}
     \subitem {operator$<$$<$}, \hyperpage{442, 443}
   \item {LT\_II}
@@ -1099,7 +1119,7 @@
     \subitem {Tang::ComputedExpressionString}, \hyperpage{379}
     \subitem {Tang::GarbageCollected}, \hyperpage{387}
   \item {MAP}
-    \subitem {opcode.hpp}, \hyperpage{496}
+    \subitem {opcode.hpp}, \hyperpage{497}
   \item {Modulo}
     \subitem {Tang::AstNodeBinary}, \hyperpage{32}
   \item {MODULO\_II}
@@ -1130,13 +1150,13 @@
   \item {NEGATIVE\_S}
     \subitem {opcode.hpp}, \hyperpage{497}
   \item {NEQ\_II}
-    \subitem {opcode.hpp}, \hyperpage{497}
+    \subitem {opcode.hpp}, \hyperpage{498}
   \item {NEQ\_IS}
-    \subitem {opcode.hpp}, \hyperpage{497}
+    \subitem {opcode.hpp}, \hyperpage{498}
   \item {NEQ\_SI}
-    \subitem {opcode.hpp}, \hyperpage{497}
+    \subitem {opcode.hpp}, \hyperpage{498}
   \item {NEQ\_SS}
-    \subitem {opcode.hpp}, \hyperpage{497}
+    \subitem {opcode.hpp}, \hyperpage{498}
   \item {Not}
     \subitem {Tang::AstNodeUnary}, \hyperpage{138}
   \item {NOT\_I}
@@ -1157,32 +1177,36 @@
     \subitem {ADD\_IS}, \hyperpage{497}
     \subitem {ADD\_SI}, \hyperpage{497}
     \subitem {ADD\_SS}, \hyperpage{497}
-    \subitem {ARRAY}, \hyperpage{496}
-    \subitem {ASSIGNINDEX}, \hyperpage{496}
-    \subitem {BOOLEAN}, \hyperpage{496}
+    \subitem {ARRAY}, \hyperpage{497}
+    \subitem {ASSIGNINDEX}, \hyperpage{497}
+    \subitem {BOOLEAN}, \hyperpage{497}
     \subitem {CALLFUNC}, \hyperpage{498}
     \subitem {CALLFUNC\_I}, \hyperpage{498}
-    \subitem {CASTBOOLEAN}, \hyperpage{498}
-    \subitem {CASTFLOAT}, \hyperpage{498}
-    \subitem {CASTINTEGER}, \hyperpage{498}
-    \subitem {CASTSTRING}, \hyperpage{498}
+    \subitem {CASTBOOLEAN\_I}, \hyperpage{498}
+    \subitem {CASTBOOLEAN\_S}, \hyperpage{498}
+    \subitem {CASTFLOAT\_I}, \hyperpage{498}
+    \subitem {CASTFLOAT\_S}, \hyperpage{498}
+    \subitem {CASTINTEGER\_I}, \hyperpage{498}
+    \subitem {CASTINTEGER\_S}, \hyperpage{498}
+    \subitem {CASTSTRING\_I}, \hyperpage{498}
+    \subitem {CASTSTRING\_S}, \hyperpage{498}
     \subitem {COPY}, \hyperpage{496}
     \subitem {DIVIDE\_II}, \hyperpage{497}
     \subitem {DIVIDE\_IS}, \hyperpage{497}
     \subitem {DIVIDE\_SI}, \hyperpage{497}
     \subitem {DIVIDE\_SS}, \hyperpage{497}
-    \subitem {EQ\_II}, \hyperpage{497}
-    \subitem {EQ\_IS}, \hyperpage{497}
-    \subitem {EQ\_SI}, \hyperpage{497}
-    \subitem {EQ\_SS}, \hyperpage{497}
+    \subitem {EQ\_II}, \hyperpage{498}
+    \subitem {EQ\_IS}, \hyperpage{498}
+    \subitem {EQ\_SI}, \hyperpage{498}
+    \subitem {EQ\_SS}, \hyperpage{498}
     \subitem {FLOAT}, \hyperpage{496}
-    \subitem {FUNCTION}, \hyperpage{496}
+    \subitem {FUNCTION}, \hyperpage{497}
     \subitem {GETITERATOR}, \hyperpage{498}
     \subitem {GT\_II}, \hyperpage{497}
     \subitem {GT\_IS}, \hyperpage{497}
     \subitem {GT\_SI}, \hyperpage{497}
     \subitem {GT\_SS}, \hyperpage{497}
-    \subitem {GTE\_II}, \hyperpage{497}
+    \subitem {GTE\_II}, \hyperpage{498}
     \subitem {GTE\_IS}, \hyperpage{497}
     \subitem {GTE\_SI}, \hyperpage{497}
     \subitem {GTE\_SS}, \hyperpage{497}
@@ -1191,13 +1215,15 @@
     \subitem {ISITERATOREND}, \hyperpage{498}
     \subitem {ITERATORNEXT}, \hyperpage{498}
     \subitem {JMP}, \hyperpage{496}
-    \subitem {JMPF}, \hyperpage{496}
+    \subitem {JMPF\_I}, \hyperpage{496}
     \subitem {JMPF\_POP}, \hyperpage{496}
-    \subitem {JMPT}, \hyperpage{496}
+    \subitem {JMPF\_S}, \hyperpage{496}
+    \subitem {JMPT\_I}, \hyperpage{496}
     \subitem {JMPT\_POP}, \hyperpage{496}
-    \subitem {LIBRARY}, \hyperpage{496}
-    \subitem {LIBRARYCOPY}, \hyperpage{496}
-    \subitem {LIBRARYSAVE}, \hyperpage{496}
+    \subitem {JMPT\_S}, \hyperpage{496}
+    \subitem {LIBRARY}, \hyperpage{497}
+    \subitem {LIBRARYCOPY}, \hyperpage{497}
+    \subitem {LIBRARYSAVE}, \hyperpage{497}
     \subitem {LT\_II}, \hyperpage{497}
     \subitem {LT\_IS}, \hyperpage{497}
     \subitem {LT\_SI}, \hyperpage{497}
@@ -1206,7 +1232,7 @@
     \subitem {LTE\_IS}, \hyperpage{497}
     \subitem {LTE\_SI}, \hyperpage{497}
     \subitem {LTE\_SS}, \hyperpage{497}
-    \subitem {MAP}, \hyperpage{496}
+    \subitem {MAP}, \hyperpage{497}
     \subitem {MODULO\_II}, \hyperpage{497}
     \subitem {MODULO\_IS}, \hyperpage{497}
     \subitem {MODULO\_SI}, \hyperpage{497}
@@ -1217,23 +1243,23 @@
     \subitem {MULTIPLY\_SS}, \hyperpage{497}
     \subitem {NEGATIVE\_I}, \hyperpage{497}
     \subitem {NEGATIVE\_S}, \hyperpage{497}
-    \subitem {NEQ\_II}, \hyperpage{497}
-    \subitem {NEQ\_IS}, \hyperpage{497}
-    \subitem {NEQ\_SI}, \hyperpage{497}
-    \subitem {NEQ\_SS}, \hyperpage{497}
+    \subitem {NEQ\_II}, \hyperpage{498}
+    \subitem {NEQ\_IS}, \hyperpage{498}
+    \subitem {NEQ\_SI}, \hyperpage{498}
+    \subitem {NEQ\_SS}, \hyperpage{498}
     \subitem {NOT\_I}, \hyperpage{497}
     \subitem {NOT\_S}, \hyperpage{497}
     \subitem {NULLVAL}, \hyperpage{496}
     \subitem {Opcode}, \hyperpage{496}
     \subitem {operator$<$$<$}, \hyperpage{498}
     \subitem {PEEK}, \hyperpage{496}
-    \subitem {PERIOD}, \hyperpage{497}
+    \subitem {PERIOD}, \hyperpage{498}
     \subitem {POKE}, \hyperpage{496}
     \subitem {POP}, \hyperpage{496}
     \subitem {PRINT}, \hyperpage{498}
     \subitem {RETURN}, \hyperpage{498}
     \subitem {SLICE}, \hyperpage{498}
-    \subitem {STRING}, \hyperpage{496}
+    \subitem {STRING}, \hyperpage{497}
     \subitem {SUBTRACT\_II}, \hyperpage{497}
     \subitem {SUBTRACT\_IS}, \hyperpage{497}
     \subitem {SUBTRACT\_SI}, \hyperpage{497}
@@ -1254,8 +1280,8 @@
     \subitem {Tang::GarbageCollected}, \hyperpage{393}
     \subitem {Tang::UnicodeString}, \hyperpage{436}
   \item {operator$<$$<$}
-    \subitem {error.cpp}, \hyperpage{538}
-    \subitem {garbageCollected.cpp}, \hyperpage{539}
+    \subitem {error.cpp}, \hyperpage{539}
+    \subitem {garbageCollected.cpp}, \hyperpage{540}
     \subitem {location.hh}, \hyperpage{442, 443}
     \subitem {opcode.hpp}, \hyperpage{498}
     \subitem {Tang::Error}, \hyperpage{382}
@@ -1299,9 +1325,9 @@
   \item {PercentEncode}
     \subitem {Tang::PercentEncode}, \hyperpage{406}
   \item {percentEncode}
-    \subitem {unicodeString.hpp}, \hyperpage{508}
+    \subitem {unicodeString.hpp}, \hyperpage{509}
   \item {PERIOD}
-    \subitem {opcode.hpp}, \hyperpage{497}
+    \subitem {opcode.hpp}, \hyperpage{498}
   \item {POKE}
     \subitem {opcode.hpp}, \hyperpage{496}
   \item {POP}
@@ -1319,7 +1345,7 @@
     \subitem {Tang::AstNodeBoolean}, \hyperpage{41}
     \subitem {Tang::AstNodeBreak}, \hyperpage{45}
     \subitem {Tang::AstNodeCast}, \hyperpage{49}
-    \subitem {Tang::AstNodeContinue}, \hyperpage{54}
+    \subitem {Tang::AstNodeContinue}, \hyperpage{53}
     \subitem {Tang::AstNodeDoWhile}, \hyperpage{58}
     \subitem {Tang::AstNodeFloat}, \hyperpage{62}
     \subitem {Tang::AstNodeFor}, \hyperpage{66}
@@ -1346,21 +1372,23 @@
   \item {Program}
     \subitem {Tang::Program}, \hyperpage{411, 412}
   \item {program-\/analyze.cpp}
-    \subitem {DUMPPROGRAMCHECK}, \hyperpage{541}
+    \subitem {DUMPPROGRAMCHECK}, \hyperpage{542}
   \item {program-\/dumpBytecode.cpp}
-    \subitem {DUMPBINARY}, \hyperpage{542}
-    \subitem {DUMPBINARY\_I}, \hyperpage{542}
-    \subitem {DUMPBINARY\_II}, \hyperpage{543}
-    \subitem {DUMPPROGRAMCHECK}, \hyperpage{543}
+    \subitem {DUMPBINARY}, \hyperpage{543}
+    \subitem {DUMPBINARY\_I}, \hyperpage{543}
+    \subitem {DUMPBINARY\_II}, \hyperpage{544}
+    \subitem {DUMPPROGRAMCHECK}, \hyperpage{544}
   \item {program-\/execute.cpp}
-    \subitem {BINARYOP\_II}, \hyperpage{544}
-    \subitem {BINARYOP\_IS}, \hyperpage{544}
-    \subitem {BINARYOP\_SI}, \hyperpage{545}
-    \subitem {BINARYOP\_SS}, \hyperpage{545}
-    \subitem {EXECUTEPROGRAMCHECK}, \hyperpage{545}
-    \subitem {STACKCHECK}, \hyperpage{546}
-    \subitem {UNARYOP\_I}, \hyperpage{546}
-    \subitem {UNARYOP\_S}, \hyperpage{546}
+    \subitem {BINARYOP\_II}, \hyperpage{545}
+    \subitem {BINARYOP\_IS}, \hyperpage{546}
+    \subitem {BINARYOP\_SI}, \hyperpage{546}
+    \subitem {BINARYOP\_SS}, \hyperpage{546}
+    \subitem {CASTOP\_I}, \hyperpage{546}
+    \subitem {CASTOP\_S}, \hyperpage{547}
+    \subitem {EXECUTEPROGRAMCHECK}, \hyperpage{547}
+    \subitem {STACKCHECK}, \hyperpage{547}
+    \subitem {UNARYOP\_I}, \hyperpage{548}
+    \subitem {UNARYOP\_S}, \hyperpage{548}
   \item {program.hpp}
     \subitem {OpcodePositions}, \hyperpage{501}
   \item {pushEnvironment}
@@ -1389,71 +1417,71 @@
     \subitem {Tang::Program}, \hyperpage{420}
   \item {SLICE}
     \subitem {opcode.hpp}, \hyperpage{498}
-  \item {src/astNode.cpp}, \hyperpage{509}
-  \item {src/astNodeArray.cpp}, \hyperpage{510}
-  \item {src/astNodeAssign.cpp}, \hyperpage{511}
-  \item {src/astNodeBinary.cpp}, \hyperpage{511}
-  \item {src/astNodeBlock.cpp}, \hyperpage{512}
-  \item {src/astNodeBoolean.cpp}, \hyperpage{512}
-  \item {src/astNodeBreak.cpp}, \hyperpage{513}
-  \item {src/astNodeCast.cpp}, \hyperpage{514}
-  \item {src/astNodeContinue.cpp}, \hyperpage{514}
-  \item {src/astNodeDoWhile.cpp}, \hyperpage{515}
-  \item {src/astNodeFloat.cpp}, \hyperpage{515}
-  \item {src/astNodeFor.cpp}, \hyperpage{516}
-  \item {src/astNodeFunctionCall.cpp}, \hyperpage{516}
-  \item {src/astNodeFunctionDeclaration.cpp}, \hyperpage{517}
-  \item {src/astNodeIdentifier.cpp}, \hyperpage{517}
-  \item {src/astNodeIfElse.cpp}, \hyperpage{518}
-  \item {src/astNodeIndex.cpp}, \hyperpage{518}
-  \item {src/astNodeInteger.cpp}, \hyperpage{519}
-  \item {src/astNodeLibrary.cpp}, \hyperpage{520}
-  \item {src/astNodeMap.cpp}, \hyperpage{520}
-  \item {src/astNodePeriod.cpp}, \hyperpage{521}
-  \item {src/astNodePrint.cpp}, \hyperpage{521}
-  \item {src/astNodeRangedFor.cpp}, \hyperpage{522}
-  \item {src/astNodeReturn.cpp}, \hyperpage{522}
-  \item {src/astNodeSlice.cpp}, \hyperpage{523}
-  \item {src/astNodeString.cpp}, \hyperpage{524}
-  \item {src/astNodeTernary.cpp}, \hyperpage{524}
-  \item {src/astNodeUnary.cpp}, \hyperpage{525}
-  \item {src/astNodeUse.cpp}, \hyperpage{526}
-  \item {src/astNodeWhile.cpp}, \hyperpage{527}
-  \item {src/computedExpression.cpp}, \hyperpage{527}
-  \item {src/computedExpressionArray.cpp}, \hyperpage{528}
-  \item {src/computedExpressionBoolean.cpp}, \hyperpage{528}
-  \item {src/computedExpressionCompiledFunction.cpp}, \hyperpage{529}
-  \item {src/computedExpressionError.cpp}, \hyperpage{530}
-  \item {src/computedExpressionFloat.cpp}, \hyperpage{530}
-  \item {src/computedExpressionInteger.cpp}, \hyperpage{531}
-  \item {src/computedExpressionIterator.cpp}, \hyperpage{531}
-  \item {src/computedExpressionIteratorEnd.cpp}, \hyperpage{532}
-  \item {src/computedExpressionLibrary.cpp}, \hyperpage{533}
-  \item {src/computedExpressionLibraryMath.cpp}, \hyperpage{533}
-  \item {src/computedExpressionLibraryTang.cpp}, \hyperpage{534}
-  \item {src/computedExpressionMap.cpp}, \hyperpage{534}
+  \item {src/astNode.cpp}, \hyperpage{510}
+  \item {src/astNodeArray.cpp}, \hyperpage{511}
+  \item {src/astNodeAssign.cpp}, \hyperpage{512}
+  \item {src/astNodeBinary.cpp}, \hyperpage{512}
+  \item {src/astNodeBlock.cpp}, \hyperpage{513}
+  \item {src/astNodeBoolean.cpp}, \hyperpage{513}
+  \item {src/astNodeBreak.cpp}, \hyperpage{514}
+  \item {src/astNodeCast.cpp}, \hyperpage{515}
+  \item {src/astNodeContinue.cpp}, \hyperpage{516}
+  \item {src/astNodeDoWhile.cpp}, \hyperpage{516}
+  \item {src/astNodeFloat.cpp}, \hyperpage{517}
+  \item {src/astNodeFor.cpp}, \hyperpage{517}
+  \item {src/astNodeFunctionCall.cpp}, \hyperpage{518}
+  \item {src/astNodeFunctionDeclaration.cpp}, \hyperpage{518}
+  \item {src/astNodeIdentifier.cpp}, \hyperpage{519}
+  \item {src/astNodeIfElse.cpp}, \hyperpage{519}
+  \item {src/astNodeIndex.cpp}, \hyperpage{520}
+  \item {src/astNodeInteger.cpp}, \hyperpage{520}
+  \item {src/astNodeLibrary.cpp}, \hyperpage{521}
+  \item {src/astNodeMap.cpp}, \hyperpage{521}
+  \item {src/astNodePeriod.cpp}, \hyperpage{522}
+  \item {src/astNodePrint.cpp}, \hyperpage{522}
+  \item {src/astNodeRangedFor.cpp}, \hyperpage{523}
+  \item {src/astNodeReturn.cpp}, \hyperpage{523}
+  \item {src/astNodeSlice.cpp}, \hyperpage{524}
+  \item {src/astNodeString.cpp}, \hyperpage{525}
+  \item {src/astNodeTernary.cpp}, \hyperpage{525}
+  \item {src/astNodeUnary.cpp}, \hyperpage{526}
+  \item {src/astNodeUse.cpp}, \hyperpage{527}
+  \item {src/astNodeWhile.cpp}, \hyperpage{528}
+  \item {src/computedExpression.cpp}, \hyperpage{528}
+  \item {src/computedExpressionArray.cpp}, \hyperpage{529}
+  \item {src/computedExpressionBoolean.cpp}, \hyperpage{529}
+  \item {src/computedExpressionCompiledFunction.cpp}, \hyperpage{530}
+  \item {src/computedExpressionError.cpp}, \hyperpage{531}
+  \item {src/computedExpressionFloat.cpp}, \hyperpage{531}
+  \item {src/computedExpressionInteger.cpp}, \hyperpage{532}
+  \item {src/computedExpressionIterator.cpp}, \hyperpage{532}
+  \item {src/computedExpressionIteratorEnd.cpp}, \hyperpage{533}
+  \item {src/computedExpressionLibrary.cpp}, \hyperpage{534}
+  \item {src/computedExpressionLibraryMath.cpp}, \hyperpage{534}
+  \item {src/computedExpressionLibraryTang.cpp}, \hyperpage{535}
+  \item {src/computedExpressionMap.cpp}, \hyperpage{535}
   \item {src/computedExpressionNativeBoundFunction.cpp}, 
-		\hyperpage{535}
-  \item {src/computedExpressionNativeFunction.cpp}, \hyperpage{535}
-  \item {src/computedExpressionNativeLibraryFunction.cpp}, 
 		\hyperpage{536}
-  \item {src/computedExpressionString.cpp}, \hyperpage{537}
-  \item {src/context.cpp}, \hyperpage{537}
-  \item {src/error.cpp}, \hyperpage{538}
-  \item {src/garbageCollected.cpp}, \hyperpage{539}
-  \item {src/opcode.cpp}, \hyperpage{540}
-  \item {src/program-\/analyze.cpp}, \hyperpage{540}
-  \item {src/program-\/dumpBytecode.cpp}, \hyperpage{542}
-  \item {src/program-\/execute.cpp}, \hyperpage{543}
-  \item {src/program-\/optimize.cpp}, \hyperpage{547}
-  \item {src/program.cpp}, \hyperpage{547}
-  \item {src/tang.cpp}, \hyperpage{548}
-  \item {src/tangBase.cpp}, \hyperpage{548}
-  \item {src/unicodeString.cpp}, \hyperpage{549}
+  \item {src/computedExpressionNativeFunction.cpp}, \hyperpage{536}
+  \item {src/computedExpressionNativeLibraryFunction.cpp}, 
+		\hyperpage{537}
+  \item {src/computedExpressionString.cpp}, \hyperpage{538}
+  \item {src/context.cpp}, \hyperpage{538}
+  \item {src/error.cpp}, \hyperpage{539}
+  \item {src/garbageCollected.cpp}, \hyperpage{540}
+  \item {src/opcode.cpp}, \hyperpage{541}
+  \item {src/program-\/analyze.cpp}, \hyperpage{541}
+  \item {src/program-\/dumpBytecode.cpp}, \hyperpage{543}
+  \item {src/program-\/execute.cpp}, \hyperpage{544}
+  \item {src/program-\/optimize.cpp}, \hyperpage{548}
+  \item {src/program.cpp}, \hyperpage{549}
+  \item {src/tang.cpp}, \hyperpage{549}
+  \item {src/tangBase.cpp}, \hyperpage{550}
+  \item {src/unicodeString.cpp}, \hyperpage{551}
   \item {STACKCHECK}
-    \subitem {program-\/execute.cpp}, \hyperpage{546}
+    \subitem {program-\/execute.cpp}, \hyperpage{547}
   \item {STRING}
-    \subitem {opcode.hpp}, \hyperpage{496}
+    \subitem {opcode.hpp}, \hyperpage{497}
   \item {String}
     \subitem {Tang::AstNodeCast}, \hyperpage{50}
   \item {substr}
@@ -1545,7 +1573,7 @@
     \subitem {AstNodeCast}, \hyperpage{50}
     \subitem {Boolean}, \hyperpage{50}
     \subitem {compile}, \hyperpage{50}
-    \subitem {compilePreprocess}, \hyperpage{51}
+    \subitem {compilePreprocess}, \hyperpage{50}
     \subitem {Default}, \hyperpage{49}
     \subitem {dump}, \hyperpage{51}
     \subitem {Float}, \hyperpage{50}
@@ -1554,15 +1582,15 @@
     \subitem {PreprocessState}, \hyperpage{49}
     \subitem {String}, \hyperpage{50}
     \subitem {Type}, \hyperpage{49}
-  \item {Tang::AstNodeContinue}, \hyperpage{52}
-    \subitem {AstNodeContinue}, \hyperpage{54}
+  \item {Tang::AstNodeContinue}, \hyperpage{51}
+    \subitem {AstNodeContinue}, \hyperpage{53}
     \subitem {compile}, \hyperpage{54}
-    \subitem {compilePreprocess}, \hyperpage{55}
-    \subitem {Default}, \hyperpage{54}
+    \subitem {compilePreprocess}, \hyperpage{54}
+    \subitem {Default}, \hyperpage{53}
     \subitem {dump}, \hyperpage{55}
-    \subitem {IsAssignment}, \hyperpage{54}
-    \subitem {PreprocessState}, \hyperpage{54}
-  \item {Tang::AstNodeDoWhile}, \hyperpage{56}
+    \subitem {IsAssignment}, \hyperpage{53}
+    \subitem {PreprocessState}, \hyperpage{53}
+  \item {Tang::AstNodeDoWhile}, \hyperpage{55}
     \subitem {AstNodeDoWhile}, \hyperpage{58}
     \subitem {compile}, \hyperpage{59}
     \subitem {compilePreprocess}, \hyperpage{59}
@@ -2267,15 +2295,15 @@
   \item {TangBase}
     \subitem {Tang::TangBase}, \hyperpage{425}
   \item {tangBase.cpp}
-    \subitem {LIBRARY}, \hyperpage{549}
+    \subitem {LIBRARY}, \hyperpage{550}
   \item {TangScanner}
     \subitem {Tang::TangScanner}, \hyperpage{430}
   \item {Template}
     \subitem {Tang::Program}, \hyperpage{411}
-  \item {test/test.cpp}, \hyperpage{550}
-  \item {test/testGarbageCollected.cpp}, \hyperpage{552}
-  \item {test/testSingletonObjectPool.cpp}, \hyperpage{553}
-  \item {test/testUnicodeString.cpp}, \hyperpage{553}
+  \item {test/test.cpp}, \hyperpage{551}
+  \item {test/testGarbageCollected.cpp}, \hyperpage{553}
+  \item {test/testSingletonObjectPool.cpp}, \hyperpage{554}
+  \item {test/testUnicodeString.cpp}, \hyperpage{555}
   \item {Trusted}
     \subitem {Tang::UnicodeString}, \hyperpage{435}
   \item {Type}
@@ -2286,20 +2314,20 @@
   \indexspace
 
   \item {UNARYOP}
-    \subitem {astNodeUnary.cpp}, \hyperpage{525}
+    \subitem {astNodeUnary.cpp}, \hyperpage{526}
   \item {UNARYOP\_I}
-    \subitem {program-\/execute.cpp}, \hyperpage{546}
+    \subitem {program-\/execute.cpp}, \hyperpage{548}
   \item {UNARYOP\_S}
-    \subitem {program-\/execute.cpp}, \hyperpage{546}
+    \subitem {program-\/execute.cpp}, \hyperpage{548}
   \item {Unescape}
     \subitem {Tang::Unescape}, \hyperpage{432}
   \item {unescape}
-    \subitem {unicodeString.hpp}, \hyperpage{509}
+    \subitem {unicodeString.hpp}, \hyperpage{510}
   \item {unicodeString.hpp}
-    \subitem {htmlEscape}, \hyperpage{507}
-    \subitem {htmlEscapeAscii}, \hyperpage{507}
-    \subitem {percentEncode}, \hyperpage{508}
-    \subitem {unescape}, \hyperpage{509}
+    \subitem {htmlEscape}, \hyperpage{508}
+    \subitem {htmlEscapeAscii}, \hyperpage{508}
+    \subitem {percentEncode}, \hyperpage{509}
+    \subitem {unescape}, \hyperpage{510}
   \item {Untrusted}
     \subitem {Tang::UnicodeString}, \hyperpage{435}
 

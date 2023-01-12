@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"classTang_1_1AstNodeFunctionCall.html#ae9d85fcadc7bffb2799c89ea8938c24f":[1,0,0,12,4],
+"classTang_1_1AstNodeFunctionDeclaration.html":[1,0,0,13],
 "classTang_1_1AstNodeFunctionDeclaration.html#a1c4ca7dac3f31c69dd50a89492f3670d":[1,0,0,13,5],
 "classTang_1_1AstNodeFunctionDeclaration.html#a229132791787019f85fe9af886043b86":[1,0,0,13,1],
 "classTang_1_1AstNodeFunctionDeclaration.html#a41e8328d5a342163a5aabcc4cb8f1b5e":[1,0,0,13,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX1 =
 "classTang_1_1ComputedExpressionArray.html#a76aaf726b67cedb54b6b3c75c834645f":[1,0,0,31,29],
 "classTang_1_1ComputedExpressionArray.html#a7ac5773e7e1c7f4b7c7f8dcd29bfa00b":[1,0,0,31,12],
 "classTang_1_1ComputedExpressionArray.html#a7dc724830081b12709885b0c563d7eef":[1,0,0,31,3],
-"classTang_1_1ComputedExpressionArray.html#a8e779d014cbb877f078d61a2ff91603d":[1,0,0,31,15],
-"classTang_1_1ComputedExpressionArray.html#a8f1c04c03b8c7b97ef2ea1efd2270b07":[1,0,0,31,11],
-"classTang_1_1ComputedExpressionArray.html#a907104a9d090d21e9bcc487b696738c4":[1,0,0,31,24]
+"classTang_1_1ComputedExpressionArray.html#a8e779d014cbb877f078d61a2ff91603d":[1,0,0,31,15]
 };

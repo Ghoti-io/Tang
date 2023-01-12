@@ -169,6 +169,10 @@ Macros</h2></td></tr>
 <tr class="memitem:a80c4bdcb0e9c9c0eebdb1488ad68aa38"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program-execute_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38">STACKCHECK</a>(x)</td></tr>
 <tr class="memdesc:a80c4bdcb0e9c9c0eebdb1488ad68aa38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify the size of the stack vector so that it may be safely accessed.  <a href="program-execute_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38">More...</a><br /></td></tr>
 <tr class="separator:a80c4bdcb0e9c9c0eebdb1488ad68aa38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dcde88dabdc927ee94e2b87e126b601"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>CASTOP_S</b></td></tr>
+<tr class="separator:a0dcde88dabdc927ee94e2b87e126b601"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45f1dc1dd6b0559489c8f5bbbebd477a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>CASTOP_I</b></td></tr>
+<tr class="separator:a45f1dc1dd6b0559489c8f5bbbebd477a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae88fd9e812fda386f717d6d69f177959"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>UNARYOP_S</b></td></tr>
 <tr class="separator:ae88fd9e812fda386f717d6d69f177959"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b5620ea1419a9c0d5f591b1864f7cdf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>UNARYOP_I</b></td></tr>
@@ -270,6 +274,43 @@ Macros</h2></td></tr>
 <div class="line">        stack.pop_back(); \</div>
 <div class="line">        ++pc;</div>
 <div class="ttc" id="aprogram-execute_8cpp_html_a80c4bdcb0e9c9c0eebdb1488ad68aa38"><div class="ttname"><a href="program-execute_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38">STACKCHECK</a></div><div class="ttdeci">#define STACKCHECK(x)</div><div class="ttdoc">Verify the size of the stack vector so that it may be safely accessed.</div><div class="ttdef"><b>Definition:</b> program-execute.cpp:46</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a45f1dc1dd6b0559489c8f5bbbebd477a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45f1dc1dd6b0559489c8f5bbbebd477a">&#9670;&nbsp;</a></span>CASTOP_I</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CASTOP_I</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">        <a class="code" href="program-execute_8cpp.html#a9ded9c6308c1d34a5872db3199e9c973">EXECUTEPROGRAMCHECK</a>(1); \</div>
+<div class="line">        auto index = this-&gt;bytecode[pc + 1]; \</div>
+<div class="line">        STACKCHECK(index); \</div>
+<div class="line">        auto &amp; operand = stack[fp + index]; \</div>
+<div class="line">        pc += 2;</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0dcde88dabdc927ee94e2b87e126b601"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dcde88dabdc927ee94e2b87e126b601">&#9670;&nbsp;</a></span>CASTOP_S</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CASTOP_S</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">        <a class="code" href="program-execute_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38">STACKCHECK</a>(1); \</div>
+<div class="line">        auto operand = stack.back(); \</div>
+<div class="line">        stack.pop_back(); \</div>
+<div class="line">        ++pc;</div>
 </div><!-- fragment -->
 </div>
 </div>

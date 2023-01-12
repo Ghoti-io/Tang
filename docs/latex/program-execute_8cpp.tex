@@ -38,6 +38,10 @@ Include dependency graph for program-\/execute.cpp\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em Verify the size of the Bytecode vector so that it may be safely accessed. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{program-execute_8cpp_a80c4bdcb0e9c9c0eebdb1488ad68aa38}{STACKCHECK}}(x)
 \begin{DoxyCompactList}\small\item\em Verify the size of the stack vector so that it may be safely accessed. \end{DoxyCompactList}\item 
+\#define {\bfseries CASTOP\+\_\+S}
+\item 
+\#define {\bfseries CASTOP\+\_\+I}
+\item 
 \#define {\bfseries UNARYOP\+\_\+S}
 \item 
 \#define {\bfseries UNARYOP\+\_\+I}
@@ -124,6 +128,35 @@ Define the \mbox{\hyperlink{classTang_1_1Program_a3449ae0f592e7eaa2cf05244839daa
 \DoxyCodeLine{        auto rhs = stack.back(); \(\backslash\)}
 \DoxyCodeLine{        stack.pop\_back(); \(\backslash\)}
 \DoxyCodeLine{        auto lhs = stack.back(); \(\backslash\)}
+\DoxyCodeLine{        stack.pop\_back(); \(\backslash\)}
+\DoxyCodeLine{        ++pc;}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{program-execute_8cpp_a45f1dc1dd6b0559489c8f5bbbebd477a}\label{program-execute_8cpp_a45f1dc1dd6b0559489c8f5bbbebd477a}} 
+\index{program-\/execute.cpp@{program-\/execute.cpp}!CASTOP\_I@{CASTOP\_I}}
+\index{CASTOP\_I@{CASTOP\_I}!program-\/execute.cpp@{program-\/execute.cpp}}
+\doxysubsubsection{\texorpdfstring{CASTOP\_I}{CASTOP\_I}}
+{\footnotesize\ttfamily \#define CASTOP\+\_\+I}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        \mbox{\hyperlink{program-execute_8cpp_a9ded9c6308c1d34a5872db3199e9c973}{EXECUTEPROGRAMCHECK}}(1); \(\backslash\)}
+\DoxyCodeLine{        auto index = this-\/>bytecode[pc + 1]; \(\backslash\)}
+\DoxyCodeLine{        STACKCHECK(index); \(\backslash\)}
+\DoxyCodeLine{        auto \& operand = stack[fp + index]; \(\backslash\)}
+\DoxyCodeLine{        pc += 2;}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{program-execute_8cpp_a0dcde88dabdc927ee94e2b87e126b601}\label{program-execute_8cpp_a0dcde88dabdc927ee94e2b87e126b601}} 
+\index{program-\/execute.cpp@{program-\/execute.cpp}!CASTOP\_S@{CASTOP\_S}}
+\index{CASTOP\_S@{CASTOP\_S}!program-\/execute.cpp@{program-\/execute.cpp}}
+\doxysubsubsection{\texorpdfstring{CASTOP\_S}{CASTOP\_S}}
+{\footnotesize\ttfamily \#define CASTOP\+\_\+S}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        \mbox{\hyperlink{program-execute_8cpp_a80c4bdcb0e9c9c0eebdb1488ad68aa38}{STACKCHECK}}(1); \(\backslash\)}
+\DoxyCodeLine{        auto operand = stack.back(); \(\backslash\)}
 \DoxyCodeLine{        stack.pop\_back(); \(\backslash\)}
 \DoxyCodeLine{        ++pc;}
 

@@ -8,6 +8,7 @@ var NAVTREEINDEX0 =
 "astNodeAssign_8hpp.html":[2,0,1,2],
 "astNodeAssign_8hpp_source.html":[2,0,1,2],
 "astNodeBinary_8cpp.html":[2,0,2,3],
+"astNodeBinary_8cpp.html#a7383e39e3b45b7f78a1ae64e1ffd49e1":[2,0,2,3,1],
 "astNodeBinary_8cpp.html#a9ceb3a317c0ee6a9a2be3061a7384414":[2,0,2,3,0],
 "astNodeBinary_8hpp.html":[2,0,1,3],
 "astNodeBinary_8hpp_source.html":[2,0,1,3],
@@ -21,6 +22,7 @@ var NAVTREEINDEX0 =
 "astNodeBreak_8hpp.html":[2,0,1,6],
 "astNodeBreak_8hpp_source.html":[2,0,1,6],
 "astNodeCast_8cpp.html":[2,0,2,7],
+"astNodeCast_8cpp.html#ab7f811d66da4639c4145a64ec7b12395":[2,0,2,7,0],
 "astNodeCast_8hpp.html":[2,0,1,7],
 "astNodeCast_8hpp_source.html":[2,0,1,7],
 "astNodeContinue_8cpp.html":[2,0,2,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "classTang_1_1AstNodeFunctionCall.html#ae0f662cd990cd733c7d5447ea3a1e641":[1,0,0,12,0],
 "classTang_1_1AstNodeFunctionCall.html#ae0f662cd990cd733c7d5447ea3a1e641a0936249b625085e3b4124ae378f9a1c1":[1,0,0,12,0,0],
 "classTang_1_1AstNodeFunctionCall.html#ae0f662cd990cd733c7d5447ea3a1e641a586bda9718eca4db4d4afac8e298023a":[1,0,0,12,0,1],
-"classTang_1_1AstNodeFunctionCall.html#ae9334b90c4fe34944cd85744acf6fc9c":[1,0,0,12,3],
-"classTang_1_1AstNodeFunctionCall.html#ae9d85fcadc7bffb2799c89ea8938c24f":[1,0,0,12,4],
-"classTang_1_1AstNodeFunctionDeclaration.html":[1,0,0,13]
+"classTang_1_1AstNodeFunctionCall.html#ae9334b90c4fe34944cd85744acf6fc9c":[1,0,0,12,3]
 };
