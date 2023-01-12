@@ -82,15 +82,15 @@ string Program::dumpBytecode() const {
         break;
       }
       case Opcode::JMP: {
-        DUMPPROGRAMCHECK(1);
-        out << (Opcode)this->bytecode[pc] << this->bytecode[pc + 1];
-        pc += 2;
+        DUMPBINARY_I;
         break;
       }
-      case Opcode::JMPF: {
-        DUMPPROGRAMCHECK(1);
-        out << (Opcode)this->bytecode[pc] << this->bytecode[pc + 1];
-        pc += 2;
+      case Opcode::JMPF_S: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::JMPF_I: {
+        DUMPBINARY_II;
         break;
       }
       case Opcode::JMPF_POP: {
@@ -99,10 +99,12 @@ string Program::dumpBytecode() const {
         pc += 2;
         break;
       }
-      case Opcode::JMPT: {
-        DUMPPROGRAMCHECK(1);
-        out << (Opcode)this->bytecode[pc] << this->bytecode[pc + 1];
-        pc += 2;
+      case Opcode::JMPT_S: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::JMPT_I: {
+        DUMPBINARY_II;
         break;
       }
       case Opcode::JMPT_POP: {

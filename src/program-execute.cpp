@@ -305,16 +305,23 @@ Context Program::execute(ContextData && data) {
         pc = this->bytecode[pc + 1];
       }
       break;
-      case Opcode::JMPF: {
+      case Opcode::JMPF_S: {
         EXECUTEPROGRAMCHECK(1);
         STACKCHECK(1);
         auto & condition = stack.back();
-        if (condition == false) {
-          pc = this->bytecode[pc + 1];
-        }
-        else {
-          pc += 2;
-        }
+        pc = (condition == false)
+          ? this->bytecode[pc + 1]
+          : (pc + 2);
+      }
+      break;
+      case Opcode::JMPF_I: {
+        EXECUTEPROGRAMCHECK(2);
+        auto index = this->bytecode[pc + 1];
+        STACKCHECK(index);
+        auto & condition = stack[fp + index];
+        pc = (condition == false)
+          ? this->bytecode[pc + 2]
+          : (pc + 3);
       }
       break;
       case Opcode::JMPF_POP: {
@@ -330,16 +337,23 @@ Context Program::execute(ContextData && data) {
         }
       }
       break;
-      case Opcode::JMPT: {
+      case Opcode::JMPT_S: {
         EXECUTEPROGRAMCHECK(1);
         STACKCHECK(1);
         auto & condition = stack.back();
-        if (condition == true) {
-          pc = this->bytecode[pc + 1];
-        }
-        else {
-          pc += 2;
-        }
+        pc = (condition == true)
+          ? this->bytecode[pc + 1]
+          : (pc + 2);
+      }
+      break;
+      case Opcode::JMPT_I: {
+        EXECUTEPROGRAMCHECK(2);
+        auto index = this->bytecode[pc + 1];
+        STACKCHECK(index);
+        auto & condition = stack[fp + index];
+        pc = (condition == true)
+          ? this->bytecode[pc + 2]
+          : (pc + 3);
       }
       break;
       case Opcode::JMPT_POP: {

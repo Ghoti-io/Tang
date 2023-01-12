@@ -66,9 +66,14 @@ pair<OpcodeOffsets, OpcodePositions> Program::analyze() const {
         pc += 2;
         break;
       }
-      case Opcode::JMPF: {
+      case Opcode::JMPF_S: {
         DUMPPROGRAMCHECK(1);
         pc += 2;
+        break;
+      }
+      case Opcode::JMPF_I: {
+        DUMPPROGRAMCHECK(2);
+        pc += 3;
         break;
       }
       case Opcode::JMPF_POP: {
@@ -76,9 +81,14 @@ pair<OpcodeOffsets, OpcodePositions> Program::analyze() const {
         pc += 2;
         break;
       }
-      case Opcode::JMPT: {
+      case Opcode::JMPT_S: {
         DUMPPROGRAMCHECK(1);
         pc += 2;
+        break;
+      }
+      case Opcode::JMPT_I: {
+        DUMPPROGRAMCHECK(2);
+        pc += 3;
         break;
       }
       case Opcode::JMPT_POP: {

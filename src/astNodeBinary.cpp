@@ -135,7 +135,7 @@ void AstNodeBinary::compile(Tang::Program & program) const {
       // Evaluate the lhs.
       this->lhs->compile(program);
       auto conditionFalseJump = program.getBytecode().size();
-      program.addBytecode((uinteger_t)Opcode::JMPF);
+      program.addBytecode((uinteger_t)Opcode::JMPF_S);
       program.addBytecode(0);
 
       // Remove lhs from stack, evaluate rhs.
@@ -150,7 +150,7 @@ void AstNodeBinary::compile(Tang::Program & program) const {
       // Evaluate the lhs.
       this->lhs->compile(program);
       auto conditionTrueJump = program.getBytecode().size();
-      program.addBytecode((uinteger_t)Opcode::JMPT);
+      program.addBytecode((uinteger_t)Opcode::JMPT_S);
       program.addBytecode(0);
 
       // Remove lhs from stack, evaluate rhs.

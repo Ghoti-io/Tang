@@ -10,12 +10,17 @@
 using namespace std;
 using namespace Tang;
 
-static set<Opcode> jumpOpcodes{
+static set<Opcode> jumpOpcodes_S{
   Opcode::JMP,
-  Opcode::JMPF,
+  Opcode::JMPF_S,
   Opcode::JMPF_POP,
-  Opcode::JMPT,
+  Opcode::JMPT_S,
   Opcode::JMPT_POP,
+};
+
+static set<Opcode> jumpOpcodes_I{
+  Opcode::JMPF_I,
+  Opcode::JMPT_I,
 };
 
 static set<Opcode> valueProducingOpcodes{
@@ -91,7 +96,7 @@ static void removeOpcodes(Bytecode & bytecode, size_t position, size_t count, Op
         it = offsets.rbegin() + (reverseIndex - 1);
       }
     }
-    if (jumpOpcodes.count(op)) {
+    if (jumpOpcodes_S.count(op)) {
       // 3a. Update any Jump targets that may have been affected.
       // We did not do this earlier because the first loop exited early to save
       // processing time.
@@ -106,6 +111,24 @@ static void removeOpcodes(Bytecode & bytecode, size_t position, size_t count, Op
         else if (target >= bytecodeStart) {
           // Target was jumping to an opcode that is now deleted.
           bytecode[boffset + 1] = bytecodeStart;
+        }
+      }
+    }
+    if (jumpOpcodes_I.count(op)) {
+      // 3a. Update any Jump targets that may have been affected.
+      // We did not do this earlier because the first loop exited early to save
+      // processing time.
+      // For this loop, however, we must examine every jump target and adjust
+      // it as needed, and we cannot assume that the jump instructions are in
+      // any particular order.
+      for (auto & [boffset, ooffset] : offsets) {
+        uinteger_t target = bytecode[boffset + 2];
+        if (target >= bytecodeExclusiveEnd) {
+          bytecode[boffset + 2] = target - bytecodeDeletedCount;
+        }
+        else if (target >= bytecodeStart) {
+          // Target was jumping to an opcode that is now deleted.
+          bytecode[boffset + 2] = bytecodeStart;
         }
       }
     }
@@ -164,10 +187,20 @@ void Program::optimize() {
         auto jmpBytecodeOffset = ops[i].second;
         size_t minBytecodeTarget = this->bytecode.size();
         // Check for Jump instruction targets.
-        for (auto & op : jumpOpcodes) {
+        for (auto & op : jumpOpcodes_S) {
           if (opOffsets.count(op)) {
             for (auto & [bytecodeOffset, opcodeOffset] : opOffsets.at(op)) {
               auto jumpInstructionTarget = this->bytecode[bytecodeOffset + 1];
+              if ((jumpInstructionTarget > jmpBytecodeOffset) && (jumpInstructionTarget < minBytecodeTarget)) {
+                minBytecodeTarget = jumpInstructionTarget;
+              }
+            }
+          }
+        }
+        for (auto & op : jumpOpcodes_I) {
+          if (opOffsets.count(op)) {
+            for (auto & [bytecodeOffset, opcodeOffset] : opOffsets.at(op)) {
+              auto jumpInstructionTarget = this->bytecode[bytecodeOffset + 2];
               if ((jumpInstructionTarget > jmpBytecodeOffset) && (jumpInstructionTarget < minBytecodeTarget)) {
                 minBytecodeTarget = jumpInstructionTarget;
               }
@@ -214,10 +247,20 @@ void Program::optimize() {
           && (this->bytecode[ops[i].second + 1] == this->bytecode[ops[i - 2].second + 1])) {
         // The optimization cannot be performed if ops[i].second is a jump target
         bool isAJumpTarget{false};
-        for (auto & op : jumpOpcodes) {
+        for (auto & op : jumpOpcodes_S) {
           if (opOffsets.count(op)) {
             for (auto & [bytecodeOffset, opcodeOffset] : opOffsets.at(op)) {
               if (this->bytecode[bytecodeOffset + 1] == ops[i].second) {
+                isAJumpTarget = true;
+                break;
+              }
+            }
+          }
+        }
+        for (auto & op : jumpOpcodes_I) {
+          if (opOffsets.count(op)) {
+            for (auto & [bytecodeOffset, opcodeOffset] : opOffsets.at(op)) {
+              if (this->bytecode[bytecodeOffset + 2] == ops[i].second) {
                 isAJumpTarget = true;
                 break;
               }

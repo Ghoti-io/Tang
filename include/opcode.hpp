@@ -26,9 +26,11 @@ namespace Tang {
     POKE,     ///< Stack # (from fp): Copy a val, store @ stack #
     COPY,     ///< Stack # (from fp): Deep copy val @ stack #, store @ stack #
     JMP,      ///< PC #: set pc to PC #
-    JMPF,     ///< PC #: read val, if false, set pc to PC #
+    JMPF_S,   ///< PC #: read val, if false, set pc to PC #
+    JMPF_I,   ///< PC #: read val, if false, set pc to PC #
     JMPF_POP, ///< PC #: pop val, if false, set pc to PC #
-    JMPT,     ///< PC #: read val, if true, set pc to PC #
+    JMPT_S,   ///< PC #: read val, if true, set pc to PC #
+    JMPT_I,   ///< PC #: read val, if true, set pc to PC #
     JMPT_POP, ///< PC #: pop val, if true, set pc to PC #
     NULLVAL,  ///< Push a null onto the stack
     INTEGER,  ///< Push an integer onto the stack
