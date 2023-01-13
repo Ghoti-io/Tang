@@ -50,6 +50,19 @@ using namespace Tang;
     break; \
   }
 
+#define PRINTOP_S \
+        STACKCHECK(1); \
+        auto expression = stack.back(); \
+        stack.pop_back(); \
+        ++pc;
+
+#define PRINTOP_I \
+        EXECUTEPROGRAMCHECK(1); \
+        auto index = this->bytecode[pc + 1]; \
+        STACKCHECK(index); \
+        auto & expression = stack[fp + index]; \
+        pc += 2;
+
 #define CASTOP_S \
         STACKCHECK(1); \
         auto operand = stack.back(); \
@@ -926,10 +939,8 @@ Context Program::execute(ContextData && data) {
         fpStack.pop_back();
       }
       break;
-      case Opcode::PRINT: {
-        STACKCHECK(1);
-        auto expression = stack.back();
-        stack.pop_back();
+      case Opcode::PRINT_S: {
+        PRINTOP_S;
         // Try to convert the expression to a string.
         auto result = expression->__string();
         if (typeid(*result) == typeid(ComputedExpressionString)) {
@@ -947,7 +958,27 @@ Context Program::execute(ContextData && data) {
           // __string returned an error, pass that back to the stack.
           stack.push_back(result);
         }
-        ++pc;
+      }
+      break;
+      case Opcode::PRINT_I: {
+        PRINTOP_I;
+        // Try to convert the expression to a string.
+        auto result = expression->__string();
+        if (typeid(*result) == typeid(ComputedExpressionString)) {
+          // We know that both our private member and `result` are a
+          // ComputedExpressionString, so combine them here.
+          static_cast<ComputedExpressionString &>(*context.computedExpressionOut) += static_cast<ComputedExpressionString &>(*result);
+          // Push an empty value onto the stack.
+          stack.push_back(GarbageCollected::make<ComputedExpression>());
+        }
+        else if (typeid(*result) != typeid(ComputedExpressionError)) {
+          // __string returned neither a string nor an error, so report that.
+          stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Argument not recognized as a string or error type."}));
+        }
+        else {
+          // __string returned an error, pass that back to the stack.
+          stack.push_back(result);
+        }
       }
       break;
       default: {

@@ -115,7 +115,8 @@ namespace Tang {
                  ///<   matches.
     RETURN,   ///< Get stack #, pop return val, pop (stack #) times,
               ///< push val, restore fp, restore pc
-    PRINT,    ///< Pop val, print(val), push error or NULL
+    PRINT_S,     ///< Pop val, print(val), push error or NULL
+    PRINT_I,     ///< Pop val, print(val), push error or NULL
   };
 
   /**

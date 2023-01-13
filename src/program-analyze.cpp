@@ -453,8 +453,12 @@ pair<OpcodeOffsets, OpcodePositions> Program::analyze() const {
         pc += 2;
         break;
       }
-      case Opcode::PRINT: {
+      case Opcode::PRINT_S: {
         ++pc;
+        break;
+      }
+      case Opcode::PRINT_I: {
+        pc += 2;
         break;
       }
       default: {}

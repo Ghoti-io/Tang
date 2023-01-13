@@ -4,6 +4,7 @@
  */
 
 #include <string>
+#include "astNodeIdentifier.hpp"
 #include "astNodePrint.hpp"
 #include "opcode.hpp"
 #include "program.hpp"
@@ -26,12 +27,21 @@ void AstNodePrint::compilePreprocess(Program & program, PreprocessState state) c
 }
 
 void AstNodePrint::compile(Tang::Program & program) const {
-  this->expression->compile(program);
-  switch (this->type) {
-    case Default: {
-      program.addBytecode((uinteger_t)Opcode::PRINT);
-      break;
+  integer_t index{-1};
+  auto & identifier = program.getIdentifiers();
+  if (typeid(*this->expression) == typeid(AstNodeIdentifier)) {
+    auto & name = static_cast<AstNodeIdentifier &>(*this->expression).name;
+    if (identifier.count(name)) {
+      index = identifier.at(name);
     }
+  }
+  if (index >= 0) {
+    program.addBytecode((uinteger_t)Opcode::PRINT_I);
+    program.addBytecode((uinteger_t)index);
+  }
+  else {
+    this->expression->compile(program);
+    program.addBytecode((uinteger_t)Opcode::PRINT_S);
   }
 }
 

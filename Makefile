@@ -190,7 +190,8 @@ DEP_ASTNODEPERIOD = \
 	$(DEP_ASTNODE)
 DEP_ASTNODEPRINT = \
 	include/astNodePrint.hpp \
-	$(DEP_ASTNODE)
+	$(DEP_ASTNODE) \
+	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODERANGEDFOR = \
 	include/astNodeFor.hpp \
 	$(DEP_ASTNODE) \

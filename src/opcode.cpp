@@ -102,7 +102,8 @@ static const char* description[] = {
   "CALLFUNC",
   "CALLFUNC_I",
   "RETURN",
-  "PRINT",
+  "PRINT_S",
+  "PRINT_I",
 };
 
 ostream & Tang::operator<<(ostream & lhs, const Opcode & rhs) {

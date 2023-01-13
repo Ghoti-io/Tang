@@ -475,9 +475,12 @@ string Program::dumpBytecode() const {
         pc += 2;
         break;
       }
-      case Opcode::PRINT: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+      case Opcode::PRINT_S: {
+        DUMPBINARY;
+        break;
+      }
+      case Opcode::PRINT_I: {
+        DUMPBINARY_I;
         break;
       }
       default: {}
