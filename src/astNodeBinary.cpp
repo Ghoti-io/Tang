@@ -6,6 +6,7 @@
 #include <string>
 #include "astNodeBinary.hpp"
 #include "astNodeIdentifier.hpp"
+#include "astNodeString.hpp"
 #include "opcode.hpp"
 #include "program.hpp"
 
@@ -21,10 +22,28 @@ using namespace Tang;
       lhsIndex = identifier.at(name); \
     } \
   } \
+  else if (typeid(*this->lhs) == typeid(AstNodeString)) { \
+    auto & strings = program.getStrings(); \
+    auto & stringConv = static_cast<AstNodeString &>(*this->lhs); \
+    auto & val = stringConv.getVal(); \
+    auto & type = stringConv.getType(); \
+    if (strings.count({val, type})) { \
+      lhsIndex = strings.at({val, type}) + program.getIdentifiers().size(); \
+    } \
+  } \
   if (typeid(*this->rhs) == typeid(AstNodeIdentifier)) { \
     auto & name = static_cast<AstNodeIdentifier &>(*this->rhs).name; \
     if (identifier.count(name)) { \
       rhsIndex = identifier.at(name); \
+    } \
+  } \
+  else if (typeid(*this->rhs) == typeid(AstNodeString)) { \
+    auto & strings = program.getStrings(); \
+    auto & stringConv = static_cast<AstNodeString &>(*this->rhs); \
+    auto & val = stringConv.getVal(); \
+    auto & type = stringConv.getType(); \
+    if (strings.count({val, type})) { \
+      rhsIndex = strings.at({val, type}) + program.getIdentifiers().size(); \
     } \
   } \
   if (lhsIndex >= 0) { \
@@ -60,6 +79,15 @@ using namespace Tang;
     auto & name = static_cast<AstNodeIdentifier &>(*this->lhs).name; \
     if (identifier.count(name)) { \
       lhsIndex = identifier.at(name); \
+    } \
+  } \
+  else if (typeid(*this->lhs) == typeid(AstNodeString)) { \
+    auto & strings = program.getStrings(); \
+    auto & stringConv = static_cast<AstNodeString &>(*this->lhs); \
+    auto & val = stringConv.getVal(); \
+    auto & type = stringConv.getType(); \
+    if (strings.count({val, type})) { \
+      lhsIndex = strings.at({val, type}) + program.getIdentifiers().size(); \
     } \
   } \
   if (lhsIndex >= 0) { \

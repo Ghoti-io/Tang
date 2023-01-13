@@ -6,6 +6,7 @@
 #include <string>
 #include <bit>
 #include "astNodeIdentifier.hpp"
+#include "astNodeString.hpp"
 #include "astNodeUnary.hpp"
 #include "opcode.hpp"
 #include "program.hpp"
@@ -20,6 +21,15 @@ using namespace Tang;
     auto & name = static_cast<AstNodeIdentifier &>(*this->operand).name; \
     if (identifier.count(name)) { \
       index = identifier.at(name); \
+    } \
+  } \
+  else if (typeid(*this->operand) == typeid(AstNodeString)) { \
+    auto & strings = program.getStrings(); \
+    auto & stringConv = static_cast<AstNodeString &>(*this->operand); \
+    auto & val = stringConv.getVal(); \
+    auto & type = stringConv.getType(); \
+    if (strings.count({val, type})) { \
+      index = strings.at({val, type}) + program.getIdentifiers().size(); \
     } \
   } \
   if (index >= 0) { \
