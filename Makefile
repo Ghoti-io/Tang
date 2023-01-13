@@ -122,24 +122,27 @@ DEP_PROGRAM = \
 	$(DEP_ERROR) \
 	$(DEP_MACROS) \
 	$(DEP_UNICODESTRING)
-DEP_ASTNODEARRAY = \
-	include/astNodeArray.hpp \
-	$(DEP_ASTNODE)
 DEP_ASTNODEIDENTIFIER = \
 	include/astNodeIdentifier.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODESTRING = \
 	include/astNodeString.hpp \
 	$(DEP_ASTNODE)
+DEP_ASTNODEARRAY = \
+	include/astNodeArray.hpp \
+	$(DEP_ASTNODE)
 DEP_ASTNODEASSIGN = \
 	include/astNodeAssign.hpp \
-	$(DEP_ASTNODE)
+	$(DEP_ASTNODE) \
+	$(DEP_ASTNODESTRING) \
+	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODEINDEX = \
 	include/astNodeIndex.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODEBINARY = \
 	include/astNodeBinary.hpp \
 	$(DEP_ASTNODE) \
+	$(DEP_ASTNODESTRING) \
 	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODEBLOCK = \
 	include/astNodeBlock.hpp \
@@ -153,6 +156,7 @@ DEP_ASTNODEBREAK = \
 DEP_ASTNODECAST = \
 	include/astNodeCast.hpp \
 	$(DEP_ASTNODE) \
+	$(DEP_ASTNODESTRING) \
 	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODECONTINUE = \
 	include/astNodeContinue.hpp \
@@ -165,20 +169,27 @@ DEP_ASTNODEFLOAT = \
 	$(DEP_ASTNODE)
 DEP_ASTNODEFOR = \
 	include/astNodeFor.hpp \
-	$(DEP_ASTNODE)
+	$(DEP_ASTNODE) \
+	$(DEP_ASTNODESTRING) \
+	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODEFUNCTIONDECLARATION = \
 	include/astNodeFunctionDeclaration.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODEFUNCTIONCALL = \
 	include/astNodeFunctionCall.hpp \
 	$(DEP_ASTNODE) \
+	$(DEP_ASTNODESTRING) \
 	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODEIFELSE = \
 	include/astNodeIfElse.hpp \
-	$(DEP_ASTNODE)
+	$(DEP_ASTNODE) \
+	$(DEP_ASTNODESTRING) \
+	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODEINDEX = \
 	include/astNodeIndex.hpp \
-	$(DEP_ASTNODE)
+	$(DEP_ASTNODE) \
+	$(DEP_ASTNODESTRING) \
+	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODEINTEGER = \
 	include/astNodeInteger.hpp \
 	$(DEP_ASTNODE)
@@ -190,7 +201,9 @@ DEP_ASTNODEMAP = \
 	$(DEP_ASTNODE)
 DEP_ASTNODEPERIOD = \
 	include/astNodePeriod.hpp \
-	$(DEP_ASTNODE)
+	$(DEP_ASTNODE) \
+	$(DEP_ASTNODESTRING) \
+	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODEPRINT = \
 	include/astNodePrint.hpp \
 	$(DEP_ASTNODE) \
@@ -202,23 +215,30 @@ DEP_ASTNODERANGEDFOR = \
 	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODERETURN = \
 	include/astNodeReturn.hpp \
-	$(DEP_ASTNODE)
+	$(DEP_ASTNODE) \
+	$(DEP_ASTNODESTRING) \
+	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODESLICE = \
 	include/astNodeSlice.hpp \
-	$(DEP_ASTNODE)
+	$(DEP_ASTNODE) \
+	$(DEP_ASTNODESTRING) \
+	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODETERNARY = \
 	include/astNodeTernary.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODEUNARY = \
 	include/astNodeUnary.hpp \
 	$(DEP_ASTNODE) \
+	$(DEP_ASTNODESTRING) \
 	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODEUSE = \
 	include/astNodeUse.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODEWHILE = \
 	include/astNodeWhile.hpp \
-	$(DEP_ASTNODE)
+	$(DEP_ASTNODE) \
+	$(DEP_ASTNODESTRING) \
+	$(DEP_ASTNODEIDENTIFIER)
 DEP_COMPUTEDEXPRESSIONARRAY = \
 	include/computedExpressionArray.hpp \
 	$(DEP_COMPUTEDEXPRESSION)
