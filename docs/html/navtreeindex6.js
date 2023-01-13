@@ -1,5 +1,10 @@
 var NAVTREEINDEX6 =
 {
+"testUnicodeString_8cpp.html":[2,0,3,3],
+"testUnicodeString_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627":[2,0,3,3,0],
+"testUnicodeString_8cpp.html#a5c2112452ac288044e735fff57be09b8":[2,0,3,3,4],
+"testUnicodeString_8cpp.html#a69d9eb4c27780ed16097fe4e1e61c4c4":[2,0,3,3,3],
+"testUnicodeString_8cpp.html#a7db35c9dfe8fdec844dbaba6773a4d76":[2,0,3,3,5],
 "testUnicodeString_8cpp.html#aa454bcfb17215a41756bf28facfbde4a":[2,0,3,3,1],
 "testUnicodeString_8cpp.html#ab39f3a8e152363c026cf463b34a98bed":[2,0,3,3,6],
 "testUnicodeString_8cpp.html#aec626a46550788747f66df29bf68a186":[2,0,3,3,2],

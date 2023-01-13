@@ -134,7 +134,8 @@ enum class \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04}{Tang\
 , \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a651b5d67f67162a8bc778591dafa9405}{CALLFUNC\+\_\+I}}
 , \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04aa2bec276a54439fe011eb523b845dac5}{RETURN}}
 , \newline
-\mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04af96eee4e48ee90430f17fb3a8388507b}{PRINT}}
+\mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04aded940ea877649e1180ead779a035630}{PRINT\+\_\+S}}
+, \mbox{\hyperlink{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a04b509d24ec7bcd0259ec9ad577b2597}{PRINT\+\_\+I}}
  \}
 \begin{DoxyCompactList}\small\item\em All possible Opcodes that may be used in the Bytecode. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
@@ -515,8 +516,12 @@ CALLFUNC\+\_\+I&Get argc, get index, execute function at index if argc matches. 
 RETURN&Get stack \#, pop return val, pop (stack \#) times, push val, restore fp, restore pc. \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{PRINT@{PRINT}!opcode.hpp@{opcode.hpp}}\index{opcode.hpp@{opcode.hpp}!PRINT@{PRINT}}}\mbox{\Hypertarget{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04af96eee4e48ee90430f17fb3a8388507b}\label{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04af96eee4e48ee90430f17fb3a8388507b}} 
-PRINT&Pop val, print(val), push error or NULL. \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PRINT\_S@{PRINT\_S}!opcode.hpp@{opcode.hpp}}\index{opcode.hpp@{opcode.hpp}!PRINT\_S@{PRINT\_S}}}\mbox{\Hypertarget{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04aded940ea877649e1180ead779a035630}\label{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04aded940ea877649e1180ead779a035630}} 
+PRINT\+\_\+S&Pop val, print(val), push error or NULL. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PRINT\_I@{PRINT\_I}!opcode.hpp@{opcode.hpp}}\index{opcode.hpp@{opcode.hpp}!PRINT\_I@{PRINT\_I}}}\mbox{\Hypertarget{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a04b509d24ec7bcd0259ec9ad577b2597}\label{opcode_8hpp_a3db69378da7fea0383c531f8cae78f04a04b509d24ec7bcd0259ec9ad577b2597}} 
+PRINT\+\_\+I&Pop val, print(val), push error or NULL. \\
 \hline
 
 \end{DoxyEnumFields}

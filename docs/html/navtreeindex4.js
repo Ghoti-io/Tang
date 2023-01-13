@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"classTang_1_1GarbageCollected.html":[1,0,0,48],
+"classTang_1_1GarbageCollected.html#a042b7fed14748d92ae1b41918d06c940":[1,0,0,48,0],
 "classTang_1_1GarbageCollected.html#a0b6b70718e72c749ec89d194dbec6c9d":[1,0,0,48,28],
 "classTang_1_1GarbageCollected.html#a1cf4f49972c510c4606ddfb2647a334e":[1,0,0,48,25],
 "classTang_1_1GarbageCollected.html#a233b98cbedb6d8b63ab5285516c6aef4":[1,0,0,48,20],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "functions.html":[1,3,0,0],
 "functions.html":[1,3,0],
 "functions_a.html":[1,3,0,1],
-"functions_b.html":[1,3,0,2],
-"functions_c.html":[1,3,0,3],
-"functions_d.html":[1,3,0,4]
+"functions_b.html":[1,3,0,2]
 };

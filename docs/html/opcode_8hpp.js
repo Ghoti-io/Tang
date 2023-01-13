@@ -89,7 +89,8 @@ var opcode_8hpp =
       [ "CALLFUNC", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a8fbd21f6a619e33ff038cdf5a69a14d8", null ],
       [ "CALLFUNC_I", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a651b5d67f67162a8bc778591dafa9405", null ],
       [ "RETURN", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04aa2bec276a54439fe011eb523b845dac5", null ],
-      [ "PRINT", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04af96eee4e48ee90430f17fb3a8388507b", null ]
+      [ "PRINT_S", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04aded940ea877649e1180ead779a035630", null ],
+      [ "PRINT_I", "opcode_8hpp.html#a3db69378da7fea0383c531f8cae78f04a04b509d24ec7bcd0259ec9ad577b2597", null ]
     ] ],
     [ "operator<<", "opcode_8hpp.html#af3ba50dd455dfe1d1167f78d2bb95d10", null ]
 ];

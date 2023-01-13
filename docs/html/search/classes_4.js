@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['htmlescape_576',['HtmlEscape',['../classTang_1_1HtmlEscape.html',1,'Tang']]],
-  ['htmlescapeascii_577',['HtmlEscapeAscii',['../classTang_1_1HtmlEscapeAscii.html',1,'Tang']]]
+  ['htmlescape_578',['HtmlEscape',['../classTang_1_1HtmlEscape.html',1,'Tang']]],
+  ['htmlescapeascii_579',['HtmlEscapeAscii',['../classTang_1_1HtmlEscapeAscii.html',1,'Tang']]]
 ];

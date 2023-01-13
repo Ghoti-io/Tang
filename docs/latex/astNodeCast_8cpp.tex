@@ -8,6 +8,7 @@ Define the \mbox{\hyperlink{classTang_1_1AstNodeCast}{Tang\+::\+Ast\+Node\+Cast}
 {\ttfamily \#include $<$bit$>$}\newline
 {\ttfamily \#include \char`\"{}ast\+Node\+Cast.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ast\+Node\+Identifier.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ast\+Node\+String.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}opcode.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}program.\+hpp\char`\"{}}\newline
 Include dependency graph for ast\+Node\+Cast.\+cpp\+:
@@ -47,12 +48,21 @@ Define the \mbox{\hyperlink{classTang_1_1AstNodeCast}{Tang\+::\+Ast\+Node\+Cast}
 \DoxyCodeLine{      index = identifier.at(name); \(\backslash\)}
 \DoxyCodeLine{    \} \(\backslash\)}
 \DoxyCodeLine{  \} \(\backslash\)}
+\DoxyCodeLine{  else \textcolor{keywordflow}{if} (\textcolor{keyword}{typeid}(*this-\/>expression) == \textcolor{keyword}{typeid}(\mbox{\hyperlink{classTang_1_1AstNodeString}{AstNodeString}})) \{ \(\backslash\)}
+\DoxyCodeLine{    auto \& strings = program.getStrings(); \(\backslash\)}
+\DoxyCodeLine{    auto \& stringConv = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classTang_1_1AstNodeString}{AstNodeString}} \&\textcolor{keyword}{>}(*this-\/>expression); \(\backslash\)}
+\DoxyCodeLine{    auto \& val = stringConv.\mbox{\hyperlink{classTang_1_1AstNodeString_ae32c3a421976066fbd6f917a0cd26b29}{getVal}}(); \(\backslash\)}
+\DoxyCodeLine{    auto \& type = stringConv.getType(); \(\backslash\)}
+\DoxyCodeLine{    if (strings.count(\{val, type\})) \{ \(\backslash\)}
+\DoxyCodeLine{      index = strings.at(\{val, type\}) + program.getIdentifiers().size(); \(\backslash\)}
+\DoxyCodeLine{    \} \(\backslash\)}
+\DoxyCodeLine{  \} \(\backslash\)}
 \DoxyCodeLine{  if (index >= 0) \{ \(\backslash\)}
 \DoxyCodeLine{    program.addBytecode((\mbox{\hyperlink{macros_8hpp_a361122436ab50159be865d93fb80b527}{uinteger\_t}})Opcode:: OP\_I); \(\backslash\)}
 \DoxyCodeLine{    program.addBytecode((\mbox{\hyperlink{macros_8hpp_a361122436ab50159be865d93fb80b527}{uinteger\_t}})index); \(\backslash\)}
 \DoxyCodeLine{  \} \(\backslash\)}
 \DoxyCodeLine{  else \{ \(\backslash\)}
-\DoxyCodeLine{    this-\/>expression-\/>\mbox{\hyperlink{classTang_1_1AstNodeIdentifier_ae8c87f5d7c44b4281b9606376f1dc20f}{compile}}(program); \(\backslash\)}
+\DoxyCodeLine{    this-\/>expression-\/>compile(program); \(\backslash\)}
 \DoxyCodeLine{    program.addBytecode((\mbox{\hyperlink{macros_8hpp_a361122436ab50159be865d93fb80b527}{uinteger\_t}})Opcode:: OP\_S); \(\backslash\)}
 \DoxyCodeLine{  \} \(\backslash\)}
 \DoxyCodeLine{  return;}
