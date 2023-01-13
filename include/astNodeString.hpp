@@ -43,6 +43,20 @@ namespace Tang {
      */
     void compileLiteral(Tang::Program & program) const;
 
+    /**
+     * Get the string value that this AST node represents.
+     *
+     * @return The string value that this AST node represents.
+     */
+    const std::string & getVal() const;
+
+    /**
+     * Get the type of string that this AST node represents.
+     *
+     * @return The type of string that this AST node represents.
+     */
+    const UnicodeString::Type & getType() const;
+
   private:
     /**
      * The string value being stored.

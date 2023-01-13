@@ -60,3 +60,11 @@ void AstNodeString::compilePreprocess(Program & program, [[maybe_unused]] Prepro
   program.addString(this->val, this->type);
 }
 
+const std::string & AstNodeString::getVal() const {
+  return this->val;
+}
+
+const UnicodeString::Type & AstNodeString::getType() const {
+  return this->type;
+}
+

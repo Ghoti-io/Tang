@@ -6,6 +6,7 @@
 #include <string>
 #include "astNodeIdentifier.hpp"
 #include "astNodePrint.hpp"
+#include "astNodeString.hpp"
 #include "opcode.hpp"
 #include "program.hpp"
 
@@ -33,6 +34,15 @@ void AstNodePrint::compile(Tang::Program & program) const {
     auto & name = static_cast<AstNodeIdentifier &>(*this->expression).name;
     if (identifier.count(name)) {
       index = identifier.at(name);
+    }
+  }
+  else if (typeid(*this->expression) == typeid(AstNodeString)) {
+    auto & strings = program.getStrings();
+    auto & stringConv = static_cast<AstNodeString &>(*this->expression);
+    auto & val = stringConv.getVal();
+    auto & type = stringConv.getType();
+    if (strings.count({val, type})) {
+      index = strings.at({val, type}) + program.getIdentifiers().size();
     }
   }
   if (index >= 0) {

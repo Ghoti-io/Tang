@@ -128,6 +128,9 @@ DEP_ASTNODEARRAY = \
 DEP_ASTNODEIDENTIFIER = \
 	include/astNodeIdentifier.hpp \
 	$(DEP_ASTNODE)
+DEP_ASTNODESTRING = \
+	include/astNodeString.hpp \
+	$(DEP_ASTNODE)
 DEP_ASTNODEASSIGN = \
 	include/astNodeAssign.hpp \
 	$(DEP_ASTNODE)
@@ -191,6 +194,7 @@ DEP_ASTNODEPERIOD = \
 DEP_ASTNODEPRINT = \
 	include/astNodePrint.hpp \
 	$(DEP_ASTNODE) \
+	$(DEP_ASTNODESTRING) \
 	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODERANGEDFOR = \
 	include/astNodeFor.hpp \
@@ -201,9 +205,6 @@ DEP_ASTNODERETURN = \
 	$(DEP_ASTNODE)
 DEP_ASTNODESLICE = \
 	include/astNodeSlice.hpp \
-	$(DEP_ASTNODE)
-DEP_ASTNODESTRING = \
-	include/astNodeString.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODETERNARY = \
 	include/astNodeTernary.hpp \
