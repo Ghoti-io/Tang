@@ -14,6 +14,55 @@
 
 #define TANGVERSION "0.0.0 alpha"
 
+#define OPCODE_FIND_INDEX(EXPRESSION, INDEX) \
+  {\
+    auto & identifier = program.getIdentifiers(); \
+    if (typeid(*(EXPRESSION)) == typeid(AstNodeIdentifier)) { \
+      auto & name = static_cast<AstNodeIdentifier &>(*(EXPRESSION)).name; \
+      if (identifier.count(name)) { \
+        INDEX = identifier.at(name); \
+      } \
+    } \
+    else if (typeid(*(EXPRESSION)) == typeid(AstNodeString)) { \
+      auto & strings = program.getStrings(); \
+      auto & stringConv = static_cast<AstNodeString &>(*(EXPRESSION)); \
+      auto & val = stringConv.getVal(); \
+      auto & type = stringConv.getType(); \
+      if (strings.count({val, type})) { \
+        INDEX = strings.at({val, type}) + program.getIdentifiers().size(); \
+      } \
+    } \
+  }
+
+#define BINARYOP(LHS, RHS, OP_SS, OP_SI, OP_IS, OP_II) \
+  integer_t lhsIndex{-1}, rhsIndex{-1}; \
+  OPCODE_FIND_INDEX((LHS), lhsIndex); \
+  OPCODE_FIND_INDEX((RHS), rhsIndex); \
+  if (lhsIndex >= 0) { \
+    if (rhsIndex >= 0) { \
+      program.addBytecode((uinteger_t)Opcode:: OP_II); \
+      program.addBytecode((uinteger_t)lhsIndex); \
+      program.addBytecode((uinteger_t)rhsIndex); \
+    } \
+    else { \
+      (RHS)->compile(program); \
+      program.addBytecode((uinteger_t)Opcode:: OP_IS); \
+      program.addBytecode((uinteger_t)lhsIndex); \
+    } \
+  } \
+  else { \
+    if (rhsIndex >= 0) { \
+      (LHS)->compile(program); \
+      program.addBytecode((uinteger_t)Opcode:: OP_SI); \
+      program.addBytecode((uinteger_t)rhsIndex); \
+    } \
+    else { \
+      (LHS)->compile(program); \
+      (RHS)->compile(program); \
+      program.addBytecode((uinteger_t)Opcode:: OP_SS); \
+    } \
+  }
+
 namespace Tang {
   class Context;
   class GarbageCollected;

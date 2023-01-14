@@ -7,89 +7,17 @@
 #include "astNodeBinary.hpp"
 #include "astNodeIdentifier.hpp"
 #include "astNodeString.hpp"
+#include "macros.hpp"
 #include "opcode.hpp"
 #include "program.hpp"
 
 using namespace std;
 using namespace Tang;
 
-#define BINARYOP(OP_SS, OP_SI, OP_IS, OP_II) \
-  integer_t lhsIndex{-1}, rhsIndex{-1}; \
-  auto & identifier = program.getIdentifiers(); \
-  if (typeid(*this->lhs) == typeid(AstNodeIdentifier)) { \
-    auto & name = static_cast<AstNodeIdentifier &>(*this->lhs).name; \
-    if (identifier.count(name)) { \
-      lhsIndex = identifier.at(name); \
-    } \
-  } \
-  else if (typeid(*this->lhs) == typeid(AstNodeString)) { \
-    auto & strings = program.getStrings(); \
-    auto & stringConv = static_cast<AstNodeString &>(*this->lhs); \
-    auto & val = stringConv.getVal(); \
-    auto & type = stringConv.getType(); \
-    if (strings.count({val, type})) { \
-      lhsIndex = strings.at({val, type}) + program.getIdentifiers().size(); \
-    } \
-  } \
-  if (typeid(*this->rhs) == typeid(AstNodeIdentifier)) { \
-    auto & name = static_cast<AstNodeIdentifier &>(*this->rhs).name; \
-    if (identifier.count(name)) { \
-      rhsIndex = identifier.at(name); \
-    } \
-  } \
-  else if (typeid(*this->rhs) == typeid(AstNodeString)) { \
-    auto & strings = program.getStrings(); \
-    auto & stringConv = static_cast<AstNodeString &>(*this->rhs); \
-    auto & val = stringConv.getVal(); \
-    auto & type = stringConv.getType(); \
-    if (strings.count({val, type})) { \
-      rhsIndex = strings.at({val, type}) + program.getIdentifiers().size(); \
-    } \
-  } \
-  if (lhsIndex >= 0) { \
-    if (rhsIndex >= 0) { \
-      program.addBytecode((uinteger_t)Opcode:: OP_II); \
-      program.addBytecode((uinteger_t)lhsIndex); \
-      program.addBytecode((uinteger_t)rhsIndex); \
-    } \
-    else { \
-      this->rhs->compile(program); \
-      program.addBytecode((uinteger_t)Opcode:: OP_IS); \
-      program.addBytecode((uinteger_t)lhsIndex); \
-    } \
-  } \
-  else { \
-    if (rhsIndex >= 0) { \
-      this->lhs->compile(program); \
-      program.addBytecode((uinteger_t)Opcode:: OP_SI); \
-      program.addBytecode((uinteger_t)rhsIndex); \
-    } \
-    else { \
-      this->lhs->compile(program); \
-      this->rhs->compile(program); \
-      program.addBytecode((uinteger_t)Opcode:: OP_SS); \
-    } \
-  }
-
 #define LOGICALOP(OP_S, OP_I) \
   integer_t lhsIndex{-1}; \
+  OPCODE_FIND_INDEX(this->lhs, lhsIndex); \
   size_t conditionJump{0}; \
-  auto & identifier = program.getIdentifiers(); \
-  if (typeid(*this->lhs) == typeid(AstNodeIdentifier)) { \
-    auto & name = static_cast<AstNodeIdentifier &>(*this->lhs).name; \
-    if (identifier.count(name)) { \
-      lhsIndex = identifier.at(name); \
-    } \
-  } \
-  else if (typeid(*this->lhs) == typeid(AstNodeString)) { \
-    auto & strings = program.getStrings(); \
-    auto & stringConv = static_cast<AstNodeString &>(*this->lhs); \
-    auto & val = stringConv.getVal(); \
-    auto & type = stringConv.getType(); \
-    if (strings.count({val, type})) { \
-      lhsIndex = strings.at({val, type}) + program.getIdentifiers().size(); \
-    } \
-  } \
   if (lhsIndex >= 0) { \
     conditionJump = program.getBytecode().size(); \
     program.addBytecode((uinteger_t)Opcode:: OP_I); \
@@ -112,7 +40,7 @@ using namespace Tang;
     program.addBytecode((uinteger_t)Opcode::POP); \
     this->rhs->compile(program); \
     program.setJumpTarget(conditionJump, program.getBytecode().size()); \
-  } \
+  }
 
 AstNodeBinary::AstNodeBinary(Operation op, shared_ptr<AstNode> lhs, shared_ptr<AstNode> rhs, Tang::location location) : AstNode(location), op{op}, lhs{lhs}, rhs{rhs} {}
 
@@ -149,47 +77,47 @@ void AstNodeBinary::compile(Tang::Program & program) const {
   // This is a standard binary operator.
   switch (this->op) {
     case Add: {
-      BINARYOP(ADD_SS, ADD_SI, ADD_IS, ADD_II);
+      BINARYOP(this->lhs, this->rhs, ADD_SS, ADD_SI, ADD_IS, ADD_II);
       break;
     }
     case Subtract: {
-      BINARYOP(SUBTRACT_SS, SUBTRACT_SI, SUBTRACT_IS, SUBTRACT_II);
+      BINARYOP(this->lhs, this->rhs, SUBTRACT_SS, SUBTRACT_SI, SUBTRACT_IS, SUBTRACT_II);
       break;
     }
     case Multiply: {
-      BINARYOP(MULTIPLY_SS, MULTIPLY_SI, MULTIPLY_IS, MULTIPLY_II);
+      BINARYOP(this->lhs, this->rhs, MULTIPLY_SS, MULTIPLY_SI, MULTIPLY_IS, MULTIPLY_II);
       break;
     }
     case Divide: {
-      BINARYOP(DIVIDE_SS, DIVIDE_SI, DIVIDE_IS, DIVIDE_II);
+      BINARYOP(this->lhs, this->rhs, DIVIDE_SS, DIVIDE_SI, DIVIDE_IS, DIVIDE_II);
       break;
     }
     case Modulo: {
-      BINARYOP(MODULO_SS, MODULO_SI, MODULO_IS, MODULO_II);
+      BINARYOP(this->lhs, this->rhs, MODULO_SS, MODULO_SI, MODULO_IS, MODULO_II);
       break;
     }
     case LessThan : {
-      BINARYOP(LT_SS, LT_SI, LT_IS, LT_II);
+      BINARYOP(this->lhs, this->rhs, LT_SS, LT_SI, LT_IS, LT_II);
       break;
     }
     case LessThanEqual : {
-      BINARYOP(LTE_SS, LTE_SI, LTE_IS, LTE_II);
+      BINARYOP(this->lhs, this->rhs, LTE_SS, LTE_SI, LTE_IS, LTE_II);
       break;
     }
     case GreaterThan : {
-      BINARYOP(GT_SS, GT_SI, GT_IS, GT_II);
+      BINARYOP(this->lhs, this->rhs, GT_SS, GT_SI, GT_IS, GT_II);
       break;
     }
     case GreaterThanEqual : {
-      BINARYOP(GTE_SS, GTE_SI, GTE_IS, GTE_II);
+      BINARYOP(this->lhs, this->rhs, GTE_SS, GTE_SI, GTE_IS, GTE_II);
       break;
     }
     case Equal : {
-      BINARYOP(EQ_SS, EQ_SI, EQ_IS, EQ_II);
+      BINARYOP(this->lhs, this->rhs, EQ_SS, EQ_SI, EQ_IS, EQ_II);
       break;
     }
     case NotEqual : {
-      BINARYOP(NEQ_SS, NEQ_SI, NEQ_IS, NEQ_II);
+      BINARYOP(this->lhs, this->rhs, NEQ_SS, NEQ_SI, NEQ_IS, NEQ_II);
       break;
     }
     case And : {
