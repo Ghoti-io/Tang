@@ -5,7 +5,10 @@
 
 #include <string>
 #include <bit>
+#include "astNodeIdentifier.hpp"
 #include "astNodeIndex.hpp"
+#include "astNodeString.hpp"
+#include "macros.hpp"
 #include "opcode.hpp"
 #include "program.hpp"
 
@@ -28,9 +31,7 @@ void AstNodeIndex::compilePreprocess(Program & program, PreprocessState state) c
 }
 
 void AstNodeIndex::compile(Tang::Program & program) const {
-  this->collection->compile(program);
-  this->index->compile(program);
-  program.addBytecode((uinteger_t)Opcode::INDEX);
+  BINARYOP(this->collection, this->index, INDEX_SS, INDEX_SI, INDEX_IS, INDEX_II);
 }
 
 const std::shared_ptr<const AstNode> AstNodeIndex::getCollection() const {

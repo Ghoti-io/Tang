@@ -95,8 +95,14 @@ namespace Tang {
     NEQ_SI,      ///< Push lhs != rhs
     NEQ_IS,      ///< Push lhs != rhs
     NEQ_II,      ///< Push lhs != rhs
-    PERIOD,   ///< Pop rhs, pop lhs, push lhs.rhs
-    INDEX,    ///< Pop index, pop collection, push collection[index]
+    PERIOD_SS,   ///< Push lhs.rhs
+    PERIOD_SI,   ///< Push lhs.rhs
+    PERIOD_IS,   ///< Push lhs.rhs
+    PERIOD_II,   ///< Push lhs.rhs
+    INDEX_SS,    ///< Push collection[index]
+    INDEX_SI,    ///< Push collection[index]
+    INDEX_IS,    ///< Push collection[index]
+    INDEX_II,    ///< Push collection[index]
     SLICE,    ///< Pop skip, pop end, pop begin, pop collection,
               ///<   push collection[begin:end:skip]
     GETITERATOR, ///< Pop a collection, push the collection iterator

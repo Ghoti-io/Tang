@@ -392,14 +392,36 @@ string Program::dumpBytecode() const {
         DUMPBINARY_II;
         break;
       }
-      case Opcode::PERIOD: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+      case Opcode::PERIOD_SS: {
+        DUMPBINARY;
         break;
       }
-      case Opcode::INDEX: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+      case Opcode::PERIOD_SI: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::PERIOD_IS: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::PERIOD_II: {
+        DUMPBINARY_II;
+        break;
+      }
+      case Opcode::INDEX_SS: {
+        DUMPBINARY;
+        break;
+      }
+      case Opcode::INDEX_SI: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::INDEX_IS: {
+        DUMPBINARY_I;
+        break;
+      }
+      case Opcode::INDEX_II: {
+        DUMPBINARY_II;
         break;
       }
       case Opcode::SLICE: {

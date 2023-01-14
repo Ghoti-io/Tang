@@ -378,12 +378,42 @@ pair<OpcodeOffsets, OpcodePositions> Program::analyze() const {
         pc += 3;
         break;
       }
-      case Opcode::PERIOD: {
+      case Opcode::PERIOD_SS: {
         ++pc;
         break;
       }
-      case Opcode::INDEX: {
+      case Opcode::PERIOD_SI: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::PERIOD_IS: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::PERIOD_II: {
+        DUMPPROGRAMCHECK(2);
+        pc += 3;
+        break;
+      }
+      case Opcode::INDEX_SS: {
         ++pc;
+        break;
+      }
+      case Opcode::INDEX_SI: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::INDEX_IS: {
+        DUMPPROGRAMCHECK(1);
+        pc += 2;
+        break;
+      }
+      case Opcode::INDEX_II: {
+        DUMPPROGRAMCHECK(2);
+        pc += 3;
         break;
       }
       case Opcode::SLICE: {

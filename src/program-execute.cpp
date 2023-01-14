@@ -777,12 +777,8 @@ Context Program::execute(ContextData && data) {
         stack.push_back(lhs != rhs);
       }
       break;
-      case Opcode::PERIOD: {
-        STACKCHECK(2);
-        auto rhs = stack.back();
-        stack.pop_back();
-        auto lhs = stack.back();
-        stack.pop_back();
+      case Opcode::PERIOD_SS: {
+        BINARYOP_SS;
         auto tmp = lhs->__period(rhs, this->tang);
 
         // Resolve any library attribute requests.
@@ -802,17 +798,95 @@ Context Program::execute(ContextData && data) {
 
         // Finally, push the result onto the stack.
         stack.push_back(tmp);
-        ++pc;
       }
       break;
-      case Opcode::INDEX: {
-        STACKCHECK(2);
-        auto index = stack.back();
-        stack.pop_back();
-        auto container = stack.back();
-        stack.pop_back();
-        stack.push_back(container->__index(index));
-        ++pc;
+      case Opcode::PERIOD_SI: {
+        BINARYOP_SI;
+        auto tmp = lhs->__period(rhs, this->tang);
+
+        // Resolve any library attribute requests.
+        // This could not be done earlier, because __period() does not have
+        // access to the context object, which is needed by the library
+        // attribute function.  So we clean up that part now.
+        while (typeid(*tmp) == typeid(ComputedExpressionNativeLibraryFunction)) {
+          tmp = static_cast<ComputedExpressionNativeLibraryFunction &>(*tmp).getFunction()(context);
+        }
+
+        // Set the target of a native bound function.
+        // This could not be done earlier, because __period() does not have
+        // access to the target object (lhs).  So we clean up that part now.
+        if (typeid(*tmp) == typeid(ComputedExpressionNativeBoundFunction)) {
+          static_cast<ComputedExpressionNativeBoundFunction &>(*tmp).target = lhs;
+        }
+
+        // Finally, push the result onto the stack.
+        stack.push_back(tmp);
+      }
+      break;
+      case Opcode::PERIOD_IS: {
+        BINARYOP_IS;
+        auto tmp = lhs->__period(rhs, this->tang);
+
+        // Resolve any library attribute requests.
+        // This could not be done earlier, because __period() does not have
+        // access to the context object, which is needed by the library
+        // attribute function.  So we clean up that part now.
+        while (typeid(*tmp) == typeid(ComputedExpressionNativeLibraryFunction)) {
+          tmp = static_cast<ComputedExpressionNativeLibraryFunction &>(*tmp).getFunction()(context);
+        }
+
+        // Set the target of a native bound function.
+        // This could not be done earlier, because __period() does not have
+        // access to the target object (lhs).  So we clean up that part now.
+        if (typeid(*tmp) == typeid(ComputedExpressionNativeBoundFunction)) {
+          static_cast<ComputedExpressionNativeBoundFunction &>(*tmp).target = lhs;
+        }
+
+        // Finally, push the result onto the stack.
+        stack.push_back(tmp);
+      }
+      break;
+      case Opcode::PERIOD_II: {
+        BINARYOP_II;
+        auto tmp = lhs->__period(rhs, this->tang);
+
+        // Resolve any library attribute requests.
+        // This could not be done earlier, because __period() does not have
+        // access to the context object, which is needed by the library
+        // attribute function.  So we clean up that part now.
+        while (typeid(*tmp) == typeid(ComputedExpressionNativeLibraryFunction)) {
+          tmp = static_cast<ComputedExpressionNativeLibraryFunction &>(*tmp).getFunction()(context);
+        }
+
+        // Set the target of a native bound function.
+        // This could not be done earlier, because __period() does not have
+        // access to the target object (lhs).  So we clean up that part now.
+        if (typeid(*tmp) == typeid(ComputedExpressionNativeBoundFunction)) {
+          static_cast<ComputedExpressionNativeBoundFunction &>(*tmp).target = lhs;
+        }
+
+        // Finally, push the result onto the stack.
+        stack.push_back(tmp);
+      }
+      break;
+      case Opcode::INDEX_SS: {
+        BINARYOP_SS;
+        stack.push_back(lhs->__index(rhs));
+      }
+      break;
+      case Opcode::INDEX_SI: {
+        BINARYOP_SI;
+        stack.push_back(lhs->__index(rhs));
+      }
+      break;
+      case Opcode::INDEX_IS: {
+        BINARYOP_IS;
+        stack.push_back(lhs->__index(rhs));
+      }
+      break;
+      case Opcode::INDEX_II: {
+        BINARYOP_II;
+        stack.push_back(lhs->__index(rhs));
       }
       break;
       case Opcode::SLICE: {

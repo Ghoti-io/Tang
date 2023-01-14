@@ -5,6 +5,7 @@
 
 #include <string>
 #include <bit>
+#include "astNodeIdentifier.hpp"
 #include "astNodePeriod.hpp"
 #include "astNodeString.hpp"
 #include "opcode.hpp"
@@ -29,8 +30,7 @@ void AstNodePeriod::compilePreprocess(Program & program, PreprocessState state) 
 }
 
 void AstNodePeriod::compile(Tang::Program & program) const {
-  this->lhs->compile(program);
-  AstNodeString(this->rhs, this->location).compile(program);
-  program.addBytecode((uinteger_t)Opcode::PERIOD);
+  shared_ptr<AstNode> rhsString = make_shared<AstNodeString>(this->rhs, this->location);
+  BINARYOP(this->lhs, rhsString, PERIOD_SS, PERIOD_SI, PERIOD_IS, PERIOD_II);
 }
 
