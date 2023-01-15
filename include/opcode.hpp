@@ -105,9 +105,11 @@ namespace Tang {
     INDEX_II,    ///< Push collection[index]
     SLICE,    ///< Pop skip, pop end, pop begin, pop collection,
               ///<   push collection[begin:end:skip]
-    GETITERATOR, ///< Pop a collection, push the collection iterator
-    ITERATORNEXT,///< Pop an iterator, push the next iterator value
-    ISITERATOREND,///< Pop a val, push bool(is val == iterator end)
+    GETITERATOR_SI,///< Save collection iterator to a stack index
+    GETITERATOR_II,///< Save collection iterator to a stack index
+    ITERATORNEXT_II,///< Use the iterator at supplied index to calculate the
+                    ///<   next value, then store at 2nd supplied stack index
+    ISITERATOREND_I,///< Push bool(is val[at stack index] == iterator end)
     CASTINTEGER_S,///< Typecast to int, push
     CASTINTEGER_I,///< Typecast to int, push
     CASTFLOAT_S,  ///< Typecast to float, push

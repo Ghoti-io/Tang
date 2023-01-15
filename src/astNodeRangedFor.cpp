@@ -6,7 +6,10 @@
 #include <string>
 #include <sstream>
 #include <bit>
+#include "astNodeIdentifier.hpp"
 #include "astNodeRangedFor.hpp"
+#include "astNodeString.hpp"
+#include "macros.hpp"
 #include "opcode.hpp"
 #include "program.hpp"
 
@@ -32,27 +35,29 @@ void AstNodeRangedFor::compile(Tang::Program & program) const {
   program.pushBreakStack();
   program.pushContinueStack();
 
-  // Compile the Collection expression.
-  this->collection->compile(program);
-
-  // Call the GETITERATOR opcode.
-  program.addBytecode((uinteger_t)Opcode::GETITERATOR);
-
-  // Save to Iterator variable.
+  // Save the iterator's stack index position and the target variable's stack
+  // position so that we can access them directly.
   auto & identifier = program.getIdentifiers();
-  program.addBytecode((uinteger_t)Opcode::POKE);
-  program.addBytecode((uinteger_t)identifier.at(this->iteratorVariableName));
+  uinteger_t iteratorIndex = (uinteger_t)identifier.at(this->iteratorVariableName);
+  uinteger_t targetIndex = (uinteger_t)identifier.at(this->target->name);
+
+  // Call the correct GETITERATOR opcode.
+  // Note: we are using UNARYOP, even though this bytecode has an an additional
+  // index location provided.  The additional index location is not treated the
+  // same as in a BINARYOP or UNARYOP, but UNARYOP is the closest, so we will
+  // reuse its functionality here.
+  UNARYOP(this->collection, GETITERATOR_SI, GETITERATOR_II);
+  program.addBytecode(iteratorIndex);
 
   // Call ITERATORNEXT
   auto callIteratorNext = program.getBytecode().size();
-  program.addBytecode((uinteger_t)Opcode::ITERATORNEXT);
-
-  // Assign top of stack to Target variable.
-  program.addBytecode((uinteger_t)Opcode::POKE);
-  program.addBytecode((uinteger_t)identifier.at(this->target->name));
+  program.addBytecode((uinteger_t)Opcode::ITERATORNEXT_II);
+  program.addBytecode(iteratorIndex);
+  program.addBytecode(targetIndex);
 
   // If Target variable is IteratorEnd, exit loop.
-  program.addBytecode((uinteger_t)Opcode::ISITERATOREND);
+  program.addBytecode((uinteger_t)Opcode::ISITERATOREND_I);
+  program.addBytecode(targetIndex);
   auto isIteratorEndJump = program.getBytecode().size();
   program.addBytecode((uinteger_t)Opcode::JMPT_POP);
   program.addBytecode((uinteger_t)0);
@@ -60,11 +65,6 @@ void AstNodeRangedFor::compile(Tang::Program & program) const {
   // Compile the code block and clean up the stack afterwards.
   this->codeBlock->compile(program);
   program.addBytecode((uinteger_t)Opcode::POP);
-
-  // Push Iterator variable onto stack.
-  auto loadIterator = program.getBytecode().size();
-  program.addBytecode((uinteger_t)Opcode::PEEK);
-  program.addBytecode((uinteger_t)identifier.at(this->iteratorVariableName));
 
   // GOTO "Call ITERATORNEXT".
   program.addBytecode((uinteger_t)Opcode::JMP);
@@ -82,7 +82,7 @@ void AstNodeRangedFor::compile(Tang::Program & program) const {
   program.popBreakStack(program.getBytecode().size() + 1);
 
   // We now know where a `continue` statement should jump to.
-  program.popContinueStack(loadIterator);
+  program.popContinueStack(callIteratorNext);
 }
 
 void AstNodeRangedFor::compilePreprocess(Program & program, PreprocessState state) const {

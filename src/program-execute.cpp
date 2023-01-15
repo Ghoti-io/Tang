@@ -903,28 +903,43 @@ Context Program::execute(ContextData && data) {
         ++pc;
       }
       break;
-      case Opcode::GETITERATOR: {
-        STACKCHECK(1);
-        auto collection = stack.back();
-        stack.pop_back();
-        stack.push_back(collection->__getIterator(collection));
+      case Opcode::GETITERATOR_SI: {
+        EXECUTEPROGRAMCHECK(1);
+        auto position = this->bytecode[pc + 1];
+        UNARYOP_S;
+        STACKCHECK(position);
+        stack[fp + position] = operand->__getIterator(operand);
+        // UNARYOP_S already increments `pc` by one, but this particular opcode
+        // is special, and needs to increment `pc` by 2 (total).
         ++pc;
       }
       break;
-      case Opcode::ITERATORNEXT: {
-        STACKCHECK(1);
-        auto iterator = stack.back();
-        stack.pop_back();
-        stack.push_back(iterator->__iteratorNext());
+      case Opcode::GETITERATOR_II: {
+        UNARYOP_I;
+        stack.push_back(operand->__getIterator(operand));
+        EXECUTEPROGRAMCHECK(2);
+        auto position = this->bytecode[pc + 2];
+        STACKCHECK(position);
+        stack[fp + position] = operand->__getIterator(operand);
+        // UNARYOP_I already increments `pc` by two, but this particular opcode
+        // is special, and needs to increment `pc` by 3 (total).
         ++pc;
       }
       break;
-      case Opcode::ISITERATOREND: {
-        STACKCHECK(1);
-        auto val = stack.back();
-        stack.pop_back();
-        stack.push_back(GarbageCollected::make<ComputedExpressionBoolean>((typeid(*val) == typeid(ComputedExpressionIteratorEnd)) || (typeid(*val) == typeid(ComputedExpressionError))));
-        ++pc;
+      case Opcode::ITERATORNEXT_II: {
+        EXECUTEPROGRAMCHECK(2);
+        auto iteratorIndex = this->bytecode[pc + 1];
+        STACKCHECK(iteratorIndex);
+        auto & iterator = stack[fp + iteratorIndex];
+        auto targetIndex = this->bytecode[pc + 2];
+        STACKCHECK(targetIndex);
+        stack[fp + targetIndex] = iterator->__iteratorNext();
+        pc += 3;
+      }
+      break;
+      case Opcode::ISITERATOREND_I: {
+        UNARYOP_I;
+        stack.push_back(GarbageCollected::make<ComputedExpressionBoolean>((typeid(*operand) == typeid(ComputedExpressionIteratorEnd)) || (typeid(*operand) == typeid(ComputedExpressionError))));
       }
       break;
       case Opcode::CASTINTEGER_S: {

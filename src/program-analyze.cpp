@@ -420,16 +420,20 @@ pair<OpcodeOffsets, OpcodePositions> Program::analyze() const {
         ++pc;
         break;
       }
-      case Opcode::GETITERATOR: {
-        ++pc;
+      case Opcode::GETITERATOR_SI: {
+        pc += 2;
         break;
       }
-      case Opcode::ITERATORNEXT: {
-        ++pc;
+      case Opcode::GETITERATOR_II: {
+        pc += 3;
         break;
       }
-      case Opcode::ISITERATOREND: {
-        ++pc;
+      case Opcode::ITERATORNEXT_II: {
+        pc += 3;
+        break;
+      }
+      case Opcode::ISITERATOREND_I: {
+        pc += 2;
         break;
       }
       case Opcode::CASTINTEGER_S: {

@@ -45,7 +45,7 @@ using namespace Tang;
 
 string Program::dumpBytecode() const {
   stringstream out;
-  int opcodeWidth{12};
+  int opcodeWidth{16};
   int offsetWidth{(int)ceil(log10(this->bytecode.size()))};
   size_t pc{0};
 
@@ -429,19 +429,20 @@ string Program::dumpBytecode() const {
         ++pc;
         break;
       }
-      case Opcode::GETITERATOR: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+      case Opcode::GETITERATOR_SI: {
+        DUMPBINARY_I;
         break;
       }
-      case Opcode::ITERATORNEXT: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+      case Opcode::GETITERATOR_II: {
+        DUMPBINARY_II;
         break;
       }
-      case Opcode::ISITERATOREND: {
-        out << (Opcode)this->bytecode[pc];
-        ++pc;
+      case Opcode::ITERATORNEXT_II: {
+        DUMPBINARY_II;
+        break;
+      }
+      case Opcode::ISITERATOREND_I: {
+        DUMPBINARY_I;
         break;
       }
       case Opcode::CASTINTEGER_S: {
