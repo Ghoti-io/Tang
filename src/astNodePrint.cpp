@@ -7,6 +7,7 @@
 #include "astNodeIdentifier.hpp"
 #include "astNodePrint.hpp"
 #include "astNodeString.hpp"
+#include "macros.hpp"
 #include "opcode.hpp"
 #include "program.hpp"
 
@@ -28,30 +29,6 @@ void AstNodePrint::compilePreprocess(Program & program, PreprocessState state) c
 }
 
 void AstNodePrint::compile(Tang::Program & program) const {
-  integer_t index{-1};
-  auto & identifier = program.getIdentifiers();
-  if (typeid(*this->expression) == typeid(AstNodeIdentifier)) {
-    auto & name = static_cast<AstNodeIdentifier &>(*this->expression).name;
-    if (identifier.count(name)) {
-      index = identifier.at(name);
-    }
-  }
-  else if (typeid(*this->expression) == typeid(AstNodeString)) {
-    auto & strings = program.getStrings();
-    auto & stringConv = static_cast<AstNodeString &>(*this->expression);
-    auto & val = stringConv.getVal();
-    auto & type = stringConv.getType();
-    if (strings.count({val, type})) {
-      index = strings.at({val, type}) + program.getIdentifiers().size();
-    }
-  }
-  if (index >= 0) {
-    program.addBytecode((uinteger_t)Opcode::PRINT_I);
-    program.addBytecode((uinteger_t)index);
-  }
-  else {
-    this->expression->compile(program);
-    program.addBytecode((uinteger_t)Opcode::PRINT_S);
-  }
+  UNARYOP(this->expression, PRINT_S, PRINT_I);
 }
 
