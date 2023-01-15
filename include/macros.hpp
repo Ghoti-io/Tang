@@ -42,7 +42,7 @@
     program.addBytecode((uinteger_t)index); \
   } \
   else { \
-    this->operand->compile(program); \
+    (OPERAND)->compile(program); \
     program.addBytecode((uinteger_t)Opcode:: OP_S); \
   }
 
