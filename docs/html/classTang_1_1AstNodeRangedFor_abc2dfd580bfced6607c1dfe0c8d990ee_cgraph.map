@@ -1,11 +1,6 @@
 <map id="Tang::AstNodeRangedFor::compile" name="Tang::AstNodeRangedFor::compile">
-<area shape="rect" id="node1" title="Compile the ast of the provided Tang::Program." alt="" coords="5,175,189,217"/>
-<area shape="rect" id="node2" href="$classTang_1_1Program.html#a1067d000db48378fa37ff569ffdf7329" title="Add a Tang::uinteger_t to the Bytecode." alt="" coords="244,5,452,32"/>
-<area shape="rect" id="node3" href="$classTang_1_1Program.html#a742a5415a123a8a0cffa57476f74d55f" title="Get the Bytecode vector." alt="" coords="245,56,451,83"/>
-<area shape="rect" id="node4" href="$classTang_1_1Program.html#a788deba60696516b2019081afdead30c" title="Get the identifier map of the current environment." alt="" coords="243,107,453,133"/>
-<area shape="rect" id="node5" href="$classTang_1_1Program.html#ab170cc8217af1ed518b89cf445508d18" title="For all continue bytecode locations collected by Tang::addContinue, set the target pc to target." alt="" coords="237,157,459,184"/>
-<area shape="rect" id="node6" href="$classTang_1_1Program.html#a5da413efe8435cebd927a8be58dcb9be" title="Set the target address of a Jump opcode." alt="" coords="507,208,723,235"/>
-<area shape="rect" id="node7" href="$classTang_1_1Program.html#a0a824ad2a83896854f4e528f6c3cc630" title="For all continue bytecode locations collected by Tang::addContinue, set the target pc to target." alt="" coords="245,259,451,301"/>
-<area shape="rect" id="node8" href="$classTang_1_1Program.html#a5c12ec99486118295496695b50750da9" title="Increase the break environment stack, so that we can handle nested break&#45;supporting structures." alt="" coords="252,325,444,366"/>
-<area shape="rect" id="node9" href="$classTang_1_1Program.html#af5d2ae23991475e3c8776de0d0a01123" title="Increase the continue environment stack, so that we can handle nested continue&#45;supporting structures." alt="" coords="242,390,454,431"/>
+<area shape="rect" id="node1" title="Compile the ast of the provided Tang::Program." alt="" coords="5,57,189,98"/>
+<area shape="rect" id="node2" href="$classTang_1_1Program.html#a788deba60696516b2019081afdead30c" title="Get the identifier map of the current environment." alt="" coords="239,5,448,32"/>
+<area shape="rect" id="node3" href="$classTang_1_1Program.html#a5c12ec99486118295496695b50750da9" title="Increase the break environment stack, so that we can handle nested break&#45;supporting structures." alt="" coords="247,57,439,98"/>
+<area shape="rect" id="node4" href="$classTang_1_1Program.html#af5d2ae23991475e3c8776de0d0a01123" title="Increase the continue environment stack, so that we can handle nested continue&#45;supporting structures." alt="" coords="237,122,449,163"/>
 </map>

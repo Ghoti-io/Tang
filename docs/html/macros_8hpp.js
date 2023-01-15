@@ -3,6 +3,7 @@ var macros_8hpp =
     [ "BINARYOP", "macros_8hpp.html#ace648ece9649f3e80febbb8ee40b8ab5", null ],
     [ "OPCODE_FIND_INDEX", "macros_8hpp.html#a1e79d04d95f48569f5f937532817a5f7", null ],
     [ "TANGVERSION", "macros_8hpp.html#a5c90efafe29eff1c7ccaa416e6e918fc", null ],
+    [ "UNARYOP", "macros_8hpp.html#ace2c366b0eed807a5acc89bd58778c9c", null ],
     [ "ContextData", "macros_8hpp.html#a7f5af272721648f0b4a33770e915ecfc", null ],
     [ "float_t", "macros_8hpp.html#a5fab10267a7a4379e7d3642508736ab8", null ],
     [ "integer_t", "macros_8hpp.html#a48da4f54f29ec5b8a4dfd1a9234f7ee8", null ],

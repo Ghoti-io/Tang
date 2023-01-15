@@ -33,6 +33,8 @@ This graph shows which files directly or indirectly include this file\+:
 \item 
 \#define {\bfseries OPCODE\+\_\+\+FIND\+\_\+\+INDEX}(EXPRESSION,  INDEX)
 \item 
+\#define {\bfseries UNARYOP}(OPERAND,  OP\+\_\+S,  OP\+\_\+I)
+\item 
 \#define {\bfseries BINARYOP}(LHS,  RHS,  OP\+\_\+\+SS,  OP\+\_\+\+SI,  OP\+\_\+\+IS,  OP\+\_\+\+II)
 \end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
@@ -135,6 +137,26 @@ Contains generic macros.
 \DoxyCodeLine{        INDEX = strings.at(\{val, type\}) + program.getIdentifiers().size(); \(\backslash\)}
 \DoxyCodeLine{      \} \(\backslash\)}
 \DoxyCodeLine{    \} \(\backslash\)}
+\DoxyCodeLine{  \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{macros_8hpp_ace2c366b0eed807a5acc89bd58778c9c}\label{macros_8hpp_ace2c366b0eed807a5acc89bd58778c9c}} 
+\index{macros.hpp@{macros.hpp}!UNARYOP@{UNARYOP}}
+\index{UNARYOP@{UNARYOP}!macros.hpp@{macros.hpp}}
+\doxysubsubsection{\texorpdfstring{UNARYOP}{UNARYOP}}
+{\footnotesize\ttfamily \#define UNARYOP(\begin{DoxyParamCaption}\item[{}]{OPERAND,  }\item[{}]{OP\+\_\+S,  }\item[{}]{OP\+\_\+I }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{macros_8hpp_a48da4f54f29ec5b8a4dfd1a9234f7ee8}{integer\_t}} index\{-\/1\}; \(\backslash\)}
+\DoxyCodeLine{  OPCODE\_FIND\_INDEX((OPERAND), index); \(\backslash\)}
+\DoxyCodeLine{  if (index >= 0) \{ \(\backslash\)}
+\DoxyCodeLine{    program.addBytecode((uinteger\_t)Opcode:: OP\_I); \(\backslash\)}
+\DoxyCodeLine{    program.addBytecode((uinteger\_t)index); \(\backslash\)}
+\DoxyCodeLine{  \} \(\backslash\)}
+\DoxyCodeLine{  else \{ \(\backslash\)}
+\DoxyCodeLine{    (OPERAND)-\/>compile(program); \(\backslash\)}
+\DoxyCodeLine{    program.addBytecode((uinteger\_t)Opcode:: OP\_S); \(\backslash\)}
 \DoxyCodeLine{  \}}
 
 \end{DoxyCode}

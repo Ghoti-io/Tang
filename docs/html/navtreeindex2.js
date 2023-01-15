@@ -1,7 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"classTang_1_1ComputedExpressionArray.html#a8e779d014cbb877f078d61a2ff91603d":[1,0,0,31,15],
-"classTang_1_1ComputedExpressionArray.html#a8f1c04c03b8c7b97ef2ea1efd2270b07":[1,0,0,31,11],
 "classTang_1_1ComputedExpressionArray.html#a907104a9d090d21e9bcc487b696738c4":[1,0,0,31,24],
 "classTang_1_1ComputedExpressionArray.html#aa13b85a91c9321388a62bef514bd1bf6":[1,0,0,31,32],
 "classTang_1_1ComputedExpressionArray.html#aa6e3a065c2d0dfcde5e2eaefa26f7606":[1,0,0,31,6],
@@ -249,5 +247,7 @@ var NAVTREEINDEX2 =
 "classTang_1_1ComputedExpressionLibrary.html#a011d86ce9b04fca4bef67b4c5bb3324c":[1,0,0,39,3],
 "classTang_1_1ComputedExpressionLibrary.html#a14a57cffe9fb44b0d5f34d06afd0db1b":[1,0,0,39,19],
 "classTang_1_1ComputedExpressionLibrary.html#a358bd27080cf96a6a75e1824d27b509f":[1,0,0,39,29],
-"classTang_1_1ComputedExpressionLibrary.html#a39df4abc066123ec2d634e921be40d21":[1,0,0,39,14]
+"classTang_1_1ComputedExpressionLibrary.html#a39df4abc066123ec2d634e921be40d21":[1,0,0,39,14],
+"classTang_1_1ComputedExpressionLibrary.html#a493f58bd7f51ca4d6b9b1ef1860b4370":[1,0,0,39,28],
+"classTang_1_1ComputedExpressionLibrary.html#a5287fabf86f19613afb04d5e285c0231":[1,0,0,39,24]
 };
