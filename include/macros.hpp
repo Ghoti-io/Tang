@@ -34,6 +34,18 @@
     } \
   }
 
+#define UNARYOP(OPERAND, OP_S, OP_I) \
+  integer_t index{-1}; \
+  OPCODE_FIND_INDEX((OPERAND), index); \
+  if (index >= 0) { \
+    program.addBytecode((uinteger_t)Opcode:: OP_I); \
+    program.addBytecode((uinteger_t)index); \
+  } \
+  else { \
+    this->operand->compile(program); \
+    program.addBytecode((uinteger_t)Opcode:: OP_S); \
+  }
+
 #define BINARYOP(LHS, RHS, OP_SS, OP_SI, OP_IS, OP_II) \
   integer_t lhsIndex{-1}, rhsIndex{-1}; \
   OPCODE_FIND_INDEX((LHS), lhsIndex); \
