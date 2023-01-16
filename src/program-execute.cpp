@@ -89,42 +89,42 @@ using namespace Tang;
         auto & operand = stack[fp + index]; \
         pc += 2;
 
-#define BINARYOP_SS \
+#define BINARYOP_SS(EXPRESSION) \
         STACKCHECK(2); \
-        auto rhs = stack.back(); \
-        stack.pop_back(); \
-        auto lhs = stack.back(); \
+        auto top = stack.size(); \
+        auto & rhs = stack[top - 1]; \
+        auto & lhs = stack[top - 2]; \
+        stack[top - 2] = (EXPRESSION); \
         stack.pop_back(); \
         ++pc;
 
-#define BINARYOP_SI \
+#define BINARYOP_SI(EXPRESSION) \
         EXECUTEPROGRAMCHECK(1); \
-        STACKCHECK(1); \
         auto rhsIndex = this->bytecode[pc + 1]; \
         STACKCHECK(rhsIndex); \
         auto & rhs = stack[fp + rhsIndex]; \
-        auto lhs = stack.back(); \
-        stack.pop_back(); \
+        auto & lhs = stack.back(); \
+        stack.back() = (EXPRESSION); \
         pc += 2;
 
-#define BINARYOP_IS \
+#define BINARYOP_IS(EXPRESSION) \
         EXECUTEPROGRAMCHECK(1); \
-        STACKCHECK(1); \
-        auto rhs = stack.back(); \
-        stack.pop_back(); \
         auto lhsIndex = this->bytecode[pc + 1]; \
         STACKCHECK(lhsIndex); \
+        auto & rhs = stack.back(); \
         auto & lhs = stack[fp + lhsIndex]; \
+        stack.back() = (EXPRESSION); \
         pc += 2;
 
-#define BINARYOP_II \
+#define BINARYOP_II(EXPRESSION) \
         EXECUTEPROGRAMCHECK(2); \
         auto lhsIndex = this->bytecode[pc + 1]; \
-        STACKCHECK(lhsIndex); \
-        auto & lhs = stack[fp + lhsIndex]; \
         auto rhsIndex = this->bytecode[pc + 2]; \
+        STACKCHECK(lhsIndex); \
         STACKCHECK(rhsIndex); \
+        auto & lhs = stack[fp + lhsIndex]; \
         auto & rhs = stack[fp + rhsIndex]; \
+        stack.emplace_back(EXPRESSION); \
         pc += 3;
 
 static void callFunc(GarbageCollected & function, uinteger_t argc, size_t & pc, size_t & fp, vector<GarbageCollected> & stack, vector<size_t> & pcStack, vector<size_t> & fpStack, Bytecode & bytecode, Context & context, size_t opcodeSize) {
@@ -538,103 +538,83 @@ Context Program::execute(ContextData && data) {
       }
       break;
       case Opcode::ADD_SS: {
-        BINARYOP_SS;
-        stack.push_back(lhs + rhs);
+        BINARYOP_SS(lhs + rhs);
       }
       break;
       case Opcode::ADD_SI: {
-        BINARYOP_SI;
-        stack.push_back(lhs + rhs);
+        BINARYOP_SI(lhs + rhs);
       }
       break;
       case Opcode::ADD_IS: {
-        BINARYOP_IS;
-        stack.push_back(lhs + rhs);
+        BINARYOP_IS(lhs + rhs);
       }
       break;
       case Opcode::ADD_II: {
-        BINARYOP_II;
-        stack.push_back(lhs + rhs);
+        BINARYOP_II(lhs + rhs);
       }
       break;
       case Opcode::SUBTRACT_SS: {
-        BINARYOP_SS;
-        stack.push_back(lhs - rhs);
+        BINARYOP_SS(lhs - rhs);
       }
       break;
       case Opcode::SUBTRACT_SI: {
-        BINARYOP_SI;
-        stack.push_back(lhs - rhs);
+        BINARYOP_SI(lhs - rhs);
       }
       break;
       case Opcode::SUBTRACT_IS: {
-        BINARYOP_IS;
-        stack.push_back(lhs - rhs);
+        BINARYOP_IS(lhs - rhs);
       }
       break;
       case Opcode::SUBTRACT_II: {
-        BINARYOP_II;
-        stack.push_back(lhs - rhs);
+        BINARYOP_II(lhs - rhs);
       }
       break;
       case Opcode::MULTIPLY_SS: {
-        BINARYOP_SS;
-        stack.push_back(lhs * rhs);
+        BINARYOP_SS(lhs * rhs);
       }
       break;
       case Opcode::MULTIPLY_SI: {
-        BINARYOP_SI;
-        stack.push_back(lhs * rhs);
+        BINARYOP_SI(lhs * rhs);
       }
       break;
       case Opcode::MULTIPLY_IS: {
-        BINARYOP_IS;
-        stack.push_back(lhs * rhs);
+        BINARYOP_IS(lhs * rhs);
       }
       break;
       case Opcode::MULTIPLY_II: {
-        BINARYOP_II;
-        stack.push_back(lhs * rhs);
+        BINARYOP_II(lhs * rhs);
       }
       break;
       case Opcode::DIVIDE_SS: {
-        BINARYOP_SS;
-        stack.push_back(lhs / rhs);
+        BINARYOP_SS(lhs / rhs);
       }
       break;
       case Opcode::DIVIDE_SI: {
-        BINARYOP_SI;
-        stack.push_back(lhs / rhs);
+        BINARYOP_SI(lhs / rhs);
       }
       break;
       case Opcode::DIVIDE_IS: {
-        BINARYOP_IS;
-        stack.push_back(lhs / rhs);
+        BINARYOP_IS(lhs / rhs);
       }
       break;
       case Opcode::DIVIDE_II: {
-        BINARYOP_II;
-        stack.push_back(lhs / rhs);
+        BINARYOP_II(lhs / rhs);
       }
       break;
       case Opcode::MODULO_SS: {
-        BINARYOP_SS;
-        stack.push_back(lhs % rhs);
+        BINARYOP_SS(lhs % rhs);
       }
       break;
       case Opcode::MODULO_SI: {
-        BINARYOP_SI;
-        stack.push_back(lhs % rhs);
+        BINARYOP_SI(lhs % rhs);
       }
       break;
       case Opcode::MODULO_IS: {
-        BINARYOP_IS;
-        stack.push_back(lhs % rhs);
+        BINARYOP_IS(lhs % rhs);
       }
       break;
       case Opcode::MODULO_II: {
-        BINARYOP_II;
-        stack.push_back(lhs % rhs);
+        BINARYOP_II(lhs % rhs);
       }
       break;
       case Opcode::NEGATIVE_S: {
@@ -658,127 +638,108 @@ Context Program::execute(ContextData && data) {
       }
       break;
       case Opcode::LT_SS: {
-        BINARYOP_SS;
-        stack.push_back(lhs < rhs);
+        BINARYOP_SS(lhs < rhs);
       }
       break;
       case Opcode::LT_SI: {
-        BINARYOP_SI;
-        stack.push_back(lhs < rhs);
+        BINARYOP_SI(lhs < rhs);
       }
       break;
       case Opcode::LT_IS: {
-        BINARYOP_IS;
-        stack.push_back(lhs < rhs);
+        BINARYOP_IS(lhs < rhs);
       }
       break;
       case Opcode::LT_II: {
-        BINARYOP_II;
-        stack.push_back(lhs < rhs);
+        BINARYOP_II(lhs < rhs);
       }
       break;
       case Opcode::LTE_SS: {
-        BINARYOP_SS;
-        stack.push_back(lhs <= rhs);
+        BINARYOP_SS(lhs <= rhs);
       }
       break;
       case Opcode::LTE_SI: {
-        BINARYOP_SI;
-        stack.push_back(lhs <= rhs);
+        BINARYOP_SI(lhs <= rhs);
       }
       break;
       case Opcode::LTE_IS: {
-        BINARYOP_IS;
-        stack.push_back(lhs <= rhs);
+        BINARYOP_IS(lhs <= rhs);
       }
       break;
       case Opcode::LTE_II: {
-        BINARYOP_II;
-        stack.push_back(lhs <= rhs);
+        BINARYOP_II(lhs <= rhs);
       }
       break;
       case Opcode::GT_SS: {
-        BINARYOP_SS;
-        stack.push_back(lhs > rhs);
+        BINARYOP_SS(lhs > rhs);
       }
       break;
       case Opcode::GT_SI: {
-        BINARYOP_SI;
-        stack.push_back(lhs > rhs);
+        BINARYOP_SI(lhs > rhs);
       }
       break;
       case Opcode::GT_IS: {
-        BINARYOP_IS;
-        stack.push_back(lhs > rhs);
+        BINARYOP_IS(lhs > rhs);
       }
       break;
       case Opcode::GT_II: {
-        BINARYOP_II;
-        stack.push_back(lhs > rhs);
+        BINARYOP_II(lhs > rhs);
       }
       break;
       case Opcode::GTE_SS: {
-        BINARYOP_SS;
-        stack.push_back(lhs >= rhs);
+        BINARYOP_SS(lhs >= rhs);
       }
       break;
       case Opcode::GTE_SI: {
-        BINARYOP_SI;
-        stack.push_back(lhs >= rhs);
+        BINARYOP_SI(lhs >= rhs);
       }
       break;
       case Opcode::GTE_IS: {
-        BINARYOP_IS;
-        stack.push_back(lhs >= rhs);
+        BINARYOP_IS(lhs >= rhs);
       }
       break;
       case Opcode::GTE_II: {
-        BINARYOP_II;
-        stack.push_back(lhs >= rhs);
+        BINARYOP_II(lhs >= rhs);
       }
       break;
       case Opcode::EQ_SS: {
-        BINARYOP_SS;
-        stack.push_back(lhs == rhs);
+        BINARYOP_SS(lhs == rhs);
       }
       break;
       case Opcode::EQ_SI: {
-        BINARYOP_SI;
-        stack.push_back(lhs == rhs);
+        BINARYOP_SI(lhs == rhs);
       }
       break;
       case Opcode::EQ_IS: {
-        BINARYOP_IS;
-        stack.push_back(lhs == rhs);
+        BINARYOP_IS(lhs == rhs);
       }
       break;
       case Opcode::EQ_II: {
-        BINARYOP_II;
-        stack.push_back(lhs == rhs);
+        BINARYOP_II(lhs == rhs);
       }
       break;
       case Opcode::NEQ_SS: {
-        BINARYOP_SS;
-        stack.push_back(lhs != rhs);
+        BINARYOP_SS(lhs != rhs);
       }
       break;
       case Opcode::NEQ_SI: {
-        BINARYOP_SI;
-        stack.push_back(lhs != rhs);
+        BINARYOP_SI(lhs != rhs);
       }
       break;
       case Opcode::NEQ_IS: {
-        BINARYOP_IS;
-        stack.push_back(lhs != rhs);
+        BINARYOP_IS(lhs != rhs);
       }
       break;
       case Opcode::NEQ_II: {
-        BINARYOP_II;
-        stack.push_back(lhs != rhs);
+        BINARYOP_II(lhs != rhs);
       }
       break;
       case Opcode::PERIOD_SS: {
-        BINARYOP_SS;
+        // Can't use BINARYOP_SS because it will set the stack value too soon.
+        STACKCHECK(2);
+        auto top = stack.size();
+        auto & rhs = stack[top - 1];
+        auto & lhs = stack[top - 2];
+
         auto tmp = lhs->__period(rhs, this->tang);
 
         // Resolve any library attribute requests.
@@ -797,11 +758,19 @@ Context Program::execute(ContextData && data) {
         }
 
         // Finally, push the result onto the stack.
-        stack.push_back(tmp);
+        stack.pop_back();
+        stack.back() = tmp;
+        ++pc;
       }
       break;
       case Opcode::PERIOD_SI: {
-        BINARYOP_SI;
+        // Can't use BINARYOP_SI because it will set the stack value too soon.
+        EXECUTEPROGRAMCHECK(1);
+        auto rhsIndex = this->bytecode[pc + 1];
+        STACKCHECK(rhsIndex);
+        auto & rhs = stack[fp + rhsIndex];
+        auto & lhs = stack.back();
+
         auto tmp = lhs->__period(rhs, this->tang);
 
         // Resolve any library attribute requests.
@@ -820,11 +789,18 @@ Context Program::execute(ContextData && data) {
         }
 
         // Finally, push the result onto the stack.
-        stack.push_back(tmp);
+        stack.back() = tmp;
+        pc += 2;
       }
       break;
       case Opcode::PERIOD_IS: {
-        BINARYOP_IS;
+        // Can't use BINARYOP_IS because it will set the stack value too soon.
+        EXECUTEPROGRAMCHECK(1);
+        auto lhsIndex = this->bytecode[pc + 1];
+        STACKCHECK(lhsIndex);
+        auto & rhs = stack.back();
+        auto & lhs = stack[fp + lhsIndex];
+
         auto tmp = lhs->__period(rhs, this->tang);
 
         // Resolve any library attribute requests.
@@ -843,11 +819,20 @@ Context Program::execute(ContextData && data) {
         }
 
         // Finally, push the result onto the stack.
-        stack.push_back(tmp);
+        stack.back() = tmp;
+        pc += 2;
       }
       break;
       case Opcode::PERIOD_II: {
-        BINARYOP_II;
+        // Can't use BINARYOP_II because it will set the stack value too soon.
+        EXECUTEPROGRAMCHECK(2);
+        auto lhsIndex = this->bytecode[pc + 1];
+        auto rhsIndex = this->bytecode[pc + 2];
+        STACKCHECK(lhsIndex);
+        STACKCHECK(rhsIndex);
+        auto & lhs = stack[fp + lhsIndex];
+        auto & rhs = stack[fp + rhsIndex];
+
         auto tmp = lhs->__period(rhs, this->tang);
 
         // Resolve any library attribute requests.
@@ -866,27 +851,24 @@ Context Program::execute(ContextData && data) {
         }
 
         // Finally, push the result onto the stack.
-        stack.push_back(tmp);
+        stack.emplace_back(tmp);
+        pc += 3;
       }
       break;
       case Opcode::INDEX_SS: {
-        BINARYOP_SS;
-        stack.push_back(lhs->__index(rhs));
+        BINARYOP_SS(lhs->__index(rhs));
       }
       break;
       case Opcode::INDEX_SI: {
-        BINARYOP_SI;
-        stack.push_back(lhs->__index(rhs));
+        BINARYOP_SI(lhs->__index(rhs));
       }
       break;
       case Opcode::INDEX_IS: {
-        BINARYOP_IS;
-        stack.push_back(lhs->__index(rhs));
+        BINARYOP_IS(lhs->__index(rhs));
       }
       break;
       case Opcode::INDEX_II: {
-        BINARYOP_II;
-        stack.push_back(lhs->__index(rhs));
+        BINARYOP_II(lhs->__index(rhs));
       }
       break;
       case Opcode::SLICE: {
