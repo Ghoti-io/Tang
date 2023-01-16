@@ -50,19 +50,6 @@ using namespace Tang;
     break; \
   }
 
-#define PRINTOP_S \
-        STACKCHECK(1); \
-        auto expression = stack.back(); \
-        stack.pop_back(); \
-        ++pc;
-
-#define PRINTOP_I \
-        EXECUTEPROGRAMCHECK(1); \
-        auto index = this->bytecode[pc + 1]; \
-        STACKCHECK(index); \
-        auto & expression = stack[fp + index]; \
-        pc += 2;
-
 /**
  * Unary operation macro, in which the operand is popped from the top of the
  * stack.  The result is pushed to the top of the stack.
@@ -1008,7 +995,9 @@ Context Program::execute(ContextData && data) {
       }
       break;
       case Opcode::PRINT_S: {
-        PRINTOP_S;
+        STACKCHECK(1);
+        auto & expression = stack.back();
+
         // Try to convert the expression to a string.
         auto result = expression->__string();
         if (typeid(*result) == typeid(ComputedExpressionString)) {
@@ -1016,20 +1005,26 @@ Context Program::execute(ContextData && data) {
           // ComputedExpressionString, so combine them here.
           static_cast<ComputedExpressionString &>(*context.computedExpressionOut) += static_cast<ComputedExpressionString &>(*result);
           // Push an empty value onto the stack.
-          stack.push_back(GarbageCollected::make<ComputedExpression>());
+          stack.back() = GarbageCollected::make<ComputedExpression>();
         }
         else if (typeid(*result) != typeid(ComputedExpressionError)) {
           // __string returned neither a string nor an error, so report that.
-          stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Argument not recognized as a string or error type."}));
+          stack.back() = GarbageCollected::make<ComputedExpressionError>(Error{"Argument not recognized as a string or error type."});
         }
         else {
           // __string returned an error, pass that back to the stack.
-          stack.push_back(result);
+          stack.back() = result;
         }
+
+        ++pc;
       }
       break;
       case Opcode::PRINT_I: {
-        PRINTOP_I;
+        EXECUTEPROGRAMCHECK(1);
+        auto index = this->bytecode[pc + 1];
+        STACKCHECK(index);
+        auto & expression = stack[fp + index];
+
         // Try to convert the expression to a string.
         auto result = expression->__string();
         if (typeid(*result) == typeid(ComputedExpressionString)) {
@@ -1037,22 +1032,24 @@ Context Program::execute(ContextData && data) {
           // ComputedExpressionString, so combine them here.
           static_cast<ComputedExpressionString &>(*context.computedExpressionOut) += static_cast<ComputedExpressionString &>(*result);
           // Push an empty value onto the stack.
-          stack.push_back(GarbageCollected::make<ComputedExpression>());
+          stack.emplace_back(GarbageCollected::make<ComputedExpression>());
         }
         else if (typeid(*result) != typeid(ComputedExpressionError)) {
           // __string returned neither a string nor an error, so report that.
-          stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Argument not recognized as a string or error type."}));
+          stack.emplace_back(GarbageCollected::make<ComputedExpressionError>(Error{"Argument not recognized as a string or error type."}));
         }
         else {
           // __string returned an error, pass that back to the stack.
-          stack.push_back(result);
+          stack.emplace_back(result);
         }
+
+        pc += 2;
       }
       break;
       default: {
         // We should never reach this.
-        stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Unrecognized Opcode."}));
-        pc = stack.size();
+        stack.emplace_back(GarbageCollected::make<ComputedExpressionError>(Error{"Unrecognized Opcode."}));
+        pc = this->bytecode.size();
       }
       break;
     }
