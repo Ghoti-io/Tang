@@ -63,19 +63,6 @@ using namespace Tang;
         auto & expression = stack[fp + index]; \
         pc += 2;
 
-#define CASTOP_S \
-        STACKCHECK(1); \
-        auto operand = stack.back(); \
-        stack.pop_back(); \
-        ++pc;
-
-#define CASTOP_I \
-        EXECUTEPROGRAMCHECK(1); \
-        auto index = this->bytecode[pc + 1]; \
-        STACKCHECK(index); \
-        auto & operand = stack[fp + index]; \
-        pc += 2;
-
 /**
  * Unary operation macro, in which the operand is popped from the top of the
  * stack.  The result is pushed to the top of the stack.
@@ -943,43 +930,35 @@ Context Program::execute(ContextData && data) {
       }
       break;
       case Opcode::CASTINTEGER_S: {
-        CASTOP_S;
-        stack.push_back(operand->__integer());
+        UNARYOP_S(operand->__integer());
       }
       break;
       case Opcode::CASTINTEGER_I: {
-        CASTOP_I;
-        stack.push_back(operand->__integer());
+        UNARYOP_I(operand->__integer());
       }
       break;
       case Opcode::CASTFLOAT_S: {
-        CASTOP_S;
-        stack.push_back(operand->__float());
+        UNARYOP_S(operand->__float());
       }
       break;
       case Opcode::CASTFLOAT_I: {
-        CASTOP_I;
-        stack.push_back(operand->__float());
+        UNARYOP_I(operand->__float());
       }
       break;
       case Opcode::CASTBOOLEAN_S: {
-        CASTOP_S;
-        stack.push_back(operand->__boolean());
+        UNARYOP_S(operand->__boolean());
       }
       break;
       case Opcode::CASTBOOLEAN_I: {
-        CASTOP_I;
-        stack.push_back(operand->__boolean());
+        UNARYOP_I(operand->__boolean());
       }
       break;
       case Opcode::CASTSTRING_S: {
-        CASTOP_S;
-        stack.push_back(operand->__string());
+        UNARYOP_S(operand->__string());
       }
       break;
       case Opcode::CASTSTRING_I: {
-        CASTOP_I;
-        stack.push_back(operand->__string());
+        UNARYOP_I(operand->__string());
       }
       break;
       case Opcode::CALLFUNC: {
