@@ -38,6 +38,7 @@ using namespace Tang;
     break; \
   }
 
+
 /**
  * Verify the size of the stack vector so that it may be safely accessed.
  *
@@ -50,6 +51,7 @@ using namespace Tang;
     break; \
   }
 
+
 /**
  * Unary operation macro, in which the operand is popped from the top of the
  * stack.  The result is pushed to the top of the stack.
@@ -61,6 +63,7 @@ using namespace Tang;
         auto & operand = stack.back(); \
         stack.back() = (EXPRESSION); \
         ++pc;
+
 
 /**
  * Unary operation macro, in which the operand is read from an index location
@@ -77,6 +80,7 @@ using namespace Tang;
         stack.emplace_back(EXPRESSION); \
         pc += 2;
 
+
 /**
  * Iterator macro, similar to UNARYOP_S, but it writes the result to a stack
  * position, rather than pushing the result to the top of the stack.
@@ -91,6 +95,7 @@ using namespace Tang;
         stack[fp + position] = (EXPRESSION); \
         stack.pop_back(); \
         pc += 2;
+
 
 /**
  * Iterator macro, similar to UNARYOP_I, but it writes the result to a stack
@@ -108,6 +113,14 @@ using namespace Tang;
         stack[fp + position] = (EXPRESSION); \
         pc += 3;
 
+
+/**
+ * Binary operation macro, in which the rhs is read from the top of the stack,
+ * followed by the lhs from the top of the stack.  Both are removed from the
+ * stack.  The EXPRESSION is executed and the result is pushed onto the stack.
+ *
+ * @param EXPRESSION The expression to evaluate.
+ */
 #define BINARYOP_SS(EXPRESSION) \
         STACKCHECK(2); \
         auto top = stack.size(); \
@@ -117,6 +130,15 @@ using namespace Tang;
         stack.pop_back(); \
         ++pc;
 
+
+/**
+ * Binary operation macro, in which the rhs is read from an index position
+ * within the stack (fp + rhsIndex), followed by the lhs from the top of the
+ * stack.  Lhs is removed from the stack.  The EXPRESSION is executed and the
+ * result is pushed onto the stack.
+ *
+ * @param EXPRESSION The expression to evaluate.
+ */
 #define BINARYOP_SI(EXPRESSION) \
         EXECUTEPROGRAMCHECK(1); \
         auto rhsIndex = this->bytecode[pc + 1]; \
@@ -126,6 +148,15 @@ using namespace Tang;
         stack.back() = (EXPRESSION); \
         pc += 2;
 
+
+/**
+ * Binary operation macro, in which the rhs is read from the top of the stack,
+ * and the lhs is read from an index position within the stack (fp + lhsIndex).
+ * Rhs is removed from the stack.  The EXPRESSION is executed and the result is
+ * pushed onto the stack.
+ *
+ * @param EXPRESSION The expression to evaluate.
+ */
 #define BINARYOP_IS(EXPRESSION) \
         EXECUTEPROGRAMCHECK(1); \
         auto lhsIndex = this->bytecode[pc + 1]; \
@@ -135,6 +166,14 @@ using namespace Tang;
         stack.back() = (EXPRESSION); \
         pc += 2;
 
+
+/**
+ * Binary operation macro, in which the lhs and rhs are read from index
+ * positions within the stack (fp+lhsIndex and fp+rhsIndex, respectively).
+ * The EXPRESSION is executed and the result is pushed onto the stack.
+ *
+ * @param EXPRESSION The expression to evaluate.
+ */
 #define BINARYOP_II(EXPRESSION) \
         EXECUTEPROGRAMCHECK(2); \
         auto lhsIndex = this->bytecode[pc + 1]; \
@@ -145,6 +184,7 @@ using namespace Tang;
         auto & rhs = stack[fp + rhsIndex]; \
         stack.emplace_back(EXPRESSION); \
         pc += 3;
+
 
 static void callFunc(GarbageCollected & function, uinteger_t argc, size_t & pc, size_t & fp, vector<GarbageCollected> & stack, vector<size_t> & pcStack, vector<size_t> & fpStack, Bytecode & bytecode, Context & context, size_t opcodeSize) {
   // Compiled functions make use of the arguments on the stack.
