@@ -76,18 +76,63 @@ using namespace Tang;
         auto & operand = stack[fp + index]; \
         pc += 2;
 
-#define UNARYOP_S \
+/**
+ * Unary operation macro, in which the operand is popped from the top of the
+ * stack.  The result is pushed to the top of the stack.
+ *
+ * @param EXPRESSION The expression to evaluate.
+ */
+#define UNARYOP_S(EXPRESSION) \
         STACKCHECK(1); \
-        auto operand = stack.back(); \
-        stack.pop_back(); \
+        auto & operand = stack.back(); \
+        stack.back() = (EXPRESSION); \
         ++pc;
 
-#define UNARYOP_I \
+/**
+ * Unary operation macro, in which the operand is read from an index location
+ * within the stack (indexed from the `fp`).  The result is pushed to the top
+ * of the stack.
+ *
+ * @param EXPRESSION The expression to evaluate.
+ */
+#define UNARYOP_I(EXPRESSION) \
         EXECUTEPROGRAMCHECK(1); \
         auto index = this->bytecode[pc + 1]; \
         STACKCHECK(index); \
         auto & operand = stack[fp + index]; \
+        stack.emplace_back(EXPRESSION); \
         pc += 2;
+
+/**
+ * Iterator macro, similar to UNARYOP_S, but it writes the result to a stack
+ * position, rather than pushing the result to the top of the stack.
+ *
+ * @param EXPRESSION The expression to evaluate.
+ */
+#define ITERATOROP_SI(EXPRESSION) \
+        EXECUTEPROGRAMCHECK(1); \
+        auto position = this->bytecode[pc + 1]; \
+        STACKCHECK(position); \
+        auto & operand = stack.back(); \
+        stack[fp + position] = (EXPRESSION); \
+        stack.pop_back(); \
+        pc += 2;
+
+/**
+ * Iterator macro, similar to UNARYOP_I, but it writes the result to a stack
+ * position, rather than pushing the result to the top of the stack.
+ *
+ * @param EXPRESSION The expression to evaluate.
+ */
+#define ITERATOROP_II(EXPRESSION) \
+        EXECUTEPROGRAMCHECK(2); \
+        auto index = this->bytecode[pc + 1]; \
+        auto position = this->bytecode[pc + 2]; \
+        STACKCHECK(index); \
+        STACKCHECK(position); \
+        auto & operand = stack[fp + index]; \
+        stack[fp + position] = (EXPRESSION); \
+        pc += 3;
 
 #define BINARYOP_SS(EXPRESSION) \
         STACKCHECK(2); \
@@ -618,23 +663,19 @@ Context Program::execute(ContextData && data) {
       }
       break;
       case Opcode::NEGATIVE_S: {
-        UNARYOP_S;
-        stack.push_back(-operand);
+        UNARYOP_S(-operand);
       }
       break;
       case Opcode::NEGATIVE_I: {
-        UNARYOP_I;
-        stack.push_back(-operand);
+        UNARYOP_I(-operand);
       }
       break;
       case Opcode::NOT_S: {
-        UNARYOP_S;
-        stack.push_back(!operand);
+        UNARYOP_S(!operand);
       }
       break;
       case Opcode::NOT_I: {
-        UNARYOP_I;
-        stack.push_back(!operand);
+        UNARYOP_I(!operand);
       }
       break;
       case Opcode::LT_SS: {
@@ -886,42 +927,19 @@ Context Program::execute(ContextData && data) {
       }
       break;
       case Opcode::GETITERATOR_SI: {
-        EXECUTEPROGRAMCHECK(1);
-        auto position = this->bytecode[pc + 1];
-        UNARYOP_S;
-        STACKCHECK(position);
-        stack[fp + position] = operand->__getIterator(operand);
-        // UNARYOP_S already increments `pc` by one, but this particular opcode
-        // is special, and needs to increment `pc` by 2 (total).
-        ++pc;
+        ITERATOROP_SI(operand->__getIterator(operand));
       }
       break;
       case Opcode::GETITERATOR_II: {
-        UNARYOP_I;
-        stack.push_back(operand->__getIterator(operand));
-        EXECUTEPROGRAMCHECK(2);
-        auto position = this->bytecode[pc + 2];
-        STACKCHECK(position);
-        stack[fp + position] = operand->__getIterator(operand);
-        // UNARYOP_I already increments `pc` by two, but this particular opcode
-        // is special, and needs to increment `pc` by 3 (total).
-        ++pc;
+        ITERATOROP_II(operand->__getIterator(operand));
       }
       break;
       case Opcode::ITERATORNEXT_II: {
-        EXECUTEPROGRAMCHECK(2);
-        auto iteratorIndex = this->bytecode[pc + 1];
-        STACKCHECK(iteratorIndex);
-        auto & iterator = stack[fp + iteratorIndex];
-        auto targetIndex = this->bytecode[pc + 2];
-        STACKCHECK(targetIndex);
-        stack[fp + targetIndex] = iterator->__iteratorNext();
-        pc += 3;
+        ITERATOROP_II(operand->__iteratorNext());
       }
       break;
       case Opcode::ISITERATOREND_I: {
-        UNARYOP_I;
-        stack.push_back(GarbageCollected::make<ComputedExpressionBoolean>((typeid(*operand) == typeid(ComputedExpressionIteratorEnd)) || (typeid(*operand) == typeid(ComputedExpressionError))));
+        UNARYOP_I(GarbageCollected::make<ComputedExpressionBoolean>((typeid(*operand) == typeid(ComputedExpressionIteratorEnd)) || (typeid(*operand) == typeid(ComputedExpressionError))));
       }
       break;
       case Opcode::CASTINTEGER_S: {
