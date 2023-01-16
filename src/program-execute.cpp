@@ -390,8 +390,7 @@ Context Program::execute(ContextData && data) {
         EXECUTEPROGRAMCHECK(2);
         auto index = this->bytecode[pc + 1];
         STACKCHECK(index);
-        auto & condition = stack[fp + index];
-        pc = (condition == false)
+        pc = (stack[fp + index] == false)
           ? this->bytecode[pc + 2]
           : (pc + 3);
       }
@@ -399,21 +398,16 @@ Context Program::execute(ContextData && data) {
       case Opcode::JMPF_POP: {
         EXECUTEPROGRAMCHECK(1);
         STACKCHECK(1);
-        auto condition = stack.back();
+        pc = (stack.back() == false)
+          ? this->bytecode[pc + 1]
+          : (pc + 2);
         stack.pop_back();
-        if (condition == false) {
-          pc = this->bytecode[pc + 1];
-        }
-        else {
-          pc += 2;
-        }
       }
       break;
       case Opcode::JMPT_S: {
         EXECUTEPROGRAMCHECK(1);
         STACKCHECK(1);
-        auto & condition = stack.back();
-        pc = (condition == true)
+        pc = (stack.back() == true)
           ? this->bytecode[pc + 1]
           : (pc + 2);
       }
@@ -422,8 +416,7 @@ Context Program::execute(ContextData && data) {
         EXECUTEPROGRAMCHECK(2);
         auto index = this->bytecode[pc + 1];
         STACKCHECK(index);
-        auto & condition = stack[fp + index];
-        pc = (condition == true)
+        pc = (stack[fp + index] == true)
           ? this->bytecode[pc + 2]
           : (pc + 3);
       }
@@ -431,14 +424,10 @@ Context Program::execute(ContextData && data) {
       case Opcode::JMPT_POP: {
         EXECUTEPROGRAMCHECK(1);
         STACKCHECK(1);
-        auto condition = stack.back();
+        pc = (stack.back() == true)
+          ? this->bytecode[pc + 1]
+          : (pc + 2);
         stack.pop_back();
-        if (condition == true) {
-          pc = this->bytecode[pc + 1];
-        }
-        else {
-          pc += 2;
-        }
       }
       break;
       case Opcode::NULLVAL: {
@@ -505,6 +494,7 @@ Context Program::execute(ContextData && data) {
         STACKCHECK(size);
         vector<GarbageCollected> contents;
         contents.reserve(size);
+        // TODO: Rather copying one-by-one, copy the range using an iterator.
         for (uinteger_t i = 0; i < size; ++i) {
           contents.push_back(stack[stack.size() - size + i]);
         }
@@ -521,13 +511,14 @@ Context Program::execute(ContextData && data) {
         STACKCHECK(size * 2);
         map<string, GarbageCollected> contents;
         for (uinteger_t i = 0; i < size; ++i) {
-          auto value = stack.back();
-          stack.pop_back();
-          auto key = stack.back();
-          stack.pop_back();
+          auto top = stack.size();
+          auto & value = stack[top - 1];
+          auto & key = stack[top - 2];
           if (typeid(*key) == typeid(ComputedExpressionString)) {
             contents.insert({static_cast<ComputedExpressionString &>(*key).dump(), value});
           }
+          stack.pop_back();
+          stack.pop_back();
         }
         stack.push_back(GarbageCollected::make<ComputedExpressionMap>(contents));
         pc += 2;
@@ -535,20 +526,19 @@ Context Program::execute(ContextData && data) {
       break;
       case Opcode::LIBRARY: {
         STACKCHECK(1);
-        auto name = stack.back();
-        stack.pop_back();
+        auto & name = stack.back();
 
         if (typeid(*name) == typeid(ComputedExpressionString)) {
           auto & nameConv = static_cast<ComputedExpressionString &>(*name);
           auto & libraries = tang->getLibraries();
           auto nameLiteral = nameConv.dump();
-          stack.push_back(libraries.count(nameLiteral)
+          stack.back() = libraries.count(nameLiteral)
             ? libraries.at(nameLiteral)(context)
-            : GarbageCollected::make<ComputedExpressionError>(Error{"Unknown Library"}));
+            : GarbageCollected::make<ComputedExpressionError>(Error{"Unknown Library"});
         }
         else {
           // We can't use this CE to access a library.
-          stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Unrecognized operand on LIBRARY opcode."}));
+          stack.back() = GarbageCollected::make<ComputedExpressionError>(Error{"Unrecognized operand on LIBRARY opcode."});
         }
 
         ++pc;
@@ -586,13 +576,13 @@ Context Program::execute(ContextData && data) {
       break;
       case Opcode::ASSIGNINDEX: {
         STACKCHECK(3);
-        auto index = stack.back();
+        auto top = stack.size();
+        auto & index = stack[top - 1];
+        auto & collection = stack[top - 2];
+        auto & value = stack[top - 3];
+        stack[top - 3] = collection->__assign_index(index, value);
         stack.pop_back();
-        auto collection = stack.back();
         stack.pop_back();
-        auto value = stack.back();
-        stack.pop_back();
-        stack.push_back(collection->__assign_index(index, value));
         ++pc;
       }
       break;
@@ -1019,13 +1009,13 @@ Context Program::execute(ContextData && data) {
         // Save the top of the stack as the return value.
         auto returnVal = stack.back();
 
-        // Remove the stack down to the fp.
-        for (size_t i = 0; i <= pop; ++i) {
+        // Remove the stack down to the fp + 1.
+        for (size_t i = 0; i < pop; ++i) {
           stack.pop_back();
         }
 
         // Put the return value back on the stack.
-        stack.push_back(returnVal);
+        stack.back() = returnVal;
 
         // Restore the pc and fp.
         pc = pcStack.back();
