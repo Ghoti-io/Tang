@@ -1286,38 +1286,36 @@
 \contentsline {subsubsection}{\numberline {6.116.2.3}DUMPBINARY\_II}{546}{subsubsection.6.116.2.3}%
 \contentsline {subsubsection}{\numberline {6.116.2.4}DUMPPROGRAMCHECK}{546}{subsubsection.6.116.2.4}%
 \contentsline {section}{\numberline {6.117}src/program-\/execute.cpp File Reference}{546}{section.6.117}%
-\contentsline {subsection}{\numberline {6.117.1}Detailed Description}{547}{subsection.6.117.1}%
-\contentsline {subsection}{\numberline {6.117.2}Macro Definition Documentation}{547}{subsection.6.117.2}%
+\contentsline {subsection}{\numberline {6.117.1}Detailed Description}{548}{subsection.6.117.1}%
+\contentsline {subsection}{\numberline {6.117.2}Macro Definition Documentation}{548}{subsection.6.117.2}%
 \contentsline {subsubsection}{\numberline {6.117.2.1}BINARYOP\_II}{548}{subsubsection.6.117.2.1}%
 \contentsline {subsubsection}{\numberline {6.117.2.2}BINARYOP\_IS}{548}{subsubsection.6.117.2.2}%
-\contentsline {subsubsection}{\numberline {6.117.2.3}BINARYOP\_SI}{548}{subsubsection.6.117.2.3}%
-\contentsline {subsubsection}{\numberline {6.117.2.4}BINARYOP\_SS}{548}{subsubsection.6.117.2.4}%
-\contentsline {subsubsection}{\numberline {6.117.2.5}CASTOP\_I}{549}{subsubsection.6.117.2.5}%
-\contentsline {subsubsection}{\numberline {6.117.2.6}CASTOP\_S}{549}{subsubsection.6.117.2.6}%
-\contentsline {subsubsection}{\numberline {6.117.2.7}EXECUTEPROGRAMCHECK}{549}{subsubsection.6.117.2.7}%
-\contentsline {subsubsection}{\numberline {6.117.2.8}PRINTOP\_I}{549}{subsubsection.6.117.2.8}%
-\contentsline {subsubsection}{\numberline {6.117.2.9}PRINTOP\_S}{550}{subsubsection.6.117.2.9}%
-\contentsline {subsubsection}{\numberline {6.117.2.10}STACKCHECK}{550}{subsubsection.6.117.2.10}%
-\contentsline {subsubsection}{\numberline {6.117.2.11}UNARYOP\_I}{550}{subsubsection.6.117.2.11}%
-\contentsline {subsubsection}{\numberline {6.117.2.12}UNARYOP\_S}{550}{subsubsection.6.117.2.12}%
-\contentsline {section}{\numberline {6.118}src/program-\/optimize.cpp File Reference}{551}{section.6.118}%
-\contentsline {subsection}{\numberline {6.118.1}Detailed Description}{551}{subsection.6.118.1}%
-\contentsline {section}{\numberline {6.119}src/program.cpp File Reference}{551}{section.6.119}%
-\contentsline {subsection}{\numberline {6.119.1}Detailed Description}{552}{subsection.6.119.1}%
-\contentsline {section}{\numberline {6.120}src/tang.cpp File Reference}{552}{section.6.120}%
-\contentsline {subsection}{\numberline {6.120.1}Detailed Description}{552}{subsection.6.120.1}%
-\contentsline {section}{\numberline {6.121}src/tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base.cpp File Reference}{552}{section.6.121}%
-\contentsline {subsection}{\numberline {6.121.1}Detailed Description}{553}{subsection.6.121.1}%
-\contentsline {subsection}{\numberline {6.121.2}Macro Definition Documentation}{553}{subsection.6.121.2}%
-\contentsline {subsubsection}{\numberline {6.121.2.1}LIBRARY}{553}{subsubsection.6.121.2.1}%
-\contentsline {section}{\numberline {6.122}src/unicode\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}String.cpp File Reference}{553}{section.6.122}%
-\contentsline {subsection}{\numberline {6.122.1}Detailed Description}{554}{subsection.6.122.1}%
-\contentsline {section}{\numberline {6.123}test/test.cpp File Reference}{554}{section.6.123}%
-\contentsline {subsection}{\numberline {6.123.1}Detailed Description}{556}{subsection.6.123.1}%
-\contentsline {section}{\numberline {6.124}test/test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Garbage\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Collected.cpp File Reference}{556}{section.6.124}%
-\contentsline {subsection}{\numberline {6.124.1}Detailed Description}{556}{subsection.6.124.1}%
-\contentsline {section}{\numberline {6.125}test/test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Singleton\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pool.cpp File Reference}{557}{section.6.125}%
-\contentsline {subsection}{\numberline {6.125.1}Detailed Description}{557}{subsection.6.125.1}%
-\contentsline {section}{\numberline {6.126}test/test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Unicode\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}String.cpp File Reference}{557}{section.6.126}%
-\contentsline {subsection}{\numberline {6.126.1}Detailed Description}{558}{subsection.6.126.1}%
-\contentsline {chapter}{Index}{559}{section*.678}%
+\contentsline {subsubsection}{\numberline {6.117.2.3}BINARYOP\_SI}{549}{subsubsection.6.117.2.3}%
+\contentsline {subsubsection}{\numberline {6.117.2.4}BINARYOP\_SS}{549}{subsubsection.6.117.2.4}%
+\contentsline {subsubsection}{\numberline {6.117.2.5}EXECUTEPROGRAMCHECK}{550}{subsubsection.6.117.2.5}%
+\contentsline {subsubsection}{\numberline {6.117.2.6}ITERATOROP\_II}{550}{subsubsection.6.117.2.6}%
+\contentsline {subsubsection}{\numberline {6.117.2.7}ITERATOROP\_SI}{550}{subsubsection.6.117.2.7}%
+\contentsline {subsubsection}{\numberline {6.117.2.8}STACKCHECK}{552}{subsubsection.6.117.2.8}%
+\contentsline {subsubsection}{\numberline {6.117.2.9}UNARYOP\_I}{552}{subsubsection.6.117.2.9}%
+\contentsline {subsubsection}{\numberline {6.117.2.10}UNARYOP\_S}{552}{subsubsection.6.117.2.10}%
+\contentsline {section}{\numberline {6.118}src/program-\/optimize.cpp File Reference}{553}{section.6.118}%
+\contentsline {subsection}{\numberline {6.118.1}Detailed Description}{553}{subsection.6.118.1}%
+\contentsline {section}{\numberline {6.119}src/program.cpp File Reference}{553}{section.6.119}%
+\contentsline {subsection}{\numberline {6.119.1}Detailed Description}{554}{subsection.6.119.1}%
+\contentsline {section}{\numberline {6.120}src/tang.cpp File Reference}{554}{section.6.120}%
+\contentsline {subsection}{\numberline {6.120.1}Detailed Description}{554}{subsection.6.120.1}%
+\contentsline {section}{\numberline {6.121}src/tang\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base.cpp File Reference}{555}{section.6.121}%
+\contentsline {subsection}{\numberline {6.121.1}Detailed Description}{555}{subsection.6.121.1}%
+\contentsline {subsection}{\numberline {6.121.2}Macro Definition Documentation}{555}{subsection.6.121.2}%
+\contentsline {subsubsection}{\numberline {6.121.2.1}LIBRARY}{555}{subsubsection.6.121.2.1}%
+\contentsline {section}{\numberline {6.122}src/unicode\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}String.cpp File Reference}{556}{section.6.122}%
+\contentsline {subsection}{\numberline {6.122.1}Detailed Description}{556}{subsection.6.122.1}%
+\contentsline {section}{\numberline {6.123}test/test.cpp File Reference}{556}{section.6.123}%
+\contentsline {subsection}{\numberline {6.123.1}Detailed Description}{558}{subsection.6.123.1}%
+\contentsline {section}{\numberline {6.124}test/test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Garbage\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Collected.cpp File Reference}{558}{section.6.124}%
+\contentsline {subsection}{\numberline {6.124.1}Detailed Description}{558}{subsection.6.124.1}%
+\contentsline {section}{\numberline {6.125}test/test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Singleton\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pool.cpp File Reference}{559}{section.6.125}%
+\contentsline {subsection}{\numberline {6.125.1}Detailed Description}{559}{subsection.6.125.1}%
+\contentsline {section}{\numberline {6.126}test/test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Unicode\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}String.cpp File Reference}{559}{section.6.126}%
+\contentsline {subsection}{\numberline {6.126.1}Detailed Description}{560}{subsection.6.126.1}%
+\contentsline {chapter}{Index}{561}{section*.678}%

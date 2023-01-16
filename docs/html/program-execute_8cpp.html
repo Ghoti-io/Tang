@@ -169,25 +169,29 @@ Macros</h2></td></tr>
 <tr class="memitem:a80c4bdcb0e9c9c0eebdb1488ad68aa38"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program-execute_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38">STACKCHECK</a>(x)</td></tr>
 <tr class="memdesc:a80c4bdcb0e9c9c0eebdb1488ad68aa38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify the size of the stack vector so that it may be safely accessed.  <a href="program-execute_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38">More...</a><br /></td></tr>
 <tr class="separator:a80c4bdcb0e9c9c0eebdb1488ad68aa38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8168f8cf60dba68fbfc09767912d9c5d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>PRINTOP_S</b></td></tr>
-<tr class="separator:a8168f8cf60dba68fbfc09767912d9c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3e0ec92f0f35491f0cf6da42c7e9c2e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>PRINTOP_I</b></td></tr>
-<tr class="separator:af3e0ec92f0f35491f0cf6da42c7e9c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0dcde88dabdc927ee94e2b87e126b601"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>CASTOP_S</b></td></tr>
-<tr class="separator:a0dcde88dabdc927ee94e2b87e126b601"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45f1dc1dd6b0559489c8f5bbbebd477a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>CASTOP_I</b></td></tr>
-<tr class="separator:a45f1dc1dd6b0559489c8f5bbbebd477a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae88fd9e812fda386f717d6d69f177959"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>UNARYOP_S</b></td></tr>
-<tr class="separator:ae88fd9e812fda386f717d6d69f177959"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b5620ea1419a9c0d5f591b1864f7cdf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>UNARYOP_I</b></td></tr>
-<tr class="separator:a1b5620ea1419a9c0d5f591b1864f7cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef2846e8b21d4b7e111b2a3d86a75675"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>BINARYOP_SS</b>(EXPRESSION)</td></tr>
+<tr class="memitem:afde3b220e15a979ed7f3851a5bea961f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program-execute_8cpp.html#afde3b220e15a979ed7f3851a5bea961f">UNARYOP_S</a>(EXPRESSION)</td></tr>
+<tr class="memdesc:afde3b220e15a979ed7f3851a5bea961f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unary operation macro, in which the operand is popped from the top of the stack.  <a href="program-execute_8cpp.html#afde3b220e15a979ed7f3851a5bea961f">More...</a><br /></td></tr>
+<tr class="separator:afde3b220e15a979ed7f3851a5bea961f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31af52df6dec7c557ffc6cd444ba0926"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program-execute_8cpp.html#a31af52df6dec7c557ffc6cd444ba0926">UNARYOP_I</a>(EXPRESSION)</td></tr>
+<tr class="memdesc:a31af52df6dec7c557ffc6cd444ba0926"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unary operation macro, in which the operand is read from an index location within the stack (indexed from the <code>fp</code>).  <a href="program-execute_8cpp.html#a31af52df6dec7c557ffc6cd444ba0926">More...</a><br /></td></tr>
+<tr class="separator:a31af52df6dec7c557ffc6cd444ba0926"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a951435a86704479c7e125293a570bc23"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program-execute_8cpp.html#a951435a86704479c7e125293a570bc23">ITERATOROP_SI</a>(EXPRESSION)</td></tr>
+<tr class="memdesc:a951435a86704479c7e125293a570bc23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator macro, similar to UNARYOP_S, but it writes the result to a stack position, rather than pushing the result to the top of the stack.  <a href="program-execute_8cpp.html#a951435a86704479c7e125293a570bc23">More...</a><br /></td></tr>
+<tr class="separator:a951435a86704479c7e125293a570bc23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ab044952447ab68ab4300fc5dddc70d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program-execute_8cpp.html#a4ab044952447ab68ab4300fc5dddc70d">ITERATOROP_II</a>(EXPRESSION)</td></tr>
+<tr class="memdesc:a4ab044952447ab68ab4300fc5dddc70d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator macro, similar to UNARYOP_I, but it writes the result to a stack position, rather than pushing the result to the top of the stack.  <a href="program-execute_8cpp.html#a4ab044952447ab68ab4300fc5dddc70d">More...</a><br /></td></tr>
+<tr class="separator:a4ab044952447ab68ab4300fc5dddc70d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef2846e8b21d4b7e111b2a3d86a75675"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program-execute_8cpp.html#aef2846e8b21d4b7e111b2a3d86a75675">BINARYOP_SS</a>(EXPRESSION)</td></tr>
+<tr class="memdesc:aef2846e8b21d4b7e111b2a3d86a75675"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binary operation macro, in which the rhs is read from the top of the stack, followed by the lhs from the top of the stack.  <a href="program-execute_8cpp.html#aef2846e8b21d4b7e111b2a3d86a75675">More...</a><br /></td></tr>
 <tr class="separator:aef2846e8b21d4b7e111b2a3d86a75675"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f53316cb83aec3c419de7f8dec43b6f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>BINARYOP_SI</b>(EXPRESSION)</td></tr>
+<tr class="memitem:a2f53316cb83aec3c419de7f8dec43b6f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program-execute_8cpp.html#a2f53316cb83aec3c419de7f8dec43b6f">BINARYOP_SI</a>(EXPRESSION)</td></tr>
+<tr class="memdesc:a2f53316cb83aec3c419de7f8dec43b6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binary operation macro, in which the rhs is read from an index position within the stack (fp + rhsIndex), followed by the lhs from the top of the stack.  <a href="program-execute_8cpp.html#a2f53316cb83aec3c419de7f8dec43b6f">More...</a><br /></td></tr>
 <tr class="separator:a2f53316cb83aec3c419de7f8dec43b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7eff6d91569bef15306f8a8065bb8904"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>BINARYOP_IS</b>(EXPRESSION)</td></tr>
+<tr class="memitem:a7eff6d91569bef15306f8a8065bb8904"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program-execute_8cpp.html#a7eff6d91569bef15306f8a8065bb8904">BINARYOP_IS</a>(EXPRESSION)</td></tr>
+<tr class="memdesc:a7eff6d91569bef15306f8a8065bb8904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binary operation macro, in which the rhs is read from the top of the stack, and the lhs is read from an index position within the stack (fp + lhsIndex).  <a href="program-execute_8cpp.html#a7eff6d91569bef15306f8a8065bb8904">More...</a><br /></td></tr>
 <tr class="separator:a7eff6d91569bef15306f8a8065bb8904"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c8ed56b3d79a2ce0d152ad89eabc659"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>BINARYOP_II</b>(EXPRESSION)</td></tr>
+<tr class="memitem:a4c8ed56b3d79a2ce0d152ad89eabc659"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="program-execute_8cpp.html#a4c8ed56b3d79a2ce0d152ad89eabc659">BINARYOP_II</a>(EXPRESSION)</td></tr>
+<tr class="memdesc:a4c8ed56b3d79a2ce0d152ad89eabc659"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binary operation macro, in which the lhs and rhs are read from index positions within the stack (fp+lhsIndex and fp+rhsIndex, respectively).  <a href="program-execute_8cpp.html#a4c8ed56b3d79a2ce0d152ad89eabc659">More...</a><br /></td></tr>
 <tr class="separator:a4c8ed56b3d79a2ce0d152ad89eabc659"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -219,6 +223,15 @@ Macros</h2></td></tr>
 <div class="line">        pc += 3;</div>
 <div class="ttc" id="aprogram-execute_8cpp_html_a9ded9c6308c1d34a5872db3199e9c973"><div class="ttname"><a href="program-execute_8cpp.html#a9ded9c6308c1d34a5872db3199e9c973">EXECUTEPROGRAMCHECK</a></div><div class="ttdeci">#define EXECUTEPROGRAMCHECK(x)</div><div class="ttdoc">Verify the size of the Bytecode vector so that it may be safely accessed.</div><div class="ttdef"><b>Definition:</b> program-execute.cpp:34</div></div>
 </div><!-- fragment -->
+<p>Binary operation macro, in which the lhs and rhs are read from index positions within the stack (fp+lhsIndex and fp+rhsIndex, respectively). </p>
+<p>The EXPRESSION is executed and the result is pushed onto the stack.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">EXPRESSION</td><td>The expression to evaluate. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a7eff6d91569bef15306f8a8065bb8904"></a>
@@ -244,6 +257,15 @@ Macros</h2></td></tr>
 <div class="line">        stack.back() = (EXPRESSION); \</div>
 <div class="line">        pc += 2;</div>
 </div><!-- fragment -->
+<p>Binary operation macro, in which the rhs is read from the top of the stack, and the lhs is read from an index position within the stack (fp + lhsIndex). </p>
+<p>Rhs is removed from the stack. The EXPRESSION is executed and the result is pushed onto the stack.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">EXPRESSION</td><td>The expression to evaluate. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a2f53316cb83aec3c419de7f8dec43b6f"></a>
@@ -269,6 +291,15 @@ Macros</h2></td></tr>
 <div class="line">        stack.back() = (EXPRESSION); \</div>
 <div class="line">        pc += 2;</div>
 </div><!-- fragment -->
+<p>Binary operation macro, in which the rhs is read from an index position within the stack (fp + rhsIndex), followed by the lhs from the top of the stack. </p>
+<p>Lhs is removed from the stack. The EXPRESSION is executed and the result is pushed onto the stack.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">EXPRESSION</td><td>The expression to evaluate. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="aef2846e8b21d4b7e111b2a3d86a75675"></a>
@@ -293,45 +324,17 @@ Macros</h2></td></tr>
 <div class="line">        stack[top - 2] = (EXPRESSION); \</div>
 <div class="line">        stack.pop_back(); \</div>
 <div class="line">        ++pc;</div>
-<div class="ttc" id="aprogram-execute_8cpp_html_a80c4bdcb0e9c9c0eebdb1488ad68aa38"><div class="ttname"><a href="program-execute_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38">STACKCHECK</a></div><div class="ttdeci">#define STACKCHECK(x)</div><div class="ttdoc">Verify the size of the stack vector so that it may be safely accessed.</div><div class="ttdef"><b>Definition:</b> program-execute.cpp:46</div></div>
+<div class="ttc" id="aprogram-execute_8cpp_html_a80c4bdcb0e9c9c0eebdb1488ad68aa38"><div class="ttname"><a href="program-execute_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38">STACKCHECK</a></div><div class="ttdeci">#define STACKCHECK(x)</div><div class="ttdoc">Verify the size of the stack vector so that it may be safely accessed.</div><div class="ttdef"><b>Definition:</b> program-execute.cpp:47</div></div>
 </div><!-- fragment -->
-</div>
-</div>
-<a id="a45f1dc1dd6b0559489c8f5bbbebd477a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45f1dc1dd6b0559489c8f5bbbebd477a">&#9670;&nbsp;</a></span>CASTOP_I</h2>
+<p>Binary operation macro, in which the rhs is read from the top of the stack, followed by the lhs from the top of the stack. </p>
+<p>Both are removed from the stack. The EXPRESSION is executed and the result is pushed onto the stack.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">EXPRESSION</td><td>The expression to evaluate. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CASTOP_I</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">        <a class="code" href="program-execute_8cpp.html#a9ded9c6308c1d34a5872db3199e9c973">EXECUTEPROGRAMCHECK</a>(1); \</div>
-<div class="line">        auto index = this-&gt;bytecode[pc + 1]; \</div>
-<div class="line">        STACKCHECK(index); \</div>
-<div class="line">        auto &amp; operand = stack[fp + index]; \</div>
-<div class="line">        pc += 2;</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a0dcde88dabdc927ee94e2b87e126b601"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0dcde88dabdc927ee94e2b87e126b601">&#9670;&nbsp;</a></span>CASTOP_S</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CASTOP_S</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">        <a class="code" href="program-execute_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38">STACKCHECK</a>(1); \</div>
-<div class="line">        auto operand = stack.back(); \</div>
-<div class="line">        stack.pop_back(); \</div>
-<div class="line">        ++pc;</div>
-</div><!-- fragment -->
 </div>
 </div>
 <a id="a9ded9c6308c1d34a5872db3199e9c973"></a>
@@ -366,41 +369,72 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="af3e0ec92f0f35491f0cf6da42c7e9c2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3e0ec92f0f35491f0cf6da42c7e9c2e">&#9670;&nbsp;</a></span>PRINTOP_I</h2>
+<a id="a4ab044952447ab68ab4300fc5dddc70d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ab044952447ab68ab4300fc5dddc70d">&#9670;&nbsp;</a></span>ITERATOROP_II</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define PRINTOP_I</td>
+          <td class="memname">#define ITERATOROP_II</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">EXPRESSION</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">        <a class="code" href="program-execute_8cpp.html#a9ded9c6308c1d34a5872db3199e9c973">EXECUTEPROGRAMCHECK</a>(2); \</div>
+<div class="line">        auto index = this-&gt;bytecode[pc + 1]; \</div>
+<div class="line">        auto <a class="code" href="classTang_1_1position.html">position</a> = this-&gt;bytecode[pc + 2]; \</div>
+<div class="line">        STACKCHECK(index); \</div>
+<div class="line">        STACKCHECK(<a class="code" href="classTang_1_1position.html">position</a>); \</div>
+<div class="line">        auto &amp; operand = stack[fp + index]; \</div>
+<div class="line">        stack[fp + <a class="code" href="classTang_1_1position.html">position</a>] = (EXPRESSION); \</div>
+<div class="line">        pc += 3;</div>
+<div class="ttc" id="aclassTang_1_1position_html"><div class="ttname"><a href="classTang_1_1position.html">Tang::position</a></div><div class="ttdoc">A point in a source file.</div><div class="ttdef"><b>Definition:</b> location.hh:62</div></div>
+</div><!-- fragment -->
+<p>Iterator macro, similar to UNARYOP_I, but it writes the result to a stack position, rather than pushing the result to the top of the stack. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">EXPRESSION</td><td>The expression to evaluate. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a951435a86704479c7e125293a570bc23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a951435a86704479c7e125293a570bc23">&#9670;&nbsp;</a></span>ITERATOROP_SI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ITERATOROP_SI</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">EXPRESSION</td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">        <a class="code" href="program-execute_8cpp.html#a9ded9c6308c1d34a5872db3199e9c973">EXECUTEPROGRAMCHECK</a>(1); \</div>
-<div class="line">        auto index = this-&gt;bytecode[pc + 1]; \</div>
-<div class="line">        STACKCHECK(index); \</div>
-<div class="line">        auto &amp; expression = stack[fp + index]; \</div>
+<div class="line">        auto <a class="code" href="classTang_1_1position.html">position</a> = this-&gt;bytecode[pc + 1]; \</div>
+<div class="line">        STACKCHECK(<a class="code" href="classTang_1_1position.html">position</a>); \</div>
+<div class="line">        auto &amp; operand = stack.back(); \</div>
+<div class="line">        stack[fp + <a class="code" href="classTang_1_1position.html">position</a>] = (EXPRESSION); \</div>
+<div class="line">        stack.pop_back(); \</div>
 <div class="line">        pc += 2;</div>
 </div><!-- fragment -->
-</div>
-</div>
-<a id="a8168f8cf60dba68fbfc09767912d9c5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8168f8cf60dba68fbfc09767912d9c5d">&#9670;&nbsp;</a></span>PRINTOP_S</h2>
+<p>Iterator macro, similar to UNARYOP_S, but it writes the result to a stack position, rather than pushing the result to the top of the stack. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">EXPRESSION</td><td>The expression to evaluate. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PRINTOP_S</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">        <a class="code" href="program-execute_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38">STACKCHECK</a>(1); \</div>
-<div class="line">        auto expression = stack.back(); \</div>
-<div class="line">        stack.pop_back(); \</div>
-<div class="line">        ++pc;</div>
-</div><!-- fragment -->
 </div>
 </div>
 <a id="a80c4bdcb0e9c9c0eebdb1488ad68aa38"></a>
@@ -434,14 +468,18 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="a1b5620ea1419a9c0d5f591b1864f7cdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b5620ea1419a9c0d5f591b1864f7cdf">&#9670;&nbsp;</a></span>UNARYOP_I</h2>
+<a id="a31af52df6dec7c557ffc6cd444ba0926"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31af52df6dec7c557ffc6cd444ba0926">&#9670;&nbsp;</a></span>UNARYOP_I</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">#define UNARYOP_I</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">EXPRESSION</td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -449,26 +487,49 @@ Macros</h2></td></tr>
 <div class="line">        auto index = this-&gt;bytecode[pc + 1]; \</div>
 <div class="line">        STACKCHECK(index); \</div>
 <div class="line">        auto &amp; operand = stack[fp + index]; \</div>
+<div class="line">        stack.emplace_back(EXPRESSION); \</div>
 <div class="line">        pc += 2;</div>
 </div><!-- fragment -->
+<p>Unary operation macro, in which the operand is read from an index location within the stack (indexed from the <code>fp</code>). </p>
+<p>The result is pushed to the top of the stack.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">EXPRESSION</td><td>The expression to evaluate. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="ae88fd9e812fda386f717d6d69f177959"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae88fd9e812fda386f717d6d69f177959">&#9670;&nbsp;</a></span>UNARYOP_S</h2>
+<a id="afde3b220e15a979ed7f3851a5bea961f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afde3b220e15a979ed7f3851a5bea961f">&#9670;&nbsp;</a></span>UNARYOP_S</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">#define UNARYOP_S</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">EXPRESSION</td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">        <a class="code" href="program-execute_8cpp.html#a80c4bdcb0e9c9c0eebdb1488ad68aa38">STACKCHECK</a>(1); \</div>
-<div class="line">        auto operand = stack.back(); \</div>
-<div class="line">        stack.pop_back(); \</div>
+<div class="line">        auto &amp; operand = stack.back(); \</div>
+<div class="line">        stack.back() = (EXPRESSION); \</div>
 <div class="line">        ++pc;</div>
 </div><!-- fragment -->
+<p>Unary operation macro, in which the operand is popped from the top of the stack. </p>
+<p>The result is pushed to the top of the stack.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">EXPRESSION</td><td>The expression to evaluate. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 </div><!-- contents -->

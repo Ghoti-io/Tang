@@ -38,26 +38,22 @@ Include dependency graph for program-\/execute.cpp\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em Verify the size of the Bytecode vector so that it may be safely accessed. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{program-execute_8cpp_a80c4bdcb0e9c9c0eebdb1488ad68aa38}{STACKCHECK}}(x)
 \begin{DoxyCompactList}\small\item\em Verify the size of the stack vector so that it may be safely accessed. \end{DoxyCompactList}\item 
-\#define {\bfseries PRINTOP\+\_\+S}
-\item 
-\#define {\bfseries PRINTOP\+\_\+I}
-\item 
-\#define {\bfseries CASTOP\+\_\+S}
-\item 
-\#define {\bfseries CASTOP\+\_\+I}
-\item 
-\#define {\bfseries UNARYOP\+\_\+S}
-\item 
-\#define {\bfseries UNARYOP\+\_\+I}
-\item 
-\#define {\bfseries BINARYOP\+\_\+\+SS}(EXPRESSION)
-\item 
-\#define {\bfseries BINARYOP\+\_\+\+SI}(EXPRESSION)
-\item 
-\#define {\bfseries BINARYOP\+\_\+\+IS}(EXPRESSION)
-\item 
-\#define {\bfseries BINARYOP\+\_\+\+II}(EXPRESSION)
-\end{DoxyCompactItemize}
+\#define \mbox{\hyperlink{program-execute_8cpp_afde3b220e15a979ed7f3851a5bea961f}{UNARYOP\+\_\+S}}(EXPRESSION)
+\begin{DoxyCompactList}\small\item\em Unary operation macro, in which the operand is popped from the top of the stack. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{program-execute_8cpp_a31af52df6dec7c557ffc6cd444ba0926}{UNARYOP\+\_\+I}}(EXPRESSION)
+\begin{DoxyCompactList}\small\item\em Unary operation macro, in which the operand is read from an index location within the stack (indexed from the {\ttfamily fp}). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{program-execute_8cpp_a951435a86704479c7e125293a570bc23}{ITERATOROP\+\_\+\+SI}}(EXPRESSION)
+\begin{DoxyCompactList}\small\item\em Iterator macro, similar to UNARYOP\+\_\+S, but it writes the result to a stack position, rather than pushing the result to the top of the stack. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{program-execute_8cpp_a4ab044952447ab68ab4300fc5dddc70d}{ITERATOROP\+\_\+\+II}}(EXPRESSION)
+\begin{DoxyCompactList}\small\item\em Iterator macro, similar to UNARYOP\+\_\+I, but it writes the result to a stack position, rather than pushing the result to the top of the stack. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{program-execute_8cpp_aef2846e8b21d4b7e111b2a3d86a75675}{BINARYOP\+\_\+\+SS}}(EXPRESSION)
+\begin{DoxyCompactList}\small\item\em Binary operation macro, in which the rhs is read from the top of the stack, followed by the lhs from the top of the stack. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{program-execute_8cpp_a2f53316cb83aec3c419de7f8dec43b6f}{BINARYOP\+\_\+\+SI}}(EXPRESSION)
+\begin{DoxyCompactList}\small\item\em Binary operation macro, in which the rhs is read from an index position within the stack (fp + rhs\+Index), followed by the lhs from the top of the stack. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{program-execute_8cpp_a7eff6d91569bef15306f8a8065bb8904}{BINARYOP\+\_\+\+IS}}(EXPRESSION)
+\begin{DoxyCompactList}\small\item\em Binary operation macro, in which the rhs is read from the top of the stack, and the lhs is read from an index position within the stack (fp + lhs\+Index). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{program-execute_8cpp_a4c8ed56b3d79a2ce0d152ad89eabc659}{BINARYOP\+\_\+\+II}}(EXPRESSION)
+\begin{DoxyCompactList}\small\item\em Binary operation macro, in which the lhs and rhs are read from index positions within the stack (fp+lhs\+Index and fp+rhs\+Index, respectively). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -85,6 +81,17 @@ Define the \mbox{\hyperlink{classTang_1_1Program_a3449ae0f592e7eaa2cf05244839daa
 \DoxyCodeLine{        pc += 3;}
 
 \end{DoxyCode}
+
+
+Binary operation macro, in which the lhs and rhs are read from index positions within the stack (fp+lhs\+Index and fp+rhs\+Index, respectively). 
+
+The EXPRESSION is executed and the result is pushed onto the stack.
+
+
+\begin{DoxyParams}{Parameters}
+{\em EXPRESSION} & The expression to evaluate. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{program-execute_8cpp_a7eff6d91569bef15306f8a8065bb8904}\label{program-execute_8cpp_a7eff6d91569bef15306f8a8065bb8904}} 
 \index{program-\/execute.cpp@{program-\/execute.cpp}!BINARYOP\_IS@{BINARYOP\_IS}}
 \index{BINARYOP\_IS@{BINARYOP\_IS}!program-\/execute.cpp@{program-\/execute.cpp}}
@@ -102,6 +109,17 @@ Define the \mbox{\hyperlink{classTang_1_1Program_a3449ae0f592e7eaa2cf05244839daa
 \DoxyCodeLine{        pc += 2;}
 
 \end{DoxyCode}
+
+
+Binary operation macro, in which the rhs is read from the top of the stack, and the lhs is read from an index position within the stack (fp + lhs\+Index). 
+
+Rhs is removed from the stack. The EXPRESSION is executed and the result is pushed onto the stack.
+
+
+\begin{DoxyParams}{Parameters}
+{\em EXPRESSION} & The expression to evaluate. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{program-execute_8cpp_a2f53316cb83aec3c419de7f8dec43b6f}\label{program-execute_8cpp_a2f53316cb83aec3c419de7f8dec43b6f}} 
 \index{program-\/execute.cpp@{program-\/execute.cpp}!BINARYOP\_SI@{BINARYOP\_SI}}
 \index{BINARYOP\_SI@{BINARYOP\_SI}!program-\/execute.cpp@{program-\/execute.cpp}}
@@ -119,6 +137,17 @@ Define the \mbox{\hyperlink{classTang_1_1Program_a3449ae0f592e7eaa2cf05244839daa
 \DoxyCodeLine{        pc += 2;}
 
 \end{DoxyCode}
+
+
+Binary operation macro, in which the rhs is read from an index position within the stack (fp + rhs\+Index), followed by the lhs from the top of the stack. 
+
+Lhs is removed from the stack. The EXPRESSION is executed and the result is pushed onto the stack.
+
+
+\begin{DoxyParams}{Parameters}
+{\em EXPRESSION} & The expression to evaluate. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{program-execute_8cpp_aef2846e8b21d4b7e111b2a3d86a75675}\label{program-execute_8cpp_aef2846e8b21d4b7e111b2a3d86a75675}} 
 \index{program-\/execute.cpp@{program-\/execute.cpp}!BINARYOP\_SS@{BINARYOP\_SS}}
 \index{BINARYOP\_SS@{BINARYOP\_SS}!program-\/execute.cpp@{program-\/execute.cpp}}
@@ -136,35 +165,17 @@ Define the \mbox{\hyperlink{classTang_1_1Program_a3449ae0f592e7eaa2cf05244839daa
 \DoxyCodeLine{        ++pc;}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{program-execute_8cpp_a45f1dc1dd6b0559489c8f5bbbebd477a}\label{program-execute_8cpp_a45f1dc1dd6b0559489c8f5bbbebd477a}} 
-\index{program-\/execute.cpp@{program-\/execute.cpp}!CASTOP\_I@{CASTOP\_I}}
-\index{CASTOP\_I@{CASTOP\_I}!program-\/execute.cpp@{program-\/execute.cpp}}
-\doxysubsubsection{\texorpdfstring{CASTOP\_I}{CASTOP\_I}}
-{\footnotesize\ttfamily \#define CASTOP\+\_\+I}
 
-{\bfseries Value\+:}
-\begin{DoxyCode}{0}
-\DoxyCodeLine{        \mbox{\hyperlink{program-execute_8cpp_a9ded9c6308c1d34a5872db3199e9c973}{EXECUTEPROGRAMCHECK}}(1); \(\backslash\)}
-\DoxyCodeLine{        auto index = this-\/>bytecode[pc + 1]; \(\backslash\)}
-\DoxyCodeLine{        STACKCHECK(index); \(\backslash\)}
-\DoxyCodeLine{        auto \& operand = stack[fp + index]; \(\backslash\)}
-\DoxyCodeLine{        pc += 2;}
 
-\end{DoxyCode}
-\mbox{\Hypertarget{program-execute_8cpp_a0dcde88dabdc927ee94e2b87e126b601}\label{program-execute_8cpp_a0dcde88dabdc927ee94e2b87e126b601}} 
-\index{program-\/execute.cpp@{program-\/execute.cpp}!CASTOP\_S@{CASTOP\_S}}
-\index{CASTOP\_S@{CASTOP\_S}!program-\/execute.cpp@{program-\/execute.cpp}}
-\doxysubsubsection{\texorpdfstring{CASTOP\_S}{CASTOP\_S}}
-{\footnotesize\ttfamily \#define CASTOP\+\_\+S}
+Binary operation macro, in which the rhs is read from the top of the stack, followed by the lhs from the top of the stack. 
 
-{\bfseries Value\+:}
-\begin{DoxyCode}{0}
-\DoxyCodeLine{        \mbox{\hyperlink{program-execute_8cpp_a80c4bdcb0e9c9c0eebdb1488ad68aa38}{STACKCHECK}}(1); \(\backslash\)}
-\DoxyCodeLine{        auto operand = stack.back(); \(\backslash\)}
-\DoxyCodeLine{        stack.pop\_back(); \(\backslash\)}
-\DoxyCodeLine{        ++pc;}
+Both are removed from the stack. The EXPRESSION is executed and the result is pushed onto the stack.
 
-\end{DoxyCode}
+
+\begin{DoxyParams}{Parameters}
+{\em EXPRESSION} & The expression to evaluate. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{program-execute_8cpp_a9ded9c6308c1d34a5872db3199e9c973}\label{program-execute_8cpp_a9ded9c6308c1d34a5872db3199e9c973}} 
 \index{program-\/execute.cpp@{program-\/execute.cpp}!EXECUTEPROGRAMCHECK@{EXECUTEPROGRAMCHECK}}
 \index{EXECUTEPROGRAMCHECK@{EXECUTEPROGRAMCHECK}!program-\/execute.cpp@{program-\/execute.cpp}}
@@ -189,35 +200,59 @@ Verify the size of the Bytecode vector so that it may be safely accessed.
 {\em x} & The number of additional vector entries that should exist. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{program-execute_8cpp_af3e0ec92f0f35491f0cf6da42c7e9c2e}\label{program-execute_8cpp_af3e0ec92f0f35491f0cf6da42c7e9c2e}} 
-\index{program-\/execute.cpp@{program-\/execute.cpp}!PRINTOP\_I@{PRINTOP\_I}}
-\index{PRINTOP\_I@{PRINTOP\_I}!program-\/execute.cpp@{program-\/execute.cpp}}
-\doxysubsubsection{\texorpdfstring{PRINTOP\_I}{PRINTOP\_I}}
-{\footnotesize\ttfamily \#define PRINTOP\+\_\+I}
+\mbox{\Hypertarget{program-execute_8cpp_a4ab044952447ab68ab4300fc5dddc70d}\label{program-execute_8cpp_a4ab044952447ab68ab4300fc5dddc70d}} 
+\index{program-\/execute.cpp@{program-\/execute.cpp}!ITERATOROP\_II@{ITERATOROP\_II}}
+\index{ITERATOROP\_II@{ITERATOROP\_II}!program-\/execute.cpp@{program-\/execute.cpp}}
+\doxysubsubsection{\texorpdfstring{ITERATOROP\_II}{ITERATOROP\_II}}
+{\footnotesize\ttfamily \#define ITERATOROP\+\_\+\+II(\begin{DoxyParamCaption}\item[{}]{EXPRESSION }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        \mbox{\hyperlink{program-execute_8cpp_a9ded9c6308c1d34a5872db3199e9c973}{EXECUTEPROGRAMCHECK}}(2); \(\backslash\)}
+\DoxyCodeLine{        auto index = this-\/>bytecode[pc + 1]; \(\backslash\)}
+\DoxyCodeLine{        auto \mbox{\hyperlink{classTang_1_1position}{position}} = this-\/>bytecode[pc + 2]; \(\backslash\)}
+\DoxyCodeLine{        STACKCHECK(index); \(\backslash\)}
+\DoxyCodeLine{        STACKCHECK(\mbox{\hyperlink{classTang_1_1position}{position}}); \(\backslash\)}
+\DoxyCodeLine{        auto \& operand = stack[fp + index]; \(\backslash\)}
+\DoxyCodeLine{        stack[fp + \mbox{\hyperlink{classTang_1_1position}{position}}] = (EXPRESSION); \(\backslash\)}
+\DoxyCodeLine{        pc += 3;}
+
+\end{DoxyCode}
+
+
+Iterator macro, similar to UNARYOP\+\_\+I, but it writes the result to a stack position, rather than pushing the result to the top of the stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em EXPRESSION} & The expression to evaluate. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{program-execute_8cpp_a951435a86704479c7e125293a570bc23}\label{program-execute_8cpp_a951435a86704479c7e125293a570bc23}} 
+\index{program-\/execute.cpp@{program-\/execute.cpp}!ITERATOROP\_SI@{ITERATOROP\_SI}}
+\index{ITERATOROP\_SI@{ITERATOROP\_SI}!program-\/execute.cpp@{program-\/execute.cpp}}
+\doxysubsubsection{\texorpdfstring{ITERATOROP\_SI}{ITERATOROP\_SI}}
+{\footnotesize\ttfamily \#define ITERATOROP\+\_\+\+SI(\begin{DoxyParamCaption}\item[{}]{EXPRESSION }\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{        \mbox{\hyperlink{program-execute_8cpp_a9ded9c6308c1d34a5872db3199e9c973}{EXECUTEPROGRAMCHECK}}(1); \(\backslash\)}
-\DoxyCodeLine{        auto index = this-\/>bytecode[pc + 1]; \(\backslash\)}
-\DoxyCodeLine{        STACKCHECK(index); \(\backslash\)}
-\DoxyCodeLine{        auto \& expression = stack[fp + index]; \(\backslash\)}
+\DoxyCodeLine{        auto \mbox{\hyperlink{classTang_1_1position}{position}} = this-\/>bytecode[pc + 1]; \(\backslash\)}
+\DoxyCodeLine{        STACKCHECK(\mbox{\hyperlink{classTang_1_1position}{position}}); \(\backslash\)}
+\DoxyCodeLine{        auto \& operand = stack.back(); \(\backslash\)}
+\DoxyCodeLine{        stack[fp + \mbox{\hyperlink{classTang_1_1position}{position}}] = (EXPRESSION); \(\backslash\)}
+\DoxyCodeLine{        stack.pop\_back(); \(\backslash\)}
 \DoxyCodeLine{        pc += 2;}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{program-execute_8cpp_a8168f8cf60dba68fbfc09767912d9c5d}\label{program-execute_8cpp_a8168f8cf60dba68fbfc09767912d9c5d}} 
-\index{program-\/execute.cpp@{program-\/execute.cpp}!PRINTOP\_S@{PRINTOP\_S}}
-\index{PRINTOP\_S@{PRINTOP\_S}!program-\/execute.cpp@{program-\/execute.cpp}}
-\doxysubsubsection{\texorpdfstring{PRINTOP\_S}{PRINTOP\_S}}
-{\footnotesize\ttfamily \#define PRINTOP\+\_\+S}
 
-{\bfseries Value\+:}
-\begin{DoxyCode}{0}
-\DoxyCodeLine{        \mbox{\hyperlink{program-execute_8cpp_a80c4bdcb0e9c9c0eebdb1488ad68aa38}{STACKCHECK}}(1); \(\backslash\)}
-\DoxyCodeLine{        auto expression = stack.back(); \(\backslash\)}
-\DoxyCodeLine{        stack.pop\_back(); \(\backslash\)}
-\DoxyCodeLine{        ++pc;}
 
-\end{DoxyCode}
+Iterator macro, similar to UNARYOP\+\_\+S, but it writes the result to a stack position, rather than pushing the result to the top of the stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em EXPRESSION} & The expression to evaluate. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{program-execute_8cpp_a80c4bdcb0e9c9c0eebdb1488ad68aa38}\label{program-execute_8cpp_a80c4bdcb0e9c9c0eebdb1488ad68aa38}} 
 \index{program-\/execute.cpp@{program-\/execute.cpp}!STACKCHECK@{STACKCHECK}}
 \index{STACKCHECK@{STACKCHECK}!program-\/execute.cpp@{program-\/execute.cpp}}
@@ -242,11 +277,11 @@ Verify the size of the stack vector so that it may be safely accessed.
 {\em x} & The number of entries that should exist in the stack. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{program-execute_8cpp_a1b5620ea1419a9c0d5f591b1864f7cdf}\label{program-execute_8cpp_a1b5620ea1419a9c0d5f591b1864f7cdf}} 
+\mbox{\Hypertarget{program-execute_8cpp_a31af52df6dec7c557ffc6cd444ba0926}\label{program-execute_8cpp_a31af52df6dec7c557ffc6cd444ba0926}} 
 \index{program-\/execute.cpp@{program-\/execute.cpp}!UNARYOP\_I@{UNARYOP\_I}}
 \index{UNARYOP\_I@{UNARYOP\_I}!program-\/execute.cpp@{program-\/execute.cpp}}
 \doxysubsubsection{\texorpdfstring{UNARYOP\_I}{UNARYOP\_I}}
-{\footnotesize\ttfamily \#define UNARYOP\+\_\+I}
+{\footnotesize\ttfamily \#define UNARYOP\+\_\+I(\begin{DoxyParamCaption}\item[{}]{EXPRESSION }\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
@@ -254,20 +289,43 @@ Verify the size of the stack vector so that it may be safely accessed.
 \DoxyCodeLine{        auto index = this-\/>bytecode[pc + 1]; \(\backslash\)}
 \DoxyCodeLine{        STACKCHECK(index); \(\backslash\)}
 \DoxyCodeLine{        auto \& operand = stack[fp + index]; \(\backslash\)}
+\DoxyCodeLine{        stack.emplace\_back(EXPRESSION); \(\backslash\)}
 \DoxyCodeLine{        pc += 2;}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{program-execute_8cpp_ae88fd9e812fda386f717d6d69f177959}\label{program-execute_8cpp_ae88fd9e812fda386f717d6d69f177959}} 
+
+
+Unary operation macro, in which the operand is read from an index location within the stack (indexed from the {\ttfamily fp}). 
+
+The result is pushed to the top of the stack.
+
+
+\begin{DoxyParams}{Parameters}
+{\em EXPRESSION} & The expression to evaluate. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{program-execute_8cpp_afde3b220e15a979ed7f3851a5bea961f}\label{program-execute_8cpp_afde3b220e15a979ed7f3851a5bea961f}} 
 \index{program-\/execute.cpp@{program-\/execute.cpp}!UNARYOP\_S@{UNARYOP\_S}}
 \index{UNARYOP\_S@{UNARYOP\_S}!program-\/execute.cpp@{program-\/execute.cpp}}
 \doxysubsubsection{\texorpdfstring{UNARYOP\_S}{UNARYOP\_S}}
-{\footnotesize\ttfamily \#define UNARYOP\+\_\+S}
+{\footnotesize\ttfamily \#define UNARYOP\+\_\+S(\begin{DoxyParamCaption}\item[{}]{EXPRESSION }\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{        \mbox{\hyperlink{program-execute_8cpp_a80c4bdcb0e9c9c0eebdb1488ad68aa38}{STACKCHECK}}(1); \(\backslash\)}
-\DoxyCodeLine{        auto operand = stack.back(); \(\backslash\)}
-\DoxyCodeLine{        stack.pop\_back(); \(\backslash\)}
+\DoxyCodeLine{        auto \& operand = stack.back(); \(\backslash\)}
+\DoxyCodeLine{        stack.back() = (EXPRESSION); \(\backslash\)}
 \DoxyCodeLine{        ++pc;}
 
 \end{DoxyCode}
+
+
+Unary operation macro, in which the operand is popped from the top of the stack. 
+
+The result is pushed to the top of the stack.
+
+
+\begin{DoxyParams}{Parameters}
+{\em EXPRESSION} & The expression to evaluate. \\
+\hline
+\end{DoxyParams}

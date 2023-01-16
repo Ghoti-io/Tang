@@ -505,13 +505,13 @@
   \item {BINARYOP}
     \subitem {macros.hpp}, \hyperpage{495}
   \item {BINARYOP\_II}
-    \subitem {program-\/execute.cpp}, \hyperpage{547}
+    \subitem {program-\/execute.cpp}, \hyperpage{548}
   \item {BINARYOP\_IS}
     \subitem {program-\/execute.cpp}, \hyperpage{548}
   \item {BINARYOP\_SI}
-    \subitem {program-\/execute.cpp}, \hyperpage{548}
+    \subitem {program-\/execute.cpp}, \hyperpage{549}
   \item {BINARYOP\_SS}
-    \subitem {program-\/execute.cpp}, \hyperpage{548}
+    \subitem {program-\/execute.cpp}, \hyperpage{549}
   \item {BOOLEAN}
     \subitem {opcode.hpp}, \hyperpage{498}
   \item {Boolean}
@@ -539,10 +539,6 @@
     \subitem {opcode.hpp}, \hyperpage{500}
   \item {CASTINTEGER\_S}
     \subitem {opcode.hpp}, \hyperpage{500}
-  \item {CASTOP\_I}
-    \subitem {program-\/execute.cpp}, \hyperpage{548}
-  \item {CASTOP\_S}
-    \subitem {program-\/execute.cpp}, \hyperpage{549}
   \item {CASTSTRING\_I}
     \subitem {opcode.hpp}, \hyperpage{500}
   \item {CASTSTRING\_S}
@@ -1048,6 +1044,10 @@
     \subitem {opcode.hpp}, \hyperpage{500}
   \item {ITERATORNEXT\_II}
     \subitem {opcode.hpp}, \hyperpage{499}
+  \item {ITERATOROP\_II}
+    \subitem {program-\/execute.cpp}, \hyperpage{550}
+  \item {ITERATOROP\_SI}
+    \subitem {program-\/execute.cpp}, \hyperpage{550}
 
   \indexspace
 
@@ -1077,7 +1077,7 @@
     \subitem {Tang::AstNodeBinary}, \hyperpage{32}
   \item {LIBRARY}
     \subitem {opcode.hpp}, \hyperpage{498}
-    \subitem {tangBase.cpp}, \hyperpage{553}
+    \subitem {tangBase.cpp}, \hyperpage{555}
   \item {LIBRARYCOPY}
     \subitem {opcode.hpp}, \hyperpage{498}
   \item {LIBRARYSAVE}
@@ -1403,10 +1403,6 @@
     \subitem {opcode.hpp}, \hyperpage{500}
   \item {PRINT\_S}
     \subitem {opcode.hpp}, \hyperpage{500}
-  \item {PRINTOP\_I}
-    \subitem {program-\/execute.cpp}, \hyperpage{549}
-  \item {PRINTOP\_S}
-    \subitem {program-\/execute.cpp}, \hyperpage{549}
   \item {Program}
     \subitem {Tang::Program}, \hyperpage{411, 412}
   \item {program-\/analyze.cpp}
@@ -1417,18 +1413,16 @@
     \subitem {DUMPBINARY\_II}, \hyperpage{546}
     \subitem {DUMPPROGRAMCHECK}, \hyperpage{546}
   \item {program-\/execute.cpp}
-    \subitem {BINARYOP\_II}, \hyperpage{547}
+    \subitem {BINARYOP\_II}, \hyperpage{548}
     \subitem {BINARYOP\_IS}, \hyperpage{548}
-    \subitem {BINARYOP\_SI}, \hyperpage{548}
-    \subitem {BINARYOP\_SS}, \hyperpage{548}
-    \subitem {CASTOP\_I}, \hyperpage{548}
-    \subitem {CASTOP\_S}, \hyperpage{549}
+    \subitem {BINARYOP\_SI}, \hyperpage{549}
+    \subitem {BINARYOP\_SS}, \hyperpage{549}
     \subitem {EXECUTEPROGRAMCHECK}, \hyperpage{549}
-    \subitem {PRINTOP\_I}, \hyperpage{549}
-    \subitem {PRINTOP\_S}, \hyperpage{549}
-    \subitem {STACKCHECK}, \hyperpage{550}
-    \subitem {UNARYOP\_I}, \hyperpage{550}
-    \subitem {UNARYOP\_S}, \hyperpage{550}
+    \subitem {ITERATOROP\_II}, \hyperpage{550}
+    \subitem {ITERATOROP\_SI}, \hyperpage{550}
+    \subitem {STACKCHECK}, \hyperpage{552}
+    \subitem {UNARYOP\_I}, \hyperpage{552}
+    \subitem {UNARYOP\_S}, \hyperpage{552}
   \item {program.hpp}
     \subitem {OpcodePositions}, \hyperpage{503}
   \item {pushEnvironment}
@@ -1513,13 +1507,13 @@
   \item {src/program-\/analyze.cpp}, \hyperpage{543}
   \item {src/program-\/dumpBytecode.cpp}, \hyperpage{545}
   \item {src/program-\/execute.cpp}, \hyperpage{546}
-  \item {src/program-\/optimize.cpp}, \hyperpage{551}
-  \item {src/program.cpp}, \hyperpage{551}
-  \item {src/tang.cpp}, \hyperpage{552}
-  \item {src/tangBase.cpp}, \hyperpage{552}
-  \item {src/unicodeString.cpp}, \hyperpage{553}
+  \item {src/program-\/optimize.cpp}, \hyperpage{553}
+  \item {src/program.cpp}, \hyperpage{553}
+  \item {src/tang.cpp}, \hyperpage{554}
+  \item {src/tangBase.cpp}, \hyperpage{555}
+  \item {src/unicodeString.cpp}, \hyperpage{556}
   \item {STACKCHECK}
-    \subitem {program-\/execute.cpp}, \hyperpage{550}
+    \subitem {program-\/execute.cpp}, \hyperpage{552}
   \item {STRING}
     \subitem {opcode.hpp}, \hyperpage{498}
   \item {String}
@@ -2337,15 +2331,15 @@
   \item {TangBase}
     \subitem {Tang::TangBase}, \hyperpage{425}
   \item {tangBase.cpp}
-    \subitem {LIBRARY}, \hyperpage{553}
+    \subitem {LIBRARY}, \hyperpage{555}
   \item {TangScanner}
     \subitem {Tang::TangScanner}, \hyperpage{430}
   \item {Template}
     \subitem {Tang::Program}, \hyperpage{411}
-  \item {test/test.cpp}, \hyperpage{554}
-  \item {test/testGarbageCollected.cpp}, \hyperpage{556}
-  \item {test/testSingletonObjectPool.cpp}, \hyperpage{557}
-  \item {test/testUnicodeString.cpp}, \hyperpage{557}
+  \item {test/test.cpp}, \hyperpage{556}
+  \item {test/testGarbageCollected.cpp}, \hyperpage{558}
+  \item {test/testSingletonObjectPool.cpp}, \hyperpage{559}
+  \item {test/testUnicodeString.cpp}, \hyperpage{559}
   \item {Trusted}
     \subitem {Tang::UnicodeString}, \hyperpage{435}
   \item {Type}
@@ -2358,9 +2352,9 @@
   \item {UNARYOP}
     \subitem {macros.hpp}, \hyperpage{496}
   \item {UNARYOP\_I}
-    \subitem {program-\/execute.cpp}, \hyperpage{550}
+    \subitem {program-\/execute.cpp}, \hyperpage{552}
   \item {UNARYOP\_S}
-    \subitem {program-\/execute.cpp}, \hyperpage{550}
+    \subitem {program-\/execute.cpp}, \hyperpage{552}
   \item {Unescape}
     \subitem {Tang::Unescape}, \hyperpage{432}
   \item {unescape}
