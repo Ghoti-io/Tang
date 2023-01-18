@@ -12,7 +12,6 @@ namespace Tang {
 
 #include <any>
 #include <map>
-#include <optional>
 #include <string>
 #include <vector>
 #include "macros.hpp"
@@ -43,12 +42,12 @@ namespace Tang {
      * The output result from the program execution, as a
      * ComputedExpressionString.
      */
-    GarbageCollected computedExpressionOut;
+    SPCE computedExpressionOut;
 
     /**
      * The result of the Program execution.
      */
-    std::optional<GarbageCollected> result;
+    SPCE result;
   };
 }
 

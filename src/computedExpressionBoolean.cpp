@@ -17,41 +17,41 @@ string ComputedExpressionBoolean::dump() const {
   return this->val ? "true" : "false";
 }
 
-GarbageCollected ComputedExpressionBoolean::makeCopy() const {
-  return GarbageCollected::make<ComputedExpressionBoolean>(this->val);
+SPCE ComputedExpressionBoolean::makeCopy() const {
+  return make_shared<ComputedExpressionBoolean>(this->val);
 }
 
 bool ComputedExpressionBoolean::is_equal(const bool & val) const {
   return this->val == val;
 }
 
-GarbageCollected ComputedExpressionBoolean::__not() const {
-  return GarbageCollected::make<ComputedExpressionBoolean>(!this->val);
+SPCE ComputedExpressionBoolean::__not() const {
+  return make_shared<ComputedExpressionBoolean>(!this->val);
 }
 
-GarbageCollected ComputedExpressionBoolean::__equal(const GarbageCollected & rhs) const {
+SPCE ComputedExpressionBoolean::__equal(const SPCE & rhs) const {
   if (typeid(*rhs) == typeid(ComputedExpressionBoolean)) {
     auto & rhsConv = static_cast<ComputedExpressionBoolean &>(*rhs);
-    return GarbageCollected::make<ComputedExpressionBoolean>(this->val == rhsConv.val);
+    return make_shared<ComputedExpressionBoolean>(this->val == rhsConv.val);
   }
 
   if (typeid(*rhs) == typeid(ComputedExpression)) {
-    return GarbageCollected::make<ComputedExpressionBoolean>(false);
+    return make_shared<ComputedExpressionBoolean>(false);
   }
 
   // Return the default error.
   return ComputedExpression::__equal(rhs);
 }
 
-GarbageCollected ComputedExpressionBoolean::__integer() const {
-  return GarbageCollected::make<ComputedExpressionInteger>(this->val ? 1 : 0);
+SPCE ComputedExpressionBoolean::__integer() const {
+  return make_shared<ComputedExpressionInteger>(this->val ? 1 : 0);
 }
 
-GarbageCollected ComputedExpressionBoolean::__float() const {
-  return GarbageCollected::make<ComputedExpressionFloat>(this->val ? (float_t)1. : 0);
+SPCE ComputedExpressionBoolean::__float() const {
+  return make_shared<ComputedExpressionFloat>(this->val ? (float_t)1. : 0);
 }
 
-GarbageCollected ComputedExpressionBoolean::__boolean() const {
-  return GarbageCollected::make<ComputedExpressionBoolean>(this->val);
+SPCE ComputedExpressionBoolean::__boolean() const {
+  return make_shared<ComputedExpressionBoolean>(this->val);
 }
 

@@ -14,7 +14,7 @@
 using namespace std;
 using namespace Tang;
 
-ComputedExpressionArray::ComputedExpressionArray(vector<GarbageCollected> contents) : contents{contents} {}
+ComputedExpressionArray::ComputedExpressionArray(vector<SPCE> contents) : contents{contents} {}
 
 string ComputedExpressionArray::dump() const {
   string s = "[";
@@ -34,19 +34,19 @@ bool ComputedExpressionArray::isCopyNeeded() const {
   return true;
 }
 
-GarbageCollected ComputedExpressionArray::makeCopy() const {
+SPCE ComputedExpressionArray::makeCopy() const {
   // Make a deep copy of all array elements.
-  vector<GarbageCollected> newContents;
+  vector<SPCE> newContents;
   newContents.reserve(this->contents.size());
   for (auto const & item : this->contents) {
     newContents.push_back(item->isCopyNeeded()
       ? item->makeCopy()
       : item);
   }
-  return GarbageCollected::make<ComputedExpressionArray>(newContents);
+  return make_shared<ComputedExpressionArray>(newContents);
 }
 
-GarbageCollected ComputedExpressionArray::__index(const GarbageCollected & index) const {
+SPCE ComputedExpressionArray::__index(const SPCE & index) const {
   if (typeid(*index) == typeid(ComputedExpressionInteger)) {
     auto & indexConv = static_cast<ComputedExpressionInteger&>(*index);
     auto i = indexConv.getValue();
@@ -54,18 +54,18 @@ GarbageCollected ComputedExpressionArray::__index(const GarbageCollected & index
       // index >= 0
       ? i < (integer_t)this->contents.size()
         ? this->contents[i]
-        : GarbageCollected::make<ComputedExpressionError>(Error{"Index out of range."})
+        : make_shared<ComputedExpressionError>(Error{"Index out of range."})
       // index < 0
       : -i <= (integer_t)this->contents.size()
         ? this->contents[this->contents.size() + i]
-        : GarbageCollected::make<ComputedExpressionError>(Error{"Index out of range."});
+        : make_shared<ComputedExpressionError>(Error{"Index out of range."});
   }
 
   // Return the default error.
   return ComputedExpression::__index(index);
 }
 
-GarbageCollected ComputedExpressionArray::__slice(const GarbageCollected & begin, const GarbageCollected & end, const GarbageCollected & skip) const {
+SPCE ComputedExpressionArray::__slice(const SPCE & begin, const SPCE & end, const SPCE & skip) const {
   int convBegin, convEnd, convSkip;
 
   // Verify that the skip is either default or an integer.
@@ -122,7 +122,7 @@ GarbageCollected ComputedExpressionArray::__slice(const GarbageCollected & begin
   }
 
   // The new target container.
-  vector<GarbageCollected> newContents;
+  vector<SPCE> newContents;
 
   // Skip is positive.
   if (convSkip > 0) {
@@ -130,7 +130,7 @@ GarbageCollected ComputedExpressionArray::__slice(const GarbageCollected & begin
       auto & item = this->contents.at(i);
       newContents.push_back(item->isCopyNeeded() ? item->makeCopy() : item);
     }
-    return GarbageCollected::make<ComputedExpressionArray>(newContents);
+    return make_shared<ComputedExpressionArray>(newContents);
   }
 
   // Skip is negative.
@@ -139,21 +139,21 @@ GarbageCollected ComputedExpressionArray::__slice(const GarbageCollected & begin
     newContents.push_back(item->isCopyNeeded() ? item->makeCopy() : item);
   }
 
-  return GarbageCollected::make<ComputedExpressionArray>(newContents);
+  return make_shared<ComputedExpressionArray>(newContents);
 }
 
-GarbageCollected ComputedExpressionArray::__getIterator(const GarbageCollected & collection) const {
-  return GarbageCollected::make<ComputedExpressionIterator>(collection);
+SPCE ComputedExpressionArray::__getIterator(const SPCE & collection) const {
+  return make_shared<ComputedExpressionIterator>(collection);
 }
 
-GarbageCollected ComputedExpressionArray::__iteratorNext(size_t index) const {
+SPCE ComputedExpressionArray::__iteratorNext(size_t index) const {
   if (index >= this->contents.size()) {
-    return GarbageCollected::make<ComputedExpressionIteratorEnd>();
+    return make_shared<ComputedExpressionIteratorEnd>();
   }
   return this->contents[index];
 }
 
-GarbageCollected ComputedExpressionArray::__assign_index(const GarbageCollected & index, const GarbageCollected & value) {
+SPCE ComputedExpressionArray::__assign_index(const SPCE & index, const SPCE & value) {
   if (typeid(*index) == typeid(ComputedExpressionInteger)) {
     auto & indexConv = static_cast<ComputedExpressionInteger&>(*index);
     auto i = indexConv.getValue();
@@ -161,35 +161,35 @@ GarbageCollected ComputedExpressionArray::__assign_index(const GarbageCollected 
       // index >= 0
       ? i < (integer_t)this->contents.size()
         ? this->contents[i] = value
-        : GarbageCollected::make<ComputedExpressionError>(Error{"Index out of range."})
+        : make_shared<ComputedExpressionError>(Error{"Index out of range."})
       // index < 0
       : -i <= (integer_t)this->contents.size()
         ? this->contents[this->contents.size() + i] = value
-        : GarbageCollected::make<ComputedExpressionError>(Error{"Index out of range."});
+        : make_shared<ComputedExpressionError>(Error{"Index out of range."});
   }
 
   // Return the default error.
   return ComputedExpression::__assign_index(index, value);
 }
 
-GarbageCollected ComputedExpressionArray::__string() const {
-  return GarbageCollected::make<ComputedExpressionString>(this->__asCode());
+SPCE ComputedExpressionArray::__string() const {
+  return make_shared<ComputedExpressionString>(this->__asCode());
 }
 
-const std::vector<Tang::GarbageCollected> & ComputedExpressionArray::getContents() const {
+const std::vector<Tang::SPCE> & ComputedExpressionArray::getContents() const {
   return this->contents;
 }
 
-void ComputedExpressionArray::append(const GarbageCollected & item) {
+void ComputedExpressionArray::append(const SPCE & item) {
   this->contents.push_back(item);
 }
 
 NativeBoundFunctionMap ComputedExpressionArray::getMethods() {
   return {
-    {"length", {0, [](GarbageCollected & target, [[maybe_unused]] vector<GarbageCollected>& args) {
-      return GarbageCollected::make<ComputedExpressionInteger>((integer_t)static_cast<ComputedExpressionArray&>(*target).getContents().size());
+    {"length", {0, [](SPCE & target, [[maybe_unused]] vector<SPCE>& args) -> SPCE {
+      return make_shared<ComputedExpressionInteger>((integer_t)static_cast<ComputedExpressionArray&>(*target).getContents().size());
     }}},
-    {"append", {1, [](GarbageCollected & target, vector<GarbageCollected>& args) {
+    {"append", {1, [](SPCE & target, vector<SPCE>& args) -> SPCE {
       // Get the item to be added to the array.
       auto & item = args.at(0);
       static_cast<ComputedExpressionArray &>(*target).append(item);

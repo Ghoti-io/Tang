@@ -19,7 +19,6 @@ namespace Tang {
 #include "computedExpression.hpp"
 #include "context.hpp"
 #include "error.hpp"
-#include "garbageCollected.hpp"
 #include "macros.hpp"
 #include "opcode.hpp"
 #include "unicodeString.hpp"
@@ -110,7 +109,7 @@ namespace Tang {
      *
      * @return The result of the Program execution, if it exists.
      */
-    std::optional<const GarbageCollected> getResult() const;
+    const SPCE getResult() const;
 
     /**
      * Add a Tang::uinteger_t to the Bytecode.
@@ -404,7 +403,7 @@ namespace Tang {
     /**
      * The result of the Program compilation.
      */
-    std::optional<GarbageCollected> result;
+    SPCE result;
 
     /**
      * Bytecode annotations.

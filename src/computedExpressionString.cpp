@@ -41,8 +41,8 @@ string ComputedExpressionString::__asCode() const {
   return (UnicodeString)"\"" + unescape(out) + (UnicodeString)"\"";
 }
 
-GarbageCollected ComputedExpressionString::makeCopy() const {
-  return GarbageCollected::make<ComputedExpressionString>(*this);
+SPCE ComputedExpressionString::makeCopy() const {
+  return make_shared<ComputedExpressionString>(*this);
 }
 
 bool ComputedExpressionString::is_equal(const bool & val) const {
@@ -53,7 +53,7 @@ bool ComputedExpressionString::is_equal(const string & val) const {
   return val == this->dump();
 }
 
-GarbageCollected ComputedExpressionString::__index(const GarbageCollected & index) const {
+SPCE ComputedExpressionString::__index(const SPCE & index) const {
   if (typeid(*index) == typeid(ComputedExpressionInteger)) {
     auto & indexConv = static_cast<ComputedExpressionInteger&>(*index);
     auto i = indexConv.getValue();
@@ -70,13 +70,13 @@ GarbageCollected ComputedExpressionString::__index(const GarbageCollected & inde
             // The index grapheme is within the current part.
             vector<UnicodeString> newParts{};
             newParts.push_back(part.substr(i - count, 1));
-            return GarbageCollected::make<ComputedExpressionString>(newParts);
+            return make_shared<ComputedExpressionString>(newParts);
           }
           count += part.length();
         }
         // Impossible to get here.
       }
-      return GarbageCollected::make<ComputedExpressionError>(Error{"Index out of range."});
+      return make_shared<ComputedExpressionError>(Error{"Index out of range."});
     }
     else {
       // index < 0.
@@ -91,13 +91,13 @@ GarbageCollected ComputedExpressionString::__index(const GarbageCollected & inde
             // The index grapheme is within the current part.
             vector<UnicodeString> newParts{};
             newParts.push_back(part.substr(i - count, 1));
-            return GarbageCollected::make<ComputedExpressionString>(newParts);
+            return make_shared<ComputedExpressionString>(newParts);
           }
           count += part.length();
         }
         // Impossible to get here.
       }
-      return GarbageCollected::make<ComputedExpressionError>(Error{"Index out of range."});
+      return make_shared<ComputedExpressionError>(Error{"Index out of range."});
     }
   }
 
@@ -105,7 +105,7 @@ GarbageCollected ComputedExpressionString::__index(const GarbageCollected & inde
   return ComputedExpression::__index(index);
 }
 
-GarbageCollected ComputedExpressionString::__slice(const GarbageCollected & begin, const GarbageCollected & end, const GarbageCollected & skip) const {
+SPCE ComputedExpressionString::__slice(const SPCE & begin, const SPCE & end, const SPCE & skip) const {
   int convBegin, convEnd, convSkip;
 
   // Verify that the skip is either default or an integer.
@@ -209,7 +209,7 @@ GarbageCollected ComputedExpressionString::__slice(const GarbageCollected & begi
 
       count += part.length();
     }
-    return GarbageCollected::make<ComputedExpressionString>(newParts);
+    return make_shared<ComputedExpressionString>(newParts);
   }
 
   // Flag to indicate that the final results should be reversed.
@@ -254,21 +254,21 @@ GarbageCollected ComputedExpressionString::__slice(const GarbageCollected & begi
   }
 
   // Create the new string.
-  return GarbageCollected::make<ComputedExpressionString>(newParts);
+  return make_shared<ComputedExpressionString>(newParts);
 }
 
-GarbageCollected ComputedExpressionString::__getIterator(const GarbageCollected & collection) const {
-  return GarbageCollected::make<ComputedExpressionIterator>(collection);
+SPCE ComputedExpressionString::__getIterator(const SPCE & collection) const {
+  return make_shared<ComputedExpressionIterator>(collection);
 }
 
-GarbageCollected ComputedExpressionString::__iteratorNext(size_t index) const {
+SPCE ComputedExpressionString::__iteratorNext(size_t index) const {
   if (index >= this->length()) {
-    return GarbageCollected::make<ComputedExpressionIteratorEnd>();
+    return make_shared<ComputedExpressionIteratorEnd>();
   }
-  return this->__index(GarbageCollected::make<ComputedExpressionInteger>((integer_t)index));
+  return this->__index(make_shared<ComputedExpressionInteger>((integer_t)index));
 }
 
-GarbageCollected ComputedExpressionString::__add(const GarbageCollected & rhs) const {
+SPCE ComputedExpressionString::__add(const SPCE & rhs) const {
   if (typeid(*rhs) == typeid(ComputedExpressionString)) {
     auto & rhsConv = static_cast<ComputedExpressionString&>(*rhs);
 
@@ -277,21 +277,21 @@ GarbageCollected ComputedExpressionString::__add(const GarbageCollected & rhs) c
     newParts.reserve(this->stringParts.size() + rhsConv.stringParts.size());
     newParts.insert(newParts.end(), this->stringParts.begin(), this->stringParts.end());
     newParts.insert(newParts.end(), rhsConv.stringParts.begin(), rhsConv.stringParts.end());
-    return GarbageCollected::make<ComputedExpressionString>(newParts);
+    return make_shared<ComputedExpressionString>(newParts);
   }
 
   // Return the default error.
   return ComputedExpression::__add(rhs);
 }
 
-GarbageCollected ComputedExpressionString::__not() const {
-  return GarbageCollected::make<ComputedExpressionBoolean>(!this->bytesLength());
+SPCE ComputedExpressionString::__not() const {
+  return make_shared<ComputedExpressionBoolean>(!this->bytesLength());
 }
 
-GarbageCollected ComputedExpressionString::__lessThan(const GarbageCollected & rhs) const {
+SPCE ComputedExpressionString::__lessThan(const SPCE & rhs) const {
   if (typeid(*rhs) == typeid(ComputedExpressionString)) {
     auto & rhsConv = static_cast<ComputedExpressionString&>(*rhs);
-    return GarbageCollected::make<ComputedExpressionBoolean>(
+    return make_shared<ComputedExpressionBoolean>(
         this->dump() < rhsConv.dump());
   }
 
@@ -299,26 +299,26 @@ GarbageCollected ComputedExpressionString::__lessThan(const GarbageCollected & r
   return ComputedExpression::__lessThan(rhs);
 }
 
-GarbageCollected ComputedExpressionString::__equal(const GarbageCollected & rhs) const {
+SPCE ComputedExpressionString::__equal(const SPCE & rhs) const {
   if (typeid(*rhs) == typeid(ComputedExpressionString)) {
     auto & rhsConv = static_cast<ComputedExpressionString&>(*rhs);
-    return GarbageCollected::make<ComputedExpressionBoolean>(
+    return make_shared<ComputedExpressionBoolean>(
         this->dump() == rhsConv.dump());
   }
   if (typeid(*rhs) == typeid(ComputedExpression)) {
-    return GarbageCollected::make<ComputedExpressionBoolean>(false);
+    return make_shared<ComputedExpressionBoolean>(false);
   }
 
   // Return the default error.
   return ComputedExpression::__equal(rhs);
 }
 
-GarbageCollected ComputedExpressionString::__boolean() const {
-  return GarbageCollected::make<ComputedExpressionBoolean>((bool)this->bytesLength());
+SPCE ComputedExpressionString::__boolean() const {
+  return make_shared<ComputedExpressionBoolean>((bool)this->bytesLength());
 }
 
-GarbageCollected ComputedExpressionString::__string() const {
-  return GarbageCollected::make<ComputedExpressionString>(*this);
+SPCE ComputedExpressionString::__string() const {
+  return make_shared<ComputedExpressionString>(*this);
 }
 
 const vector<UnicodeString>& ComputedExpressionString::getValue() const {
@@ -359,8 +359,8 @@ size_t ComputedExpressionString::bytesLength() const {
 
 NativeBoundFunctionMap ComputedExpressionString::getMethods() {
   return {
-    {"length", {0, [](GarbageCollected & target, [[maybe_unused]] vector<GarbageCollected>& args) {
-      return GarbageCollected::make<ComputedExpressionInteger>((integer_t)static_cast<ComputedExpressionString &>(*target).length());
+    {"length", {0, [](SPCE & target, [[maybe_unused]] vector<SPCE>& args) -> SPCE {
+      return make_shared<ComputedExpressionInteger>((integer_t)static_cast<ComputedExpressionString &>(*target).length());
     }}},
   };
 }

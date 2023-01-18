@@ -20,16 +20,16 @@ namespace Tang {
        *
        * @param collection The collection through which the iterator processes
        */
-      ComputedExpressionIterator(Tang::GarbageCollected collection);
+      ComputedExpressionIterator(Tang::SPCE collection);
 
       virtual std::string dump() const override;
-      virtual GarbageCollected __iteratorNext(size_t index) const override;
+      virtual SPCE __iteratorNext(size_t index) const override;
 
     private:
       /**
        * The target collection.
        */
-      Tang::GarbageCollected collection;
+      Tang::SPCE collection;
 
       /**
        * The next index.

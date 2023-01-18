@@ -62,13 +62,13 @@ namespace Tang {
       ComputedExpressionNativeBoundFunction(NativeBoundFunction nativeBoundFunction, size_t argc, std::type_index targetTypeIndex);
 
       virtual std::string dump() const override;
-      GarbageCollected makeCopy() const override;
-      virtual GarbageCollected __equal(const GarbageCollected & rhs) const override;
+      SPCE makeCopy() const override;
+      virtual SPCE __equal(const SPCE & rhs) const override;
 
       /**
        * The target object that the function is bound to.
        */
-      std::optional<GarbageCollected> target;
+      std::optional<SPCE> target;
 
       /**
        * Get the native bound function to be executed.

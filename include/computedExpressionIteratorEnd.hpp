@@ -21,7 +21,7 @@ namespace Tang {
       ComputedExpressionIteratorEnd();
 
       virtual std::string dump() const override;
-      virtual GarbageCollected __string() const override;
+      virtual SPCE __string() const override;
 
     private:
   };

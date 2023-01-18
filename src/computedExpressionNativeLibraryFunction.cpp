@@ -19,14 +19,14 @@ string ComputedExpressionNativeLibraryFunction::dump() const {
   return "Library Function()";
 }
 
-GarbageCollected ComputedExpressionNativeLibraryFunction::makeCopy() const {
-  return GarbageCollected::make<ComputedExpressionNativeLibraryFunction>(this->libraryFunction);
+SPCE ComputedExpressionNativeLibraryFunction::makeCopy() const {
+  return make_shared<ComputedExpressionNativeLibraryFunction>(this->libraryFunction);
 }
 
-GarbageCollected ComputedExpressionNativeLibraryFunction::__equal(const GarbageCollected & rhs) const {
+SPCE ComputedExpressionNativeLibraryFunction::__equal(const SPCE & rhs) const {
   if (typeid(*rhs) == typeid(ComputedExpressionNativeLibraryFunction)) {
     auto & rhsConv = static_cast<ComputedExpressionNativeLibraryFunction&>(*rhs);
-    return GarbageCollected::make<ComputedExpressionBoolean>(this->libraryFunction == rhsConv.libraryFunction);
+    return make_shared<ComputedExpressionBoolean>(this->libraryFunction == rhsConv.libraryFunction);
   }
 
   // Return the default error.

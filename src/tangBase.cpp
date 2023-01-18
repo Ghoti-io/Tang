@@ -3,6 +3,7 @@
  * Define the Tang::TangBase class.
  */
 
+#include <memory>
 #include "tangBase.hpp"
 #include "computedExpressionArray.hpp"
 #include "computedExpressionString.hpp"
@@ -16,8 +17,8 @@ using namespace Tang;
 
 #define OBJECTMETHOD(type) {type_index(typeid(type)), type::getMethods()}
 
-#define LIBRARY(alias, type) {alias, []([[maybe_unused]] Context & context) { \
-  return GarbageCollected::make<type>();\
+#define LIBRARY(alias, type) {alias, []([[maybe_unused]] Context & context) -> SPCE { \
+  return std::make_shared<type>();\
 }}
 
 #define LIBRARYATTRIBUTES(type) {type_index(typeid(type)), type::getLibraryAttributes()}

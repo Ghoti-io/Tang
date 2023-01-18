@@ -14,7 +14,7 @@
 using namespace std;
 using namespace Tang;
 
-ComputedExpressionMap::ComputedExpressionMap(map<string, GarbageCollected> contents) : contents{contents} {}
+ComputedExpressionMap::ComputedExpressionMap(map<string, SPCE> contents) : contents{contents} {}
 
 string ComputedExpressionMap::dump() const {
   string s = "{";
@@ -34,24 +34,24 @@ bool ComputedExpressionMap::isCopyNeeded() const {
   return true;
 }
 
-GarbageCollected ComputedExpressionMap::makeCopy() const {
+SPCE ComputedExpressionMap::makeCopy() const {
   // Make a deep copy of all array elements.
-  map<string, GarbageCollected> newContents;
+  map<string, SPCE> newContents;
   for (auto & item : this->contents) {
     newContents.insert({item.first, item.second->isCopyNeeded()
       ? item.second->makeCopy()
       : item.second});
   }
-  return GarbageCollected::make<ComputedExpressionMap>(newContents);
+  return make_shared<ComputedExpressionMap>(newContents);
 }
 
-GarbageCollected ComputedExpressionMap::__getIterator(const GarbageCollected & collection) const {
-  return GarbageCollected::make<ComputedExpressionIterator>(collection);
+SPCE ComputedExpressionMap::__getIterator(const SPCE & collection) const {
+  return make_shared<ComputedExpressionIterator>(collection);
 }
 
-GarbageCollected ComputedExpressionMap::__iteratorNext(size_t index) const {
+SPCE ComputedExpressionMap::__iteratorNext(size_t index) const {
   if (index >= this->contents.size()) {
-    return GarbageCollected::make<ComputedExpressionIteratorEnd>();
+    return make_shared<ComputedExpressionIteratorEnd>();
   }
   auto iter{this->contents.begin()};
   size_t i{0};
@@ -60,16 +60,16 @@ GarbageCollected ComputedExpressionMap::__iteratorNext(size_t index) const {
     ++iter;
   }
 
-  return GarbageCollected::make<ComputedExpressionArray>(
-    vector<GarbageCollected> {
-      GarbageCollected::make<ComputedExpressionString>(iter->first),
+  return make_shared<ComputedExpressionArray>(
+    vector<SPCE> {
+      make_shared<ComputedExpressionString>(iter->first),
       iter->second
     }
   );
 
 }
 
-GarbageCollected ComputedExpressionMap::__index(const GarbageCollected & index) const {
+SPCE ComputedExpressionMap::__index(const SPCE & index) const {
   if (typeid(*index) == typeid(ComputedExpressionString)) {
     auto & indexConv = static_cast<ComputedExpressionString&>(*index);
     auto s = indexConv.dump();
@@ -80,7 +80,7 @@ GarbageCollected ComputedExpressionMap::__index(const GarbageCollected & index) 
       }
 
       // index does not exist in map.
-      return GarbageCollected::make<ComputedExpressionError>(Error{"Index does not exist in map"});
+      return make_shared<ComputedExpressionError>(Error{"Index does not exist in map"});
     }
   }
 
@@ -88,7 +88,7 @@ GarbageCollected ComputedExpressionMap::__index(const GarbageCollected & index) 
   return ComputedExpression::__index(index);
 }
 
-GarbageCollected ComputedExpressionMap::__assign_index(const GarbageCollected & index, const GarbageCollected & value) {
+SPCE ComputedExpressionMap::__assign_index(const SPCE & index, const SPCE & value) {
   if (typeid(*index) == typeid(ComputedExpressionString)) {
     auto & indexConv = static_cast<ComputedExpressionString&>(*index);
     auto s = indexConv.dump();
@@ -102,11 +102,11 @@ GarbageCollected ComputedExpressionMap::__assign_index(const GarbageCollected & 
   return ComputedExpression::__assign_index(index, value);
 }
 
-GarbageCollected ComputedExpressionMap::__string() const {
-  return GarbageCollected::make<ComputedExpressionString>(this->__asCode());
+SPCE ComputedExpressionMap::__string() const {
+  return make_shared<ComputedExpressionString>(this->__asCode());
 }
  
-GarbageCollected ComputedExpressionMap::__boolean() const {
-  return GarbageCollected::make<ComputedExpressionBoolean>(this->contents.size() != 0);
+SPCE ComputedExpressionMap::__boolean() const {
+  return make_shared<ComputedExpressionBoolean>(this->contents.size() != 0);
 }
 

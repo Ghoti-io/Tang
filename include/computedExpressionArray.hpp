@@ -20,31 +20,31 @@ namespace Tang {
        *
        * @param val The integer value.
        */
-      ComputedExpressionArray(std::vector<Tang::GarbageCollected> contents);
+      ComputedExpressionArray(std::vector<Tang::SPCE> contents);
 
       virtual std::string dump() const override;
       virtual bool isCopyNeeded() const override;
-      GarbageCollected makeCopy() const override;
-      virtual GarbageCollected __index(const GarbageCollected & index) const override;
-      virtual GarbageCollected __slice(const GarbageCollected & begin, const GarbageCollected & end, const GarbageCollected & skip) const override;
-      virtual GarbageCollected __getIterator(const GarbageCollected & collection) const override;
-      virtual GarbageCollected __iteratorNext(size_t index) const override;
-      virtual GarbageCollected __assign_index(const GarbageCollected & index, const GarbageCollected & value) override;
-      virtual GarbageCollected __string() const override;
+      SPCE makeCopy() const override;
+      virtual SPCE __index(const SPCE & index) const override;
+      virtual SPCE __slice(const SPCE & begin, const SPCE & end, const SPCE & skip) const override;
+      virtual SPCE __getIterator(const SPCE & collection) const override;
+      virtual SPCE __iteratorNext(size_t index) const override;
+      virtual SPCE __assign_index(const SPCE & index, const SPCE & value) override;
+      virtual SPCE __string() const override;
 
       /**
        * Return the contents of this object.
        *
        * @return The contents of this object.
        */
-      const std::vector<Tang::GarbageCollected> & getContents() const;
+      const std::vector<Tang::SPCE> & getContents() const;
 
       /**
        * Append an item to the contents of this array object.
        *
        * @param item The value to append to the this array.
        */
-      void append(const Tang::GarbageCollected & item);
+      void append(const Tang::SPCE & item);
 
       /**
        * Return the member functions implemented for this particular
@@ -58,7 +58,7 @@ namespace Tang {
       /**
        * The array contents.
        */
-      std::vector<Tang::GarbageCollected> contents;
+      std::vector<Tang::SPCE> contents;
   };
 }
 

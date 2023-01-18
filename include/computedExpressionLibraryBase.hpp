@@ -10,8 +10,8 @@ namespace Tang {
   class ComputedExpressionLibraryBase: public ComputedExpressionLibrary {
     public:
       ComputedExpressionLibraryBase() {}
-      GarbageCollected makeCopy() const override {
-        return GarbageCollected::make<ComputedExpressionLibraryBase>();
+      SPCE makeCopy() const override {
+        return std::make_shared<ComputedExpressionLibraryBase>();
       }
       static LibraryFunctionMap getLibraryAttributes();
   };

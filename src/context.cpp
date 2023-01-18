@@ -10,5 +10,5 @@
 using namespace std;
 using namespace Tang;
 
-Context::Context(ContextData && data) : data{move(data)}, computedExpressionOut{GarbageCollected::make<ComputedExpressionString>("")} {}
+Context::Context(ContextData && data) : data{move(data)}, computedExpressionOut{make_shared<ComputedExpressionString>("")} {}
 

@@ -17,7 +17,7 @@ string ComputedExpressionIteratorEnd::dump() const {
   return "IteratorEnd";
 }
 
-GarbageCollected ComputedExpressionIteratorEnd::__string() const {
-  return GarbageCollected::make<ComputedExpressionString>("IteratorEnd");
+SPCE ComputedExpressionIteratorEnd::__string() const {
+  return make_shared<ComputedExpressionString>("IteratorEnd");
 }
 

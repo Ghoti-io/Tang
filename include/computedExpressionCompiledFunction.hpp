@@ -23,8 +23,8 @@ namespace Tang {
       ComputedExpressionCompiledFunction(uint32_t argc, Tang::integer_t pc);
 
       virtual std::string dump() const override;
-      GarbageCollected makeCopy() const override;
-      virtual GarbageCollected __equal(const GarbageCollected & rhs) const override;
+      SPCE makeCopy() const override;
+      virtual SPCE __equal(const SPCE & rhs) const override;
 
       /**
        * Get the `argc` value.

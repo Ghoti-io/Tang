@@ -21,23 +21,23 @@ namespace Tang {
        *
        * @param contents The map of key value pairs.
        */
-      ComputedExpressionMap(std::map<std::string, Tang::GarbageCollected> contents);
+      ComputedExpressionMap(std::map<std::string, Tang::SPCE> contents);
 
       virtual std::string dump() const override;
       virtual bool isCopyNeeded() const override;
-      GarbageCollected makeCopy() const override;
-      virtual GarbageCollected __index(const GarbageCollected & index) const override;
-      virtual GarbageCollected __getIterator(const GarbageCollected & collection) const override;
-      virtual GarbageCollected __iteratorNext(size_t index) const override;
-      virtual GarbageCollected __assign_index(const GarbageCollected & index, const GarbageCollected & value) override;
-      virtual GarbageCollected __string() const override;
-      virtual GarbageCollected __boolean() const override;
+      SPCE makeCopy() const override;
+      virtual SPCE __index(const SPCE & index) const override;
+      virtual SPCE __getIterator(const SPCE & collection) const override;
+      virtual SPCE __iteratorNext(size_t index) const override;
+      virtual SPCE __assign_index(const SPCE & index, const SPCE & value) override;
+      virtual SPCE __string() const override;
+      virtual SPCE __boolean() const override;
 
     private:
       /**
        * The map contents.
        */
-      std::map<std::string, Tang::GarbageCollected> contents;
+      std::map<std::string, Tang::SPCE> contents;
   };
 }
 

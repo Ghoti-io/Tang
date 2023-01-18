@@ -9,6 +9,7 @@
 #include <vector>
 #include <unordered_map>
 #include <map>
+#include <memory>
 #include <string>
 #include <any>
 
@@ -77,7 +78,9 @@
 
 namespace Tang {
   class Context;
-  class GarbageCollected;
+  class ComputedExpression;
+
+  using SPCE = std::shared_ptr<ComputedExpression>;
 
   /**
    * Define the size of signed integers used by Tang.
@@ -99,17 +102,17 @@ namespace Tang {
   /**
    * A function pointer that will be executed.
    */
-  using LibraryFunction = GarbageCollected (*) (Context &);
+  using LibraryFunction = SPCE (*) (Context &);
 
   /**
    * A function pointer that will be executed as bound to an object.
    */
-  using NativeFunction = GarbageCollected (*) (std::vector<GarbageCollected> &, Context &);
+  using NativeFunction = SPCE (*) (std::vector<SPCE> &, Context &);
 
   /**
    * A function pointer that will be executed as bound to an object.
    */
-  using NativeBoundFunction = GarbageCollected (*) (GarbageCollected &, std::vector<GarbageCollected> &);
+  using NativeBoundFunction = SPCE (*) (SPCE &, std::vector<SPCE> &);
 
   /**
    * A map of method names to LibraryFunction objects.

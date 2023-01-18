@@ -22,13 +22,13 @@ namespace Tang {
       ComputedExpressionBoolean(bool val);
 
       virtual std::string dump() const override;
-      GarbageCollected makeCopy() const override;
+      SPCE makeCopy() const override;
       virtual bool is_equal(const bool & val) const override;
-      virtual GarbageCollected __not() const override;
-      virtual GarbageCollected __equal(const GarbageCollected & rhs) const override;
-      virtual GarbageCollected __integer() const override;
-      virtual GarbageCollected __float() const override;
-      virtual GarbageCollected __boolean() const override;
+      virtual SPCE __not() const override;
+      virtual SPCE __equal(const SPCE & rhs) const override;
+      virtual SPCE __integer() const override;
+      virtual SPCE __float() const override;
+      virtual SPCE __boolean() const override;
 
     private:
       /**

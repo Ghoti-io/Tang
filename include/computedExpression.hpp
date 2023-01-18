@@ -64,9 +64,11 @@ namespace Tang {
       /**
        * Make a copy of the ComputedExpression (recursively, if appropriate).
        *
-       * @return A Tang::GarbageCollected value for the new ComputedExpression.
+       * @return A Tang::SPCE value for the new ComputedExpression.
        */
-      virtual GarbageCollected makeCopy() const;
+      virtual SPCE makeCopy() const;
+
+      virtual operator bool() const;
 
       /**
        * Check whether or not the computed expression is equal to another value.
@@ -123,77 +125,77 @@ namespace Tang {
        * @param value The value to store.
        * @return The result of the operation.
        */
-      virtual GarbageCollected __assign_index(const GarbageCollected & index, const GarbageCollected & value);
+      virtual SPCE __assign_index(const SPCE & index, const SPCE & value);
 
       /**
        * Compute the result of adding this value and the supplied value.
        *
-       * @param rhs The GarbageCollected value to add to this.
+       * @param rhs The SPCE value to add to this.
        * @return The result of the operation.
        */
-      virtual GarbageCollected __add(const GarbageCollected & rhs) const;
+      virtual SPCE __add(const SPCE & rhs) const;
 
       /**
        * Compute the result of subtracting this value and the supplied value.
        *
-       * @param rhs The GarbageCollected value to subtract from this.
+       * @param rhs The SPCE value to subtract from this.
        * @return The result of the operation.
        */
-      virtual GarbageCollected __subtract(const GarbageCollected & rhs) const;
+      virtual SPCE __subtract(const SPCE & rhs) const;
 
       /**
        * Compute the result of multiplying this value and the supplied value.
        *
-       * @param rhs The GarbageCollected value to multiply to this.
+       * @param rhs The SPCE value to multiply to this.
        * @return The result of the operation.
        */
-      virtual GarbageCollected __multiply(const GarbageCollected & rhs) const;
+      virtual SPCE __multiply(const SPCE & rhs) const;
 
       /**
        * Compute the result of dividing this value and the supplied value.
        *
-       * @param rhs The GarbageCollected value to divide this by.
+       * @param rhs The SPCE value to divide this by.
        * @return The result of the operation.
        */
-      virtual GarbageCollected __divide(const GarbageCollected & rhs) const;
+      virtual SPCE __divide(const SPCE & rhs) const;
 
       /**
        * Compute the result of moduloing this value and the supplied value.
        *
-       * @param rhs The GarbageCollected value to modulo this by.
+       * @param rhs The SPCE value to modulo this by.
        * @return The result of the operation.
        */
-      virtual GarbageCollected __modulo(const GarbageCollected & rhs) const;
+      virtual SPCE __modulo(const SPCE & rhs) const;
 
       /**
        * Compute the result of negating this value.
        *
        * @return The result of the operation.
        */
-      virtual GarbageCollected __negative() const;
+      virtual SPCE __negative() const;
 
       /**
        * Compute the logical not of this value.
        *
        * @return The result of the operation.
        */
-      virtual GarbageCollected __not() const;
+      virtual SPCE __not() const;
 
       /**
        * Compute the "less than" comparison.
        *
-       * @param rhs The GarbageCollected value to compare against.
+       * @param rhs The SPCE value to compare against.
        * @return The result of the the operation.
        */
-      virtual GarbageCollected __lessThan(const GarbageCollected & rhs) const;
+      virtual SPCE __lessThan(const SPCE & rhs) const;
 
       /**
        * Perform an equality test.
        *
-       * @param rhs The GarbageCollected value to compare against.
+       * @param rhs The SPCE value to compare against.
        * @return The result of the the operation.
        */
-      virtual GarbageCollected __equal(const GarbageCollected & rhs) const;
+      virtual SPCE __equal(const SPCE & rhs) const;
 
       /**
        * Perform a member access (period) operation.
@@ -201,7 +203,7 @@ namespace Tang {
        * @param member The member expression provided by the script.
        * @return The result of the operation.
        */
-      virtual GarbageCollected __period(const GarbageCollected & member, std::shared_ptr<TangBase> & tang) const;
+      virtual SPCE __period(const SPCE & member, std::shared_ptr<TangBase> & tang) const;
 
       /**
        * Perform an index operation.
@@ -209,7 +211,7 @@ namespace Tang {
        * @param index The index expression provided by the script.
        * @return The result of the operation.
        */
-      virtual GarbageCollected __index(const GarbageCollected & index) const;
+      virtual SPCE __index(const SPCE & index) const;
 
       /**
        * Perform a slice operation.
@@ -224,51 +226,219 @@ namespace Tang {
        * @param skip The skip index expression provided by the script.
        * @return The result of the operation.
        */
-      virtual GarbageCollected __slice(const GarbageCollected & begin, const GarbageCollected & end, const GarbageCollected & skip) const;
+      virtual SPCE __slice(const SPCE & begin, const SPCE & end, const SPCE & skip) const;
 
       /**
        * Get an iterator for the expression.
        *
-       * @param collection The GarbageCollected value that will serve as the
+       * @param collection The SPCE value that will serve as the
        *   collection through which to iterate.
        */
-      virtual GarbageCollected __getIterator(const GarbageCollected & collection) const;
+      virtual SPCE __getIterator(const SPCE & collection) const;
 
       /**
        * Get the next iterative value.
        *
        * @param index The desired index value.
        */
-      virtual GarbageCollected __iteratorNext(size_t index = 0) const;
+      virtual SPCE __iteratorNext(size_t index = 0) const;
 
       /**
        * Perform a type cast to integer.
        *
        * @return The result of the the operation.
        */
-      virtual GarbageCollected __integer() const;
+      virtual SPCE __integer() const;
 
       /**
        * Perform a type cast to float.
        *
        * @return The result of the the operation.
        */
-      virtual GarbageCollected __float() const;
+      virtual SPCE __float() const;
 
       /**
        * Perform a type cast to boolean.
        *
        * @return The result of the the operation.
        */
-      virtual GarbageCollected __boolean() const;
+      virtual SPCE __boolean() const;
 
       /**
        * Perform a type cast to string.
        *
        * @return The result of the the operation.
        */
-      virtual GarbageCollected __string() const;
+      virtual SPCE __string() const;
   };
+
+  /**
+   * Compare the SPCE tracked object with a supplied value.
+   *
+   * @param val The value to compare the tracked object against.
+   * @return True if they are equal, false otherwise.
+   */
+  bool operator==(const SPCE & lhs, const Tang::integer_t & val);
+
+  /**
+   * Compare the SPCE tracked object with a supplied value.
+   *
+   * @param val The value to compare the tracked object against.
+   * @return True if they are equal, false otherwise.
+   */
+  bool operator==(const SPCE & lhs, const Tang::float_t & val);
+
+  /**
+   * Compare the SPCE tracked object with a supplied value.
+   *
+   * @param val The value to compare the tracked object against.
+   * @return True if they are equal, false otherwise.
+   */
+  bool operator==(const SPCE & lhs, const bool & val);
+
+  /**
+   * Compare the SPCE tracked object with a supplied value.
+   *
+   * @param val The value to compare the tracked object against.
+   * @return True if they are equal, false otherwise.
+   */
+  bool operator==(const SPCE & lhs, const std::string & val);
+
+  /**
+   * Compare the SPCE tracked object with a supplied value.
+   *
+   * @param val The value to compare the tracked object against.
+   * @return True if they are equal, false otherwise.
+   */
+  bool operator==(const SPCE & lhs, const char * const & val);
+
+  /**
+   * Compare the SPCE tracked object with a supplied value.
+   *
+   * @param val The value to compare the tracked object against.
+   * @return True if they are equal, false otherwise.
+   */
+  bool operator==(const SPCE & lhs, const Error & val);
+
+  /**
+   * Compare the SPCE tracked object with a supplied value.
+   *
+   * @param val The value to compare the tracked object against.
+   * @return True if they are equal, false otherwise.
+   */
+  bool operator==(const SPCE & lhs, const ComputedExpression & null);
+
+  /**
+   * Add friendly output.
+   *
+   * @param out The output stream.
+   * @param rhs The SPCE value.
+   * @return The output stream.
+   */
+  std::ostream & operator<<(std::ostream & out, const SPCE & rhs);
+
+  /**
+   * Perform an addition between two SPCE values.
+   *
+   * @param rhs The right hand side operand.
+   * @return The result of the operation.
+   */
+  SPCE operator+(const SPCE & lhs, const SPCE & rhs);
+
+  /**
+   * Perform a subtraction between two SPCE values.
+   *
+   * @param rhs The right hand side operand.
+   * @return The result of the operation.
+   */
+  SPCE operator-(const SPCE & lhs, const SPCE & rhs);
+
+  /**
+   * Perform a multiplication between two SPCE values.
+   *
+   * @param rhs The right hand side operand.
+   * @return The result of the operation.
+   */
+  SPCE operator*(const SPCE & lhs, const SPCE & rhs);
+
+  /**
+   * Perform a division between two SPCE values.
+   *
+   * @param rhs The right hand side operand.
+   * @return The result of the operation.
+   */
+  SPCE operator/(const SPCE & lhs, const SPCE & rhs);
+
+  /**
+   * Perform a modulo between two SPCE values.
+   *
+   * @param rhs The right hand side operand.
+   * @return The result of the operation.
+   */
+  SPCE operator%(const SPCE & lhs, const SPCE & rhs);
+
+  /**
+   * Perform a negation on the SPCE value.
+   *
+   * @return The result of the operation.
+   */
+  SPCE operator-(const SPCE & lhs);
+
+  /**
+   * Perform a logical not on the SPCE value.
+   *
+   * @return The result of the operation.
+   */
+  SPCE operator!(const SPCE & lhs);
+
+  /**
+   * Perform a < between two SPCE values.
+   *
+   * @param rhs The right hand side operand.
+   * @return The result of the operation.
+   */
+  SPCE operator<(const SPCE & lhs, const SPCE & rhs);
+
+  /**
+   * Perform a <= between two SPCE values.
+   *
+   * @param rhs The right hand side operand.
+   * @return The result of the operation.
+   */
+  SPCE operator<=(const SPCE & lhs, const SPCE & rhs);
+
+  /**
+   * Perform a > between two SPCE values.
+   *
+   * @param rhs The right hand side operand.
+   * @return The result of the operation.
+   */
+  SPCE operator>(const SPCE & lhs, const SPCE & rhs);
+
+  /**
+   * Perform a >= between two SPCE values.
+   *
+   * @param rhs The right hand side operand.
+   * @return The result of the operation.
+   */
+  SPCE operator>=(const SPCE & lhs, const SPCE & rhs);
+
+  /**
+   * Perform a == between two SPCE values.
+   *
+   * @param rhs The right hand side operand.
+   * @return The result of the operation.
+   */
+  SPCE operator==(const SPCE & lhs, const SPCE & rhs);
+
+  /**
+   * Perform a != between two SPCE values.
+   *
+   * @param rhs The right hand side operand.
+   * @return The result of the operation.
+   */
+  SPCE operator!=(const SPCE & lhs, const SPCE & rhs);
+
 }
 
 #endif // TANG_COMPUTEDEXPRESSION_HPP

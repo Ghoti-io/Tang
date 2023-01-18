@@ -56,7 +56,6 @@ LIBOBJECTS := $(OBJ_DIR)/astNode.o \
 							$(OBJ_DIR)/computedExpressionString.o \
 							$(OBJ_DIR)/context.o \
 							$(OBJ_DIR)/error.o \
-							$(OBJ_DIR)/garbageCollected.o \
 							$(OBJ_DIR)/htmlEscape.o \
 							$(OBJ_DIR)/htmlEscapeAscii.o \
 							$(OBJ_DIR)/opcode.o \
@@ -100,9 +99,7 @@ DEP_ASTNODE = \
 	include/astNode.hpp \
 	$(DEP_LOCATION)
 DEP_GARBAGECOLLECTED = \
-	include/garbageCollected.hpp \
 	$(DEP_MACROS) \
-	$(DEP_SINGLETONOBJECTPOOL) \
 	$(DEP_ERROR)
 DEP_COMPUTEDEXPRESSION = \
 	include/computedExpression.hpp \
@@ -951,8 +948,6 @@ test: ## Make and run the Unit tests
 test: \
 				$(APP_DIR)/testUnicodeString \
 				$(APP_DIR)/test \
-				$(APP_DIR)/testSingletonObjectPool \
-				$(APP_DIR)/testGarbageCollected \
 				$(APP_DIR)/tang
 	@echo "\033[0;32m"
 	@echo "############################"
@@ -960,18 +955,6 @@ test: \
 	@echo "############################"
 	@echo "\033[0m"
 	$(APP_DIR)/testUnicodeString --gtest_brief=1
-	@echo "\033[0;32m"
-	@echo "#########################################"
-	@echo "### Running SingletonObjectPool Tests ###"
-	@echo "#########################################"
-	@echo "\033[0m"
-	$(APP_DIR)/testSingletonObjectPool --gtest_brief=1
-	@echo "\033[0;32m"
-	@echo "######################################"
-	@echo "### Running GarbageCollected Tests ###"
-	@echo "######################################"
-	@echo "\033[0m"
-	$(APP_DIR)/testGarbageCollected --gtest_brief=1
 	@echo "\033[0;32m"
 	@echo "############################"
 	@echo "### Running normal tests ###"

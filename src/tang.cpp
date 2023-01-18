@@ -64,8 +64,8 @@ int main(int argc, char* argv[]) {
 
   // Execute the program.
   auto context = program.execute();
-  if (typeid(**context.result) == typeid(ComputedExpressionError)) {
-    cerr << *context.result << endl;
+  if (typeid(*context.result) == typeid(ComputedExpressionError)) {
+    cerr << context.result << endl;
     return 2;
   }
   cout << context.out;

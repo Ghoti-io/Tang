@@ -19,14 +19,14 @@ string ComputedExpressionNativeFunction::dump() const {
   return "Native Function()";
 }
 
-GarbageCollected ComputedExpressionNativeFunction::makeCopy() const {
-  return GarbageCollected::make<ComputedExpressionNativeFunction>(this->nativeFunction, this->argc);
+SPCE ComputedExpressionNativeFunction::makeCopy() const {
+  return make_shared<ComputedExpressionNativeFunction>(this->nativeFunction, this->argc);
 }
 
-GarbageCollected ComputedExpressionNativeFunction::__equal(const GarbageCollected & rhs) const {
+SPCE ComputedExpressionNativeFunction::__equal(const SPCE & rhs) const {
   if (typeid(*rhs) == typeid(ComputedExpressionNativeFunction)) {
     auto & rhsConv = static_cast<ComputedExpressionNativeFunction&>(*rhs);
-    return GarbageCollected::make<ComputedExpressionBoolean>(
+    return make_shared<ComputedExpressionBoolean>(
       (this->nativeFunction == rhsConv.nativeFunction)
       && (this->argc == rhsConv.argc));
   }

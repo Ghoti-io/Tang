@@ -33,7 +33,7 @@ using namespace Tang;
  */
 #define EXECUTEPROGRAMCHECK(x) \
   if (this->bytecode.size() < (pc + (x))) { \
-    stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Opcode instruction truncated."})); \
+    stack.push_back(make_shared<ComputedExpressionError>(Error{"Opcode instruction truncated."})); \
     pc = this->bytecode.size(); \
     break; \
   }
@@ -46,7 +46,7 @@ using namespace Tang;
  */
 #define STACKCHECK(x) \
   if (stack.size() < (fp + (x))) { \
-    stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Insufficient stack depth."})); \
+    stack.push_back(make_shared<ComputedExpressionError>(Error{"Insufficient stack depth."})); \
     pc = this->bytecode.size(); \
     break; \
   }
@@ -186,7 +186,7 @@ using namespace Tang;
         pc += 3;
 
 
-static void callFunc(GarbageCollected & function, uinteger_t argc, size_t & pc, size_t & fp, vector<GarbageCollected> & stack, vector<size_t> & pcStack, vector<size_t> & fpStack, Bytecode & bytecode, Context & context, size_t opcodeSize) {
+static void callFunc(SPCE & function, uinteger_t argc, size_t & pc, size_t & fp, vector<SPCE> & stack, vector<size_t> & pcStack, vector<size_t> & fpStack, Bytecode & bytecode, Context & context, size_t opcodeSize) {
   // Compiled functions make use of the arguments on the stack.
   // They will clean up the stack when they finish, via the RETURN
   // opcode.
@@ -202,7 +202,7 @@ static void callFunc(GarbageCollected & function, uinteger_t argc, size_t & pc, 
       }
 
       // Push an error onto the stack.
-      stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments supplied at function call."}));
+      stack.push_back(make_shared<ComputedExpressionError>(Error{"Incorrect number of arguments supplied at function call."}));
       pc += opcodeSize;
     }
     else {
@@ -224,7 +224,7 @@ static void callFunc(GarbageCollected & function, uinteger_t argc, size_t & pc, 
     auto & funcConv = static_cast<ComputedExpressionNativeBoundFunction &>(*function);
 
     // Populate argv to use when calling the function.
-    vector<GarbageCollected> argv{};
+    vector<SPCE> argv{};
     argv.reserve(argc);
     auto iter = stack.end() - argc;
     while (iter != stack.end()) {
@@ -240,7 +240,7 @@ static void callFunc(GarbageCollected & function, uinteger_t argc, size_t & pc, 
     // Verify that the number of arguments supplied matches the number
     // of arguments expected.
     if ((size_t)argc != funcConv.getArgc()) {
-      stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments provided to object method."}));
+      stack.push_back(make_shared<ComputedExpressionError>(Error{"Incorrect number of arguments provided to object method."}));
       pc += opcodeSize;
     }
 
@@ -250,7 +250,7 @@ static void callFunc(GarbageCollected & function, uinteger_t argc, size_t & pc, 
       // It is impossible for the target to not be the correct type under
       // normal circumstances.  This is just a safety check.
       if (type_index(typeid(**funcConv.target)) != funcConv.getTargetTypeIndex()) {
-        stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Type mismatch of object method to its target object."}));
+        stack.push_back(make_shared<ComputedExpressionError>(Error{"Type mismatch of object method to its target object."}));
       }
       else {
         stack.push_back(funcConv.getFunction()(*funcConv.target, argv));
@@ -260,7 +260,7 @@ static void callFunc(GarbageCollected & function, uinteger_t argc, size_t & pc, 
     else {
       // There is no function target.  This is impossible under normal
       // circumstances, but we must account for it, just in case.
-      stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Method is not bound to any object."}));
+      stack.push_back(make_shared<ComputedExpressionError>(Error{"Method is not bound to any object."}));
       pc += opcodeSize;
     }
   }
@@ -272,7 +272,7 @@ static void callFunc(GarbageCollected & function, uinteger_t argc, size_t & pc, 
     auto & funcConv = static_cast<ComputedExpressionNativeFunction &>(*function);
 
     // Populate argv to use when calling the function.
-    vector<GarbageCollected> argv{};
+    vector<SPCE> argv{};
     argv.reserve(argc);
     auto iter = stack.end() - argc;
     while (iter != stack.end()) {
@@ -288,7 +288,7 @@ static void callFunc(GarbageCollected & function, uinteger_t argc, size_t & pc, 
     // Verify that the number of arguments supplied matches the number
     // of arguments expected.
     if ((size_t)argc != funcConv.getArgc()) {
-      stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Incorrect number of arguments provided to object method."}));
+      stack.push_back(make_shared<ComputedExpressionError>(Error{"Incorrect number of arguments provided to object method."}));
       pc += opcodeSize;
     }
     else {
@@ -304,7 +304,7 @@ static void callFunc(GarbageCollected & function, uinteger_t argc, size_t & pc, 
       stack.pop_back();
     }
 
-    stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Function call on unrecognized type."}));
+    stack.push_back(make_shared<ComputedExpressionError>(Error{"Function call on unrecognized type."}));
     pc = bytecode.size();
   }
 }
@@ -323,7 +323,7 @@ Context Program::execute(ContextData && data) {
   size_t fp{0};
 
   // The execution stack.
-  vector<GarbageCollected> stack;
+  vector<SPCE> stack;
 
   // The stack of program counters used to recover the previous pc when
   // returning from a function.
@@ -335,7 +335,7 @@ Context Program::execute(ContextData && data) {
 
   // The stack of library aliases, used to propagate loaded libraries into
   // the environment of compiled functions during execution.
-  vector<map<uinteger_t, GarbageCollected>> libraryAliasStack{{}};
+  vector<map<uinteger_t, SPCE>> libraryAliasStack{{}};
 
   while (pc < this->bytecode.size()) {
     switch ((Opcode)this->bytecode[pc]) {
@@ -366,8 +366,8 @@ Context Program::execute(ContextData && data) {
         auto position = this->bytecode[pc + 1];
         STACKCHECK(position);
         auto targetPosition = fp + position;
-        if (stack[targetPosition].isCopyNeeded()) {
-          stack[targetPosition] = stack[targetPosition].makeCopy();
+        if (stack[targetPosition]->isCopyNeeded()) {
+          stack[targetPosition] = stack[targetPosition]->makeCopy();
         }
         pc += 2;
       }
@@ -431,25 +431,25 @@ Context Program::execute(ContextData && data) {
       }
       break;
       case Opcode::NULLVAL: {
-        stack.push_back(GarbageCollected::make<ComputedExpression>());
+        stack.push_back(make_shared<ComputedExpression>());
         ++pc;
       }
       break;
       case Opcode::INTEGER: {
         EXECUTEPROGRAMCHECK(1);
-        stack.push_back(GarbageCollected::make<ComputedExpressionInteger>((integer_t)this->bytecode[pc + 1]));
+        stack.push_back(make_shared<ComputedExpressionInteger>((integer_t)this->bytecode[pc + 1]));
         pc += 2;
       }
       break;
       case Opcode::FLOAT: {
         EXECUTEPROGRAMCHECK(1);
-        stack.push_back(GarbageCollected::make<ComputedExpressionFloat>(bit_cast<float_t>(this->bytecode[pc + 1])));
+        stack.push_back(make_shared<ComputedExpressionFloat>(bit_cast<float_t>(this->bytecode[pc + 1])));
         pc += 2;
       }
       break;
       case Opcode::BOOLEAN: {
         EXECUTEPROGRAMCHECK(1);
-        stack.push_back(GarbageCollected::make<ComputedExpressionBoolean>(this->bytecode[pc + 1] ? true : false));
+        stack.push_back(make_shared<ComputedExpressionBoolean>(this->bytecode[pc + 1] ? true : false));
         pc += 2;
       }
       break;
@@ -473,7 +473,7 @@ Context Program::execute(ContextData && data) {
         }
 
         // Finally construct the string object.
-        auto gcString = GarbageCollected::make<ComputedExpressionString>(temp);
+        auto gcString = make_shared<ComputedExpressionString>(temp);
 
         // Set the string as Untrusted if necessary.
         if (type == UnicodeString::Type::Untrusted) {
@@ -492,7 +492,7 @@ Context Program::execute(ContextData && data) {
         EXECUTEPROGRAMCHECK(1);
         auto size = this->bytecode[pc + 1];
         STACKCHECK(size);
-        vector<GarbageCollected> contents;
+        vector<SPCE> contents;
         contents.reserve(size);
         // TODO: Rather copying one-by-one, copy the range using an iterator.
         for (uinteger_t i = 0; i < size; ++i) {
@@ -501,7 +501,7 @@ Context Program::execute(ContextData && data) {
         for (uinteger_t i = 0; i < size; ++i) {
           stack.pop_back();
         }
-        stack.push_back(GarbageCollected::make<ComputedExpressionArray>(contents));
+        stack.push_back(make_shared<ComputedExpressionArray>(contents));
         pc += 2;
       }
       break;
@@ -509,7 +509,7 @@ Context Program::execute(ContextData && data) {
         EXECUTEPROGRAMCHECK(1);
         auto size = this->bytecode[pc + 1];
         STACKCHECK(size * 2);
-        map<string, GarbageCollected> contents;
+        map<string, SPCE> contents;
         for (uinteger_t i = 0; i < size; ++i) {
           auto top = stack.size();
           auto & value = stack[top - 1];
@@ -520,7 +520,7 @@ Context Program::execute(ContextData && data) {
           stack.pop_back();
           stack.pop_back();
         }
-        stack.push_back(GarbageCollected::make<ComputedExpressionMap>(contents));
+        stack.push_back(make_shared<ComputedExpressionMap>(contents));
         pc += 2;
       }
       break;
@@ -534,11 +534,11 @@ Context Program::execute(ContextData && data) {
           auto nameLiteral = nameConv.dump();
           stack.back() = libraries.count(nameLiteral)
             ? libraries.at(nameLiteral)(context)
-            : GarbageCollected::make<ComputedExpressionError>(Error{"Unknown Library"});
+            : make_shared<ComputedExpressionError>(Error{"Unknown Library"});
         }
         else {
           // We can't use this CE to access a library.
-          stack.back() = GarbageCollected::make<ComputedExpressionError>(Error{"Unrecognized operand on LIBRARY opcode."});
+          stack.back() = make_shared<ComputedExpressionError>(Error{"Unrecognized operand on LIBRARY opcode."});
         }
 
         ++pc;
@@ -560,7 +560,7 @@ Context Program::execute(ContextData && data) {
           stack.push_back(aliases.at(index));
         }
         else {
-          stack.push_back(GarbageCollected::make<ComputedExpression>());
+          stack.push_back(make_shared<ComputedExpression>());
         }
 
         pc += 2;
@@ -570,7 +570,7 @@ Context Program::execute(ContextData && data) {
         EXECUTEPROGRAMCHECK(2);
         auto argc = this->bytecode[pc + 1];
         auto targetPc = this->bytecode[pc + 2];
-        stack.push_back(GarbageCollected::make<ComputedExpressionCompiledFunction>((uint32_t)argc, (integer_t)targetPc));
+        stack.push_back(make_shared<ComputedExpressionCompiledFunction>((uint32_t)argc, (integer_t)targetPc));
         pc += 3;
       }
       break;
@@ -943,7 +943,7 @@ Context Program::execute(ContextData && data) {
       }
       break;
       case Opcode::ISITERATOREND_I: {
-        UNARYOP_I(GarbageCollected::make<ComputedExpressionBoolean>((typeid(*operand) == typeid(ComputedExpressionIteratorEnd)) || (typeid(*operand) == typeid(ComputedExpressionError))));
+        UNARYOP_I(make_shared<ComputedExpressionBoolean>((typeid(*operand) == typeid(ComputedExpressionIteratorEnd)) || (typeid(*operand) == typeid(ComputedExpressionError))));
       }
       break;
       case Opcode::CASTINTEGER_S: {
@@ -1035,11 +1035,11 @@ Context Program::execute(ContextData && data) {
           // ComputedExpressionString, so combine them here.
           static_cast<ComputedExpressionString &>(*context.computedExpressionOut) += static_cast<ComputedExpressionString &>(*result);
           // Push an empty value onto the stack.
-          stack.back() = GarbageCollected::make<ComputedExpression>();
+          stack.back() = make_shared<ComputedExpression>();
         }
         else if (typeid(*result) != typeid(ComputedExpressionError)) {
           // __string returned neither a string nor an error, so report that.
-          stack.back() = GarbageCollected::make<ComputedExpressionError>(Error{"Argument not recognized as a string or error type."});
+          stack.back() = make_shared<ComputedExpressionError>(Error{"Argument not recognized as a string or error type."});
         }
         else {
           // __string returned an error, pass that back to the stack.
@@ -1062,11 +1062,11 @@ Context Program::execute(ContextData && data) {
           // ComputedExpressionString, so combine them here.
           static_cast<ComputedExpressionString &>(*context.computedExpressionOut) += static_cast<ComputedExpressionString &>(*result);
           // Push an empty value onto the stack.
-          stack.emplace_back(GarbageCollected::make<ComputedExpression>());
+          stack.emplace_back(make_shared<ComputedExpression>());
         }
         else if (typeid(*result) != typeid(ComputedExpressionError)) {
           // __string returned neither a string nor an error, so report that.
-          stack.emplace_back(GarbageCollected::make<ComputedExpressionError>(Error{"Argument not recognized as a string or error type."}));
+          stack.emplace_back(make_shared<ComputedExpressionError>(Error{"Argument not recognized as a string or error type."}));
         }
         else {
           // __string returned an error, pass that back to the stack.
@@ -1078,7 +1078,7 @@ Context Program::execute(ContextData && data) {
       break;
       default: {
         // We should never reach this.
-        stack.emplace_back(GarbageCollected::make<ComputedExpressionError>(Error{"Unrecognized Opcode."}));
+        stack.emplace_back(make_shared<ComputedExpressionError>(Error{"Unrecognized Opcode."}));
         pc = this->bytecode.size();
       }
       break;
@@ -1088,7 +1088,7 @@ Context Program::execute(ContextData && data) {
   // Verify that there is at least one value on the stack.  If not, set a
   // runtime error.
   if (!stack.size()) {
-    stack.push_back(GarbageCollected::make<ComputedExpressionError>(Error{"Stack is empty."}));
+    stack.push_back(make_shared<ComputedExpressionError>(Error{"Stack is empty."}));
   }
 
   // Empty the stack, but save the top of the stack.

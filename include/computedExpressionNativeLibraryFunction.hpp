@@ -28,8 +28,8 @@ namespace Tang {
       ComputedExpressionNativeLibraryFunction(LibraryFunction nativeFunction);
 
       virtual std::string dump() const override;
-      GarbageCollected makeCopy() const override;
-      virtual GarbageCollected __equal(const GarbageCollected & rhs) const override;
+      SPCE makeCopy() const override;
+      virtual SPCE __equal(const SPCE & rhs) const override;
 
       /**
        * Get the native bound function to be executed.

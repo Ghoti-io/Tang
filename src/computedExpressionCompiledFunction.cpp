@@ -18,14 +18,14 @@ string ComputedExpressionCompiledFunction::dump() const {
   return "Compiled Function()";
 }
 
-GarbageCollected ComputedExpressionCompiledFunction::makeCopy() const {
-  return GarbageCollected::make<ComputedExpressionCompiledFunction>(this->argc, this->pc);
+SPCE ComputedExpressionCompiledFunction::makeCopy() const {
+  return make_shared<ComputedExpressionCompiledFunction>(this->argc, this->pc);
 }
 
-GarbageCollected ComputedExpressionCompiledFunction::__equal(const GarbageCollected & rhs) const {
+SPCE ComputedExpressionCompiledFunction::__equal(const SPCE & rhs) const {
   if (typeid(*rhs) == typeid(ComputedExpressionCompiledFunction)) {
     auto & rhsConv = static_cast<ComputedExpressionCompiledFunction&>(*rhs);
-    return GarbageCollected::make<ComputedExpressionBoolean>((this->argc == rhsConv.argc) && (this->pc == rhsConv.pc));
+    return make_shared<ComputedExpressionBoolean>((this->argc == rhsConv.argc) && (this->pc == rhsConv.pc));
   }
 
   // Return the default error.

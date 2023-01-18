@@ -21,8 +21,8 @@ namespace Tang {
       ComputedExpressionLibrary();
 
       virtual std::string dump() const override;
-      GarbageCollected makeCopy() const override;
-      GarbageCollected __period(const GarbageCollected & member, std::shared_ptr<TangBase> & tang) const override;
+      SPCE makeCopy() const override;
+      SPCE __period(const SPCE & member, std::shared_ptr<TangBase> & tang) const override;
   };
 }
 

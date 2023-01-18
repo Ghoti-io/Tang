@@ -33,19 +33,19 @@ namespace Tang {
 
       virtual std::string dump() const override;
       virtual std::string __asCode() const override;
-      GarbageCollected makeCopy() const override;
+      SPCE makeCopy() const override;
       virtual bool is_equal(const bool & val) const override;
       virtual bool is_equal(const std::string & val) const override;
-      virtual GarbageCollected __index(const GarbageCollected & index) const override;
-      virtual GarbageCollected __slice(const GarbageCollected & begin, const GarbageCollected & end, const GarbageCollected & skip) const override;
-      virtual GarbageCollected __getIterator(const GarbageCollected & collection) const override;
-      virtual GarbageCollected __iteratorNext(size_t index) const override;
-      virtual GarbageCollected __add(const GarbageCollected & rhs) const override;
-      virtual GarbageCollected __not() const override;
-      virtual GarbageCollected __lessThan(const GarbageCollected & rhs) const override;
-      virtual GarbageCollected __equal(const GarbageCollected & rhs) const override;
-      virtual GarbageCollected __boolean() const override;
-      virtual GarbageCollected __string() const override;
+      virtual SPCE __index(const SPCE & index) const override;
+      virtual SPCE __slice(const SPCE & begin, const SPCE & end, const SPCE & skip) const override;
+      virtual SPCE __getIterator(const SPCE & collection) const override;
+      virtual SPCE __iteratorNext(size_t index) const override;
+      virtual SPCE __add(const SPCE & rhs) const override;
+      virtual SPCE __not() const override;
+      virtual SPCE __lessThan(const SPCE & rhs) const override;
+      virtual SPCE __equal(const SPCE & rhs) const override;
+      virtual SPCE __boolean() const override;
+      virtual SPCE __string() const override;
 
       /**
        * Return the collection of string values that are stored in this object.

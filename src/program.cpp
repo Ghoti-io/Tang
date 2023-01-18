@@ -65,7 +65,7 @@ void Program::parse() {
   // Begin parsing.
   parser.parse();
   if (error) {
-    this->result = GarbageCollected::make<ComputedExpressionError>(*error);
+    this->result = make_shared<ComputedExpressionError>(*error);
     delete error;
   }
 }
@@ -237,7 +237,7 @@ optional<const shared_ptr<AstNode>> Program::getAst() const {
   return nullopt;
 }
 
-optional<const GarbageCollected> Program::getResult() const {
+const SPCE Program::getResult() const {
   return this->result;
 }
 

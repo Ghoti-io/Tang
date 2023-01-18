@@ -34,8 +34,12 @@ bool ComputedExpression::isCopyNeeded() const {
   return false;
 }
 
-GarbageCollected ComputedExpression::makeCopy() const {
-  return GarbageCollected::make<ComputedExpression>();
+SPCE ComputedExpression::makeCopy() const {
+  return make_shared<ComputedExpression>();
+}
+
+ComputedExpression::operator bool() const {
+  return false;
 }
 
 bool ComputedExpression::is_equal([[maybe_unused]] const Tang::integer_t & val) const {
@@ -69,56 +73,56 @@ bool ComputedExpression::is_equal([[maybe_unused]] const Error & val) const {
   return false;
 }
 
-GarbageCollected ComputedExpression::__assign_index([[maybe_unused]] const GarbageCollected & index, [[maybe_unused]] const GarbageCollected & value) {
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to assign this value to the index location."});
+SPCE ComputedExpression::__assign_index([[maybe_unused]] const SPCE & index, [[maybe_unused]] const SPCE & value) {
+  return make_shared<ComputedExpressionError>(Error{"Don't know how to assign this value to the index location."});
 }
 
-GarbageCollected ComputedExpression::__add([[maybe_unused]] const GarbageCollected & rhs) const {
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to add these values."});
+SPCE ComputedExpression::__add([[maybe_unused]] const SPCE & rhs) const {
+  return make_shared<ComputedExpressionError>(Error{"Don't know how to add these values."});
 }
 
-GarbageCollected ComputedExpression::__subtract([[maybe_unused]] const GarbageCollected & rhs) const {
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to subtract these values."});
+SPCE ComputedExpression::__subtract([[maybe_unused]] const SPCE & rhs) const {
+  return make_shared<ComputedExpressionError>(Error{"Don't know how to subtract these values."});
 }
 
-GarbageCollected ComputedExpression::__multiply([[maybe_unused]] const GarbageCollected & rhs) const {
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to multiply these values."});
+SPCE ComputedExpression::__multiply([[maybe_unused]] const SPCE & rhs) const {
+  return make_shared<ComputedExpressionError>(Error{"Don't know how to multiply these values."});
 }
 
-GarbageCollected ComputedExpression::__divide([[maybe_unused]] const GarbageCollected & rhs) const {
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to divide these values."});
+SPCE ComputedExpression::__divide([[maybe_unused]] const SPCE & rhs) const {
+  return make_shared<ComputedExpressionError>(Error{"Don't know how to divide these values."});
 }
 
-GarbageCollected ComputedExpression::__modulo([[maybe_unused]] const GarbageCollected & rhs) const {
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to modulo these values."});
+SPCE ComputedExpression::__modulo([[maybe_unused]] const SPCE & rhs) const {
+  return make_shared<ComputedExpressionError>(Error{"Don't know how to modulo these values."});
 }
 
-GarbageCollected ComputedExpression::__negative() const {
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to negate this value."});
+SPCE ComputedExpression::__negative() const {
+  return make_shared<ComputedExpressionError>(Error{"Don't know how to negate this value."});
 }
 
-GarbageCollected ComputedExpression::__not() const {
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to compute the logical not of this value."});
+SPCE ComputedExpression::__not() const {
+  return make_shared<ComputedExpressionError>(Error{"Don't know how to compute the logical not of this value."});
 }
 
-GarbageCollected ComputedExpression::__lessThan([[maybe_unused]] const GarbageCollected & rhs) const {
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to compare these values."});
+SPCE ComputedExpression::__lessThan([[maybe_unused]] const SPCE & rhs) const {
+  return make_shared<ComputedExpressionError>(Error{"Don't know how to compare these values."});
 }
 
-GarbageCollected ComputedExpression::__equal([[maybe_unused]] const GarbageCollected & rhs) const {
+SPCE ComputedExpression::__equal([[maybe_unused]] const SPCE & rhs) const {
   // Because this is a virtual function, we must ensure that the type is
   // actually ComputedExpression, and not a derived type that forgot to
   // override the virtual method.
   if (typeid(*this) == typeid(ComputedExpression)) {
     if (typeid(*rhs) == typeid(ComputedExpression)) {
-      return GarbageCollected::make<ComputedExpressionBoolean>(true);
+      return make_shared<ComputedExpressionBoolean>(true);
     }
-    return GarbageCollected::make<ComputedExpressionBoolean>(false);
+    return make_shared<ComputedExpressionBoolean>(false);
   }
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to compare these values."});
+  return make_shared<ComputedExpressionError>(Error{"Don't know how to compare these values."});
 }
 
-GarbageCollected ComputedExpression::__period([[maybe_unused]] const GarbageCollected & member, [[maybe_unused]] shared_ptr<TangBase> & tang) const {
+SPCE ComputedExpression::__period([[maybe_unused]] const SPCE & member, [[maybe_unused]] shared_ptr<TangBase> & tang) const {
   if (typeid(*member) == typeid(ComputedExpressionString)) {
     auto & objectMethods = tang->getObjectMethods();
     auto thisType = type_index(typeid(*this));
@@ -127,43 +131,141 @@ GarbageCollected ComputedExpression::__period([[maybe_unused]] const GarbageColl
       string name = static_cast<ComputedExpressionString &>(*member).dump();
       if (methods.count(name)) {
         auto & fn = methods.at(name);
-        return GarbageCollected::make<ComputedExpressionNativeBoundFunction>(fn.second, fn.first, type_index(typeid(*this)));
+        return make_shared<ComputedExpressionNativeBoundFunction>(fn.second, fn.first, type_index(typeid(*this)));
       }
     }
   }
 
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Member not found."});
+  return make_shared<ComputedExpressionError>(Error{"Member not found."});
 }
 
-GarbageCollected ComputedExpression::__index([[maybe_unused]] const GarbageCollected & index) const {
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to index this expression."});
+SPCE ComputedExpression::__index([[maybe_unused]] const SPCE & index) const {
+  return make_shared<ComputedExpressionError>(Error{"Don't know how to index this expression."});
 }
 
-GarbageCollected ComputedExpression::__slice([[maybe_unused]] const GarbageCollected & begin, [[maybe_unused]] const GarbageCollected & end, [[maybe_unused]] const GarbageCollected & skip) const {
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to slice this expression."});
+SPCE ComputedExpression::__slice([[maybe_unused]] const SPCE & begin, [[maybe_unused]] const SPCE & end, [[maybe_unused]] const SPCE & skip) const {
+  return make_shared<ComputedExpressionError>(Error{"Don't know how to slice this expression."});
 }
 
-GarbageCollected ComputedExpression::__getIterator([[maybe_unused]] const GarbageCollected & collection) const {
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to iterate over this expression."});
+SPCE ComputedExpression::__getIterator([[maybe_unused]] const SPCE & collection) const {
+  return make_shared<ComputedExpressionError>(Error{"Don't know how to iterate over this expression."});
 }
 
-GarbageCollected ComputedExpression::__iteratorNext([[maybe_unused]] size_t index) const {
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to iterate over this expression."});
+SPCE ComputedExpression::__iteratorNext([[maybe_unused]] size_t index) const {
+  return make_shared<ComputedExpressionError>(Error{"Don't know how to iterate over this expression."});
 }
 
-GarbageCollected ComputedExpression::__integer() const {
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to cast this value to an integer."});
+SPCE ComputedExpression::__integer() const {
+  return make_shared<ComputedExpressionError>(Error{"Don't know how to cast this value to an integer."});
 }
 
-GarbageCollected ComputedExpression::__float() const {
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to cast this value to a float."});
+SPCE ComputedExpression::__float() const {
+  return make_shared<ComputedExpressionError>(Error{"Don't know how to cast this value to a float."});
 }
 
-GarbageCollected ComputedExpression::__boolean() const {
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to cast this value to a boolean."});
+SPCE ComputedExpression::__boolean() const {
+  return make_shared<ComputedExpressionError>(Error{"Don't know how to cast this value to a boolean."});
 }
 
-GarbageCollected ComputedExpression::__string() const {
-  return GarbageCollected::make<ComputedExpressionError>(Error{"Don't know how to cast this value to a string."});
+SPCE ComputedExpression::__string() const {
+  return make_shared<ComputedExpressionError>(Error{"Don't know how to cast this value to a string."});
+}
+
+bool Tang::operator==(const SPCE & lhs, const integer_t & val) {
+  return lhs.use_count() && lhs->is_equal(val);
+}
+
+bool Tang::operator==(const SPCE & lhs, const float_t & val) {
+  return lhs.use_count() && lhs->is_equal(val);
+}
+
+bool Tang::operator==(const SPCE & lhs, const bool & val) {
+  return lhs.use_count() && lhs->is_equal(val);
+}
+
+bool Tang::operator==(const SPCE & lhs, const string & val) {
+  return lhs.use_count() && lhs->is_equal(val);
+}
+
+bool Tang::operator==(const SPCE & lhs, const char * const & val) {
+  return lhs.use_count() && lhs->is_equal(string(val));
+}
+
+bool Tang::operator==(const SPCE & lhs, const Error & val) {
+  return lhs.use_count() && lhs->is_equal(val);
+}
+
+bool Tang::operator==(const SPCE & lhs, [[maybe_unused]] const ComputedExpression & val) {
+  return lhs.use_count() && lhs->is_equal(nullptr);
+}
+
+SPCE Tang::operator+(const SPCE & lhs, const SPCE & rhs) {
+  auto result = lhs->__add(rhs);
+  return result;
+}
+
+SPCE Tang::operator-(const SPCE & lhs, const SPCE & rhs) {
+  auto result = lhs->__subtract(rhs);
+  return result;
+}
+
+SPCE Tang::operator*(const SPCE & lhs, const SPCE & rhs) {
+  auto result = lhs->__multiply(rhs);
+  return result;
+}
+
+SPCE Tang::operator/(const SPCE & lhs, const SPCE & rhs) {
+  auto result = lhs->__divide(rhs);
+  return result;
+}
+
+SPCE Tang::operator%(const SPCE & lhs, const SPCE & rhs) {
+  auto result = lhs->__modulo(rhs);
+  return result;
+}
+
+SPCE Tang::operator-(const SPCE & lhs) {
+  auto result = lhs->__negative();
+  return result;
+}
+
+SPCE Tang::operator!(const SPCE & lhs) {
+  auto result = lhs->__not();
+  return result;
+}
+
+SPCE Tang::operator<(const SPCE & lhs, const SPCE & rhs) {
+  return lhs->__lessThan(rhs);
+}
+
+SPCE Tang::operator<=(const SPCE & lhs, const SPCE & rhs) {
+  auto result1 = lhs < rhs;
+  if (typeid(*result1) == typeid(ComputedExpressionError)) {
+    return result1;
+  }
+  if (result1->is_equal(true)) {
+    return result1;
+  }
+  return lhs == rhs;
+}
+
+SPCE Tang::operator>(const SPCE & lhs, const SPCE & rhs) {
+  return !(lhs <= rhs);
+}
+
+SPCE Tang::operator>=(const SPCE & lhs, const SPCE & rhs) {
+  return !lhs->__lessThan(rhs);
+}
+
+SPCE Tang::operator==(const SPCE & lhs, const SPCE & rhs) {
+  return lhs->__equal(rhs);
+}
+
+SPCE Tang::operator!=(const SPCE & lhs, const SPCE & rhs) {
+  return !lhs->__equal(rhs);
+}
+
+std::ostream & Tang::operator<<(std::ostream & out, const SPCE & rhs) {
+  return out << (rhs.use_count() ? rhs->dump() : "");
 }
 

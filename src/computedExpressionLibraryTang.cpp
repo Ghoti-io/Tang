@@ -13,8 +13,8 @@ using namespace std;
 using namespace Tang;
 
 // Return the "version" of a value.
-static LibraryFunction versionFunction = []([[maybe_unused]] Context & context) {
-  return GarbageCollected::make<ComputedExpressionString>(TANGVERSION);
+static LibraryFunction versionFunction = []([[maybe_unused]] Context & context) -> SPCE {
+  return make_shared<ComputedExpressionString>(TANGVERSION);
 };
 
 LibraryFunctionMap ComputedExpressionLibraryTang::getLibraryAttributes() {

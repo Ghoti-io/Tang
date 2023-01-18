@@ -22,22 +22,22 @@ namespace Tang {
       ComputedExpressionFloat(Tang::float_t val);
 
       virtual std::string dump() const override;
-      GarbageCollected makeCopy() const override;
+      SPCE makeCopy() const override;
       virtual bool is_equal(const Tang::integer_t & val) const override;
       virtual bool is_equal(const Tang::float_t & val) const override;
       virtual bool is_equal(const bool & val) const override;
-      virtual GarbageCollected __add(const GarbageCollected & rhs) const override;
-      virtual GarbageCollected __subtract(const GarbageCollected & rhs) const override;
-      virtual GarbageCollected __multiply(const GarbageCollected & rhs) const override;
-      virtual GarbageCollected __divide(const GarbageCollected & rhs) const override;
-      virtual GarbageCollected __negative() const override;
-      virtual GarbageCollected __not() const override;
-      virtual GarbageCollected __lessThan(const GarbageCollected & rhs) const override;
-      virtual GarbageCollected __equal(const GarbageCollected & rhs) const override;
-      virtual GarbageCollected __integer() const override;
-      virtual GarbageCollected __float() const override;
-      virtual GarbageCollected __boolean() const override;
-      virtual GarbageCollected __string() const override;
+      virtual SPCE __add(const SPCE & rhs) const override;
+      virtual SPCE __subtract(const SPCE & rhs) const override;
+      virtual SPCE __multiply(const SPCE & rhs) const override;
+      virtual SPCE __divide(const SPCE & rhs) const override;
+      virtual SPCE __negative() const override;
+      virtual SPCE __not() const override;
+      virtual SPCE __lessThan(const SPCE & rhs) const override;
+      virtual SPCE __equal(const SPCE & rhs) const override;
+      virtual SPCE __integer() const override;
+      virtual SPCE __float() const override;
+      virtual SPCE __boolean() const override;
+      virtual SPCE __string() const override;
 
       /**
        * Helper function to get the value associated with this expression.
