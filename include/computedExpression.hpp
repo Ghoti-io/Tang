@@ -68,8 +68,6 @@ namespace Tang {
        */
       virtual SPCE makeCopy() const;
 
-      virtual operator bool() const;
-
       /**
        * Check whether or not the computed expression is equal to another value.
        *
@@ -273,60 +271,60 @@ namespace Tang {
   };
 
   /**
-   * Compare the SPCE tracked object with a supplied value.
+   * Compare the ComputedExpression with a supplied value.
    *
    * @param val The value to compare the tracked object against.
    * @return True if they are equal, false otherwise.
    */
-  bool operator==(const SPCE & lhs, const Tang::integer_t & val);
+  bool operator==(const ComputedExpression & lhs, const Tang::integer_t & val);
 
   /**
-   * Compare the SPCE tracked object with a supplied value.
+   * Compare the ComputedExpression with a supplied value.
    *
    * @param val The value to compare the tracked object against.
    * @return True if they are equal, false otherwise.
    */
-  bool operator==(const SPCE & lhs, const Tang::float_t & val);
+  bool operator==(const ComputedExpression & lhs, const Tang::float_t & val);
 
   /**
-   * Compare the SPCE tracked object with a supplied value.
+   * Compare the ComputedExpression with a supplied value.
    *
    * @param val The value to compare the tracked object against.
    * @return True if they are equal, false otherwise.
    */
-  bool operator==(const SPCE & lhs, const bool & val);
+  bool operator==(const ComputedExpression & lhs, const bool & val);
 
   /**
-   * Compare the SPCE tracked object with a supplied value.
+   * Compare the ComputedExpression with a supplied value.
    *
    * @param val The value to compare the tracked object against.
    * @return True if they are equal, false otherwise.
    */
-  bool operator==(const SPCE & lhs, const std::string & val);
+  bool operator==(const ComputedExpression & lhs, const std::string & val);
 
   /**
-   * Compare the SPCE tracked object with a supplied value.
+   * Compare the ComputedExpression with a supplied value.
    *
    * @param val The value to compare the tracked object against.
    * @return True if they are equal, false otherwise.
    */
-  bool operator==(const SPCE & lhs, const char * const & val);
+  bool operator==(const ComputedExpression & lhs, const char * const & val);
 
   /**
-   * Compare the SPCE tracked object with a supplied value.
+   * Compare the ComputedExpression with a supplied value.
    *
    * @param val The value to compare the tracked object against.
    * @return True if they are equal, false otherwise.
    */
-  bool operator==(const SPCE & lhs, const Error & val);
+  bool operator==(const ComputedExpression & lhs, const Error & val);
 
   /**
-   * Compare the SPCE tracked object with a supplied value.
+   * Compare the ComputedExpression with a supplied value.
    *
    * @param val The value to compare the tracked object against.
    * @return True if they are equal, false otherwise.
    */
-  bool operator==(const SPCE & lhs, const ComputedExpression & null);
+  bool operator==(const ComputedExpression & lhs, const nullptr_t & null);
 
   /**
    * Add friendly output.

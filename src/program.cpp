@@ -28,14 +28,14 @@ static set<Opcode> jumpOpcodes_I{
   Opcode::JMPT_I,
 };
 
-Program::Program(const string & code, Program::CodeType codeType, std::shared_ptr<Tang::TangBase> tang) : tang{tang}, code{code}, istreamCode{nullopt}, codeType{codeType}, ast{nullptr} {
+Program::Program(const string & code, Program::CodeType codeType, std::shared_ptr<Tang::TangBase> tang) : tang{tang}, code{code}, istreamCode{nullopt}, codeType{codeType}, ast{nullptr}, result{make_shared<ComputedExpression>()} {
   this->parse();
   if (this->ast) {
     this->compile();
   }
 }
 
-Program::Program(istream & code, Program::CodeType codeType, std::shared_ptr<Tang::TangBase> tang) : tang{tang}, code{""}, istreamCode{&code}, codeType{codeType}, ast{nullptr} {
+Program::Program(istream & code, Program::CodeType codeType, std::shared_ptr<Tang::TangBase> tang) : tang{tang}, code{""}, istreamCode{&code}, codeType{codeType}, ast{nullptr}, result{make_shared<ComputedExpression>()} {
   this->parse();
   if (this->ast) {
     this->compile();

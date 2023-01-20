@@ -38,10 +38,6 @@ SPCE ComputedExpression::makeCopy() const {
   return make_shared<ComputedExpression>();
 }
 
-ComputedExpression::operator bool() const {
-  return false;
-}
-
 bool ComputedExpression::is_equal([[maybe_unused]] const Tang::integer_t & val) const {
   return false;
 }
@@ -171,32 +167,32 @@ SPCE ComputedExpression::__string() const {
   return make_shared<ComputedExpressionError>(Error{"Don't know how to cast this value to a string."});
 }
 
-bool Tang::operator==(const SPCE & lhs, const integer_t & val) {
-  return lhs.use_count() && lhs->is_equal(val);
+bool Tang::operator==(const ComputedExpression & lhs, const integer_t & val) {
+  return (&lhs)->is_equal(val);
 }
 
-bool Tang::operator==(const SPCE & lhs, const float_t & val) {
-  return lhs.use_count() && lhs->is_equal(val);
+bool Tang::operator==(const ComputedExpression & lhs, const float_t & val) {
+  return (&lhs)->is_equal(val);
 }
 
-bool Tang::operator==(const SPCE & lhs, const bool & val) {
-  return lhs.use_count() && lhs->is_equal(val);
+bool Tang::operator==(const ComputedExpression & lhs, const bool & val) {
+  return (&lhs)->is_equal(val);
 }
 
-bool Tang::operator==(const SPCE & lhs, const string & val) {
-  return lhs.use_count() && lhs->is_equal(val);
+bool Tang::operator==(const ComputedExpression & lhs, const string & val) {
+  return (&lhs)->is_equal(val);
 }
 
-bool Tang::operator==(const SPCE & lhs, const char * const & val) {
-  return lhs.use_count() && lhs->is_equal(string(val));
+bool Tang::operator==(const ComputedExpression & lhs, const char * const & val) {
+  return (&lhs)->is_equal(string(val));
 }
 
-bool Tang::operator==(const SPCE & lhs, const Error & val) {
-  return lhs.use_count() && lhs->is_equal(val);
+bool Tang::operator==(const ComputedExpression & lhs, const Error & val) {
+  return (&lhs)->is_equal(val);
 }
 
-bool Tang::operator==(const SPCE & lhs, [[maybe_unused]] const ComputedExpression & val) {
-  return lhs.use_count() && lhs->is_equal(nullptr);
+bool Tang::operator==(const ComputedExpression & lhs, [[maybe_unused]] const nullptr_t & val) {
+  return (&lhs)->is_equal(nullptr);
 }
 
 SPCE Tang::operator+(const SPCE & lhs, const SPCE & rhs) {
