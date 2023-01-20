@@ -98,14 +98,10 @@ DEP_ERROR = \
 DEP_ASTNODE = \
 	include/astNode.hpp \
 	$(DEP_LOCATION)
-DEP_GARBAGECOLLECTED = \
-	$(DEP_MACROS) \
-	$(DEP_ERROR)
 DEP_COMPUTEDEXPRESSION = \
 	include/computedExpression.hpp \
 	$(DEP_MACROS) \
-	$(DEP_ERROR) \
-	$(DEP_GARBAGECOLLECTED)
+	$(DEP_ERROR)
 DEP_CONTEXT = \
 	include/context.hpp \
 	$(DEP_MACROS) \
@@ -115,7 +111,6 @@ DEP_PROGRAM = \
 	$(DEP_ASTNODE) \
 	$(DEP_COMPUTEDEXPRESSION) \
 	$(DEP_CONTEXT) \
-	$(DEP_GARBAGECOLLECTED) \
 	$(DEP_ERROR) \
 	$(DEP_MACROS) \
 	$(DEP_UNICODESTRING)
@@ -318,7 +313,6 @@ DEP_TANG = \
 	$(DEP_COMPUTEDEXPRESSIONSTRING) \
 	$(DEP_CONTEXT) \
 	$(DEP_ERROR) \
-	$(DEP_GARBAGECOLLECTED) \
 	$(DEP_MACROS) \
 	$(DEP_OPCODE) \
 	$(DEP_PROGRAM) \
@@ -721,11 +715,6 @@ $(OBJ_DIR)/error.o: \
 				src/error.cpp \
 				$(DEP_ERROR)
 
-$(OBJ_DIR)/garbageCollected.o: \
-				src/garbageCollected.cpp \
-				$(DEP_COMPUTEDEXPRESSIONERROR) \
-				$(DEP_GARBAGECOLLECTED)
-
 $(OBJ_DIR)/htmlEscape.o: \
 				$(GEN_DIR)/htmlEscape.cpp \
 				$(DEP_COMPUTEDEXPRESSION) \
@@ -896,23 +885,6 @@ $(APP_DIR)/test: \
 				$(DEP_TANG) \
 				$(APP_DIR)/$(TARGET)
 	@echo "\n### Compiling Tang Test ###"
-	@mkdir -p $(@D)
-	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ $< $(LDFLAGS) $(TESTFLAGS) $(TANGLIBRARY)
-
-$(APP_DIR)/testSingletonObjectPool: \
-				test/testSingletonObjectPool.cpp \
-				$(DEP_SINGLETONOBJECTPOOL)
-	@echo "\n### Compiling SingletonObjectPool Test ###"
-	@mkdir -p $(@D)
-	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ $< $(LDFLAGS) $(TESTFLAGS)
-
-$(APP_DIR)/testGarbageCollected: \
-				test/testGarbageCollected.cpp \
-				$(DEP_COMPUTEDEXPRESSION) \
-				$(DEP_COMPUTEDEXPRESSIONINTEGER) \
-				$(DEP_GARBAGECOLLECTED) \
-				$(APP_DIR)/$(TARGET)
-	@echo "\n### Compiling GarbageCollected Test ###"
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ $< $(LDFLAGS) $(TESTFLAGS) $(TANGLIBRARY)
 

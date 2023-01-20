@@ -17,7 +17,6 @@ namespace Tang {
 #include <vector>
 #include <memory>
 #include "macros.hpp"
-#include "garbageCollected.hpp"
 #include "error.hpp"
 
 namespace Tang {

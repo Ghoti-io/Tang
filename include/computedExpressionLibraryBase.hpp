@@ -1,6 +1,5 @@
 #include "macros.hpp"
 #include "computedExpressionLibrary.hpp"
-#include "garbageCollected.hpp"
 
 #ifndef ComputedExpressionLibraryBase
   #error "ComputedExpressionLibraryBase has not been defined."

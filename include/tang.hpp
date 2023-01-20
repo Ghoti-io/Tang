@@ -12,9 +12,7 @@
 //   * number format to string
 // * Date/Time type & functions
 // * Execution count timeout
-// * Potential tail call optimization rather than loop & switch case for VM
 // * Use string views
-// * Move GarbageCollected from global to Context, in order to get rid of mutex
 //
 
 #ifndef TANG_HPP
@@ -24,7 +22,6 @@
 #include "tangBase.hpp"
 #include "astNode.hpp"
 #include "error.hpp"
-#include "garbageCollected.hpp"
 #include "program.hpp"
 #include "context.hpp"
 #include "opcode.hpp"
