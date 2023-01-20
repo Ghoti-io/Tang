@@ -327,6 +327,11 @@ $(GEN_DIR)/tangParser.hpp: \
 	@mkdir -p $(@D)
 	bison -v -o $(GEN_DIR)/tangParser.cpp -d $<
 
+# Ensure that tangParser.cpp is regenerated properly before
+# tangParser.o tries to use it to compile.
+$(GEN_DIR)/tangParser.cpp: $(GEN_DIR)/tangParser.hpp
+
+
 ####################################################################
 # Flex-Generated Files
 ####################################################################
