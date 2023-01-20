@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['percentencode_596',['PercentEncode',['../classTang_1_1PercentEncode.html',1,'Tang']]],
-  ['position_597',['position',['../classTang_1_1position.html',1,'Tang']]],
-  ['program_598',['Program',['../classTang_1_1Program.html',1,'Tang']]]
+  ['tangbase_575',['TangBase',['../classTang_1_1TangBase.html',1,'Tang']]],
+  ['tangscanner_576',['TangScanner',['../classTang_1_1TangScanner.html',1,'Tang']]]
 ];

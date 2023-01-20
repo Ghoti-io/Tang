@@ -34,7 +34,7 @@ Collaboration diagram for Tang\+::Computed\+Expression\+Integer\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em Construct an Integer result. \end{DoxyCompactList}\item 
 virtual std\+::string \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a02e4a8bba8b37bf02e5ec3fd1e25f094}{dump}} () const override
 \begin{DoxyCompactList}\small\item\em Output the contents of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} as a string. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a9e1b2e88d3c6574177f291563dd45262}{make\+Copy}} () const override
+SPCE \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ae326001a48e0b2e9fad234adf115a52d}{make\+Copy}} () const override
 \begin{DoxyCompactList}\small\item\em Make a copy of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} (recursively, if appropriate). \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ac39abf9bc79248b475d2e865331b6453}{is\+\_\+equal}} (const \mbox{\hyperlink{macros_8hpp_a48da4f54f29ec5b8a4dfd1a9234f7ee8}{Tang\+::integer\+\_\+t}} \&\mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_adea4ba2af17d0a069d4c1abb92ce1a80}{val}}) const override
 \begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
@@ -42,31 +42,31 @@ virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a651bd760d2
 \begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ae60addff932bb6221b83bfd987c0a843}{is\+\_\+equal}} (const bool \&\mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_adea4ba2af17d0a069d4c1abb92ce1a80}{val}}) const override
 \begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ab9c7c7ad34978c127b92ad7a24cbb717}{\+\_\+\+\_\+add}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const override
+virtual SPCE \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a18fe0c5a554f88ac186df854407cfb44}{\+\_\+\+\_\+add}} (const SPCE \&rhs) const override
 \begin{DoxyCompactList}\small\item\em Compute the result of adding this value and the supplied value. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a8a792a5911f9d90a4ff4e8ba99f5a657}{\+\_\+\+\_\+subtract}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const override
+virtual SPCE \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_aa33d6de355ddf88c19030d2c2b14ca95}{\+\_\+\+\_\+subtract}} (const SPCE \&rhs) const override
 \begin{DoxyCompactList}\small\item\em Compute the result of subtracting this value and the supplied value. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_aadb7393ed0df73e42f2311377bb445d6}{\+\_\+\+\_\+multiply}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const override
+virtual SPCE \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_af22067cb959be9ce1ed0e02dd711ade4}{\+\_\+\+\_\+multiply}} (const SPCE \&rhs) const override
 \begin{DoxyCompactList}\small\item\em Compute the result of multiplying this value and the supplied value. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_aeca0b7af9ecd1c64f0e72afb7bbd4ff7}{\+\_\+\+\_\+divide}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const override
+virtual SPCE \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a97c735d66d3936d4aab22757a9770aec}{\+\_\+\+\_\+divide}} (const SPCE \&rhs) const override
 \begin{DoxyCompactList}\small\item\em Compute the result of dividing this value and the supplied value. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a959280a4da43a81276ef8ab658eb9015}{\+\_\+\+\_\+modulo}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const override
+virtual SPCE \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a7745bdafc7a3afefc8fdcbeb704668b7}{\+\_\+\+\_\+modulo}} (const SPCE \&rhs) const override
 \begin{DoxyCompactList}\small\item\em Compute the result of moduloing this value and the supplied value. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a50d5a488b02defd3c526696c5661800b}{\+\_\+\+\_\+negative}} () const override
+virtual SPCE \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a3414902df886cd54ca46b31107c7a5e3}{\+\_\+\+\_\+negative}} () const override
 \begin{DoxyCompactList}\small\item\em Compute the result of negating this value. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a12f9abfc8fc324d491453f8c6bbb3e1d}{\+\_\+\+\_\+not}} () const override
+virtual SPCE \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ac5f80fe530f379897c256f82d3ecf6c7}{\+\_\+\+\_\+not}} () const override
 \begin{DoxyCompactList}\small\item\em Compute the logical not of this value. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a6ca18e4d07780ca7d8d1568f59cf358c}{\+\_\+\+\_\+less\+Than}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const override
+virtual SPCE \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ab5019b5c6b09aeeec52e6c985d021635}{\+\_\+\+\_\+less\+Than}} (const SPCE \&rhs) const override
 \begin{DoxyCompactList}\small\item\em Compute the \char`\"{}less than\char`\"{} comparison. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a482daf778794d505964d7adb24bc97e3}{\+\_\+\+\_\+equal}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&rhs) const override
+virtual SPCE \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ad2be8ca09f6e406f41fc5ac8601b8ff0}{\+\_\+\+\_\+equal}} (const SPCE \&rhs) const override
 \begin{DoxyCompactList}\small\item\em Perform an equality test. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_ac8f2123e3efec72df3dc6d62b74c78b6}{\+\_\+\+\_\+integer}} () const override
+virtual SPCE \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_aeb1f9e82cdfe68a37371bea35c88f19d}{\+\_\+\+\_\+integer}} () const override
 \begin{DoxyCompactList}\small\item\em Perform a type cast to integer. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a4bbe91963e21fd8319b94a7b43a1e26e}{\+\_\+\+\_\+float}} () const override
+virtual SPCE \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_adc9929603124e387d37dcd8f67f2a69f}{\+\_\+\+\_\+float}} () const override
 \begin{DoxyCompactList}\small\item\em Perform a type cast to float. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a0c87432e8b46594ca2b89ff6787de1d3}{\+\_\+\+\_\+boolean}} () const override
+virtual SPCE \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a7439ba464e74dfcad956bb52025117eb}{\+\_\+\+\_\+boolean}} () const override
 \begin{DoxyCompactList}\small\item\em Perform a type cast to boolean. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a70d1079d4d4d8ff14725e435680a1a8a}{\+\_\+\+\_\+string}} () const override
+virtual SPCE \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a06b070d14f7ef7847018e00b2d4de58c}{\+\_\+\+\_\+string}} () const override
 \begin{DoxyCompactList}\small\item\em Perform a type cast to string. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{macros_8hpp_a48da4f54f29ec5b8a4dfd1a9234f7ee8}{Tang\+::integer\+\_\+t}} \mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_a04c76a5ba8dbc3bfa4258c50c263b306}{get\+Value}} () const
 \begin{DoxyCompactList}\small\item\em Helper function to get the value associated with this expression. \end{DoxyCompactList}\item 
@@ -80,17 +80,17 @@ virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a5ce6d4bc0128f6aad
 \begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classTang_1_1ComputedExpression_a5287fabf86f19613afb04d5e285c0231}{is\+\_\+equal}} (const std\+::nullptr\+\_\+t \&\mbox{\hyperlink{classTang_1_1ComputedExpressionInteger_adea4ba2af17d0a069d4c1abb92ce1a80}{val}}) const
 \begin{DoxyCompactList}\small\item\em Check whether or not the computed expression is equal to another value. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_a011d86ce9b04fca4bef67b4c5bb3324c}{\+\_\+\+\_\+assign\+\_\+index}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&index, const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&value)
+virtual SPCE \mbox{\hyperlink{classTang_1_1ComputedExpression_a0e01fe7f91b48d6d6ed63db3c9fd25e5}{\+\_\+\+\_\+assign\+\_\+index}} (const SPCE \&index, const SPCE \&value)
 \begin{DoxyCompactList}\small\item\em Perform an index assignment to the supplied value. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_a5d83d6e7243a7af7aae63e77c8fd680a}{\+\_\+\+\_\+period}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&member, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+Base}} $>$ \&tang) const
+virtual SPCE \mbox{\hyperlink{classTang_1_1ComputedExpression_ad6b357bb73f041c9a3a2aeedba8a46fd}{\+\_\+\+\_\+period}} (const SPCE \&member, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+Base}} $>$ \&tang) const
 \begin{DoxyCompactList}\small\item\em Perform a member access (period) operation. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_abb6defbdb303825687da1bd1468e6133}{\+\_\+\+\_\+index}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&index) const
+virtual SPCE \mbox{\hyperlink{classTang_1_1ComputedExpression_aff5822cadf4b3480b2b3489fbebe1e76}{\+\_\+\+\_\+index}} (const SPCE \&index) const
 \begin{DoxyCompactList}\small\item\em Perform an index operation. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_aa7a262384220a86eb273284f8990ca84}{\+\_\+\+\_\+slice}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&begin, const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&end, const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&skip) const
+virtual SPCE \mbox{\hyperlink{classTang_1_1ComputedExpression_a857b24065a3e16e04fed3f59058e7cfb}{\+\_\+\+\_\+slice}} (const SPCE \&begin, const SPCE \&end, const SPCE \&skip) const
 \begin{DoxyCompactList}\small\item\em Perform a slice operation. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_a89d0a492646d5493e138ee22bcd6dad7}{\+\_\+\+\_\+get\+Iterator}} (const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&collection) const
+virtual SPCE \mbox{\hyperlink{classTang_1_1ComputedExpression_aff65fef1d9fc6f328ef2e8a9cbc5732b}{\+\_\+\+\_\+get\+Iterator}} (const SPCE \&collection) const
 \begin{DoxyCompactList}\small\item\em Get an iterator for the expression. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \mbox{\hyperlink{classTang_1_1ComputedExpression_ae8f0013e447b6004846dbb9d92b2b29f}{\+\_\+\+\_\+iterator\+Next}} (size\+\_\+t index=0) const
+virtual SPCE \mbox{\hyperlink{classTang_1_1ComputedExpression_a2a3793341cfdc0eea49ebe05d35b1be1}{\+\_\+\+\_\+iterator\+Next}} (size\+\_\+t index=0) const
 \begin{DoxyCompactList}\small\item\em Get the next iterative value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -122,11 +122,11 @@ Construct an Integer result.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_ab9c7c7ad34978c127b92ad7a24cbb717}\label{classTang_1_1ComputedExpressionInteger_ab9c7c7ad34978c127b92ad7a24cbb717}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a18fe0c5a554f88ac186df854407cfb44}\label{classTang_1_1ComputedExpressionInteger_a18fe0c5a554f88ac186df854407cfb44}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_add@{\_\_add}}
 \index{\_\_add@{\_\_add}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
 \doxysubsubsection{\texorpdfstring{\_\_add()}{\_\_add()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Integer\+::\+\_\+\+\_\+add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily SPCE Computed\+Expression\+Integer\+::\+\_\+\+\_\+add (\begin{DoxyParamCaption}\item[{const SPCE \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -134,7 +134,7 @@ Compute the result of adding this value and the supplied value.
 
 
 \begin{DoxyParams}{Parameters}
-{\em rhs} & The \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value to add to this. \\
+{\em rhs} & The SPCE value to add to this. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -142,13 +142,14 @@ The result of the operation.
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a7265dda9f1e6db478f0c1cd9c3e37aa9}{Tang\+::\+Computed\+Expression}}.
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a9101dad52b55d7a5d161f75ad5d67948}{Tang\+::\+Computed\+Expression}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classTang_1_1ComputedExpressionInteger_ab9c7c7ad34978c127b92ad7a24cbb717_cgraph}
+\includegraphics[width=350pt]{classTang_1_1ComputedExpressionInteger_a18fe0c5a554f88ac186df854407cfb44_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classTang_1_1ComputedExpression_a6d0c01f57a6a2b6b8ec701202b16af94}\label{classTang_1_1ComputedExpression_a6d0c01f57a6a2b6b8ec701202b16af94}} 
@@ -168,11 +169,11 @@ A code-\/string representation of the computed expression.
 
 Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionString_ae3a29af91b6dd6828f85acae7329b377}{Tang\+::\+Computed\+Expression\+String}}.
 
-\mbox{\Hypertarget{classTang_1_1ComputedExpression_a011d86ce9b04fca4bef67b4c5bb3324c}\label{classTang_1_1ComputedExpression_a011d86ce9b04fca4bef67b4c5bb3324c}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_a0e01fe7f91b48d6d6ed63db3c9fd25e5}\label{classTang_1_1ComputedExpression_a0e01fe7f91b48d6d6ed63db3c9fd25e5}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_assign\_index@{\_\_assign\_index}}
 \index{\_\_assign\_index@{\_\_assign\_index}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
 \doxysubsubsection{\texorpdfstring{\_\_assign\_index()}{\_\_assign\_index()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+assign\+\_\+index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{index,  }\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+{\footnotesize\ttfamily SPCE Computed\+Expression\+::\+\_\+\+\_\+assign\+\_\+index (\begin{DoxyParamCaption}\item[{const SPCE \&}]{index,  }\item[{const SPCE \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
 
 
 
@@ -190,13 +191,13 @@ The result of the operation.
 \end{DoxyReturn}
 
 
-Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionMap_a1c9c63a1fc28942517cde17c18c803b3}{Tang\+::\+Computed\+Expression\+Map}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_a7dc724830081b12709885b0c563d7eef}{Tang\+::\+Computed\+Expression\+Array}}.
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionMap_a52398fa29be2043bba40f4de4a64db6a}{Tang\+::\+Computed\+Expression\+Map}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_aabdc256b6cc8584c2a774af9596adaed}{Tang\+::\+Computed\+Expression\+Array}}.
 
-\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a0c87432e8b46594ca2b89ff6787de1d3}\label{classTang_1_1ComputedExpressionInteger_a0c87432e8b46594ca2b89ff6787de1d3}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a7439ba464e74dfcad956bb52025117eb}\label{classTang_1_1ComputedExpressionInteger_a7439ba464e74dfcad956bb52025117eb}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_boolean@{\_\_boolean}}
 \index{\_\_boolean@{\_\_boolean}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
 \doxysubsubsection{\texorpdfstring{\_\_boolean()}{\_\_boolean()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Integer\+::\+\_\+\+\_\+boolean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily SPCE Computed\+Expression\+Integer\+::\+\_\+\+\_\+boolean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -207,13 +208,13 @@ The result of the the operation.
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_ac38862531c17e25636ca68c7e74ba487}{Tang\+::\+Computed\+Expression}}.
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a59c3a01806a1dc994846bcd40203d6e4}{Tang\+::\+Computed\+Expression}}.
 
-\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_aeca0b7af9ecd1c64f0e72afb7bbd4ff7}\label{classTang_1_1ComputedExpressionInteger_aeca0b7af9ecd1c64f0e72afb7bbd4ff7}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a97c735d66d3936d4aab22757a9770aec}\label{classTang_1_1ComputedExpressionInteger_a97c735d66d3936d4aab22757a9770aec}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_divide@{\_\_divide}}
 \index{\_\_divide@{\_\_divide}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
 \doxysubsubsection{\texorpdfstring{\_\_divide()}{\_\_divide()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Integer\+::\+\_\+\+\_\+divide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily SPCE Computed\+Expression\+Integer\+::\+\_\+\+\_\+divide (\begin{DoxyParamCaption}\item[{const SPCE \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -221,7 +222,7 @@ Compute the result of dividing this value and the supplied value.
 
 
 \begin{DoxyParams}{Parameters}
-{\em rhs} & The \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value to divide this by. \\
+{\em rhs} & The SPCE value to divide this by. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -229,20 +230,21 @@ The result of the operation.
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_abb35e0328da2a96128de725ff1402192}{Tang\+::\+Computed\+Expression}}.
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_ab74f1e67e561e7d7a23046d923894c8c}{Tang\+::\+Computed\+Expression}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classTang_1_1ComputedExpressionInteger_aeca0b7af9ecd1c64f0e72afb7bbd4ff7_cgraph}
+\includegraphics[width=350pt]{classTang_1_1ComputedExpressionInteger_a97c735d66d3936d4aab22757a9770aec_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a482daf778794d505964d7adb24bc97e3}\label{classTang_1_1ComputedExpressionInteger_a482daf778794d505964d7adb24bc97e3}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_ad2be8ca09f6e406f41fc5ac8601b8ff0}\label{classTang_1_1ComputedExpressionInteger_ad2be8ca09f6e406f41fc5ac8601b8ff0}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_equal@{\_\_equal}}
 \index{\_\_equal@{\_\_equal}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
 \doxysubsubsection{\texorpdfstring{\_\_equal()}{\_\_equal()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Integer\+::\+\_\+\+\_\+equal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily SPCE Computed\+Expression\+Integer\+::\+\_\+\+\_\+equal (\begin{DoxyParamCaption}\item[{const SPCE \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -250,7 +252,7 @@ Perform an equality test.
 
 
 \begin{DoxyParams}{Parameters}
-{\em rhs} & The \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value to compare against. \\
+{\em rhs} & The SPCE value to compare against. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -258,20 +260,21 @@ The result of the the operation.
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_aa6e3a065c2d0dfcde5e2eaefa26f7606}{Tang\+::\+Computed\+Expression}}.
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a73644f227db3760bddbb43457005966a}{Tang\+::\+Computed\+Expression}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classTang_1_1ComputedExpressionInteger_a482daf778794d505964d7adb24bc97e3_cgraph}
+\includegraphics[width=350pt]{classTang_1_1ComputedExpressionInteger_ad2be8ca09f6e406f41fc5ac8601b8ff0_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a4bbe91963e21fd8319b94a7b43a1e26e}\label{classTang_1_1ComputedExpressionInteger_a4bbe91963e21fd8319b94a7b43a1e26e}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_adc9929603124e387d37dcd8f67f2a69f}\label{classTang_1_1ComputedExpressionInteger_adc9929603124e387d37dcd8f67f2a69f}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_float@{\_\_float}}
 \index{\_\_float@{\_\_float}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
 \doxysubsubsection{\texorpdfstring{\_\_float()}{\_\_float()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Integer\+::\+\_\+\+\_\+float (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily SPCE Computed\+Expression\+Integer\+::\+\_\+\+\_\+float (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -282,13 +285,13 @@ The result of the the operation.
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_aa91f27a9f03b9a7fb9aa5a79efc3039f}{Tang\+::\+Computed\+Expression}}.
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a81706f65d4c707fb635a3e505ece00fa}{Tang\+::\+Computed\+Expression}}.
 
-\mbox{\Hypertarget{classTang_1_1ComputedExpression_a89d0a492646d5493e138ee22bcd6dad7}\label{classTang_1_1ComputedExpression_a89d0a492646d5493e138ee22bcd6dad7}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_aff65fef1d9fc6f328ef2e8a9cbc5732b}\label{classTang_1_1ComputedExpression_aff65fef1d9fc6f328ef2e8a9cbc5732b}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_getIterator@{\_\_getIterator}}
 \index{\_\_getIterator@{\_\_getIterator}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
 \doxysubsubsection{\texorpdfstring{\_\_getIterator()}{\_\_getIterator()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+get\+Iterator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{collection }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+{\footnotesize\ttfamily SPCE Computed\+Expression\+::\+\_\+\+\_\+get\+Iterator (\begin{DoxyParamCaption}\item[{const SPCE \&}]{collection }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
 
 
 
@@ -296,18 +299,18 @@ Get an iterator for the expression.
 
 
 \begin{DoxyParams}{Parameters}
-{\em collection} & The \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value that will serve as the collection through which to iterate. \\
+{\em collection} & The SPCE value that will serve as the collection through which to iterate. \\
 \hline
 \end{DoxyParams}
 
 
-Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionString_a1f670b31682d75c5b5e34a1537aea851}{Tang\+::\+Computed\+Expression\+String}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionMap_a43ca3df3d2f71f17f6d04ec4063603b4}{Tang\+::\+Computed\+Expression\+Map}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_ad66e2566f4dd550a7e9954522071a1ed}{Tang\+::\+Computed\+Expression\+Array}}.
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionString_aba5c333b9548d37538456a840ae92318}{Tang\+::\+Computed\+Expression\+String}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionMap_acde7a7465da70cd0d8b628cbe04b7b87}{Tang\+::\+Computed\+Expression\+Map}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_a3e05e9893c11cf56c0a8d40b1d9fbe77}{Tang\+::\+Computed\+Expression\+Array}}.
 
-\mbox{\Hypertarget{classTang_1_1ComputedExpression_abb6defbdb303825687da1bd1468e6133}\label{classTang_1_1ComputedExpression_abb6defbdb303825687da1bd1468e6133}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_aff5822cadf4b3480b2b3489fbebe1e76}\label{classTang_1_1ComputedExpression_aff5822cadf4b3480b2b3489fbebe1e76}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_index@{\_\_index}}
 \index{\_\_index@{\_\_index}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
 \doxysubsubsection{\texorpdfstring{\_\_index()}{\_\_index()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+{\footnotesize\ttfamily SPCE Computed\+Expression\+::\+\_\+\+\_\+index (\begin{DoxyParamCaption}\item[{const SPCE \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
 
 
 
@@ -323,13 +326,13 @@ The result of the operation.
 \end{DoxyReturn}
 
 
-Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionString_afe336aaa76162ce7b17d83f25d80acd3}{Tang\+::\+Computed\+Expression\+String}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionMap_a3ce5a904e0bd4c3bf6479a22cab141a2}{Tang\+::\+Computed\+Expression\+Map}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_abbaae671ad9e9bb47b0b0925828b2b6b}{Tang\+::\+Computed\+Expression\+Array}}.
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionString_af22025db98f3d0b39c2116ecc0598d11}{Tang\+::\+Computed\+Expression\+String}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionMap_a8074819bd4a228b8512b26a42817c5d5}{Tang\+::\+Computed\+Expression\+Map}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_a29a4a7ac041d894db86a3a056b50bd5a}{Tang\+::\+Computed\+Expression\+Array}}.
 
-\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_ac8f2123e3efec72df3dc6d62b74c78b6}\label{classTang_1_1ComputedExpressionInteger_ac8f2123e3efec72df3dc6d62b74c78b6}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_aeb1f9e82cdfe68a37371bea35c88f19d}\label{classTang_1_1ComputedExpressionInteger_aeb1f9e82cdfe68a37371bea35c88f19d}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_integer@{\_\_integer}}
 \index{\_\_integer@{\_\_integer}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
 \doxysubsubsection{\texorpdfstring{\_\_integer()}{\_\_integer()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Integer\+::\+\_\+\+\_\+integer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily SPCE Computed\+Expression\+Integer\+::\+\_\+\+\_\+integer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -340,13 +343,13 @@ The result of the the operation.
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_aa9bebad41df630a98cec2565b0aeda89}{Tang\+::\+Computed\+Expression}}.
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a30f5c0a6cf785543bccab6f2598ee143}{Tang\+::\+Computed\+Expression}}.
 
-\mbox{\Hypertarget{classTang_1_1ComputedExpression_ae8f0013e447b6004846dbb9d92b2b29f}\label{classTang_1_1ComputedExpression_ae8f0013e447b6004846dbb9d92b2b29f}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_a2a3793341cfdc0eea49ebe05d35b1be1}\label{classTang_1_1ComputedExpression_a2a3793341cfdc0eea49ebe05d35b1be1}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_iteratorNext@{\_\_iteratorNext}}
 \index{\_\_iteratorNext@{\_\_iteratorNext}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
 \doxysubsubsection{\texorpdfstring{\_\_iteratorNext()}{\_\_iteratorNext()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+iterator\+Next (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+{\footnotesize\ttfamily SPCE Computed\+Expression\+::\+\_\+\+\_\+iterator\+Next (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
 
 
 
@@ -359,13 +362,13 @@ Get the next iterative value.
 \end{DoxyParams}
 
 
-Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionString_a9d96dedd8034031787b746f0f0cd227c}{Tang\+::\+Computed\+Expression\+String}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionMap_aa64246f83d000216c38163da31d85ded}{Tang\+::\+Computed\+Expression\+Map}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionIterator_aeb38af6d4cce0e526c09d62018d71460}{Tang\+::\+Computed\+Expression\+Iterator}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_a8f1c04c03b8c7b97ef2ea1efd2270b07}{Tang\+::\+Computed\+Expression\+Array}}.
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionString_a46b9fd12d985624371d8a5a015d7726c}{Tang\+::\+Computed\+Expression\+String}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionMap_a805de7a67a363ad24ab225fe76dbe029}{Tang\+::\+Computed\+Expression\+Map}}, \mbox{\hyperlink{classTang_1_1ComputedExpressionIterator_adcbbaf8a39181d693ef07899ebcd3632}{Tang\+::\+Computed\+Expression\+Iterator}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_a6de7924fc0554f9e60596e0e02b397fe}{Tang\+::\+Computed\+Expression\+Array}}.
 
-\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a6ca18e4d07780ca7d8d1568f59cf358c}\label{classTang_1_1ComputedExpressionInteger_a6ca18e4d07780ca7d8d1568f59cf358c}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_ab5019b5c6b09aeeec52e6c985d021635}\label{classTang_1_1ComputedExpressionInteger_ab5019b5c6b09aeeec52e6c985d021635}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_lessThan@{\_\_lessThan}}
 \index{\_\_lessThan@{\_\_lessThan}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
 \doxysubsubsection{\texorpdfstring{\_\_lessThan()}{\_\_lessThan()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Integer\+::\+\_\+\+\_\+less\+Than (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily SPCE Computed\+Expression\+Integer\+::\+\_\+\+\_\+less\+Than (\begin{DoxyParamCaption}\item[{const SPCE \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -373,7 +376,7 @@ Compute the \char`\"{}less than\char`\"{} comparison.
 
 
 \begin{DoxyParams}{Parameters}
-{\em rhs} & The \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value to compare against. \\
+{\em rhs} & The SPCE value to compare against. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -381,20 +384,21 @@ The result of the the operation.
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a7ac5773e7e1c7f4b7c7f8dcd29bfa00b}{Tang\+::\+Computed\+Expression}}.
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a6fb190eb8090688b31b58d959889d007}{Tang\+::\+Computed\+Expression}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classTang_1_1ComputedExpressionInteger_a6ca18e4d07780ca7d8d1568f59cf358c_cgraph}
+\includegraphics[width=350pt]{classTang_1_1ComputedExpressionInteger_ab5019b5c6b09aeeec52e6c985d021635_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a959280a4da43a81276ef8ab658eb9015}\label{classTang_1_1ComputedExpressionInteger_a959280a4da43a81276ef8ab658eb9015}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a7745bdafc7a3afefc8fdcbeb704668b7}\label{classTang_1_1ComputedExpressionInteger_a7745bdafc7a3afefc8fdcbeb704668b7}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_modulo@{\_\_modulo}}
 \index{\_\_modulo@{\_\_modulo}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
 \doxysubsubsection{\texorpdfstring{\_\_modulo()}{\_\_modulo()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Integer\+::\+\_\+\+\_\+modulo (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily SPCE Computed\+Expression\+Integer\+::\+\_\+\+\_\+modulo (\begin{DoxyParamCaption}\item[{const SPCE \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -402,7 +406,7 @@ Compute the result of moduloing this value and the supplied value.
 
 
 \begin{DoxyParams}{Parameters}
-{\em rhs} & The \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value to modulo this by. \\
+{\em rhs} & The SPCE value to modulo this by. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -410,20 +414,21 @@ The result of the operation.
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_ab545455bd51f215ac139db456b829f66}{Tang\+::\+Computed\+Expression}}.
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a4ee7dffadcc8a8157e372ec7d8f609a2}{Tang\+::\+Computed\+Expression}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classTang_1_1ComputedExpressionInteger_a959280a4da43a81276ef8ab658eb9015_cgraph}
+\includegraphics[width=350pt]{classTang_1_1ComputedExpressionInteger_a7745bdafc7a3afefc8fdcbeb704668b7_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_aadb7393ed0df73e42f2311377bb445d6}\label{classTang_1_1ComputedExpressionInteger_aadb7393ed0df73e42f2311377bb445d6}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_af22067cb959be9ce1ed0e02dd711ade4}\label{classTang_1_1ComputedExpressionInteger_af22067cb959be9ce1ed0e02dd711ade4}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_multiply@{\_\_multiply}}
 \index{\_\_multiply@{\_\_multiply}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
 \doxysubsubsection{\texorpdfstring{\_\_multiply()}{\_\_multiply()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Integer\+::\+\_\+\+\_\+multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily SPCE Computed\+Expression\+Integer\+::\+\_\+\+\_\+multiply (\begin{DoxyParamCaption}\item[{const SPCE \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -431,7 +436,7 @@ Compute the result of multiplying this value and the supplied value.
 
 
 \begin{DoxyParams}{Parameters}
-{\em rhs} & The \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value to multiply to this. \\
+{\em rhs} & The SPCE value to multiply to this. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -439,20 +444,21 @@ The result of the operation.
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a39df4abc066123ec2d634e921be40d21}{Tang\+::\+Computed\+Expression}}.
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_aaa3ca4f2f1d5926b4ccb095b822d7d2c}{Tang\+::\+Computed\+Expression}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classTang_1_1ComputedExpressionInteger_aadb7393ed0df73e42f2311377bb445d6_cgraph}
+\includegraphics[width=350pt]{classTang_1_1ComputedExpressionInteger_af22067cb959be9ce1ed0e02dd711ade4_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a50d5a488b02defd3c526696c5661800b}\label{classTang_1_1ComputedExpressionInteger_a50d5a488b02defd3c526696c5661800b}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a3414902df886cd54ca46b31107c7a5e3}\label{classTang_1_1ComputedExpressionInteger_a3414902df886cd54ca46b31107c7a5e3}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_negative@{\_\_negative}}
 \index{\_\_negative@{\_\_negative}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
 \doxysubsubsection{\texorpdfstring{\_\_negative()}{\_\_negative()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Integer\+::\+\_\+\+\_\+negative (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily SPCE Computed\+Expression\+Integer\+::\+\_\+\+\_\+negative (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -463,13 +469,13 @@ The result of the operation.
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a8e779d014cbb877f078d61a2ff91603d}{Tang\+::\+Computed\+Expression}}.
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a1477f05cff032939956753c1b4b40ad9}{Tang\+::\+Computed\+Expression}}.
 
-\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a12f9abfc8fc324d491453f8c6bbb3e1d}\label{classTang_1_1ComputedExpressionInteger_a12f9abfc8fc324d491453f8c6bbb3e1d}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_ac5f80fe530f379897c256f82d3ecf6c7}\label{classTang_1_1ComputedExpressionInteger_ac5f80fe530f379897c256f82d3ecf6c7}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_not@{\_\_not}}
 \index{\_\_not@{\_\_not}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
 \doxysubsubsection{\texorpdfstring{\_\_not()}{\_\_not()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Integer\+::\+\_\+\+\_\+not (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily SPCE Computed\+Expression\+Integer\+::\+\_\+\+\_\+not (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -480,13 +486,13 @@ The result of the operation.
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_ac21f9e07c9d1f0a98b60bb1d75d8e87d}{Tang\+::\+Computed\+Expression}}.
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a1e38ebb5948869b79f7cb450a6f32081}{Tang\+::\+Computed\+Expression}}.
 
-\mbox{\Hypertarget{classTang_1_1ComputedExpression_a5d83d6e7243a7af7aae63e77c8fd680a}\label{classTang_1_1ComputedExpression_a5d83d6e7243a7af7aae63e77c8fd680a}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_ad6b357bb73f041c9a3a2aeedba8a46fd}\label{classTang_1_1ComputedExpression_ad6b357bb73f041c9a3a2aeedba8a46fd}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_period@{\_\_period}}
 \index{\_\_period@{\_\_period}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
 \doxysubsubsection{\texorpdfstring{\_\_period()}{\_\_period()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+period (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{member,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+Base}} $>$ \&}]{tang }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+{\footnotesize\ttfamily SPCE Computed\+Expression\+::\+\_\+\+\_\+period (\begin{DoxyParamCaption}\item[{const SPCE \&}]{member,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+Base}} $>$ \&}]{tang }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
 
 
 
@@ -502,13 +508,13 @@ The result of the operation.
 \end{DoxyReturn}
 
 
-Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionLibrary_ad943e1f9b294fdd46097523f20b35b39}{Tang\+::\+Computed\+Expression\+Library}}.
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionLibrary_ac65021fe13d8246ce82f940c6343f60d}{Tang\+::\+Computed\+Expression\+Library}}.
 
-\mbox{\Hypertarget{classTang_1_1ComputedExpression_aa7a262384220a86eb273284f8990ca84}\label{classTang_1_1ComputedExpression_aa7a262384220a86eb273284f8990ca84}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpression_a857b24065a3e16e04fed3f59058e7cfb}\label{classTang_1_1ComputedExpression_a857b24065a3e16e04fed3f59058e7cfb}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_slice@{\_\_slice}}
 \index{\_\_slice@{\_\_slice}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
 \doxysubsubsection{\texorpdfstring{\_\_slice()}{\_\_slice()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+::\+\_\+\+\_\+slice (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{begin,  }\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{end,  }\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{skip }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+{\footnotesize\ttfamily SPCE Computed\+Expression\+::\+\_\+\+\_\+slice (\begin{DoxyParamCaption}\item[{const SPCE \&}]{begin,  }\item[{const SPCE \&}]{end,  }\item[{const SPCE \&}]{skip }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
 
 
 
@@ -530,13 +536,13 @@ The result of the operation.
 \end{DoxyReturn}
 
 
-Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionString_a70749fbc16aa0798272b359defce3bf8}{Tang\+::\+Computed\+Expression\+String}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_a67ecf8a85bec9293943b990761bab2c8}{Tang\+::\+Computed\+Expression\+Array}}.
+Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionString_a07423bd09367817387653af9f9bd6746}{Tang\+::\+Computed\+Expression\+String}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_a929d2f7f1cc9145927257889141cdbdd}{Tang\+::\+Computed\+Expression\+Array}}.
 
-\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a70d1079d4d4d8ff14725e435680a1a8a}\label{classTang_1_1ComputedExpressionInteger_a70d1079d4d4d8ff14725e435680a1a8a}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a06b070d14f7ef7847018e00b2d4de58c}\label{classTang_1_1ComputedExpressionInteger_a06b070d14f7ef7847018e00b2d4de58c}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_string@{\_\_string}}
 \index{\_\_string@{\_\_string}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
 \doxysubsubsection{\texorpdfstring{\_\_string()}{\_\_string()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Integer\+::\+\_\+\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily SPCE Computed\+Expression\+Integer\+::\+\_\+\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -547,20 +553,21 @@ The result of the the operation.
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a14a57cffe9fb44b0d5f34d06afd0db1b}{Tang\+::\+Computed\+Expression}}.
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_af27ea7bc0672573424aae5ce3c24cbf6}{Tang\+::\+Computed\+Expression}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classTang_1_1ComputedExpressionInteger_a70d1079d4d4d8ff14725e435680a1a8a_cgraph}
+\includegraphics[width=350pt]{classTang_1_1ComputedExpressionInteger_a06b070d14f7ef7847018e00b2d4de58c_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a8a792a5911f9d90a4ff4e8ba99f5a657}\label{classTang_1_1ComputedExpressionInteger_a8a792a5911f9d90a4ff4e8ba99f5a657}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_aa33d6de355ddf88c19030d2c2b14ca95}\label{classTang_1_1ComputedExpressionInteger_aa33d6de355ddf88c19030d2c2b14ca95}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!\_\_subtract@{\_\_subtract}}
 \index{\_\_subtract@{\_\_subtract}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
 \doxysubsubsection{\texorpdfstring{\_\_subtract()}{\_\_subtract()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Integer\+::\+\_\+\+\_\+subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily SPCE Computed\+Expression\+Integer\+::\+\_\+\+\_\+subtract (\begin{DoxyParamCaption}\item[{const SPCE \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -568,7 +575,7 @@ Compute the result of subtracting this value and the supplied value.
 
 
 \begin{DoxyParams}{Parameters}
-{\em rhs} & The \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} value to subtract from this. \\
+{\em rhs} & The SPCE value to subtract from this. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -576,13 +583,14 @@ The result of the operation.
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_ab0d79debcd475a5063e574c10f1715ff}{Tang\+::\+Computed\+Expression}}.
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a668dc6083ded56b4f708a7fa43d0bf49}{Tang\+::\+Computed\+Expression}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classTang_1_1ComputedExpressionInteger_a8a792a5911f9d90a4ff4e8ba99f5a657_cgraph}
+\includegraphics[width=350pt]{classTang_1_1ComputedExpressionInteger_aa33d6de355ddf88c19030d2c2b14ca95_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a02e4a8bba8b37bf02e5ec3fd1e25f094}\label{classTang_1_1ComputedExpressionInteger_a02e4a8bba8b37bf02e5ec3fd1e25f094}} 
@@ -762,22 +770,22 @@ Whether or not a copy is needed.
 
 Reimplemented in \mbox{\hyperlink{classTang_1_1ComputedExpressionMap_a8652b2919ed029cb58246c5d612a13f9}{Tang\+::\+Computed\+Expression\+Map}}, and \mbox{\hyperlink{classTang_1_1ComputedExpressionArray_a3a72d20d7404d43efac207dc04afa2e1}{Tang\+::\+Computed\+Expression\+Array}}.
 
-\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_a9e1b2e88d3c6574177f291563dd45262}\label{classTang_1_1ComputedExpressionInteger_a9e1b2e88d3c6574177f291563dd45262}} 
+\mbox{\Hypertarget{classTang_1_1ComputedExpressionInteger_ae326001a48e0b2e9fad234adf115a52d}\label{classTang_1_1ComputedExpressionInteger_ae326001a48e0b2e9fad234adf115a52d}} 
 \index{Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}!makeCopy@{makeCopy}}
 \index{makeCopy@{makeCopy}!Tang::ComputedExpressionInteger@{Tang::ComputedExpressionInteger}}
 \doxysubsubsection{\texorpdfstring{makeCopy()}{makeCopy()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTang_1_1GarbageCollected}{Garbage\+Collected}} Computed\+Expression\+Integer\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily SPCE Computed\+Expression\+Integer\+::make\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
 Make a copy of the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} (recursively, if appropriate). 
 
 \begin{DoxyReturn}{Returns}
-A \mbox{\hyperlink{classTang_1_1GarbageCollected}{Tang\+::\+Garbage\+Collected}} value for the new \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}}. 
+A Tang\+::\+SPCE value for the new \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}}. 
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_a2c862b516b38bbb010677176f101eb19}{Tang\+::\+Computed\+Expression}}.
+Reimplemented from \mbox{\hyperlink{classTang_1_1ComputedExpression_aa9c23220be6dd4ce74dc94e4c09cac91}{Tang\+::\+Computed\+Expression}}.
 
 
 

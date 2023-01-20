@@ -54,11 +54,9 @@ var hierarchy =
       [ "Tang::TangBase", "classTang_1_1TangBase.html", null ]
     ] ],
     [ "Tang::Error", "classTang_1_1Error.html", null ],
-    [ "Tang::GarbageCollected", "classTang_1_1GarbageCollected.html", null ],
     [ "Tang::location", "classTang_1_1location.html", null ],
     [ "Tang::position", "classTang_1_1position.html", null ],
     [ "Tang::Program", "classTang_1_1Program.html", null ],
-    [ "Tang::SingletonObjectPool< T >", "classTang_1_1SingletonObjectPool.html", null ],
     [ "TangHtmlEscapeAsciiFlexLexer", null, [
       [ "Tang::HtmlEscapeAscii", "classTang_1_1HtmlEscapeAscii.html", null ]
     ] ],

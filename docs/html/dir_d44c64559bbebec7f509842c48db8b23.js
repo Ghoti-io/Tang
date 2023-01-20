@@ -90,9 +90,7 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "astNodeWhile.hpp", "astNodeWhile_8hpp.html", [
       [ "AstNodeWhile", "classTang_1_1AstNodeWhile.html", "classTang_1_1AstNodeWhile" ]
     ] ],
-    [ "computedExpression.hpp", "computedExpression_8hpp.html", [
-      [ "ComputedExpression", "classTang_1_1ComputedExpression.html", "classTang_1_1ComputedExpression" ]
-    ] ],
+    [ "computedExpression.hpp", "computedExpression_8hpp.html", "computedExpression_8hpp" ],
     [ "computedExpressionArray.hpp", "computedExpressionArray_8hpp.html", [
       [ "ComputedExpressionArray", "classTang_1_1ComputedExpressionArray.html", "classTang_1_1ComputedExpressionArray" ]
     ] ],
@@ -144,16 +142,12 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "error.hpp", "error_8hpp.html", [
       [ "Error", "classTang_1_1Error.html", "classTang_1_1Error" ]
     ] ],
-    [ "garbageCollected.hpp", "garbageCollected_8hpp.html", [
-      [ "GarbageCollected", "classTang_1_1GarbageCollected.html", "classTang_1_1GarbageCollected" ]
-    ] ],
     [ "htmlEscape.hpp", "htmlEscape_8hpp.html", "htmlEscape_8hpp" ],
     [ "htmlEscapeAscii.hpp", "htmlEscapeAscii_8hpp.html", "htmlEscapeAscii_8hpp" ],
     [ "macros.hpp", "macros_8hpp.html", "macros_8hpp" ],
     [ "opcode.hpp", "opcode_8hpp.html", "opcode_8hpp" ],
     [ "percentEncode.hpp", "percentEncode_8hpp.html", "percentEncode_8hpp" ],
     [ "program.hpp", "program_8hpp.html", "program_8hpp" ],
-    [ "singletonObjectPool.hpp", "singletonObjectPool_8hpp.html", "singletonObjectPool_8hpp" ],
     [ "tang.hpp", "tang_8hpp.html", null ],
     [ "tangBase.hpp", "tangBase_8hpp.html", [
       [ "TangBase", "classTang_1_1TangBase.html", "classTang_1_1TangBase" ]

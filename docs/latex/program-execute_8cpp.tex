@@ -24,7 +24,8 @@ Define the \mbox{\hyperlink{classTang_1_1Program_a3449ae0f592e7eaa2cf05244839daa
 {\ttfamily \#include \char`\"{}computed\+Expression\+Native\+Function.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}computed\+Expression\+Iterator\+End.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}tang\+Base.\+hpp\char`\"{}}\newline
-Include dependency graph for program-\/execute.cpp\+:\nopagebreak
+Include dependency graph for program-\/execute.cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -185,7 +186,7 @@ Both are removed from the stack. The EXPRESSION is executed and the result is pu
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{  \textcolor{keywordflow}{if} (this-\/>bytecode.size() < (pc + (x))) \{ \(\backslash\)}
-\DoxyCodeLine{    stack.push\_back(GarbageCollected::make<ComputedExpressionError>(\mbox{\hyperlink{classTang_1_1Error}{Error}}\{\textcolor{stringliteral}{"{}Opcode instruction truncated."{}}\})); \(\backslash\)}
+\DoxyCodeLine{    stack.push\_back(make\_shared<ComputedExpressionError>(\mbox{\hyperlink{classTang_1_1Error}{Error}}\{\textcolor{stringliteral}{"{}Opcode instruction truncated."{}}\})); \(\backslash\)}
 \DoxyCodeLine{    pc = this-\/>bytecode.size(); \(\backslash\)}
 \DoxyCodeLine{    break; \(\backslash\)}
 \DoxyCodeLine{  \}}
@@ -262,7 +263,7 @@ Iterator macro, similar to UNARYOP\+\_\+S, but it writes the result to a stack p
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{  \textcolor{keywordflow}{if} (stack.size() < (fp + (x))) \{ \(\backslash\)}
-\DoxyCodeLine{    stack.push\_back(GarbageCollected::make<ComputedExpressionError>(\mbox{\hyperlink{classTang_1_1Error}{Error}}\{\textcolor{stringliteral}{"{}Insufficient stack depth."{}}\})); \(\backslash\)}
+\DoxyCodeLine{    stack.push\_back(make\_shared<ComputedExpressionError>(\mbox{\hyperlink{classTang_1_1Error}{Error}}\{\textcolor{stringliteral}{"{}Insufficient stack depth."{}}\})); \(\backslash\)}
 \DoxyCodeLine{    pc = this-\/>bytecode.size(); \(\backslash\)}
 \DoxyCodeLine{    break; \(\backslash\)}
 \DoxyCodeLine{  \}}

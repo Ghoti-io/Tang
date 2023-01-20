@@ -7,10 +7,11 @@ var macros_8hpp =
     [ "ContextData", "macros_8hpp.html#a7f5af272721648f0b4a33770e915ecfc", null ],
     [ "float_t", "macros_8hpp.html#a5fab10267a7a4379e7d3642508736ab8", null ],
     [ "integer_t", "macros_8hpp.html#a48da4f54f29ec5b8a4dfd1a9234f7ee8", null ],
-    [ "LibraryFunction", "macros_8hpp.html#ae12842cdf29eb1486164a0a74a84477f", null ],
+    [ "LibraryFunction", "macros_8hpp.html#a4b6a8c04535eda5ca3a8352dd31b56ea", null ],
     [ "LibraryFunctionMap", "macros_8hpp.html#a497b271a17e2d6f921ae341266ada023", null ],
-    [ "NativeBoundFunction", "macros_8hpp.html#a7c18603d0e934d5f83ec840355893411", null ],
+    [ "NativeBoundFunction", "macros_8hpp.html#af841269bb74e7a6eee344d5c7143654e", null ],
     [ "NativeBoundFunctionMap", "macros_8hpp.html#a6d1db65473ddfd8c22fd26b1d65bc530", null ],
-    [ "NativeFunction", "macros_8hpp.html#aece6c429435b04c80842278ae26dcc57", null ],
+    [ "NativeFunction", "macros_8hpp.html#acbb667aea240c70014575579e0f84ad3", null ],
+    [ "SPCE", "macros_8hpp.html#ad34939e770741f51c580c9cd7891256b", null ],
     [ "uinteger_t", "macros_8hpp.html#a361122436ab50159be865d93fb80b527", null ]
 ];

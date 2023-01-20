@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['garbagecollected_592',['GarbageCollected',['../classTang_1_1GarbageCollected.html',1,'Tang']]]
+  ['htmlescape_569',['HtmlEscape',['../classTang_1_1HtmlEscape.html',1,'Tang']]],
+  ['htmlescapeascii_570',['HtmlEscapeAscii',['../classTang_1_1HtmlEscapeAscii.html',1,'Tang']]]
 ];

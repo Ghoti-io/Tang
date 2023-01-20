@@ -25,7 +25,7 @@ var classTang_1_1Program =
     [ "getIdentifiers", "classTang_1_1Program.html#a788deba60696516b2019081afdead30c", null ],
     [ "getIdentifiersAssigned", "classTang_1_1Program.html#a93e80b96547877bfb6ed1b01fd0a6b7c", null ],
     [ "getLibraryAliases", "classTang_1_1Program.html#a73c9ac65877a7ecfcaf891c4e9ace9f5", null ],
-    [ "getResult", "classTang_1_1Program.html#a84b2e5e25f57eea224d1c04f1f3741eb", null ],
+    [ "getResult", "classTang_1_1Program.html#ae5d866b846071d13ad98a2a39b9e1b6d", null ],
     [ "getStrings", "classTang_1_1Program.html#afc153c1457c40b20178a2a9a0d2bf24f", null ],
     [ "optimize", "classTang_1_1Program.html#a90663286a001c889ca2c0661a0f13b73", null ],
     [ "parse", "classTang_1_1Program.html#a7e845a6184bade97aead63d2e14c5040", null ],
@@ -52,7 +52,7 @@ var classTang_1_1Program =
     [ "identifierStack", "classTang_1_1Program.html#a440bf2cdcd08fe6b2b0c2c19c22fa276", null ],
     [ "istreamCode", "classTang_1_1Program.html#ad130ace72c2d5c25c17fc8b33435cc9c", null ],
     [ "libraryAliasStack", "classTang_1_1Program.html#a7c61c1a9764679f46be0bd0c98af05db", null ],
-    [ "result", "classTang_1_1Program.html#a60f4be3d576e81e6200167f2d910f259", null ],
+    [ "result", "classTang_1_1Program.html#ae2818f65d8a6f765da6bcf2c12a9de0c", null ],
     [ "stringStack", "classTang_1_1Program.html#a43c6934d7b0e1883a91efeb29a3592c6", null ],
     [ "tang", "classTang_1_1Program.html#ae1b7ad9e715c228225c69765a2904bf9", null ]
 ];

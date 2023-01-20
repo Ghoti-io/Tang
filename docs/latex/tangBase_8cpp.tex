@@ -5,6 +5,7 @@
 Define the \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+::\+Tang\+Base}} class.  
 
 
+{\ttfamily \#include $<$memory$>$}\newline
 {\ttfamily \#include \char`\"{}tang\+Base.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}computed\+Expression\+Array.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}computed\+Expression\+String.\+hpp\char`\"{}}\newline
@@ -12,7 +13,8 @@ Define the \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+::\+Tang\+Base}} class.
 {\ttfamily \#include \char`\"{}computed\+Expression\+Library\+Math.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}computed\+Expression\+Library\+Tang.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}context.\+hpp\char`\"{}}\newline
-Include dependency graph for tang\+Base.\+cpp\+:\nopagebreak
+Include dependency graph for tang\+Base.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -46,8 +48,8 @@ Define the \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+::\+Tang\+Base}} class.
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{  \{alias, []([[maybe\_unused]] \mbox{\hyperlink{classTang_1_1Context}{Context}} \& context) \{ \(\backslash\)}
-\DoxyCodeLine{  return GarbageCollected::make<type>();\(\backslash\)}
+\DoxyCodeLine{  \{alias, []([[maybe\_unused]] \mbox{\hyperlink{classTang_1_1Context}{Context}} \& context) -\/> SPCE \{ \(\backslash\)}
+\DoxyCodeLine{  return std::make\_shared<type>();\(\backslash\)}
 \DoxyCodeLine{\}\}}
 
 \end{DoxyCode}

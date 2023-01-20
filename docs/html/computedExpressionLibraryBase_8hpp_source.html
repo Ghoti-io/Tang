@@ -89,33 +89,30 @@ $(document).ready(function(){initNavTree('computedExpressionLibraryBase_8hpp_sou
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="macros_8hpp.html">macros.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="computedExpressionLibrary_8hpp.html">computedExpressionLibrary.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="garbageCollected_8hpp.html">garbageCollected.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef ComputedExpressionLibraryBase</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">  #error &quot;ComputedExpressionLibraryBase has not been defined.&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>Tang {</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classTang_1_1ComputedExpressionLibraryBase.html">   10</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classTang_1_1ComputedExpressionLibraryBase.html">ComputedExpressionLibraryBase</a>: <span class="keyword">public</span> <a class="code" href="classTang_1_1ComputedExpressionLibrary.html">ComputedExpressionLibrary</a> {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;      <a class="code" href="classTang_1_1ComputedExpressionLibraryBase.html">ComputedExpressionLibraryBase</a>() {}</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classTang_1_1ComputedExpressionLibraryBase.html#a068ea30d58a47d66b39160feff642031">   13</a></span>&#160;      <a class="code" href="classTang_1_1GarbageCollected.html">GarbageCollected</a> <a class="code" href="classTang_1_1ComputedExpressionLibraryBase.html#a068ea30d58a47d66b39160feff642031">makeCopy</a>()<span class="keyword"> const override </span>{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordflow">return</span> GarbageCollected::make&lt;ComputedExpressionLibraryBase&gt;();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      }</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      <span class="keyword">static</span> <a class="code" href="macros_8hpp.html#a497b271a17e2d6f921ae341266ada023">LibraryFunctionMap</a> getLibraryAttributes();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  };</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#undef ComputedExpressionLibraryBase</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="ttc" id="aclassTang_1_1ComputedExpressionLibraryBase_html"><div class="ttname"><a href="classTang_1_1ComputedExpressionLibraryBase.html">Tang::ComputedExpressionLibraryBase</a></div><div class="ttdef"><b>Definition:</b> computedExpressionLibraryBase.hpp:10</div></div>
-<div class="ttc" id="aclassTang_1_1ComputedExpressionLibraryBase_html_a068ea30d58a47d66b39160feff642031"><div class="ttname"><a href="classTang_1_1ComputedExpressionLibraryBase.html#a068ea30d58a47d66b39160feff642031">Tang::ComputedExpressionLibraryBase::makeCopy</a></div><div class="ttdeci">GarbageCollected makeCopy() const override</div><div class="ttdoc">Make a copy of the ComputedExpression (recursively, if appropriate).</div><div class="ttdef"><b>Definition:</b> computedExpressionLibraryBase.hpp:13</div></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef ComputedExpressionLibraryBase</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">  #error &quot;ComputedExpressionLibraryBase has not been defined.&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>Tang {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classTang_1_1ComputedExpressionLibraryBase.html">    9</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classTang_1_1ComputedExpressionLibraryBase.html">ComputedExpressionLibraryBase</a>: <span class="keyword">public</span> <a class="code" href="classTang_1_1ComputedExpressionLibrary.html">ComputedExpressionLibrary</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      <a class="code" href="classTang_1_1ComputedExpressionLibraryBase.html">ComputedExpressionLibraryBase</a>() {}</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classTang_1_1ComputedExpressionLibraryBase.html#a4c1b8cbd356e4f2011a9d4edd3d4597b">   12</a></span>&#160;      SPCE <a class="code" href="classTang_1_1ComputedExpressionLibraryBase.html#a4c1b8cbd356e4f2011a9d4edd3d4597b">makeCopy</a>()<span class="keyword"> const override </span>{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordflow">return</span> std::make_shared&lt;ComputedExpressionLibraryBase&gt;();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;      }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      <span class="keyword">static</span> <a class="code" href="macros_8hpp.html#a497b271a17e2d6f921ae341266ada023">LibraryFunctionMap</a> getLibraryAttributes();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  };</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#undef ComputedExpressionLibraryBase</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="ttc" id="aclassTang_1_1ComputedExpressionLibraryBase_html"><div class="ttname"><a href="classTang_1_1ComputedExpressionLibraryBase.html">Tang::ComputedExpressionLibraryBase</a></div><div class="ttdef"><b>Definition:</b> computedExpressionLibraryBase.hpp:9</div></div>
+<div class="ttc" id="aclassTang_1_1ComputedExpressionLibraryBase_html_a4c1b8cbd356e4f2011a9d4edd3d4597b"><div class="ttname"><a href="classTang_1_1ComputedExpressionLibraryBase.html#a4c1b8cbd356e4f2011a9d4edd3d4597b">Tang::ComputedExpressionLibraryBase::makeCopy</a></div><div class="ttdeci">SPCE makeCopy() const override</div><div class="ttdoc">Make a copy of the ComputedExpression (recursively, if appropriate).</div><div class="ttdef"><b>Definition:</b> computedExpressionLibraryBase.hpp:12</div></div>
 <div class="ttc" id="aclassTang_1_1ComputedExpressionLibrary_html"><div class="ttname"><a href="classTang_1_1ComputedExpressionLibrary.html">Tang::ComputedExpressionLibrary</a></div><div class="ttdoc">Represents a Runtime Library.</div><div class="ttdef"><b>Definition:</b> computedExpressionLibrary.hpp:16</div></div>
-<div class="ttc" id="aclassTang_1_1GarbageCollected_html"><div class="ttname"><a href="classTang_1_1GarbageCollected.html">Tang::GarbageCollected</a></div><div class="ttdoc">A container that acts as a resource-counting garbage collector for the specified type.</div><div class="ttdef"><b>Definition:</b> garbageCollected.hpp:28</div></div>
 <div class="ttc" id="acomputedExpressionLibrary_8hpp_html"><div class="ttname"><a href="computedExpressionLibrary_8hpp.html">computedExpressionLibrary.hpp</a></div><div class="ttdoc">Declare the Tang::ComputedExpressionLibrary class.</div></div>
-<div class="ttc" id="agarbageCollected_8hpp_html"><div class="ttname"><a href="garbageCollected_8hpp.html">garbageCollected.hpp</a></div><div class="ttdoc">Declare the Tang::GarbageCollected class.</div></div>
 <div class="ttc" id="amacros_8hpp_html"><div class="ttname"><a href="macros_8hpp.html">macros.hpp</a></div><div class="ttdoc">Contains generic macros.</div></div>
-<div class="ttc" id="amacros_8hpp_html_a497b271a17e2d6f921ae341266ada023"><div class="ttname"><a href="macros_8hpp.html#a497b271a17e2d6f921ae341266ada023">Tang::LibraryFunctionMap</a></div><div class="ttdeci">std::map&lt; std::string, LibraryFunction &gt; LibraryFunctionMap</div><div class="ttdoc">A map of method names to LibraryFunction objects.</div><div class="ttdef"><b>Definition:</b> macros.hpp:117</div></div>
+<div class="ttc" id="amacros_8hpp_html_a497b271a17e2d6f921ae341266ada023"><div class="ttname"><a href="macros_8hpp.html#a497b271a17e2d6f921ae341266ada023">Tang::LibraryFunctionMap</a></div><div class="ttdeci">std::map&lt; std::string, LibraryFunction &gt; LibraryFunctionMap</div><div class="ttdoc">A map of method names to LibraryFunction objects.</div><div class="ttdef"><b>Definition:</b> macros.hpp:120</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

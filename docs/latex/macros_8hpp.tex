@@ -8,16 +8,19 @@ Contains generic macros.
 {\ttfamily \#include $<$vector$>$}\newline
 {\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
 {\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
 {\ttfamily \#include $<$string$>$}\newline
 {\ttfamily \#include $<$any$>$}\newline
-Include dependency graph for macros.\+hpp\+:\nopagebreak
+Include dependency graph for macros.\+hpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{macros_8hpp__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -39,6 +42,9 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{macros_8hpp_ad34939e770741f51c580c9cd7891256b}\label{macros_8hpp_ad34939e770741f51c580c9cd7891256b}} 
+using {\bfseries Tang\+::\+SPCE} = std\+::shared\+\_\+ptr$<$ Computed\+Expression $>$
+\item 
 \mbox{\Hypertarget{macros_8hpp_a48da4f54f29ec5b8a4dfd1a9234f7ee8}\label{macros_8hpp_a48da4f54f29ec5b8a4dfd1a9234f7ee8}} 
 using \mbox{\hyperlink{macros_8hpp_a48da4f54f29ec5b8a4dfd1a9234f7ee8}{Tang\+::integer\+\_\+t}} = int32\+\_\+t
 \begin{DoxyCompactList}\small\item\em Define the size of signed integers used by Tang. \end{DoxyCompactList}\item 
@@ -48,14 +54,14 @@ using \mbox{\hyperlink{macros_8hpp_a361122436ab50159be865d93fb80b527}{Tang\+::ui
 \mbox{\Hypertarget{macros_8hpp_a5fab10267a7a4379e7d3642508736ab8}\label{macros_8hpp_a5fab10267a7a4379e7d3642508736ab8}} 
 using \mbox{\hyperlink{macros_8hpp_a5fab10267a7a4379e7d3642508736ab8}{Tang\+::float\+\_\+t}} = float
 \begin{DoxyCompactList}\small\item\em Define the size of floats used by Tang. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{macros_8hpp_ae12842cdf29eb1486164a0a74a84477f}\label{macros_8hpp_ae12842cdf29eb1486164a0a74a84477f}} 
-using \mbox{\hyperlink{macros_8hpp_ae12842cdf29eb1486164a0a74a84477f}{Tang\+::\+Library\+Function}} = Garbage\+Collected($\ast$)(Context \&)
+\mbox{\Hypertarget{macros_8hpp_a4b6a8c04535eda5ca3a8352dd31b56ea}\label{macros_8hpp_a4b6a8c04535eda5ca3a8352dd31b56ea}} 
+using \mbox{\hyperlink{macros_8hpp_a4b6a8c04535eda5ca3a8352dd31b56ea}{Tang\+::\+Library\+Function}} = SPCE($\ast$)(Context \&)
 \begin{DoxyCompactList}\small\item\em A function pointer that will be executed. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{macros_8hpp_aece6c429435b04c80842278ae26dcc57}\label{macros_8hpp_aece6c429435b04c80842278ae26dcc57}} 
-using \mbox{\hyperlink{macros_8hpp_aece6c429435b04c80842278ae26dcc57}{Tang\+::\+Native\+Function}} = Garbage\+Collected($\ast$)(std\+::vector$<$ Garbage\+Collected $>$ \&, Context \&)
+\mbox{\Hypertarget{macros_8hpp_acbb667aea240c70014575579e0f84ad3}\label{macros_8hpp_acbb667aea240c70014575579e0f84ad3}} 
+using \mbox{\hyperlink{macros_8hpp_acbb667aea240c70014575579e0f84ad3}{Tang\+::\+Native\+Function}} = SPCE($\ast$)(std\+::vector$<$ SPCE $>$ \&, Context \&)
 \begin{DoxyCompactList}\small\item\em A function pointer that will be executed as bound to an object. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{macros_8hpp_a7c18603d0e934d5f83ec840355893411}\label{macros_8hpp_a7c18603d0e934d5f83ec840355893411}} 
-using \mbox{\hyperlink{macros_8hpp_a7c18603d0e934d5f83ec840355893411}{Tang\+::\+Native\+Bound\+Function}} = Garbage\+Collected($\ast$)(Garbage\+Collected \&, std\+::vector$<$ Garbage\+Collected $>$ \&)
+\mbox{\Hypertarget{macros_8hpp_af841269bb74e7a6eee344d5c7143654e}\label{macros_8hpp_af841269bb74e7a6eee344d5c7143654e}} 
+using \mbox{\hyperlink{macros_8hpp_af841269bb74e7a6eee344d5c7143654e}{Tang\+::\+Native\+Bound\+Function}} = SPCE($\ast$)(SPCE \&, std\+::vector$<$ SPCE $>$ \&)
 \begin{DoxyCompactList}\small\item\em A function pointer that will be executed as bound to an object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{macros_8hpp_a497b271a17e2d6f921ae341266ada023}\label{macros_8hpp_a497b271a17e2d6f921ae341266ada023}} 
 using \mbox{\hyperlink{macros_8hpp_a497b271a17e2d6f921ae341266ada023}{Tang\+::\+Library\+Function\+Map}} = std\+::map$<$ std\+::string, Library\+Function $>$

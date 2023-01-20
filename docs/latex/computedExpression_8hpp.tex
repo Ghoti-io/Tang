@@ -10,16 +10,17 @@ Declare the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Tang\+::\+Computed
 {\ttfamily \#include $<$vector$>$}\newline
 {\ttfamily \#include $<$memory$>$}\newline
 {\ttfamily \#include \char`\"{}macros.\+hpp\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}garbage\+Collected.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}error.\+hpp\char`\"{}}\newline
-Include dependency graph for computed\+Expression.\+hpp\+:\nopagebreak
+Include dependency graph for computed\+Expression.\+hpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{computedExpression_8hpp__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -31,8 +32,594 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \item 
 class \mbox{\hyperlink{classTang_1_1ComputedExpression}{Tang\+::\+Computed\+Expression}}
 \begin{DoxyCompactList}\small\item\em Represents the result of a computation that has been executed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{computedExpression_8hpp_a272fd12479308458da63e983ed9cbd81}{Tang\+::operator==}} (const \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} \&lhs, const \mbox{\hyperlink{macros_8hpp_a48da4f54f29ec5b8a4dfd1a9234f7ee8}{Tang\+::integer\+\_\+t}} \&val)
+\begin{DoxyCompactList}\small\item\em Compare the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} with a supplied value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{computedExpression_8hpp_ac4cfe412c68d7183b55f439effa205e1}{Tang\+::operator==}} (const \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} \&lhs, const \mbox{\hyperlink{macros_8hpp_a5fab10267a7a4379e7d3642508736ab8}{Tang\+::float\+\_\+t}} \&val)
+\begin{DoxyCompactList}\small\item\em Compare the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} with a supplied value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{computedExpression_8hpp_adef9cfe1b3bea3667b2811e2ce344a2e}{Tang\+::operator==}} (const \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} \&lhs, const bool \&val)
+\begin{DoxyCompactList}\small\item\em Compare the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} with a supplied value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{computedExpression_8hpp_a4599eb514e0416534827dd1c00c3aa4d}{Tang\+::operator==}} (const \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} \&lhs, const std\+::string \&val)
+\begin{DoxyCompactList}\small\item\em Compare the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} with a supplied value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{computedExpression_8hpp_ad107a46fe15a8a957faf688fe51c0cf9}{Tang\+::operator==}} (const \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} \&lhs, const char $\ast$const \&val)
+\begin{DoxyCompactList}\small\item\em Compare the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} with a supplied value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{computedExpression_8hpp_a812839b1be602e2bd280787df9fb1330}{Tang\+::operator==}} (const \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} \&lhs, const \mbox{\hyperlink{classTang_1_1Error}{Error}} \&val)
+\begin{DoxyCompactList}\small\item\em Compare the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} with a supplied value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{computedExpression_8hpp_a4d67fa44e1350eb42706d4b9bebfdb78}{Tang\+::operator==}} (const Computed\+Expression \&lhs, const nullptr\+\_\+t \&null)
+\begin{DoxyCompactList}\small\item\em Compare the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} with a supplied value. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{computedExpression_8hpp_a9cc9cae66944b9440d6ee8849097f37f}{Tang\+::operator$<$$<$}} (std\+::ostream \&out, const SPCE \&rhs)
+\begin{DoxyCompactList}\small\item\em Add friendly output. \end{DoxyCompactList}\item 
+SPCE \mbox{\hyperlink{computedExpression_8hpp_ad1179beebe0292df9c359142a17d4b5e}{Tang\+::operator+}} (const SPCE \&lhs, const SPCE \&rhs)
+\begin{DoxyCompactList}\small\item\em Perform an addition between two SPCE values. \end{DoxyCompactList}\item 
+SPCE \mbox{\hyperlink{computedExpression_8hpp_af759e9c8b62417a7b55eece4c1fb92c2}{Tang\+::operator-\/}} (const SPCE \&lhs, const SPCE \&rhs)
+\begin{DoxyCompactList}\small\item\em Perform a subtraction between two SPCE values. \end{DoxyCompactList}\item 
+SPCE \mbox{\hyperlink{computedExpression_8hpp_a0d58338221735b261c4c5edf3b197208}{Tang\+::operator$\ast$}} (const SPCE \&lhs, const SPCE \&rhs)
+\begin{DoxyCompactList}\small\item\em Perform a multiplication between two SPCE values. \end{DoxyCompactList}\item 
+SPCE \mbox{\hyperlink{computedExpression_8hpp_a9313a13fb682a52ca4c9c6c4e14c265a}{Tang\+::operator/}} (const SPCE \&lhs, const SPCE \&rhs)
+\begin{DoxyCompactList}\small\item\em Perform a division between two SPCE values. \end{DoxyCompactList}\item 
+SPCE \mbox{\hyperlink{computedExpression_8hpp_a7fa1601f3719c727e7219419895b47f0}{Tang\+::operator\%}} (const SPCE \&lhs, const SPCE \&rhs)
+\begin{DoxyCompactList}\small\item\em Perform a modulo between two SPCE values. \end{DoxyCompactList}\item 
+SPCE \mbox{\hyperlink{computedExpression_8hpp_a1cebd4c908d438f37f0fe6b42109b586}{Tang\+::operator-\/}} (const SPCE \&lhs)
+\begin{DoxyCompactList}\small\item\em Perform a negation on the SPCE value. \end{DoxyCompactList}\item 
+SPCE \mbox{\hyperlink{computedExpression_8hpp_abaca0a98a4dd2c052ed14b282c3f6b3b}{Tang\+::operator!}} (const SPCE \&lhs)
+\begin{DoxyCompactList}\small\item\em Perform a logical not on the SPCE value. \end{DoxyCompactList}\item 
+SPCE \mbox{\hyperlink{computedExpression_8hpp_ad5f7cf5686abfa9001b69ad664f53a5b}{Tang\+::operator$<$}} (const SPCE \&lhs, const SPCE \&rhs)
+\begin{DoxyCompactList}\small\item\em Perform a $<$ between two SPCE values. \end{DoxyCompactList}\item 
+SPCE \mbox{\hyperlink{computedExpression_8hpp_a162f481cdc0b0670c8190df8db70dfc1}{Tang\+::operator$<$=}} (const SPCE \&lhs, const SPCE \&rhs)
+\begin{DoxyCompactList}\small\item\em Perform a $<$= between two SPCE values. \end{DoxyCompactList}\item 
+SPCE \mbox{\hyperlink{computedExpression_8hpp_abd7655f2b23592012a882e6d3a8878d2}{Tang\+::operator$>$}} (const SPCE \&lhs, const SPCE \&rhs)
+\begin{DoxyCompactList}\small\item\em Perform a $>$ between two SPCE values. \end{DoxyCompactList}\item 
+SPCE \mbox{\hyperlink{computedExpression_8hpp_aea22ba8377d53669c33f51efb592397a}{Tang\+::operator$>$=}} (const SPCE \&lhs, const SPCE \&rhs)
+\begin{DoxyCompactList}\small\item\em Perform a $>$= between two SPCE values. \end{DoxyCompactList}\item 
+SPCE \mbox{\hyperlink{computedExpression_8hpp_a44cd1230083cfc2d0176f8c616c19420}{Tang\+::operator==}} (const SPCE \&lhs, const SPCE \&rhs)
+\begin{DoxyCompactList}\small\item\em Perform a == between two SPCE values. \end{DoxyCompactList}\item 
+SPCE \mbox{\hyperlink{computedExpression_8hpp_a31177a1134456ef1472071c4bf59f29f}{Tang\+::operator!=}} (const SPCE \&lhs, const SPCE \&rhs)
+\begin{DoxyCompactList}\small\item\em Perform a != between two SPCE values. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Declare the \mbox{\hyperlink{classTang_1_1ComputedExpression}{Tang\+::\+Computed\+Expression}} base class. 
 
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{computedExpression_8hpp_abaca0a98a4dd2c052ed14b282c3f6b3b}\label{computedExpression_8hpp_abaca0a98a4dd2c052ed14b282c3f6b3b}} 
+\index{computedExpression.hpp@{computedExpression.hpp}!operator"!@{operator"!}}
+\index{operator"!@{operator"!}!computedExpression.hpp@{computedExpression.hpp}}
+\doxysubsubsection{\texorpdfstring{operator"!()}{operator!()}}
+{\footnotesize\ttfamily SPCE Tang\+::operator! (\begin{DoxyParamCaption}\item[{const SPCE \&}]{lhs }\end{DoxyParamCaption})}
+
+
+
+Perform a logical not on the SPCE value. 
+
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{computedExpression_8hpp_abaca0a98a4dd2c052ed14b282c3f6b3b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{computedExpression_8hpp_a31177a1134456ef1472071c4bf59f29f}\label{computedExpression_8hpp_a31177a1134456ef1472071c4bf59f29f}} 
+\index{computedExpression.hpp@{computedExpression.hpp}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!computedExpression.hpp@{computedExpression.hpp}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily SPCE Tang\+::operator!= (\begin{DoxyParamCaption}\item[{const SPCE \&}]{lhs,  }\item[{const SPCE \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Perform a != between two SPCE values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The right hand side operand. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{computedExpression_8hpp_a31177a1134456ef1472071c4bf59f29f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{computedExpression_8hpp_a7fa1601f3719c727e7219419895b47f0}\label{computedExpression_8hpp_a7fa1601f3719c727e7219419895b47f0}} 
+\index{computedExpression.hpp@{computedExpression.hpp}!operator\%@{operator\%}}
+\index{operator\%@{operator\%}!computedExpression.hpp@{computedExpression.hpp}}
+\doxysubsubsection{\texorpdfstring{operator\%()}{operator\%()}}
+{\footnotesize\ttfamily SPCE Tang\+::operator\% (\begin{DoxyParamCaption}\item[{const SPCE \&}]{lhs,  }\item[{const SPCE \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Perform a modulo between two SPCE values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The right hand side operand. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{computedExpression_8hpp_a7fa1601f3719c727e7219419895b47f0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{computedExpression_8hpp_a0d58338221735b261c4c5edf3b197208}\label{computedExpression_8hpp_a0d58338221735b261c4c5edf3b197208}} 
+\index{computedExpression.hpp@{computedExpression.hpp}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!computedExpression.hpp@{computedExpression.hpp}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily SPCE Tang\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const SPCE \&}]{lhs,  }\item[{const SPCE \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Perform a multiplication between two SPCE values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The right hand side operand. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{computedExpression_8hpp_a0d58338221735b261c4c5edf3b197208_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{computedExpression_8hpp_ad1179beebe0292df9c359142a17d4b5e}\label{computedExpression_8hpp_ad1179beebe0292df9c359142a17d4b5e}} 
+\index{computedExpression.hpp@{computedExpression.hpp}!operator+@{operator+}}
+\index{operator+@{operator+}!computedExpression.hpp@{computedExpression.hpp}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily SPCE Tang\+::operator+ (\begin{DoxyParamCaption}\item[{const SPCE \&}]{lhs,  }\item[{const SPCE \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Perform an addition between two SPCE values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The right hand side operand. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{computedExpression_8hpp_ad1179beebe0292df9c359142a17d4b5e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{computedExpression_8hpp_a1cebd4c908d438f37f0fe6b42109b586}\label{computedExpression_8hpp_a1cebd4c908d438f37f0fe6b42109b586}} 
+\index{computedExpression.hpp@{computedExpression.hpp}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!computedExpression.hpp@{computedExpression.hpp}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily SPCE Tang\+::operator-\/ (\begin{DoxyParamCaption}\item[{const SPCE \&}]{lhs }\end{DoxyParamCaption})}
+
+
+
+Perform a negation on the SPCE value. 
+
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{computedExpression_8hpp_a1cebd4c908d438f37f0fe6b42109b586_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{computedExpression_8hpp_af759e9c8b62417a7b55eece4c1fb92c2}\label{computedExpression_8hpp_af759e9c8b62417a7b55eece4c1fb92c2}} 
+\index{computedExpression.hpp@{computedExpression.hpp}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!computedExpression.hpp@{computedExpression.hpp}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily SPCE Tang\+::operator-\/ (\begin{DoxyParamCaption}\item[{const SPCE \&}]{lhs,  }\item[{const SPCE \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Perform a subtraction between two SPCE values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The right hand side operand. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{computedExpression_8hpp_af759e9c8b62417a7b55eece4c1fb92c2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{computedExpression_8hpp_a9313a13fb682a52ca4c9c6c4e14c265a}\label{computedExpression_8hpp_a9313a13fb682a52ca4c9c6c4e14c265a}} 
+\index{computedExpression.hpp@{computedExpression.hpp}!operator/@{operator/}}
+\index{operator/@{operator/}!computedExpression.hpp@{computedExpression.hpp}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily SPCE Tang\+::operator/ (\begin{DoxyParamCaption}\item[{const SPCE \&}]{lhs,  }\item[{const SPCE \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Perform a division between two SPCE values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The right hand side operand. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{computedExpression_8hpp_a9313a13fb682a52ca4c9c6c4e14c265a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{computedExpression_8hpp_ad5f7cf5686abfa9001b69ad664f53a5b}\label{computedExpression_8hpp_ad5f7cf5686abfa9001b69ad664f53a5b}} 
+\index{computedExpression.hpp@{computedExpression.hpp}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!computedExpression.hpp@{computedExpression.hpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily SPCE Tang\+::operator$<$ (\begin{DoxyParamCaption}\item[{const SPCE \&}]{lhs,  }\item[{const SPCE \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Perform a $<$ between two SPCE values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The right hand side operand. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{computedExpression_8hpp_ad5f7cf5686abfa9001b69ad664f53a5b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{computedExpression_8hpp_a9cc9cae66944b9440d6ee8849097f37f}\label{computedExpression_8hpp_a9cc9cae66944b9440d6ee8849097f37f}} 
+\index{computedExpression.hpp@{computedExpression.hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!computedExpression.hpp@{computedExpression.hpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream \& Tang\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const SPCE \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Add friendly output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & The output stream. \\
+\hline
+{\em rhs} & The SPCE value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The output stream. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{computedExpression_8hpp_a9cc9cae66944b9440d6ee8849097f37f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{computedExpression_8hpp_a162f481cdc0b0670c8190df8db70dfc1}\label{computedExpression_8hpp_a162f481cdc0b0670c8190df8db70dfc1}} 
+\index{computedExpression.hpp@{computedExpression.hpp}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!computedExpression.hpp@{computedExpression.hpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily SPCE Tang\+::operator$<$= (\begin{DoxyParamCaption}\item[{const SPCE \&}]{lhs,  }\item[{const SPCE \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Perform a $<$= between two SPCE values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The right hand side operand. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{computedExpression_8hpp_a162f481cdc0b0670c8190df8db70dfc1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{computedExpression_8hpp_adef9cfe1b3bea3667b2811e2ce344a2e}\label{computedExpression_8hpp_adef9cfe1b3bea3667b2811e2ce344a2e}} 
+\index{computedExpression.hpp@{computedExpression.hpp}!operator==@{operator==}}
+\index{operator==@{operator==}!computedExpression.hpp@{computedExpression.hpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily bool Tang\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} \&}]{lhs,  }\item[{const bool \&}]{val }\end{DoxyParamCaption})}
+
+
+
+Compare the Computed\+Expression with a supplied value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to compare the tracked object against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if they are equal, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{computedExpression_8hpp_adef9cfe1b3bea3667b2811e2ce344a2e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{computedExpression_8hpp_ad107a46fe15a8a957faf688fe51c0cf9}\label{computedExpression_8hpp_ad107a46fe15a8a957faf688fe51c0cf9}} 
+\index{computedExpression.hpp@{computedExpression.hpp}!operator==@{operator==}}
+\index{operator==@{operator==}!computedExpression.hpp@{computedExpression.hpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily bool Tang\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} \&}]{lhs,  }\item[{const char $\ast$const \&}]{val }\end{DoxyParamCaption})}
+
+
+
+Compare the Computed\+Expression with a supplied value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to compare the tracked object against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if they are equal, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{computedExpression_8hpp_ad107a46fe15a8a957faf688fe51c0cf9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{computedExpression_8hpp_a812839b1be602e2bd280787df9fb1330}\label{computedExpression_8hpp_a812839b1be602e2bd280787df9fb1330}} 
+\index{computedExpression.hpp@{computedExpression.hpp}!operator==@{operator==}}
+\index{operator==@{operator==}!computedExpression.hpp@{computedExpression.hpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily bool Tang\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classTang_1_1Error}{Error}} \&}]{val }\end{DoxyParamCaption})}
+
+
+
+Compare the Computed\+Expression with a supplied value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to compare the tracked object against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if they are equal, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{computedExpression_8hpp_a812839b1be602e2bd280787df9fb1330_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{computedExpression_8hpp_a4d67fa44e1350eb42706d4b9bebfdb78}\label{computedExpression_8hpp_a4d67fa44e1350eb42706d4b9bebfdb78}} 
+\index{computedExpression.hpp@{computedExpression.hpp}!operator==@{operator==}}
+\index{operator==@{operator==}!computedExpression.hpp@{computedExpression.hpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily bool Tang\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} \&}]{lhs,  }\item[{const nullptr\+\_\+t \&}]{null }\end{DoxyParamCaption})}
+
+
+
+Compare the Computed\+Expression with a supplied value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to compare the tracked object against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if they are equal, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{computedExpression_8hpp_a4d67fa44e1350eb42706d4b9bebfdb78_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{computedExpression_8hpp_a4599eb514e0416534827dd1c00c3aa4d}\label{computedExpression_8hpp_a4599eb514e0416534827dd1c00c3aa4d}} 
+\index{computedExpression.hpp@{computedExpression.hpp}!operator==@{operator==}}
+\index{operator==@{operator==}!computedExpression.hpp@{computedExpression.hpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily bool Tang\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} \&}]{lhs,  }\item[{const std\+::string \&}]{val }\end{DoxyParamCaption})}
+
+
+
+Compare the Computed\+Expression with a supplied value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to compare the tracked object against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if they are equal, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{computedExpression_8hpp_a4599eb514e0416534827dd1c00c3aa4d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{computedExpression_8hpp_ac4cfe412c68d7183b55f439effa205e1}\label{computedExpression_8hpp_ac4cfe412c68d7183b55f439effa205e1}} 
+\index{computedExpression.hpp@{computedExpression.hpp}!operator==@{operator==}}
+\index{operator==@{operator==}!computedExpression.hpp@{computedExpression.hpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily bool Tang\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{macros_8hpp_a5fab10267a7a4379e7d3642508736ab8}{Tang\+::float\+\_\+t}} \&}]{val }\end{DoxyParamCaption})}
+
+
+
+Compare the Computed\+Expression with a supplied value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to compare the tracked object against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if they are equal, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{computedExpression_8hpp_ac4cfe412c68d7183b55f439effa205e1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{computedExpression_8hpp_a272fd12479308458da63e983ed9cbd81}\label{computedExpression_8hpp_a272fd12479308458da63e983ed9cbd81}} 
+\index{computedExpression.hpp@{computedExpression.hpp}!operator==@{operator==}}
+\index{operator==@{operator==}!computedExpression.hpp@{computedExpression.hpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily bool Tang\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTang_1_1ComputedExpression}{Computed\+Expression}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{macros_8hpp_a48da4f54f29ec5b8a4dfd1a9234f7ee8}{Tang\+::integer\+\_\+t}} \&}]{val }\end{DoxyParamCaption})}
+
+
+
+Compare the Computed\+Expression with a supplied value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to compare the tracked object against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if they are equal, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{computedExpression_8hpp_a272fd12479308458da63e983ed9cbd81_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{computedExpression_8hpp_a44cd1230083cfc2d0176f8c616c19420}\label{computedExpression_8hpp_a44cd1230083cfc2d0176f8c616c19420}} 
+\index{computedExpression.hpp@{computedExpression.hpp}!operator==@{operator==}}
+\index{operator==@{operator==}!computedExpression.hpp@{computedExpression.hpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily SPCE Tang\+::operator== (\begin{DoxyParamCaption}\item[{const SPCE \&}]{lhs,  }\item[{const SPCE \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Perform a == between two SPCE values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The right hand side operand. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{computedExpression_8hpp_a44cd1230083cfc2d0176f8c616c19420_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{computedExpression_8hpp_abd7655f2b23592012a882e6d3a8878d2}\label{computedExpression_8hpp_abd7655f2b23592012a882e6d3a8878d2}} 
+\index{computedExpression.hpp@{computedExpression.hpp}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!computedExpression.hpp@{computedExpression.hpp}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily SPCE Tang\+::operator$>$ (\begin{DoxyParamCaption}\item[{const SPCE \&}]{lhs,  }\item[{const SPCE \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Perform a $>$ between two SPCE values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The right hand side operand. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{computedExpression_8hpp_abd7655f2b23592012a882e6d3a8878d2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{computedExpression_8hpp_aea22ba8377d53669c33f51efb592397a}\label{computedExpression_8hpp_aea22ba8377d53669c33f51efb592397a}} 
+\index{computedExpression.hpp@{computedExpression.hpp}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!computedExpression.hpp@{computedExpression.hpp}}
+\doxysubsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily SPCE Tang\+::operator$>$= (\begin{DoxyParamCaption}\item[{const SPCE \&}]{lhs,  }\item[{const SPCE \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Perform a $>$= between two SPCE values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The right hand side operand. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{computedExpression_8hpp_aea22ba8377d53669c33f51efb592397a_cgraph}
+\end{center}
+\end{figure}
