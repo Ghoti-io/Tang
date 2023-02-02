@@ -48,7 +48,9 @@ std\+::map$<$ std\+::type\+\_\+index, \mbox{\hyperlink{macros_8hpp_a6d1db65473dd
 \begin{DoxyCompactList}\small\item\em Get the libraries available to this instance of the base language object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTang_1_1TangBase_af4f22a5586c7988e1c5d1192819db3b0}\label{classTang_1_1TangBase_af4f22a5586c7988e1c5d1192819db3b0}} 
 std\+::unordered\+\_\+map$<$ std\+::type\+\_\+index, \mbox{\hyperlink{macros_8hpp_a497b271a17e2d6f921ae341266ada023}{Library\+Function\+Map}} $>$ \& \mbox{\hyperlink{classTang_1_1TangBase_af4f22a5586c7988e1c5d1192819db3b0}{get\+Library\+Attributes}} ()
-\begin{DoxyCompactList}\small\item\em Get the library attributes available to this instance of the base language object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the library attributes available to this instance of the base language object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTang_1_1TangBase_ad60c620e56aaa09aba04e97d74555be5}{load\+Library}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Load a custom, compiled shared library. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -167,6 +169,24 @@ Compile the provided text as a template and return a \mbox{\hyperlink{classTang_
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 The \mbox{\hyperlink{classTang_1_1Program}{Program}} object representing the compiled template. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTang_1_1TangBase_ad60c620e56aaa09aba04e97d74555be5}\label{classTang_1_1TangBase_ad60c620e56aaa09aba04e97d74555be5}} 
+\index{Tang::TangBase@{Tang::TangBase}!loadLibrary@{loadLibrary}}
+\index{loadLibrary@{loadLibrary}!Tang::TangBase@{Tang::TangBase}}
+\doxysubsubsection{\texorpdfstring{loadLibrary()}{loadLibrary()}}
+{\footnotesize\ttfamily bool Tang\+Base\+::load\+Library (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Load a custom, compiled shared library. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The file path to the shared library. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating success (true) or failure (false). 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classTang_1_1TangBase_a7501b115ed8b6c60b3e5dfbe01d7aa5b}\label{classTang_1_1TangBase_a7501b115ed8b6c60b3e5dfbe01d7aa5b}} 
 \index{Tang::TangBase@{Tang::TangBase}!make\_shared@{make\_shared}}

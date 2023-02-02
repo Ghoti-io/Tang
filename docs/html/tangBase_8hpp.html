@@ -84,7 +84,8 @@ $(document).ready(function(){initNavTree('tangBase_8hpp.html',''); initResizable
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">tangBase.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -153,10 +154,34 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1TangBase.html">Tang::TangBase</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The base class for the Tang programming language.  <a href="classTang_1_1TangBase.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a230dbee60474ef4b31eddf9cead7ace1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tangBase_8hpp.html#a230dbee60474ef4b31eddf9cead7ace1">Tang::TangCustomLibraryLoader</a> = void(*)(std::shared_ptr&lt; TangBase &gt;)</td></tr>
+<tr class="memdesc:a230dbee60474ef4b31eddf9cead7ace1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function pointer type which will be called when initializing a custom library.  <a href="tangBase_8hpp.html#a230dbee60474ef4b31eddf9cead7ace1">More...</a><br /></td></tr>
+<tr class="separator:a230dbee60474ef4b31eddf9cead7ace1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Declare the <a class="el" href="classTang_1_1TangBase.html" title="The base class for the Tang programming language.">Tang::TangBase</a> class used to interact with Tang. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a id="a230dbee60474ef4b31eddf9cead7ace1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a230dbee60474ef4b31eddf9cead7ace1">&#9670;&nbsp;</a></span>TangCustomLibraryLoader</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="tangBase_8hpp.html#a230dbee60474ef4b31eddf9cead7ace1">Tang::TangCustomLibraryLoader</a> = typedef void (*)(std::shared_ptr&lt;TangBase&gt;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function pointer type which will be called when initializing a custom library. </p>
+<p>The function must be named "TangCustomLibraryLoader", and declared with <code>extern "C"</code> to avoid C++ name mangling. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

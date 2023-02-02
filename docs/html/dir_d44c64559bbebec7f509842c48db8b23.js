@@ -149,9 +149,7 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "percentEncode.hpp", "percentEncode_8hpp.html", "percentEncode_8hpp" ],
     [ "program.hpp", "program_8hpp.html", "program_8hpp" ],
     [ "tang.hpp", "tang_8hpp.html", null ],
-    [ "tangBase.hpp", "tangBase_8hpp.html", [
-      [ "TangBase", "classTang_1_1TangBase.html", "classTang_1_1TangBase" ]
-    ] ],
+    [ "tangBase.hpp", "tangBase_8hpp.html", "tangBase_8hpp" ],
     [ "tangScanner.hpp", "tangScanner_8hpp.html", "tangScanner_8hpp" ],
     [ "unescape.hpp", "unescape_8hpp.html", "unescape_8hpp" ],
     [ "unicodeString.hpp", "unicodeString_8hpp.html", "unicodeString_8hpp" ]

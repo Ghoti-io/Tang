@@ -12,8 +12,7 @@ Declare the \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+::\+Tang\+Base}} class
 {\ttfamily \#include \char`\"{}macros.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}program.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}computed\+Expression.\+hpp\char`\"{}}\newline
-Include dependency graph for tang\+Base.\+hpp\+:
-\nopagebreak
+Include dependency graph for tang\+Base.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -32,8 +31,27 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \item 
 class \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+::\+Tang\+Base}}
 \begin{DoxyCompactList}\small\item\em The base class for the Tang programming language. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{tangBase_8hpp_a230dbee60474ef4b31eddf9cead7ace1}{Tang\+::\+Tang\+Custom\+Library\+Loader}} = void($\ast$)(std\+::shared\+\_\+ptr$<$ Tang\+Base $>$)
+\begin{DoxyCompactList}\small\item\em The function pointer type which will be called when initializing a custom library. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Declare the \mbox{\hyperlink{classTang_1_1TangBase}{Tang\+::\+Tang\+Base}} class used to interact with Tang. 
 
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{tangBase_8hpp_a230dbee60474ef4b31eddf9cead7ace1}\label{tangBase_8hpp_a230dbee60474ef4b31eddf9cead7ace1}} 
+\index{tangBase.hpp@{tangBase.hpp}!TangCustomLibraryLoader@{TangCustomLibraryLoader}}
+\index{TangCustomLibraryLoader@{TangCustomLibraryLoader}!tangBase.hpp@{tangBase.hpp}}
+\doxysubsubsection{\texorpdfstring{TangCustomLibraryLoader}{TangCustomLibraryLoader}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{tangBase_8hpp_a230dbee60474ef4b31eddf9cead7ace1}{Tang\+::\+Tang\+Custom\+Library\+Loader}} = typedef void ($\ast$)(std\+::shared\+\_\+ptr$<$Tang\+Base$>$)}
+
+
+
+The function pointer type which will be called when initializing a custom library. 
+
+The function must be named \char`\"{}\+Tang\+Custom\+Library\+Loader\char`\"{}, and declared with {\ttfamily extern \char`\"{}\+C\char`\"{}} to avoid C++ name mangling. 

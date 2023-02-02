@@ -153,6 +153,9 @@ std::map&lt; std::type_index, <a class="el" href="macros_8hpp.html#a6d1db65473dd
 std::unordered_map&lt; std::type_index, <a class="el" href="macros_8hpp.html#a497b271a17e2d6f921ae341266ada023">LibraryFunctionMap</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1TangBase.html#af4f22a5586c7988e1c5d1192819db3b0">getLibraryAttributes</a> ()</td></tr>
 <tr class="memdesc:af4f22a5586c7988e1c5d1192819db3b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the library attributes available to this instance of the base language object. <br /></td></tr>
 <tr class="separator:af4f22a5586c7988e1c5d1192819db3b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad60c620e56aaa09aba04e97d74555be5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTang_1_1TangBase.html#ad60c620e56aaa09aba04e97d74555be5">loadLibrary</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:ad60c620e56aaa09aba04e97d74555be5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a custom, compiled shared library.  <a href="classTang_1_1TangBase.html#ad60c620e56aaa09aba04e97d74555be5">More...</a><br /></td></tr>
+<tr class="separator:ad60c620e56aaa09aba04e97d74555be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -312,6 +315,33 @@ std::unordered_map&lt; std::type_index, <a class="el" href="macros_8hpp.html#a49
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="classTang_1_1Program.html" title="Represents a compiled script or template that may be executed.">Program</a> object representing the compiled template. </dd></dl>
+
+</div>
+</div>
+<a id="ad60c620e56aaa09aba04e97d74555be5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad60c620e56aaa09aba04e97d74555be5">&#9670;&nbsp;</a></span>loadLibrary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TangBase::loadLibrary </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Load a custom, compiled shared library. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>The file path to the shared library. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A boolean indicating success (true) or failure (false). </dd></dl>
 
 </div>
 </div>
