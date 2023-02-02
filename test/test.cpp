@@ -2419,11 +2419,33 @@ TEST(Optimization, Subtract) {
 
 TEST(CustomLibrary, Load) {
   {
+    // Library that does not load should return false.
+    auto tang = TangBase::make_shared();
+    EXPECT_EQ(tang->loadLibrary("libDoesNotExist.so"), false);
+  }
+  {
+    // Library that loads should make changes to TangBase object as necessary.
     auto tang = TangBase::make_shared();
     EXPECT_EQ(tang->loadLibrary("./build/apps/libtestLibrary.so"), true);
     auto p = tang->compileScript(R"(
+      a = "".custom_function();
+      print(a());
+      print(a());
+      print(a());
     )");
-    EXPECT_EQ(p.execute().out, "");
+    EXPECT_EQ(p.execute().out, "012");
+  }
+  {
+    // Libraries loaded on other TangBase objects should not impact any other
+    // TangBase objects.
+    auto tang = TangBase::make_shared();
+    auto p = tang->compileScript(R"(
+      a = "".custom_function();
+      print(a());
+      print(a());
+      print(a());
+    )");
+    EXPECT_NE(p.execute().out, "012");
   }
 }
 

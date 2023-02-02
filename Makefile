@@ -880,7 +880,7 @@ $(APP_DIR)/libtestLibrary.so: \
 				include/tang.hpp
 	@echo "\n### Compiling Test Library ###"
 	@mkdir -p $(@D)
-	$(CXX) $(CXXFLAGS) $(INCLUDE) -shared -o $@ $< $(LDFLAGS)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -shared -o $@ $< $(LDFLAGS) -fPIC
 
 $(APP_DIR)/testUnicodeString: \
 				test/testUnicodeString.cpp \
