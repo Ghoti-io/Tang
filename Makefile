@@ -874,6 +874,14 @@ $(APP_DIR)/tang: \
 # Unit Tests
 ####################################################################
 
+$(APP_DIR)/libtestLibrary.so: \
+				test/libtestLibrary.cpp \
+				$(APP_DIR)/$(TARGET) \
+				include/tang.hpp
+	@echo "\n### Compiling Test Library ###"
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -shared -o $@ $< $(LDFLAGS)
+
 $(APP_DIR)/testUnicodeString: \
 				test/testUnicodeString.cpp \
 				$(OBJ_DIR)/htmlEscape.o \
@@ -924,6 +932,7 @@ test-watch: ## Watch the file directory for changes and run the unit tests
 test: ## Make and run the Unit tests
 test: \
 				$(APP_DIR)/testUnicodeString \
+				$(APP_DIR)/libtestLibrary.so \
 				$(APP_DIR)/test \
 				$(APP_DIR)/tang
 	@echo "\033[0;32m"

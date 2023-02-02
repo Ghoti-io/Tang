@@ -3,6 +3,7 @@
  * Define the Tang::TangBase class.
  */
 
+#include <dlfcn.h>
 #include <memory>
 #include "tangBase.hpp"
 #include "computedExpressionArray.hpp"
@@ -66,5 +67,22 @@ LibraryFunctionMap & TangBase::getLibraries() {
 
 unordered_map<std::type_index, LibraryFunctionMap> & TangBase::getLibraryAttributes() {
   return this->libraryAttributes;
+}
+
+bool TangBase::loadLibrary(const string & path) {
+  if (void * library_handle = dlopen(path.c_str(), RTLD_NOW | RTLD_NODELETE)) {
+    // Reset any errors.
+    TangCustomLibraryLoader func = (TangCustomLibraryLoader)dlsym(library_handle, "TangCustomLibraryLoader");
+    const char * dlsym_error = dlerror();
+    dlclose(library_handle);
+    if (dlsym_error) {
+      cerr << "Could not find `TangCustomLibraryLoader` in path " << path << endl;
+      return false;
+    }
+    func(this->shared_from_this());
+    return true;
+  }
+  cerr << "Could not load library at path " << path << endl;
+  return false;
 }
 

@@ -2417,6 +2417,16 @@ TEST(Optimization, Subtract) {
   }
 }
 
+TEST(CustomLibrary, Load) {
+  {
+    auto tang = TangBase::make_shared();
+    EXPECT_EQ(tang->loadLibrary("./build/apps/libtestLibrary.so"), true);
+    auto p = tang->compileScript(R"(
+    )");
+    EXPECT_EQ(p.execute().out, "");
+  }
+}
+
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

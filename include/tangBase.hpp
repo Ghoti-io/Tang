@@ -46,6 +46,17 @@ namespace Tang {
 
 
 namespace Tang {
+  class TangBase;
+
+  /**
+   * The function pointer type which will be called when initializing a custom
+   * library.
+   *
+   * The function must be named "TangCustomLibraryLoader", and declared with
+   * `extern "C"` to avoid C++ name mangling.
+   */
+  using TangCustomLibraryLoader = void (*)(std::shared_ptr<TangBase>);
+
   /**
    * The base class for the Tang programming language.
    *
@@ -132,6 +143,14 @@ namespace Tang {
      * language object.
      */
     std::unordered_map<std::type_index, LibraryFunctionMap> & getLibraryAttributes();
+
+    /**
+     * Load a custom, compiled shared library.
+     *
+     * @param path The file path to the shared library.
+     * @return A boolean indicating success (true) or failure (false).
+     */
+    bool loadLibrary(const std::string & path);
 
   private:
     /**
