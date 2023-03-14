@@ -5,7 +5,13 @@ BUILD := ./build
 OBJ_DIR := $(BUILD)/objects
 GEN_DIR := $(BUILD)/generated
 APP_DIR := $(BUILD)/apps
-TARGET := libtang.so
+
+BASE_NAME := libghoti.io-tang.so
+MAJOR_VERSION := 0
+MINOR_VERSION := 0.0
+SO_NAME := $(BASE_NAME).$(MAJOR_VERSION)
+TARGET := $(SO_NAME).$(MINOR_VERSION)
+
 INCLUDE := -I include/ -I $(GEN_DIR)/
 LIBOBJECTS := $(OBJ_DIR)/astNode.o \
 							$(OBJ_DIR)/astNodeArray.o \
@@ -74,7 +80,7 @@ LIBOBJECTS := $(OBJ_DIR)/astNode.o \
 TESTFLAGS := `pkg-config --libs --cflags gtest`
 
 
-TANGLIBRARY := -L $(APP_DIR) -Wl,-R -Wl,$(APP_DIR) -l:libtang.so
+TANGLIBRARY := -L $(APP_DIR) -lghoti.io-tang
 
 
 all: $(APP_DIR)/$(TARGET) $(APP_DIR)/tang ## Build the shared library
@@ -856,7 +862,9 @@ $(APP_DIR)/$(TARGET): \
 				$(LIBOBJECTS)
 	@echo "\n### Compiling Tang Shared Library ###"
 	@mkdir -p $(@D)
-	$(CXX) $(CXXFLAGS) -shared -o $@ $^ $(LDFLAGS)
+	$(CXX) $(CXXFLAGS) -shared -o $@ $^ $(LDFLAGS) -Wl,-soname,$(SO_NAME)
+	@ln -f -s $(TARGET) $(APP_DIR)/$(SO_NAME)
+	@ln -f -s $(SO_NAME) $(APP_DIR)/$(BASE_NAME)
 
 ####################################################################
 # Command Line Utility
@@ -946,7 +954,7 @@ test: \
 	@echo "### Running normal tests ###"
 	@echo "############################"
 	@echo "\033[0m"
-	$(APP_DIR)/test --gtest_brief=1
+	env LD_LIBRARY_PATH="$(APP_DIR)" $(APP_DIR)/test --gtest_brief=1
 
 clean: ## Remove all contents of the build directories.
 	-@rm -rvf $(OBJ_DIR)/*
