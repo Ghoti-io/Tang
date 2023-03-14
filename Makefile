@@ -913,7 +913,7 @@ $(APP_DIR)/test: \
 # Commands
 ####################################################################
 
-.PHONY: all clean cloc docs docs-pdf test test-watch watch
+.PHONY: all clean cloc docs docs-pdf install test test-watch watch
 
 watch: ## Watch the file directory for changes and compile the target
 	@while true; do \
@@ -960,6 +960,25 @@ clean: ## Remove all contents of the build directories.
 	-@rm -rvf $(OBJ_DIR)/*
 	-@rm -rvf $(APP_DIR)/*
 	-@rm -rvf $(GEN_DIR)/*
+
+install: ## Install the library globally, requires sudo
+	# Install the Shared Library
+	@mkdir -p /usr/local/lib/ghoti.io
+	@cp $(APP_DIR)/$(TARGET) /usr/local/lib/ghoti.io
+	@ln -f -s $(TARGET) /usr/local/lib/ghoti.io/$(SO_NAME)
+	@ln -f -s $(SO_NAME) /usr/local/lib/ghoti.io/$(BASE_NAME)
+	@echo "/usr/local/lib/ghoti.io" > /etc/ld.so.conf.d/ghoti.io-tang.conf
+	# Install the headers
+	@mkdir -p /usr/local/include/ghoti.io
+	@cp include/*.hpp /usr/local/include/ghoti.io
+	@cp build/generated/*.hpp /usr/local/include/ghoti.io
+	@cp build/generated/*.hh /usr/local/include/ghoti.io
+	# Install the pkgconfig files
+	@mkdir -p /usr/local/share/pkgconfig
+	@cp pkgconfig/ghoti.io-tang.pc /usr/local/share/pkgconfig/
+	# Run ldconfig
+	@ldconfig >> /dev/null 2>&1
+	@echo "Ghoti.io Tang installed"
 
 docs: ## Generate the documentation in the ./docs subdirectory
 	doxygen
