@@ -16,13 +16,15 @@ code editor.
 **Warning!! - The language example represents the aspiration of what Tang will
 become.  It's not there yet, though!**
 
-This project compiles Tang into a shared library (`libtang.so`) so that it can
+This project compiles Tang into a shared library (`libghoti.io-tang.so`) so that it can
 be included into your project as a library.  The `tang.hpp` header will contain
-all necessary class information.  A simple use case might be:
+all necessary class information.  The library must be compiled and installed (see below) before this example will work.
+
+A simple use case might be (in a file named `example.cpp`):
 
 ```C++
 #include <iostream>
-#include "tang.hpp"
+#include <ghoti.io/tang.hpp>
 
 int main() {
   auto program = Tang::TangBase::make_shared().compileScript(R"(
@@ -41,6 +43,12 @@ int main() {
   return 0;
 }
 ```
+
+Compile command:
+```
+g++ example.cpp `pkg-config --libs --cflags ghoti.io-tang` -o example
+```
+
 The output of the above program should be:
 ```
 55
@@ -107,7 +115,12 @@ will include a few additional line breaks:
 
 ## Compiling Tang from source
 
-The following instructions were written for Ubuntu 22.04.
+The following instructions were written for Ubuntu 22.04.  The overall steps are straightforward, though.
+
+  1. Install necessary packages (see below).
+  1. Clone the repo.
+  1. Run `make`
+  1. Run `sudo make install`
 
 ### Install packages
 First, the necessary packages must be installed.
@@ -134,9 +147,10 @@ wslview ./docs/html/index.html
 ### Compile source code
 ```
 make
+sudo make install
 ```
 
-For additional commands, run:
+For additional `make` commands/options, run:
 ```
 make help
 ```
