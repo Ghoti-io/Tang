@@ -12,7 +12,7 @@ MINOR_VERSION := 0.0
 SO_NAME := $(BASE_NAME).$(MAJOR_VERSION)
 TARGET := $(SO_NAME).$(MINOR_VERSION)
 
-INCLUDE := -I include/ -I $(GEN_DIR)/
+INCLUDE := -I include/tang -I include/ -I $(GEN_DIR)/
 LIBOBJECTS := $(OBJ_DIR)/astNode.o \
 							$(OBJ_DIR)/astNodeArray.o \
 							$(OBJ_DIR)/astNodeAssign.o \
@@ -89,31 +89,31 @@ all: $(APP_DIR)/$(TARGET) $(APP_DIR)/tang ## Build the shared library
 # Dependency Variables
 ####################################################################
 DEP_MACROS = \
-	include/macros.hpp
+	include/tang/macros.hpp
 DEP_OPCODE = \
-	include/opcode.hpp
+	include/tang/opcode.hpp
 DEP_LOCATION = \
   $(GEN_DIR)/location.hh
 DEP_UNICODESTRING = \
-	include/unicodeString.hpp
+	include/tang/unicodeString.hpp
 DEP_SINGLETONOBJECTPOOL = \
-	include/singletonObjectPool.hpp
+	include/tang/singletonObjectPool.hpp
 DEP_ERROR = \
-	include/error.hpp \
+	include/tang/error.hpp \
 	$(DEP_LOCATION)
 DEP_ASTNODE = \
-	include/astNode.hpp \
+	include/tang/astNode.hpp \
 	$(DEP_LOCATION)
 DEP_COMPUTEDEXPRESSION = \
-	include/computedExpression.hpp \
+	include/tang/computedExpression.hpp \
 	$(DEP_MACROS) \
 	$(DEP_ERROR)
 DEP_CONTEXT = \
-	include/context.hpp \
+	include/tang/context.hpp \
 	$(DEP_MACROS) \
 	$(DEP_COMPUTEDEXPRESSION)
 DEP_PROGRAM = \
-	include/program.hpp \
+	include/tang/program.hpp \
 	$(DEP_ASTNODE) \
 	$(DEP_COMPUTEDEXPRESSION) \
 	$(DEP_CONTEXT) \
@@ -121,189 +121,189 @@ DEP_PROGRAM = \
 	$(DEP_MACROS) \
 	$(DEP_UNICODESTRING)
 DEP_ASTNODEIDENTIFIER = \
-	include/astNodeIdentifier.hpp \
+	include/tang/astNodeIdentifier.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODESTRING = \
-	include/astNodeString.hpp \
+	include/tang/astNodeString.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODEARRAY = \
-	include/astNodeArray.hpp \
+	include/tang/astNodeArray.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODEASSIGN = \
-	include/astNodeAssign.hpp \
+	include/tang/astNodeAssign.hpp \
 	$(DEP_ASTNODE) \
 	$(DEP_MACROS) \
 	$(DEP_ASTNODESTRING) \
 	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODEINDEX = \
-	include/astNodeIndex.hpp \
+	include/tang/astNodeIndex.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODEBINARY = \
-	include/astNodeBinary.hpp \
+	include/tang/astNodeBinary.hpp \
 	$(DEP_ASTNODE) \
 	$(DEP_MACROS) \
 	$(DEP_ASTNODESTRING) \
 	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODEBLOCK = \
-	include/astNodeBlock.hpp \
+	include/tang/astNodeBlock.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODEBOOLEAN = \
-	include/astNodeBoolean.hpp \
+	include/tang/astNodeBoolean.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODEBREAK = \
-	include/astNodeBreak.hpp \
+	include/tang/astNodeBreak.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODECAST = \
-	include/astNodeCast.hpp \
+	include/tang/astNodeCast.hpp \
 	$(DEP_ASTNODE) \
 	$(DEP_MACROS) \
 	$(DEP_ASTNODESTRING) \
 	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODECONTINUE = \
-	include/astNodeContinue.hpp \
+	include/tang/astNodeContinue.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODEDOWHILE = \
-	include/astNodeDoWhile.hpp \
+	include/tang/astNodeDoWhile.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODEFLOAT = \
-	include/astNodeFloat.hpp \
+	include/tang/astNodeFloat.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODEFOR = \
-	include/astNodeFor.hpp \
+	include/tang/astNodeFor.hpp \
 	$(DEP_ASTNODE) \
 	$(DEP_MACROS) \
 	$(DEP_ASTNODESTRING) \
 	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODEFUNCTIONDECLARATION = \
-	include/astNodeFunctionDeclaration.hpp \
+	include/tang/astNodeFunctionDeclaration.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODEFUNCTIONCALL = \
-	include/astNodeFunctionCall.hpp \
+	include/tang/astNodeFunctionCall.hpp \
 	$(DEP_ASTNODE) \
 	$(DEP_MACROS) \
 	$(DEP_ASTNODESTRING) \
 	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODEIFELSE = \
-	include/astNodeIfElse.hpp \
+	include/tang/astNodeIfElse.hpp \
 	$(DEP_ASTNODE) \
 	$(DEP_MACROS) \
 	$(DEP_ASTNODESTRING) \
 	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODEINDEX = \
-	include/astNodeIndex.hpp \
+	include/tang/astNodeIndex.hpp \
 	$(DEP_ASTNODE) \
 	$(DEP_MACROS) \
 	$(DEP_ASTNODESTRING) \
 	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODEINTEGER = \
-	include/astNodeInteger.hpp \
+	include/tang/astNodeInteger.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODELIBRARY = \
-	include/astNodeLibrary.hpp \
+	include/tang/astNodeLibrary.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODEMAP = \
-	include/astNodeMap.hpp \
+	include/tang/astNodeMap.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODEPERIOD = \
-	include/astNodePeriod.hpp \
+	include/tang/astNodePeriod.hpp \
 	$(DEP_ASTNODE) \
 	$(DEP_MACROS) \
 	$(DEP_ASTNODESTRING) \
 	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODEPRINT = \
-	include/astNodePrint.hpp \
+	include/tang/astNodePrint.hpp \
 	$(DEP_ASTNODE) \
 	$(DEP_MACROS) \
 	$(DEP_ASTNODESTRING) \
 	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODERANGEDFOR = \
-	include/astNodeFor.hpp \
+	include/tang/astNodeFor.hpp \
 	$(DEP_ASTNODE) \
 	$(DEP_MACROS) \
 	$(DEP_ASTNODESTRING) \
 	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODERETURN = \
-	include/astNodeReturn.hpp \
+	include/tang/astNodeReturn.hpp \
 	$(DEP_ASTNODE) \
 	$(DEP_MACROS) \
 	$(DEP_ASTNODESTRING) \
 	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODESLICE = \
-	include/astNodeSlice.hpp \
+	include/tang/astNodeSlice.hpp \
 	$(DEP_ASTNODE) \
 	$(DEP_MACROS) \
 	$(DEP_ASTNODESTRING) \
 	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODETERNARY = \
-	include/astNodeTernary.hpp \
+	include/tang/astNodeTernary.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODEUNARY = \
-	include/astNodeUnary.hpp \
+	include/tang/astNodeUnary.hpp \
 	$(DEP_ASTNODE) \
 	$(DEP_MACROS) \
 	$(DEP_ASTNODESTRING) \
 	$(DEP_ASTNODEIDENTIFIER)
 DEP_ASTNODEUSE = \
-	include/astNodeUse.hpp \
+	include/tang/astNodeUse.hpp \
 	$(DEP_ASTNODE)
 DEP_ASTNODEWHILE = \
-	include/astNodeWhile.hpp \
+	include/tang/astNodeWhile.hpp \
 	$(DEP_ASTNODE) \
 	$(DEP_MACROS) \
 	$(DEP_ASTNODESTRING) \
 	$(DEP_ASTNODEIDENTIFIER)
 DEP_COMPUTEDEXPRESSIONARRAY = \
-	include/computedExpressionArray.hpp \
+	include/tang/computedExpressionArray.hpp \
 	$(DEP_COMPUTEDEXPRESSION)
 DEP_COMPUTEDEXPRESSIONBOOLEAN = \
-	include/computedExpressionBoolean.hpp \
+	include/tang/computedExpressionBoolean.hpp \
 	$(DEP_COMPUTEDEXPRESSION)
 DEP_COMPUTEDEXPRESSIONCOMPILEDFUNCTION = \
-	include/computedExpressionCompiledFunction.hpp \
+	include/tang/computedExpressionCompiledFunction.hpp \
 	$(DEP_COMPUTEDEXPRESSION)
 DEP_COMPUTEDEXPRESSIONERROR = \
-	include/computedExpressionError.hpp \
+	include/tang/computedExpressionError.hpp \
 	$(DEP_ERROR) \
 	$(DEP_COMPUTEDEXPRESSION)
 DEP_COMPUTEDEXPRESSIONFLOAT = \
-	include/computedExpressionFloat.hpp \
+	include/tang/computedExpressionFloat.hpp \
 	$(DEP_COMPUTEDEXPRESSION)
 DEP_COMPUTEDEXPRESSIONINTEGER = \
-	include/computedExpressionInteger.hpp \
+	include/tang/computedExpressionInteger.hpp \
 	$(DEP_COMPUTEDEXPRESSION)
 DEP_COMPUTEDEXPRESSIONITERATOR = \
-	include/computedExpressionIterator.hpp \
+	include/tang/computedExpressionIterator.hpp \
 	$(DEP_COMPUTEDEXPRESSION)
 DEP_COMPUTEDEXPRESSIONITERATOREND = \
-	include/computedExpressionIteratorEnd.hpp \
+	include/tang/computedExpressionIteratorEnd.hpp \
 	$(DEP_COMPUTEDEXPRESSION)
 DEP_COMPUTEDEXPRESSIONLIBRARY = \
-	include/computedExpressionLibrary.hpp \
+	include/tang/computedExpressionLibrary.hpp \
 	$(DEP_MACROS) \
 	$(DEP_COMPUTEDEXPRESSION)
 DEP_COMPUTEDEXPRESSIONLIBRARYBASE = \
-	include/computedExpressionLibraryBase.hpp \
+	include/tang/computedExpressionLibraryBase.hpp \
 	$(DEP_COMPUTEDEXPRESSION)
 DEP_COMPUTEDEXPRESSIONLIBRARYMATH = \
-	include/computedExpressionLibraryMath.hpp \
+	include/tang/computedExpressionLibraryMath.hpp \
 	$(DEP_COMPUTEDEXPRESSIONLIBRARYBASE)
 DEP_COMPUTEDEXPRESSIONLIBRARYTANG = \
-	include/computedExpressionLibraryTang.hpp \
+	include/tang/computedExpressionLibraryTang.hpp \
 	$(DEP_COMPUTEDEXPRESSIONLIBRARY)
 DEP_COMPUTEDEXPRESSIONMAP = \
-	include/computedExpressionMap.hpp \
+	include/tang/computedExpressionMap.hpp \
 	$(DEP_COMPUTEDEXPRESSION)
 DEP_COMPUTEDEXPRESSIONNATIVEBOUNDFUNCTION = \
-	include/computedExpressionNativeBoundFunction.hpp \
+	include/tang/computedExpressionNativeBoundFunction.hpp \
 	$(DEP_COMPUTEDEXPRESSION)
 DEP_COMPUTEDEXPRESSIONNATIVEFUNCTION = \
-	include/computedExpressionNativeFunction.hpp \
+	include/tang/computedExpressionNativeFunction.hpp \
 	$(DEP_COMPUTEDEXPRESSION)
 DEP_COMPUTEDEXPRESSIONNATIVELIBRARYFUNCTION = \
-	include/computedExpressionNativeLibraryFunction.hpp \
+	include/tang/computedExpressionNativeLibraryFunction.hpp \
 	$(DEP_COMPUTEDEXPRESSION)
 DEP_COMPUTEDEXPRESSIONSTRING = \
-	include/computedExpressionString.hpp \
+	include/tang/computedExpressionString.hpp \
 	$(DEP_COMPUTEDEXPRESSION) \
 	$(DEP_UNICODESTRING)
 DEP_TANGBASE = \
@@ -729,12 +729,12 @@ $(OBJ_DIR)/error.o: \
 $(OBJ_DIR)/htmlEscape.o: \
 				$(GEN_DIR)/htmlEscape.cpp \
 				$(DEP_COMPUTEDEXPRESSION) \
-				include/htmlEscape.hpp
+				include/tang/htmlEscape.hpp
 
 $(OBJ_DIR)/htmlEscapeAscii.o: \
 				$(GEN_DIR)/htmlEscapeAscii.cpp \
 				$(DEP_COMPUTEDEXPRESSION) \
-				include/htmlEscapeAscii.hpp
+				include/tang/htmlEscapeAscii.hpp
 
 $(OBJ_DIR)/opcode.o: \
 				src/opcode.cpp \
@@ -743,7 +743,7 @@ $(OBJ_DIR)/opcode.o: \
 $(OBJ_DIR)/percentEncode.o: \
 				$(GEN_DIR)/percentEncode.cpp \
 				$(DEP_COMPUTEDEXPRESSION) \
-				include/percentEncode.hpp
+				include/tang/percentEncode.hpp
 
 $(OBJ_DIR)/program-analyze.o: \
 				src/program-analyze.cpp \
@@ -782,7 +782,7 @@ $(OBJ_DIR)/program-optimize.o: \
 
 $(OBJ_DIR)/program.o: \
 				src/program.cpp \
-				include/tangScanner.hpp \
+				include/tang/tangScanner.hpp \
 				$(GEN_DIR)/tangParser.hpp \
 				$(DEP_ASTNODESTRING) \
 				$(DEP_COMPUTEDEXPRESSIONERROR) \
@@ -838,20 +838,20 @@ $(OBJ_DIR)/tangParser.o: \
 
 $(OBJ_DIR)/tangScanner.o: \
 				$(GEN_DIR)/tangScanner.cpp \
-				include/tangScanner.hpp \
+				include/tang/tangScanner.hpp \
 				$(DEP_LOCATION) \
 				$(DEP_UNICODESTRING)
 
 $(OBJ_DIR)/unescape.o: \
 				$(GEN_DIR)/unescape.cpp \
-				include/unescape.hpp
+				include/tang/unescape.hpp
 
 $(OBJ_DIR)/unicodeString.o: \
 				src/unicodeString.cpp \
-				include/htmlEscape.hpp \
-				include/htmlEscapeAscii.hpp \
-				include/percentEncode.hpp \
-				include/unescape.hpp \
+				include/tang/htmlEscape.hpp \
+				include/tang/htmlEscapeAscii.hpp \
+				include/tang/percentEncode.hpp \
+				include/tang/unescape.hpp \
 				$(DEP_UNICODESTRING)
 
 ####################################################################
@@ -964,15 +964,16 @@ clean: ## Remove all contents of the build directories.
 install: ## Install the library globally, requires sudo
 	# Install the Shared Library
 	@mkdir -p /usr/local/lib/ghoti.io
-	@cp $(APP_DIR)/$(TARGET) /usr/local/lib/ghoti.io
+	@cp $(APP_DIR)/$(TARGET) /usr/local/lib/ghoti.io/
 	@ln -f -s $(TARGET) /usr/local/lib/ghoti.io/$(SO_NAME)
 	@ln -f -s $(SO_NAME) /usr/local/lib/ghoti.io/$(BASE_NAME)
 	@echo "/usr/local/lib/ghoti.io" > /etc/ld.so.conf.d/ghoti.io-tang.conf
 	# Install the headers
-	@mkdir -p /usr/local/include/ghoti.io
-	@cp include/*.hpp /usr/local/include/ghoti.io
-	@cp build/generated/*.hpp /usr/local/include/ghoti.io
-	@cp build/generated/*.hh /usr/local/include/ghoti.io
+	@mkdir -p /usr/local/include/ghoti.io/tang
+	@cp include/tang.hpp /usr/local/include/ghoti.io/
+	@cp include/tang/*.hpp /usr/local/include/ghoti.io/tang/
+	@cp build/generated/*.hpp /usr/local/include/ghoti.io/tang/
+	@cp build/generated/*.hh /usr/local/include/ghoti.io/tang/
 	# Install the pkgconfig files
 	@mkdir -p /usr/local/share/pkgconfig
 	@cp pkgconfig/ghoti.io-tang.pc /usr/local/share/pkgconfig/
