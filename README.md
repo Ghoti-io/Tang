@@ -117,7 +117,7 @@ will include a few additional line breaks:
 
 The following instructions were written for Ubuntu 22.04.  The overall steps are straightforward, though.
 
-  1. Install necessary packages (see below).
+  1. Install necessary packages (see "Install packages" below).
   1. Clone the repo.
   1. Run `make`
   1. Run `sudo make install`
@@ -141,6 +141,7 @@ sudo apt install wslu
 
 Example use:
 ```
+make docs
 wslview ./docs/html/index.html
 ```
 
