@@ -1,7 +1,7 @@
-Name: Ghoti.io Tang
+Name: Ghoti.io Tang(BRANCH)
 Description: Tang scripting language parse and execution library
-Version: 0.0.0
+Version: (VERSION)
 URL: htts://github.com/Ghoti-io
-Libs: -lghoti.io-tang
-CFlags: -std=c++20 -L/usr/local/lib/ghoti.io
+Libs: -L/usr/local/lib/(SUITE) -l(SUITE)-(PROJECT)(BRANCH)
+CFlags: -std=c++20 -I/usr/local/include/(SUITE)/(PROJECT)(BRANCH)
 

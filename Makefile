@@ -6,7 +6,10 @@ OBJ_DIR := $(BUILD)/objects
 GEN_DIR := $(BUILD)/generated
 APP_DIR := $(BUILD)/apps
 
-BASE_NAME := libghoti.io-tang.so
+SUITE := ghoti.io
+PROJECT := tang
+BRANCH := -dev
+BASE_NAME := lib$(SUITE)-$(PROJECT)$(BRANCH).so
 MAJOR_VERSION := 0
 MINOR_VERSION := 0.0
 SO_NAME := $(BASE_NAME).$(MAJOR_VERSION)
@@ -80,7 +83,7 @@ LIBOBJECTS := $(OBJ_DIR)/astNode.o \
 TESTFLAGS := `pkg-config --libs --cflags gtest`
 
 
-TANGLIBRARY := -L $(APP_DIR) -lghoti.io-tang
+TANGLIBRARY := -L $(APP_DIR) -l$(SUITE)-$(PROJECT)$(BRANCH)
 
 
 all: $(APP_DIR)/$(TARGET) $(APP_DIR)/tang ## Build the shared library
@@ -961,35 +964,64 @@ clean: ## Remove all contents of the build directories.
 	-@rm -rvf $(APP_DIR)/*
 	-@rm -rvf $(GEN_DIR)/*
 
+# Files will be as follows:
+# /usr/local/lib/(SUITE)/
+#   lib(SUITE)-(PROJECT)(BRANCH).so.(MAJOR).(MINOR)
+#   lib(SUITE)-(PROJECT)(BRANCH).so.(MAJOR) link to previous
+#   lib(SUITE)-(PROJECT)(BRANCH).so link to previous
+# /etc/ld.so.conf.d/(SUITE)-(PROJECT)(BRANCH).conf will point to /usr/local/lib/(SUITE)
+# /usr/local/include/(SUITE)/(PROJECT)(BRANCH)
+#   *.hpp copied from ./include/(PROJECT)
+# /usr/local/share/pkgconfig
+#   (SUITE)-(PROJECT)(BRANCH).pc created
+
 install: ## Install the library globally, requires sudo
-	# Install the Shared Library
-	@mkdir -p /usr/local/lib/ghoti.io
-	@cp $(APP_DIR)/$(TARGET) /usr/local/lib/ghoti.io/
-	@ln -f -s $(TARGET) /usr/local/lib/ghoti.io/$(SO_NAME)
-	@ln -f -s $(SO_NAME) /usr/local/lib/ghoti.io/$(BASE_NAME)
-	@echo "/usr/local/lib/ghoti.io" > /etc/ld.so.conf.d/ghoti.io-tang.conf
-	# Install the headers
-	@mkdir -p /usr/local/include/ghoti.io/tang
-	@cp include/tang.hpp /usr/local/include/ghoti.io/
-	@cp include/tang/*.hpp /usr/local/include/ghoti.io/tang/
-	@cp build/generated/*.hpp /usr/local/include/ghoti.io/tang/
-	@cp build/generated/*.hh /usr/local/include/ghoti.io/tang/
-	# Install the pkgconfig files
+	# Installing the shared library.
+	@mkdir -p /usr/local/lib/$(SUITE)
+	@cp $(APP_DIR)/$(TARGET) /usr/local/lib/$(SUITE)/
+	@ln -f -s $(TARGET) /usr/local/lib/$(SUITE)/$(SO_NAME)
+	@ln -f -s $(SO_NAME) /usr/local/lib/$(SUITE)/$(BASE_NAME)
+	# Installing the ld configuration file.
+	@echo "/usr/local/lib/$(SUITE)" > /etc/ld.so.conf.d/$(SUITE)-$(PROJECT)$(BRANCH).conf
+	# Installing the headers.
+	@mkdir -p /usr/local/include/$(SUITE)/$(PROJECT)$(BRANCH)/$(PROJECT)
+	@cp include/tang.hpp /usr/local/include/$(SUITE)/$(PROJECT)$(BRANCH)/
+	@cp include/tang/*.hpp /usr/local/include/$(SUITE)/$(PROJECT)$(BRANCH)/$(PROJECT)
+	@cp build/generated/*.hpp /usr/local/include/$(SUITE)/$(PROJECT)$(BRANCH)/$(PROJECT)
+	@cp build/generated/*.hh /usr/local/include/$(SUITE)/$(PROJECT)$(BRANCH)/$(PROJECT)
+	# Installing the pkg-config files.
 	@mkdir -p /usr/local/share/pkgconfig
-	@cp pkgconfig/ghoti.io-tang.pc /usr/local/share/pkgconfig/
-	# Run ldconfig
+	@cat pkgconfig/$(SUITE)-$(PROJECT).pc | sed 's/(SUITE)/$(SUITE)/g; s/(PROJECT)/$(PROJECT)/g; s/(BRANCH)/$(BRANCH)/g; s/(VERSION)/$(VERSION)/g' > /usr/local/share/pkgconfig/$(SUITE)-$(PROJECT)$(BRANCH).pc
+	# Running ldconfig.
 	@ldconfig >> /dev/null 2>&1
-	@echo "Ghoti.io Tang installed"
+	@echo "Ghoti.io $(PROJECT)$(BRANCH) installed"
+
+uninstall: ## Delete the globally-installed files.  Requires sudo.
+	# Deleting the shared library.
+	@rm -f /usr/local/lib/$(SUITE)/$(BASE_NAME)*
+	# Deleting the ld configuration file.
+	@rm -f /etc/ld.so.conf.d/$(SUITE)-$(PROJECT)$(BRANCH).conf
+	# Deleting the headers.
+	@rm -rf /usr/local/include/$(SUITE)/$(PROJECT)$(BRANCH)
+	# Deleting the pkg-config files.
+	@rm -f /usr/local/share/pkgconfig/$(SUITE)-$(PROJECT)$(BRANCH).pc
+	# Cleaning up (potentially) no longer needed directories.
+	@rmdir --ignore-fail-on-non-empty /usr/local/include/$(SUITE)
+	@rmdir --ignore-fail-on-non-empty /usr/local/lib/$(SUITE)
+	# Running ldconfig.
+	@ldconfig >> /dev/null 2>&1
+	@echo "Ghoti.io $(PROJECT)$(BRANCH) has been uninstalled"
 
 docs: ## Generate the documentation in the ./docs subdirectory
 	doxygen
 
-docs-pdf: docs ## Generate the documentation as a pdf, in ./docs/latex/refman.pdf
+docs-pdf: docs ## Generate the documentation as a pdf, at ./docs/(SUITE)-(PROJECT)(BRANCH).pdf
 	cd ./docs/latex/ && make
+	mv -f ./docs/latex/refman.pdf ./docs/$(SUITE)-$(PROJECT)$(BRANCH)-docs.pdf
 
 cloc: ## Count the lines of code used in the project
 	cloc src include flex bison test Makefile
 
 help: ## Display this help
-	@grep -E '^[ a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "%-15s %s\n", $$1, $$2}'
+	@grep -E '^[ a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "%-15s %s\n", $$1, $$2}' | sed "s/(SUITE)/$(SUITE)/g; s/(PROJECT)/$(PROJECT)/g; s/(BRANCH)/$(BRANCH)/g"
 
